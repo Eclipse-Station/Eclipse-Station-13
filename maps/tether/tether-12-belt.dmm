@@ -1,7 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 33aba6e03b7d1fd77b0aa6feefc875dd90fe4727
 "a" = (/turf/space,/area/asteroid/rogue/zone1)
 "b" = (/obj/effect/step_trigger/teleporter/random/rogue/fourbyfour/ontop,/turf/space,/area/asteroid/rogue/zone1)
 "c" = (/obj/effect/step_trigger/teleporter/random/rogue/fourbyfour/onleft,/turf/space,/area/asteroid/rogue/zone1)
@@ -141,8 +138,6 @@ iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii
 iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii
 iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii
 "}
-<<<<<<< HEAD
-=======
 =======
 "a" = (/turf/space,/area/asteroid/rogue/zone1)
 "b" = (/obj/effect/step_trigger/teleporter/random/rogue/fourbyfour/ontop,/turf/space,/area/asteroid/rogue/zone1)
@@ -282,4 +277,3 @@ hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
 hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
 "}
 >>>>>>> cae2951c8efbc125808701f34345b604e4d93434
->>>>>>> 33aba6e03b7d1fd77b0aa6feefc875dd90fe4727
