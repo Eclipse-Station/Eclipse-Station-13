@@ -597,8 +597,6 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 					var/datum/robolimb/M = chargen_robolimbs[company]
 					if(!(limb in M.parts))
 						continue
-					if(tmp_species in M.species_cannot_use)
-						continue
 					//VOREStation Add - Cyberlimb whitelisting.
 					if(M.whitelisted_to && !(user.ckey in M.whitelisted_to))
 						continue

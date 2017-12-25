@@ -41,7 +41,7 @@ var/const/standard_monitor_styles = "blank=ipc_blank;\
 	var/unavailable_to_build							 // If set, can't be constructed.
 	var/lifelike										 // If set, appears organic.
 	var/blood_color = "#030303"
-	var/list/species_cannot_use = list("Teshari")
+//	var/list/species_cannot_use = list("Teshari")//not anymore
 	var/list/monitor_styles			 		 			 //If empty, the model of limbs offers a head compatible with monitors.
 	var/parts = BP_ALL						 			 //Defines what parts said brand can replace on a body.
 	var/health_hud_intensity = 1						 // Intensity modifier for the health GUI indicator.
@@ -60,6 +60,12 @@ var/const/standard_monitor_styles = "blank=ipc_blank;\
 	company = "NanoTrasen"
 	desc = "A simple but efficient robotic limb, created by NanoTrasen."
 	icon = 'icons/mob/human_races/cyberlimbs/nanotrasen/nanotrasen_main.dmi'
+
+/datum/robolimb/nestortesh
+	company = "NS-Tech"
+	desc = "This limb has a thin synthflesh casing with a few connection ports."
+	icon = 'icons/mob/human_races/cyberlimbs/nestortesh/nanotrasen_main.dmi'
+
 
 /datum/robolimb/bishop
 	company = "Bishop"
