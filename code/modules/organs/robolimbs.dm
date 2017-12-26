@@ -62,9 +62,15 @@ var/const/standard_monitor_styles = "blank=ipc_blank;\
 	icon = 'icons/mob/human_races/cyberlimbs/nanotrasen/nanotrasen_main.dmi'
 
 /datum/robolimb/nestortesh
-	company = "NS-Tech"
-	desc = "This limb has a thin synthflesh casing with a few connection ports."
+	company = "NS-Tech - Raven"
+	desc = "This prosthetic limb is covered in thin layer of synthflesh with feather-shaped formations."
 	icon = 'icons/mob/human_races/cyberlimbs/nestortesh/nanotrasen_main.dmi'
+
+
+/datum/robolimb/nestortesh_alt1
+	company = "NS-Tech - Swan"
+	desc = "This prosthetic limb is covered in thin layer of synthflesh with feather-shaped formations."
+	icon = 'icons/mob/human_races/cyberlimbs/nestortesh/white.dmi'
 
 
 /datum/robolimb/bishop
