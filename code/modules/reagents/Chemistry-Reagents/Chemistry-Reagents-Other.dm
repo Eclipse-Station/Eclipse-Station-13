@@ -405,6 +405,26 @@
 	reagent_state = LIQUID
 	color = "#B97A57"
 
+
+	cakobots
+
+/datum/reagent/dormantnanobots
+	name = "Dormant Nanobots"
+	id = "dormantnanobots"
+	description = "Those little fellas seem to be sleeping."
+	taste_description = "Metal"
+	reagent_state = LIQUID
+	color = "#343251"
+
+
+/datum/reagent/cakobots
+	name = "Active Nanobots"
+	id = "cakobots"
+	description = "The crave your... sugar."
+	taste_description = "Tongue-biting ants"
+	reagent_state = LIQUID
+	color = "#e22493"
+
 /datum/reagent/luminol
 	name = "Luminol"
 	id = "luminol"

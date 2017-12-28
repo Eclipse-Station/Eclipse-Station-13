@@ -89,6 +89,7 @@
 
 /mob/living/simple_animal/cat/react_to_attack(var/atom/A)
 	if(A == src) return
+	if(icon_state == "cak") return
 	flee_target = A
 	turns_since_scan = 5
 
@@ -189,6 +190,11 @@
 	holder_type = /obj/item/weapon/holder/cat/fluff/bones
 	var/friend_name = "Erstatz Vryroxes"
 
+
 /mob/living/simple_animal/cat/kitten/New()
 	gender = pick(MALE, FEMALE)
 	..()
+
+
+
+
