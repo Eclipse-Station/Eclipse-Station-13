@@ -4,32 +4,32 @@
 	icon_state = "cak"
 	icon_living = "cak"
 	icon_dead = "cak_dead"
-	health = 50
-	maxHealth = 50
+	health = 100
+	maxHealth = 250
 	gender = FEMALE
-	harm_intent_damage = 10
+	harm_intent_damage = 5
 	response_harm = "takes a bite out of"
 	hostile = 0
 
 
-	meat_amount = 3
+	meat_amount = 4
 	meat_type = /obj/item/weapon/reagent_containers/food/snacks/slice/birthdaycake/filled
 
 /*
 /mob/living/simple_animal/cat/cak/CheckParts(list/parts)
 	..()
-	var/obj/item/organ/brain/B = locate(/obj/item/organ/brain) in contents
+	var/obj/item/organ/internal/brain/B = locate(/obj/item/organ/internal/brain) in contents
 	if(!B || !B.brainmob || !B.brainmob.mind)
 		return
 	B.brainmob.mind.transfer_to(src)
 	to_chat(src, "<span class='big bold'>You are a cak!</span><b> You're a harmless cat/cake hybrid that everyone loves. People can take bites out of you if they're hungry, but you regenerate health \
 	so quickly that it generally doesn't matter. You're remarkably resilient to any damage besides this and it's hard for you to really die at all. You should go around and bring happiness and \
 	free cake to the station!</b>")
-	var/new_name = stripped_input(src, "Enter your name, or press \"Cancel\" to stick with Keeki.", "Name Change")
+	var/new_name = sanitizeSafe(input(src, "Enter your name, or press \"Cancel\" to stick with Keeki.", "Name Change", ""	) as text, MAX_NAME_LEN)
 	if(new_name)
 		to_chat(src, "<span class='notice'>Your name is now <b>\"new_name\"</b>!</span>")
-		name = new_name*/
-
+		name = new_name
+*/
 		//remake this after powdercak chem
 
 
@@ -53,5 +53,5 @@
 /mob/living/simple_animal/cat/cak/attack_hand(mob/living/L)
 	..()
 	if(L.a_intent == I_HURT && L.reagents && !stat)
-		L.reagents.add_reagent("nutriment", 0.4)
-		L.reagents.add_reagent("protein", 0.4)
+		L.reagents.add_reagent("nutriment", 2)
+		L.reagents.add_reagent("protein", 2)
