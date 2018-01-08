@@ -254,13 +254,37 @@ item_path: /obj/item/clothing/accessory/medal/bronze_heart
 }
 
 # ######## F CKEYS
+
+{
+ckey: ForFoxSake
+character_name: Lysia Blackoak
+item_path: /obj/item/clothing/glasses/goggles/fluff/eblindfold
+}
+
+{
+ckey: ForFoxSake
+character_name: Alyona Fuchs
+item_path: /obj/item/clothing/under/rank/captain/fluff/white
+req_access: 20
+}
+
 # ######## G CKEYS
+
+{
+ckey:GingeraleDragon
+character_name: Ginge Shar'da
+item_path: /obj/item/clothing/accessory/tronket
+item_name: sharktooth necklace
+item_desc: A sharp shark tooth suspended on a leathery string.
+}
 
 {
 ckey:Gowst
 character_name: Eldi Moljir
 item_path: /obj/item/weapon/implanter/reagent_generator/eldi
 }
+
+
 
 # ######## H CKEYS
 
@@ -283,6 +307,15 @@ item_path: /obj/item/weapon/implanter/reagent_generator/belle
 }
 
 # ######## I CKEYS
+
+
+{
+ckey: iliketurles
+character_name: Set
+item_path: /obj/item/weapon/reagent_containers/spray/cleaner
+item_name: Crak-B-Gone
+item_desc: A mislabeled bottle of Space Cleaner that also seems to be misspelt.
+}
 
 {
 ckey: interrolouis
@@ -421,6 +454,18 @@ character_name: Harmony Pretchl
 item_path: /obj/item/device/modkit_conversion/fluff/harmonyspace
 }
 
+{
+ckey: jojigoatnerd
+character_name: Joji Williams
+item_path: /obj/item/clothing/head/welding/demon
+}
+
+{
+ckey: jojigoatnerd
+character_name: Joji Williams
+item_path: /obj/item/weapon/flame/lighter/zippo/gonzo
+}
+
 # ######## K CKEYS
 {
 ckey: ketrai
@@ -459,6 +504,12 @@ item_path: /obj/item/device/pda_mod/fluff/kligor
 }
 
 # ######## L CKEYS
+{
+ckey: lbnesquik
+character_name: May Ward
+item_path: /obj/item/weapon/implant/reagent_generator/may
+}
+
 {
 ckey: luminescentring
 character_name: Briana Moore
@@ -557,6 +608,14 @@ character_name: Pumila
 item_path: /obj/item/weapon/implanter/reagent_generator/pumila_apple
 }
 
+{
+ckey: neverknowwhythis
+character_name: Schae Shooki
+item_path: /obj/item/clothing/accessory/tronket
+item_name: Shooki's pendant
+item_desc: A rather dull looking piece of jewelry, it looks like it's of tribal origins. Its centerpiece is a dormant, repurposed shard of a soulstone, still chiming out an eerie red glow.
+}
+
 # ######## O CKEYS
 {
 ckey: orbisa
@@ -565,6 +624,7 @@ item_path: /obj/item/weapon/melee/fluff/holochain
 }
 
 # ######## P CKEYS
+
 
 {
 ckey: pawoverlord
@@ -577,6 +637,12 @@ ckey: pawoverlord
 character_name: Sorrel Cavalet
 item_path: /obj/item/weapon/gun/projectile/colt
 item_desc: "A cheap Martian knock-off of a Colt M1911. It has the word 'Cavalet' etched on the side. Uses .45 rounds."
+}
+
+{
+ckey: pixelexip
+character_name: Casey Hall
+item_path: /obj/item/clothing/glasses/sunglasses/fluff/clout
 }
 
 {
@@ -606,6 +672,23 @@ item_path: /obj/item/weapon/fluff/dragor_dot
 #character_name: Archer Maximus
 #item_path: /obj/item/weapon/gun/projectile/colt/fluff/archercolt
 #}
+
+{
+ckey: rsmr
+character_name: Basura Audaz
+item_path: /obj/item/toy/plushie/kitten
+item_name: Valerie
+item_desc: A bizarre, cryptic cat plushie with a disturbing frown on its face.
+}
+
+{
+ckey: rsmr
+character_name: Diane Sidower
+item_path: /obj/item/weapon/material/butterfly/switchblade
+item_name: pocket knife
+item_desc: An old pocket knife that has seen a lot use.
+req_titles: Assistant
+}
 
 # ######## S CKEYS
 {
@@ -702,6 +785,12 @@ item_path: /obj/item/device/pda/clown
 }
 
 {
+ckey: Solazius
+character_name: M'nashi Hajii
+item_path: /obj/item/clothing/head/fedora/fluff/jemli
+item_name: Paragon of Style
+item_desc: While the hat appears to be of the highest quality, the tag on the inside of the band reads "Bob's Party Supplies. 5 Thalers."
+}
 ckey: silvertalismen
 character_name: Camilla
 item_path: /obj/item/toy/plushie/farwa
