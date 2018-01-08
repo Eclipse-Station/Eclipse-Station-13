@@ -475,6 +475,11 @@ ckey: Lycanthorph
 character_name: Savannah Dixon
 item_path: /obj/item/weapon/implanter/reagent_generator/savannah
 }
+{
+ckey: lbnesquik
+character_name: May Ward
+item_path: /obj/item/weapon/implant/reagent_generator/may
+}
 
 # ######## M CKEYS
 {
