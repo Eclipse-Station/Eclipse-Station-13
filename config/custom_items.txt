@@ -60,6 +60,16 @@ character_name: Lethe
 item_path: /obj/item/clothing/head/helmet/hos/fluff/lethe
 }
 
+
+{
+ckey: AmenityKitten
+character_name: Valere
+item_path: /obj/item/weapon/reagent_containers/food/drinks/flask/infinite
+item_name: bluespace coffee thermos
+item_desc: For when you go for the largest cup of coffee, ever. Forever is a long time.
+}
+
+
 {
 ckey: arokha
 character_name: Aronai Kadigan
