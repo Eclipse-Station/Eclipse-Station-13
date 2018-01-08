@@ -1691,6 +1691,53 @@
 	else
 		..()
 
+
+
+//ForFoxSake:Lysia Blackoak
+/obj/item/clothing/glasses/goggles/fluff/eblindfold
+	name = "enchanted blindfold"
+	desc = "An ancient looking strip of cloth meant to cover the eyes."
+	icon_state = "blindfold"
+	item_state = "blindfold"
+	item_state_slots = list(slot_r_hand_str = "blindfold", slot_l_hand_str = "blindfold")
+
+//Pixelexip:Casey Hall
+/obj/item/clothing/glasses/sunglasses/fluff/clout
+	name = "clout goggles"
+	desc = "These ain't glasses, baby. These CLOUT GOGGLES."
+	icon = 'icons/vore/custom_items_vr.dmi'
+	icon_state = "clout_goggles"
+
+	icon_override = 'icons/vore/custom_clothes_vr.dmi'
+	item_state = "clout_goggles"
+	item_state_slots = list(slot_r_hand_str = "sun", slot_l_hand_str = "sun")
+
+//ForFoxSake:Alyona Fuchs
+/obj/item/clothing/under/rank/captain/fluff/white
+	name = "Asphodelus' Captain's uniform"
+	desc = "A formal uniform for a Captain, cleared to be worn as a Colony Director."
+	icon = 'icons/vore/custom_clothes_vr.dmi'
+	icon_state = "capform_white"
+
+	icon_override = "capform_white_s"
+	item_state = "capform_white"
+
+//Amenity Kitten: Valere
+/obj/item/weapon/reagent_containers/food/drinks/flask/infinite
+    name = "infinite coffee thermos"
+    desc = "For when you really, really enjoy coffee."
+    icon = 'icons/vore/custom_items_vr.dmi'
+    icon_state = "coffeetherm"
+    var/spawning_id
+
+
+/obj/item/weapon/reagent_containers/food/drinks/flask/infinite/New()
+    ..()
+    processing_objects.Add(src)
+
+/obj/item/weapon/reagent_containers/food/drinks/flask/infinite/process()
+    reagents.add_reagent("coffee", 1)
+
 //jacknoir413:Areax Third
 /obj/item/weapon/melee/baton/fluff/stunstaff
 	name = "Electrostaff"
