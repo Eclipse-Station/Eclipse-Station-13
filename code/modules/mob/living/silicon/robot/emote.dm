@@ -151,6 +151,23 @@
 			playsound(src.loc, 'sound/machines/twobeep.ogg', 50, 0)
 			m_type = 1
 
+		if("chime")
+			var/M = null
+			if(param)
+				for (var/mob/A in view(null, null))
+					if (param == A.name)
+						M = A
+						break
+			if(!M)
+				param = null
+
+			if (param)
+				message = "chimes at [param]."
+			else
+				message = "chimes."
+			playsound(src.loc, 'sound/machines/chime.ogg', 50, 0)
+			m_type = 1
+
 		if("ping")
 			var/M = null
 			if(param)
