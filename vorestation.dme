@@ -420,6 +420,7 @@
 #include "code\game\gamemodes\gameticker.dm"
 #include "code\game\gamemodes\objective.dm"
 #include "code\game\gamemodes\setupgame.dm"
+#include "code\game\gamemodes\boring\borer.dm"
 #include "code\game\gamemodes\calamity\calamity.dm"
 #include "code\game\gamemodes\changeling\absorbed_dna.dm"
 #include "code\game\gamemodes\changeling\changeling.dm"
