@@ -224,6 +224,12 @@ item_name: theseus' diamond coin
 item_desc: An engraved coin made of diamond. On the side for heads is printed the year 2541, along with the letter T. On the side for tails, the letter Y can be seen.
 }
 
+{
+ckey: draycu
+character_name: Schae Yonra
+item_path: /obj/item/weapon/melee/fluff/holochain/mass
+}
+
 # ######## E CKEYS
 
 # Permit Expired
@@ -750,26 +756,26 @@ character_name: Alfonso Oak Telanor
 item_path: /obj/item/clothing/glasses/sunglasses/fluff/alfonso
 }
 
-{
-ckey: silencedmp5a5
-character_name: Serdykov Antoz
-item_path: /obj/item/clothing/head/helmet/serdy
-req_access = 1
-}
+#{
+#ckey: silencedmp5a5
+#character_name: Serdykov Antoz
+#item_path: /obj/item/clothing/head/helmet/serdy
+#req_access = 1
+#}
 
-{
-ckey: silencedmp5a5
-character_name: Serdykov Antoz
-item_path: /obj/item/clothing/suit/armor/vest/wolftaur/serdy
-req_access = 1
-}
+#{
+#ckey: silencedmp5a5
+#character_name: Serdykov Antoz
+#item_path: /obj/item/clothing/suit/armor/vest/wolftaur/serdy
+#req_access = 1
+#}
 
-{
-ckey: silencedmp5a5
-character_name: Serdykov Antoz
-item_path: /obj/item/weapon/storage/box/fluff/serdykov_antoz
-req_access = 1
-}
+#{
+#ckey: silencedmp5a5
+#character_name: Serdykov Antoz
+#item_path: /obj/item/weapon/storage/box/fluff/serdykov_antoz
+#req_access = 1
+#}
 
 {
 ckey: silvertalismen
@@ -960,7 +966,7 @@ item_path: /obj/item/clothing/glasses/omnihud/med/fluff/wickedtemphud
 {
 ckey: wickedtemp
 character_name: Chakat Tempest
-item_path: /obj/item/weapon/reagent_containers/hypospray/vr/tempest
+item_path: /obj/item/weapon/reagent_containers/hypospray/vial/tempest
 }
 
 {
