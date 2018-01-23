@@ -26,12 +26,13 @@
 	var/hacked = 0 // Whether to show the hidden songs or not
 	var/freq = 0 // Currently no effect, will return in phase II of mediamanager.
 
-	var/loop_mode = JUKEMODE_PLAY_ONCE			// Behavior when finished playing a song
+	var/loop_mode = JUKEMODE_REPEAT_SONG			// Behavior when finished playing a song
 	var/max_queue_len = 3						// How many songs are we allowed to queue up?
 	var/datum/track/current_track				// Currently playing song
 	var/list/datum/track/queue = list()			// Queued songs
 	var/list/datum/track/tracks = list()		// Available tracks
 	var/list/datum/track/secret_tracks = list() // Only visible if hacked
+	var/list/datum/track/cursed_tracks = list() //
 
 /obj/machinery/media/jukebox/New()
 	..()
@@ -54,8 +55,11 @@
 	for(var/datum/track/T in all_jukebox_tracks)
 		if(T.secret)
 			secret_tracks |= T
+		else	if(T.cursed)
+			cursed_tracks |= T
 		else
 			tracks |= T
+
 	return
 
 /obj/machinery/media/jukebox/process()
@@ -183,15 +187,24 @@
 			current_track = T
 			StartPlaying()
 	else if(href_list["loopmode"])
-		var/newval = text2num(href_list["loopmode"])
-		loop_mode = sanitize_inlist(newval, list(JUKEMODE_NEXT, JUKEMODE_RANDOM, JUKEMODE_REPEAT_SONG, JUKEMODE_PLAY_ONCE), loop_mode)
+		if(!emagged)
+			var/newval = text2num(href_list["loopmode"])
+			loop_mode = sanitize_inlist(newval, list(JUKEMODE_NEXT, JUKEMODE_RANDOM, JUKEMODE_REPEAT_SONG, JUKEMODE_PLAY_ONCE), loop_mode)
+		else
+			return
 	else if(href_list["volume"])
-		var/newval = input("Choose Jukebox volume (0-100%)", "Jukebox volume", round(volume * 100.0))
-		newval = sanitize_integer(text2num(newval), min = 0, max = 100, default = volume * 100.0)
-		volume = newval / 100.0
-		update_music() // To broadcast volume change without restarting song
+		if(!emagged)
+			var/newval = input("Choose Jukebox volume (0-100%)", "Jukebox volume", round(volume * 100.0))
+			newval = sanitize_integer(text2num(newval), min = 0, max = 100, default = volume * 100.0)
+			volume = newval / 100.0
+			update_music() // To broadcast volume change without restarting song
+		else
+			return
 	else if(href_list["stop"])
-		StopPlaying()
+		if(!emagged)
+			StopPlaying()
+		else
+			return
 	else if(href_list["play"])
 		if(emagged)
 			playsound(src.loc, 'sound/items/AirHorn.ogg', 100, 1)
@@ -199,16 +212,13 @@
 				if(M.get_ear_protection() >= 2)
 					continue
 				M.sleeping = 0
-				M.stuttering += 20
-				M.ear_deaf += 30
-				M.Weaken(3)
+				M.stuttering += 10
+				M.ear_deaf += 20
+				M.Weaken(2)
 				if(prob(30))
 					M.Stun(10)
 					M.Paralyse(4)
-				else
-					M.make_jittery(500)
-			spawn(15)
-				explode()
+
 		else if(current_track == null)
 			usr << "No track selected."
 		else
@@ -292,6 +302,13 @@
 	if(!emagged)
 		emagged = 1
 		StopPlaying()
+		tracks.Remove(secret_tracks)
+		tracks.Remove(tracks)
+		tracks.Add(cursed_tracks)
+		process()
+		loop_mode = JUKEMODE_REPEAT_SONG
+		NextTrack()
+		StartPlaying()
 		visible_message("<span class='danger'>\The [src] makes a fizzling sound.</span>")
 		update_icon()
 		return 1
