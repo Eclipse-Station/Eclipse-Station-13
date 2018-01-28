@@ -848,3 +848,76 @@
 	set category = "IC"
 	pass_flags ^= PASSTABLE //I dunno what this fancy ^= is but Aronai gave it to me.
 	to_chat(src, "You [pass_flags&PASSTABLE ? "will" : "will NOT"] move over tables/railings/trays!")
+
+
+
+
+/*
+/mob/living/carbon/human/proc/take_a_bite(mob/living/carbon/M as mob)
+	set src = view(1)
+	set name = "Take a bite"
+	set desc = "Take a bite out of a delicious pastry person!"
+	set category = "cak"
+
+
+	if(last_special > world.time)
+		return
+
+	if(stat || paralysis || stunned || weakened || lying || restrained() || buckled)
+		src << "You cannot bite anyone in your current state!"
+		return
+
+	var/list/choices = list()
+	for(var/mob/living/carbon/human/M in view(1,src))
+		if(!istype(M,/mob/living/silicon) && Adjacent(M) && M.max_age == 3)
+			choices += M
+	choices -= src
+
+	var/mob/living/carbon/human/B = input(src,"Who do you wish to bite?") as null|anything in choices
+
+	if(!B || !src || src.stat) return
+
+	if(!Adjacent(B)) return
+
+	if(last_special > world.time) return
+
+	if(stat || paralysis || stunned || weakened || lying || restrained() || buckled)
+		src << "You cannot bite in your current state."
+		return
+
+	src.visible_message("<font color='red'><b>[src] moves their head closer to [B], trying to take a bite!</b></font>")
+
+	if(do_after(src, 5, B)) //Thrirty seconds.
+		if(!Adjacent(B)) return
+		src.visible_message("<font color='red'><b>[src] takes a bite out of [B]!</b></font>")
+		B.apply_damage(5, BRUTE, BP_HEAD)
+		src.nutrition += 400
+		sleep(50)
+		B.drip(1)
+		sleep(50)
+		B.drip(1)
+	var/mob/living/carbon/human/H = M
+	if(M.reagents)
+		M.reagents.add_reagent("iron", 200)
+		M.reagents.add_reagent("protein", 2)
+		to_chat(M, "food!") */
+
+
+
+
+/mob/living/carbon/human/proc/nomnom()
+	set src in oview(1)
+	set name = "Take a bite"
+	set desc = "You want to bite a cak? (for some fucking reason I can't remove the food person off the list so you'll have to click your OWN name.	"
+	set category = "cak"
+	if((last_spit + 1 SECONDS) > world.time) //To prevent YATATATATATAT spitting.
+		return
+	else if(src.get_species() == "Pastrian")
+		last_spit = world.time
+		if(do_after(usr, 10, src))
+			visible_message("<font color='red'><B>[usr] takes a bite out of [src]!</B></font>")
+			usr.nutrition += 35
+			usr.reagents.add_reagent("protein", 5)
+			src.adjustBruteLoss(12)
+	sleep(15)
+

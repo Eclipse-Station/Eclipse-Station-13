@@ -29,6 +29,7 @@
 	H.break_cloak()
 	..()
 
+
 	// Should this all be in Touch()?
 	if(istype(H))
 		if(get_accuracy_penalty(H) && H != src)	//Should only trigger if they're not aiming well

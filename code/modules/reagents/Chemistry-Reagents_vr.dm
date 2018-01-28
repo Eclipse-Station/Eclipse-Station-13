@@ -19,6 +19,26 @@
 			H.verbs +=  /mob/living/proc/set_size
 			H.shapeshifter_set_colour("#05FF9B") //They can still change their color.
 
+
+
+
+/datum/reagent/cakobots
+	name = "Active Nanobots"
+	id = "cakobots"
+	description = "They crave your... sugar."
+	taste_description = "Tongue-biting ants"
+	reagent_state = LIQUID
+	color = "#e22493"
+
+
+/datum/reagent/cakobots/affect_blood(var/mob/living/carbon/M)
+	if(ishuman(M))
+		var/mob/living/carbon/human/H = M
+		if(H.species.name != "Pastrian")
+			M << "<span class='danger'>Your flesh rapidly mutates into... dough?</span>"
+			H.set_species("Pastrian")
+			H.verbs +=  /mob/living/carbon/human/proc/nomnom
+
 /datum/chemical_reaction/slime/sapphire_mutation
 	name = "Slime Mutation Toxins"
 	id = "slime_mutation_tox"
