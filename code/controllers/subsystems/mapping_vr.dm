@@ -83,7 +83,6 @@ SUBSYSTEM_DEF(mapping)
 			else
 				MT.load_new_z(centered = FALSE, dont_init = TRUE)
 
->>>>>>> otherfork1/master
 /datum/controller/subsystem/mapping/stat_entry(msg)
 	if (!Debug2)
 		return // Only show up in stat panel if debugging is enabled.
