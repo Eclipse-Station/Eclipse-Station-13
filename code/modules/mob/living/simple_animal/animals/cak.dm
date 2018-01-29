@@ -52,6 +52,5 @@
 
 /mob/living/simple_animal/cat/cak/attack_hand(mob/living/L)
 	..()
-	if(L.a_intent == I_HURT && L.reagents && !stat)
-		L.reagents.add_reagent("nutriment", 2)
-		L.reagents.add_reagent("protein", 2)
+	if(L.a_intent == I_HURT)
+		L.nutrition += 25

@@ -907,17 +907,20 @@
 
 /mob/living/carbon/human/proc/nomnom()
 	set src in oview(1)
+	var/mob/living/carbon/human/C = usr
+
 	set name = "Take a bite"
-	set desc = "You want to bite a cak? (for some fucking reason I can't remove the food person off the list so you'll have to click your OWN name.	"
+	set desc = "You want to bite a cak?"
 	set category = "cak"
+	if(!istype(C) || C.stat) return
 	if((last_spit + 1 SECONDS) > world.time) //To prevent YATATATATATAT spitting.
 		return
 	else if(src.get_species() == "Pastrian")
 		last_spit = world.time
-		if(do_after(usr, 10, src))
-			visible_message("<font color='red'><B>[usr] takes a bite out of [src]!</B></font>")
-			usr.nutrition += 35
-			usr.reagents.add_reagent("protein", 5)
+		if(do_after(C, 10, src))
+			visible_message("<font color='red'><B>[C] takes a bite out of [src]!</B></font> They taste rather like [src.get_taste_message()].")
+			C.nutrition += 35
+			C.reagents.add_reagent("protein", 5)
 			src.adjustBruteLoss(12)
 	sleep(15)
 
