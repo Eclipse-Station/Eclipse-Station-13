@@ -9,15 +9,18 @@
 	var/artist		// Song's creator
 	var/duration	// Song length in deciseconds
 	var/secret		// Show up in regular playlist or secret playlist?
+	var/cursed      //what's new
 	var/lobby		// Be one of the choices for lobby music?
 
-/datum/track/New(var/url, var/title, var/duration, var/artist = "", var/secret = 0, var/lobby = 0)
+/datum/track/New(var/url, var/title, var/duration, var/artist = "", var/secret = 0, var/lobby = 0, var/cursed = 0	)
 	src.url = url
 	src.title = title
 	src.artist = artist
 	src.duration = duration
 	src.secret = secret
+	src.cursed = cursed
 	src.lobby = lobby
+
 
 /datum/track/proc/display()
 	var str = "\"[title]\""
@@ -55,6 +58,7 @@ var/global/list/all_lobby_tracks = list()
 		var/datum/track/T = new(entry["url"], entry["title"], entry["duration"])
 		if(istext(entry["artist"]))
 			T.artist = entry["artist"]
+		T.cursed = entry["cursed"] ? 1 : 0
 		T.secret = entry["secret"] ? 1 : 0
 		T.lobby = entry["lobby"] ? 1 : 0
 		all_jukebox_tracks += T

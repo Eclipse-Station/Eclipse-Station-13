@@ -16,6 +16,10 @@
 	if(M.jitteriness)
 		M.make_jittery(max(M.jitteriness - 8*removed,0))
 
+
+
+
+
 /datum/reagent/numbing_enzyme
 	name = "Numbing Enzyme"
 	id = "numbenzyme"

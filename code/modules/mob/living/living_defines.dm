@@ -15,7 +15,7 @@
 	var/cloneloss = 0	//Damage caused by being cloned or ejected from the cloner early. slimes also deal cloneloss damage to victims
 	var/brainloss = 0	//'Retardation' damage caused by someone hitting you in the head with a bible or being infected with brainrot.
 	var/halloss = 0		//Hallucination damage. 'Fake' damage obtained through hallucinating or the holodeck. Sleeping should cause it to wear off.
-
+	//var/italian = 0
 
 	var/hallucination = 0 //Directly affects how long a mob will hallucinate for
 	var/list/atom/hallucinations = list() //A list of hallucinated people that try to attack the mob. See /obj/effect/fake_attacker in hallucinations.dm
@@ -47,3 +47,8 @@
 
 	var/evasion = 0 // Makes attacks harder to land.  Each number equals 15% more likely to miss.  Negative numbers increase hit chance.
 	var/force_max_speed = 0 // If 1, the mob runs extremely fast and cannot be slowed.
+  
+	var/image/dsoverlay = null //Overlay used for darksight eye adjustments
+
+	var/glow_toggle = 0					// If they're glowing!
+	var/glow_color = "#FFFFFF"			// The color they're glowing!

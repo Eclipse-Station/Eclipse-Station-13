@@ -76,62 +76,8 @@
 	else
 		teleport_y = src.y
 
-/obj/effect/step_trigger/teleporter/wild/Trigger(var/atom/movable/A)
-	..()
-	var/datum/map_z_level/z_level = get_z_level_datum(A)
-	if(!istype(z_level, /datum/map_z_level/tether/wilderness))
-		return
-	var/datum/map_z_level/tether/wilderness/wilderness = z_level
-	if(wilderness.activated)
-		return
-	if(isliving(A))
-		var/mob/living/M = A
-		if(!M.is_dead() && M.client)
-			wilderness.activate_mobs()
-			return
-	for(var/mob/living/M in A)
-		if(!istype(M))
-			continue
-		if(!M.is_dead() && M.client)
-			wilderness.activate_mobs()
-			return
-
-/obj/effect/step_trigger/teleporter/wild/from_wild
-	..()
-	teleport_z = Z_LEVEL_SURFACE_LOW
-
-/obj/effect/step_trigger/teleporter/wild/to_wild_1
-	..()
-	teleport_z = Z_LEVEL_SURFACE_WILDERNESS_1
-
-/obj/effect/step_trigger/teleporter/wild/to_wild_2/New()
-	..()
-	teleport_z = Z_LEVEL_SURFACE_WILDERNESS_2
-
-/obj/effect/step_trigger/teleporter/wild/to_wild_3/New()
-	..()
-	teleport_z = Z_LEVEL_SURFACE_WILDERNESS_3
-
-/obj/effect/step_trigger/teleporter/wild/to_wild_4/New()
-	..()
-	teleport_z = Z_LEVEL_SURFACE_WILDERNESS_4
-
-/obj/effect/step_trigger/teleporter/wild/to_wild_5/New()
-	..()
-	teleport_z = Z_LEVEL_SURFACE_WILDERNESS_5
-
-/obj/effect/step_trigger/teleporter/wild/to_wild_6/New()
-	..()
-	teleport_z = Z_LEVEL_SURFACE_WILDERNESS_6
-
-/obj/effect/step_trigger/teleporter/wild/to_wild_crash/New()
-	..()
-	teleport_z = Z_LEVEL_SURFACE_WILDERNESS_CRASH
-
-/obj/effect/step_trigger/teleporter/wild/to_wild_ruins/New()
-	..()
-	teleport_z = Z_LEVEL_SURFACE_WILDERNESS_RUINS
-
+/obj/effect/step_trigger/teleporter/planetary_fall/virgo3b/initialize()
+	planet = planet_virgo3b
 
 // Invisible object that blocks z transfer to/from its turf and the turf above.
 /obj/effect/ceiling
@@ -380,6 +326,17 @@ var/global/list/latejoin_tram   = list()
 	..()
 	reagents.add_reagent("anti_toxin", 15)
 	reagents.add_reagent("paracetamol", 5)
+
+//"Red" Armory Door
+/obj/machinery/door/airlock/multi_tile/metal/red
+	name = "Red Armory"
+	//color = ""
+
+/obj/machinery/door/airlock/multi_tile/metal/red/allowed(mob/user)
+	if(get_security_level() in list("green","blue"))
+		return FALSE
+
+	return ..(user)
 
 //
 // ### Wall Machines On Full Windows ###

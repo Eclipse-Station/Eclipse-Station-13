@@ -13,6 +13,7 @@
 	throw_range = 5
 	origin_tech = list(TECH_BIO = 3)
 	attack_verb = list("attacked", "slapped", "whacked")
+	var/clone_source = FALSE
 	var/mob/living/carbon/brain/brainmob = null
 
 /obj/item/organ/internal/brain/robotize()
@@ -133,9 +134,20 @@
 	icon = 'icons/mob/slimes.dmi'
 	icon_state = "green slime extract"
 	parent_organ = BP_TORSO
+	clone_source = TRUE
+
+/obj/item/orgam/internal/brain/slime/is_open_container()
+	return 1
 
 /obj/item/organ/internal/brain/golem
 	name = "chem"
 	desc = "A tightly furled roll of paper, covered with indecipherable runes."
 	icon = 'icons/obj/wizard.dmi'
 	icon_state = "scroll"
+
+
+/obj/item/organ/internal/brain/cak
+	name = "jawbreaker"
+	desc = "A very robust candy."
+	icon = 'icons/mob/human_races/cakrace.dmi'
+	icon_state = "cakbrain"

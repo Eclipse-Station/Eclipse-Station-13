@@ -10,10 +10,12 @@
 	item_state = null	//so the human update icon uses the icon_state instead
 	fire_sound = 'sound/weapons/wave.ogg'
 	charge_cost = 240
+	recoil_m = 2 //micro and macro usage
 	projectile_type = /obj/item/projectile/beam/sizelaser
 	origin_tech = list(TECH_BLUESPACE = 4)
 	modifystate = "sizegun-shrink"
 	battery_lock = 1
+	fire_delay = 10
 	var/size_set_to = 1
 	firemodes = list(
 		list(mode_name		= "select size",
@@ -25,6 +27,14 @@
 /obj/item/weapon/gun/energy/sizegun/New()
 	..()
 	verbs += /obj/item/weapon/gun/energy/sizegun/proc/select_size
+
+
+/obj/item/weapon/gun/energy/sizegun/Fire(atom/target, mob/living/user, clickparams, pointblank=0, reflex=0)
+	usr << "<span class='notice'>The [src] starts charging...</span>"
+	if(do_after(usr, 8, src))
+		. = ..()
+	sleep(5)//no pew pew
+
 
 /obj/item/weapon/gun/energy/sizegun/attack_self(mob/user)
 	. = ..()

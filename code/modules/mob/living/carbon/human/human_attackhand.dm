@@ -29,6 +29,7 @@
 	H.break_cloak()
 	..()
 
+
 	// Should this all be in Touch()?
 	if(istype(H))
 		if(get_accuracy_penalty(H) && H != src)	//Should only trigger if they're not aiming well
@@ -266,12 +267,12 @@
 			if(HULK in H.mutations)
 				real_damage *= 2 // Hulks do twice the damage
 				rand_damage *= 2
-			real_damage = max(1, real_damage)
+			real_damage = max(1, real_damage)*outgoing_melee_damage_percent
 
 			var/armour = run_armor_check(hit_zone, "melee")
 			var/soaked = get_armor_soak(hit_zone, "melee")
 			// Apply additional unarmed effects.
-			attack.apply_effects(H, src, armour, rand_damage, hit_zone)
+			attack.apply_effects(H, src, armour, rand_damage*outgoing_melee_damage_percent, hit_zone)
 
 			// Finally, apply damage to target
 			apply_damage(real_damage, (attack.deal_halloss ? HALLOSS : BRUTE), hit_zone, armour, soaked, sharp=attack.sharp, edge=attack.edge)
@@ -351,7 +352,7 @@
 	var/obj/item/organ/external/affecting = get_organ(ran_zone(dam_zone))
 	var/armor_block = run_armor_check(affecting, "melee")
 	var/armor_soak = get_armor_soak(affecting, "melee")
-	apply_damage(damage, BRUTE, affecting, armor_block, armor_soak)
+	apply_damage(damage * outgoing_melee_damage_percent, BRUTE, affecting, armor_block, armor_soak)
 	updatehealth()
 	return 1
 

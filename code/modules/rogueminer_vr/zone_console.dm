@@ -3,8 +3,8 @@
 // a scanner console for the asteroid belt
 //////////////////////////////
 #define OUTPOST_Z 8
-#define TRANSIT_Z 12
-#define BELT_Z 15
+#define TRANSIT_Z 11
+#define BELT_Z 13
 
 /obj/machinery/computer/roguezones
 	name = "asteroid belt scanning computer"

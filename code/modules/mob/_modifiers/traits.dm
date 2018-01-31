@@ -32,6 +32,18 @@
 
 	outgoing_melee_damage_percent = 0.6
 
+/datum/modifier/trait/fit
+	name = "fit"
+	desc = "Your natural fitness and/or your physical training give you an advantage in close quarters combat."
+
+	outgoing_melee_damage_percent = 1.2
+
+/datum/modifier/trait/strong
+	name = "strong"
+	desc = "Your extremely high physical strength vastly impoves your capabilities in close quarters combat."
+
+	outgoing_melee_damage_percent = 1.4
+
 /datum/modifier/trait/haemophilia
 	name = "haemophilia"
 	desc = "You bleed much faster than average."
@@ -64,13 +76,13 @@
 	name = "Larger"
 	desc = "Your body is larger than average."
 
-	icon_scale_percent = 1.2
+	icon_scale_percent = 1.1
 
 /datum/modifier/trait/large
 	name = "Large"
 	desc = "Your body is a bit larger than average."
 
-	icon_scale_percent = 1.1
+	icon_scale_percent = 1.05
 
 /datum/modifier/trait/small
 	name = "Small"

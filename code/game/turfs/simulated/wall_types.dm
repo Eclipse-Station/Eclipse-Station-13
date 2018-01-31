@@ -48,16 +48,16 @@
 	..(newloc,"durasteel", "durasteel")
 
 /turf/simulated/wall/wood/New(var/newloc)
-	..(newloc,"wood")
+	..(newloc, MAT_WOOD)
 
 /turf/simulated/wall/sifwood/New(var/newloc)
-	..(newloc,"alien wood")
+	..(newloc, MAT_SIFWOOD)
 
 /turf/simulated/wall/log/New(var/newloc)
-	..(newloc,"log")
+	..(newloc, MAT_LOG)
 
 /turf/simulated/wall/log_sif/New(var/newloc)
-	..(newloc,"alien log")
+	..(newloc, MAT_SIFLOG)
 
 // Shuttle Walls
 /turf/simulated/shuttle/wall
@@ -96,6 +96,13 @@
 	icon = 'icons/turf/shuttle_dark.dmi'
 	icon_state = "dark"
 	base_state = "dark"
+
+
+/turf/simulated/shuttle/wall/OFF
+	icon = 'icons/48x48/OFF.dmi'
+	desc = "You could go for some Moloch meat right now. Wait, what?"
+	icon_state = "wall0"
+
 
 /turf/simulated/shuttle/wall/dark/hard_corner
 	name = "hardcorner wall"
