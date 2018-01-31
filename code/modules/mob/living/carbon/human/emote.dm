@@ -206,10 +206,6 @@
 			message = "raises an eyebrow."
 			m_type = 1
 
-		if ("gnarl")
-			message = "gnarls and shows their teeth..."
-			m_type = 1
-
 		if ("chuckle")
 			if(miming)
 				message = "appears to chuckle."
