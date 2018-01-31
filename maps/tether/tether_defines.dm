@@ -34,13 +34,11 @@
 #define Z_LEVEL_CENTCOM						10
 #define Z_LEVEL_MISC						11
 #define Z_LEVEL_SHIPS						12
-#define Z_LEVEL_EMPTY_SURFACE				13
-#define Z_LEVEL_EMPTY_SPACE					14
-#define Z_LEVEL_ABELT_VIRGO	             	15
+#define Z_LEVEL_ABELT_VIRGO	             	13
 
 
-// These are still defined here, but the levels have been removed. I could delete these but it will cause compile errors. Don't delete them unless you have to.
-#define Z_LEVEL_SURFACE_WILDERNESS_1		16
+/* These are still defined here, but the levels have been removed. I could delete these but it will cause compile errors. Don't delete them unless you have to.
+#define Z_LEVEL_SURFACE_WILDERNESS_1		14
 #define Z_LEVEL_SURFACE_WILDERNESS_2		17
 #define Z_LEVEL_SURFACE_WILDERNESS_3		18
 #define Z_LEVEL_SURFACE_WILDERNESS_4		19
@@ -48,7 +46,7 @@
 #define Z_LEVEL_SURFACE_WILDERNESS_6		21
 
 #define Z_LEVEL_SURFACE_WILDERNESS_CRASH	22
-#define Z_LEVEL_SURFACE_WILDERNESS_RUINS	23
+#define Z_LEVEL_SURFACE_WILDERNESS_RUINS	23 */
 
 
 /datum/map/tether
@@ -252,7 +250,12 @@
 	name = "Ships"
 	flags = 0
 
-/datum/map_z_level/tether/empty_surface
+/datum/map_z_level/tether/belt
+	z = Z_LEVEL_ABELT_VIRGO
+	name = "Belt"
+	flags = 0
+
+/*/datum/map_z_level/tether/empty_surface
 	z = Z_LEVEL_EMPTY_SURFACE
 	name = "Empty"
 	flags = MAP_LEVEL_PLAYER
@@ -262,7 +265,7 @@
 	z = Z_LEVEL_EMPTY_SPACE
 	name = "Empty"
 	flags = MAP_LEVEL_PLAYER
-	transit_chance = 82
+	transit_chance = 82*/
 
 /*
 /datum/map_z_level/tether/wilderness

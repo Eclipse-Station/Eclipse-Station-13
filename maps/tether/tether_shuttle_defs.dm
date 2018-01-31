@@ -190,5 +190,5 @@
 	dock_target_offsite = "belter_nodocking"
 
 /datum/shuttle/ferry/belter/New()
-	move_time = move_time + rand(10, 40)
+	move_time = move_time + rand(10, 20)
 	..()
