@@ -68,7 +68,7 @@
 	var/requires_two_hands
 	var/wielded_icon = "gun_wielded"
 	var/one_handed_penalty = 0 // Penalty applied if someone fires a two-handed gun with one hand.
-
+	var/recoil_m = 1 //micros getting fucked
 	var/next_fire_time = 0
 
 	var/sel_mode = 1 //index of the currently selected mode
@@ -175,6 +175,28 @@
 	if(HULK in M.mutations)
 		M << "<span class='danger'>Your fingers are much too large for the trigger guard!</span>"
 		return 0
+
+	if((M.size_multiplier >= 1.5) && prob(75) && src.recoil_m != 2) //Macro handling
+		M << "<span class='danger'>Your large fingers struggle to get past the trigger guard!</span>"
+		return 0
+
+	if((M.size_multiplier <= 0.5) && prob(80) && src.recoil_m == 1) //Micro handling projectile
+		M.adjustHalLoss(25)
+		M.adjustBruteLoss(15)
+		M.Move(get_step(M,rand(1,8)), rand(1,8))
+		M << "<span class='danger'>You gets hurt and thrown by recoil!</span>"
+		return 1
+
+	if((M.size_multiplier <= 0.5) && prob(80) && src.recoil_m == 0) //Micro handling energy
+		if (prob(50))
+			M.adjustHalLoss(20)
+			M.adjustFireLoss(12)
+			M << "<span class='danger'>The heat, radiating from the [src] is too intense! It burns [user]'s hand!</span>"
+		else
+			M << "<span class='danger'>The [src] vibrates too hard for [user] to handle and they drop it!</span>"
+			M.drop_item()
+		return 1
+
 	if((CLUMSY in M.mutations) && prob(40)) //Clumsy handling
 		var/obj/P = consume_next_projectile()
 		if(P)

@@ -14,7 +14,7 @@
 	var/spit_projectile = null //Projectile type.
 	var/spit_name = null //String
 	var/last_spit = 0 //Timestamp.
-
+	var/outgoing_melee_damage_percent = 1 //for traits and shit
 	var/can_defib = 1	//Horrible damage (like beheadings) will prevent defibbing organics.
 
 /mob/living/carbon/human/New(var/new_loc, var/new_species = null)
