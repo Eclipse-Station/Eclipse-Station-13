@@ -95,6 +95,10 @@
 			message = "blinks rapidly."
 			m_type = 1
 
+		if ("gnarl")
+			message = "gnarls and shows its teeth..."
+			m_type = 1
+
 		if ("bow")
 			if (!src.buckled)
 				var/M = null
