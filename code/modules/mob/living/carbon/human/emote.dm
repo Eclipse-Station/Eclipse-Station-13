@@ -96,7 +96,7 @@
 			m_type = 1
 
 		if ("gnarl")
-			message = "gnarls and shows its teeth..."
+			message = "gnarls and shows their teeth..."
 			m_type = 1
 
 		if ("bow")
@@ -207,7 +207,7 @@
 			m_type = 1
 
 		if ("gnarl")
-			message = "gnarls and shows its teeth..."
+			message = "gnarls and shows their teeth..."
 			m_type = 1
 
 		if ("chuckle")
