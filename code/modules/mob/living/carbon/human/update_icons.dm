@@ -935,7 +935,7 @@ var/global/list/damage_icon_parts = list()
 	if(s_store)
 		var/t_state = s_store.item_state
 		if(!t_state)	t_state = s_store.icon_state
-		overlays_standing[SUIT_STORE_LAYER]	= image("icon" = 'icons/mob/belt_mirror.dmi', "icon_state" = "[t_state]")
+		overlays_standing[SUIT_STORE_LAYER]	= image("icon" = species.suit_storage_icon, "icon_state" = "[t_state]")
 		s_store.screen_loc = ui_sstore1		//TODO
 	else
 		overlays_standing[SUIT_STORE_LAYER]	= null
@@ -1373,7 +1373,7 @@ var/global/list/damage_icon_parts = list()
 	overlays_standing[TAIL_LAYER] = get_tail_image()
 	if(overlays_standing[TAIL_LAYER])
 		if(update_icons)
-			update_icons()
+			update_icons_layers()
 		return
 	// VOREStation Edit - END
 
