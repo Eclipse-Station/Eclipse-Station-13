@@ -202,6 +202,23 @@
 			playsound(src.loc, 'sound/machines/buzz-sigh.ogg', 50, 0)
 			m_type = 1
 
+		if("buzz2")
+			var/M = null
+			if(param)
+				for (var/mob/A in view(null, null))
+					if (param == A.name)
+						M = A
+						break
+			if(!M)
+				param = null
+
+			if (param)
+				message = "buzzes twice at [param]."
+			else
+				message = "buzzes twice."
+			playsound(src.loc, 'sound/machines/buzz-two.ogg', 50, 0)
+			m_type = 1
+
 		if("yes")
 			var/M = null
 			if(param)
