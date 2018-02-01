@@ -40,7 +40,7 @@ obj/item/weapon/chainsaw/proc/turnOn(mob/user as mob)
 		if(do_after(user, 15))
 			visible_message("You start \the [src] up with a loud grinding!", "[usr] starts \the [src] up with a loud grinding!")
 			attack_verb = list("shredded", "ripped", "torn")
-			playsound(src, 'sound/weapons/chainsaw_startup.ogg',40,1)
+			playsound(src, 'sound/weapons/chainsaw_startup.ogg',60,3)
 			force = active_force
 			edge = 1
 			sharp = 1
@@ -53,7 +53,7 @@ obj/item/weapon/chainsaw/proc/turnOff(mob/user as mob)
 	if(!on) return
 	to_chat(user, "You switch the gas nozzle on the chainsaw, turning it off.")
 	attack_verb = list("bluntly hit", "beat", "knocked")
-	playsound(user, 'sound/weapons/chainsaw_turnoff.ogg',40,1)
+	playsound(user, 'sound/weapons/chainsaw_turnoff.ogg',40,3)
 	force = inactive_force
 	edge = 0
 	sharp = 0
@@ -70,7 +70,7 @@ obj/item/weapon/chainsaw/afterattack(atom/A as mob|obj|turf|area, mob/user as mo
 	if(!proximity) return
 	..()
 	if(on)
-		playsound(src, 'sound/weapons/chainsaw_attack.ogg',40,1)
+		playsound(src, 'sound/weapons/chainsaw_attack.ogg',40,3)
 	if(A && on)
 		if(get_fuel() > 0)
 			reagents.remove_reagent("fuel", 1)
