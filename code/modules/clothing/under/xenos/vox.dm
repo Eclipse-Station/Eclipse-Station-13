@@ -18,51 +18,46 @@
 	icon_state = "vox-casual-2"
 	item_state = "vox-casual-2"
 
-/obj/item/clothing/under/vox
-	name = "Ripped Jumpsuit"
+/obj/item/clothing/under/vox/ripped
+	name = "Grey Ripped Jumpsuit"
 	desc = "A jumpsuit that looks like it's been shredded by some talons. Who could wear this now?"
 	icon = 'icons/obj/clothing/species/vox/uniforms.dmi'
 	icon_state = "vgrey"
 	item_state = "vgrey"
 
-/obj/item/clothing/under/vox/grey
-	name = "Grey Vox Jumpsuit"
-	desc = "An assistant's jumpsuit ripped to better fit a vox."
-	icon_state = "vgrey"
-	item_state = "vgrey"
-/obj/item/clothing/under/vox/robotics
+/obj/item/clothing/under/vox/ripped/robotics
 	name = "Vox Robotics Jumpsuit"
 	desc = "A roboticist's jumpsuit ripped to better fit a vox."
 	icon_state = "vrobotics"
 	item_state = "vrobotics"
 
-/obj/item/clothing/under/vox/toxins
+/obj/item/clothing/under/vox/ripped/toxins
 	name = "Vox Toxins Jumpsuit"
 	desc = "A Toxin Researcher's jumpsuit ripped to better fit a vox."
 	icon_state = "vtoxinswhite"
 	item_state = "vtoxinswhite"
 
-/obj/item/clothing/under/vox/atmos
+/obj/item/clothing/under/vox/ripped/atmos
 	name = "Vox Atmos Jumpsuit"
 	desc = "An Atmos Tech's jumpsuit ripped to better fit a vox."
 	icon_state = "vatmos"
 	item_state = "vatmos"
 
-/obj/item/clothing/under/vox/engi
+/obj/item/clothing/under/vox/ripped/engi
 	name = "Vox Engineer Jumpsuit"
 	desc = "An Engineer's jumpsuit ripped to better fit a vox."
 	icon_state = "vengine"
 	item_state = "vengine"
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 10)
 
-/obj/item/clothing/under/vox/sec
+/obj/item/clothing/under/vox/ripped/sec
 	name = "Vox Security Jumpsuit"
 	desc = "A Security officer's jumpsuit ripped to better fit a vox."
 	icon_state = "vred"
 	item_state = "vred"
 	armor = list(melee = 10, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
 
-/obj/item/clothing/under/vox/chem
+/obj/item/clothing/under/vox/ripped/chem
 	name = "Vox Chemist Jumpsuit"
 	desc = "A Chemist's jumpsuit ripped to better fit a vox."
 	icon_state = "vchem"
