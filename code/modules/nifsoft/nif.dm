@@ -45,7 +45,7 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 	var/obj/item/device/communicator/commlink/comm		// The commlink requires this
 
 	var/global/icon/big_icon
-	var/global/click_sound = 'sound/items/nif_click.ogg'
+	var/global/click_sound = 'sound/effects/NifStartupNoise1.ogg'
 	var/global/bad_sound = 'sound/items/nif_tone_bad.ogg'
 	var/global/good_sound = 'sound/items/nif_tone_good.ogg'
 	var/global/list/look_messages = list(
