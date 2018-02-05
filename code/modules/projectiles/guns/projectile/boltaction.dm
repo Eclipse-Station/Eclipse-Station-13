@@ -61,3 +61,26 @@
 	ammo_type = /obj/item/ammo_casing/a762
 	load_method = SINGLE_CASING|SPEEDLOADER
 	action_sound = 'sound/weapons/riflebolt.ogg'
+
+//Perfect for your slavic snipers.
+/obj/item/weapon/gun/projectile/shotgun/pump/rifle/scoped
+	name = "scoped bolt action rifle"
+	desc = "A reproduction of an almost ancient weapon design from the early 20th century. It's still popular among hunters and collectors due to its reliability. This one has a decent scope fitted on. Uses 7.62mm rounds."
+	item_state = "boltaction-scoped"
+	icon_state = "boltaction-scoped"
+	fire_sound = 'sound/weapons/rifleshot.ogg'
+	max_shells = 5
+	caliber = "7.62mm"
+	accuracy = -1
+	scoped_accuracy = 6
+	origin_tech = list(TECH_COMBAT = 1)// Old as shit rifle doesn't have very good tech.
+	ammo_type = /obj/item/ammo_casing/a762
+	load_method = SINGLE_CASING|SPEEDLOADER
+	action_sound = 'sound/weapons/riflebolt.ogg'
+
+/obj/item/weapon/gun/projectile/shotgun/pump/rifle/scoped/verb/scope()
+	set category = "Object"
+	set name = "Use Scope"
+	set popup_menu = 1
+
+	toggle_scope(2.0)
