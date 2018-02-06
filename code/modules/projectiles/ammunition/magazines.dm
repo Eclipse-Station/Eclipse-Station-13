@@ -546,6 +546,19 @@
 /obj/item/ammo_magazine/m762/empty
 	initial_ammo = 0
 
+/obj/item/ammo_magazine/m762AK
+	name = "AK magazine (7.62mm)"
+	icon_state = "m545"
+	mag_type = MAGAZINE
+	caliber = "7.62mm"
+	matter = list(DEFAULT_WALL_MATERIAL = 4000)
+	ammo_type = /obj/item/ammo_casing/a762
+	max_ammo = 30
+	multiple_sprites = 1
+
+/obj/item/ammo_magazine/m762AK/empty
+	initial_ammo = 0
+
 /obj/item/ammo_magazine/clip/c762
 	name = "ammo clip (7.62mm)"
 	icon_state = "clip_rifle"
