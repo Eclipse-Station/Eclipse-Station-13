@@ -139,7 +139,7 @@
 	name = true_name
 
 /turf/simulated/shuttle/wall/initialize()
-	..()
+	. = ..()
 
 	if(join_group)
 		src.auto_join()
@@ -220,7 +220,7 @@
 	stripe_color = "#00FF00"
 
 /turf/simulated/shuttle/wall/voidcraft/initialize()
-	..()
+	. = ..()
 	update_icon()
 
 /turf/simulated/shuttle/wall/voidcraft/update_icon()

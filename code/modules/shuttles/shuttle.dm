@@ -1,5 +1,5 @@
-//These lists are populated in /datum/shuttle_controller/New()
-//Shuttle controller is instantiated in master_controller.dm.
+//These lists are populated in /datum/controller/subsystem/shuttles/proc/setup_shuttle_docks()
+//Shuttle subsystem is instantiated in shuttles.dm.
 
 //shuttle moving state defines are in setup.dm
 
@@ -90,7 +90,7 @@
 			make_sounds(origin, HYPERSPACE_END)
 			return	//someone cancelled the launch
 
-		on_shuttle_departure()
+		on_shuttle_departure(origin)
 
 		moving_status = SHUTTLE_INTRANSIT //shouldn't matter but just to be safe
 		move(origin, destination)
@@ -127,9 +127,9 @@
 
 		depart_time = world.time
 
-		on_shuttle_departure(departing)
-
 		moving_status = SHUTTLE_INTRANSIT
+
+		on_shuttle_departure(departing)
 
 		move(departing, interim, direction)
 		interim.shuttle_arrived()

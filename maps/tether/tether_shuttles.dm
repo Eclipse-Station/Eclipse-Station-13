@@ -5,7 +5,7 @@
 /obj/machinery/computer/shuttle_control/tether_backup
 	name = "tether backup shuttle control console"
 	shuttle_tag = "Tether Backup"
-	req_one_access = list(access_heads)
+	req_one_access = list(access_heads,access_pilot)
 
 /obj/machinery/computer/shuttle_control/multi/tether_antag_ground
 	name = "land crawler control console"
@@ -200,10 +200,10 @@
 	)
 
 /datum/shuttle_destination/excursion/tether/get_arrival_message()
-	return "Attention, [master.my_shuttle.visible_name] has arrived to Excursion Hangar."
+	return "Attention, [master.my_shuttle.visible_name] has arrived at the Excursion Hangar."
 
 /datum/shuttle_destination/excursion/tether/get_departure_message()
-	return "Attention, [master.my_shuttle.visible_name] has departed Excursion Hangar."
+	return "Attention, [master.my_shuttle.visible_name] has departed from the Excursion Hangar."
 
 
 /datum/shuttle_destination/excursion/outside_tether
@@ -229,7 +229,7 @@
 	return "Attention, [master.my_shuttle.visible_name] has arrived at Docking Arm One."
 
 /datum/shuttle_destination/excursion/docked_tether/get_departure_message()
-	return "Attention, [master.my_shuttle.visible_name] has departed Docking Arm One."
+	return "Attention, [master.my_shuttle.visible_name] has departed from Docking Arm One."
 
 
 /datum/shuttle_destination/excursion/virgo3b_orbit

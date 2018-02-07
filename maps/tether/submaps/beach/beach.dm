@@ -81,7 +81,8 @@
 	new /datum/random_map/automata/cave_system/no_cracks(null, 1, 1, z, world.maxx, world.maxy)
 	new /datum/random_map/noise/ore/beachmine(null, 1, 1, z, 64, 64)
 
-	qdel(src)
+	initialized = TRUE
+	return INITIALIZE_HINT_QDEL
 
 // These are step-teleporters, for map edge transitions
 // This top one goes INTO the cave
@@ -114,6 +115,7 @@
 //And some special areas, including our shuttle landing spot (must be unique)
 /area/shuttle/excursion/away_beach
 	name = "\improper Excursion Shuttle - Beach"
+	dynamic_lighting = 0
 
 /area/tether_away/beach
 	name = "\improper Desert Planet Beach"
