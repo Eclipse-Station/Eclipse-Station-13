@@ -3,7 +3,7 @@
 // a scanner console for the asteroid belt
 //////////////////////////////
 #define OUTPOST_Z 8
-#define TRANSIT_Z 11
+#define TRANSIT_Z 5
 #define BELT_Z 13
 
 /obj/machinery/computer/roguezones

@@ -2770,6 +2770,7 @@
 #include "maps\southern_cross\southern_cross_jobs.dm"
 #include "maps\southern_cross\items\encryptionkey_sc.dm"
 #include "maps\southern_cross\items\headset_sc.dm"
+#include "maps\southern_cross\items\clothing\sc_head.dm"
 #include "maps\southern_cross\items\clothing\sc_suit.dm"
 #include "maps\southern_cross\job\outfits.dm"
 #include "maps\southern_cross\structures\closets\misc.dm"
