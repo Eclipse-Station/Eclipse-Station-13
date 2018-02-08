@@ -37,17 +37,6 @@
 #define Z_LEVEL_ABELT_VIRGO	             	13
 
 
-/* These are still defined here, but the levels have been removed. I could delete these but it will cause compile errors. Don't delete them unless you have to.
-#define Z_LEVEL_SURFACE_WILDERNESS_1		14
-#define Z_LEVEL_SURFACE_WILDERNESS_2		17
-#define Z_LEVEL_SURFACE_WILDERNESS_3		18
-#define Z_LEVEL_SURFACE_WILDERNESS_4		19
-#define Z_LEVEL_SURFACE_WILDERNESS_5		20
-#define Z_LEVEL_SURFACE_WILDERNESS_6		21
-
-#define Z_LEVEL_SURFACE_WILDERNESS_CRASH	22
-#define Z_LEVEL_SURFACE_WILDERNESS_RUINS	23 */
-
 
 /datum/map/tether
 	name = "Virgo"
@@ -58,6 +47,7 @@
 
 	lobby_icon = 'icons/misc/title_vr.dmi'
 	lobby_screens = list("tether")
+	id_hud_icons = 'icons/mob/hud_jobs_vr.dmi'
 
 	holomap_smoosh = list(list(
 		Z_LEVEL_SURFACE_LOW,
@@ -128,11 +118,13 @@
 		/area/tether/surfacebase/emergency_storage/atrium)
 
 	lateload_z_levels = list(
-		"Tether - Ships")
+						"Tether - Misc",
+						"Tether - Ships") //Stock Tether lateload maps
+
 
 	lateload_single_pick = list(
-		list("Desert Planet - Z1 Beach","Desert Planet - Z2 Cave")
-		)
+		list("Desert Planet - Z1 Beach","Desert Planet - Z2 Cave"),
+		"Alien Ship - Z1 Ship")
 
 /datum/map/tether/perform_map_generation()
 
@@ -176,6 +168,7 @@
 /datum/map_z_level/tether/station/surface_low
 	z = Z_LEVEL_SURFACE_LOW
 	name = "Surface 1"
+	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES|MAP_LEVEL_SEALED
 	base_turf = /turf/simulated/floor/outdoors/rocks/virgo3b
 	holomap_offset_x = TETHER_HOLOMAP_MARGIN_X
 	holomap_offset_y = TETHER_HOLOMAP_MARGIN_Y + TETHER_MAP_SIZE*0
@@ -183,6 +176,7 @@
 /datum/map_z_level/tether/station/surface_mid
 	z = Z_LEVEL_SURFACE_MID
 	name = "Surface 2"
+	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES|MAP_LEVEL_SEALED
 	base_turf = /turf/simulated/open
 	holomap_offset_x = TETHER_HOLOMAP_MARGIN_X
 	holomap_offset_y = TETHER_HOLOMAP_MARGIN_Y + TETHER_MAP_SIZE*1
@@ -190,6 +184,7 @@
 /datum/map_z_level/tether/station/surface_high
 	z = Z_LEVEL_SURFACE_HIGH
 	name = "Surface 3"
+	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES|MAP_LEVEL_SEALED
 	base_turf = /turf/simulated/open
 	holomap_offset_x = TETHER_HOLOMAP_MARGIN_X
 	holomap_offset_y = TETHER_HOLOMAP_MARGIN_Y + TETHER_MAP_SIZE*2
@@ -203,7 +198,7 @@
 	z = Z_LEVEL_SPACE_LOW
 	name = "Asteroid 1"
 	base_turf = /turf/space
-	transit_chance = 6
+	transit_chance = 33
 	holomap_offset_x = HOLOMAP_ICON_SIZE - TETHER_HOLOMAP_MARGIN_X - TETHER_MAP_SIZE
 	holomap_offset_y = TETHER_HOLOMAP_MARGIN_Y + TETHER_MAP_SIZE*0
 
@@ -211,7 +206,7 @@
 	z = Z_LEVEL_SPACE_MID
 	name = "Asteroid 2"
 	base_turf = /turf/simulated/open
-	transit_chance = 6
+	transit_chance = 33
 	holomap_offset_x = HOLOMAP_ICON_SIZE - TETHER_HOLOMAP_MARGIN_X - TETHER_MAP_SIZE
 	holomap_offset_y = TETHER_HOLOMAP_MARGIN_Y + TETHER_MAP_SIZE*1
 
@@ -219,7 +214,7 @@
 	z = Z_LEVEL_SPACE_HIGH
 	name = "Asteroid 3"
 	base_turf = /turf/simulated/open
-	transit_chance = 6
+	transit_chance = 33
 	holomap_offset_x = HOLOMAP_ICON_SIZE - TETHER_HOLOMAP_MARGIN_X - TETHER_MAP_SIZE
 	holomap_offset_y = TETHER_HOLOMAP_MARGIN_Y + TETHER_MAP_SIZE*2
 
@@ -244,11 +239,6 @@
 	z = Z_LEVEL_MISC
 	name = "Misc"
 	flags = MAP_LEVEL_ADMIN
-
-/datum/map_z_level/tether/ships
-	z = Z_LEVEL_SHIPS
-	name = "Ships"
-	flags = 0
 
 /datum/map_z_level/tether/belt
 	z = Z_LEVEL_ABELT_VIRGO

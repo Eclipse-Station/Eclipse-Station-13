@@ -29,6 +29,7 @@
 	#include "submaps/_tether_submaps.dm"
 
 
+
 	#define USING_MAP_DATUM /datum/map/tether
 
 #elif !defined(MAP_OVERRIDE)
