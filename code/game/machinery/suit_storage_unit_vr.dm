@@ -11,8 +11,8 @@
 		"Crowd Control" = list("crowd control voidsuit helmet", "rig0-sec_riot", "rig0-sec_riot"),
 		"Atmos" = list("atmospherics voidsuit helmet", "rig0-atmos", "rig0-atmos"),
 		"HAZMAT" = list("HAZMAT voidsuit helmet", "rig0-engineering_rad", "rig0-engineering_rad"),
-		"Construction" = list("Construction voidsuit helmet", "rig0-engineering_con", "rig0-engineering_con"),
-		"Biohazard" = list("Biohazard voidsuit helmet", "rig0-medical_bio", "rig0-medical_bio"),
+		"Construction" = list("construction voidsuit helmet", "rig0-engineering_con", "rig0-engineering_con"),
+		"Biohazard" = list("biohazard voidsuit helmet", "rig0-medical_bio", "rig0-medical_bio"),
 		"Emergency Medical Response" = list("emergency medical response voidsuit helmet", "rig0-medical_emt", "rig0-medical_emt"),
 		"^%###^%$" = list("blood-red voidsuit helmet", "rig0-syndie", "rig0-syndie"),
 		"Mercenary" = list("blood-red voidsuit helmet", "rig0-syndie", "rig0-syndie"),
@@ -26,11 +26,11 @@
 		"Crowd Control" = list("crowd control voidsuit", "rig-sec_riot", "sec_voidsuit_riot"),
 		"Atmos" = list("atmospherics voidsuit", "rig-atmos", "atmos_voidsuit"),
 		"HAZMAT" = list("HAZMAT voidsuit", "rig-engineering_rad", "eng_voidsuit_rad"),
-		"Construction" = list("Construction voidsuit", "rig-engineering_con", "eng_voidsuit_con"),
-		"Biohazard" = list("Biohazard voidsuit", "rig-medical_bio", "medical_voidsuit_bio"),
+		"Construction" = list("construction voidsuit", "rig-engineering_con", "eng_voidsuit_con"),
+		"Biohazard" = list("biohazard voidsuit", "rig-medical_bio", "medical_voidsuit_bio"),
 		"Emergency Medical Response" = list("emergency medical response voidsuit", "rig-medical_emt", "medical_voidsuit_emt"),
-		"^%###^%$" = list("blood-red voidsuit", "syndie_voidsuit", "rig-syndie"),
-		"Mercenary" = list("blood-red voidsuit", "syndie_voidsuit", "rig-syndie"),
+		"^%###^%$" = list("blood-red voidsuit", "rig-syndie", "rig-syndie"),
+		"Mercenary" = list("blood-red voidsuit", "rig-syndie", "rig-syndie"),
 		"Charring" = list("soot-covered voidsuit", "rig-firebug", "rig-firebug")
 	)
 
@@ -44,7 +44,7 @@
 		if(helmet) helmet.refit_for_species(target_species)
 		if(suit) suit.refit_for_species(target_species)
 
-	if(target_department)
+	if(target_department) // Where the proc starts to differ. Originally a massive switch structure.
 		if(helmet)
 			helmet.name = paintjobs_helmet[target_department][1]
 			helmet.icon_state = paintjobs_helmet[target_department][2]
@@ -59,5 +59,6 @@
 				suit.helmet.icon_state = paintjobs_helmet[target_department][2]
 				suit.helmet.item_state = paintjobs_helmet[target_department][3]
 
-	if(helmet) helmet.name = "refitted [helmet.name]"
-	if(suit) suit.name = "refitted [suit.name]"
+	if(target_species != "Human") // The original model technically isn't "refitted"
+		if(helmet) helmet.name = "refitted [helmet.name]"
+		if(suit) suit.name = "refitted [suit.name]"
