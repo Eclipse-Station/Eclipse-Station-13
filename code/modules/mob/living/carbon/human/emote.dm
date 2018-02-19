@@ -1,5 +1,7 @@
 /mob/living/carbon/human/emote(var/act,var/m_type=1,var/message = null)
 	var/param = null
+	
+	var/datum/gender/T = gender_datums[get_visible_gender()]
 
 	if (findtext(act, "-", 1, null))
 		var/t1 = findtext(act, "-", 1, null)
@@ -58,13 +60,13 @@
 				use_sound = 'sound/machines/synth_no.ogg'
 			else if(act == "rcough")
 				display_msg = "emits a robotic cough"
-				if(gender == FEMALE)
+				if(get_gender() == FEMALE)
 					use_sound = pick('sound/effects/mob_effects/f_machine_cougha.ogg','sound/effects/mob_effects/f_machine_coughb.ogg')
 				else
 					use_sound = pick('sound/effects/mob_effects/m_machine_cougha.ogg','sound/effects/mob_effects/m_machine_coughb.ogg', 'sound/effects/mob_effects/m_machine_coughc.ogg')
 			else if(act == "rsneeze")
 				display_msg = "emits a robotic sneeze"
-				if(gender == FEMALE)
+				if(get_gender() == FEMALE)
 					use_sound = 'sound/effects/mob_effects/machine_sneeze.ogg'
 				else
 					use_sound = 'sound/effects/mob_effects/f_machine_sneeze.ogg'
@@ -166,7 +168,7 @@
 
 		if ("choke")
 			if(miming)
-				message = "clutches [get_visible_gender() == MALE ? "his" : get_visible_gender() == FEMALE ? "her" : "their"] throat desperately!"
+				message = "clutches [T.his] throat desperately!"
 				m_type = 1
 			else
 				if (!muzzled)
@@ -186,14 +188,14 @@
 
 		if ("flap")
 			if (!src.restrained())
-				message = "flaps [get_visible_gender() == MALE ? "his" : get_visible_gender() == FEMALE ? "her" : "their"] wings."
+				message = "flaps [T.his] wings."
 				m_type = 2
 				if(miming)
 					m_type = 1
 
 		if ("aflap")
 			if (!src.restrained())
-				message = "flaps [get_visible_gender() == MALE ? "his" : get_visible_gender() == FEMALE ? "her" : "their"] wings ANGRILY!"
+				message = "flaps [T.his] wings ANGRILY!"
 				m_type = 2
 				if(miming)
 					m_type = 1
@@ -247,7 +249,7 @@
 							robotic = 1
 					if(!robotic)
 						message = "coughs!"
-						if(gender == FEMALE)
+						if(get_gender() == FEMALE)
 							if(species.female_cough_sounds)
 								playsound(src, pick(species.female_cough_sounds), 120)
 						else
@@ -256,7 +258,7 @@
 					else
 						message = "emits a robotic cough"
 						var/use_sound
-						if(gender == FEMALE)
+						if(get_gender() == FEMALE)
 							use_sound = pick('sound/effects/mob_effects/f_machine_cougha.ogg','sound/effects/mob_effects/f_machine_coughb.ogg')
 						else
 							use_sound = pick('sound/effects/mob_effects/m_machine_cougha.ogg','sound/effects/mob_effects/m_machine_coughb.ogg', 'sound/effects/mob_effects/m_machine_coughc.ogg')
@@ -369,7 +371,7 @@
 					message = "cries."
 					m_type = 2
 				else
-					message = "makes a weak noise. [get_visible_gender() == MALE ? "He" : get_visible_gender() == FEMALE ? "She" : "They"] [get_visible_gender() == NEUTER ? "frown" : "frowns"]."
+					message = "makes a weak noise. [T.he] [get_visible_gender() == NEUTER ? "frown" : "frowns"]." // no good, non-unwieldy alternative to this ternary at the moment
 					m_type = 2
 
 		if ("sigh")
@@ -472,7 +474,7 @@
 			m_type = 1
 
 		if("shake")
-			message = "shakes [get_visible_gender() == MALE ? "his" : get_visible_gender() == FEMALE ? "her" : "their"] head."
+			message = "shakes [T.his] head."
 			m_type = 1
 
 		if ("shrug")
@@ -521,7 +523,7 @@
 							robotic = 1
 					if(!robotic)
 						message = "sneezes."
-						if(gender == FEMALE)
+						if(get_gender() == FEMALE)
 							playsound(src, species.female_sneeze_sound, 70)
 						else
 							playsound(src, species.male_sneeze_sound, 70)
@@ -529,7 +531,7 @@
 					else
 						message = "emits a robotic sneeze"
 						var/use_sound
-						if(gender == FEMALE)
+						if(get_gender() == FEMALE)
 							use_sound = 'sound/effects/mob_effects/machine_sneeze.ogg'
 						else
 							use_sound = 'sound/effects/mob_effects/f_machine_sneeze.ogg'
@@ -601,7 +603,7 @@
 				if (M)
 					message = "hugs [M]."
 				else
-					message = "hugs [get_visible_gender() == MALE ? "himself" : get_visible_gender() == FEMALE ? "herself" : "themselves"]."
+					message = "hugs [T.himself]."
 
 		if ("handshake")
 			m_type = 1
@@ -619,7 +621,7 @@
 					if (M.canmove && !M.r_hand && !M.restrained())
 						message = "shakes hands with [M]."
 					else
-						message = "holds out [get_visible_gender() == MALE ? "his" : get_visible_gender() == FEMALE ? "her" : "their"] hand to [M]."
+						message = "holds out [T.his] hand to [M]."
 
 		if("dap")
 			m_type = 1
@@ -633,7 +635,7 @@
 				if (M)
 					message = "gives daps to [M]."
 				else
-					message = "sadly can't find anybody to give daps to, and daps [get_visible_gender() == MALE ? "himself" : get_visible_gender() == FEMALE ? "herself" : "themselves"]. Shameful."
+					message = "sadly can't find anybody to give daps to, and daps [T.himself]. Shameful."
 
 		if("slap", "slaps")
 			m_type = 1
@@ -648,7 +650,7 @@
 					message = "<span class='danger'>slaps [M] across the face. Ouch!</span>"
 					playsound(loc, 'sound/effects/snap.ogg', 50, 1)
 				else
-					message = "<span class='danger'>slaps [get_visible_gender() == MALE ? "himself" : get_visible_gender() == FEMALE ? "herself" : "themselves"]!</span>"
+					message = "<span class='danger'>slaps [T.himself]!</span>"
 					playsound(loc, 'sound/effects/snap.ogg', 50, 1)
 
 		if("scream", "screams")
@@ -660,7 +662,7 @@
 					message = "[species.scream_verb]!"
 					m_type = 2
 					/* Removed, pending the location of some actually good, properly licensed sounds.
-					if(gender == FEMALE)
+					if(get_gender() == FEMALE)
 						playsound(loc, "[species.female_scream_sound]", 80, 1)
 					else
 						playsound(loc, "[species.male_scream_sound]", 80, 1) //default to male screams if no gender is present.
@@ -685,7 +687,7 @@
 				to_chat(usr, "You need at least one hand in good working order to snap your fingers.")
 				return
 
-			message = "snaps [get_visible_gender() == MALE ? "his" : get_visible_gender() == FEMALE ? "her" : "their"] fingers."
+			message = "snaps [T.his] fingers."
 			playsound(loc, 'sound/effects/fingersnap.ogg', 50, 1, -3)
 
 		if("swish")
@@ -739,8 +741,10 @@
 	set name = "Set Pose"
 	set desc = "Sets a description which will be shown when someone examines you."
 	set category = "IC"
+	
+	var/datum/gender/T = gender_datums[get_visible_gender()]
 
-	pose =  sanitize(input(usr, "This is [src]. [get_visible_gender() == MALE ? "He" : get_visible_gender() == FEMALE ? "She" : "They"]...", "Pose", null)  as text)
+	pose =  sanitize(input(usr, "This is [src]. [T.he]...", "Pose", null)  as text)
 
 /mob/living/carbon/human/verb/set_flavor()
 	set name = "Set Flavour Text"

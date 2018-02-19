@@ -145,7 +145,6 @@
 /mob/proc/Life()
 //	if(organStructure)
 //		organStructure.ProcessOrgans()
-	//handle_typing_indicator() //You said the typing indicator would be fine. The test determined that was a lie.
 	return
 
 #define UNBUCKLED 0
@@ -648,6 +647,9 @@
 /mob/proc/get_gender()
 	return gender
 
+/mob/proc/get_visible_gender()
+	return gender
+
 /mob/proc/see(message)
 	if(!is_active())
 		return 0
@@ -1130,4 +1132,11 @@ mob/proc/yank_out_object()
 /mob/proc/update_client_color()
 	if(client && client.color)
 		animate(client, color = null, time = 10)
+	return
+
+/mob/proc/swap_hand()
+	return
+
+//Throwing stuff
+/mob/proc/throw_item(atom/target)
 	return

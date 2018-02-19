@@ -253,7 +253,7 @@ var/global/datum/crafting_controller/crafting_master
 					if(!I.reagents)
 						I.reagents = new /datum/reagents()
 					I.reagents.reagent_list.Add(A)
-			I.CheckParts()
+			I.CheckCParts()
 			I.loc = holder.loc
 			return 1
 	return 0

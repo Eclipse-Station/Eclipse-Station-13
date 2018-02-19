@@ -35,6 +35,50 @@
 	var/const/signfont = "Times New Roman"
 	var/const/crayonfont = "Comic Sans MS"
 
+/obj/item/weapon/paper/card
+	name = "blank card"
+	desc = "A gift card with space to write on the cover."
+	icon_state = "greetingcard"
+	slot_flags = null //no fun allowed!!!!
+
+/obj/item/weapon/paper/card/AltClick() //No fun allowed
+	return
+
+/obj/item/weapon/paper/card/update_icon()
+	return
+
+/obj/item/weapon/paper/card/smile
+	name = "happy card"
+	desc = "A gift card with a smiley face on the cover."
+	icon_state = "greetingcard_smile"
+
+/obj/item/weapon/paper/card/cat
+	name = "cat card"
+	desc = "A gift card with a cat on the cover."
+	icon_state = "greetingcard_cat"
+
+/obj/item/weapon/paper/card/flower
+	name = "flower card"
+	desc = "A gift card with a flower on the cover."
+	icon_state = "greetingcard_flower"
+
+/obj/item/weapon/paper/card/heart
+	name = "heart card"
+	desc = "A gift card with a heart on the cover."
+	icon_state = "greetingcard_heart"
+
+/obj/item/weapon/paper/card/New()
+	..()
+	pixel_y = rand(-8, 8)
+	pixel_x = rand(-9, 9)
+	stamps = null
+
+	if(info != initial(info))
+		info = html_encode(info)
+		info = replacetext(info, "\n", "<BR>")
+		info = parsepencode(info)
+		return
+
 /obj/item/weapon/paper/alien
 	name = "alien tablet"
 	desc = "It looks highly advanced"
@@ -314,12 +358,13 @@
 
 /obj/item/weapon/paper/proc/burnpaper(obj/item/weapon/flame/P, mob/user)
 	var/class = "warning"
+	var/datum/gender/TU = gender_datums[user.get_visible_gender()]
 
 	if(P.lit && !user.restrained())
 		if(istype(P, /obj/item/weapon/flame/lighter/zippo))
 			class = "rose"
 
-		user.visible_message("<span class='[class]'>[user] holds \the [P] up to \the [src], it looks like \he's trying to burn it!</span>", \
+		user.visible_message("<span class='[class]'>[user] holds \the [P] up to \the [src], it looks like [TU.hes] trying to burn it!</span>", \
 		"<span class='[class]'>You hold \the [P] up to \the [src], burning it slowly.</span>")
 
 		spawn(20)

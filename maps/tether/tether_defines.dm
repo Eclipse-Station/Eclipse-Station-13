@@ -124,7 +124,10 @@
 
 	lateload_single_pick = list(
 		list("Desert Planet - Z1 Beach","Desert Planet - Z2 Cave"),
-		"Alien Ship - Z1 Ship")
+		list("Remmi Aerostat - Z1 Aerostat","Remmi Aerostat - Z2 Surface")
+		)
+
+	lateload_single_pick = null //Nothing right now.
 
 /datum/map/tether/perform_map_generation()
 
