@@ -59,10 +59,25 @@
 	usr << "<span class='notice'>You set the size to [size_select]%</span>"
 
 /obj/item/weapon/gun/energy/sizegun/examine(mob/user)
-	..()
+
 	var/size_examine = (size_set_to*100)
 	user << "<span class='info'>It is currently set at [size_examine]%</span>"
 
+
+
+
+/obj/item/weapon/gun/energy/sizegun/overcharged
+	name = "overcharged size gun"
+	size_set_to = 3.5
+	/obj/item/weapon/gun/energy/sizegun/overcharged/Fire(atom/target, mob/living/user, clickparams, pointblank=0, reflex=0)
+		..()
+		usr << "<span class='notice'>The [src] melts away!</span>"
+		qdel(src)
+
+/obj/item/weapon/gun/energy/sizegun/overcharged/select_size()
+	.=..()
+	usr << "<span class='notice'>The knob is stuck!</span>"
+	return
 //
 // Beams for size gun
 //
