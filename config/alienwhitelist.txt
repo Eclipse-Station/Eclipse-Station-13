@@ -9,10 +9,12 @@ rsmr - Diona
 rsmr - Pastrian
 Chatter - Clown
 Crux ansata - Diona
+Crux ansata - Vox
 LiquidRecluse - Vox
 Cabbagesushi - Gutter
 Pitchblende - Xenomorph Hybrid
 ILikeTurles - Vox
+ILikeTurles - Diona
 jademanique - Diona
 aether_elemental - Daemon
 aruis - Xenochimera
@@ -37,6 +39,7 @@ sepulchre - Xenomorph Hybrid
 silverTalismen - Diona
 silvertalismen - Xenochimera
 singo - Gutter
+sloaff - Vox-Pidgin
 some~user - Species
 tastypred - Xenochimera
 verkister - Xenochimera
