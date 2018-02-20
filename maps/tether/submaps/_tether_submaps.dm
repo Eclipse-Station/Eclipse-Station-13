@@ -2,6 +2,21 @@
 // This is so Travis can validate PoIs, and ensure future changes don't break PoIs, as PoIs are loaded at runtime and the compiler can't catch errors.
 
 //////////////////////////////////////////////////////////////////////////////
+/*
+
+/datum/map_template/tether_lateload/belt
+	name = "Tether - Belt"
+	desc = "Mining belt."
+	mappath = 'tether_mining.dmm'
+
+	associated_map_datum = /datum/map_z_level/tether_lateload/belt
+
+/datum/map_z_level/tether_lateload/belt
+//	z = Z_LEVEL_ABELT_VIRGO
+	name = "Belt"
+	flags = 0
+	*/
+
 /// Static Load
 /datum/map_template/tether_lateload/tether_misc
 	name = "Tether - Misc"
