@@ -3,12 +3,20 @@ var/global/datum/crafting_controller/crafting_master
 /datum/crafting_recipe
 	var/name = ""
 	var/reqs[] = list()
-	var/result_path
+	var/result_path = list()
 	var/tools[] = list()
 	var/time = 0
 	var/parts[] = list()
 	var/chem_catalists[] = list()
 	var/can_be_deconstructed = 0
+
+
+
+/datum/table_recipe/proc/AdjustChems(var/obj/resultobj as obj)
+	//This proc is to replace the make_food proc of recipes from microwaves and such that are being converted to table crafting recipes.
+	//Use it to handle the removal of reagents after the food has been created (like removing toxins from a salad made with ambrosia)
+	//If a recipe does not require it's chems adjusted, don't bother declaring this for the recipe, as it will call this placeholder
+	return
 
 /datum/crafting_recipe/New()
 	crafting_master.all_crafting_recipes[name] = src
@@ -211,17 +219,18 @@ var/global/datum/crafting_controller/crafting_master
 			if(!check_contents(R, holder_contents) || !check_tools(user, R, holder_contents))
 				return 0
 			var/list/parts = del_reqs(R, holder_contents)
-			var/atom/movable/I = new R.result_path
-			for(var/A in parts)
-				if(istype(A, /obj/item))
-					var/atom/movable/B = A
-					B.loc = I
-				else
-					if(!I.reagents)
-						I.reagents = new /datum/reagents()
-					I.reagents.reagent_list.Add(A)
-			I.CheckCParts()
-			I.loc = holder.loc
+			for (var/X in R.result_path)
+				var/atom/movable/I = new X
+				for(var/A in parts)
+					if(istype(A, /obj/item))
+						var/atom/movable/B = A
+						B.loc = I
+					else
+						if(!I.reagents)
+							I.reagents = new /datum/reagents()
+						I.reagents.reagent_list.Add(A)
+				I.CheckCParts()
+				I.loc = holder.loc
 			return 1
 	return 0
 
@@ -251,7 +260,9 @@ var/global/datum/crafting_controller/crafting_master
 						while(amt > 0)
 							I = locate(B) in holder.loc
 							Deletion.Add(I)
+							I.loc = null //remove it from the table loc so that we don't locate the same item every time (will be relocated inside the crafted item in construct_item())
 							amt--
+
 						break item_loop
 		else
 			var/datum/reagent/RG = new A
@@ -270,11 +281,18 @@ var/global/datum/crafting_controller/crafting_master
 							amt -= RC.reagents.get_reagent_amount(RG.id)
 							RC.reagents.del_reagent(RG.id)
 
-	for(var/A in R.parts)
+	var/list/partlist = list(R.parts.len)
+	for(var/M in R.parts)
+		partlist[M] = R.parts[M]
+	deletion_loop:
 		for(var/B in Deletion)
-			if(!istype(B, A))
-				Deletion.Remove(B)
-				qdel(B)
+			for(var/A in R.parts)
+				if(istype(B, A))
+					if(partlist[A] > 0) //do we still need a part like that?
+						partlist[A] -= 1
+						continue deletion_loop
+			Deletion.Remove(B)
+			qdel(B)
 	return Deletion
 
 /datum/crafting_holder/proc/interact(mob/user)
@@ -284,7 +302,7 @@ var/global/datum/crafting_controller/crafting_master
 	var/dat = "<h3>Construction menu</h3>"
 	dat += "<div class='statusDisplay'>"
 	if(busy)
-		dat += "Construction inprogress...</div>"
+		dat += "Construction in progress...</div>"
 	else
 		for(var/A in recipes)
 			var/datum/crafting_recipe/R = recipes[A]
@@ -292,7 +310,7 @@ var/global/datum/crafting_controller/crafting_master
 				dat += "<A href='?src=\ref[src];make=\ref[R]'>[R.name]</A><BR>"
 		dat += "</div>"
 
-	var/datum/browser/popup = new(user, "craft", "Craft", 300, 300)
+	var/datum/browser/popup = new(user, "craft", "Crafting", 300, 300)
 	popup.set_content(dat)
 	popup.open()
 	return
@@ -314,29 +332,3 @@ var/global/datum/crafting_controller/crafting_master
 		interact(usr)
 
 
-
-//blueprints
-
-/obj/item/crafting/blueprint
-	name = "Crafting blueprint"
-	desc = "This shouldn't be here."
-	icon = 'icons/obj/items.dmi'
-	icon_state = "blueprints"
-	var/recipe = "Sugar, spice and everything nice."
-
-/obj/item/crafting/blueprint/attack_self(mob/M as mob)
-	if (!istype(M,/mob/living/carbon/human))
-		M << "This stack of blue paper means nothing to you." //monkeys cannot into crafting
-		return
-	M << "[recipe]"
-	return
-
-/obj/item/crafting/blueprint/sizegunovercharge
-	name = "overcharged sizegun blueprint"
-	desc = "You have a bad feeling about this."
-	recipe = "3 bluespace crystals, 1 sizegun, 1 power cell. Tools: screwdriver."
-
-/obj/item/crafting/blueprint/dexenotaser
-	name = "xeno taser upgrade schematics"
-	desc = "Now we're talking."
-	recipe = "1 xeno taser, 1 advanced capacitor, 1 high-power microlaser. Tools: screwdriver, circuit wirer."
