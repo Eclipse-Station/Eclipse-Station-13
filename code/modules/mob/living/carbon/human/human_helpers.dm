@@ -25,7 +25,7 @@
 	return 0
 
 /mob/living/carbon/human/proc/can_eat_status()
-	if(!check_has_mouth())
+	if(!check_has_mouth() || istype(species, /datum/species/lanius))
 		return list(HUMAN_EATING_NO_MOUTH)
 	var/obj/item/blocked = check_mouth_coverage()
 	if(blocked)
@@ -68,7 +68,7 @@
 		var/datum/robolimb/R = all_robolimbs[T.model]
 		synthetic = R
 		return synthetic
-
+	if (istype(species, /datum/species/lanius)) return 1
 	return 0
 
 // Would an onlooker know this person is synthetic?

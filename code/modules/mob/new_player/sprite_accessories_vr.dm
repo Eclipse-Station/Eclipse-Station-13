@@ -203,6 +203,9 @@
 		icon_state = "hair_messy"
 		species_allowed = list("Tajara", "Xenochimera")
 
+
+
+
 //Teshari things
 	teshari
 		icon_add = 'icons/mob/human_face_vr_add.dmi'
@@ -512,6 +515,10 @@
 	icon = 'icons/mob/human_face_vr.dmi'
 	icon_state = "inkling-colorable"
 	do_colouration = 1
+
+
+
+
 
 //VOREStation Body Markings and Overrides
 //Reminder: BP_L_FOOT,BP_R_FOOT,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_L_HAND,BP_R_HAND,BP_TORSO,BP_GROIN,BP_HEAD

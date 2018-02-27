@@ -151,3 +151,9 @@
 	desc = "A very robust candy."
 	icon = 'icons/mob/human_races/cakrace.dmi'
 	icon_state = "cakbrain"
+	/*
+/obj/item/organ/internal/brain/lanius
+	name = "Metal nugget"
+	icon = 'icons/obj/mining.dmi'
+	icon_state = 'ore_platinum'
+	desc = "A strange clump of metal."*/

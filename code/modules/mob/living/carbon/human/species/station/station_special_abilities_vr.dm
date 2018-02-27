@@ -852,57 +852,6 @@
 
 
 
-/*
-/mob/living/carbon/human/proc/take_a_bite(mob/living/carbon/M as mob)
-	set src = view(1)
-	set name = "Take a bite"
-	set desc = "Take a bite out of a delicious pastry person!"
-	set category = "cak"
-
-
-	if(last_special > world.time)
-		return
-
-	if(stat || paralysis || stunned || weakened || lying || restrained() || buckled)
-		src << "You cannot bite anyone in your current state!"
-		return
-
-	var/list/choices = list()
-	for(var/mob/living/carbon/human/M in view(1,src))
-		if(!istype(M,/mob/living/silicon) && Adjacent(M) && M.max_age == 3)
-			choices += M
-	choices -= src
-
-	var/mob/living/carbon/human/B = input(src,"Who do you wish to bite?") as null|anything in choices
-
-	if(!B || !src || src.stat) return
-
-	if(!Adjacent(B)) return
-
-	if(last_special > world.time) return
-
-	if(stat || paralysis || stunned || weakened || lying || restrained() || buckled)
-		src << "You cannot bite in your current state."
-		return
-
-	src.visible_message("<font color='red'><b>[src] moves their head closer to [B], trying to take a bite!</b></font>")
-
-	if(do_after(src, 5, B)) //Thrirty seconds.
-		if(!Adjacent(B)) return
-		src.visible_message("<font color='red'><b>[src] takes a bite out of [B]!</b></font>")
-		B.apply_damage(5, BRUTE, BP_HEAD)
-		src.nutrition += 400
-		sleep(50)
-		B.drip(1)
-		sleep(50)
-		B.drip(1)
-	var/mob/living/carbon/human/H = M
-	if(M.reagents)
-		M.reagents.add_reagent("iron", 200)
-		M.reagents.add_reagent("protein", 2)
-		to_chat(M, "food!") */
-
-
 
 
 /mob/living/carbon/human/proc/nomnom()
@@ -913,7 +862,7 @@
 	set desc = "You want to bite a cak?"
 	set category = "cak"
 	if(!istype(C) || C.stat) return
-	if((last_spit + 1 SECONDS) > world.time) //To prevent YATATATATATAT spitting.
+	if((last_spit + 1 SECONDS) > world.time) //To prevent YATATATATATAT eating.
 		return
 	else if(src.get_species() == "Pastrian")
 		last_spit = world.time
@@ -923,4 +872,80 @@
 			C.reagents.add_reagent("protein", 5)
 			src.adjustBruteLoss(12)
 	sleep(15)
+
+
+/mob/living/carbon/human/proc/cromch()
+	set name = "Eat food"
+	set category = "Abilities"
+	var/usesound = 'sound/effects/roboteat.ogg'
+	var/mob/living/carbon/human/C = usr
+	var/obj/item/eating = get_active_hand()
+	if((last_spit + 2 SECONDS) > world.time)
+		return //To prevent YATATATATATAT eating.
+	if(C.head)
+		C << "Your headwear is in the way."
+		return
+	if(!eating)
+		C << "There is nothing to consume."
+		return
+	if(!eating.matter)
+		C << "\The [eating] does not contain significant amounts of edible materials and cannot be consumed."
+		return
+	sleep(3)
+	last_spit = world.time
+	for(var/material in eating.matter)
+		var/total_material = eating.matter[material]
+			//If it's a stack, we eat multiple sheets.
+		if(istype(eating,/obj/item/stack))
+			var/obj/item/stack/stack = eating
+			total_material *= stack.get_amount()
+		C.nutrition += (total_material/50)
+
+	visible_message("<font color='red'><B>[C] starts consuming [eating].")
+	if(do_after(C, 10, src))
+		C << "You eat the [eating]."
+		playsound(C, usesound, 70, 1)
+		qdel(eating)
+		visible_message("<font color='red'><B>[C] consumes [eating]!")
+		sleep(3)
+
+	//should've just used a single var, oh well
+
+/mob/living/carbon/human/proc/lanius_produce()
+	set name = "Produce materials"
+	set category = "Abilities"
+	set desc = "You prepare to produce raw materials with your body."
+	var/mob/living/carbon/human/C = src
+	var/list/items = list(1, 5, 10, 20)
+	var/list/choices = list("Steel sheets", "Glass sheets")
+	var/obj/P = input(C,"What do you want to produce?") as null|anything in choices
+	if(!P || !src || src.stat) return
+	if (P == "Steel sheets")
+		var/amount = input(C,"How many?") as null|anything in items
+		var/obj/item/stack/stack = new /obj/item/stack/material/steel(loc)
+		stack.amount = amount
+		for(var/material in stack.matter)
+			var/total_material = stack.matter[material]
+			total_material *= amount
+			if (C.nutrition < total_material/30 + 60)
+				C << "You're too hungry for that."
+				return
+			else
+				visible_message("<font color='red'><B>[C] produces some steel sheets!")
+				C.nutrition -= (total_material/20)
+	else
+		var/amount = input(C,"How many?") as null|anything in items
+
+		var/obj/item/stack/stack = new /obj/item/stack/material/glass(loc)
+		stack.amount = amount
+		for(var/material in stack.matter)
+			var/total_material = stack.matter[material]
+			total_material *= amount
+			if (C.nutrition < total_material/20 + 60)
+				C << "You're too hungry for that."
+				return
+			else
+				visible_message("<font color='red'><B>[C] produces some glass sheets!")
+				C.nutrition -= (total_material/15)
+
 

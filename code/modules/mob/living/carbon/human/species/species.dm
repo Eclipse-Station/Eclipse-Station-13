@@ -32,7 +32,7 @@
 	var/tail_hair
 
 	var/icon_scale = 1                                   // Makes the icon larger/smaller.
-	//var/italian = 0
+
 	var/race_key = 0       	                             // Used for mob icon cache string.
 	var/icon/icon_template                               // Used for mob icon generation for non-32x32 species.
 	var/mob_size	= MOB_MEDIUM

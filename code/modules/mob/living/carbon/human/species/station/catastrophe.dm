@@ -16,10 +16,6 @@
 	gluttonous = 0
 	min_age = 1
 	max_age = 3
-/*	var/verb_name = "Take a bite"
-	verb_desc = "Take a bite from the delicious pastry person!"
-	self_emote_descriptor = list("eat")
-	assigned_proc = /mob/living/carbon/human/proc/consume */
 
 	inherent_verbs = list(/mob/living/carbon/human/proc/nomnom)
 
@@ -59,10 +55,10 @@
 
 
 
-/mob/living/carbon/human/Life()
+/datum/species/tajaran/cak/handle_environment_special(var/mob/living/carbon/human/H)
 	..()
 	if(prob(80))
-		adjustBruteLoss(-1)
+		H.adjustBruteLoss(-1)
 	for(var/obj/item/weapon/reagent_containers/food/snacks/donut/normal/D in range(1, src)) //Frosts nearby donuts!
 		if(D.icon_state != "donut2")
 			D.name = "frosted donut"

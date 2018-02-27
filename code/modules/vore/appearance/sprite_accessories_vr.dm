@@ -330,6 +330,10 @@
 	icon_state = "alurane-ears"
 	ckeys_allowed = list("natje")
 
+
+
+
+
 /*
 ////////////////////////////
 /  =--------------------=  /
@@ -474,6 +478,35 @@
 	icon_state = "nevrean_s"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
+
+
+/datum/sprite_accessory/wing/lanius_crown
+		name = "Spike Crown"
+		icon = 'icons/mob/human_races/lanius.dmi'
+		desc = ""
+		do_colouration = 1
+		color_blend_mode = ICON_MULTIPLY
+		icon_state = "lanius_spikes"
+		species_allowed = list("Lanius")
+
+/datum/sprite_accessory/wing/lanius_crown_alt
+		name = "Spine Crown"
+		icon = 'icons/mob/human_races/r_lanius.dmi'
+		desc = ""
+		do_colouration = 1
+		color_blend_mode = ICON_MULTIPLY
+		icon_state = "spikes_alt"
+		species_allowed = list("Lanius")
+
+/datum/sprite_accessory/wing/lanius_shoulderblades
+		name = "Big Shoulderblades"
+		icon = 'icons/mob/human_races/r_lanius.dmi'
+		desc = ""
+		do_colouration = 1
+		color_blend_mode = ICON_MULTIPLY
+		icon_state = "shoulderblades"
+		species_allowed = list("Lanius")
+
 
 /*
 ////////////////////////////

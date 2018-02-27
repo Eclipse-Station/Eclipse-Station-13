@@ -45,6 +45,7 @@
 #define LANGUAGE_OCCULT "Occult"
 #define LANGUAGE_CHANGELING "Changeling"
 #define LANGUAGE_VOX "Vox-Pidgin"
+#define LANGUAGE_LANIUS "Metalspeak"
 
 // Language flags.
 #define WHITELISTED  1   // Language is available if the speaker is whitelisted.

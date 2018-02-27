@@ -72,6 +72,19 @@
 	machine_understands = FALSE
 
 
+/datum/language/lanius
+	name = LANGUAGE_LANIUS
+	desc = "The ear-piercing language, consisting of high-pitched screeches and metal clunking."
+	speech_verb = "creaks"
+	ask_verb = "squeaks"
+	exclaim_verb = "screeches"
+	colour = "metalspeak" //So fancy
+	key = "ln"
+	syllables = list("krr","clunk","tonk","kree","chee","eee","schee","bonk","shh","kree","creak","squeak",
+	"kee","zas","saz","rra","kaha")
+	machine_understands = FALSE
+
+
 /datum/language/unathi
 	flags = 0
 /datum/language/tajaran

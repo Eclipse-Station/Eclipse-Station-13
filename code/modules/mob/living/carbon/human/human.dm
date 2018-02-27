@@ -9,7 +9,7 @@
 	var/embedded_flag	  //To check if we've need to roll for damage on movement while an item is imbedded in us.
 	var/obj/item/weapon/rig/wearing_rig // This is very not good, but it's much much better than calling get_rig() every update_canmove() call.
 	var/last_push_time	//For human_attackhand.dm, keeps track of the last use of disarm
-
+	var/buildup = 0 //For laniuses
 	var/spitting = 0 //Spitting and spitting related things. Any human based ranged attacks, be it innate or added abilities.
 	var/spit_projectile = null //Projectile type.
 	var/spit_name = null //String
@@ -791,7 +791,7 @@
 /mob/living/carbon/human/check_has_mouth()
 	// Todo, check stomach organ when implemented.
 	var/obj/item/organ/external/head/H = get_organ(BP_HEAD)
-	if(!H || !H.can_intake_reagents)
+	if(!H || !H.can_intake_reagents || istype(species, /datum/species/lanius))
 		return 0
 	return 1
 
