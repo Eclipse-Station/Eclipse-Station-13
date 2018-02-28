@@ -18,7 +18,7 @@
 
 /obj/item/clothing/under/permit
 	name = "public nudity permit"
-	desc = "This permit entitles the bearer to conduct their duties without a uniform. Normally issued to furred crewmembers or those with literally nothing to hide."
+	desc = "This permit entitles the bearer to conduct their duties without a uniform. Normally issued to furred crewmembers or those with nothing to hide."
 	icon = 'icons/obj/card.dmi'
 	icon_state = "guest"
 	body_parts_covered = 0
@@ -47,6 +47,7 @@
 /obj/item/clothing/under/bluespace/verb/toggle_fibers()
 		set category = "Object"
 		set name = "Adjust fibers"
+		set desc = "Adjust your suit fibers. This makes it so your stomach(s) will show or not."
 		set src in usr
 
 		adjust_fibers(usr)
@@ -55,10 +56,10 @@
 /obj/item/clothing/under/bluespace/proc/adjust_fibers(mob/user)
 	if(hides_bulges == FALSE)
 		hides_bulges = TRUE
-		to_chat(user, "You tense the suit fibers.")
+		to_chat(user, "You tense the suit fibers, hiding your stomach(s).")
 	else
 		hides_bulges = FALSE
-		to_chat(user, "You relax the suit fibers.")
+		to_chat(user, "You relax the suit fibers, showing your stomach(s).")
 
 
 

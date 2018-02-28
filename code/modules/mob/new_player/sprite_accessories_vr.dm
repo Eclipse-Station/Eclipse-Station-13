@@ -23,6 +23,13 @@
 		ckeys_allowed = list("Kira72")
 		do_colouration = 0
 
+	Taramaw
+		name = "Hairmaw (Liquidfirefly)"
+		icon = 'icons/mob/human_face_vr.dmi'
+		icon_state = "maw_hair"
+		ckeys_allowed = list("liquidfirefly")
+		do_colouration = 0
+
 	citheronia_colorable
 		name = "Citheronia Hair"
 		icon = 'icons/mob/human_face_vr.dmi'
@@ -514,6 +521,7 @@
 	desc = ""
 	icon = 'icons/mob/human_face_vr.dmi'
 	icon_state = "inkling-colorable"
+	color_blend_mode = ICON_MULTIPLY
 	do_colouration = 1
 
 
