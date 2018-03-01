@@ -1719,3 +1719,6 @@
 /mob/living/simple_animal/retaliate
 	retaliate = 1
 	destroy_surroundings = 1
+
+
+

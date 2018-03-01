@@ -74,7 +74,7 @@
 		var/turf/T = get_turf(H.loc)
 		var/datum/gas_mixture/environment //air magic. Pure fucking magic. DO NOT TOUCH
 		environment =  T.remove_air(T:air:total_moles)
-		if (environment.gas["oxygen"] > 10)
+		if (environment.gas["oxygen"] > 8)
 			environment.gas["oxygen"] = (environment.gas["oxygen"])*0.75
 			if(T) T.assume_air(environment)
 			if (H.buildup <= 650) H.buildup += 5

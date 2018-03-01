@@ -1210,3 +1210,8 @@ default behaviour is:
 
 
 	item.throw_at(target, throw_range, item.throw_speed, src)
+
+
+// Whether the mob is able to see
+/mob/living/proc/has_vision()
+	return !(eye_blind || (disabilities & BLIND) || stat)
