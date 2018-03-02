@@ -1211,7 +1211,20 @@ default behaviour is:
 
 	item.throw_at(target, throw_range, item.throw_speed, src)
 
-
+/mob/living/get_sound_env(var/pressure_factor)
+	if (hallucination)
+		return PSYCHOTIC
+	else if (druggy)
+		return DRUGGED
+	else if (drowsyness)
+		return DIZZY
+	else if (confused)
+		return DIZZY
+	else if (sleeping)
+		return UNDERWATER
+	else
+		return ..()
+		
 // Whether the mob is able to see
 /mob/living/proc/has_vision()
 	return !(eye_blind || (disabilities & BLIND) || stat)

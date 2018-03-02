@@ -24,9 +24,9 @@
 	health = 50000
 
 
-	harm_intent_damage = 60
-	melee_damage_lower = 50
-	melee_damage_upper = 75
+	harm_intent_damage = 30
+	melee_damage_lower = 25
+	melee_damage_upper = 40
 	attacktext = "clawed"
 	attack_sound = 'sound/hallucinations/growl1.ogg'
 
@@ -41,14 +41,14 @@
 	minbodytemp = 0
 	maxbodytemp = 9000
 
-	faction = list("statue")
+	faction = "statue"
 	move_to_delay = 0 // Very fast
 
 	animate_movement = NO_STEPS // Do not animate movement, you jump around as you're a scary statue.
 
 	see_in_dark = 15
 	view_range = 20
-	supernatural = 1
+//	supernatural = 1
 /*	aggro_vision_range = 12
 	idle_vision_range = 12
 */
@@ -59,10 +59,10 @@
 	sight = SEE_SELF|SEE_MOBS|SEE_OBJS|SEE_TURFS
 	anchored = 1
 	status_flags = GODMODE // Cannot push also
-
+	var/last_hit = 0
 	var/cannot_be_seen = 1
 	var/mob/living/creator = null
-
+	mob_swap_flags = null
 
 // No movement while seen code.
 
@@ -72,6 +72,8 @@
 	// Give spells
 	add_spell(new/spell/aoe_turf/flicker_lights)
 	add_spell(new/spell/aoe_turf/blindness)
+	add_spell(new/spell/aoe_turf/shatter)
+
 
 	// Set creator
 	if(creator)
@@ -94,11 +96,15 @@
 /mob/living/simple_animal/hostile/statue/Life()
 	..()
 	handleAnnoyance()
-	if ((annoyance - 1) > 0)
-		annoyance -= 1
+	if ((annoyance - 2) > 0)
+		annoyance -= 2
 	if(target_mob)
-		if((annoyance + 8) < 400)
-			annoyance += 5
+		if((annoyance + 8) < 800)
+			annoyance += 6
+/*
+/mob/living/simple_animal/hostile/statue/handle_supernatural()
+	..()
+	Paralyse(20)*/
 
 
 /mob/living/simple_animal/hostile/statue/handle_stance()
@@ -115,13 +121,13 @@
 
 
 /mob/living/simple_animal/hostile/statue/proc/handleAnnoyance()
-	if((last_response + 5 SECONDS) > world.time)
+	if((last_response + 8 SECONDS) > world.time)
 		return //To prevent YATATATATATAT blinding.
 	var/turf/T = get_turf(loc)
-	if (annoyance > 50)
+	if ((annoyance > 80) && (prob(40)))
 		AI_blind()
 		annoyance -= 25
-		if (prob(8))
+		if (prob(10))
 			if(T.get_lumcount() * 10 > 1.5)
 				AI_flash()
 				annoyance -= 40
@@ -130,15 +136,26 @@
 
 
 /mob/living/simple_animal/hostile/statue/proc/AI_blind()
-	for(var/mob/living/L in range(10, src))
+	for(var/mob/living/L in range(7, src))
 		if(L == src)
 			continue
-		L.Blind(4)
+		if (prob(90))
+			to_chat(L, "<span class='notice'>Your eyes feel very heavy.</span>")
+			L.Blind(5)
 	return
 
 /mob/living/simple_animal/hostile/statue/proc/AI_flash()
+	if (prob(30))
+		visible_message("The statue rumbles.")
 	for(var/obj/machinery/light/L in range(20, src))
 		L.flicker()
+	return
+
+
+/mob/living/simple_animal/hostile/statue/proc/AI_mirrorshmash()
+	for(var/obj/structure/mirror/M in range(20, src))
+		visible_message("The mirror shatters!")
+		M.shatter()
 	return
 
 
@@ -148,8 +165,10 @@
 		if(client)
 			to_chat(src, "<span class='warning'>You cannot attack, there are eyes on you!</span>")
 			return
-	else
+	else if(prob(50))
+		sleep(12)
 		..()
+
 
 
 /mob/living/simple_animal/hostile/statue/face_atom()
@@ -182,6 +201,13 @@
 			if(M.occupant && M.occupant.client)
 				if(M.occupant.has_vision())
 					return M.occupant
+		for(var/obj/structure/mirror/M in view(world.view + 1, check)) //FUCKING MIRRORS
+			if (M.icon_state != "mirror_broke")
+				annoyance += 5
+				if (annoyance > 100)
+					AI_mirrorshmash()
+					annoyance -= 100
+				return src
 	return null
 
 // Cannot talk
@@ -236,8 +262,28 @@
 			continue
 		var/turf/T = get_turf(L.loc)
 		if(T && T in targets)
-			L.Blind(5)
+			L.Blind(7)
 	return
+
+
+/spell/aoe_turf/shatter
+	name = "Shatter mirrors!"
+	desc = "That handsome devil has to wait. You have people to make into corpses."
+
+	message = "<span class='notice'>You glare your eyes.</span>"
+	charge_max = 2000
+	silenced = 500
+	spell_flags = 0
+	range = 10
+
+
+
+
+/spell/aoe_turf/shatter/cast(list/targets, mob/user = usr)
+	for(var/obj/structure/mirror/M in range(20, src))
+		M.shatter()
+	return
+
 
 
 /mob/living/simple_animal/hostile/statue/verb/toggle_darkness()
