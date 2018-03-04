@@ -22,10 +22,6 @@
 	#include "tether-09-solars.dmm"
 	#include "tether-10-colony.dmm"
 	#include "tether-12-belt.dmm"
-	//#include "adv.dmm"
-	//#include "tether-11-wild-surface.dmm"
-	//#include "tether-12-wild-crash-alt.dmm"
-	//#include "tether-13-wild-temple.dmm"
 	#include "submaps/_tether_submaps.dm"
 
 

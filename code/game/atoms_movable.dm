@@ -8,6 +8,7 @@
 	var/l_move_time = 1
 	var/m_flag = 1
 	var/throwing = 0
+	var/paused = 0
 	var/thrower
 	var/turf/throw_source = null
 	var/throw_speed = 2
@@ -106,6 +107,8 @@
 //decided whether a movable atom being thrown can pass through the turf it is in.
 /atom/movable/proc/hit_check(var/speed)
 	if(src.throwing)
+		while(paused)//timestop checks
+			sleep(1)
 		for(var/atom/A in get_turf(src))
 			if(A == src) continue
 			if(istype(A,/mob/living))
@@ -286,6 +289,8 @@
 	if(!candidates.len)
 		return null
 	return text2num(pickweight(candidates))
+
+
 
 /atom/movable/proc/update_transform()
 	var/matrix/M = matrix()

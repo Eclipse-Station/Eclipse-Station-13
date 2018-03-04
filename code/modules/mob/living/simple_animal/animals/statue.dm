@@ -195,11 +195,11 @@
 	for(var/atom/check in check_list)
 		for(var/mob/living/M in viewers(world.view + 1, check) - src)
 			if(!(M.sdisabilities & BLIND) || !(M.blinded))
-				if(M.has_vision())
+				if(M.has_vision() && !M.isSynthetic())
 					return M
 		for(var/obj/mecha/M in view(world.view + 1, check)) //assuming if you can see them they can see you
 			if(M.occupant && M.occupant.client)
-				if(M.occupant.has_vision())
+				if(M.occupant.has_vision() && !M.occupant.isSynthetic())
 					return M.occupant
 		for(var/obj/structure/mirror/M in view(world.view + 1, check)) //FUCKING MIRRORS
 			if (M.icon_state != "mirror_broke")

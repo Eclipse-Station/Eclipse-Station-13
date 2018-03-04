@@ -193,18 +193,18 @@
 		M << "<span class='danger'>Your fingers are much too large for the trigger guard!</span>"
 		return 0
 
-	if((M.size_multiplier >= 1.5) && prob(75) && src.recoil_m != 2) //Macro handling
+	if((M.size_multiplier >= 1.5) && prob(M.size_multiplier*30) && src.recoil_m != 2) //Macro handling
 		M << "<span class='danger'>Your large fingers struggle to get past the trigger guard!</span>"
 		return 0
 
-	if((M.size_multiplier <= 0.5) && prob(80) && src.recoil_m == 1) //Micro handling projectile
+	if((M.size_multiplier <= 0.5) && prob(10/M.size_multiplier) && src.recoil_m == 1) //Micro handling projectile
 		M.adjustHalLoss(25)
 		M.adjustBruteLoss(15)
 		M.Move(get_step(M,rand(1,8)), rand(1,8))
 		M << "<span class='danger'>You gets hurt and thrown by recoil!</span>"
 		return 1
 
-	if((M.size_multiplier <= 0.5) && prob(80) && src.recoil_m == 0) //Micro handling energy
+	if((M.size_multiplier <= 0.5) && prob(12/M.size_multiplier) && src.recoil_m == 0) //Micro handling energy
 		if (prob(50))
 			M.adjustHalLoss(20)
 			M.adjustFireLoss(12)
