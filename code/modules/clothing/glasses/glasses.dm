@@ -61,6 +61,29 @@ BLIND     // can't see anything
 		user.update_action_buttons()
 		user.recalculate_vis()
 
+
+/obj/item/clothing/glasses/revealing
+	name = "goggles of revealing"
+	desc = "Allow you to see the unseen."
+	icon_state = "revealing"
+	item_state_slots = list(slot_r_hand_str = "revealing", slot_l_hand_str = "revealing")
+	see_invisible = SEE_INVISIBLE_OBSERVER
+//	origin_tech = list(TECH_MAGNET = 2, TECH_ENGINEERING = 2)
+	vision_flags = SEE_TURFS
+	enables_planes = list(VIS_GHOSTS)
+
+
+/obj/item/clothing/glasses/revealing/who
+	name = "ordinary 3D glasses"
+	desc = "Well? Isn't anyone going to ask? What is it with the glasses?"
+	icon_state = "3d"
+	item_state_slots = list(slot_r_hand_str = "3d", slot_l_hand_str = "3d")
+	see_invisible = SEE_INVISIBLE_OBSERVER
+//	origin_tech = list(TECH_MAGNET = 2, TECH_ENGINEERING = 2)
+	vision_flags = SEE_TURFS
+	enables_planes = list(VIS_GHOSTS)
+
+
 /obj/item/clothing/glasses/meson
 	name = "optical meson scanner"
 	desc = "Used for seeing walls, floors, and stuff through anything."
