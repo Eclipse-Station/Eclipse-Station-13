@@ -84,7 +84,7 @@
 	material = null
 
 /obj/item/weapon/ore/laniusded
-	name = "Lanius remains"
+	name = "Carnifex remains"
 	desc = "Someone screwed up..."
 	icon_state = "ore_platinum"
 	material = null

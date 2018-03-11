@@ -372,3 +372,9 @@ client/verb/character_setup()
 	set category = "Preferences"
 	if(prefs)
 		prefs.ShowChoices(usr)
+
+
+var/list/extra_resources = list(\
+	'fonts/papyrus.ttf',
+	'fonts/bones.ttf'
+	)

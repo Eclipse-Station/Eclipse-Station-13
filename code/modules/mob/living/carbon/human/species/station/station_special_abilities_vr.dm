@@ -658,7 +658,7 @@
 		var/list/choices = list()
 		for(var/mob/living/carbon/human/M in oviewers(1))
 			choices += M
-		
+
 		if(!choices.len)
 			to_chat(src,"<span class='warning'>There's nobody nearby to use this on.</span>")
 
@@ -706,7 +706,7 @@
 		if(can_shred(T) != T)
 			to_chat(src,"<span class='warning'>Looks like you lost your chance...</span>")
 			return
-		
+
 		//Removing an internal organ
 		if(T_int && T_int.damage >= 25) //Internal organ and it's been severely damaged
 			T.apply_damage(15, BRUTE, T_ext) //Damage the external organ they're going through.
@@ -721,7 +721,7 @@
 		//Removing an external organ
 		else if(!T_int && (T_ext.damage >= 25 || T_ext.brute_dam >= 25))
 			T_ext.droplimb(1,DROPLIMB_EDGE) //Clean cut so it doesn't kill the prey completely.
-			
+
 			//Is it groin/chest? You can't remove those.
 			if(T_ext.cannot_amputate)
 				T.apply_damage(25, BRUTE, T_ext)
@@ -734,12 +734,12 @@
 				visible_message("<span class='warning'>[src] tears off [T]'s [T_ext.name]!</span>","<span class='warning'>You tear off [T]'s [T_ext.name]!</span>")
 
 		//Not targeting an internal organ w/ > 25 damage , and the limb doesn't have < 25 damage.
-		else 
+		else
 			if(T_int)
 				T_int.damage = 25 //Internal organs can only take damage, not brute damage.
 			T.apply_damage(25, BRUTE, T_ext)
 			visible_message("<span class='danger'>[src] severely damages [T]'s [T_ext.name]!</span>")
-		
+
 		src.attack_log += text("\[[time_stamp()]\] <font color='orange'>Shred_limb'd [T.real_name] ([T.ckey])</font>")
 		T.attack_log += text("\[[time_stamp()]\] <font color='red'>[src.real_name] ([src.ckey]) shred_limb'd me</font>")
 		msg_admin_attack("[src.real_name] ([src.ckey]) shredded (shred_limb) [T.real_name] ([T.ckey]) (<A HREF='?_src_=holder;adminplayerobservecoodjump=1;X=[src.x];Y=[src.y];Z=[src.z]'>JMP</a>)")
@@ -905,5 +905,45 @@
 			else
 				visible_message("<font color='red'><B>[C] produces some glass sheets!")
 				C.nutrition -= (total_material/15)
+
+
+/mob/living/carbon/human/proc/xylobone()
+	set name = "Play xylobones"
+	set category = "Abilities"
+	set desc = "RATTLE ME BONES."
+	var/mob/living/carbon/human/C = src
+	if(!C.xylophone)
+		var/datum/gender/T = gender_datums[get_visible_gender()]
+		visible_message("<font color='red'>\The [C] begins playing [T.his] ribcage like a xylophone. It's quite spooky.</font>","<font color='blue'>You begin to play a spooky refrain on your ribcage.</font>","<font color='red'>You hear a spooky xylophone melody.</font>")
+		var/song = pick('sound/effects/xylophone1.ogg','sound/effects/xylophone2.ogg','sound/effects/xylophone3.ogg')
+		playsound(loc, song, 50, 1, -1)
+		C.xylophone = 1
+		spawn(250)
+			C.xylophone=0
+	return
+
+
+/mob/living/carbon/human/proc/setfont()
+	var/mob/living/carbon/human/C = src
+	set name = "Set rattling font"
+	set category = "Abilities"
+	C.buildup = input("Chose you the font.","SAAAANS!") as null|anything in list("comic sans ms","papyrus", "bones")
+	C.buildup = "\"[C.buildup]\""
+
+/mob/living/carbon/human/proc/bonerattle()
+	var/mob/living/carbon/human/C = src
+	set name = "Rattle"
+	set category = "Abilities"
+	var/list/hearpeople = list()
+	var/list/searched = get_mobs_and_objs_in_view_fast(get_turf(C), world.view, 2)
+	hearpeople = searched["mobs"]
+
+	var/saying = sanitize(input(C, "What would you like to say in your SPOOOOKY voice?", "RATTLE ME BONES!", null)  as text)
+	if(saying)
+		saying = capitalize(saying)
+		for(var/mob/M in hearpeople)
+			spawn(1)
+				M.show_message("<span class='game say'><span class='name'>[C.name]</span><font face=[buildup]> rattles, \"[saying]\"</font></span>", 2)
+
 
 
