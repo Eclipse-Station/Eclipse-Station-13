@@ -165,6 +165,11 @@
 
 	output += "Current Battery Charge: [nutrition]\n"
 
+	var/toxDam = getToxLoss()
+	if(toxDam)
+		output += "System Instability: <span class='warning'>[toxDam > 25 ? "Severe" : "Moderate"]</span>\n"
+	else
+		output += "System Instability: <span style='color:green;'>OK</span>\n"
 
 	for(var/obj/item/organ/external/EO in organs)
 		if(EO.brute_dam || EO.burn_dam)
@@ -277,17 +282,17 @@
 
 /mob/living/carbon/human/proc/hide_humanoid()
 	set name = "Hide"
-	set desc = "Allows to hide beneath tables or certain items. Toggled on or off."
+	set desc = "Allows you to hide beneath tables or certain items. Toggled on or off."
 	set category = "Abilities"
 
-	if(stat == DEAD || paralysis || weakened || stunned) // No hiding if you're stunned!
+	if(stat == DEAD || paralysis || weakened || stunned || restrained()) // No hiding if you're stunned!
 		return
 
-	if (!hiding)
-		layer = 2.45 //Just above cables with their 2.44
-		hiding = 1
-		to_chat(src, "<font color='blue'>You are now hiding.</font>")
-	else
+	if(status_flags & HIDING)
 		layer = MOB_LAYER
-		hiding = 0
 		to_chat(src, "<font color='blue'>You have stopped hiding.</font>")
+	else
+		layer = HIDING_LAYER //Just above cables with their 2.44
+		to_chat(src, "<font color='blue'>You are now hiding.</font>")
+
+	status_flags ^= HIDING

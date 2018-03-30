@@ -6,25 +6,18 @@
 	icon_state = "nothing"
 
 	has_huds = TRUE 					//We do have HUDs (like health, wanted, status, not inventory slots)
-
+	var/outgoing_melee_damage_percent = 1 //base buff
 	var/embedded_flag					//To check if we've need to roll for damage on movement while an item is imbedded in us.
 	var/obj/item/weapon/rig/wearing_rig // This is very not good, but it's much much better than calling get_rig() every update_canmove() call.
 	var/last_push_time					//For human_attackhand.dm, keeps track of the last use of disarm
 
+	var/buildup = 0 //For laniuses
 	var/spitting = 0 					//Spitting and spitting related things. Any human based ranged attacks, be it innate or added abilities.
 	var/spit_projectile = null			//Projectile type.
 	var/spit_name = null 				//String
 	var/last_spit = 0 					//Timestamp.
 
 	var/can_defib = 1					//Horrible damage (like beheadings) will prevent defibbing organics.
-	var/last_push_time	//For human_attackhand.dm, keeps track of the last use of disarm
-	var/buildup = 0 //For laniuses
-	var/spitting = 0 //Spitting and spitting related things. Any human based ranged attacks, be it innate or added abilities.
-	var/spit_projectile = null //Projectile type.
-	var/spit_name = null //String
-	var/last_spit = 0 //Timestamp.
-	var/outgoing_melee_damage_percent = 1 //for traits and shit
-	var/can_defib = 1	//Horrible damage (like beheadings) will prevent defibbing organics.
 	var/active_regen = FALSE //Used for the regenerate proc in human_powers.dm
 	var/active_regen_delay = 300
 
