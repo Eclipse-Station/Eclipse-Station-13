@@ -389,3 +389,29 @@
 		item_state = "bullpup-empty"
 	if(!ignore_inhands)
 		update_held_icon()
+
+/obj/item/weapon/gun/projectile/automatic/ak47
+	name = "\improper Kalachnikova"
+	desc = "What could be more iconic than the Kalachnikov? An ancient but rugged and powerful rifle made by the billion. Uses 7,62 mm rounds."
+	icon = 'icons/obj/gun_aeiou.dmi'
+	icon_state = "oldAK"
+	w_class = ITEMSIZE_LARGE
+	load_method = MAGAZINE
+//	fire_sound = 'sound/weapons/Gunshot_heavy.ogg'
+	caliber = "7.62mm"
+	origin_tech = list(TECH_COMBAT = 5, TECH_MATERIAL = 2, TECH_ILLEGAL = 5)
+	magazine_type = /obj/item/ammo_magazine/m762AK
+	allowed_magazines = list(/obj/item/ammo_magazine/m762AK)
+	accuracy = 2
+
+	firemodes = list(
+		list(mode_name="semiauto", burst=1, fire_delay=0, fire_sound='sound/weapons/OLDAKsingle.ogg'),
+		list(mode_name="4-round bursts", burst=4, burst_delay=2, fire_delay=4, move_delay=4, burst_accuracy = list(0,-1,-1,-2,-2), dispersion = list(0.0,0.6, 1.0, 1.0), fire_sound='sound/weapons/OLDAKburst.ogg'),
+		)
+
+/obj/item/weapon/gun/projectile/automatic/ak47/update_icon()
+	..()
+	if(ammo_magazine)
+		icon_state = "oldAK"
+	else
+		icon_state = "oldAK-empty"
