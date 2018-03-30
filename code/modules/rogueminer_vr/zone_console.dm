@@ -4,7 +4,7 @@
 //////////////////////////////
 #define OUTPOST_Z 8
 #define TRANSIT_Z 5
-#define BELT_Z 13
+#define BELT_Z 11
 
 /obj/machinery/computer/roguezones
 	name = "asteroid belt scanning computer"
