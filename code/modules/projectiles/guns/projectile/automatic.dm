@@ -393,6 +393,7 @@
 /obj/item/weapon/gun/projectile/automatic/ak47
 	name = "\improper Kalachnikova"
 	desc = "What could be more iconic than the Kalachnikov? An ancient but rugged and powerful rifle made by the billion. Uses 7,62 mm rounds."
+	icon = 'icons/obj/gun_aeiou.dmi'
 	icon_state = "oldAK"
 	w_class = ITEMSIZE_LARGE
 	load_method = MAGAZINE
