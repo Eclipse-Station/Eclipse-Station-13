@@ -1226,11 +1226,13 @@ default behaviour is:
 		return UNDERWATER
 	else
 		return ..()
-	
 		
+
 // Whether the mob is able to see
 /mob/living/proc/has_vision()
 	return !(eye_blind || (disabilities & BLIND) || stat)
+
+		
 //Add an entry to overlays, assuming it exists
 /mob/living/proc/apply_hud(cache_index, var/image/I)
 	hud_list[cache_index] = I
