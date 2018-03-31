@@ -395,6 +395,8 @@
 	desc = "What could be more iconic than the Kalachnikov? An ancient but rugged and powerful rifle made by the billion. Uses 7,62 mm rounds."
 	icon = 'icons/obj/gun_aeiou.dmi'
 	icon_state = "oldAK"
+	force = 15 //AK buttbash
+	wielded_item_state = "arifle-wielded"
 	w_class = ITEMSIZE_LARGE
 	load_method = MAGAZINE
 //	fire_sound = 'sound/weapons/Gunshot_heavy.ogg'
