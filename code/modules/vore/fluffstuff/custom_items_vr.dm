@@ -1484,7 +1484,7 @@
 		else if(L.vore_organs.len)
 			real_dest = pick(L.vore_organs)
 			televored = TRUE
-			
+
 	//Televore fluff stuff
 	if(televored)
 		to_chat(target,"<span class='warning'>\The [src] teleports you right into \a [lowertext(real_dest.name)]!</span>")
@@ -1795,22 +1795,6 @@
 	icon_override = "capform_white_s"
 	item_state = "capform_white"
 
-//Amenity Kitten: Valere
-/obj/item/weapon/reagent_containers/food/drinks/flask/infinite
-    name = "infinite coffee thermos"
-    desc = "For when you really, really enjoy coffee."
-    icon = 'icons/vore/custom_items_vr.dmi'
-    icon_state = "coffeetherm"
-    var/spawning_id
-
-
-/obj/item/weapon/reagent_containers/food/drinks/flask/infinite/New()
-    ..()
-    processing_objects.Add(src)
-
-/obj/item/weapon/reagent_containers/food/drinks/flask/infinite/process()
-    reagents.add_reagent("coffee", 1)
-
 //jacknoir413:Areax Third
 /obj/item/weapon/melee/baton/fluff/stunstaff
 	name = "Electrostaff"
@@ -1967,7 +1951,7 @@
 		user.visible_message(pick("<span class='danger'>\The [user] is slitting \his stomach open with \the [src]! It looks like [tempgender] trying to commit seppuku.</span>",\
 			"<span class='danger'>\The [user] is falling on \the [src]! It looks like [tempgender] trying to commit suicide.</span>"))
 		return (BRUTELOSS|FIRELOSS)
- 
+
 /obj/item/weapon/melee/fluffstuff/awoosword
 	name = "Wolfgirl Sword Replica"
 	desc = "A replica of a large, scimitar-like sword with a dull edge. Ceremonial... until it isn't."
