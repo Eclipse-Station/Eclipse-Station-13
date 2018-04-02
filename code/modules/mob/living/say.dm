@@ -313,7 +313,7 @@ proc/get_radio_key_from_channel(var/channel)
 				src.custom_emote(1, "[pick(speaking.signlang_verb)].")
 
 		if (speaking.flags & SIGNLANG)
-			log_say("[name]/[key] : SIGN: [message]")
+			log_say("(SIGN) [message]", src)
 			return say_signlang(message, pick(speaking.signlang_verb), speaking)
 
 	//These will contain the main receivers of the message
@@ -409,7 +409,12 @@ proc/get_radio_key_from_channel(var/channel)
 			qdel(I)
 
 	//Log the message to file
-	log_say("[name]/[key][whispering ? " (W)" : ""]: [message]")
+	if(message_mode)
+		message = "([message_mode == "headset" ? "Common" : capitalize(message_mode)]) [message]" //Adds radio keys used if available
+	if(whispering)
+		log_whisper(message,src)
+	else
+		log_say(message, src)
 	return 1
 
 /mob/living/proc/say_signlang(var/message, var/verb="gestures", var/datum/language/language)

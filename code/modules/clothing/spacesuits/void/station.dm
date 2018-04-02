@@ -166,9 +166,9 @@
 	armor = list(melee = 20, bullet = 5, laser = 20,energy = 5, bomb = 15, bio = 100, rad = 30)
 
 /obj/item/clothing/suit/space/void/medical/alt/lanius
-	species_restricted = list("Human", "Skrell", "Promethean", "Lanius")
+	species_restricted = list("Human", "Skrell", "Promethean", "Carnifex")
 	name = "repurposed medical voidsuit"
-	desc = "A hasty solution from VeyMed to confine Laniusii in a sealed enviroment. Doesn't offer much protection, but allows the user to move more freely."
+	desc = "A hasty solution from VeyMed to confine Carnifex in a sealed enviroment. Doesn't offer much protection, but allows the user to move more freely."
 
 //Security
 /obj/item/clothing/head/helmet/space/void/security

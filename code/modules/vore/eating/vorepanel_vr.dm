@@ -56,7 +56,7 @@
 
 /datum/vore_look/proc/gen_ui(var/mob/living/user)
 	var/dat
-	
+
 	var/atom/userloc = user.loc
 	if (isbelly(userloc))
 		var/obj/belly/inside_belly = userloc
@@ -288,6 +288,7 @@
 	//Under the last HR, save and stuff.
 	dat += "<a href='?src=\ref[src];saveprefs=1'>Save Prefs</a>"
 	dat += "<a href='?src=\ref[src];refresh=1'>Refresh</a>"
+	dat += "<a href='?src=\ref[src];applyprefs=1'>Reload Slot Prefs</a>"
 
 	//Returns the dat html to the vore_look
 	return dat
@@ -410,7 +411,7 @@
 					var/obj/belly/choice = input("Move all where?","Select Belly") as null|anything in user.vore_organs
 					if(!choice)
 						return 0
-								
+
 					for(var/atom/movable/tgt in selected)
 						to_chat(tgt,"<span class='warning'>You're squished from [user]'s [lowertext(selected)] to their [lowertext(choice.name)]!</span>")
 						selected.transfer_contents(tgt, choice, 1)
@@ -525,12 +526,11 @@
 			"Struggle Message (outside)",
 			"Struggle Message (inside)",
 			"Examine Message (when full)",
-			"Reset All To Default",
-			"Cancel - No Changes"
+			"Reset All To Default"
 		)
 
 		alert(user,"Setting abusive or deceptive messages will result in a ban. Consider this your warning. Max 150 characters per message, max 10 messages per topic.","Really, don't.")
-		var/choice = input(user,"Select a type to modify. Messages from each topic are pulled at random when needed.","Pick Type") in messages
+		var/choice = input(user,"Select a type to modify. Messages from each topic are pulled at random when needed.","Pick Type") as null|anything in messages
 		var/help = " Press enter twice to separate messages. '%pred' will be replaced with your name. '%prey' will be replaced with the prey's name. '%belly' will be replaced with your belly's name."
 
 		switch(choice)
@@ -567,9 +567,6 @@
 					selected.struggle_messages_outside = initial(selected.struggle_messages_outside)
 					selected.struggle_messages_inside = initial(selected.struggle_messages_inside)
 
-			if("Cancel - No Changes")
-				return 0
-
 	if(href_list["b_verb"])
 		var/new_verb = html_encode(input(usr,"New verb when eating (infinitive tense, e.g. nom or swallow):","New Verb") as text|null)
 
@@ -580,15 +577,16 @@
 		selected.vore_verb = new_verb
 
 	if(href_list["b_sound"])
-		var/choice = input(user,"Currently set to [selected.vore_sound]","Select Sound") in vore_sounds + "Cancel - No Changes"
-
-		if(choice == "Cancel")
+		var/choice = input(user,"Currently set to [selected.vore_sound]","Select Sound") as null|anything in vore_sounds
+		if(!choice)
 			return 0
 
-		selected.vore_sound = vore_sounds[choice]
+		selected.vore_sound = choice
 
 	if(href_list["b_soundtest"])
-		user << selected.vore_sound
+		var/soundfile = vore_sounds[selected.vore_sound]
+		if(soundfile)
+			user << soundfile
 
 	if(href_list["b_tastes"])
 		selected.can_taste = !selected.can_taste
@@ -605,7 +603,7 @@
 			to_chat(user,"<span class='notice'>Invalid size.</span>")
 		else if(new_bulge)
 			selected.bulge_size = (new_bulge/100)
-	
+
 	if(href_list["b_grow_shrink"])
 		var/new_grow = input(user, "Choose the size that prey will be grown/shrunk to, ranging from 25% to 200%", "Set Growth Shrink Size.", selected.shrink_grow_size) as num|null
 		if (new_grow == null)
@@ -682,7 +680,7 @@
 		var/alert = alert("Are you sure you want to delete your [lowertext(selected.name)]?","Confirmation","Delete","Cancel")
 		if(!alert == "Delete")
 			return 0
-		
+
 		var/failure_msg = ""
 
 		var/dest_for //Check to see if it's the destination of another vore organ.
@@ -699,7 +697,7 @@
 			failure_msg += "This belly is marked as undeletable. "
 		if(user.vore_organs.len == 1)
 			failure_msg += "You must have at least one belly. "
-		
+
 		if(failure_msg)
 			alert(user,failure_msg,"Error!")
 			return 0
@@ -714,11 +712,20 @@
 		else
 			to_chat(user,"<span class='notice'>Virgo-specific preferences saved!</span>")
 
+	if(href_list["applyprefs"])
+		var/alert = alert("Are you sure you want to reload character slot preferences? This will remove your current vore organs and eject their contents.","Confirmation","Reload","Cancel")
+		if(!alert == "Reload")
+			return 0
+		if(!user.apply_vore_prefs())
+			alert("ERROR: Virgo-specific preferences failed to apply!","Error")
+		else
+			to_chat(user,"<span class='notice'>Virgo-specific preferences applied from active slot!</span>")
+
 	if(href_list["setflavor"])
 		var/new_flavor = html_encode(input(usr,"What your character tastes like (40ch limit). This text will be printed to the pred after 'X tastes of...' so just put something like 'strawberries and cream':","Character Flavor",user.vore_taste) as text|null)
 		if(!new_flavor)
 			return 0
-		
+
 		new_flavor = readd_quotes(new_flavor)
 		if(length(new_flavor) > FLAVOR_MAX)
 			alert("Entered flavor/taste text too long. [FLAVOR_MAX] character limit.","Error!")

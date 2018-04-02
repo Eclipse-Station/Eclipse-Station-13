@@ -42,11 +42,11 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 	var/tmp/stat = NIF_PREINSTALL		// Status of the NIF
 	var/tmp/install_done				// Time when install will finish
 	var/tmp/open = FALSE				// If it's open for maintenance (1-3)
+	var/tmp/should_be_in = BP_HEAD		// Organ we're supposed to be held in
 
 	var/obj/item/device/communicator/commlink/comm		// The commlink requires this
 
 	var/global/icon/big_icon
-	var/global/startup_sound = 'sound/items/NifStartupNoise1.ogg'
 	var/global/click_sound = 'sound/items/nif_click.ogg'
 	var/global/bad_sound = 'sound/items/nif_tone_bad.ogg'
 	var/global/good_sound = 'sound/items/nif_tone_good.ogg'
@@ -111,7 +111,11 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 
 //Being implanted in some mob
 /obj/item/device/nif/proc/implant(var/mob/living/carbon/human/H)
-	if(istype(H) && !H.nif && H.species && (loc == H.get_organ(BP_HEAD)))
+	var/obj/item/organ/brain = H.internal_organs_by_name[O_BRAIN]
+	if(istype(brain))
+		should_be_in = brain.parent_organ
+	
+	if(istype(H) && !H.nif && H.species && (loc == H.get_organ(should_be_in)))
 		if(!bioadap && (H.species.flags & NO_SCAN)) //NO_SCAN is the default 'too complicated' flag
 			return FALSE
 
@@ -126,11 +130,18 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 //For debug or antag purposes
 /obj/item/device/nif/proc/quick_implant(var/mob/living/carbon/human/H)
 	if(istype(H))
-		var/obj/item/organ/external/head = H.get_organ(BP_HEAD)
-		if(!head)
+		var/obj/item/organ/external/parent
+		//Try to find their brain and put it near that
+		var/obj/item/organ/brain = H.internal_organs_by_name[O_BRAIN]
+		if(istype(brain))
+			should_be_in = brain.parent_organ
+		
+		parent = H.get_organ(should_be_in)
+		//Ok, nevermind then!
+		if(!istype(parent))
 			return FALSE
-		src.forceMove(head)
-		head.implants += src
+		forceMove(parent)
+		parent.implants += src
 		spawn(0) //Let the character finish spawning yo.
 			if(H.mind)
 				owner = H.mind.name
@@ -290,12 +301,17 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 			stat = NIF_WORKING
 			owner = human.mind.name
 			name = initial(name) + " ([owner])"
-			human << startup_sound
+			if(comm)
+				var/saved_name = save_data["commlink_name"]
+				if(saved_name)
+					comm.register_device(saved_name)
+				else if(human)
+					comm.register_device(human.name)
 			notify("Calibration complete! User data stored!")
 
 //Called each life() tick on the mob
 /obj/item/device/nif/proc/life()
-	if(!human || loc != human.get_organ(BP_HEAD))
+	if(!human || loc != human.get_organ(should_be_in))
 		unimplant(human)
 		return FALSE
 
@@ -564,18 +580,18 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 	var/mob/living/carbon/human/U = user
 	var/mob/living/carbon/human/T = M
 
-	if(istype(T.species,/datum/species/shapeshifter/promethean) && target_zone == BP_HEAD) //Are prommy, aimed at head.
+	if(istype(T.species,/datum/species/shapeshifter/promethean) && target_zone == should_be_in) //Are prommy, aimed at head.
 		if(T.head || T.glasses)
 			to_chat(user,"<span class='warning'>Remove any headgear they have on first, as it might interfere.</span>")
 			return
-		var/obj/item/organ/external/head = T.get_organ(BP_HEAD)
+		var/obj/item/organ/external/head = T.get_organ(should_be_in)
 		if(!T)
 			to_chat(user,"<span class='warning'>They should probably regrow their head first.</span>")
 			return
 		U.visible_message("<span class='notice'>[U] begins installing [src] into [T]'s head by just stuffing it in.</span>",
 		"<span class='notice'>You begin installing [src] into [T]'s head by just stuffing it in.</span>",
 		"There's a wet SQUISH noise.")
-		if(do_mob(user = user, target = T, time = 200, target_zone = BP_HEAD))
+		if(do_mob(user = user, target = T, time = 200, target_zone = should_be_in))
 			user.unEquip(src)
 			forceMove(head)
 			head.implants |= src

@@ -1,16 +1,16 @@
 /datum/species/lanius
-	name = "Lanius"
-	name_plural = "Lanii"
-	blurb ="These anaerobic beings seem friendly enough., The Lanius are scavengers - metallic lifeforms that rely on the absorption  \
+	name = "Carnifex"
+	name_plural = "Carnifex"
+	blurb ="These anaerobic beings seem friendly enough., The Carnifex are scavengers - metallic lifeforms that rely on the absorption  \
 	of minerals to sustain themselves. .<br/><br/>Their society ebbs and flows in hibernation cycles;  \
 	they may lie dormant for many years, even while hurtling through space As soon as they become aware  \
 	of significant metal deposits they reawaken. Usually this occurs in the dying stages of a galactic civilization  \
 	or in the wake of intergalactic war. \
-	Reports of reawakened Lanius have appeared in many of the war-torn and abandoned sectors of SolGov Space."
+	Reports of reawakened Carnifex have appeared in many of the war-torn and abandoned sectors of SolGov Space."
 	icobase = 'icons/mob/human_races/lanius.dmi'
 	deform = 'icons/mob/human_races/r_lanius.dmi'
 	unarmed_types = list(/datum/unarmed_attack/kick, /datum/unarmed_attack/claws)
-	show_ssd =	"compeletely motionless, but its eyes still glow a little"
+	show_ssd =	"compeletely motionless"
 	death_message = "falls apart!"
 	knockout_message = "collapses into a blurbing pile of molten metal."
 	remains_type = /obj/item/weapon/ore/laniusded

@@ -1,9 +1,7 @@
 /*
 	Hello and welcome to VOREStation sprite_accessories: For a more general overview
 	please read sprite_accessories.dm. This file is for ears, tails, and taur bodies!
-
 	This is intended to be friendly for people with little to no actual coding experience.
-
 	!!WARNING!!: changing existing accessory information can be VERY hazardous to savefiles,
 	to the point where you may completely corrupt a server's savefiles. Please refrain
 	from doing this unless you absolutely know what you are doing, and have defined a
@@ -201,13 +199,13 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
-/datum/sprite_accessory/ears/otie
-	name = "otie, colorable"
+/datum/sprite_accessory/ears/antlers_e
+	name = "antlers with ears"
 	desc = ""
-	icon_state = "otie"
+	icon_state = "cow-nohorns"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
-	extra_overlay = "otie-inner"
+	extra_overlay = "antlers_mark"
 
 /datum/sprite_accessory/ears/cow
 	name = "cow, horns"
@@ -220,6 +218,21 @@
 	icon_state = "cow-c"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/ears/cow_nohorns
+	name = "cow, no horns"
+	desc = ""
+	icon_state = "cow-nohorns"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/ears/otie
+	name = "otie, colorable"
+	desc = ""
+	icon_state = "otie"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "otie-inner"
 
 /datum/sprite_accessory/ears/zears
 	name = "jagged ears"
@@ -249,6 +262,13 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 	extra_overlay = "vulp-inner"
+
+/datum/sprite_accessory/ears/bunny_floppy
+	name = "floopy bunny ears (colorable)"
+	desc = ""
+	icon_state = "floppy_bun"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
 
 // Special snowflake ears go below here.
 
@@ -349,7 +369,7 @@
 	var/color_blend_mode = ICON_ADD // Only appliciable if do_coloration = 1
 	var/extra_overlay // Icon state of an additional overlay to blend in.
 	var/clothing_can_hide = 1 // If true, clothing with HIDETAIL hides it. If the clothing is bulky enough to hide a tail, it should also hide wings.
-	var/show_species_tail = 1 // Just so
+	// var/show_species_tail = 1 // Just so // TODO - Seems not needed ~Leshana
 	var/desc = "You should not see this..."
 	var/ani_state // State when flapping/animated
 	var/extra_overlay_w // Flapping state for extra overlay
@@ -856,6 +876,14 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
+/datum/sprite_accessory/tail/newtailmaw
+	name = "new tailmaw (vwag)"
+	desc = ""
+	icon_state = "newtailmaw"
+	ani_state = "newtailmaw_w"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
 /datum/sprite_accessory/tail/ztail
 	name = "jagged flufftail"
 	desc = ""
@@ -870,6 +898,13 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
+/datum/sprite_accessory/tail/vulpan_alt
+	name = "vulpkanin alt style, colorable"
+	desc = ""
+	icon_state = "vulptail_alt"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
 /datum/sprite_accessory/tail/sergaltaildc
 	name = "sergal, dual-color"
 	desc = ""
@@ -877,6 +912,22 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 	extra_overlay = "sergal_mark"
+
+/datum/sprite_accessory/tail/skunktail
+	name = "skunk, dual-color"
+	desc = ""
+	icon_state = "skunktail"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "skunktail_mark"
+
+/datum/sprite_accessory/tail/deertail
+	name = "deer, dual-color"
+	desc = ""
+	icon_state = "deertail"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "deertail_mark"
 
 //For all species tails. Includes haircolored tails.
 /datum/sprite_accessory/tail/special
@@ -1067,6 +1118,7 @@
 	icon_state = "vulptail_s"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
+
 
 /datum/sprite_accessory/tail/zenghu_taj
 	name = "Zeng-Hu Tajaran Synth tail"

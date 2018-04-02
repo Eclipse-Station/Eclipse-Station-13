@@ -32,9 +32,10 @@
 #define Z_LEVEL_SURFACE_MINE				8
 #define Z_LEVEL_SOLARS						9
 #define Z_LEVEL_CENTCOM						10
-#define Z_LEVEL_MISC						11
-#define Z_LEVEL_SHIPS						12
-#define Z_LEVEL_ABELT_VIRGO	             	13
+#define Z_LEVEL_ABELT_VIRGO	             	11
+#define Z_LEVEL_MISC						12
+#define Z_LEVEL_SHIPS						13
+
 
 
 
@@ -245,7 +246,7 @@
 /datum/map_z_level/tether/belt
 	z = Z_LEVEL_ABELT_VIRGO
 	name = "Belt"
-	flags = 0
+	flags = MAP_LEVEL_SEALED|MAP_LEVEL_PLAYER
 
 /*/datum/map_z_level/tether/empty_surface
 	z = Z_LEVEL_EMPTY_SURFACE

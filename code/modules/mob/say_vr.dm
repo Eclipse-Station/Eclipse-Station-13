@@ -15,7 +15,7 @@
 	if(!message)
 		return
 
-	set_typing_indicator(0)
+	set_typing_indicator(FALSE)
 	if(use_me)
 		usr.emote_vr("me",4,message)
 	else
@@ -36,13 +36,12 @@
 		input = message
 
 	if(input)
+		log_subtle(message,src)
 		message = "<B>[src]</B> <I>[input]</I>"
 	else
 		return
 
 	if (message)
-		log_subtle("[name]/[key] : [message]")
-
 		var/list/vis = get_mobs_and_objs_in_view_fast(get_turf(src),1,2) //Turf, Range, and type 2 is emote
 		var/list/vis_mobs = vis["mobs"]
 		var/list/vis_objs = vis["objs"]

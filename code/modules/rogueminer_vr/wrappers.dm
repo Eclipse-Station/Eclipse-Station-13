@@ -1,9 +1,9 @@
 /obj/effect/step_trigger/teleporter/random/rogue
-	teleport_z = 15
-	teleport_z_offset = 0
+	teleport_z = 11
+	teleport_z_offset = 11
 
 /obj/effect/step_trigger/teleporter/random/rogue/fourbyfour
-	var/margin = 1 //How far from the side should we teleport? Make sure to place the opposite
+	var/margin = 2 //How far from the side should we teleport? Make sure to place the opposite
 					//side's wrappers at less than this far from the hard boundary
 					//else people will get stuck in the margins
 					//Important for auto-determining the size, as well.

@@ -26,13 +26,6 @@
 	var/vore_fullness = 0				// How "full" the belly is (controls icons)
 	var/vore_icons = 0					// Bitfield for which fields we have vore icons for.
 
-/mob/living/simple_animal/New()
-	..()
-	if(vore_active)
-		init_belly()
-	if(!IsAdvancedToolUser())
-		verbs |= /mob/living/simple_animal/proc/animal_nom
-
 // Release belly contents before being gc'd!
 /mob/living/simple_animal/Destroy()
 	release_vore_contents()
@@ -89,7 +82,7 @@
 	if(M.size_multiplier < vore_min_size || M.size_multiplier > vore_max_size)
 		ai_log("vr/wont eat [M] because they too small or too big", 3)
 		return 0
-	if(vore_capacity != 0 && (vore_fullness + M.size_multiplier > vore_capacity)) // We're too full to fit them
+	if(vore_capacity != 0 && (vore_fullness >= vore_capacity)) // We're too full to fit them
 		ai_log("vr/wont eat [M] because I am too full", 3)
 		return 0
 	return 1
@@ -116,8 +109,6 @@
 // TODO - Review this.  Could be some issues here
 /mob/living/simple_animal/proc/EatTarget()
 	ai_log("vr/EatTarget() [target_mob]",2)
-	if(!LAZYLEN(vore_organs))
-		init_belly()
 	stop_automated_movement = 1
 	var/old_target = target_mob
 	handle_stance(STANCE_BUSY)
@@ -138,13 +129,18 @@
 	release_vore_contents()
 	. = ..()
 
-// Simple animals have only one belly.  This creates it (if it isn't already set up)
-/mob/living/simple_animal/proc/init_belly()
-	if(vore_organs.len)
-		return
-	if(no_vore) //If it can't vore, let's not give it a stomach.
+// Make sure you don't call ..() on this one, otherwise you duplicate work.
+/mob/living/simple_animal/init_vore()
+	if(!vore_active || no_vore)
 		return
 
+	if(!IsAdvancedToolUser())
+		verbs |= /mob/living/simple_animal/proc/animal_nom
+
+	if(LAZYLEN(vore_organs))
+		return
+
+	//A much more detailed version of the default /living implementation
 	var/obj/belly/B = new /obj/belly(src)
 	vore_selected = B
 	B.immutable = 1
@@ -188,7 +184,7 @@
 		"The juices pooling beneath you sizzle against your sore skin.",
 		"The churning walls slowly pulverize you into meaty nutrients.",
 		"The stomach glorps and gurgles as it tries to work you into slop.")
-	
+
 /mob/living/simple_animal/Bumped(var/atom/movable/AM, yes)
 	if(ismob(AM))
 		var/mob/tmob = AM

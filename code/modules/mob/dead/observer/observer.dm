@@ -103,13 +103,12 @@
 		if (ishuman(body))
 			var/mob/living/carbon/human/H = body
 			icon = H.icon
-			LAZYCLEARLIST(H.list_huds)
-			H.update_icons()
-			overlays = H.overlays
+			icon_state = H.icon_state
+			add_overlay(H.overlays_standing) //All our equipment sprites
 		else
 			icon = body.icon
 			icon_state = body.icon_state
-			overlays = body.overlays
+			add_overlay(body.overlays)
 
 		gender = body.gender
 		if(body.mind && body.mind.name)
@@ -753,7 +752,7 @@ mob/observer/dead/MayRespawn(var/feedback = 0)
 			return 0
 		var/msg = sanitize(input(src, "Message:", "Spectral Whisper") as text|null)
 		if(msg)
-			log_say("SpectralWhisper: [key_name(usr)]->[M.key] : [msg]")
+			log_say("(SPECWHISP to [key_name(M)]): [msg]", src)
 			M << "<span class='warning'> You hear a strange, unidentifiable voice in your head... <font color='purple'>[msg]</font></span>"
 			src << "<span class='warning'> You said: '[msg]' to [M].</span>"
 		else
@@ -795,3 +794,6 @@ mob/observer/dead/MayRespawn(var/feedback = 0)
 
 /mob/observer/dead/is_deaf()
 	return FALSE
+
+/mob/observer/dead/speech_bubble_appearance()
+	return "ghost"
