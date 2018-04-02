@@ -2737,6 +2737,7 @@
 #include "code\modules\vore\fluffstuff\custom_clothes_vr.dm"
 #include "code\modules\vore\fluffstuff\custom_guns_vr.dm"
 #include "code\modules\vore\fluffstuff\custom_items_vr.dm"
+#include "code\modules\vore\fluffstuff\custom_items_vr_aeiou.dm"
 #include "code\modules\vore\fluffstuff\custom_mecha_vr.dm"
 #include "code\modules\vore\fluffstuff\custom_permits_vr.dm"
 #include "code\modules\vore\fluffstuff\guns\bsharpoon.dm"

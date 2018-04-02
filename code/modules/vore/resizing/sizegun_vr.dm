@@ -69,7 +69,7 @@
 /obj/item/weapon/gun/energy/sizegun/overcharged
 	name = "overcharged size gun"
 	size_set_to = 3.5
-	/obj/item/weapon/gun/energy/sizegun/overcharged/Fire(atom/target, mob/living/user, clickparams, pointblank=0, reflex=0)
+/obj/item/weapon/gun/energy/sizegun/overcharged/Fire(atom/target, mob/living/user, clickparams, pointblank=0, reflex=0)
 		..()
 		usr << "<span class='notice'>The [src] melts away!</span>"
 		qdel(src)

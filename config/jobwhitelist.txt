@@ -4,10 +4,5 @@ seiga - mime
 silvertalismen - clown
 suicidalpickles - mime
 whiskyrose - clown
-<<<<<<< HEAD
 orokamono - clown
 chatter - clown
-=======
-tinybear16 - clown
-chargae - mime
->>>>>>> c37277c444c51dafb677ea95adf13dd90b222ba3

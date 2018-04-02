@@ -15,6 +15,7 @@ Pitchblende - Xenomorph Hybrid
 ILikeTurles - Vox
 ILikeTurles - Diona
 jademanique - Diona
+jademanique - Vox
 aether_elemental - Daemon
 aruis - Diona
 aruis - Xenochimera
@@ -47,6 +48,7 @@ verkister - Xenochimera
 xioen - Diona
 xioen - Xenochimera
 xioen - Xenomorph Hybrid
+yuliy - Vox
 zammyman215 - Vox
 zekesturm - Xenomorph Hybrid
 wtfismyname - Xenomorph Hybrid

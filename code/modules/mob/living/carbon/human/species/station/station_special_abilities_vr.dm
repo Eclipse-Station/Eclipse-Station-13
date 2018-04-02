@@ -849,12 +849,12 @@
 			total_material *= stack.get_amount()
 		C.nutrition += (total_material/50)
 
-	visible_message("<font color='red'><B>[C] starts consuming [eating].")
+	visible_message("<font color='red'><B>[C] starts consuming [eating].</font></B>")
 	if(do_after(C, 10, src))
 		C << "You eat the [eating]."
 		playsound(C, usesound, 70, 1)
 		qdel(eating)
-		visible_message("<font color='red'><B>[C] consumes [eating]!")
+		visible_message("<font color='red'><B>[C] consumes [eating]!</font></B>")
 		sleep(3)
 
 	//should've just used a single var, oh well
@@ -879,7 +879,7 @@
 				C << "You're too hungry for that."
 				return
 			else
-				visible_message("<font color='red'><B>[C] produces some steel sheets!")
+				visible_message("<font color='red'><B>[C] produces some steel sheets!</font></B>")
 				C.nutrition -= (total_material/20)
 	else
 		var/amount = input(C,"How many?") as null|anything in items
@@ -893,7 +893,7 @@
 				C << "You're too hungry for that."
 				return
 			else
-				visible_message("<font color='red'><B>[C] produces some glass sheets!")
+				visible_message("<font color='red'><B>[C] produces some glass sheets!</font></B>")
 				C.nutrition -= (total_material/15)
 
 
