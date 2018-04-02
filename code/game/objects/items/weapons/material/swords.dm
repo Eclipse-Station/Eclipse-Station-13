@@ -35,13 +35,16 @@
 	return(BRUTELOSS)
 
 
+// Commented out for sprite reasons
 
 /obj/item/weapon/material/sword/wood
 	name = "Wood Sword"
 	desc = "A wooden training sword. Not very sharp but could hurt if used as a club. Doesn't look too sturdy however."
 	icon_state = "wood_sword"
+	icon = 'icons/obj/trainingswords.dmi'
 	slot_flags = SLOT_BELT | SLOT_BACK
 	health = 10
+	default_material = MAT_WOOD
 	hitsound = 'sound/effects/woodhit.ogg'
 	gender = NEUTER
 	throw_speed = 3
@@ -62,7 +65,9 @@
 	name = "Wood Katana"
 	desc = "A wooden training katana. Not very sharp but could hurt if used as a club. Doesn't look too sturdy however."
 	icon_state = "wood_katana"
+	icon = 'icons/obj/trainingswords.dmi'
 	slot_flags = SLOT_BELT | SLOT_BACK
+	default_material = MAT_WOOD
 	health = 10
 	hitsound = 'sound/effects/woodhit.ogg'
 	gender = NEUTER
@@ -80,3 +85,4 @@
 			slot_l_hand_str = 'icons/mob/items/lefthand_material.dmi',
 			slot_r_hand_str = 'icons/mob/items/righthand_material.dmi',
 			)
+
