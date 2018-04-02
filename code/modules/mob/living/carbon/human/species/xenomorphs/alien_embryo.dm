@@ -1,7 +1,7 @@
 // This is to replace the previous datum/disease/alien_embryo for slightly improved handling and maintainability
 // It functions almost identically (see code/datums/diseases/alien_embryo.dm)
 
-/*
+/
 /obj/item/alien_embryo	//Commented out as reference for future reproduction methods, or addition later.
 	name = "alien embryo"
 	desc = "All slimy and yuck."
@@ -158,4 +158,4 @@ Des: Removes the alien infection image from all aliens in the world located in p
 					if(I.loc == C)
 						if(dd_hasprefix_case(I.icon_state, "infected"))
 							qdel(I)
-*/
+
