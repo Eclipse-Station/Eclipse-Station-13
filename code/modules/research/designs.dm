@@ -570,11 +570,18 @@ other types of metals and chemistry for reagents).
 	sort_string = "TAAAE"
 
 /datum/design/item/weapon/smg
-	id = "smg"
+	id = "SABER smg"
 	req_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 3)
 	materials = list(DEFAULT_WALL_MATERIAL = 8000, "silver" = 2000, "diamond" = 1000)
-	build_path = /obj/item/weapon/gun/projectile/automatic
+	build_path = /obj/item/weapon/gun/projectile/automatic/saber
 	sort_string = "TAABA"
+
+/datum/design/item/weapon/ammo_sabermag
+	id = "Saber ammo_9mm"
+	req_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 3)
+	materials = list(DEFAULT_WALL_MATERIAL = 3750, "silver" = 100)
+	build_path = /obj/item/ammo_magazine/m9mmR/saber
+	sort_string = "TAACA"
 
 /datum/design/item/weapon/ammo_9mm
 	id = "ammo_9mm"
