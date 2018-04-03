@@ -68,7 +68,8 @@
 	item_state = "pocketrifle"
 	icon_state = "pocketrifle"
 	fire_sound = 'sound/weapons/rifleshot.ogg'
-	max_shells = 1
+	w_class = ITEMSIZE_NORMAL
+	max_shells = 3
 	force = 10
 	caliber = "7.62mm"
 	accuracy = -1

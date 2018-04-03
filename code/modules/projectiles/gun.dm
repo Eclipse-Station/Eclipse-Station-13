@@ -56,6 +56,7 @@
 	var/fire_delay = 6 	//delay after shooting before the gun can be used again
 	var/burst_delay = 2	//delay between shots, if firing in bursts
 	var/move_delay = 1
+	var/sound_override = 0 //aeiou edit
 	var/fire_sound = 'sound/weapons/Gunshot.ogg'
 	var/fire_sound_text = "gunshot"
 	var/recoil = 0		//screen shake
@@ -515,7 +516,7 @@
 		if(!(target && target.loc))
 			target = targloc
 			//pointblank = 0
-	
+
 	var/target_for_log
 	if(ismob(target))
 		target_for_log = target
@@ -693,11 +694,11 @@
 
 
 /obj/item/weapon/gun/proc/play_fire_sound(var/mob/user, var/obj/item/projectile/P)
-	var/shot_sound = (istype(P) && P.fire_sound)? P.fire_sound : fire_sound
-	if(silenced)
-		playsound(user, shot_sound, 10, 1)
-	else
-		playsound(user, shot_sound, 50, 1)
+    var/shot_sound = (istype(P) && P.fire_sound && !sound_override)? P.fire_sound : fire_sound
+    if(silenced)
+        playsound(user, shot_sound, 10, 1)
+    else
+        playsound(user, shot_sound, 50, 1)
 
 //Suicide handling.
 /obj/item/weapon/gun/var/mouthshoot = 0 //To stop people from suiciding twice... >.>

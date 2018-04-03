@@ -19,7 +19,43 @@
 		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
 		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-15,-15), dispersion=list(0.0, 0.6, 1.0))
 //		list(mode_name="short bursts",   burst=5, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-15,-15,-30,-30), dispersion=list(0.6, 1.0, 1.0, 1.0, 1.2)),
-		)
+)
+
+/obj/item/weapon/gun/projectile/automatic/saber //Fixed it
+	name = "prototype SMG"
+	desc = "A protoype lightweight, fast firing gun. Uses 9mm rounds."
+	icon = 'icons/obj/gun.dmi'
+	icon_state = "saber"//ugly
+	w_class = ITEMSIZE_NORMAL
+	load_method = MAGAZINE  //This should fix it
+	max_shells = 22
+	caliber = "9mm"
+	origin_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 2)
+	slot_flags = SLOT_BELT
+	magazine_type = /obj/item/ammo_magazine/m9mmR/saber
+	allowed_magazines = list(/obj/item/ammo_magazine/m9mmR/saber)
+	projectile_type = /obj/item/projectile/bullet/pistol
+	multi_aim = 1
+	burst_delay = 2
+
+//	one_handed_penalty = 15
+
+	firemodes = list(
+		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-15,-15), dispersion=list(0.0, 0.6, 1.0))
+//		list(mode_name="short bursts",   burst=5, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-15,-15,-30,-30), dispersion=list(0.6, 1.0, 1.0, 1.0, 1.2)),
+)
+
+
+
+/obj/item/weapon/gun/projectile/automatic/saber/update_icon()
+	..()
+	if(ammo_magazine)
+		icon_state = "saber"
+	else
+		icon_state = "saber-e"
+
+
 
 /obj/item/weapon/gun/projectile/automatic/c20r
 	name = "submachine gun"
@@ -29,6 +65,7 @@
 	w_class = ITEMSIZE_NORMAL
 	force = 10
 	caliber = "10mm"
+	sound_override = 1
 	origin_tech = list(TECH_COMBAT = 5, TECH_MATERIAL = 2, TECH_ILLEGAL = 8)
 	slot_flags = SLOT_BELT|SLOT_BACK
 	fire_sound = 'sound/weapons/Gunshot_light.ogg'
@@ -88,6 +125,7 @@
 	icon_state = "wt550"
 	item_state = "wt550"
 	w_class = ITEMSIZE_NORMAL
+	sound_override = 1
 	caliber = "9mm"
 	origin_tech = list(TECH_COMBAT = 5, TECH_MATERIAL = 2)
 	slot_flags = SLOT_BELT
@@ -115,6 +153,7 @@
 	w_class = ITEMSIZE_LARGE
 	force = 10
 	caliber = "7.62mm"
+	sound_override = 1
 	origin_tech = list(TECH_COMBAT = 8, TECH_MATERIAL = 3)
 	fire_sound = 'sound/weapons/Gunshot.ogg'
 	slot_flags = SLOT_BACK
@@ -185,6 +224,7 @@
 	w_class = ITEMSIZE_LARGE
 	force = 10
 	slot_flags = 0
+	sound_override = 1
 	max_shells = 50
 	caliber = "5.45mm"
 	origin_tech = list(TECH_COMBAT = 6, TECH_MATERIAL = 1, TECH_ILLEGAL = 2)
@@ -320,6 +360,7 @@
 	item_state = "p90"
 	w_class = ITEMSIZE_NORMAL
 	caliber = "9mm"
+	sound_override = 1
 	origin_tech = list(TECH_COMBAT = 5, TECH_MATERIAL = 2)
 	slot_flags = SLOT_BELT // ToDo: Belt sprite.
 	fire_sound = 'sound/weapons/Gunshot_light.ogg'
@@ -398,8 +439,8 @@
 	force = 15 //AK buttbash
 	wielded_item_state = "arifle-wielded"
 	w_class = ITEMSIZE_LARGE
+	sound_override = 1
 	load_method = MAGAZINE
-//	fire_sound = 'sound/weapons/Gunshot_heavy.ogg'
 	caliber = "7.62mm"
 	origin_tech = list(TECH_COMBAT = 5, TECH_MATERIAL = 2, TECH_ILLEGAL = 5)
 	magazine_type = /obj/item/ammo_magazine/m762AK

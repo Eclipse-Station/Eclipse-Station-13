@@ -6,6 +6,7 @@
 	build_type = PROTOLATHE
 	materials = list(DEFAULT_WALL_MATERIAL = 4000, "glass" = 1000, "silver" = 1000)
 	build_path = /obj/item/weapon/pickaxe/excavationdrill
+
 /* Make language great again
 /datum/design/item/implant/language
 	name = "Language implant"
