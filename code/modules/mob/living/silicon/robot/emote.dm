@@ -165,7 +165,7 @@
 				message = "chimes at [param]."
 			else
 				message = "chimes."
-			playsound(src.loc, 'sound/machines/chime.ogg', 50, 0)
+			playsound(src.loc, 'sound/machines/chime.ogg', 40, 0)
 			m_type = 1
 
 		if("ping")
@@ -272,7 +272,7 @@
 				src << "You are not security."
 
 		if ("help")
-			src << "salute, bow-(none)/mob, clap, flap, aflap, twitch, twitch_s, nod, deathgasp, glare-(none)/mob, stare-(none)/mob, look, beep, ping, \nbuzz, law, halt, yes, no"
+			src << "salute, bow-(none)/mob, clap, flap, aflap, twitch, twitch_s, nod, deathgasp, glare-(none)/mob, stare-(none)/mob, look, beep, buzz2, chime, ping, \nbuzz, law, halt, yes, no"
 		else
 			src << "<font color='blue'>Unusable emote '[act]'. Say *help for a list.</font>"
 
