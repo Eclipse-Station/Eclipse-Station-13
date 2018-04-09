@@ -379,6 +379,7 @@ proc/get_radio_key_from_channel(var/channel)
 						images_to_clients[I1] |= M.client
 						M << I1
 					M.hear_say(message, verb, speaking, alt_name, italics, src, speech_sound, sound_vol)
+
 				if(whispering) //Don't even bother with these unless whispering
 					if(dst > message_range && dst <= w_scramble_range) //Inside whisper scramble range
 						if(M.client)
@@ -388,6 +389,13 @@ proc/get_radio_key_from_channel(var/channel)
 						M.hear_say(stars(message), verb, speaking, alt_name, italics, src, speech_sound, sound_vol*0.2)
 					if(dst > w_scramble_range && dst <= world.view) //Inside whisper 'visible' range
 						M.show_message("<span class='game say'><span class='name'>[src.name]</span> [w_not_heard].</span>", 2)
+
+				if(ishuman(src))//this helps with the voice masks with the owl_aeiou.dm file
+					var/mob/living/carbon/human/human = src
+					if(istype(human.wear_mask, /obj/item/clothing/mask/gas/owl_aeiou))
+						var/obj/item/clothing/mask/gas/owl_aeiou/owl_mask = wear_mask
+						owl_mask.play_owl_sound()
+
 
 	//Object message delivery
 	for(var/obj/O in listening_obj)
