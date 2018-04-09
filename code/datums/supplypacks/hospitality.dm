@@ -75,3 +75,13 @@
 	cost = 10
 	containertype = /obj/structure/closet/crate
 	containername = "crate of gifts"
+
+/datum/supply_packs/hospitality/asiantakeout
+	name = "Asian takeout crate"
+	contains = list(
+		/obj/item/weapon/reagent_containers/food/snacks/generalschicken = 2,
+		/obj/item/weapon/reagent_containers/food/snacks/sliceable/sushi = 3
+		)
+	cost = 20
+	containertype = /obj/structure/closet/crate
+	containername = "crate of food"
