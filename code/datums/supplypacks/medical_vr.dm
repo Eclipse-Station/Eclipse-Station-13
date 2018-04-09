@@ -32,3 +32,13 @@
 	containertype = "/obj/structure/closet/crate/secure"
 	containername = "Virology biohazard equipment"
 	access = access_medical_equip
+
+/datum/supply_packs/med/pillbottles
+	name = "Pill bottles"
+	contains = list(
+			/obj/item/weapon/storage/box/pillbottles = 3
+			)
+	cost = 30
+	containertype = "/obj/structure/closet/crate/secure"
+	containername = "Medical Pill bottles"
+	access = access_medical_equip

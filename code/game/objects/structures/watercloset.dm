@@ -130,7 +130,8 @@
 	var/ismist = 0				//needs a var so we can make it linger~
 	var/watertemp = "normal"	//freezing, normal, or boiling
 	var/is_washing = 0
-	var/list/temperature_settings = list("normal" = 310, "boiling" = T0C+100, "freezing" = T0C, "mild" = T20C, "hot" = 325)
+	var/list/temperature_settings = list("normal" = 310, "boiling" = T0C+100, "freezing" = T0C)
+	var/list/temperature_normal_settings = list("cold" = T20C, "hot" = 345,"normal" = 310)
 
 /obj/machinery/shower/New()
 	..()
@@ -156,7 +157,7 @@
 		for (var/atom/movable/G in src.loc)
 			G.clean_blood()
 
-/*
+/*Was used as reference
 obj/structure/reagent_dispensers/verb/set_APTFT() //set amount_per_transfer_from_this
 	set name = "Set transfer amount"
 	set category = "Object"
@@ -167,13 +168,17 @@ obj/structure/reagent_dispensers/verb/set_APTFT() //set amount_per_transfer_from
 */
 
 /obj/machinery/shower/verb/set_temp() //set temperature
-	set name = "Set Temperature"
-	set category = "Object"
-	set src in view(1)
-	var/N = input("watertemp:","[src]") as null|anything in temperature_settings
-	if (N)
-		watertemp = N
-	set_temp()
+    set name = "Set Temperature"
+    set category = "Object"
+    set src in view(1)
+    var/N = input(usr, "Current Watertemp: [watertemp]") as null|anything in temperature_normal_settings
+//    set_temp()
+    if (N)
+        watertemp = N
+        to_chat(usr, "The shower has been turned to [watertemp]")
+        return
+    else
+        return
 
 
 /obj/machinery/shower/attackby(obj/item/I as obj, mob/user as mob)

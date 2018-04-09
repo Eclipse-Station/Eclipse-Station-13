@@ -75,6 +75,7 @@
 	var/obj/screen/auto_target/auto_target
 	var/shooting = 0
 	var/next_fire_time = 0
+	var/unfolded_stock = 0
 
 	var/sel_mode = 1 //index of the currently selected mode
 	var/list/firemodes = list()

@@ -458,3 +458,59 @@
 		icon_state = "oldAK"
 	else
 		icon_state = "oldAK-empty"
+
+
+
+
+/obj/item/weapon/gun/projectile/automatic/protekt //WIP, it need an action button so you can switch the stock more easily. Maybe a timer.
+	name = "Protekt-9"
+	desc = "For the discerning mercenary on a budget. The common ammunition and low maintenance have assured its place in back alleys and gambling dens across the sector. Uses .45 rounds."
+	icon = 'icons/obj/gun_aeiou.dmi'
+	item_state = "protekt"
+	sound_override = 1
+	caliber = ".45"
+	origin_tech = list(TECH_COMBAT = 5, TECH_MATERIAL = 2)
+	slot_flags = SLOT_BELT
+	fire_sound = 'sound/weapons/45pistol_vr.ogg'
+	load_method = MAGAZINE
+	magazine_type = /obj/item/ammo_magazine/m45uzi
+	allowed_magazines = list(/obj/item/ammo_magazine/m45uzi)
+	projectile_type = /obj/item/projectile/bullet/pistol/medium
+	unfolded_stock = 0
+//	action_button_name = "Folding stock"
+
+
+
+/obj/item/weapon/gun/projectile/automatic/protekt/verb/toggle_stock()
+	set name = "Folding stock"
+	set category = "Object"
+	set desc = "Click to extend or retract the stock."
+
+	var/mob/living/carbon/human/M = usr
+	if(!M.mind)
+		return 0
+
+	to_chat(M, "<span class='notice'>You move the stock on \the [src].</span>")
+	unfolded_stock = !unfolded_stock
+	update_held_icon()
+
+	if(unfolded_stock == 1)
+		accuracy = 10
+		w_class = ITEMSIZE_NORMAL
+	else
+		w_class = ITEMSIZE_SMALL
+		accuracy =-10
+		dispersion = -5
+
+
+/obj/item/weapon/gun/projectile/automatic/protekt/update_icon()
+	..()
+	if(ammo_magazine && unfolded_stock)
+		icon_state = "protektclosed-loaded"
+	else if(unfolded_stock)
+		icon_state = "protektopen-empty"
+	else if(ammo_magazine)
+		icon_state = "protektfclosed-loaded"
+	else
+		icon_state = "protektfopen-empty"
+	update_held_icon()
