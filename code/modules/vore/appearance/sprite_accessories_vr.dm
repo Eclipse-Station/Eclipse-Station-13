@@ -1009,7 +1009,8 @@
 /datum/sprite_accessory/tail/special/seromitailfeathered
 	name = "seromi tail w/ feathers"
 	desc = ""
-	icon_state = "seromitail_feathers_s"
+	icon_state = "seromitail_s"
+	extra_overlay = "seromitail_feathers_s"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
@@ -1251,6 +1252,26 @@
 /datum/sprite_accessory/tail/taur/cow
 	name = "Cow (Taur)"
 	icon_state = "cow_s"
+
+	msg_owner_disarm_run = "You quickly push %prey to the ground with your hoof!"
+	msg_prey_disarm_run = "%owner pushes you down to the ground with their hoof!"
+
+	msg_owner_disarm_walk = "You firmly push your hoof down on %prey, painfully but harmlessly pinning them to the ground!"
+	msg_prey_disarm_walk = "%owner firmly pushes their hoof down on you, quite painfully but harmlessly pinning you to the ground!"
+
+	msg_owner_harm_walk = "You methodically place your hoof down upon %prey's body, slowly applying pressure, crushing them against the floor below!"
+	msg_prey_harm_walk = "%owner methodically places their hoof upon your body, slowly applying pressure, crushing you against the floor below!"
+
+	msg_owner_grab_success = "You pin %prey to the ground before scooping them up with your hooves!"
+	msg_prey_grab_success = "%owner pins you to the ground before scooping you up with their hooves!"
+
+	msg_owner_grab_fail = "You step down onto %prey, squishing them and forcing them down to the ground!"
+	msg_prey_grab_fail = "%owner steps down and squishes you with their hoof, forcing you down to the ground!"
+
+/datum/sprite_accessory/tail/taur/deer
+	name = "Deer dual-color (Taur)"
+	icon_state = "deer_s"
+	extra_overlay = "deer_markings"
 
 	msg_owner_disarm_run = "You quickly push %prey to the ground with your hoof!"
 	msg_prey_disarm_run = "%owner pushes you down to the ground with their hoof!"

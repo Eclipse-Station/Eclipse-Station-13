@@ -59,6 +59,7 @@
 	var/sound_override = 0 //aeiou edit
 	var/fire_sound = 'sound/weapons/Gunshot.ogg'
 	var/fire_sound_text = "gunshot"
+	var/fire_anim = null
 	var/recoil = 0		//screen shake
 	var/silenced = 0
 	var/muzzle_flash = 3
@@ -558,6 +559,9 @@
 
 //called after successfully firing
 /obj/item/weapon/gun/proc/handle_post_fire(mob/user, atom/target, var/pointblank=0, var/reflex=0)
+	if(fire_anim)
+		flick(fire_anim, src)
+
 	if(silenced)
 		if(reflex)
 			user.visible_message(
