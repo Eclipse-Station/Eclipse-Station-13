@@ -9,7 +9,7 @@
 	var/outgoing_melee_damage_percent = 1 //hit harder. Or try to.
 
 /datum/species/custom
-	name = "Custom Species"
+	name = SPECIES_CUSTOM
 	name_plural = "Custom"
 	var/base_species = "Human"
 
