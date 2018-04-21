@@ -27,3 +27,19 @@
 
 /obj/item/weapon/material/twohanded/baseballbat/diamond/New(var/newloc)
 	..(newloc,"diamond")
+
+
+/obj/item/weapon/material/twohanded/baseballbat/rainbow
+	name = "bat"
+	desc = "HOME RUN!"
+	icon_state = "rainbowbat0"
+	base_icon = "rainbowbat"
+	throwforce = 7
+	attack_verb = list("smashed", "beaten", "slammed", "smacked", "struck", "battered", "bonked")
+	hitsound = 'sound/weapons/homerun.ogg'
+	default_material = "metal"
+	force_divisor = 1.6
+	unwielded_force_divisor = 0.7 
+	dulled_divisor = 0.85		  // A "dull" bat is still gonna hurt
+	slot_flags = SLOT_BACK
+

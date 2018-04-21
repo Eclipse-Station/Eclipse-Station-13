@@ -1521,6 +1521,8 @@
 #include "code\modules\clothing\masks\gasmask_vr.dm"
 #include "code\modules\clothing\masks\miscellaneous.dm"
 #include "code\modules\clothing\masks\monitor.dm"
+#include "code\modules\clothing\masks\owl_aeiou.dm"
+#include "code\modules\clothing\masks\owl_griffin.dm"
 #include "code\modules\clothing\masks\voice.dm"
 #include "code\modules\clothing\rings\material.dm"
 #include "code\modules\clothing\rings\rings.dm"
