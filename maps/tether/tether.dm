@@ -21,8 +21,10 @@
 	#include "tether-08-mining.dmm"
 	#include "tether-09-solars.dmm"
 	#include "tether-10-colony.dmm"
-
+	#include "tether-12-belt.dmm"
 	#include "submaps/_tether_submaps.dm"
+
+
 
 	#define USING_MAP_DATUM /datum/map/tether
 

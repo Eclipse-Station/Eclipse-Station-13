@@ -74,6 +74,24 @@
 	selectable = 0
 	device_type = /obj/item/device/ano_scanner
 
+
+/obj/item/rig_module/emshield
+	name = "EMP shielding"
+	desc = "Now with 80% more Faradays and cages."
+	icon_state = "ewar"
+	interface_name = "EMP shielding"
+	interface_desc = "Active EMP protection for the wearer."
+	engage_string = "Begin Scan"
+	usable = 1
+	selectable = 0
+
+
+/obj/item/rig_module/voice/installed()
+	..()
+	holder.emp_protection = 0
+
+
+
 /obj/item/rig_module/device/orescanner
 	name = "ore scanner module"
 	desc = "A clunky old ore scanner."

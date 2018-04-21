@@ -390,3 +390,18 @@
 	..(newloc, "glass")
 
 	..()
+
+/*
+//drakecloaks. requested by DSR
+
+/obj/item/clothing/accessory/drakecloak
+	name = "Red cloak"
+	desc = "A breezey cloak to distinguish your tauric body from the common beast."
+	icon = 'icons/mob/taurunder_vr.dmi'
+	icon_override = 'icons/mob/taurunder_vr.dmi'
+	icon_state = "cloakred-drake"
+	slot_flags = SLOT_TIE
+	worn_layer = 20
+	pixel_x = -16
+
+*/

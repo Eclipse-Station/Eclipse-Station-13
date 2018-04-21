@@ -33,6 +33,15 @@
 	item_state = "quill"
 	throwforce = 5
 
+/obj/item/weapon/arrow/baguette
+	name = "stale baguette"
+	desc = "A very hard stale baguette."
+	icon = 'icons/obj/food.dmi'
+	icon_state = "baguette"
+	item_state = "baguette"
+	throwforce = 5
+
+
 /obj/item/weapon/arrow/rod
 	name = "metal rod"
 	desc = "Don't cry for me, Orithena."

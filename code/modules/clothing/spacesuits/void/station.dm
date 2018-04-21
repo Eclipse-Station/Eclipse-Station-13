@@ -82,7 +82,7 @@
 	desc = "A special helmet designed for work in a hazardous, low pressure environment. Has reinforced plating."
 	icon_state = "rig0-mining"
 	item_state_slots = list(slot_r_hand_str = "mining_helm", slot_l_hand_str = "mining_helm")
-	armor = list(melee = 50, bullet = 5, laser = 20, energy = 5, bomb = 55, bio = 100, rad = 20)
+	armor = list(melee = 50, bullet = 5, laser = 20, energy = 5, bomb = 55, bio = 100, rad = 40)
 	light_overlay = "helmet_light_dual"
 
 /obj/item/clothing/suit/space/void/mining
@@ -90,7 +90,7 @@
 	desc = "A special suit that protects against hazardous, low pressure environments. Has reinforced plating."
 	icon_state = "rig-mining"
 	item_state_slots = list(slot_r_hand_str = "mining_voidsuit", slot_l_hand_str = "mining_voidsuit")
-	armor = list(melee = 50, bullet = 5, laser = 20, energy = 5, bomb = 55, bio = 100, rad = 20)
+	armor = list(melee = 50, bullet = 5, laser = 20, energy = 5, bomb = 55, bio = 100, rad = 40)
 
 //Mining Surplus Voidsuit
 
@@ -164,6 +164,11 @@
 	desc = "A more recent model of Vey-Med voidsuit, exchanging physical protection for fully unencumbered movement and a complete range of motion."
 	slowdown = 0
 	armor = list(melee = 20, bullet = 5, laser = 20,energy = 5, bomb = 15, bio = 100, rad = 30)
+
+/obj/item/clothing/suit/space/void/medical/alt/lanius
+	species_restricted = list("Human", "Skrell", "Promethean", "Carnifex")
+	name = "repurposed medical voidsuit"
+	desc = "A hasty solution from VeyMed to confine Carnifex in a sealed enviroment. Doesn't offer much protection, but allows the user to move more freely."
 
 //Security
 /obj/item/clothing/head/helmet/space/void/security

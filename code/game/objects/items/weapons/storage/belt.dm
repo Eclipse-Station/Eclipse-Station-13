@@ -433,3 +433,29 @@
  	icon_state = "fannypack_yellow"
  	item_state = "fannypack_yellow"
 
+
+/obj/item/weapon/storage/belt/scabbard
+	name = "synthetic scabbard"
+	desc = "Can hold a small to medium sword."
+	icon_state = "scabbard_brown"
+	item_state = "scabbard_brown"
+	slot_flags = SLOT_BELT
+	storage_slots = 1
+	can_hold = list(
+		/obj/item/weapon/material/sword,
+		)
+/obj/item/weapon/storage/belt/scabbard/leather
+	name = "leather scabbard"
+	desc = "Can hold a small to medium sword."
+	icon_state = "scabbard_brown"
+	item_state = "scabbard_brown"
+	storage_slots = 1
+	slot_flags = SLOT_BELT
+	can_hold = list(
+		/obj/item/weapon/material/sword,
+		)
+
+
+
+
+

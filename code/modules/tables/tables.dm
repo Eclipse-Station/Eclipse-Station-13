@@ -14,6 +14,7 @@ var/list/table_icon_cache = list()
 	var/flipped = 0
 	var/maxhealth = 10
 	var/health = 10
+	var/family = "table" //crafting shit
 
 	// For racks.
 	var/can_reinforce = 1
@@ -77,6 +78,9 @@ var/list/table_icon_cache = list()
 	update_icon()
 	update_desc()
 	update_material()
+
+	craft_holder = new /datum/crafting_holder(src, family)
+
 
 /obj/structure/table/Destroy()
 	material = null
@@ -196,6 +200,13 @@ var/list/table_icon_cache = list()
 		reinforce_table(what, usr)
 	else
 		return ..()
+
+
+
+/obj/structure/table/MouseDrop(atom/over)
+	if(usr.stat || usr.lying || !Adjacent(usr) || (over != usr))
+		return
+	craft_holder.interact(usr)
 
 /obj/structure/table/proc/reinforce_table(obj/item/stack/material/S, mob/user)
 	if(reinforced)

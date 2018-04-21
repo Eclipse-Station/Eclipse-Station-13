@@ -2,18 +2,23 @@
 	name = SPECIES_SKELETON
 	name_plural = "Skeletons"
 	icobase = 'icons/mob/human_races/r_skeleton.dmi'
-	primitive_form = "Monkey"
+//	primitive_form = "Monkey"
 	language = "Sol Common"
 	unarmed_types = list(/datum/unarmed_attack/claws/strong, /datum/unarmed_attack/bite/sharp)	//Bones are pointy, fight me.
-	blurb = "Spooky Scary Skeletons!"
+	blurb = "Welcome to the bone zone!"
 	name_language = null // Use the first-name last-name generator rather than a language scrambler
-	min_age = 17
-	max_age = 110
+	min_age = 18
+	max_age = 250
 	health_hud_intensity = 1.5
+	flesh_color = "#ffffff" //WHITE
+	base_color 	= "#ffffff" //ALSO WHITE
+	blood_color = "#ffffff" //GUESS WHAT
+	num_alternate_languages = 2
+//	species_language = LANGUAGE_BONERS
 
 	flags = NO_SCAN | NO_PAIN | NO_SLIP | NO_POISON | NO_MINOR_CUT | NO_BLOOD | UNDEAD
-	spawn_flags = SPECIES_IS_RESTRICTED
-	appearance_flags = null
+	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED
+	appearance_flags = HAS_EYE_COLOR
 
 	show_ssd = null
 
@@ -23,8 +28,8 @@
 	metabolic_rate = 0
 
 	virus_immune = 1
-
-	brute_mod =     1
+	total_health = 75
+	brute_mod =     1.2
 	burn_mod =      0
 	oxy_mod =       0
 	toxins_mod =    0
@@ -51,3 +56,10 @@
 	heat_level_3 = 4000
 
 	body_temperature = T20C
+
+	inherent_verbs = list(/mob/living/carbon/human/proc/xylobone,  /mob/living/carbon/human/proc/bonerattle, /mob/living/carbon/human/proc/setfont)
+
+
+/datum/species/skeleton/handle_post_spawn(var/mob/living/carbon/human/H)
+	..()
+	H.mutations.Add(SKELETON)

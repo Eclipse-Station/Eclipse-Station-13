@@ -183,6 +183,13 @@ var/static/list/scarySounds = list(
 	'sound/effects/clownstep2.ogg'
 )
 
+//Some NIF startup noises
+//var/static/list/Nifstartupsound = list(
+//	'sound/items/NifStartupNoise1.ogg',
+//	'sound/items/NifStartupNoise2.ogg',
+//	'sound/items/NifStartupNoise3.ogg'
+//)
+
 // Bomb cap!
 var/max_explosion_range = 14
 

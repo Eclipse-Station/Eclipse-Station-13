@@ -44,6 +44,7 @@
 		"Surgeon" = /decl/hierarchy/outfit/job/medical/doctor/surgeon,
 		"Emergency Physician" = /decl/hierarchy/outfit/job/medical/doctor/emergency_physician,
 		"Nurse" = /decl/hierarchy/outfit/job/medical/doctor/nurse,
+		"Coroner" = /decl/hierarchy/outfit/job/medical/doctor/coroner,
 		"Virologist" = /decl/hierarchy/outfit/job/medical/doctor/virologist)
 
 //Chemist is a medical job damnit	//YEAH FUCK YOU SCIENCE	-Pete	//Guys, behave -Erro

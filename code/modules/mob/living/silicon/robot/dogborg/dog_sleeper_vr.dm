@@ -616,7 +616,7 @@
 	icon_state = "compactor"
 	injection_chems = null //So they don't have all the same chems as the medihound!
 	compactor = TRUE
-	max_item_count = 25
+	max_item_count = 50
 
 /obj/item/device/dogborg/sleeper/compactor/analyzer //sci-borg gut.
 	name = "Digestive Analyzer"

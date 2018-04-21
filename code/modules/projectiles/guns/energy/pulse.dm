@@ -42,3 +42,29 @@
 		list(mode_name="lethal", projectile_type=/obj/item/projectile/beam, fire_delay=null, charge_cost = 240),
 		list(mode_name="DESTROY", projectile_type=/obj/item/projectile/beam/pulse, fire_delay=null, charge_cost = 480),
 		)
+
+
+/*
+//VG GUN
+/obj/item/gun/energy/laser/LaserAK
+	name = "Laser AK470"
+	desc = "A laser AK. Death solves all problems -- No man, no problem."
+	icon_state = "LaserAK"
+	item_state = null
+	slot_flags = SLOT_BELT|SLOT_BACK
+	force = 10
+	recoil_m = 1
+	icon = 'icons/obj/gun.dmi'
+	firemodes = list(
+		list(mode_name="single shot", burst = 1, burst_accuracy = list(5), dispersion = list(0), charge_cost = 24),
+		list(mode_name="five shot burst", burst = 5, burst_accuracy = list(5,5,5,5,5), dispersion = list(1,1,1,1,1)),
+		list(mode_name="ten shot burst", burst = 10, burst_accuracy = list(5,5,5,5,5,5,5,5,5,5), dispersion = list(2,2,2,2,2,2,2,2,2,2)),
+		)
+
+//	firemodes = list(
+//		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
+//		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-1,-1), dispersion=list(0.0, 0.6, 1.0))
+//		list(mode_name="short bursts",   burst=5, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-1,-1,-2,-2), dispersion=list(0.6, 1.0, 1.0, 1.0, 1.2)),
+//		)
+
+*/

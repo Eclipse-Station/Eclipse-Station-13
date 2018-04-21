@@ -469,6 +469,18 @@
 	reagent_state = LIQUID
 	color = "#B97A57"
 
+
+
+/datum/reagent/dormantnanobots
+	name = "Dormant Nanobots"
+	id = "dormantnanobots"
+	description = "Those little fellas seem to be sleeping."
+	taste_description = "Metal"
+	reagent_state = LIQUID
+	color = "#343251"
+
+
+
 /datum/reagent/luminol
 	name = "Luminol"
 	id = "luminol"

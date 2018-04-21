@@ -19,7 +19,7 @@
 	..()
 	create_reagents(5)
 	wet()
- 
+
 /obj/item/weapon/soap/proc/wet()
 	reagents.add_reagent("cleaner", 5)
 
@@ -32,7 +32,7 @@
 	if(!proximity) return
 	//I couldn't feasibly  fix the overlay bugs caused by cleaning items we are wearing.
 	//So this is a workaround. This also makes more sense from an IC standpoint. ~Carn
-	if(user.client && (target in user.client.screen))
+	if(user.client && (target in user.client.screen) && !(istype(target,/obj/item) && user.get_inventory_slot(target) in list(slot_l_hand, slot_r_hand)))
 		to_chat(user, "<span class='notice'>You need to take that [target.name] off before cleaning it.</span>")
 	else if(istype(target,/obj/effect/decal/cleanable/blood))
 		to_chat(user, "<span class='notice'>You scrub \the [target.name] out.</span>")

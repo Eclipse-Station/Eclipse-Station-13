@@ -107,3 +107,11 @@
 		standing.pixel_x = -16
 		standing.layer = BODY_LAYER + 15 // 15 is above tail layer, so will not be covered by taurbody.
 	return standing
+
+
+/obj/item/clothing/suit/make_worn_icon(var/body_type,var/slot_name,var/inhands,var/default_icon,var/default_layer = 0) //trying
+	var/image/standing = ..()
+	if(icon_override && icon_override == 'icons/mob/taurunder_vr.dmi')
+		standing.pixel_x = -16
+		standing.layer = BODY_LAYER + 15 // 15 is above tail layer, so will not be covered by taurbody.
+	return standing

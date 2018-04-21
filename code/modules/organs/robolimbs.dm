@@ -42,7 +42,7 @@ var/const/standard_monitor_styles = "blank=ipc_blank;\
 	var/lifelike										 // If set, appears organic.
 	var/skin_tone										 // If set, applies skin tone rather than part color
 	var/blood_color = "#030303"
-	var/list/species_cannot_use = list(SPECIES_TESHARI, "Promethean") //VOREStation Add
+	var/list/species_cannot_use = list("Promethean") //AEIOU edit: Teshari have prosthetics now, prometheans do not
 	var/list/monitor_styles			 		 			 //If empty, the model of limbs offers a head compatible with monitors.
 	var/parts = BP_ALL						 			 //Defines what parts said brand can replace on a body.
 	var/health_hud_intensity = 1						 // Intensity modifier for the health GUI indicator.
@@ -61,6 +61,18 @@ var/const/standard_monitor_styles = "blank=ipc_blank;\
 	company = "NanoTrasen"
 	desc = "A simple but efficient robotic limb, created by NanoTrasen."
 	icon = 'icons/mob/human_races/cyberlimbs/nanotrasen/nanotrasen_main.dmi'
+
+/datum/robolimb/nestortesh
+	company = "NS-Tech - Raven"
+	desc = "This prosthetic limb is covered in thin layer of synthflesh with feather-shaped formations."
+	icon = 'icons/mob/human_races/cyberlimbs/nestortesh/nanotrasen_main.dmi'
+
+
+/datum/robolimb/nestortesh_alt1
+	company = "NS-Tech - Swan"
+	desc = "This prosthetic limb is covered in thin layer of synthflesh with feather-shaped formations."
+	icon = 'icons/mob/human_races/cyberlimbs/nestortesh/white.dmi'
+
 
 /datum/robolimb/bishop
 	company = "Bishop"

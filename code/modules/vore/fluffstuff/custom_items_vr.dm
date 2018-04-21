@@ -706,6 +706,28 @@
 /obj/item/weapon/implanter/reagent_generator/savannah
 	implant_type = /obj/item/weapon/implant/reagent_generator/savannah
 
+
+
+
+//lbnesquik aka Kates aka xenomom melk implant
+/obj/item/weapon/implant/reagent_generator/may
+    name = "lactation implant"
+    desc = "This is an implant that allows the user to lactate."
+    generated_reagents = list("milk" = 2)
+    reagent_name = "milk"
+    usable_volume = 1000
+
+    empty_message = list("Your breasts feel unusually empty.", "Your chest feels lighter - your milk supply is empty!", "Your milk reserves have run dry.", "Your grateful nipples ache as the last of your milk leaves them.")
+    full_message = list("Your breasts ache badly - they are swollen and feel fit to burst!", "You need to be milked! Your breasts feel bloated, eager for release.", "Your milky breasts are starting to leak...")
+    emote_descriptor = list("squeezes May's nipples, milking them", "milks May's breasts", "extracts milk")
+    self_emote_descriptor = list("squeeze out", "extract")
+    random_emote = list("surpresses a moan", "gasps sharply", "fidget around", "bites her lower lip")
+    verb_name = "Milk"
+    verb_desc = "Grab May's breasts and milk her, storing her fresh, warm milk in a container. This will undoubtedly turn her on."
+
+/obj/item/weapon/implanter/reagent_generator/may
+    implant_type = /obj/item/weapon/implant/reagent_generator/may
+
 //SpoopyLizz: Roiz Lizden
 //I made this! Woo!
 //implant
@@ -1744,6 +1766,37 @@
 		return
 	else
 		..()
+
+
+
+//ForFoxSake:Lysia Blackoak
+/obj/item/clothing/glasses/goggles/fluff/eblindfold
+	name = "enchanted blindfold"
+	desc = "An ancient looking strip of cloth meant to cover the eyes."
+	icon_state = "blindfold"
+	item_state = "blindfold"
+	item_state_slots = list(slot_r_hand_str = "blindfold", slot_l_hand_str = "blindfold")
+
+//Pixelexip:Casey Hall
+/obj/item/clothing/glasses/sunglasses/fluff/clout
+	name = "clout goggles"
+	desc = "These ain't glasses, baby. These CLOUT GOGGLES."
+	icon = 'icons/vore/custom_items_vr.dmi'
+	icon_state = "clout_goggles"
+
+	icon_override = 'icons/vore/custom_clothes_vr.dmi'
+	item_state = "clout_goggles"
+	item_state_slots = list(slot_r_hand_str = "sun", slot_l_hand_str = "sun")
+
+//ForFoxSake:Alyona Fuchs
+/obj/item/clothing/under/rank/captain/fluff/white
+	name = "Asphodelus' Captain's uniform"
+	desc = "A formal uniform for a Captain, cleared to be worn as a Colony Director."
+	icon = 'icons/vore/custom_clothes_vr.dmi'
+	icon_state = "capform_white"
+
+	icon_override = "capform_white_s"
+	item_state = "capform_white"
 
 //jacknoir413:Areax Third
 /obj/item/weapon/melee/baton/fluff/stunstaff

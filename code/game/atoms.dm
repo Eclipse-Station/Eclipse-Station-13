@@ -14,7 +14,7 @@
 	var/germ_level = GERM_LEVEL_AMBIENT // The higher the germ level, the more germ on the atom.
 	var/simulated = 1 //filter for actions - used by lighting overlays
 	var/fluorescent // Shows up under a UV light.
-
+	var/datum/crafting_holder/craft_holder = null
 	///Chemistry.
 	var/datum/reagents/reagents = null
 
@@ -117,6 +117,19 @@
 	proc/can_add_container()
 		return flags & INSERT_CONTAINER
 */
+
+/atom/proc/CheckCParts(list/parts_list)
+	for(var/A in parts_list)
+		if(istype(A, /datum/reagent))
+			if(!reagents)
+				reagents = new()
+			reagents.reagent_list.Add(A)
+		else if(istype(A, /atom/movable))
+			var/atom/movable/M = A
+			if(istype(M.loc, /mob/living))
+				var/mob/living/L = M.loc
+				L.unEquip(M)
+			M.forceMove(src)
 
 /atom/proc/CheckExit()
 	return 1

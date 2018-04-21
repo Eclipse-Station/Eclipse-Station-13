@@ -4,6 +4,8 @@
 	icon_state = "carpet"
 	initial_flooring = /decl/flooring/carpet
 
+
+
 /turf/simulated/floor/carpet/bcarpet
 	name = "black carpet"
 	icon_state = "bcarpet"
@@ -93,6 +95,14 @@
 	icon = 'icons/turf/flooring/grass.dmi'
 	icon_state = "grass0"
 	initial_flooring = /decl/flooring/grass
+
+
+/turf/simulated/floor/offloor
+	name = "offloor"
+	icon = 'icons/48x48/OFF.dmi'
+	icon_state = "offloor"
+	initial_flooring = /decl/flooring/offloor
+
 
 /turf/simulated/floor/tiled
 	name = "floor"

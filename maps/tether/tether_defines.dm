@@ -32,8 +32,12 @@
 #define Z_LEVEL_SURFACE_MINE				8
 #define Z_LEVEL_SOLARS						9
 #define Z_LEVEL_CENTCOM						10
-#define Z_LEVEL_MISC						11
-#define Z_LEVEL_SHIPS						12
+#define Z_LEVEL_ABELT_VIRGO	             	11
+#define Z_LEVEL_MISC						12
+#define Z_LEVEL_SHIPS						13
+
+
+
 
 /datum/map/tether
 	name = "Virgo"
@@ -122,6 +126,8 @@
 		)
 
 	lateload_single_pick = null //Nothing right now.
+
+
 
 /datum/map/tether/perform_map_generation()
 
@@ -236,6 +242,23 @@
 	z = Z_LEVEL_MISC
 	name = "Misc"
 	flags = MAP_LEVEL_ADMIN
+
+/datum/map_z_level/tether/belt
+	z = Z_LEVEL_ABELT_VIRGO
+	name = "Belt"
+	flags = MAP_LEVEL_SEALED|MAP_LEVEL_PLAYER
+
+/*/datum/map_z_level/tether/empty_surface
+	z = Z_LEVEL_EMPTY_SURFACE
+	name = "Empty"
+	flags = MAP_LEVEL_PLAYER
+	base_turf = /turf/simulated/floor/outdoors/rocks/virgo3b
+
+/datum/map_z_level/tether/empty_space
+	z = Z_LEVEL_EMPTY_SPACE
+	name = "Empty"
+	flags = MAP_LEVEL_PLAYER
+	transit_chance = 82*/
 
 /*
 /datum/map_z_level/tether/wilderness

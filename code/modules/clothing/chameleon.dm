@@ -481,3 +481,6 @@
 		var/mob/M = src.loc
 		M.update_inv_r_hand()
 		M.update_inv_l_hand()
+//*************************
+//**DEAD RINGER CLOHTHING**
+//*************************

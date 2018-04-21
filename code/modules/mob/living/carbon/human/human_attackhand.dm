@@ -31,6 +31,7 @@
 
 	..()
 
+
 	// Should this all be in Touch()?
 	if(istype(H))
 		if(get_accuracy_penalty(H) && H != src)	//Should only trigger if they're not aiming well
@@ -143,9 +144,13 @@
 
 			H.do_attack_animation(src)
 			playsound(loc, 'sound/weapons/thudswoosh.ogg', 50, 1, -1)
+
+
+
 			//VORESTATION EDIT
 			visible_message("<span class='warning'>[M] has grabbed [src] [(M.zone_sel.selecting == BP_L_HAND || M.zone_sel.selecting == BP_R_HAND)? "by [(gender==FEMALE)? "her" : ((gender==MALE)? "his": "their")] hands": "passively"]!</span>")
 			//VORESTATION END END
+
 			return 1
 
 		if(I_HURT)
@@ -265,19 +270,19 @@
 					var/obj/item/clothing/gloves/G = H.gloves
 					real_damage += G.punch_force
 					hit_dam_type = G.punch_damtype
-					if(H.pulling_punches)	//SO IT IS DECREED: PULLING PUNCHES WILL PREVENT THE ACTUAL DAMAGE FROM RINGS AND KNUCKLES, BUT NOT THE ADDED PAIN
-						hit_dam_type = AGONY
+				if(H.pulling_punches)	//SO IT IS DECREED: PULLING PUNCHES WILL PREVENT THE ACTUAL DAMAGE FROM RINGS AND KNUCKLES, BUT NOT THE ADDED PAIN
+					hit_dam_type = AGONY
 			real_damage *= damage_multiplier
 			rand_damage *= damage_multiplier
 			if(HULK in H.mutations)
 				real_damage *= 2 // Hulks do twice the damage
 				rand_damage *= 2
-			real_damage = max(1, real_damage)
+			real_damage = max(1, real_damage)*outgoing_melee_damage_percent
 
 			var/armour = run_armor_check(hit_zone, "melee")
 			var/soaked = get_armor_soak(hit_zone, "melee")
 			// Apply additional unarmed effects.
-			attack.apply_effects(H, src, armour, rand_damage, hit_zone)
+			attack.apply_effects(H, src, armour, rand_damage*outgoing_melee_damage_percent, hit_zone)
 
 			// Finally, apply damage to target
 			apply_damage(real_damage, hit_dam_type, hit_zone, armour, soaked, sharp=attack.sharp, edge=attack.edge)
@@ -354,7 +359,7 @@
 	var/obj/item/organ/external/affecting = get_organ(ran_zone(dam_zone))
 	var/armor_block = run_armor_check(affecting, armor_type, armor_pen)
 	var/armor_soak = get_armor_soak(affecting, armor_type, armor_pen)
-	apply_damage(damage, BRUTE, affecting, armor_block, armor_soak, sharp = a_sharp, edge = a_edge)
+	apply_damage(damage*outgoing_melee_damage_percent, BRUTE, affecting, armor_block, armor_soak, sharp = a_sharp, edge = a_edge)
 	updatehealth()
 	return 1
 

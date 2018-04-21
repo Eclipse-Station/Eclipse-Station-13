@@ -56,6 +56,7 @@
 	var/fire_delay = 6 	//delay after shooting before the gun can be used again
 	var/burst_delay = 2	//delay between shots, if firing in bursts
 	var/move_delay = 1
+	var/sound_override = 0 //aeiou edit
 	var/fire_sound = 'sound/weapons/Gunshot.ogg'
 	var/fire_sound_text = "gunshot"
 	var/fire_anim = null
@@ -71,9 +72,11 @@
 
 	var/wielded_item_state
 	var/one_handed_penalty = 0 // Penalty applied if someone fires a two-handed gun with one hand.
+	var/recoil_m = 1 //micros getting fucked
 	var/obj/screen/auto_target/auto_target
 	var/shooting = 0
 	var/next_fire_time = 0
+	var/unfolded_stock = 0
 
 	var/sel_mode = 1 //index of the currently selected mode
 	var/list/firemodes = list()
@@ -196,6 +199,28 @@
 	if(HULK in M.mutations)
 		M << "<span class='danger'>Your fingers are much too large for the trigger guard!</span>"
 		return 0
+
+	if((M.size_multiplier >= 1.5) && prob(M.size_multiplier*30) && src.recoil_m != 2) //Macro handling
+		M << "<span class='danger'>Your large fingers struggle to get past the trigger guard!</span>"
+		return 0
+
+	if((M.size_multiplier <= 0.5) && prob(10/M.size_multiplier) && src.recoil_m == 1) //Micro handling projectile
+		M.adjustHalLoss(25)
+		M.adjustBruteLoss(15)
+		M.Move(get_step(M,rand(1,8)), rand(1,8))
+		M << "<span class='danger'>You gets hurt and thrown by recoil!</span>"
+		return 1
+
+	if((M.size_multiplier <= 0.5) && prob(12/M.size_multiplier) && src.recoil_m == 0) //Micro handling energy
+		if (prob(50))
+			M.adjustHalLoss(20)
+			M.adjustFireLoss(12)
+			M << "<span class='danger'>The heat, radiating from the [src] is too intense! It burns [user]'s hand!</span>"
+		else
+			M << "<span class='danger'>The [src] vibrates too hard for [user] to handle and they drop it!</span>"
+			M.drop_item()
+		return 1
+
 	if((CLUMSY in M.mutations) && prob(40)) //Clumsy handling
 		var/obj/P = consume_next_projectile()
 		if(P)
@@ -231,7 +256,7 @@
 		return
 
 	else
-		Fire(A, user, params) //Otherwise, fire normally.
+		Fire(A,user,params) //Otherwise, fire normally.
 		return
 
 /*	//Commented out for quality control and testing
@@ -548,15 +573,15 @@
 				"<span class='reflex_shoot'>You fire \the [src] by reflex!</span>",
 				"You hear a [fire_sound_text]!"
 			)
-		else
-			user.visible_message(
+	else
+		user.visible_message(
 				"<span class='danger'>\The [user] fires \the [src][pointblank ? " point blank at \the [target]":""]!</span>",
 				"<span class='warning'>You fire \the [src]!</span>",
-				"You hear a [fire_sound_text]!"
-				)
+			"You hear a [fire_sound_text]!"
+		)
 
-	if(muzzle_flash)
-		set_light(muzzle_flash)
+		if(muzzle_flash)
+			set_light(muzzle_flash)
 
 	if(one_handed_penalty)
 		if(!src.is_held_twohanded(user))
@@ -678,11 +703,11 @@
 
 
 /obj/item/weapon/gun/proc/play_fire_sound(var/mob/user, var/obj/item/projectile/P)
-	var/shot_sound = (istype(P) && P.fire_sound)? P.fire_sound : fire_sound
-	if(silenced)
-		playsound(user, shot_sound, 10, 1)
-	else
-		playsound(user, shot_sound, 50, 1)
+    var/shot_sound = (istype(P) && P.fire_sound && !sound_override)? P.fire_sound : fire_sound
+    if(silenced)
+        playsound(user, shot_sound, 10, 1)
+    else
+        playsound(user, shot_sound, 50, 1)
 
 //Suicide handling.
 /obj/item/weapon/gun/var/mouthshoot = 0 //To stop people from suiciding twice... >.>

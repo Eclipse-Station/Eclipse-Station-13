@@ -109,3 +109,16 @@
 	desc = "Makes your nice clawed, scaled, hooved, armored, or otherwise just awfully calloused feet immune to glass shards."
 	cost = 1
 	var_changes = list("flags" = NO_MINOR_CUT) //Checked the flag is only used by shard stepping.
+
+
+/datum/trait/fit
+	name = "Fit"
+	desc = "Your natural fitness and/or your physical training give you an advantage in close quarters combat."
+	cost = 2
+	var_changes = list(outgoing_melee_damage_percent = 1.2)
+
+/datum/trait/strong
+	name = "Strong"
+	desc = "Your extremely high physical strength vastly impoves your capabilities in close quarters combat."
+	cost = 3
+	var_changes = list(outgoing_melee_damage_percent = 1.4)

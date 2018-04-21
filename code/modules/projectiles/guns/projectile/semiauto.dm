@@ -19,3 +19,18 @@
 		icon_state = initial(icon_state)
 	else
 		icon_state = "[initial(icon_state)]-e"
+
+/obj/item/weapon/gun/projectile/sks
+	name = "\improper SKS"
+	desc = "This is the vintage semi-automatic rifle that famously helped win the second World War. What the hell it's doing aboard a space station in the 26th century, you can only imagine. Uses 7.62mm rounds."
+	icon_state = "sks"
+	item_state = "boltaction"
+	w_class = ITEMSIZE_LARGE
+	caliber = "7.62mm"
+	max_shells = 10
+	origin_tech = list(TECH_COMBAT = 2, TECH_MATERIAL = 2)
+	slot_flags = SLOT_BACK
+	fire_sound = 'sound/weapons/svd_shot.ogg'
+	load_method = SINGLE_CASING|SPEEDLOADER
+	ammo_type = /obj/item/ammo_casing/a762
+

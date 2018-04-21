@@ -75,6 +75,37 @@
 	item_state_slots = list(slot_r_hand_str = "gas", slot_l_hand_str = "gas")
 	armor = list(melee = 10, bullet = 5, laser = 5,energy = 5, bomb = 0, bio = 50, rad = 0)
 	siemens_coefficient = 0.9
+	item_flags = AIRTIGHT|FLEXIBLEMATERIAL
+	var/hanging = 0
+	action_button_name = "Adjust Breath Mask"
+
+/obj/item/clothing/mask/gas/explorer/proc/adjust_mask(mob/user)
+	if(user.canmove && !user.stat)
+		src.hanging = !src.hanging
+		if (src.hanging)
+			gas_transfer_coefficient = 1
+			body_parts_covered = body_parts_covered & ~FACE
+			item_flags = item_flags & ~AIRTIGHT
+			icon_state = "explorerdown"
+			user << "Your mask is now hanging on your neck."
+		else
+			gas_transfer_coefficient = initial(gas_transfer_coefficient)
+			body_parts_covered = initial(body_parts_covered)
+			item_flags = initial(item_flags)
+			icon_state = initial(icon_state)
+			user << "You pull the mask up to cover your face."
+		update_clothing_icon()
+
+/obj/item/clothing/mask/gas/explorer/attack_self(mob/user)
+	adjust_mask(user)
+
+/obj/item/clothing/mask/gas/explorer/verb/toggle()
+		set category = "Object"
+		set name = "Adjust mask"
+		set src in usr
+
+		adjust_mask(usr)
+
 
 /obj/item/clothing/mask/gas/clown_hat
 	name = "clown wig and mask"
