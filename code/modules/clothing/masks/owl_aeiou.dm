@@ -1,7 +1,7 @@
 /obj/item/clothing/mask/gas/owl_aeiou //SPECIAL THANKS to Cameron653 for all the help! -lbnesquik
 	name = "Owl mask"
 	desc = "Twoooo! It seems to house some electronics near the mouth."
-	icon_state = "owl1"
+	icon_state = "owl"
 	body_parts_covered = FACE|EYES
 	flags_inv = "HIDEEARS|HIDEEYES|HIDEFACE"
 	var/owl_voice_enabled = 0

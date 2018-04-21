@@ -1,7 +1,7 @@
 /obj/item/clothing/mask/gas/owl_griffin //SPECIAL THANKS to Cameron653 for all the help! -lbnesquik
 	name = "Griffin mask"
 	desc = "Twoooo! This griffon shaped mask is the iconic one from the griffin criminal mastermind! It seems to house some electronics."
-	icon_state = "griffin"
+	icon_state = "owl1"
 	body_parts_covered = FACE|EYES
 	flags_inv = "HIDEEARS|HIDEEYES|HIDEFACE"
 	var/owl_voice_enabled = 0
