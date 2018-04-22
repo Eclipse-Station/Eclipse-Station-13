@@ -291,7 +291,7 @@
 			radiation -= 4 * RADIATION_SPEED_COEFFICIENT
 
 		if(damage)
-			damage *= species.radiation_mod
+			damage *= isSynthetic() ? 0.5 : species.radiation_mod
 			adjustToxLoss(damage * RADIATION_SPEED_COEFFICIENT)
 			updatehealth()
 			if(!isSynthetic() && organs.len)
@@ -1374,11 +1374,6 @@
 
 	// Puke if toxloss is too high
 	if(!stat)
-		if (getToxLoss() >= 30 && isSynthetic())
-			if(!confused)
-				if(prob(5))
-					to_chat(src, "<span class='danger'>You lose directional control!</span>")
-					Confuse(10)
 		if (getToxLoss() >= 45)
 			spawn vomit()
 

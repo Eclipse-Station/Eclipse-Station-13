@@ -80,6 +80,12 @@
 	icon_state = "hop"
 	rolled_sleeves = 0
 
+/obj/item/clothing/under/rank/head_of_personnel_dress
+	desc = "It's a jumpsuit worn by someone who works in the position of \"Head of Personnel\"."
+	name = "head of personnel's jumpsuit"
+	icon_state = "dress_hop_s"
+	rolled_sleeves = 0
+
 /obj/item/clothing/under/rank/head_of_personnel_whimsy
 	desc = "A blue jacket and red tie, with matching red cuffs! Snazzy. Wearing this makes you feel more important than your job title does."
 	name = "head of personnel's suit"

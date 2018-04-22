@@ -54,6 +54,17 @@ var/list/flooring_types
 	flags = TURF_HAS_EDGES | TURF_REMOVE_SHOVEL
 	build_type = /obj/item/stack/tile/grass
 
+
+
+
+/decl/flooring/offloor
+	name = "Plastic floor"
+	desc = "You suddenly feel very pure and vebose."
+	icon = 'icons/48x48/OFF.dmi'
+	icon_base = "offloor"
+	has_base_range = 3
+	build_type = null
+
 /decl/flooring/asteroid
 	name = "coarse sand"
 	desc = "Gritty and unpleasant."

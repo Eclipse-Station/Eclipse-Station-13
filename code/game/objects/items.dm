@@ -533,6 +533,14 @@ var/list/global/slot_flags_enumeration = list(
 	M.eye_blurry += rand(3,4)
 	return
 
+
+/obj/item/Move()//timestop test
+	while(paused)
+		sleep(1)
+	return ..()
+
+
+
 /obj/item/clean_blood()
 	. = ..()
 	if(blood_overlay)

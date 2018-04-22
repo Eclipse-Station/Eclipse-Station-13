@@ -2245,3 +2245,25 @@
 	result = "qerr_quem"
 	required_reagents = list("nicotine" = 1, "carbon" = 1, "sugar" = 2)
 	result_amount = 4
+
+
+/datum/chemical_reaction/cakobots
+	name = "Cak-o-bots"
+	id = "cakobots"
+	result = "cakobots"
+	required_reagents = list("dormantnanobots" = 40, "phoron" = 10, "uranium" = 10, "gold" = 10)
+	result_amount = 5
+
+
+/datum/chemical_reaction/food/cak
+	name = "Cak!"
+	id = "cak"
+	result = null
+	required_reagents = list("milk" = 20, "sugar" = 30, "cakobots" = 10)
+	result_amount = 1
+
+/datum/chemical_reaction/food/cak/on_reaction(var/datum/reagents/holder, var/created_volume)
+	var/location = get_turf(holder.my_atom)
+	for(var/i = 1, i <= created_volume, i++)
+		new /mob/living/simple_animal/cat/cak(location)
+	return

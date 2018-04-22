@@ -1,6 +1,24 @@
 // Gives various spooky messages to people afraid of a specific thing.
 // Doesn't have any real mechanical effect, and is more of an aid to remind someone "You're supposed to be afraid of the dark", and such.
 
+
+/* PHOBIAS
+ * Contains:
+ * 		Haemophobia - blood
+ *		Arachnophobia - Spiders
+ *		Claustrophobia - Tight spaces
+ *		Blennophobia - Slimes
+ *		Trypanophobia - Syringues
+ *		Xenophobia - Fear of others
+ */
+
+/*##################################################################
+##################### PHOBIAS BE HERE~ :3 ########
+####################################################################*/
+
+
+
+
 /datum/modifier/trait/phobia
 	var/current_fear = 0					// Counter for how 'afraid' the holder is.
 	var/max_fear = 100						// Cap for current_fear.

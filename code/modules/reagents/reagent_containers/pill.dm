@@ -123,6 +123,15 @@
 	reagents.add_reagent("cyanide", 50)
 
 
+/obj/item/weapon/reagent_containers/pill/cak
+	name = "Cak-o-bots pill"
+	desc = "Don't swallow this." //this is cooler without "contains 50u cyanide"
+	icon_state = "pill5"
+
+/obj/item/weapon/reagent_containers/pill/cak/New()
+	..()
+	reagents.add_reagent("cakobots", 50)
+
 /obj/item/weapon/reagent_containers/pill/adminordrazine
 	name = "Adminordrazine pill"
 	desc = "It's magic. We don't have to explain it." //it's space magic you don't need the quantity

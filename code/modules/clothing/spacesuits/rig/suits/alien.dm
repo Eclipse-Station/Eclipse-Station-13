@@ -118,6 +118,12 @@
 
 	cell_type =  /obj/item/weapon/cell/hyper
 
+	helm_type = /obj/item/clothing/head/helmet/space/rig/vox
+	boot_type = /obj/item/clothing/shoes/magboots/rig/vox
+	chest_type = /obj/item/clothing/suit/space/rig/vox
+	glove_type = /obj/item/clothing/gloves/gauntlets/rig/vox
+
+
 	initial_modules = list(
 		/obj/item/rig_module/stealth_field,
 		/obj/item/rig_module/electrowarfare_suite,

@@ -83,6 +83,16 @@
 	icon_state = "slag"
 	material = null
 
+/obj/item/weapon/ore/laniusded
+	name = "Carnifex remains"
+	desc = "Someone screwed up..."
+	icon_state = "ore_platinum"
+	material = null
+
+
+
+
+
 /obj/item/weapon/ore/New()
 	pixel_x = rand(0,16)-8
 	pixel_y = rand(0,8)-8
@@ -93,3 +103,22 @@
 		C.sample_item(src, user)
 	else
 		return ..()
+
+
+
+/obj/item/weapon/ore/laniusded/New()
+	var/loot = rand(2, 5)
+	var/ores = 0
+	var/i
+	for(i=1; i<=loot; i++)
+		ores = rand(0, 8)
+		switch 	(ores)
+			if(1) new /obj/item/weapon/ore/iron(loc)
+			if(2) new /obj/item/weapon/ore/phoron(loc)
+			if(3) new /obj/item/weapon/ore/silver(loc)
+			if(4) new /obj/item/weapon/ore/uranium(loc)
+			if(5) new /obj/item/weapon/ore/gold(loc)
+			if(6) new /obj/item/weapon/ore/diamond(loc)
+			if(7) new /obj/item/weapon/ore/osmium(loc)
+			if(8) new /obj/item/weapon/ore/hydrogen(loc)
+			else new /obj/item/nuke_core/supermatter_sliver(loc)

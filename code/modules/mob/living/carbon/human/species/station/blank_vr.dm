@@ -5,6 +5,8 @@
 	var/metabolism = 0.0015
 	var/lightweight = 0 //Oof! Nonhelpful bump stumbles.
 	var/trashcan = 0 //It's always sunny in the wrestling ring.
+	var/italian = 0 //MAMA MIA
+	var/outgoing_melee_damage_percent = 1 //hit harder. Or try to.
 
 /datum/species/custom
 	name = SPECIES_CUSTOM

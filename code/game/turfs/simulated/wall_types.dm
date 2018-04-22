@@ -103,6 +103,13 @@
 	icon_state = "dark"
 	base_state = "dark"
 
+
+/turf/simulated/shuttle/wall/OFF
+	icon = 'icons/48x48/OFF.dmi'
+	desc = "You could go for some Moloch meat right now. Wait, what?"
+	icon_state = "wall0"
+
+
 /turf/simulated/shuttle/wall/dark/hard_corner
 	name = "hardcorner wall"
 	icon_state = "dark-hc"

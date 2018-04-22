@@ -36,6 +36,11 @@
 	uniform = /obj/item/clothing/under/rank/medical/scrubs
 	head = /obj/item/clothing/head/surgery/blue
 
+/decl/hierarchy/outfit/job/medical/doctor/coroner
+	name = OUTFIT_JOB_NAME("Coroner")
+	uniform = /obj/item/clothing/under/rank/medical/scrubs
+	head = /obj/item/clothing/head/surgery/blue
+
 /decl/hierarchy/outfit/job/medical/doctor/virologist
 	name = OUTFIT_JOB_NAME("Virologist")
 	uniform = /obj/item/clothing/under/rank/virologist

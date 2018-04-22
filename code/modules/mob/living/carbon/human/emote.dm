@@ -1,6 +1,6 @@
 /mob/living/carbon/human/emote(var/act,var/m_type=1,var/message = null)
 	var/param = null
-	
+
 	var/datum/gender/T = gender_datums[get_visible_gender()]
 
 	if (findtext(act, "-", 1, null))
@@ -95,6 +95,10 @@
 
 		if ("blink_r")
 			message = "blinks rapidly."
+			m_type = 1
+
+		if ("gnarl")
+			message = "gnarls and shows their teeth..."
 			m_type = 1
 
 		if ("bow")
@@ -712,14 +716,14 @@
 		if("whistle" || "whistles")
 			if(!muzzled)
 				message = "whistles a tune."
-				playsound(loc, 'sound/misc/longwhistle.ogg') //praying this doesn't get abused
+				playsound(loc, 'sound/misc/longwhistle.ogg',50, 1, -3) //praying this doesn't get abused
 			else
 				message = "makes a light spitting noise, a poor attempt at a whistle."
 
 		if("qwhistle")
 			if(!muzzled)
 				message = "whistles quietly."
-				playsound(loc, 'sound/misc/shortwhistle.ogg')
+				playsound(loc, 'sound/misc/shortwhistle.ogg',50, 1, -3)
 			else
 				message = "makes a light spitting noise, a poor attempt at a whistle."
 
@@ -727,7 +731,7 @@
 			src << "blink, blink_r, blush, bow-(none)/mob, burp, choke, chuckle, clap, collapse, cough, cry, custom, deathgasp, drool, eyebrow, fastsway/qwag, \
 					frown, gasp, giggle, glare-(none)/mob, grin, groan, grumble, handshake, hug-(none)/mob, laugh, look-(none)/mob, moan, mumble, nod, pale, point-atom, \
 					raise, salute, scream, sneeze, shake, shiver, shrug, sigh, signal-#1-10, slap-(none)/mob, smile, sneeze, sniff, snore, stare-(none)/mob, stopsway/swag, sway/wag, swish, tremble, twitch, \
-					twitch_v, vomit, whimper, wink, yawn. Synthetics: beep, buzz, yes, no, rcough, rsneeze, ping"
+					twitch_v, vomit, whimper, whistle, qwhistle, wink, yawn. Synthetics: beep, buzz, yes, no, rcough, rsneeze, ping"
 
 		else
 			src << "<font color='blue'>Unusable emote '[act]'. Say *help for a list.</font>"
@@ -739,7 +743,7 @@
 	set name = "Set Pose"
 	set desc = "Sets a description which will be shown when someone examines you."
 	set category = "IC"
-	
+
 	var/datum/gender/T = gender_datums[get_visible_gender()]
 
 	pose =  sanitize(input(usr, "This is [src]. [T.he]...", "Pose", null)  as text)

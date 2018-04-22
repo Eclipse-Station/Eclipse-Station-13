@@ -73,6 +73,7 @@
 	var/slurring = null		//Carbon
 	var/real_name = null
 	var/nickname = null
+	var/italian = null
 	var/flavor_text = ""
 	var/med_record = ""
 	var/sec_record = ""

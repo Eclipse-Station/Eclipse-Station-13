@@ -26,6 +26,16 @@
 	var_changes = list("heat_discomfort_level" = T0C+19)
 	excludes = list(/datum/trait/hot_discomfort)
 
+
+/datum/trait/italian
+	name = "Italian"
+	desc = "Mama mia!"
+	cost = 0
+	var_changes = list("italian" = 1)
+	apply(var/datum/species/S,var/mob/living/carbon/human/H)
+		..(S,H)
+		H.italian = 1
+
 /datum/trait/hot_discomfort
 	name = "Cold-Blooded"
 	desc = "You are too cold at the standard 20C. 22C is more suitable. Wearing clothing that covers your legs and torso helps."

@@ -20,7 +20,7 @@
 	var/recharge_time = 4
 	var/charge_tick = 0
 	var/charge_delay = 75	//delay between firing and charging
-
+	recoil_m = 0 //micros getting fucked
 	var/battery_lock = 0	//If set, weapon cannot switch batteries
 
 /obj/item/weapon/gun/energy/attackby(var/obj/item/A as obj, mob/user as mob)

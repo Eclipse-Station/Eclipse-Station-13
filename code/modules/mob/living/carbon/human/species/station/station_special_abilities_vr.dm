@@ -650,7 +650,7 @@
 		var/list/choices = list()
 		for(var/mob/living/carbon/human/M in oviewers(1))
 			choices += M
-		
+
 		if(!choices.len)
 			to_chat(src,"<span class='warning'>There's nobody nearby to use this on.</span>")
 
@@ -698,7 +698,7 @@
 		if(can_shred(T) != T)
 			to_chat(src,"<span class='warning'>Looks like you lost your chance...</span>")
 			return
-		
+
 		//Removing an internal organ
 		if(T_int && T_int.damage >= 25) //Internal organ and it's been severely damaged
 			T.apply_damage(15, BRUTE, T_ext) //Damage the external organ they're going through.
@@ -713,7 +713,7 @@
 		//Removing an external organ
 		else if(!T_int && (T_ext.damage >= 25 || T_ext.brute_dam >= 25))
 			T_ext.droplimb(1,DROPLIMB_EDGE) //Clean cut so it doesn't kill the prey completely.
-			
+
 			//Is it groin/chest? You can't remove those.
 			if(T_ext.cannot_amputate)
 				T.apply_damage(25, BRUTE, T_ext)
@@ -726,12 +726,12 @@
 				visible_message("<span class='warning'>[src] tears off [T]'s [T_ext.name]!</span>","<span class='warning'>You tear off [T]'s [T_ext.name]!</span>")
 
 		//Not targeting an internal organ w/ > 25 damage , and the limb doesn't have < 25 damage.
-		else 
+		else
 			if(T_int)
 				T_int.damage = 25 //Internal organs can only take damage, not brute damage.
 			T.apply_damage(25, BRUTE, T_ext)
 			visible_message("<span class='danger'>[src] severely damages [T]'s [T_ext.name]!</span>")
-		
+
 		add_attack_logs(src,T,"Shredded (hardvore)")
 
 /mob/living/proc/flying_toggle()
@@ -796,3 +796,144 @@
 	set category = "Abilities"
 	pass_flags ^= PASSTABLE //I dunno what this fancy ^= is but Aronai gave it to me.
 	to_chat(src, "You [pass_flags&PASSTABLE ? "will" : "will NOT"] move over tables/railings/trays!")
+
+
+
+
+
+
+/mob/living/carbon/human/proc/nomnom()
+	set src in oview(1)
+	var/mob/living/carbon/human/C = usr
+
+	set name = "Take a bite"
+	set desc = "You want to bite a cak?"
+	set category = "cak"
+	if(!istype(C) || C.stat) return
+	if((last_spit + 1 SECONDS) > world.time) //To prevent YATATATATATAT eating.
+		return
+	else if(src.get_species() == "Pastrian")
+		last_spit = world.time
+		if(do_after(C, 10, src))
+			visible_message("<font color='red'><B>[C] takes a bite out of [src]!</B></font> They taste rather like [src.get_taste_message()].")
+			C.nutrition += 35
+			C.reagents.add_reagent("protein", 5)
+			src.adjustBruteLoss(12)
+	sleep(15)
+
+
+/mob/living/carbon/human/proc/cromch()
+	set name = "Eat food"
+	set category = "Abilities"
+	var/usesound = 'sound/effects/roboteat.ogg'
+	var/mob/living/carbon/human/C = usr
+	var/obj/item/eating = get_active_hand()
+	if((last_spit + 2 SECONDS) > world.time)
+		return //To prevent YATATATATATAT eating.
+	if(C.head)
+		C << "Your headwear is in the way."
+		return
+	if(!eating)
+		C << "There is nothing to consume."
+		return
+	if(!eating.matter)
+		C << "\The [eating] does not contain significant amounts of edible materials and cannot be consumed."
+		return
+	sleep(3)
+	last_spit = world.time
+	for(var/material in eating.matter)
+		var/total_material = eating.matter[material]
+			//If it's a stack, we eat multiple sheets.
+		if(istype(eating,/obj/item/stack))
+			var/obj/item/stack/stack = eating
+			total_material *= stack.get_amount()
+		C.nutrition += (total_material/50)
+
+	visible_message("<font color='red'><B>[C] starts consuming [eating].</font></B>")
+	if(do_after(C, 10, src))
+		C << "You eat the [eating]."
+		playsound(C, usesound, 70, 1)
+		qdel(eating)
+		visible_message("<font color='red'><B>[C] consumes [eating]!</font></B>")
+		sleep(3)
+
+	//should've just used a single var, oh well
+
+/mob/living/carbon/human/proc/lanius_produce()
+	set name = "Produce materials"
+	set category = "Abilities"
+	set desc = "You prepare to produce raw materials with your body."
+	var/mob/living/carbon/human/C = src
+	var/list/items = list(1, 5, 10, 20)
+	var/list/choices = list("Steel sheets", "Glass sheets")
+	var/obj/P = input(C,"What do you want to produce?") as null|anything in choices
+	if(!P || !src || src.stat) return
+	if (P == "Steel sheets")
+		var/amount = input(C,"How many?") as null|anything in items
+		var/obj/item/stack/stack = new /obj/item/stack/material/steel(loc)
+		stack.amount = amount
+		for(var/material in stack.matter)
+			var/total_material = stack.matter[material]
+			total_material *= amount
+			if (C.nutrition < total_material/30 + 60)
+				C << "You're too hungry for that."
+				return
+			else
+				visible_message("<font color='red'><B>[C] produces some steel sheets!</font></B>")
+				C.nutrition -= (total_material/20)
+	else
+		var/amount = input(C,"How many?") as null|anything in items
+
+		var/obj/item/stack/stack = new /obj/item/stack/material/glass(loc)
+		stack.amount = amount
+		for(var/material in stack.matter)
+			var/total_material = stack.matter[material]
+			total_material *= amount
+			if (C.nutrition < total_material/20 + 60)
+				C << "You're too hungry for that."
+				return
+			else
+				visible_message("<font color='red'><B>[C] produces some glass sheets!</font></B>")
+				C.nutrition -= (total_material/15)
+
+
+/mob/living/carbon/human/proc/xylobone()
+	set name = "Play xylobones"
+	set category = "Abilities"
+	set desc = "RATTLE ME BONES."
+	var/mob/living/carbon/human/C = src
+	if(!C.xylophone)
+		var/datum/gender/T = gender_datums[get_visible_gender()]
+		visible_message("<font color='red'>\The [C] begins playing [T.his] ribcage like a xylophone. It's quite spooky.</font>","<font color='blue'>You begin to play a spooky refrain on your ribcage.</font>","<font color='red'>You hear a spooky xylophone melody.</font>")
+		var/song = pick('sound/effects/xylophone1.ogg','sound/effects/xylophone2.ogg','sound/effects/xylophone3.ogg')
+		playsound(loc, song, 50, 1, -1)
+		C.xylophone = 1
+		spawn(250)
+			C.xylophone=0
+	return
+
+
+/mob/living/carbon/human/proc/setfont()
+	var/mob/living/carbon/human/C = src
+	set name = "Set rattling font"
+	set category = "Abilities"
+	C.buildup = input("Chose you the font.","SAAAANS!") as null|anything in list("comic sans ms","papyrus", "bones")
+	C.buildup = "\"[C.buildup]\""
+
+/mob/living/carbon/human/proc/bonerattle()
+	var/mob/living/carbon/human/C = src
+	set name = "Rattle"
+	set category = "Abilities"
+	var/list/hearpeople = list()
+	var/list/searched = get_mobs_and_objs_in_view_fast(get_turf(C), world.view, 2)
+	hearpeople = searched["mobs"]
+
+	var/saying = sanitize(input(C, "What would you like to say in your SPOOOOKY voice?", "RATTLE ME BONES!", null)  as text)
+	if(saying)
+		saying = capitalize(saying)
+		for(var/mob/M in hearpeople)
+			spawn(1)
+				M.show_message("<span class='game say'><span class='name'>[C.name]</span><font face=[buildup]> rattles, \"[saying]\"</font></span>", 2)
+
+
+

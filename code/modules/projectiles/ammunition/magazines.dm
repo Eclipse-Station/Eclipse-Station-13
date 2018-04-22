@@ -210,6 +210,7 @@
 /obj/item/ammo_magazine/m9mm/large/preban // Sold by traders.
 	desc = "A large capacity magazine that was built before the SolGov Assault Weapons Ban, so it's legal to own."
 
+
 /obj/item/ammo_magazine/m9mm/empty
 	initial_ammo = 0
 
@@ -324,6 +325,21 @@
 
 /obj/item/ammo_magazine/box/c9mm/empty
 	initial_ammo = 0
+
+/obj/item/ammo_magazine/m9mmR/saber
+	desc = "A very high capacity double stack magazine made specially for the SABER SMG. Filled with 22 bullets."
+	icon_state = "SABER-1"
+	mag_type = MAGAZINE
+	ammo_type = /obj/item/ammo_casing/a9mm
+	matter = list(DEFAULT_WALL_MATERIAL = 1200)
+	caliber = "9mm"
+	max_ammo = 22
+	origin_tech = list(TECH_COMBAT = 2, TECH_ILLEGAL = 1)
+	multiple_sprites = 1
+
+/obj/item/ammo_magazine/m9mmR/saber/empty
+	initial_ammo = 0
+
 
 ///////// 10mm /////////
 
@@ -562,6 +578,19 @@
 	ammo_type = /obj/item/ammo_casing/a762/ap
 
 /obj/item/ammo_magazine/m762/empty
+	initial_ammo = 0
+
+/obj/item/ammo_magazine/m762AK
+	name = "AK magazine (7.62mm)"
+	icon_state = "m545"
+	mag_type = MAGAZINE
+	caliber = "7.62mm"
+	matter = list(DEFAULT_WALL_MATERIAL = 4000)
+	ammo_type = /obj/item/ammo_casing/a762
+	max_ammo = 30
+	multiple_sprites = 1
+
+/obj/item/ammo_magazine/m762AK/empty
 	initial_ammo = 0
 
 /obj/item/ammo_magazine/clip/c762

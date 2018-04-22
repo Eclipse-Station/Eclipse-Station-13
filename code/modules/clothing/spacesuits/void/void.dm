@@ -213,7 +213,7 @@
 	if(istype(W,/obj/item/clothing/accessory) || istype(W, /obj/item/weapon/hand_labeler))
 		return ..()
 
-	if(istype(src.loc,/mob/living))
+	if(istype(src.loc,/mob/living) && !(user.get_inventory_slot(src) in list(slot_l_hand, slot_r_hand)))
 		user << "<span class='warning'>You cannot modify \the [src] while it is being worn.</span>"
 		return
 

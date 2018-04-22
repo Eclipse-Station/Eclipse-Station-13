@@ -18,6 +18,7 @@
 	anchored = 1 //There's a reason this is here, Mport. God fucking damn it -Agouri. Find&Fix by Pete. The reason this is here is to stop the curving of emitter shots.
 	pass_flags = PASSTABLE
 	mouse_opacity = 0
+//	var/paused = FALSE
 	var/bumped = 0		//Prevents it from hitting more than one guy at once
 	var/def_zone = ""	//Aiming at
 	var/mob/firer = null//Who shot it
@@ -97,6 +98,11 @@
 			T.hotspot_expose(700, 5)
 	return
 
+/*
+/obj/item/projectile/Move()
+	if(!paused)
+		..()*/
+
 //Checks if the projectile is eligible for embedding. Not that it necessarily will.
 /obj/item/projectile/proc/can_embed()
 	//embed must be enabled and damage type must be brute
@@ -154,6 +160,15 @@
 		process()
 
 	return 0
+/*
+/obj/item/projectile/Move()
+	for(var/obj/effect/timestop/D in range(1, src)) //may be laggy
+		if (D)
+			paused = 1
+			while(paused)
+				sleep(1)
+	..()*/
+
 
 //called to launch a projectile from a gun
 /obj/item/projectile/proc/launch_from_gun(atom/target, mob/user, obj/item/weapon/gun/launcher, var/target_zone, var/x_offset=0, var/y_offset=0)
@@ -296,54 +311,62 @@
 	return 1
 
 /obj/item/projectile/process()
-	var/first_step = 1
+	if(!paused)
+		for(var/obj/effect/timestop/D in range(2, src)) //may be laggy
+			if (D)
+				paused = 1
+		if(!paused)
+			var/first_step = 1
 
-	spawn while(src && src.loc)
-		if(kill_count-- < 1)
-			on_impact(src.loc) //for any final impact behaviours
-			qdel(src)
-			return
-		if((!( current ) || loc == current))
-			current = locate(min(max(x + xo, 1), world.maxx), min(max(y + yo, 1), world.maxy), z)
-		if((x == 1 || x == world.maxx || y == 1 || y == world.maxy))
-			qdel(src)
-			return
+			spawn while(src && src.loc)
+				if(kill_count-- < 1)
+					on_impact(src.loc) //for any final impact behaviours
+					qdel(src)
+					return
+				if((!( current ) || loc == current))
+					current = locate(min(max(x + xo, 1), world.maxx), min(max(y + yo, 1), world.maxy), z)
+				if((x == 1 || x == world.maxx || y == 1 || y == world.maxy))
+					qdel(src)
+					return
 
-		trajectory.increment()	// increment the current location
-		location = trajectory.return_location(location)		// update the locally stored location data
-		update_light() //energy projectiles will look glowy and fun
+				trajectory.increment()	// increment the current location
+				location = trajectory.return_location(location)		// update the locally stored location data
+				update_light() //energy projectiles will look glowy and fun
 
-		if(!location)
-			qdel(src)	// if it's left the world... kill it
-			return
+				if(!location && !paused)
+					qdel(src)	// if it's left the world... kill it
+					return
 
-		if (is_below_sound_pressure(get_turf(src)) && !vacuum_traversal) //Deletes projectiles that aren't supposed to bein vacuum if they leave pressurised areas
-			qdel(src)
-			return
+				if (is_below_sound_pressure(get_turf(src)) && !vacuum_traversal) //Deletes projectiles that aren't supposed to bein vacuum if they leave pressurised areas
+					qdel(src)
+					return
 
-		before_move()
-		Move(location.return_turf())
+				before_move()
+				Move(location.return_turf())
 
-		if(!bumped && !isturf(original))
-			if(loc == get_turf(original))
-				if(!(original in permutated))
-					if(Bump(original))
-						return
+				if(!bumped && !isturf(original))
+					if(loc == get_turf(original))
+						if(!(original in permutated))
+							if(Bump(original))
+								return
 
-		if(first_step)
-			muzzle_effect(effect_transform)
-			first_step = 0
-		else if(!bumped)
-			tracer_effect(effect_transform)
+				if(first_step)
+					muzzle_effect(effect_transform)
+					first_step = 0
+				else if(!bumped)
+					tracer_effect(effect_transform)
+				else if (paused)//timestop test
+					tracer_effect(effect_transform)
+					first_step = 0
 
-		if(incendiary >= 2) //This should cover the bases of 'Why is there fuel here?' in a much cleaner way than previous.
-			if(src && src.loc) //Safety.
-				if(!src.loc.density)
-					var/trail_volume = (flammability * 0.20)
-					new /obj/effect/decal/cleanable/liquid_fuel/flamethrower_fuel(src.loc, trail_volume, src.dir)
+				if(incendiary >= 2) //This should cover the bases of 'Why is there fuel here?' in a much cleaner way than previous.
+					if(src && src.loc) //Safety.
+						if(!src.loc.density)
+							var/trail_volume = (flammability * 0.20)
+							new /obj/effect/decal/cleanable/liquid_fuel/flamethrower_fuel(src.loc, trail_volume, src.dir)
 
-		if(!hitscan)
-			sleep(step_delay)	//add delay between movement iterations if it's not a hitscan weapon
+				if(!hitscan)
+					sleep(step_delay)	//add delay between movement iterations if it's not a hitscan weapon
 
 /obj/item/projectile/proc/before_move()
 	return
@@ -453,24 +476,29 @@
 	return process(targloc)
 
 /obj/item/projectile/test/process(var/turf/targloc)
-	while(src) //Loop on through!
-		if(result)
-			return (result - 1)
-		if((!( targloc ) || loc == targloc))
-			targloc = locate(min(max(x + xo, 1), world.maxx), min(max(y + yo, 1), world.maxy), z) //Finding the target turf at map edge
+	if(!paused)
+		while(src) //Loop on through!
+/*		for(var/obj/effect/timestop/D in range(2, src)) //may be laggy
+			if (D)
+				paused = 1*/
+			if(!paused)
+				if(result)
+					return (result - 1)
+				if((!( targloc ) || loc == targloc))
+					targloc = locate(min(max(x + xo, 1), world.maxx), min(max(y + yo, 1), world.maxy), z) //Finding the target turf at map edge
 
-		trajectory.increment()	// increment the current location
-		location = trajectory.return_location(location)		// update the locally stored location data
+				trajectory.increment()	// increment the current location
+				location = trajectory.return_location(location)		// update the locally stored location data
 
-		Move(location.return_turf())
+				Move(location.return_turf())
 
-		var/mob/living/M = locate() in get_turf(src)
-		if(istype(M)) //If there is someting living...
-			return 1 //Return 1
-		else
-			M = locate() in get_step(src,targloc)
-			if(istype(M))
-				return 1
+				var/mob/living/M = locate() in get_turf(src)
+				if(istype(M)) //If there is someting living...
+					return 1 //Return 1
+				else
+					M = locate() in get_step(src,targloc)
+					if(istype(M))
+						return 1
 
 //Helper proc to check if you can hit them or not.
 /proc/check_trajectory(atom/target as mob|obj, atom/firer as mob|obj, var/pass_flags=PASSTABLE|PASSGLASS|PASSGRILLE, flags=null)

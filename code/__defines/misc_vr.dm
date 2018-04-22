@@ -18,7 +18,7 @@
 
 //For custom species
 #define STARTING_SPECIES_POINTS 1
-#define MAX_SPECIES_TRAITS 5
+#define MAX_SPECIES_TRAITS 6
 
 // Resleeving Mind Record Status
 #define MR_NORMAL 0

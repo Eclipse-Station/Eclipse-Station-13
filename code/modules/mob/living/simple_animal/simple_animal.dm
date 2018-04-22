@@ -795,6 +795,8 @@
 		var/mob/living/L = target_mob
 		if(L.stat != DEAD)
 			return 1
+		if(L.invisibility < INVISIBILITY_LEVEL_ONE)
+			return 1
 	if (istype(target_mob,/obj/mecha))
 		var/obj/mecha/M = target_mob
 		if (M.occupant)
@@ -913,6 +915,8 @@
 			if(L.faction == src.faction && !attack_same)
 				continue
 			else if(L in friends)
+				continue
+			else if(L.invisibility >= INVISIBILITY_LEVEL_ONE)
 				continue
 			else if(!SA_attackable(L))
 				continue
@@ -1241,7 +1245,7 @@
 		ai_log("AttackTarget() Bailing because we're disabled",2)
 		LoseTarget()
 		return 0
-	if(!target_mob || !SA_attackable(target_mob))
+	if(!target_mob || !SA_attackable(target_mob) || (target_mob.invisibility >= INVISIBILITY_LEVEL_ONE))
 		LoseTarget()
 		return 0
 	if(!(target_mob in ListTargets(view_range)))

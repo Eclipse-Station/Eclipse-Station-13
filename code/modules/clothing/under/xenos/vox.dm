@@ -18,6 +18,7 @@
 	icon_state = "vox-casual-2"
 	item_state = "vox-casual-2"
 
+
 //Vox Accessories
 /obj/item/clothing/accessory/storage/vox
 	name = "alien mesh"

@@ -19,7 +19,7 @@ obj/item/clothing/suit/web_bindings
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|FEET|ARMS|HANDS
 	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT|HIDETAIL
 
-/* //Commenting all this out, as people keep abusing it. Sorry!
+//Commenting all this out, as people keep abusing it. Sorry!
 mob/proc/weaveWeb()
 	set name = "Weave Web"
 	set category = "Species Powers"
@@ -30,7 +30,6 @@ mob/proc/weaveWeb()
 		new /obj/effect/spider/stickyweb(src.loc)
 	else
 		src << "You do not have enough nutrition to create webbing!"
-*/
 
 mob/proc/weaveWebBindings()
 	set name = "Weave Web Bindings"

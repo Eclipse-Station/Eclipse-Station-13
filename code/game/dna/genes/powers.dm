@@ -62,8 +62,7 @@
 		..(M)
 		M.verbs += /mob/living/carbon/human/proc/morph
 
-/* Not used on bay
-/datum/dna/gene/basic/heat_resist
+/*/datum/dna/gene/basic/heat_resist
 	name="Heat Resistance"
 	activation_messages=list("Your skin is icy to the touch.")
 	mutation=mHeatres
@@ -82,8 +81,8 @@
 			return 1
 
 	OnDrawUnderlays(var/mob/M,var/g,var/fat)
-		return "cold[fat]_s"
-*/
+		return "cold[fat]_s" */
+
 
 /datum/dna/gene/basic/cold_resist
 	name="Cold Resistance"

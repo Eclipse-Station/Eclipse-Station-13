@@ -202,6 +202,17 @@
 	projectile_energy_cost = 20
 	fire_cooldown = 2
 
+/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/silenced
+	name = "\improper S.H.H. \"Quietus\" Carbine"
+	desc = "A weapon for combat exosuits. A mime invention, field tests have shown that targets cannot even scream before going down."
+	fire_sound = 'sound/weapons/Gunshot_silenced.ogg'
+	icon_state = "mecha_mime"
+	equip_cooldown = 1
+	projectiles = 300
+	projectiles_per_shot = 3
+	projectile = /obj/item/projectile/bullet/pistol/medium
+	projectile_energy_cost = 50
+
 /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/missile_rack
 	var/missile_speed = 2
 	var/missile_range = 30

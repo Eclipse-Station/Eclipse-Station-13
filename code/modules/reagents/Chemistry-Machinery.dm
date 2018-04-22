@@ -305,6 +305,7 @@
 		/obj/item/stack/material/sandstone = list("silicon", "oxygen"),
 		/obj/item/stack/material/glass = list("silicon"),
 		/obj/item/stack/material/glass/phoronglass = list("platinum", "silicon", "silicon", "silicon"), //5 platinum, 15 silicon,
+		/obj/item/stack/nanopaste = list("dormantnanobots"),
 		)
 
 /obj/machinery/reagentgrinder/New()

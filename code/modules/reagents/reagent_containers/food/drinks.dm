@@ -311,3 +311,13 @@
 /obj/item/weapon/reagent_containers/food/drinks/britcup/on_reagent_change()
 	..()
 
+
+
+/obj/item/weapon/reagent_containers/food/drinks/papercup_scp
+	name = "paper cup"
+	desc = "Absolutely normal paper cup ."
+	icon_state = "coffee"
+	center_of_mass = list("x"=15, "y"=10)
+/obj/item/weapon/reagent_containers/food/drinks/papercup_scp/New()
+	..()
+//	reagents.add_reagent("ice", 30)

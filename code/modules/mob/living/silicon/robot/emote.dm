@@ -151,6 +151,23 @@
 			playsound(src.loc, 'sound/machines/twobeep.ogg', 50, 0)
 			m_type = 1
 
+		if("chime")
+			var/M = null
+			if(param)
+				for (var/mob/A in view(null, null))
+					if (param == A.name)
+						M = A
+						break
+			if(!M)
+				param = null
+
+			if (param)
+				message = "chimes at [param]."
+			else
+				message = "chimes."
+			playsound(src.loc, 'sound/machines/chime.ogg', 40, 0)
+			m_type = 1
+
 		if("ping")
 			var/M = null
 			if(param)
@@ -183,6 +200,23 @@
 			else
 				message = "buzzes."
 			playsound(src.loc, 'sound/machines/buzz-sigh.ogg', 50, 0)
+			m_type = 1
+
+		if("buzz2")
+			var/M = null
+			if(param)
+				for (var/mob/A in view(null, null))
+					if (param == A.name)
+						M = A
+						break
+			if(!M)
+				param = null
+
+			if (param)
+				message = "buzzes twice at [param]."
+			else
+				message = "buzzes twice."
+			playsound(src.loc, 'sound/machines/buzz-two.ogg', 50, 0)
 			m_type = 1
 
 		if("yes")
@@ -238,7 +272,7 @@
 				src << "You are not security."
 
 		if ("help")
-			src << "salute, bow-(none)/mob, clap, flap, aflap, twitch, twitch_s, nod, deathgasp, glare-(none)/mob, stare-(none)/mob, look, beep, ping, \nbuzz, law, halt, yes, no"
+			src << "salute, bow-(none)/mob, clap, flap, aflap, twitch, twitch_s, nod, deathgasp, glare-(none)/mob, stare-(none)/mob, look, beep, buzz2, chime, ping, \nbuzz, law, halt, yes, no"
 		else
 			src << "<font color='blue'>Unusable emote '[act]'. Say *help for a list.</font>"
 
