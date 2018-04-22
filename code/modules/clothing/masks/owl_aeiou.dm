@@ -1,15 +1,12 @@
 /obj/item/clothing/mask/gas/owl_aeiou //SPECIAL THANKS to Cameron653 for all the help! -lbnesquik
-<<<<<<< HEAD
 	name = "Owl mask"
 	desc = "Twoooo! It seems to house some electronics near the mouth."
 	icon_state = "owl"
 	body_parts_covered = FACE|EYES
 	flags_inv = "HIDEEARS|HIDEEYES|HIDEFACE"
-=======
 	name = "gas mask"
 	desc = "A face-covering mask that can be connected to an air supply. It seems to house some odd electronics."
 	icon_state = "owl"
->>>>>>> 57838532cd752bbe4328f226a8e214ace7bc33e4
 	var/owl_voice_enabled = 0
 	var/list/sound_to_play = list(
 		'sound/voice/chatter/owl_1.ogg',
@@ -40,8 +37,3 @@
     var/playing_sound = pick(sound_to_play)
     if(owl_voice_enabled)
         playsound(src, playing_sound, 25)
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 57838532cd752bbe4328f226a8e214ace7bc33e4

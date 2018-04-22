@@ -13,7 +13,7 @@
 	var/mutable_appearance/dsma = new(dsoverlay) //Changing like ten things, might as well.
 	dsma.alpha = 0
 	dsma.plane = PLANE_LIGHTING
-	dsma.layer = LIGHTING_LAYER + 0.1
+//	dsma.layer = LIGHTING_LAYER + 0.1
 	dsma.blend_mode = BLEND_ADD
 	dsoverlay.appearance = dsma
 
@@ -1240,7 +1240,7 @@ default behaviour is:
 /mob/living/proc/has_vision()
 	return !(eye_blind || (disabilities & BLIND) || stat)
 
-		
+
 //Add an entry to overlays, assuming it exists
 /mob/living/proc/apply_hud(cache_index, var/image/I)
 	hud_list[cache_index] = I
