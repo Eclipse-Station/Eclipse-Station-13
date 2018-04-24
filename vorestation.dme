@@ -2895,4 +2895,5 @@
 #include "maps\tether\tether.dm"
 #include "maps\~map_system\maps.dm"
 #include "modular_aeiou\code\modules\client\preference_setup\loadout\loadout_head.dm"
+#include "modular_aeiou\code\modules\reagents\Chemistry-Reagents\Chemistry-Reagents-Other.dm"
 // END_INCLUDE

@@ -83,6 +83,7 @@ h1.alert, h2.alert		{color: #000000;}
 .notice					{color: #000099;}
 .alium					{color: #00ff00;}
 .cult					{color: #800080; font-weight: bold; font-style: italic;}
+.cultlarge				{color: #960000; font-weight: bold; font-size: 3;}	/* AEIOU change - TG holy water effects port */
 
 .reflex_shoot			{color: #000099; font-style: italic;}
 
