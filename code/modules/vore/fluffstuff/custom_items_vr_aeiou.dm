@@ -30,10 +30,10 @@
 /obj/item/clothing/glasses/sunglasses/fluff/clout
 	name = "clout goggles"
 	desc = "These ain't glasses, baby. These CLOUT GOGGLES."
-	icon = 'icons/vore/custom_items_vr_aeiou.dmi'
+	icon = 'modular_aeiou/icons/obj/custom_items_vr_aeiou.dmi'
 	icon_state = "clout_goggles"
 
-	icon_override = 'icons/vore/custom_clothes_vr_aeiou.dmi'
+	icon_override = 'modular_aeiou/icons/obj/custom_clothes_vr_aeiou.dmi'
 	item_state = "clout_goggles"
 	item_state_slots = list(slot_r_hand_str = "sun", slot_l_hand_str = "sun")
 
@@ -41,7 +41,7 @@
 /obj/item/weapon/reagent_containers/food/drinks/flask/infinite
     name = "infinite coffee thermos"
     desc = "For when you really, really enjoy coffee."
-    icon = 'icons/vore/custom_items_vr_aeiou.dmi'
+    icon = 'modular_aeiou/icons/obj/custom_items_vr_aeiou.dmi'
     icon_state = "coffeetherm"
     var/spawning_id
 

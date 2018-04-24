@@ -72,7 +72,7 @@
 
 	var/wielded_item_state
 	var/one_handed_penalty = 0 // Penalty applied if someone fires a two-handed gun with one hand.
-	var/recoil_m = 1 //micros getting fucked
+	var/recoil_m = 1 //Causes some things to happen depending on the size of the character using it. If set to 2, any size can use it with no penalty. If set to 1, macros might fail to fire the weapon and micros might drop the gun or get knocked over. 0 does something similar to 1, but for energy weapons and causes burns instead of brute on micros.
 	var/obj/screen/auto_target/auto_target
 	var/shooting = 0
 	var/next_fire_time = 0
@@ -208,7 +208,7 @@
 		M.adjustHalLoss(25)
 		M.adjustBruteLoss(15)
 		M.Move(get_step(M,rand(1,8)), rand(1,8))
-		M << "<span class='danger'>You gets hurt and thrown by recoil!</span>"
+		M << "<span class='danger'>You get hurt and thrown by recoil!</span>"
 		return 1
 
 	if((M.size_multiplier <= 0.5) && prob(12/M.size_multiplier) && src.recoil_m == 0) //Micro handling energy
