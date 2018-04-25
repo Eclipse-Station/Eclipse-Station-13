@@ -26,29 +26,4 @@
 */
 //AEIOU Edit: This .dm and the respective .dmi are to be used for items specific to AEIOUStation to avoid confusion and synchronization issues.
 
-//Pixelexip:Casey Hall
-/obj/item/clothing/glasses/sunglasses/fluff/clout
-	name = "clout goggles"
-	desc = "These ain't glasses, baby. These CLOUT GOGGLES."
-	icon = 'modular_aeiou/icons/obj/custom_items_vr_aeiou.dmi'
-	icon_state = "clout_goggles"
-
-	icon_override = 'modular_aeiou/icons/obj/custom_clothes_vr_aeiou.dmi'
-	item_state = "clout_goggles"
-	item_state_slots = list(slot_r_hand_str = "sun", slot_l_hand_str = "sun")
-
-//Amenity Kitten: Valere
-/obj/item/weapon/reagent_containers/food/drinks/flask/infinite
-    name = "infinite coffee thermos"
-    desc = "For when you really, really enjoy coffee."
-    icon = 'modular_aeiou/icons/obj/custom_items_vr_aeiou.dmi'
-    icon_state = "coffeetherm"
-    var/spawning_id
-
-
-/obj/item/weapon/reagent_containers/food/drinks/flask/infinite/New()
-    ..()
-    processing_objects.Add(src)
-
-/obj/item/weapon/reagent_containers/food/drinks/flask/infinite/process()
-    reagents.add_reagent("coffee", 1)
+//HEY KIDS THIS IS CEBU'S EDIT. IF I PR THIS LAUGH AT ME, I FORGOT TO EXLUDE IT. OKAY THANKS. <3
