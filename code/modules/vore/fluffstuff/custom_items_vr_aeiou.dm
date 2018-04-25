@@ -5,8 +5,8 @@
 	"item_state" is the iconstate for the on-mob icons:
 		item_state_s is used for worn uniforms on mobs
 		item_state_r and item_state_l are for being held in each hand
+		
 	"item_state_slots" can replace "item_state", it is a list:
-	
 		item_state_slots["slotname1"] = "item state for that slot"
 		item_state_slots["slotname2"] = "item state for that slot"
 */
@@ -16,13 +16,13 @@
 /obj/item/weapon/fluff/charactername
 	name = ""
 	desc = ""
-	
+
 	icon = 'icons/vore/custom_items_vr.dmi'
 	icon_state = "myicon"
-	
+
 	icon_override = 'icons/vore/custom_items_vr.dmi'
 	item_state = "myicon"
-	
+
 */
 //AEIOU Edit: This .dm and the respective .dmi are to be used for items specific to AEIOUStation to avoid confusion and synchronization issues.
 
