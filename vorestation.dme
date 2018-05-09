@@ -2906,8 +2906,11 @@
 #include "maps\tether\tether.dm"
 #include "maps\~map_system\maps.dm"
 #include "modular_aeiou\code\game\objects\balls.dm"
+#include "modular_aeiou\code\game\objects\items\weapons\tools.dm"
+#include "modular_aeiou\code\modules\client\preference_setup\loadout\loadout_eyes.dm"
 #include "modular_aeiou\code\modules\client\preference_setup\loadout\loadout_general.dm"
 #include "modular_aeiou\code\modules\client\preference_setup\loadout\loadout_head.dm"
+#include "modular_aeiou\code\modules\clothing\glasses\glasses.dm"
 #include "modular_aeiou\code\modules\reagents\Chemistry-Reagents\Chemistry-Reagents-Other.dm"
 #include "modular_aeiou\mobs\secdeathclaw.dm"
 // END_INCLUDE
