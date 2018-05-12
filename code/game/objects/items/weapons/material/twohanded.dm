@@ -6,6 +6,7 @@
  *		Glass spears
  *		Sledgehammer
  *		Mjollnir
+ *		God Bat
  */
 
 /*##################################################################
@@ -232,11 +233,40 @@
 	hitsound = 'sound/effects/lightningbolt.ogg'
 	force_wielded = 65
 
+/*
+/obj/item/weapon/material/twohanded/sledgehammer/mjollnir/afterattack(var/atom/impacted)
+	if(isliving(impacted))
+		var/mob/living/L = impacted
+		if(L.mind)
+			var/nif
+			if(ishuman(L))
+				var/mob/living/carbon/human/H = L
+				nif = H.nif
+			SStranscore.m_backup(L.mind,nif,one_time = TRUE)
+		L.gib()
+*/
 
+/obj/item/weapon/material/twohanded/sledgehammer/mjollnir/proc/shock(mob/living/target)
+	target.Stun(60)
+	target.visible_message("<span class='danger'>[target.name] was shocked by [src]!</span>", \
+		"<span class='userdanger'>You feel a powerful shock course through your body sending you flying!</span>", \
+		"<span class='italics'>You hear a heavy electrical crack!</span>")
+	var/atom/throw_target = get_edge_target_turf(target, get_dir(src, get_step_away(target, src)))
+	target.throw_at(throw_target, 200, 4)
+	return
 
+/obj/item/weapon/material/twohanded/sledgehammer/mjollnir/attack(mob/living/M, mob/user)
+	..()
+	if(wielded)
+		playsound(src.loc, "sparks", 50, 1)
+		shock(M)
 
+/obj/item/weapon/material/twohanded/sledgehammer/mjollnir/throw_impact(atom/target)
+	. = ..()
+	if(isliving(target))
+		shock(target)
 
-
-
-
+/obj/item/weapon/material/twohanded/sledgehammer/mjollnir/update_icon()  //Currently only here to fuck with the on-mob icons.
+	icon_state = "mjollnir[wielded]"
+	return
 

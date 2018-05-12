@@ -10,6 +10,7 @@
 	var/workout_sounds
 	var/cooldown = 10
 	var/weightloss_power = 1
+	var/being_used = 0
 
 /obj/machinery/fitness/attack_hand(var/mob/living/user)
 	if(user.nutrition < 70)
@@ -80,7 +81,44 @@
 	icon_state = "fitnesslifter" //Sprites ripped from goon.
 	messages = list("You lift some weights")
 	weightloss_power = 2
+	var/weight = 1
+	var/list/qualifiers = list("with ease", "without any trouble", "with great effort")
 	cooldown = 40
+
+/obj/machinery/fitness/heavy/lifter/attackby(obj/item/weapon/W as obj, mob/user as mob)
+	if(istype(W, /obj/item/weapon/wrench))
+		playsound(src.loc, 'sound/items/Deconstruct.ogg', 75, 1)
+		weight = ((weight) % qualifiers.len) + 1
+		to_chat(user, "You set the machine's weight level to [weight].")
+
+/obj/machinery/fitness/heavy/lifter/attack_hand(var/mob/living/carbon/human/user)
+	if(!istype(user))
+		return
+	if(user.loc != src.loc)
+		to_chat(user, "<span class='warning'>You must be on the weight machine to use it.</span>")
+		return
+	if(user.nutrition < 50)
+		to_chat(user, "<span class='warning'>You need more energy to lift weights. Go eat something.</span>")
+		return
+	if(being_used)
+		to_chat(user, "<span class='warning'>The weight machine is already in use by somebody else.</span>")
+		return
+	else
+		being_used = 1
+		playsound(src.loc, 'sound/effects/weightlifter.ogg', 50, 1)
+		user.set_dir(SOUTH)
+		flick("[icon_state]_[weight]", src)
+		if(do_after(user, 20 + (weight * 10)))
+			playsound(src.loc, 'sound/effects/weightdrop.ogg', 25, 1)
+			user.nutrition -= weight * 10
+			user.tone += weight * 10 //AEIOU edit
+			to_chat(user, "<span class='notice'>You lift the weights [qualifiers[weight]].</span>")
+			being_used = 0
+		else
+			to_chat(user, "<span class='notice'>Against your previous judgement, perhaps working out is not for you.</span>")
+			being_used = 0	
+
+
 
 /obj/machinery/scale
 	name = "scale"

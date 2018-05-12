@@ -8,6 +8,7 @@
 	var/weight = 137					// Weight for mobs for weightgain system
 	var/weight_gain = 1 				// How fast you gain weight
 	var/weight_loss = 0.5 				// How fast you lose weight
+	var/tone = 25 						// AEIOU edit. Determine how MUSCLE GIRL you are. From 0 to 500
 	var/egg_type = "egg" 				// Default egg type.
 	var/feral = 0 						// How feral the mob is, if at all. Does nothing for non xenochimera at the moment.
 	var/reviving = 0					// Only used for creatures that have the xenochimera regen ability, so far.
@@ -252,6 +253,31 @@
 		message += B.get_examine_msg()
 
 	return message
+
+
+//
+// Stuff for toning
+//
+
+/mob/living/proc/show_tone()
+	return TRUE //Can override if you want.
+
+/mob/living/carbon/human/show_tone()
+	//A uniform could hide it.
+	if(istype(w_uniform,/obj/item/clothing))
+		var/obj/item/clothing/under = w_uniform
+		if(under.hides_bulges)
+			return FALSE
+
+	//We return as soon as we find one, no need for 'else' really.
+	if(istype(wear_suit,/obj/item/clothing))
+		var/obj/item/clothing/suit = wear_suit
+		if(suit.hides_bulges)
+			return FALSE
+
+
+	return ..()
+
 
 //
 // Whether or not people can see our belly messages
