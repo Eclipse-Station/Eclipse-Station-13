@@ -30,6 +30,7 @@
 	build_path = /obj/item/weapon/gun/energy/sizegun
 	sort_string = "TAAAB"
 
+/*
 /datum/design/item/bluespace_jumpsuit
 	name = "Bluespace jumpsuit"
 	id = "bsjumpsuit"
@@ -37,6 +38,8 @@
 	materials = list(DEFAULT_WALL_MATERIAL = 4000, "glass" = 4000)
 	build_path = /obj/item/clothing/under/bluespace
 	sort_string = "TAAAC"
+*/
+
 
 /datum/design/item/sleevemate
 	name = "SleeveMate 3200"
