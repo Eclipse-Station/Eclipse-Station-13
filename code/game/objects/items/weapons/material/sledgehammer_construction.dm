@@ -3,8 +3,8 @@
 /obj/item/weapon/hammer_head
 	name = "hammer head"
 	desc = "A rectangular plasteel head. Feels very heavy in your hand.."
-	icon = 'icons/obj/coilgun.dmi'
-	icon_state = "coilgun_construction_1"
+	icon = 'icons/obj/hammer_construction.dmi'
+	icon_state = "hammer_construction_1"
 
 	var/construction_stage = 1
 
@@ -155,7 +155,7 @@
 /obj/item/weapon/hammer_head/proc/increment_construction_stage()
 	if(construction_stage < 7)
 		construction_stage++
-	icon_state = "coilgun_construction_[construction_stage]"
+	icon_state = "hammer_construction_[construction_stage]"
 
 /obj/item/weapon/hammer_head/examine(var/mob/user)
 	. = ..(user,2)
