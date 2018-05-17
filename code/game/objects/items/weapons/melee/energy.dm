@@ -1,3 +1,19 @@
+/* Energy Melee
+ * Contains:
+ * 		Energy Axe
+ *		Energy Sword
+ *		Ionic Rapier
+ *		Energy Blade
+ *		Energy Spear
+ *		Stuff
+ */
+
+/*##################################################################
+##################### ENERGY MELEE BE HERE~ :3 ########
+####################################################################*/
+
+
+
 /obj/item/weapon/melee/energy
 	var/active = 0
 	var/active_force

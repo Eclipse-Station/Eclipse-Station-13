@@ -52,6 +52,15 @@
 			cistern = !cistern
 			update_icon()
 			return
+			
+	if(istype(I, /obj/item/weapon/reagent_containers))
+		to_chat(user, "<span class='notice'>You start to [cistern ? "replace the lid on the cistern" : "lift the lid off the cistern"].</span>")
+		playsound(loc, 'sound/effects/stonedoor_openclose.ogg', 50, 1)
+		if(do_after(user, 30))
+			user.visible_message("<span class='notice'>[user] [cistern ? "replaces the lid on the cistern" : "lifts the lid off the cistern"]!</span>", "<span class='notice'>You [cistern ? "replace the lid on the cistern" : "lift the lid off the cistern"]!</span>", "You hear grinding porcelain.")
+			cistern = !cistern
+			update_icon()
+			return
 
 	if(istype(I, /obj/item/weapon/grab))
 		user.setClickCooldown(user.get_attack_speed(I))

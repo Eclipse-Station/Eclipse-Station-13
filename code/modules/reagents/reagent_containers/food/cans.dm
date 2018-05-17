@@ -5,11 +5,57 @@
 
 //DRINKS
 
+/obj/item/weapon/reagent_containers/food/drinks/cans/attack(mob/M, mob/user)
+	if(user.a_intent == I_HURT && user.zone_sel.selecting != BP_HEAD)
+//	if(M == user && !src.reagents.total_volume && user.a_intent == INTENT_HARM && user.zone_selected == "head")
+		user.visible_message("<span class='warning'>[user] crushes the can of [src] on [user] their forehead!</span>", "<span class='notice'>You crush the can of [src] on your forehead.</span>")
+		playsound(user.loc,'sound/weapons/pierce.ogg', rand(10,50), 1)
+		var/obj/item/trash/can/crushed_can = new /obj/item/trash/can(user.loc)
+		crushed_can.icon_state = icon_state
+		qdel(src)
+	..()
+
+/obj/item/weapon/reagent_containers/food/drinks/cans/attack(mob/user)
+		user.visible_message("[user] crushes the can of [src].", ">You crush the can of [src].")
+		playsound(user.loc,'sound/weapons/pierce.ogg', rand(10,50), 1)
+		var/obj/item/trash/can/crushed_can = new /obj/item/trash/can(user.loc)
+		crushed_can.icon_state = icon_state
+		qdel(src)
+
+
+
+
+
+/*
+/obj/item/weapon/screwdriver/attack(mob/living/carbon/M as mob, mob/living/carbon/user as mob)
+    if(!istype(M) || user.a_intent == "help")
+        return ..()
+    if(user.zone_sel.selecting != O_EYES && user.zone_sel.selecting != BP_HEAD)
+        return ..()
+    if((CLUMSY in user.mutations) && prob(50))
+        M = user
+    return eyestab(M,user)
+*/
+
+
 /obj/item/weapon/reagent_containers/food/drinks/cans/cola
 	name = "\improper Space Cola"
 	desc = "Cola. in space."
 	icon_state = "cola"
 	center_of_mass = list("x"=16, "y"=10)
+
+/*
+/obj/item/weapon/reagent_containers/food/drinks/cans/cola/attack_self(mob/living/user as mob)
+	if(user.a_intent == I_HURT && volume = 0
+		if(icon_state == "scrap")
+			user.show_message("<span class='warning'>\The [src] is already crumpled.</span>")
+			return
+		//crumple dat paper
+		info = stars(info,85)
+		user.visible_message("\The [user] crumples \the [src] into a ball!")
+		icon_state = "scrap"
+		return
+*/
 
 /obj/item/weapon/reagent_containers/food/drinks/cans/cola/New()
 	..()
