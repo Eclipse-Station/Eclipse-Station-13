@@ -50,7 +50,7 @@
 
 /datum/map_z_level/tether_lateload/underdark
 	name = "Underdark"
-	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER
+	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER
 
 /datum/map_template/tether_lateload/tether_underdark/on_map_loaded(z)
 	. = ..()

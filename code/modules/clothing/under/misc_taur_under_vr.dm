@@ -24,6 +24,7 @@
 				worn_layer = 20
 				return 0
 
+/*
 /obj/item/clothing/accessory/drakecloak
 	name = "Red cloak"
 	desc = "A breezey cloak to distinguish your tauric body from the common beast."
@@ -74,6 +75,7 @@
 				H << "<span class='warning'>You need to have a horse, wolf, or naga half to wear this.</span>"
 				return 0
 
+*/
 
 
 

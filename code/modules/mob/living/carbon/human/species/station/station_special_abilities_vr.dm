@@ -748,6 +748,12 @@
 
 		add_attack_logs(src,T,"Shredded (hardvore)")
 
+/mob/living/proc/shred_limb_temp()
+	set name = "Damage/Remove Prey's Organ (beartrap)"
+	set desc = "Severely damages prey's organ. If the limb is already severely damaged, it will be torn off."
+	set category = "Abilities"
+	shred_limb()
+
 /mob/living/proc/flying_toggle()
 	set name = "Toggle Flight"
 	set desc = "While flying over open spaces, you will use up some nutrition. If you run out nutrition, you will fall. Additionally, you can't fly if you are too heavy."

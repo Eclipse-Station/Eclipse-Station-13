@@ -23,6 +23,7 @@
 /obj/item/weapon/gun/projectile/sks
 	name = "\improper SKS"
 	desc = "This is the vintage semi-automatic rifle that famously helped win the second World War. What the hell it's doing aboard a space station in the 26th century, you can only imagine. Uses 7.62mm rounds."
+	icon = 'icons/obj/gun_aeiou.dmi'
 	icon_state = "sks"
 	item_state = "boltaction"
 	w_class = ITEMSIZE_LARGE
