@@ -2048,6 +2048,7 @@
 #include "code\modules\mob\living\carbon\human\species\species_shapeshift.dm"
 #include "code\modules\mob\living\carbon\human\species\species_shapeshift_vr.dm"
 #include "code\modules\mob\living\carbon\human\species\species_vr.dm"
+#include "code\modules\mob\living\carbon\human\species\outsider\vox.dm"
 #include "code\modules\mob\living\carbon\human\species\station\blank_vr.dm"
 #include "code\modules\mob\living\carbon\human\species\station\catastrophe.dm"
 #include "code\modules\mob\living\carbon\human\species\station\golem.dm"

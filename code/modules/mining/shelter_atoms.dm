@@ -103,6 +103,7 @@
 	name = "shelter privacy control"
 	desc = "You can secure yourself inside the shelter here."
 	specialfunctions = 4 // 4 is bolts
+	id	=	"nevergonnagiveyouup"
 	var/obj/machinery/door/airlock/voidcraft/survival_pod/door
 
 /obj/machinery/button/remote/airlock/survival_pod/attack_hand(obj/item/weapon/W, mob/user as mob)
