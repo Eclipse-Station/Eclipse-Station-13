@@ -6,10 +6,22 @@
     "artist": "Yugo Kanno"
   },
   {
+  "duration": 1780,
+  "url": "https://my.mixtape.moe/kwueqo.mp3",
+  "title": "Grumpy Shark",
+  "artist": "Sim Gretina"
+  },
+  {
   "duration": 1820,
   "url": "https://my.mixtape.moe/mnulru.mp3",
   "title": "The Hissing of Summer Lawns",
   "artist": "Joni Mitchell"
+  },
+  {
+  "duration": 1930,
+  "url": "https://my.mixtape.moe/shbvbp.mp3",
+  "title": "Burn",
+  "artist": "Marnik"
   },
   {
   "duration": 3280,
@@ -53,6 +65,13 @@
   "url": "https://my.mixtape.moe/iynjes.mp3",
   "title": "Snake Eater",
   "artist": "Cynthia Harrell",
+  "secret": true
+  },
+  {
+  "duration": 2560,
+  "url": "https://my.mixtape.moe/ijjexy.ogg",
+  "title": "Space Asshole",
+  "artist": "Chris Remo",
   "secret": true
   },
   {
