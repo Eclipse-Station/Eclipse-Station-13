@@ -199,16 +199,81 @@
 
 // Sif trees
 
-/obj/structure/flora/tree/sif
+/obj/structure/flora/tree/sif //AEIOU edit. The tree gives you tap.
 	name = "glowing tree"
 	desc = "It's a tree, except this one seems quite alien.  It glows a deep blue."
 	icon = 'icons/obj/flora/deadtrees.dmi'
 	icon_state = "tree_sif"
 	base_state = "tree_sif"
 	product = /obj/item/stack/material/log/sif
+	var/obj/item/weapon/t_t = null
+	var/tap = 0
+	var/sap = 1
+	var/max_sap = 15
+	var/sap_amount = 0
+
+
+/obj/structure/flora/tree/sif/attackby(var/obj/item/I, var/mob/user)
+	if(istype(I, /obj/item/weapon/reagent_containers/))
+		if(tap)
+
+		else
+			user << "<span class='notice'>There is no tap in \the [src].</span>"
+		if(!sap)
+			user << "<span class='notice'>There is no sap in \the [src].</span>"
+			return
+		var/obj/item/weapon/reagent_containers/G = I
+		var/transferred = min(G.reagents.maximum_volume - G.reagents.total_volume, sap)
+		sap -= transferred
+		G.reagents.add_reagent("phoron",/*"aliensap",*/ transferred)
+		G.reagents.add_reagent("aliensap", transferred)//[transferred]
+		sap_amount = transferred * 2
+//		reagents.add_reagent("coffee", 1)
+		user.visible_message("<span class='notice'>[user] collects [sap_amount] from \the [src] into \the [G].</span>", "<span class='notice'>You collect [sap_amount] units of sap from \the [src] into \the [G].</span>")
+		return 1
+
+	if(istype(I, /obj/item/weapon/tree_tap))
+		if(!tap)
+			user.drop_item()
+			I.loc = src
+			t_t = I
+			user << "<span class='notice'>You install a tap in [src].</span>"
+			tap = 1
+			produce_sap()
+		else
+			user << "<span class='notice'>[src] already has a tap.</span>"
+		return 1
+
+/obj/structure/flora/tree/sif/attack_hand(mob/user as mob)
+	if(tap == 1)
+		user.put_in_hands(t_t)
+		t_t = null
+		user << "<span class='notice'>You remove the tap from [src].</span>"
+		tap = 0
+		return
+
+/obj/structure/flora/tree/sif/proc/produce_sap()
+	if(tap)
+		sap = (sap * 1.01)
+		return
+
+/obj/structure/flora/tree/sif/process()
+	produce_sap()
+
+/obj/structure/flora/tree/sif/examine(mob/user)
+	if(!..(user, 1))
+		return
+	if(tap)
+		user <<"<span class='notice'>[src] has a tap wedged in.</span>"
+	if(!tap)
+		user <<"<span class='notice'>[src] looks health and normal.</span>"
+
 
 /obj/structure/flora/tree/sif/New()
 	update_icon()
+	..()
+	processing_objects |= src
+
 
 /obj/structure/flora/tree/sif/update_icon()
 	set_light(5, 1, "#33ccff")

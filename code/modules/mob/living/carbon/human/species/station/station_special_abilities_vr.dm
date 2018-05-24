@@ -1,9 +1,45 @@
+/* station_special_abilities_vr
+ * Contains:
+ *		proc/reconstitute_form()
+ *		proc/chimera_regenerate()
+ *		proc/hasnutriment()
+ *		proc/hatch()
+ *		proc/bloodsuck()
+ *		proc/chimera_hatch()
+ *		proc/getlightlevel()
+ *		proc/handle_feral()
+ *		proc/bloodsuck()
+ *		proc/succubus_drain()
+ *		proc/succubus_drain_lethal()
+ *		proc/slime_feed()
+ *		proc/succubus_drain_finalize()
+ *		proc/shred_limb()
+ *		proc/shred_limb_temp()
+ *		proc/flying_toggle()
+ *		proc/start_wings_hovering()
+ *		proc/toggle_pass_table()
+ *		proc/nomnom()
+ *		proc/cromch()
+ *		proc/lanius_produce()
+ *		proc/xylobone()
+ *		proc/setfont()
+ *		proc/bonerattle()
+ */
+
+/*##################################################################
+##################### Station special abilities HERE~ ########
+####################################################################*/
+
+
+
+
+
 /mob/living/carbon/human/proc/reconstitute_form() //Scree's race ability.in exchange for: No cloning.
 	set name = "Reconstitute Form"
 	set category = "Abilities"
 
 	// Sanity is mostly handled in chimera_regenerate()
-	
+
 	var/confirm = alert(usr, "Are you sure you want to completely reconstruct your form? This process can take up to twenty minutes, depending on how hungry you are, and you will be unable to move.", "Confirm Regeneration", "Yes", "No")
 	if(confirm == "Yes")
 		chimera_regenerate()

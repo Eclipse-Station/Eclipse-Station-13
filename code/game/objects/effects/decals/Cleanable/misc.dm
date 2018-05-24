@@ -22,6 +22,14 @@
 		F.dirt += 4
 	qdel(src)
 
+/obj/effect/decal/cleanable/ash/attackby(var/obj/item/weapon/reagent_containers/W, var/mob/user)
+	if(istype(W, /obj/item/weapon/reagent_containers/glass))
+		var/obj/item/weapon/reagent_containers/G = W
+		G.reagents.add_reagent("ash", 15)//[transferred]
+		user << "<span class='notice'>You scoop up [src] in [W].</span>"
+	qdel(src)
+
+
 /obj/effect/decal/cleanable/greenglow
 
 	New()
