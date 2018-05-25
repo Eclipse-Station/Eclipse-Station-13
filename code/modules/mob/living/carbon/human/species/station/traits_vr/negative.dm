@@ -101,11 +101,19 @@
 	desc = "Your bones and robot limbs are much easier to break."
 	cost = -2 //I feel like this should be higher, but let's see where it goes
 
+
 /datum/trait/hollow/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..(S,H)
 	for(var/obj/item/organ/external/O in H.organs)
 		O.min_broken_damage *= 0.5
 		O.min_bruised_damage *= 0.5
+
+/datum/trait/haemophilia
+	name = "Haemophilia"
+	desc = "When you bleed, you bleed a LOT."
+	cost = -2
+	var_changes = list("bloodloss_rate" = 2)
+
 
 /datum/trait/lightweight
 	name = "Lightweight"

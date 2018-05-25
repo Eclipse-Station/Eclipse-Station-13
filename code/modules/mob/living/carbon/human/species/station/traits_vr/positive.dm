@@ -110,7 +110,7 @@
 	cost = 1
 	var_changes = list("flags" = NO_MINOR_CUT) //Checked the flag is only used by shard stepping.
 
-
+/*//Currently doesn't work because nestor dgaf. Also apparently updage changed.
 /datum/trait/fit
 	name = "Fit"
 	desc = "Your natural fitness and/or your physical training give you an advantage in close quarters combat."
@@ -122,3 +122,5 @@
 	desc = "Your extremely high physical strength vastly impoves your capabilities in close quarters combat."
 	cost = 3
 	var_changes = list(outgoing_melee_damage_percent = 1.4)
+*/
+

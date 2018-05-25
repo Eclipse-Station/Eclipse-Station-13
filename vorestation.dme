@@ -1031,6 +1031,7 @@
 #include "code\game\objects\items\weapons\gift_wrappaper.dm"
 #include "code\game\objects\items\weapons\handcuffs.dm"
 #include "code\game\objects\items\weapons\handcuffs_vr.dm"
+#include "code\game\objects\items\weapons\hydroponics.dm"
 #include "code\game\objects\items\weapons\improvised_components.dm"
 #include "code\game\objects\items\weapons\manuals.dm"
 #include "code\game\objects\items\weapons\manuals_vr.dm"
@@ -2917,11 +2918,17 @@
 #include "maps\~map_system\maps.dm"
 #include "modular_aeiou\code\game\objects\balls.dm"
 #include "modular_aeiou\code\game\objects\items\weapons\tools.dm"
+#include "modular_aeiou\code\game\objects\items\weapons\tree_tap.dm"
 #include "modular_aeiou\code\modules\client\preference_setup\loadout\loadout_eyes.dm"
 #include "modular_aeiou\code\modules\client\preference_setup\loadout\loadout_general.dm"
 #include "modular_aeiou\code\modules\client\preference_setup\loadout\loadout_head.dm"
 #include "modular_aeiou\code\modules\clothing\glasses\glasses.dm"
+<<<<<<< HEAD
+#include "modular_aeiou\code\modules\reagents\Chemistry-Recipes_AEIOU.dm"
+#include "modular_aeiou\code\modules\reagents\Chemistry-Reagents\Chemistry-Reagents-AEIOU.dm"
+=======
 #include "modular_aeiou\code\modules\power\lighting.dm"
+>>>>>>> 136259b04de893b58e57875102f8b5a869b500f5
 #include "modular_aeiou\code\modules\reagents\Chemistry-Reagents\Chemistry-Reagents-Other.dm"
 #include "modular_aeiou\mobs\secdeathclaw.dm"
 // END_INCLUDE
