@@ -294,7 +294,7 @@
 	msg += attempt_vr(src,"examine_bellies",args) //VOREStation Code
 	msg += attempt_vr(src,"examine_pickup_size",args) //VOREStation Code
 	msg += attempt_vr(src,"examine_step_size",args) //VOREStation Code
-	msg += attempt_vr(src,"examine_nif",args) //VOREStation Code 
+	msg += attempt_vr(src,"examine_nif",args) //VOREStation Code
 	msg += attempt_vr(src,"examine_tone",args) //VOREStation Code
 
 	if(mSmallsize in mutations)
@@ -330,7 +330,13 @@
 		else if(disconnect_time)
 			msg += "\[Disconnected/ghosted [round(((world.realtime - disconnect_time)/10)/60)] minutes ago\]\n"
 		//VOREStation Add End
-	
+
+	var/obj/item/organ/external/head/H = organs_by_name[BP_HEAD]
+	if(istype(H) && H.forehead_graffiti && H.graffiti_style)
+		msg += "<span class='notice'>[T.He] [T.has] \"[H.forehead_graffiti]\" written on [T.his] [H.name] in [H.graffiti_style]!</span>\n"
+
+
+
 	var/list/wound_flavor_text = list()
 	var/list/is_bleeding = list()
 	var/applying_pressure = ""

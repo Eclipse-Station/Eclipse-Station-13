@@ -892,6 +892,7 @@
 #include "code\game\objects\effects\explosion_particles.dm"
 #include "code\game\objects\effects\gibs.dm"
 #include "code\game\objects\effects\glowshroom.dm"
+#include "code\game\objects\effects\item_pickup_ghost.dm"
 #include "code\game\objects\effects\landmarks.dm"
 #include "code\game\objects\effects\manifest.dm"
 #include "code\game\objects\effects\mines.dm"
@@ -900,6 +901,7 @@
 #include "code\game\objects\effects\portals.dm"
 #include "code\game\objects\effects\spiders.dm"
 #include "code\game\objects\effects\step_triggers.dm"
+#include "code\game\objects\effects\temporary_effect.dm"
 #include "code\game\objects\effects\timestop.dm"
 #include "code\game\objects\effects\zone_divider.dm"
 #include "code\game\objects\effects\alien\aliens.dm"
@@ -2923,12 +2925,9 @@
 #include "modular_aeiou\code\modules\client\preference_setup\loadout\loadout_general.dm"
 #include "modular_aeiou\code\modules\client\preference_setup\loadout\loadout_head.dm"
 #include "modular_aeiou\code\modules\clothing\glasses\glasses.dm"
-<<<<<<< HEAD
+#include "modular_aeiou\code\modules\power\lighting.dm"
 #include "modular_aeiou\code\modules\reagents\Chemistry-Recipes_AEIOU.dm"
 #include "modular_aeiou\code\modules\reagents\Chemistry-Reagents\Chemistry-Reagents-AEIOU.dm"
-=======
-#include "modular_aeiou\code\modules\power\lighting.dm"
->>>>>>> 136259b04de893b58e57875102f8b5a869b500f5
 #include "modular_aeiou\code\modules\reagents\Chemistry-Reagents\Chemistry-Reagents-Other.dm"
 #include "modular_aeiou\mobs\secdeathclaw.dm"
 // END_INCLUDE
