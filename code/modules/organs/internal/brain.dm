@@ -145,7 +145,6 @@
 	icon = 'icons/obj/wizard.dmi'
 	icon_state = "scroll"
 
-
 /obj/item/organ/internal/brain/cak
 	name = "jawbreaker"
 	desc = "A very robust candy."
