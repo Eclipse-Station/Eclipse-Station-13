@@ -3,36 +3,42 @@
 	colour = "#DA0000"
 	shadeColour = "#810C0C"
 	colourName = "red"
+	color_description = "red crayon"
 
 /obj/item/weapon/pen/crayon/orange
 	icon_state = "crayonorange"
 	colour = "#FF9300"
 	shadeColour = "#A55403"
 	colourName = "orange"
+	color_description = "orange crayon"
 
 /obj/item/weapon/pen/crayon/yellow
 	icon_state = "crayonyellow"
 	colour = "#FFF200"
 	shadeColour = "#886422"
 	colourName = "yellow"
+	color_description = "yellow crayon"
 
 /obj/item/weapon/pen/crayon/green
 	icon_state = "crayongreen"
 	colour = "#A8E61D"
 	shadeColour = "#61840F"
 	colourName = "green"
+	color_description = "green crayon"
 
 /obj/item/weapon/pen/crayon/blue
 	icon_state = "crayonblue"
 	colour = "#00B7EF"
 	shadeColour = "#0082A8"
 	colourName = "blue"
+	color_description = "blue crayon"
 
 /obj/item/weapon/pen/crayon/purple
 	icon_state = "crayonpurple"
 	colour = "#DA00FF"
 	shadeColour = "#810CFF"
 	colourName = "purple"
+	color_description = "purple crayon"
 
 /obj/item/weapon/pen/crayon/mime
 	icon_state = "crayonmime"
@@ -41,6 +47,7 @@
 	shadeColour = "#000000"
 	colourName = "mime"
 	uses = 0
+	color_description = "white crayon"
 
 /obj/item/weapon/pen/crayon/mime/attack_self(mob/living/user as mob) //inversion
 	if(colour != "#FFFFFF" && shadeColour != "#000000")
