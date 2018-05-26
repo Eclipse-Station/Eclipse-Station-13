@@ -223,6 +223,10 @@
 		if(temp && !temp.is_usable())
 			user << "<span class='notice'>You try to move your [temp.name], but cannot!</span>"
 			return
+		if(!temp)
+			user << "<span class='notice'>You try to use your hand, but realize it is no longer attached!</span>"
+			return
+
 
 	var/old_loc = src.loc
 
