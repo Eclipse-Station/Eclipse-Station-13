@@ -96,9 +96,9 @@
 		else
 			embed_chance = max(5, round(force/(w_class*3)))
 	..()
-	if(randpixel && (!pixel_x && !pixel_y) && isturf(loc)) //hopefully this will prevent us from messing with mapper-set pixel_x/y // Stolen from bay for aeiou.
-		pixel_x = rand(-randpixel, randpixel)
-		pixel_y = rand(-randpixel, randpixel)
+//	if(randpixel && (!pixel_x && !pixel_y) && isturf(loc)) //hopefully this will prevent us from messing with mapper-set pixel_x/y // Stolen from bay for aeiou.
+//		pixel_x = rand(-randpixel, randpixel)
+//		pixel_y = rand(-randpixel, randpixel)
 
 
 /obj/item/equipped()
@@ -223,6 +223,10 @@
 		if(temp && !temp.is_usable())
 			user << "<span class='notice'>You try to move your [temp.name], but cannot!</span>"
 			return
+		if(!temp)
+			user << "<span class='notice'>You try to use your hand, but realize it is no longer attached!</span>"
+			return
+
 
 	var/old_loc = src.loc
 
