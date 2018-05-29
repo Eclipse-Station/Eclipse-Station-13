@@ -31,7 +31,7 @@
 	primitive_form = "Cak"
 	flags = NO_PAIN | NO_SCAN | NO_POISON
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS  | HAS_SKIN_COLOR | HAS_EYE_COLOR
-	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED //Whitelisted as restricted is broken.
+	spawn_flags = NULL //Disabled for consistency's sake
 
 	flesh_color = "#AFA59E"
 	base_color = "#333333"
