@@ -468,6 +468,8 @@ obj/structure/reagent_dispensers/verb/set_APTFT() //set amount_per_transfer_from
 	if(!Adjacent(user)) return		//Person has moved away from the sink
 
 	user.clean_blood()
+
+
 	if(ishuman(user))
 		user:update_inv_gloves()
 	for(var/mob/V in viewers(src, null))
@@ -523,6 +525,12 @@ obj/structure/reagent_dispensers/verb/set_APTFT() //set amount_per_transfer_from
 	if(user.loc != location) return				//User has moved
 	if(!I) return 								//Item's been destroyed while washing
 	if(user.get_active_hand() != I) return		//Person has switched hands or the item in their hands
+
+	if(istype(O, /obj/item/organ/external/head))
+		var/obj/item/organ/external/head/head = O
+		head.forehead_graffiti = null
+		head.graffiti_style = null
+
 
 	O.clean_blood()
 	user.visible_message( \

@@ -111,12 +111,12 @@
 		if(do_after(user, 20 + (weight * 10)))
 			playsound(src.loc, 'sound/effects/weightdrop.ogg', 25, 1)
 			user.nutrition -= weight * 10
-			user.tone += weight * 10 //AEIOU edit
+//			user.tone += weight * 10 //AEIOU edit
 			to_chat(user, "<span class='notice'>You lift the weights [qualifiers[weight]].</span>")
 			being_used = 0
 		else
 			to_chat(user, "<span class='notice'>Against your previous judgement, perhaps working out is not for you.</span>")
-			being_used = 0	
+			being_used = 0
 
 
 

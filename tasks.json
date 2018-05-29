@@ -1,0 +1,48 @@
+{
+	// Build the thing!
+	// Except the thing is SS13 code in a shitty C like language!
+	// Why would you ever want to build this?!
+	//Someone tossed this at me, hopefully it will start working for AEIOU- Kates
+	"version": "0.1.0",
+	"showOutput": "always",
+	"tasks":[
+		{
+			"taskName": "Build Release",
+			"suppressTaskName": true,
+			"isBuildCommand": true,
+			"isShellCommand": false,
+			"command": "C:/Program Files (x86)/BYOND/bin/dm.exe",
+			"args": ["${workspaceRoot}/AEIOUStation13.dme"],
+			"problemMatcher": {
+				"owner": "dm",
+				"fileLocation": ["relative", "${workspaceRoot}"],
+				"pattern": {
+					"regexp": "^([\\\\\/0-9a-zA-Z\\._ -]+):(\\d+):(warning|error): (.*)",
+					"file": 1,
+					"line": 2,
+					"severity": 3,
+					"message": 4
+				}
+			}
+		},
+		{
+			"taskName": "Run Server",
+			"suppressTaskName": true,
+			"isTestCommand": true,
+			"isShellCommand": false,
+			"command": "C:/Program Files (x86)/BYOND/bin/dreamdaemon.exe",
+			"args": ["${workspaceRoot}/13thCrusade.dmb", "-trusted", "-invisible", "-close"]
+		},
+		{
+			"taskName": "Generate Changelogs",
+			"suppressTaskName": true,
+			"isShellCommand": true,
+			"command": "python",
+			"args": [
+				"${workspaceRoot}/tools/GenerateChangelog/ss13_genchangelog.py",
+				"${workspaceRoot}/html/changelog.html",
+				"${workspaceRoot}/html/changelogs"
+			]
+		}
+	]
+}
