@@ -44,7 +44,7 @@
 
 	flags = NO_SCAN | NO_MINOR_CUT  | NO_INFECT | NO_BLOOD | NO_POISON
 	appearance_flags = HAS_SKIN_COLOR | HAS_EYE_COLOR
-	spawn_flags	= NULL //disabled until further notice
+	spawn_flags	= SPECIES_IS_RESTRICTED //disabled until further notice
 
 	genders = list(NEUTER)
 	has_organ = list(O_BRAIN =    /obj/item/organ/internal/brain/golem)
