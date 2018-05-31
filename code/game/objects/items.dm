@@ -5,7 +5,6 @@
 
 	var/image/blood_overlay = null //this saves our blood splatter overlay, which will be processed not to go over the edges of the sprite
 	var/abstract = 0
-	var/randpixel = 6
 	var/r_speed = 1.0
 	var/health = null
 	var/burn_point = null
@@ -95,11 +94,6 @@
 			embed_chance = max(5, round(force/w_class))
 		else
 			embed_chance = max(5, round(force/(w_class*3)))
-	..()
-//	if(randpixel && (!pixel_x && !pixel_y) && isturf(loc)) //hopefully this will prevent us from messing with mapper-set pixel_x/y // Stolen from bay for aeiou.
-//		pixel_x = rand(-randpixel, randpixel)
-//		pixel_y = rand(-randpixel, randpixel)
-
 
 /obj/item/equipped()
 	..()
@@ -213,9 +207,7 @@
 
 /obj/item/attack_hand(mob/living/user as mob)
 	if (!user) return
-	if (anchored)
-		return ..()
-	if (ishuman(user))
+	if (hasorgans(user))
 		var/mob/living/carbon/human/H = user
 		var/obj/item/organ/external/temp = H.organs_by_name["r_hand"]
 		if (user.hand)
@@ -227,9 +219,7 @@
 			user << "<span class='notice'>You try to use your hand, but realize it is no longer attached!</span>"
 			return
 
-
 	var/old_loc = src.loc
-
 	src.pickup(user)
 	if (istype(src.loc, /obj/item/weapon/storage))
 		var/obj/item/weapon/storage/S = src.loc
@@ -242,18 +232,11 @@
 	else
 		if(isliving(src.loc))
 			return
-
 	if(user.put_in_active_hand(src))
-		if (isturf(old_loc))
-			var/obj/effect/temporary/item_pickup_ghost/ghost = new(old_loc, src)
+		if(isturf(old_loc))
+			var/obj/effect/temporary_effect/item_pickup_ghost/ghost = new(old_loc)
+			ghost.assumeform(src)
 			ghost.animate_towards(user)
-		if(randpixel)
-			pixel_x = rand(-randpixel, randpixel)
-			pixel_y = rand(-randpixel/2, randpixel/2)
-			pixel_z = 0
-		else if(randpixel == 0)
-			pixel_x = 0
-			pixel_y = 0
 	return
 
 /obj/item/attack_ai(mob/user as mob)
@@ -563,14 +546,6 @@ var/list/global/slot_flags_enumeration = list(
 	M.eye_blurry += rand(3,4)
 	return
 
-
-/obj/item/Move()//timestop test
-	while(paused)
-		sleep(1)
-	return ..()
-
-
-
 /obj/item/clean_blood()
 	. = ..()
 	if(blood_overlay)
@@ -715,6 +690,10 @@ modules/mob/living/carbon/human/life.dm if you die, you will be zoomed out.
 // Check if an object should ignite others, like a lit lighter or candle.
 /obj/item/proc/is_hot()
 	return FALSE
+
+// Called when you swap hands away from the item
+/obj/item/proc/in_inactive_hand(mob/user)
+	return
 
 // My best guess as to why this is here would be that it does so little. Still, keep it under all the procs, for sanity's sake.
 /obj/item/device
