@@ -1,10 +1,14 @@
 /obj/item/weapon/reagent_containers/food/drinks/cans
 	volume = 40 //just over one and a half cups
 	amount_per_transfer_from_this = 5
-	flags = 0 //starts closed
+//	flags = 0 //starts closed
+	flags = !OPENCONTAINER
 
 //DRINKS
 
+
+
+/*
 /obj/item/weapon/reagent_containers/food/drinks/cans/attack(mob/M, mob/user)
 	if(user.a_intent == I_HURT && user.zone_sel.selecting != BP_HEAD)
 //	if(M == user && !src.reagents.total_volume && user.a_intent == INTENT_HARM && user.zone_selected == "head")
@@ -14,28 +18,23 @@
 		crushed_can.icon_state = icon_state
 		qdel(src)
 	..()
+*/
 
-/obj/item/weapon/reagent_containers/food/drinks/cans/attack(mob/user)
-		user.visible_message("[user] crushes the can of [src].", ">You crush the can of [src].")
+/obj/item/weapon/reagent_containers/food/drinks/cans/attack_self(mob/user)
+	if(!is_open_container())
+		open(user)
+		return 1
+	if(reagents.total_volume>0)
+		user << "<span class='notice'>There is still some liquid left in the [src]!</span>"
+		return 1
+
+	else
+		user.visible_message("[user] crushes the can of [src].", "You crush the can of [src].")
 		playsound(user.loc,'sound/weapons/pierce.ogg', rand(10,50), 1)
 		var/obj/item/trash/can/crushed_can = new /obj/item/trash/can(user.loc)
 		crushed_can.icon_state = icon_state
 		qdel(src)
 
-
-
-
-
-/*
-/obj/item/weapon/screwdriver/attack(mob/living/carbon/M as mob, mob/living/carbon/user as mob)
-    if(!istype(M) || user.a_intent == "help")
-        return ..()
-    if(user.zone_sel.selecting != O_EYES && user.zone_sel.selecting != BP_HEAD)
-        return ..()
-    if((CLUMSY in user.mutations) && prob(50))
-        M = user
-    return eyestab(M,user)
-*/
 
 
 /obj/item/weapon/reagent_containers/food/drinks/cans/cola
