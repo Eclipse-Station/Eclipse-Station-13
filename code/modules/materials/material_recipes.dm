@@ -51,6 +51,7 @@
 	recipes += new/datum/stack_recipe("rack", /obj/structure/table/rack, 1, time = 5, one_per_turf = 1, on_floor = 1)
 	recipes += new/datum/stack_recipe("closet", /obj/structure/closet, 2, time = 15, one_per_turf = 1, on_floor = 1)
 	recipes += new/datum/stack_recipe("canister", /obj/machinery/portable_atmospherics/canister, 10, time = 15, one_per_turf = 1, on_floor = 1)
+	recipes += new/datum/stack_recipe("tree tap", /obj/item/weapon/tree_tap, 2, time = 10, one_per_turf = 1, on_floor = 1)
 	recipes += new/datum/stack_recipe("cannon frame", /obj/item/weapon/cannonframe, 10, time = 15, one_per_turf = 0, on_floor = 0)
 	recipes += new/datum/stack_recipe("regular floor tile", /obj/item/stack/tile/floor, 1, 4, 20)
 	recipes += new/datum/stack_recipe("metal rod", /obj/item/stack/rods, 1, 2, 60)
@@ -100,6 +101,7 @@
 	recipes += new/datum/stack_recipe("Metal crate", /obj/structure/closet/crate, 10, time = 50, one_per_turf = 1)
 	recipes += new/datum/stack_recipe("knife grip", /obj/item/weapon/material/butterflyhandle, 4, time = 20, one_per_turf = 0, on_floor = 1, supplied_material = "[name]")
 	recipes += new/datum/stack_recipe("dark floor tile", /obj/item/stack/tile/floor/dark, 1, 4, 20)
+	recipes += new/datum/stack_recipe("Hammer Head", /obj/item/weapon/hammer_head, 15, time = 30, on_floor = 1, one_per_turf = 0)
 	recipes += new/datum/stack_recipe("roller bed", /obj/item/roller, 5, time = 30, on_floor = 1)
 	recipes += new/datum/stack_recipe("whetstone", /obj/item/weapon/whetstone, 2, time = 10)
 

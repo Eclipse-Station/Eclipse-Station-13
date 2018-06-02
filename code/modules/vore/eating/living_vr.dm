@@ -8,7 +8,7 @@
 	var/weight = 137					// Weight for mobs for weightgain system
 	var/weight_gain = 1 				// How fast you gain weight
 	var/weight_loss = 0.5 				// How fast you lose weight
-	var/tone = 25 						// AEIOU edit. Determine how MUSCLE GIRL you are. From 0 to 500
+//	var/tone = 25 						// AEIOU edit. Determine how MUSCLE GIRL you are. From 0 to 500
 	var/egg_type = "egg" 				// Default egg type.
 	var/feral = 0 						// How feral the mob is, if at all. Does nothing for non xenochimera at the moment.
 	var/reviving = 0					// Only used for creatures that have the xenochimera regen ability, so far.

@@ -52,7 +52,7 @@
 			cistern = !cistern
 			update_icon()
 			return
-			
+
 	if(istype(I, /obj/item/weapon/reagent_containers))
 		to_chat(user, "<span class='notice'>You start to [cistern ? "replace the lid on the cistern" : "lift the lid off the cistern"].</span>")
 		playsound(loc, 'sound/effects/stonedoor_openclose.ogg', 50, 1)
@@ -353,6 +353,12 @@ obj/structure/reagent_dispensers/verb/set_APTFT() //set amount_per_transfer_from
 				if(H.belt.clean_blood())
 					H.update_inv_belt(0)
 			H.clean_blood(washshoes)
+
+			var/obj/item/organ/external/head/head = H.organs_by_name[BP_HEAD]
+			if(istype(head))
+				head.forehead_graffiti = null
+				head.graffiti_style = null
+
 		else
 			if(M.wear_mask)						//if the mob is not human, it cleans the mask without asking for bitflags
 				if(M.wear_mask.clean_blood())
@@ -462,6 +468,8 @@ obj/structure/reagent_dispensers/verb/set_APTFT() //set amount_per_transfer_from
 	if(!Adjacent(user)) return		//Person has moved away from the sink
 
 	user.clean_blood()
+
+
 	if(ishuman(user))
 		user:update_inv_gloves()
 	for(var/mob/V in viewers(src, null))
@@ -517,6 +525,12 @@ obj/structure/reagent_dispensers/verb/set_APTFT() //set amount_per_transfer_from
 	if(user.loc != location) return				//User has moved
 	if(!I) return 								//Item's been destroyed while washing
 	if(user.get_active_hand() != I) return		//Person has switched hands or the item in their hands
+
+	if(istype(O, /obj/item/organ/external/head))
+		var/obj/item/organ/external/head/head = O
+		head.forehead_graffiti = null
+		head.graffiti_style = null
+
 
 	O.clean_blood()
 	user.visible_message( \
