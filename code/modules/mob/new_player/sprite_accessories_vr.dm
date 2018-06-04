@@ -1012,3 +1012,9 @@
 		color_blend_mode = ICON_MULTIPLY
 		body_parts = list(BP_TORSO,BP_GROIN)
 
+
+	heterochromia
+		name = "Heterochromia"
+		icon_state = "heterochromia"
+		body_parts = list(BP_HEAD)
+		species_allowed = list(SPECIES_HUMAN, SPECIES_UNATHI, SPECIES_TAJ, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_ZORREN_FLAT, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_XENOHYBRID, SPECIES_VASILISSAN, SPECIES_RAPALA, SPECIES_PROTEAN, SPECIES_ALRAUNE) //This lets all races use the default hairstyles.

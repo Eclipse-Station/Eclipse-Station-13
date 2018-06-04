@@ -1,6 +1,6 @@
 /mob/living/simple_animal/hostile/deathclaw/security
 	name = "Excessive Force"
-	desc = "Someone with too much time and even more money decided it would be a good idea to capture, tame and then teach this monster to defend high-security areas when the likelihood of civilian casualties is low due to reduced local population. If you're seeing this, you are not supposed to be here."
+	desc = "Yep, that's a deathclaw wearing security armor, you are NOT supposed to be here."
 	icon = 'modular_aeiou/icons/mob/aeioumobs.dmi'
 	icon_dead = "deathclaw-dead"
 	icon_living = "security_deathclaw"

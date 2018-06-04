@@ -1,7 +1,7 @@
 //Stolen from baystation for AEIOU like the dirty pirate i am. Code is from thasc. -Kates.
 
 /obj/effect/temporary/item_pickup_ghost
-	var/lifetime = 0.2 SECONDS
+	var/lifetime = 0.1 SECONDS
 
 /obj/effect/temporary/item_pickup_ghost/initialize(var/mapload, var/obj/item/picked_up)
 	. = ..(mapload, lifetime, picked_up.icon, picked_up.icon_state)
