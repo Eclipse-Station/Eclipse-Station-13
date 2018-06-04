@@ -92,9 +92,9 @@
 /datum/reagent/nutriment/honey
 	name = "Honey"
 	id = "honey"
-	description = "A golden yellow syrup, loaded with sugary sweetness."
-	taste_description = "sweetness"
-	nutriment_factor = 10
+	description = "A golden yellow syrup, loaded with sugary sweetness. Said to have curative abilities."
+	taste_description = "extreme sweetness"
+	nutriment_factor = 20
 	color = "#FFFF00"
 
 /datum/reagent/honey/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
@@ -117,6 +117,10 @@
 		else
 			M.sleeping = max(M.sleeping, 20)
 			M.drowsyness = max(M.drowsyness, 60)
+
+	M.adjustOxyLoss(-1 * removed)//aeiou edit. Honey sucks rn.
+	M.adjustToxLoss(-1 * removed)
+	M.heal_organ_damage(0.5 * removed, 0.5 * removed)
 
 /datum/reagent/nutriment/flour
 	name = "Flour"
@@ -659,10 +663,21 @@
 
 /datum/reagent/drink/milk/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
-	if(alien == IS_DIONA)
-		return
-	M.heal_organ_damage(0.5 * removed, 0)
+	switch(alien)
+		if(IS_SKRELL)
+			M.adjustToxLoss(0.1 * removed)
+			return
+		if(IS_DIONA)
+			return
+	M.heal_organ_damage(0.1 * removed, 0)
 	holder.remove_reagent("capsaicin", 10 * removed)
+
+
+/datum/reagent/drink/milk/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+	if(alien && alien == IS_SKRELL)
+		M.adjustToxLoss(2 * removed)
+		return
+	..()
 
 /datum/reagent/drink/milk/cream
 	name = "Cream"
@@ -1050,13 +1065,13 @@
 	adj_dizzy = -5
 	adj_drowsy = -3
 	adj_sleepy = -2
-	
+
 
 	glass_name = "Coffee Milkshake"
 	glass_desc = "An energizing coffee milkshake, perfect for hot days at work.."
 
 /datum/reagent/drink/milkshake/coffeeshake/overdose(var/mob/living/carbon/M, var/alien)
-	M.make_jittery(5) 
+	M.make_jittery(5)
 
 /datum/reagent/drink/rewriter
 	name = "Rewriter"
