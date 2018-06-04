@@ -16,6 +16,8 @@
 	fire_delay = 16
 	self_recharge = TRUE
 	recharge_time = 10 // every 20*2 seconds will get 20% power restored
+	fire_sound = 'sound/weapons/Kenetic_accel.ogg'
+	sound_override = 1
 
 	var/max_mod_capacity = 100
 	var/list/modkits = list()
