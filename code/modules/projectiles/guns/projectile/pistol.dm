@@ -304,7 +304,7 @@
 
 
 	firemodes = list(
-		list(mode_name="Quick", burst=1, fire_delay=0, burst_accuracy = list(0,0,-1,-2,-4), dispersion = list(0.0,0.6, 2.3, 4)),
+		list(mode_name="Quick", burst=1, fire_delay=0, burst_accuracy = list(-4.0), dispersion = list(-4.0)),
 		list(mode_name="Aimed", burst=1, burst_delay=2, fire_delay=4, move_delay=4),
 		)
 

@@ -19,6 +19,7 @@
 	//Alpha and beta lists are in their respective procs.
 	var/global/list/unique_gamma = list(
 		/obj/item/device/perfect_tele,
+		/obj/item/weapon/gun/projectile/shotgun/pump/rifle/pocketrifle,
 		/obj/item/weapon/bluespace_harpoon,
 		/obj/item/weapon/gun/energy/netgun,
 		/obj/item/weapon/gun/projectile/pirate,

@@ -3594,11 +3594,18 @@
 	icon_state = "skrellsnacks"
 	filling_color = "#A66829"
 	center_of_mass = list("x"=15, "y"=12)
-	nutriment_amt = 10
+	nutriment_amt = 5
 	nutriment_desc = list("mushroom" = 5, "salt" = 5)
 
 /obj/item/weapon/reagent_containers/food/snacks/skrellsnacks/New()
 	..()
+	reagents.add_reagent("fungalprotein", 8)//Aeiou edit
+	bitesize = 3
+	
+/obj/item/weapon/reagent_containers/food/snacks/aesirsalad/New()
+	..()
+	reagents.add_reagent("doctorsdelight", 8)
+	reagents.add_reagent("tricordrazine", 8)
 	bitesize = 3
 
 /obj/item/weapon/reagent_containers/food/snacks/unajerky

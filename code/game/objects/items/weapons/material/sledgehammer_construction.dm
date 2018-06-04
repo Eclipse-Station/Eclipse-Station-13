@@ -104,51 +104,6 @@
 		qdel(src)
 		return
 
-/*
-	if(iswrench(thing) && construction_stage >= 7)
-		user.visible_message("<span class='notice'>\The [user] whacks at \the [src] like a caveman, shaping the metal with \the [thing] into a rough handle, finishing it off.</span>")
-		playsound(src.loc, 'sound/weapons/smash5.ogg', 100, 1)
-		var/obj/item/weapon/material/twohanded/sledgehammer = new(get_turf(user))
-		var/put_in_hands
-		var/mob/M = src.loc
-		user.put_in_hands(sledgehammer)
-		qdel(src)
-		return
-
-*/
-
-
-/*
-
-/material/proc/build_wired_product(var/mob/living/user, var/obj/item/stack/used_stack, var/obj/item/stack/target_stack)
-	if(!wire_product)
-		user << "<span class='warning'>You cannot make anything out of \the [target_stack]</span>"
-		return
-	if(used_stack.get_amount() < 5 || target_stack.get_amount() < 1)
-		user << "<span class='warning'>You need five wires and one sheet of [display_name] to make anything useful.</span>"
-		return
-
-	used_stack.use(5)
-	target_stack.use(1)
-	user << "<span class='notice'>You attach wire to the [name].</span>"
-	var/obj/item/product = new wire_product(get_turf(user))
-	user.put_in_hands(product)
-
-	if(isscrewdriver(thing) && construction_stage >= 9)
-		user.visible_message("<span class='notice'>\The [user] secures \the [src] and finishes it off.</span>")
-		playsound(loc, 'sound/items/Screwdriver.ogg', 50, 1)
-		var/obj/item/weapon/gun/magnetic/coilgun = new(loc)
-		var/put_in_hands
-		var/mob/M = src.loc
-		if(istype(M))
-			put_in_hands = M == user
-			M.drop_from_inventory(src)
-		if(put_in_hands)
-			user.put_in_hands(coilgun)
-		qdel(src)
-		return
-*/
-
 
 	return ..()
 

@@ -100,12 +100,16 @@
 	var/shaded_charge = FALSE
 	var/ammo_x_offset = 2
 	var/ammo_y_offset = 0
-	var/can_flashlight = FALSE
+	var/can_flashlight = 0
+	var/obj/item/device/flashlight/F = null //added by aeiou
 	var/gun_light = FALSE
 	var/light_state = "flight"
 	var/light_brightness = 4
 	var/flight_x_offset = 0
 	var/flight_y_offset = 0
+	
+
+
 
 /obj/item/weapon/gun/CtrlClick(mob/user)
 	if(can_flashlight && ishuman(user) && src.loc == usr && !user.incapacitated(INCAPACITATION_ALL))
@@ -308,6 +312,7 @@
 		if(dna_lock && attached_lock && !attached_lock.controller_lock)
 			user << "<span class='notice'>You begin removing \the [attached_lock] from \the [src].</span>"
 			playsound(src, A.usesound, 50, 1)
+			update_icon()
 			if(do_after(user, 25 * A.toolspeed))
 				user << "<span class='notice'>You remove \the [attached_lock] from \the [src].</span>"
 				user.put_in_hands(attached_lock)
@@ -316,9 +321,123 @@
 				verbs -= /obj/item/weapon/gun/verb/remove_dna
 				verbs -= /obj/item/weapon/gun/verb/give_dna
 				verbs -= /obj/item/weapon/gun/verb/allow_dna
+	
+	if(istype(A, /obj/item/device/flashlight/maglight))
+		var/obj/item/device/flashlight/maglight/S = A
+		if(can_flashlight)
+			if(!F)
+				user.drop_item()
+				A.loc = src
+				F = A
+				user << "<span class='notice'>You click [S] into place on [src].</span>"
+				update_icon()
+			else
+				user << "<span class='notice'>[src] already has a light.</span>"
+				
+
+	if(istype(A, /obj/item/weapon/screwdriver))
+		if(F)
+			for(var/obj/item/device/flashlight/maglight/S in src)
+				user.put_in_hands(F)
+				F = null
+				user << "<span class='notice'>You unscrew the seclite from [src].</span>"
+				update_icon()
+
+
+/*		if(F)
+			for(var/obj/item/device/flashlight/maglight/S in src)
+			user.drop_item()
+			bcell = null
+			user << "<span class='notice'>You remove the cell from the [src].</span>"
+			status = 0
+			update_icon()
+		return
+		
+		qdel(src)*/
+
+
+/*
+/obj/item/weapon/melee/baton/attackby(obj/item/weapon/W, mob/user)
+	if(istype(W, /obj/item/weapon/cell))
+		if(istype(W, /obj/item/weapon/cell/device))
+			if(!bcell)
+				user.drop_item()
+				W.loc = src
+				bcell = W
+				user << "<span class='notice'>You install a cell in [src].</span>"
+				update_icon()
+			else
+				user << "<span class='notice'>[src] already has a cell.</span>"
 		else
-			user << "<span class='warning'>\The [src] is not accepting modifications at this time.</span>"
-	..()
+			user << "<span class='notice'>This cell is not fitted for [src].</span>"
+
+/obj/item/weapon/melee/baton/attack_hand(mob/user as mob)
+	if(user.get_inactive_hand() == src)
+		if(bcell)
+			bcell.update_icon()
+			user.put_in_hands(bcell)
+			bcell = null
+			user << "<span class='notice'>You remove the cell from the [src].</span>"
+			status = 0
+			update_icon()
+			return
+		..()
+	else
+		return ..()
+		*/
+
+
+
+/obj/item/weapon/gun/verb/toggle_gunlight()
+		set name = "Adjust light"
+		set category = "Object"
+		set desc = "Click to toggle your weapon's attached flashlight."
+		set src in usr
+
+
+/obj/item/weapon/gun/proc/turn_on_gunlight()
+
+	if(!F)
+		return
+
+	var/mob/living/carbon/human/user = usr
+	if(!isturf(user.loc))
+		user << "<span class='warning'>You cannot turn the light on while in this [user.loc]!</span>"
+	F.on = !F.on
+	user << "<span class='notice'>You toggle the gunlight [F.on ? "on":"off"].</span>"
+
+	playsound(user, 'sound/weapons/empty.ogg', 100, 1)
+
+	return
+
+
+
+
+
+/*
+		if(flight)
+			if(bcell)
+				bcell.update_icon()
+				user.put_in_hands(bcell)
+				bcell = null
+				user << "<span class='notice'>You remove the cell from the [src].</span>"
+				status = 0
+				update_icon()
+				return
+			..()	
+
+	if(istype(A, /obj/item/device/flashlight/seclite)
+		if(can_flashlight)
+			if(!gun_light)
+				user.drop_item()
+				W.loc = src
+				bcell = W
+				user << "<span class='notice'>You install a flashlight on the [src].</span>"
+				update_icon()
+			else
+				user << "<span class='notice'>The [src] already has a flashlight.</span>"
+*/
+
 
 /obj/item/weapon/gun/emag_act(var/remaining_charges, var/mob/user)
 	if(dna_lock && attached_lock.controller_lock)
