@@ -34,7 +34,7 @@
 	name = "Bluespace jumpsuit"
 	id = "bsjumpsuit"
 	req_tech = list(TECH_BLUESPACE = 2, TECH_MATERIAL = 3, TECH_POWER = 2)
-	materials = list(DEFAULT_WALL_MATERIAL = 4000, "glass" = 4000)
+	materials = list(DEFAULT_WALL_MATERIAL = 4000, "glass" = 4000, "uranium" = 2000)
 	build_path = /obj/item/clothing/under/bluespace
 	sort_string = "TAAAC"
 

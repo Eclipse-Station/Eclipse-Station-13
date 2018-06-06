@@ -62,7 +62,7 @@
 	load_method = SINGLE_CASING|SPEEDLOADER
 	action_sound = 'sound/weapons/riflebolt.ogg'
 
-/obj/item/weapon/gun/projectile/shotgun/pump/rifle/pocketrifle
+/obj/item/weapon/gun/projectile/shotgun/pump/rifle/pocketrifle //aeiou addition
 	name = "pocket rifle"
 	desc = "What the hell is this? It look like someone sawn a bolt action into 4 parts! Looks more usefull as a club than anything.. Uses 7.62mm rounds."
 	item_state = "pocketrifle"
@@ -72,8 +72,9 @@
 	max_shells = 3
 	force = 10
 	caliber = "7.62mm"
-	accuracy = -1
-	origin_tech = list(TECH_COMBAT = 2)// Old as shit rifle doesn't have very good tech.
+	accuracy = -20
+	dispersion = 30 //TEST
+	origin_tech = list(TECH_COMBAT = 2)
 	ammo_type = /obj/item/ammo_casing/a762
 	load_method = SINGLE_CASING
 	action_sound = 'sound/weapons/riflebolt.ogg'
@@ -98,7 +99,7 @@
 
 
 //Perfect for your slavic snipers.
-/obj/item/weapon/gun/projectile/shotgun/pump/rifle/scoped
+/obj/item/weapon/gun/projectile/shotgun/pump/rifle/scoped//aeiou addition
 	name = "scoped bolt action rifle"
 	desc = "A reproduction of an almost ancient weapon design from the early 20th century. It's still popular among hunters and collectors due to its reliability. This one has a decent scope fitted on. Uses 7.62mm rounds."
 	icon = 'icons/obj/gun_aeiou.dmi'
@@ -107,8 +108,8 @@
 	fire_sound = 'sound/weapons/rifleshot.ogg'
 	max_shells = 5
 	caliber = "7.62mm"
-	accuracy = -1
-	scoped_accuracy = 6
+	accuracy = -15
+	scoped_accuracy = 15
 	origin_tech = list(TECH_COMBAT = 1)// Old as shit rifle doesn't have very good tech.
 	ammo_type = /obj/item/ammo_casing/a762
 	load_method = SINGLE_CASING|SPEEDLOADER
@@ -120,3 +121,4 @@
 	set popup_menu = 1
 
 	toggle_scope(2.0)
+
