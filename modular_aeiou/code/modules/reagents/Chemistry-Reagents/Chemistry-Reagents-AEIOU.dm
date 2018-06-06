@@ -26,3 +26,28 @@
 	reagent_state = LIQUID
 	color = "#C8A5DC"
 	taste_description = "ash"
+
+/datum/reagent/purplesap
+	name = "Purple sap"
+	id = "purplesap"
+	description = "Purple liquid. It is very sticky and smells of amonia."
+	color = "#7a48a0"
+	taste_description = "Amonia"
+
+/datum/reagent/hannoa/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+	..()
+
+	var/effective_dose = dose
+
+	if(effective_dose < 2)
+		if(effective_dose == metabolism * 2 || prob(5))
+			M.emote("yawn")
+		else if(effective_dose < 5)
+			M.eye_blurry = max(M.eye_blurry, 10)
+		else if(effective_dose < 20)
+			if(prob(50))
+				M.Weaken(2)
+			M.drowsyness = max(M.drowsyness, 20)
+		else
+			M.sleeping = max(M.sleeping, 20)
+			M.drowsyness = max(M.drowsyness, 60)

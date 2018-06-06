@@ -202,35 +202,60 @@
 /obj/structure/flora/tree/sif //AEIOU edit. The tree gives you tap.
 	name = "glowing tree"
 	desc = "It's a tree, except this one seems quite alien.  It glows a deep blue."
-	icon = 'icons/obj/flora/deadtrees.dmi'
+	icon = 'modular_aeiou/icons/obj/flora/deadtrees_aeiou.dmi'
 	icon_state = "tree_sif"
 	base_state = "tree_sif"
 	product = /obj/item/stack/material/log/sif
 	var/obj/item/weapon/t_t = null
-	var/tap = 0
-	var/sap = 1
+	var/tap = 0 //Actually a variable used to start production or stop it. - AEIOU
+	var/sap = 1 //The actual liquid. Trees aren't reagents containers so i hacked this quickly.
 	var/max_sap = 15
-	var/sap_amount = 0
+	var/sap_amount = 0 //placeholder
+	var/sap_type = 1//this is a sort of variable used for appearance and reagent selection.
+
+/obj/structure/flora/tree/sif/New()
+	sap_type = rand(1,3)
+	update_icon()
+	..()
+	processing_objects |= src
 
 
 /obj/structure/flora/tree/sif/attackby(var/obj/item/I, var/mob/user)
 	if(istype(I, /obj/item/weapon/reagent_containers/))
-		if(tap)
-
-		else
+		if(!tap)
 			user << "<span class='notice'>There is no tap in \the [src].</span>"
-		if(!sap)
+			return
+		if(!sap && tap)
 			user << "<span class='notice'>There is no sap in \the [src].</span>"
 			return
-		var/obj/item/weapon/reagent_containers/G = I
-		var/transferred = min(G.reagents.maximum_volume - G.reagents.total_volume, sap)
-		sap -= transferred
-		G.reagents.add_reagent("phoron",/*"aliensap",*/ transferred)
-		G.reagents.add_reagent("aliensap", transferred)//[transferred]
-		sap_amount = transferred * 2
-//		reagents.add_reagent("coffee", 1)
-		user.visible_message("<span class='notice'>[user] collects [sap_amount] from \the [src] into \the [G].</span>", "<span class='notice'>You collect [sap_amount] units of sap from \the [src] into \the [G].</span>")
-		return 1
+		if(sap && tap)
+			if(sap_type == 1)
+				var/obj/item/weapon/reagent_containers/G = I//phoron and myelamine internal bleeding sap.
+				var/transferred = min(G.reagents.maximum_volume - G.reagents.total_volume, sap)
+				sap -= transferred
+				G.reagents.add_reagent("phoron", transferred)//badly done yeah. Ideally, you would have a list of reagents to pull from then to add.
+				G.reagents.add_reagent("aliensap", transferred)
+				sap_amount = transferred * 2
+				user.visible_message("<span class='notice'>[user] collects [sap_amount] from \the [src] into \the [G].</span>", "<span class='notice'>You collect [sap_amount] units of sap from \the [src] into \the [G].</span>")
+				return 1
+			if(sap_type == 2)
+				var/obj/item/weapon/reagent_containers/G = I //Long lasting brute healer.
+				var/transferred = min(G.reagents.maximum_volume - G.reagents.total_volume, sap)
+				sap -= transferred
+				G.reagents.add_reagent("phoron", transferred)
+				G.reagents.add_reagent("purplesap", transferred)
+				sap_amount = transferred * 1
+				user.visible_message("<span class='notice'>[user] collects [sap_amount] from \the [src] into \the [G].</span>", "<span class='notice'>You collect [sap_amount] units of sap from \the [src] into \the [G].</span>")
+				return 1
+			if(sap_type == 3)
+				var/obj/item/weapon/reagent_containers/G = I
+				var/transferred = min(G.reagents.maximum_volume - G.reagents.total_volume, sap)
+				sap -= transferred
+				G.reagents.add_reagent("phoron", transferred)
+				G.reagents.add_reagent("aliensap", transferred)
+				sap_amount = transferred * 2
+				user.visible_message("<span class='notice'>[user] collects [sap_amount] from \the [src] into \the [G].</span>", "<span class='notice'>You collect [sap_amount] units of sap from \the [src] into \the [G].</span>")
+				return 1
 
 	if(istype(I, /obj/item/weapon/tree_tap))
 		if(!tap)
@@ -254,7 +279,7 @@
 
 /obj/structure/flora/tree/sif/proc/produce_sap()
 	if(tap)
-		sap = (sap * 1.01)
+		sap = (sap + 0.05)
 		return
 
 /obj/structure/flora/tree/sif/process()
@@ -267,16 +292,39 @@
 		user <<"<span class='notice'>[src] has a tap wedged in.</span>"
 	if(!tap)
 		user <<"<span class='notice'>[src] looks health and normal.</span>"
+	if(sap_type == 1)
+		user <<"<span class='notice'>[src] 1</span>"
+	if(sap_type == 2)
+		user <<"<span class='notice'>[src] 2</span>"
+	if(sap_type == 3)
+		user <<"<span class='notice'>[src] 3</span>"
 
-
+/*
 /obj/structure/flora/tree/sif/New()
 	update_icon()
 	..()
 	processing_objects |= src
-
+*/
 
 /obj/structure/flora/tree/sif/update_icon()
-	set_light(5, 1, "#33ccff")
-	var/image/glow = image(icon = 'icons/obj/flora/deadtrees.dmi', icon_state = "[icon_state]_glow")
+	if(sap_type == 1)//Phoron & Alien sap for myelamine
+		icon_state = "tree_sif1"
+		update_icon()
+	if(sap_type == 2)//purple sap
+		icon_state = "tree_sif2"
+		update_icon()
+	if(sap_type == 3)
+		icon_state = "tree_sif3"
+		update_icon()
+	else
+		icon_state = "tree_sif"
+
+	if(sap_type == 1)
+		set_light(5, 1, "#33ccff")//basic sap
+	else if(sap_type == 2)
+		set_light(5, 1, "#7a48a0")//Purple sap
+	else
+		set_light(5, 1, "#33ccff")//basic sap
+	var/image/glow = image(icon = 'modular_aeiou/icons/obj/flora/deadtrees_aeiou.dmi', icon_state = "[icon_state]_glow")
 	glow.plane = PLANE_LIGHTING_ABOVE
 	overlays = list(glow)

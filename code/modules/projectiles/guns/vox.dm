@@ -51,45 +51,15 @@
 /obj/item/weapon/gun/launcher/spikethrower/pistol//same but smaller
 	name = "spike thrower"
 	desc = "A vicious alien projectile weapon. Parts of it quiver gelatinously, as though the thing is insectile and alive. It fits in one hand."
-	max_spikes = 3
-	w_class = ITEMSIZE_HUGE
+	max_spikes = 2
+	w_class = ITEMSIZE_NORMAL
 	spikes = 2
-	release_force = 30
+	release_force = 20
 	icon = 'icons/obj/gun_aeiou.dmi'
-	icon_state = "dart_thrower"
+	icon_state = "dart_thrower2"
 	item_state = "dart_thrower"
 	fire_sound_text = "a strange noise"
 	fire_sound = 'sound/weapons/bladeslice.ogg'
-
-/obj/item/weapon/gun/launcher/spikethrower/pistol/New()
-	..()
-	processing_objects.Add(src)
-	last_regen = world.time
-
-/obj/item/weapon/gun/launcher/spikethrower/pistol/Destroy()
-	processing_objects.Remove(src)
-	..()
-
-/obj/item/weapon/gun/launcher/spikethrower/pistol/process()
-	if(spikes < max_spikes && world.time > last_regen + spike_gen_time)
-		spikes++
-		last_regen = world.time
-		update_icon()
-
-/obj/item/weapon/gun/launcher/spikethrower/pistol/examine(mob/user)
-	..(user)
-	user << "It has [spikes] spike\s remaining."
-
-/obj/item/weapon/gun/launcher/spikethrower/pistol/update_icon()
-	icon_state = "spikethrower[spikes]"
-
-/obj/item/weapon/gun/launcher/spikethrower/pistol/update_release_force()
-	return
-
-/obj/item/weapon/gun/launcher/spikethrower/pistol/consume_next_projectile()
-	if(spikes < 1) return null
-	spikes--
-	return new /obj/item/weapon/spike(src)
 
 
 /*

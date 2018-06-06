@@ -3,6 +3,7 @@
 	// Except the thing is SS13 code in a shitty C like language!
 	// Why would you ever want to build this?!
 	//Someone tossed this at me, hopefully it will start working for AEIOU- Kates
+	//this makes VSC work as a compiler. Ctrl Shift B to compile or go into the tasks folder and press 'runbuildtask...'
 	"version": "0.1.0",
 	"showOutput": "always",
 	"tasks":[
@@ -12,7 +13,7 @@
 			"isBuildCommand": true,
 			"isShellCommand": false,
 			"command": "C:/Program Files (x86)/BYOND/bin/dm.exe",
-			"args": ["${workspaceRoot}/AEIOUStation13.dme"],
+			"args": ["${workspaceRoot}/vorestation.dme"],
 			"problemMatcher": {
 				"owner": "dm",
 				"fileLocation": ["relative", "${workspaceRoot}"],
