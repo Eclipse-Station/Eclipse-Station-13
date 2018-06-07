@@ -267,7 +267,7 @@
 	icon = 'icons/obj/trash_piles.dmi'
 	icon_state = "randompile"
 	spawn_types = list(/mob/living/simple_animal/mouse)
-	simultaneous_spawns = 1
+	simultaneous_spawns = 0 //AEIOU edit. Lowers spawnrate. Hopefully.
 	destructible = 1
 	spawn_delay = 1 HOUR
 
