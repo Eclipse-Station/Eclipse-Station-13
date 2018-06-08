@@ -1,7 +1,8 @@
-/obj/item/weapon/gun/projectile/automatic/pistol/usp
+/obj/item/weapon/gun/projectile/pistol/usp
 	name = "\improper P12 Compact"
 	desc = "Renowned on Earth for its legendary reliability, this .45 handgun is still in use in some militaries throughout the galaxy. Has a threaded barrel to mount a suppressor. Has an accessory rail to mount a flashlight. Rated for +P ammunition."
 	origin_tech = "combat=4;materials=2;engineering=4"
+	icon = 'modular_aeiou/icons/obj/gun_aeiou.dmi'
 	icon_state = "usp"
 	caliber = ".45"
 	load_method = MAGAZINE
@@ -15,7 +16,7 @@
 	w_class = 2
 //	fire_sound = 'sound/weapons/pistol_glock17_1.ogg'
 
-/obj/item/weapon/gun/projectile/automatic/pistol/usp/ui_action_click()
+/obj/item/weapon/gun/projectile/pistol/usp/ui_action_click()
 	toggle_gunlight()
 
 /*//Disabled until suppressed and magazine checks are done.
