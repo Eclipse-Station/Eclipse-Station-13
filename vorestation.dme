@@ -2909,7 +2909,6 @@
 #include "maps\RandomZLevels\carpfarm.dm"
 #include "maps\RandomZLevels\listeningpost.dm"
 #include "maps\RandomZLevels\snowfield.dm"
-#include "maps\RandomZLevels\zoo.dm"
 #include "maps\southern_cross\southern_cross_jobs.dm"
 #include "maps\southern_cross\southern_cross_jobs_vr.dm"
 #include "maps\southern_cross\items\encryptionkey_sc.dm"
