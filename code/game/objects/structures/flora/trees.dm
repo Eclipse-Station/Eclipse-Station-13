@@ -203,8 +203,8 @@
 	name = "glowing tree"
 	desc = "It's a tree, except this one seems quite alien.  It glows a deep blue."
 	icon = 'modular_aeiou/icons/obj/flora/deadtrees_aeiou.dmi'
-	icon_state = "tree_sif"
-	base_state = "tree_sif"
+//	icon_state = "tree_sif1"
+//	base_state = "tree_sif1"
 	product = /obj/item/stack/material/log/sif
 	var/obj/item/weapon/t_t = null
 	var/tap = 0 //Actually a variable used to start production or stop it. - AEIOU
@@ -212,12 +212,7 @@
 	var/max_sap = 15
 	var/sap_amount = 0 //placeholder
 	var/sap_type = 1//this is a sort of variable used for appearance and reagent selection.
-
-/obj/structure/flora/tree/sif/New()
-	sap_type = rand(1,3)
-	update_icon()
-	..()
-	processing_objects |= src
+	var/debug_glow = 0//to remove
 
 
 /obj/structure/flora/tree/sif/attackby(var/obj/item/I, var/mob/user)
@@ -306,25 +301,30 @@
 	processing_objects |= src
 */
 
-/obj/structure/flora/tree/sif/update_icon()
+/obj/structure/flora/tree/sif/New()
+	sap_type = rand(1,3)
+//	..()
+//	processing_objects |= src
 	if(sap_type == 1)//Phoron & Alien sap for myelamine
 		icon_state = "tree_sif1"
-		update_icon()
 	if(sap_type == 2)//purple sap
 		icon_state = "tree_sif2"
-		update_icon()
 	if(sap_type == 3)
 		icon_state = "tree_sif3"
-		update_icon()
-	else
-		icon_state = "tree_sif"
+//	else
+//		icon_state = "tree_sif"
+	update_icon()
+	processing_objects |= src
+	
 
+/obj/structure/flora/tree/sif/update_icon()
 	if(sap_type == 1)
 		set_light(5, 1, "#33ccff")//basic sap
-	else if(sap_type == 2)
+	if(sap_type == 2)
 		set_light(5, 1, "#7a48a0")//Purple sap
-	else
-		set_light(5, 1, "#33ccff")//basic sap
+	if(sap_type == 3)
+		set_light(5, 1, "#33ccff")//third sap
 	var/image/glow = image(icon = 'modular_aeiou/icons/obj/flora/deadtrees_aeiou.dmi', icon_state = "[icon_state]_glow")
 	glow.plane = PLANE_LIGHTING_ABOVE
+	debug_glow = glow
 	overlays = list(glow)

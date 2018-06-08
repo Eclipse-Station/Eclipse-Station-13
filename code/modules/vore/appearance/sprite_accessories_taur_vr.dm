@@ -377,6 +377,20 @@
 	icon_state = "drake_s"
 	extra_overlay = "drake_markings"
 
+/datum/sprite_accessory/tail/taur/naga
+	name = "Naga (Taur)"
+	icon_state = "naga_s"
+	suit_sprites = 'icons/mob/taursuits_naga_vr.dmi'
+
+/*
+/datum/sprite_accessory/tail/taur/naga/naga_aeiou //AEIOU edit. Stolen from citadel.
+	name = "Alternate naga (Taur)"
+	icon = 'modular_aeiou/icons/mob/vore/taurs_aeiou.dmi'
+	icon_state = "naga_aeiou_s"
+	extra_overlay = "naga_aeiou_markings"
+	suit_sprites = 0
+*/
+
 /datum/sprite_accessory/tail/taur/otie
 	name = "Otie (Taur)"
 	icon_state = "otie_s"
