@@ -55,7 +55,7 @@
 	w_class = ITEMSIZE_NORMAL
 	spikes = 2
 	release_force = 20
-	icon = 'icons/obj/gun_aeiou.dmi'
+	icon = 'modular_aeiou/icons/obj/gun_aeiou.dmi'
 	icon_state = "dart_thrower2"
 	item_state = "dart_thrower"
 	fire_sound_text = "a strange noise"

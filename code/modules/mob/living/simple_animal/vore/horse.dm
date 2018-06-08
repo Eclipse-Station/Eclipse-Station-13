@@ -35,3 +35,4 @@
 /mob/living/simple_animal/horse
 	vore_active = 1
 	vore_icons = SA_ICON_LIVING
+	vore_default_mode = DM_HOLD
