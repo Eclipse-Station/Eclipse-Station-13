@@ -137,6 +137,7 @@
 		L.update_icon()
 	playsound(user.loc, 'sound/weapons/flipblade.ogg', 50, 1)
 	update_icon()
+	update_held_icon()
 
 /obj/item/ammo_magazine/attack_self(mob/user)
 	if(!stored_ammo.len)
