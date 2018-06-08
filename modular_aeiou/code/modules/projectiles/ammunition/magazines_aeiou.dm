@@ -2,7 +2,7 @@
     name = "handgun magazine (P12 Compact)"
     desc = "A special magazine designated to fit the P12 pistol. Uses .45 ammo."
     icon_state = "uspmag-12"
-    icon = 'icons/obj/gun_aeiou.dmi'
+    icon = 'modular_aeiou/icons/obj/ammo_aeiou.dmi'
     ammo_type = /obj/item/ammo_casing/a45
     caliber = ".45"
     max_ammo = 12

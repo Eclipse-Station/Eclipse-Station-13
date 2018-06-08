@@ -493,6 +493,7 @@
 	to_chat(M, "<span class='notice'>You move the stock on \the [src].</span>")
 	unfolded_stock = !unfolded_stock
 	update_held_icon()
+	update_icon()
 
 	if(unfolded_stock == 1)
 		accuracy = 15
@@ -507,18 +508,18 @@
 	..()
 	if(ammo_magazine && unfolded_stock)
 		icon_state = "protektclosed-loaded"
-		update_held_icon()	
+//		update_held_icon()	
 		return 
 	else if(unfolded_stock)
 		icon_state = "protektopen-empty"
-		update_held_icon()
+//		update_held_icon()
 		return 
 	else if(ammo_magazine)
 		icon_state = "protektfclosed-loaded"
-		update_held_icon()
+//		update_held_icon()
 		return 
 	else
 		icon_state = "protektfopen-empty"
-		update_held_icon()
+//		update_held_icon()
 		return 
-	update_held_icon()
+//	update_held_icon()
