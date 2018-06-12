@@ -114,12 +114,14 @@
 					I = produce_beta_item()
 				else if(luck <= chance_alpha+chance_beta+chance_gamma)
 					I = produce_gamma_item()
+					rare_trash_found++//aeiou edit
 
 				//We either have an item to hand over or we don't, at this point!
 				if(I)
 					searchedby += user.ckey
 					I.forceMove(get_turf(src))
 					to_chat(H,"<span class='notice'>You found \a [I]!</span>")
+					trash_piles_searched++//aeiou edit
 
 	else
 		return ..()
@@ -291,6 +293,7 @@
 	. = ..()
 	var/atom/A = get_holder_at_turf_level(src)
 	A.visible_message("[.] crawls out of \the [src].")
+	mouse_spawned_shift++//aeiou edit
 
 /obj/structure/mob_spawner/mouse_nest/get_death_report(var/mob/living/L)
 	..()

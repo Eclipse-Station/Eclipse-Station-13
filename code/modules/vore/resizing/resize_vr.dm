@@ -312,6 +312,7 @@ var/const/RESIZE_A_SMALLTINY = (RESIZE_SMALL + RESIZE_TINY) / 2
 							I.take_damage(calculated_damage, 0) // 5 damage min, 26.25 damage max, depending on size & RNG. If they're only stepped on once, the damage will (probably not...) heal over time.
 						Ht.drip(0.1)
 						add_attack_logs(src,tmob,"Crushed underfoot (run, about [calculated_damage] damage)")
+						number_people_walked_over++
 
 				//Walking on I_HURT
 				else

@@ -2,8 +2,8 @@
 	name = "Griffin mask"
 	desc = "Twoooo! This griffon shaped mask is the iconic one from the griffin criminal mastermind! It seems to house some electronics."
 	icon_state = "owl1"
-	body_parts_covered = FACE|EYES
-	flags_inv = "HIDEEARS|HIDEEYES|HIDEFACE"
+//	body_parts_covered = FACE|EYES
+//	flags_inv = "HIDEEARS|HIDEEYES|HIDEFACE"
 	var/owl_voice_enabled = 0
 	var/list/sound_to_plays = list(
 		'sound/voice/chatter/griffin_1.ogg',

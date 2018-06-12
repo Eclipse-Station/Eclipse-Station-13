@@ -461,5 +461,11 @@ var/global/datum/controller/gameticker/ticker
 	log_game("Antagonists at round end were...")
 	for(var/i in total_antagonists)
 		log_game("[i]s[total_antagonists[i]].")
+		
+	for(var/i = 1 to 6)
+		world << "<b>Shift facts!</b>"
+		var/line = pick_n_take(fluff_info)
+		world << line
+	
 
 	return 1

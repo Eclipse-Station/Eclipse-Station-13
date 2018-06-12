@@ -149,6 +149,9 @@
 /mob/proc/movement_delay()
 	return 0
 
+/mob/proc/get_item_by_slot(slot_id)
+	return null
+
 /mob/proc/Life()
 //	if(organStructure)
 //		organStructure.ProcessOrgans()

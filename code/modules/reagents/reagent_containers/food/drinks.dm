@@ -27,6 +27,9 @@
 	playsound(loc,"canopen", rand(10,50), 1)
 	user << "<span class='notice'>You open [src] with an audible pop!</span>"
 	flags |= OPENCONTAINER
+	cans_opened++//aeiou edit
+
+
 
 /obj/item/weapon/reagent_containers/food/drinks/attack(mob/M as mob, mob/user as mob, def_zone)
 	if(force && !(flags & NOBLUDGEON) && user.a_intent == I_HURT)
