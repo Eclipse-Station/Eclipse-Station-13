@@ -424,6 +424,7 @@
 	if(last_sound < world.time + 1)
 		playsound(src, 'sound/machines/disposalflush.ogg', 50, 0, 0)
 		last_sound = world.time
+		disposals_flush_shift++ 
 	sleep(5) // wait for animation to finish
 
 
