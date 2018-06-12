@@ -287,12 +287,15 @@
 		user <<"<span class='notice'>[src] has a tap wedged in.</span>"
 	if(!tap)
 		user <<"<span class='notice'>[src] looks health and normal.</span>"
-	if(sap_type == 1)
+
+/*	if(sap_type == 1)//Debug stuff. Don't turn on.
 		user <<"<span class='notice'>[src] 1</span>"
 	if(sap_type == 2)
 		user <<"<span class='notice'>[src] 2</span>"
 	if(sap_type == 3)
 		user <<"<span class='notice'>[src] 3</span>"
+*/
+
 
 /*
 /obj/structure/flora/tree/sif/New()
@@ -307,10 +310,13 @@
 //	processing_objects |= src
 	if(sap_type == 1)//Phoron & Alien sap for myelamine
 		icon_state = "tree_sif1"
+		desc = "It's a tree, except this one seems quite alien.  It glows a deep blue."
 	if(sap_type == 2)//purple sap
 		icon_state = "tree_sif2"
+		desc = "It's a tree, except this one seems quite alien.  It glows a deep violet."
 	if(sap_type == 3)
 		icon_state = "tree_sif3"
+		desc = "It's a tree, except this one seems quite alien.  It glows a deep blue."
 //	else
 //		icon_state = "tree_sif"
 	update_icon()
