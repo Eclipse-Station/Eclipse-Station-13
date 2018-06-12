@@ -1105,6 +1105,11 @@
 		icon_state = "facial_dorsalfrill"
 		species_allowed = list("Unathi", "Pastrian")
 
+	una_dorsalfinl//aeiou edit
+		name = "Unathi Dorsal Fin"
+		icon = 'modular_aeiou/icons/mob/human_face_aeiou.dmi'
+		icon_state = "facial_dorsalfin"
+		species_allowed = list("Unathi", "Pastrian")
 
 //Teshari things
 	teshari_beard
