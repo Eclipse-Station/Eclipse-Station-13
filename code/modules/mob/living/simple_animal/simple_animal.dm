@@ -601,7 +601,7 @@
 	ai_log("bullet_act() I was shot by: [Proj.firer]",2)
 
 	/* VOREStation Edit - Ace doesn't like bonus SA damage. */
-	//AEIOU Edit: WELL I DO. ^Spitzer
+	//AEIOU Edit: WELL, I DO. ^Spitzer
 	//Projectiles with bonus SA damage
 	if(!Proj.nodamage)
 		if(!Proj.SA_vulnerability || Proj.SA_vulnerability == intelligence_level)
