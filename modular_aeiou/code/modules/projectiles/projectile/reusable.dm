@@ -39,7 +39,7 @@
 	icon = 'modular_aeiou/icons/obj/projectile_aeiou.dmi'
 	icon_state = "bb-steel"
 	damage = 3
-	agony = 25		//they sting to get hit by, even at post-ricochet velocities
+	agony = 15		//they sting to get hit by, even at post-ricochet velocities
 	SA_bonus_damage = 37		//40 damage against simplemobs
 	SA_vulnerability = SA_ANIMAL
 	fire_sound = 'sound/weapons/gunshot_air_rifle.ogg'
