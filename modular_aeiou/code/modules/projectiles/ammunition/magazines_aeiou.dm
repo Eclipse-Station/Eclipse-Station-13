@@ -11,3 +11,8 @@
 /obj/item/ammo_magazine/mus45P12/empty
 	initial_ammo = 0
 
+/obj/item/ammo_magazine/internal/minigun
+	name = "gatling gun fusion core"
+	ammo_type = /obj/item/ammo_casing/caseless/laser/gatling
+	caliber = "gatling"
+	max_ammo = 5000

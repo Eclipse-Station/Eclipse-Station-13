@@ -53,10 +53,11 @@
 
 	var/automatic = 0
 	var/burst = 1
+	var/burst_size = 1	//aeiou tg stole
 	var/fire_delay = 6 	//delay after shooting before the gun can be used again
 	var/burst_delay = 2	//delay between shots, if firing in bursts
 	var/move_delay = 1
-	var/sound_override = 0 //aeiou edit
+
 	var/fire_sound = 'sound/weapons/Gunshot.ogg'
 	var/fire_sound_text = "gunshot"
 	var/fire_anim = null
@@ -108,8 +109,10 @@
 	var/flight_x_offset = 0
 	var/flight_y_offset = 0
 	
+//AEIOU Adds
 
-
+	var/suppressed = 0	
+	var/sound_override = 0 //aeiou edit
 
 /obj/item/weapon/gun/CtrlClick(mob/user)
 	if(can_flashlight && ishuman(user) && src.loc == usr && !user.incapacitated(INCAPACITATION_ALL))
@@ -354,37 +357,6 @@
 		return
 		
 		qdel(src)*/
-
-
-/*
-/obj/item/weapon/melee/baton/attackby(obj/item/weapon/W, mob/user)
-	if(istype(W, /obj/item/weapon/cell))
-		if(istype(W, /obj/item/weapon/cell/device))
-			if(!bcell)
-				user.drop_item()
-				W.loc = src
-				bcell = W
-				user << "<span class='notice'>You install a cell in [src].</span>"
-				update_icon()
-			else
-				user << "<span class='notice'>[src] already has a cell.</span>"
-		else
-			user << "<span class='notice'>This cell is not fitted for [src].</span>"
-
-/obj/item/weapon/melee/baton/attack_hand(mob/user as mob)
-	if(user.get_inactive_hand() == src)
-		if(bcell)
-			bcell.update_icon()
-			user.put_in_hands(bcell)
-			bcell = null
-			user << "<span class='notice'>You remove the cell from the [src].</span>"
-			status = 0
-			update_icon()
-			return
-		..()
-	else
-		return ..()
-		*/
 
 
 
