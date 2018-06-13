@@ -446,6 +446,9 @@
 	// VOREStation Start
 	if(ooc_notes)
 		msg += "<span class = 'deptradio'>OOC Notes:</span> <a href='?src=\ref[src];ooc_notes=1'>\[View\]</a>\n"
+
+	msg += "<span class='deptradio'><a href='?src=\ref[src];vore_prefs=1'>\[Mechanical Vore Preferences\]</a></span>\n"
+
 	// VOREStation End
 	msg += "*---------*</span><br>"
 	msg += applying_pressure
