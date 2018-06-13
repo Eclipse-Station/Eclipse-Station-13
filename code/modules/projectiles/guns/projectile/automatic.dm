@@ -431,10 +431,12 @@
 	if(!ignore_inhands)
 		update_held_icon()
 
+
+/*
 /obj/item/weapon/gun/projectile/automatic/ak47 //aeiou addition
 	name = "\improper Kalachnikova"
 	desc = "What could be more iconic than the Kalachnikov? An ancient but rugged and powerful rifle made by the billion. Uses 7,62 mm rounds."
-	icon = 'icons/obj/gun_aeiou.dmi'
+	icon = 'modular_aeiou/icons/obj/gun_aeiou.dmi'
 	icon_state = "oldAK"
 	force = 15 //AK buttbash
 	wielded_item_state = "arifle-wielded"
@@ -462,10 +464,10 @@
 
 
 
-/obj/item/weapon/gun/projectile/automatic/protekt //WIP, it need an action button so you can switch the stock more easily. Maybe a timer. 
+/obj/item/weapon/gun/projectile/automatic/protekt //WIP, it need an action button so you can switch the stock more easily. Maybe a timer.
 	name = "Protekt-9" //aeiou addition
 	desc = "For the discerning mercenary on a budget. The common ammunition and low maintenance have assured its place in back alleys and gambling dens across the sector. Uses .45 rounds."
-	icon = 'icons/obj/gun_aeiou.dmi'
+	icon = 'modular_aeiou/icons/obj/gun_aeiou.dmi'
 	item_state = "protekt"
 	sound_override = 1
 	caliber = ".45"
@@ -508,18 +510,20 @@
 	..()
 	if(ammo_magazine && unfolded_stock)
 		icon_state = "protektclosed-loaded"
-//		update_held_icon()	
-		return 
+//		update_held_icon()
+		return
 	else if(unfolded_stock)
 		icon_state = "protektopen-empty"
 //		update_held_icon()
-		return 
+		return
 	else if(ammo_magazine)
 		icon_state = "protektfclosed-loaded"
 //		update_held_icon()
-		return 
+		return
 	else
 		icon_state = "protektfopen-empty"
 //		update_held_icon()
-		return 
+		return
 //	update_held_icon()
+
+*/

@@ -180,7 +180,7 @@
 	force = 20
 	force_divisor = 0.9 // 10/42 with hardness 60 (steel) and 0.25 unwielded divisor
 	hitsound = 'sound/weapons/heavysmash.ogg'
-	icon = 'icons/obj/weapons_vr.dmi'
+	icon = 'modular_aeiou/icons/obj/weapons_aeiou.dmi'
 	w_class = ITEMSIZE_HUGE
 	slowdown = 1.5
 	dulled_divisor = 0.95	//Still metal on a stick

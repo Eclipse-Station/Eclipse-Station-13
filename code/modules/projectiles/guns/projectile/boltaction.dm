@@ -102,7 +102,7 @@
 /obj/item/weapon/gun/projectile/shotgun/pump/rifle/scoped//aeiou addition
 	name = "scoped bolt action rifle"
 	desc = "A reproduction of an almost ancient weapon design from the early 20th century. It's still popular among hunters and collectors due to its reliability. This one has a decent scope fitted on. Uses 7.62mm rounds."
-	icon = 'icons/obj/gun_aeiou.dmi'
+	icon = 'modular_aeiou/icons/obj/gun_aeiou.dmi'
 	item_state = "boltaction-scoped"
 	icon_state = "boltaction-scoped"
 	fire_sound = 'sound/weapons/rifleshot.ogg'

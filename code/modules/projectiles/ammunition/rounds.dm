@@ -342,3 +342,8 @@
 	icon_state = "s-casing-spent"
 	BB = null
 	projectile_type = null
+
+///obj/item/ammo_casing/caseless/laser/gatling
+//	projectile_type = /obj/item/projectile/beam/smalllaser
+//	variance = 0.8
+//	click_cooldown_override = 1
