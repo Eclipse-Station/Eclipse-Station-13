@@ -21,3 +21,9 @@
 	matter = list(DEFAULT_WALL_MATERIAL = 1260)
 	max_ammo = 200
 	multiple_sprites = FALSE
+
+/obj/item/ammo_magazine/internal/minigun
+	name = "gatling gun fusion core"
+	ammo_type = /obj/item/ammo_casing/caseless/laser/gatling
+	caliber = "gatling"
+	max_ammo = 5000

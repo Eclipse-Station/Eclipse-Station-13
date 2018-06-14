@@ -56,7 +56,6 @@
 	var/fire_delay = 6 	//delay after shooting before the gun can be used again
 	var/burst_delay = 2	//delay between shots, if firing in bursts
 	var/move_delay = 1
-	var/sound_override = 0 //aeiou edit
 	var/fire_sound = 'sound/weapons/Gunshot.ogg'
 	var/fire_sound_text = "gunshot"
 	var/fire_anim = null
@@ -107,8 +106,10 @@
 	var/light_brightness = 4
 	var/flight_x_offset = 0
 	var/flight_y_offset = 0
-	
 
+//AEIOU Adds
+	var/sound_override = 0 //aeiou edit
+	var/silencer = 0
 
 
 /obj/item/weapon/gun/CtrlClick(mob/user)
@@ -321,7 +322,7 @@
 				verbs -= /obj/item/weapon/gun/verb/remove_dna
 				verbs -= /obj/item/weapon/gun/verb/give_dna
 				verbs -= /obj/item/weapon/gun/verb/allow_dna
-	
+
 	if(istype(A, /obj/item/device/flashlight/maglight))
 		var/obj/item/device/flashlight/maglight/S = A
 		if(can_flashlight)
@@ -333,7 +334,7 @@
 				update_icon()
 			else
 				user << "<span class='notice'>[src] already has a light.</span>"
-				
+
 
 	if(istype(A, /obj/item/weapon/screwdriver))
 		if(F)
@@ -352,39 +353,9 @@
 			status = 0
 			update_icon()
 		return
-		
+
 		qdel(src)*/
 
-
-/*
-/obj/item/weapon/melee/baton/attackby(obj/item/weapon/W, mob/user)
-	if(istype(W, /obj/item/weapon/cell))
-		if(istype(W, /obj/item/weapon/cell/device))
-			if(!bcell)
-				user.drop_item()
-				W.loc = src
-				bcell = W
-				user << "<span class='notice'>You install a cell in [src].</span>"
-				update_icon()
-			else
-				user << "<span class='notice'>[src] already has a cell.</span>"
-		else
-			user << "<span class='notice'>This cell is not fitted for [src].</span>"
-
-/obj/item/weapon/melee/baton/attack_hand(mob/user as mob)
-	if(user.get_inactive_hand() == src)
-		if(bcell)
-			bcell.update_icon()
-			user.put_in_hands(bcell)
-			bcell = null
-			user << "<span class='notice'>You remove the cell from the [src].</span>"
-			status = 0
-			update_icon()
-			return
-		..()
-	else
-		return ..()
-		*/
 
 
 
@@ -424,7 +395,7 @@
 				status = 0
 				update_icon()
 				return
-			..()	
+			..()
 
 	if(istype(A, /obj/item/device/flashlight/seclite)
 		if(can_flashlight)
