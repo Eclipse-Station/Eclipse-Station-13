@@ -27,7 +27,7 @@
 	playsound(loc,"canopen", rand(10,50), 1)
 	user << "<span class='notice'>You open [src] with an audible pop!</span>"
 	flags |= OPENCONTAINER
-	cans_opened++//aeiou edit
+	cans_opened += 1//aeiou edit
 
 
 

@@ -299,12 +299,16 @@ var/const/RESIZE_A_SMALLTINY = (RESIZE_SMALL + RESIZE_TINY) / 2
 					if(!H || !isTaurTail(H.tail_style))
 						to_chat(src,"<span class='danger'>You carelessly step down onto [tmob], crushing them!</span>")
 						to_chat(tmob,"<span class='danger'>[src] steps carelessly on your body, crushing you!</span>")
+						number_people_walked_over++
+						
 
 					//Human with taur tail, special messages are sent
 					else
 						var/datum/sprite_accessory/tail/taur/tail = H.tail_style
 						to_chat(src,STEP_TEXT_OWNER("<span class='danger'>[tail.msg_owner_harm_run]</span>"))
 						to_chat(tmob,STEP_TEXT_PREY("<span class='danger'>[tail.msg_prey_harm_run]</span>"))
+						number_people_walked_over++
+
 
 					//If they are a human, do damage (doesn't hurt other mobs...?)
 					if(Ht)
@@ -312,7 +316,7 @@ var/const/RESIZE_A_SMALLTINY = (RESIZE_SMALL + RESIZE_TINY) / 2
 							I.take_damage(calculated_damage, 0) // 5 damage min, 26.25 damage max, depending on size & RNG. If they're only stepped on once, the damage will (probably not...) heal over time.
 						Ht.drip(0.1)
 						add_attack_logs(src,tmob,"Crushed underfoot (run, about [calculated_damage] damage)")
-						number_people_walked_over++
+						number_people_walked_over += 1
 
 				//Walking on I_HURT
 				else
