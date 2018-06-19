@@ -175,6 +175,12 @@ character_name: Diana Kuznetsova
 item_path: /obj/item/clothing/head/fluff/pink_tiara
 }
 
+{
+ckey: chatter
+character_name: Sycamore Irons
+item_path: /obj/item/weapon/storage/box/fluff/sycamore_irons
+}
+
 # ######## D CKEYS
 {
 ckey: deepindigo
