@@ -24,17 +24,6 @@
 	recoil_m = 0 //micros getting fucked
 	var/battery_lock = 0	//If set, weapon cannot switch batteries
 
-/obj/item/weapon/gun/energy/attackby(var/obj/item/A as obj, mob/user as mob)
-	..()
-
-/obj/item/weapon/gun/energy/switch_firemodes(mob/user)
-	if(..())
-		update_icon()
-
-/obj/item/weapon/gun/energy/emp_act(severity)
-	..()
-	update_icon()
-
 /obj/item/weapon/gun/energy/New()
 	..()
 	if(self_recharge)
@@ -52,6 +41,9 @@
 	if(self_recharge)
 		processing_objects.Remove(src)
 	return ..()
+
+/obj/item/weapon/gun/energy/get_cell()
+	return power_supply
 
 /obj/item/weapon/gun/energy/process()
 	if(self_recharge) //Every [recharge_time] ticks, recharge a shot for the battery
@@ -75,6 +67,17 @@
 		else
 			charge_tick = 0
 	return 1
+
+/obj/item/weapon/gun/energy/attackby(var/obj/item/A as obj, mob/user as mob)
+	..()
+
+/obj/item/weapon/gun/energy/switch_firemodes(mob/user)
+	if(..())
+		update_icon()
+
+/obj/item/weapon/gun/energy/emp_act(severity)
+	..()
+	update_icon()
 
 /obj/item/weapon/gun/energy/consume_next_projectile()
 	if(!power_supply) return null

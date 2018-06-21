@@ -17,7 +17,7 @@
 	var/powered = 0
 	var/integrity = 130
 	var/locked = 0
-    var/credits = 0
+	var/credits = 0
 
 
 /obj/machinery/power/laser_centcom/proc/activate(mob/user as mob)
@@ -47,21 +47,21 @@
 		return
 
 	if(src.state != 2 || (!powernet && active_power_usage))
-		//src.active = 0
+		src.active = 0
+		spawn(50)
 		playsound(src.loc, 'sound/effects/ComputerMachinery.ogg', 75, 1)
-		do_after(20)
-        
+		new /obj/item/weapon/research(loc)
+		return
+	return
+	
+ /*       
 	while(recharging)
 		if(!do_after(user, 10, src))
 			break
 		playsound(get_turf(src),'sound/items/change_drill.ogg',25,1)
 		if(power_supply.give(60) < 60)
 			break
-
-
-		return
-	return
-
+*/
 
 
 

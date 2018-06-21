@@ -14,6 +14,7 @@
 /obj/item/weapon/gun/projectile/shotgun/pump/rifle/pocketrifle //aeiou addition
 	name = "pocket rifle"
 	desc = "What the hell is this? It look like someone sawn a bolt action into 4 parts! Looks more usefull as a club than anything.. Uses 7.62mm rounds."
+	icon = 'modular_aeiou/icons/obj/gun_aeiou.dmi'
 	item_state = "pocketrifle"
 	icon_state = "pocketrifle"
 	fire_sound = 'sound/weapons/rifleshot.ogg'
