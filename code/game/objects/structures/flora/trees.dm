@@ -329,7 +329,7 @@
 	if(sap_type == 2)
 		set_light(5, 1, "#7a48a0")//Purple sap
 	if(sap_type == 3)
-		set_light(5, 1, "#33ccff")//third sap
+		set_light(5, 1, "#e9955c")//third sap
 	var/image/glow = image(icon = 'modular_aeiou/icons/obj/flora/deadtrees_aeiou.dmi', icon_state = "[icon_state]_glow")
 	glow.plane = PLANE_LIGHTING_ABOVE
 	debug_glow = glow
