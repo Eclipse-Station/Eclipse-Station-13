@@ -50,10 +50,11 @@
 		src.active = 0
 		spawn(50)
 		playsound(src.loc, 'sound/effects/ComputerMachinery.ogg', 75, 1)
-		new /obj/item/weapon/research(loc)
+		new /obj/item/weapon/spacecash/c1000(loc)
+		new /obj/item/weapon/spacecash/c1000(loc)
 		return
 	return
-	
+
  /*       
 	while(recharging)
 		if(!do_after(user, 10, src))
