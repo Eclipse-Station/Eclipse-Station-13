@@ -1,3 +1,4 @@
+/*
 /obj/item/debug_helper_aeiou
 	name = "Tree Tap"
 	desc = "A small metal tap with a crude faucet. Sturdy enough to be rammed in a tree."
@@ -20,4 +21,4 @@
 		user <<"<span class='notice'>destroyed_research_items[destroyed_research_items] 3</span>"
 		user <<"<span class='notice'>items_sold_shift[items_sold_shift] 3</span>"
 		user <<"<span class='notice'>disposals_flush_shift[disposals_flush_shift] 3</span>"
-
+*/
