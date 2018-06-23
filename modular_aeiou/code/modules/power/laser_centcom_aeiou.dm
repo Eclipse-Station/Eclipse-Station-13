@@ -3,22 +3,32 @@
 	desc = "A high draw power selling laser directed toward centcom. Don't stand in front of it!"
 	icon_state = "smes"
 	density = 1
-	anchored = 1
-	use_power = 0		//1 = idle, 2 = active
+	anchored = 0
+	use_power = 1		//1 = idle, 2 = active
 	icon = 'icons/obj/virology.dmi'
 	icon_state = "analyser"
-    
 	idle_power_usage = 20
 	active_power_usage = 300000
+//	circuit = /obj/item/weapon/circuitboard/laser_centcom //Comment in once we have the circuit.
 
 	var/active = 0
 	var/state = 0
 	var/on = 0
 	var/powered = 0
-	var/integrity = 130
 	var/locked = 0
 	var/credits = 0
 
+
+
+/obj/machinery/power/laser_centcom/New()
+	..()
+	component_parts = list()
+	component_parts += new /obj/item/weapon/stock_parts/matter_bin(src)
+	component_parts += new /obj/item/weapon/stock_parts/matter_bin(src)
+	component_parts += new /obj/item/weapon/stock_parts/matter_bin(src)
+	component_parts += new /obj/item/weapon/stock_parts/manipulator(src)
+	component_parts += new /obj/item/weapon/stock_parts/console_screen(src)
+	RefreshParts()
 
 /obj/machinery/power/laser_centcom/proc/activate(mob/user as mob)
 	if(state == 2)
@@ -29,9 +39,11 @@
 			if(src.active==1)
 				src.active = 0
 				user << "You turn off [src]."
+				playsound(src.loc, 'sound/items/change_jaws.ogg', 75, 1)
 			else
 				src.active = 1
 				user << "You turn on [src]."
+				playsound(src.loc, 'sound/items/change_jaws.ogg', 75, 1)
 			update_icon()
 		else
 			user << "<span class='warning'>The controls are locked!</span>"
@@ -48,12 +60,12 @@
 
 	if(src.state != 2 || (!powernet && active_power_usage))
 		src.active = 0
-		spawn(50)
 		playsound(src.loc, 'sound/effects/ComputerMachinery.ogg', 75, 1)
-		new /obj/item/weapon/spacecash/c1000(loc)
-		new /obj/item/weapon/spacecash/c1000(loc)
+		credits++
 		return
 	return
+
+
 
  /*       
 	while(recharging)
