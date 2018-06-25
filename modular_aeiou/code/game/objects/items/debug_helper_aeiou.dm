@@ -9,7 +9,7 @@
 
 
 /obj/item/debug_helper_aeiou/examine(mob/user)
-		user <<"<span class='warning'>A small metal tap with a crude faucet. Sturdy enough to be rammed in a tree."
+		user <<"<span class='notice'>A small metal tap with a crude faucet. Sturdy enough to be rammed in a tree.</span>"
 		user <<"<span class='notice'>cans_opened [cans_opened] </span>"
 		user <<"<span class='notice'>trash_piles_searched [trash_piles_searched] 2</span>"
 		user <<"<span class='notice'>rare_trash_found[rare_trash_found] 3</span>"
