@@ -59,9 +59,11 @@
 		return
 
 	if(src.state != 2 || (!powernet && active_power_usage))
-		src.active = 0
-		playsound(src.loc, 'sound/effects/ComputerMachinery.ogg', 75, 1)
-		credits++
+		if(do_after(30))
+			src.active = 0
+			playsound(src.loc, 'sound/effects/ComputerMachinery.ogg', 75, 1)
+			credits++
+			return
 		return
 	return
 
