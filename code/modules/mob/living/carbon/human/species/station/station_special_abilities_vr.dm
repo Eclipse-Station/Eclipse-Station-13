@@ -694,8 +694,38 @@
 
 	return ..(G.affecting)
 
-//PAIs don't need a grab or anything
+//PAIs, borgs, and animals don't need a grab or anything
 /mob/living/silicon/pai/can_shred(var/mob/living/carbon/human/target)
+	if(!target)
+		var/list/choices = list()
+		for(var/mob/living/carbon/human/M in oviewers(1))
+			choices += M
+
+		if(!choices.len)
+			to_chat(src,"<span class='warning'>There's nobody nearby to use this on.</span>")
+
+		target = input(src,"Who do you wish to target?","Damage/Remove Prey's Organ") as null|anything in choices
+	if(!istype(target))
+		return FALSE
+
+	return ..(target)
+
+/mob/living/silicon/robot/can_shred(var/mob/living/carbon/human/target)
+	if(!target)
+		var/list/choices = list()
+		for(var/mob/living/carbon/human/M in oviewers(1))
+			choices += M
+
+		if(!choices.len)
+			to_chat(src,"<span class='warning'>There's nobody nearby to use this on.</span>")
+
+		target = input(src,"Who do you wish to target?","Damage/Remove Prey's Organ") as null|anything in choices
+	if(!istype(target))
+		return FALSE
+
+	return ..(target)
+
+/mob/living/simple_animal/can_shred(var/mob/living/carbon/human/target)
 	if(!target)
 		var/list/choices = list()
 		for(var/mob/living/carbon/human/M in oviewers(1))
