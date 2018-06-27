@@ -9,7 +9,7 @@
 	containername = "air rifle crate"
 
 
-//random air rifle, used above.	
+//random air rifle, used above.
 /obj/random/projectile/shotgun/airrifle
 	name = "Random Air Rifle"
 	desc = "This is a random air rifle, for PoIs/cargo."
