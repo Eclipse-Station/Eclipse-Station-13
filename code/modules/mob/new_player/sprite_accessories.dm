@@ -551,7 +551,8 @@
 	nia
 		name = "Nia"
 		icon_state = "hair_nia"
-
+		flags = HAIR_TIEABLE
+		
 	unkept
 		name = "Unkept"
 		icon_state = "hair_unkept"
