@@ -126,7 +126,7 @@
 					/obj/item/clothing/shoes/boots/jackboots = 1,
 					/obj/item/clothing/under/schoolgirl = 1,
 					/obj/item/clothing/under/schoolgirl/red = 1,
-					/obj/item/clothing/under/schoolgirl/green = 1,//They are missing. We need to port them.
+					/obj/item/clothing/under/schoolgirl/green = 1,
 					/obj/item/clothing/under/schoolgirl/orange = 1,
 					/obj/item/clothing/head/kitty = 1,
 					/obj/item/clothing/under/skirt = 1,
@@ -184,12 +184,12 @@
 					/obj/item/clothing/mask/rat/fox = 1,
 					/obj/item/clothing/mask/frog = 1,
 					/obj/item/clothing/mask/rat/tribal = 1,
-					/obj/item/clothing/mask/rat = 1,*/
+					/obj/item/clothing/mask/rat = 1,
 					/obj/item/clothing/mask/horsehead,
 					/obj/item/clothing/suit/storage/apron/overalls = 1,
 					/obj/item/clothing/head/rabbitears =1,
 					/obj/item/clothing/head/sombrero = 1,
-					///obj/item/clothing/head/sombrero/green = 1,//Got to add them on mobs
+					///obj/item/clothing/head/sombrero/green = 1,
 					/obj/item/clothing/accessory/poncho = 1,
 					/obj/item/clothing/accessory/poncho/green,
 					/obj/item/clothing/accessory/poncho/red,
