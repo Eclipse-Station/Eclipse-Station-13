@@ -112,8 +112,8 @@
 					/obj/item/clothing/head/cueball = 1,
 					/obj/item/clothing/under/scratch = 1,
 					/obj/item/clothing/under/dress/sailordress =1,
-        			/obj/item/clothing/ears/earmuffs/headphones = 2,
-        		    /obj/item/clothing/head/philosopher_wig = 1,
+					/obj/item/clothing/ears/earmuffs/headphones = 2,
+					/obj/item/clothing/head/philosopher_wig = 1,
 					/obj/item/clothing/head/powdered_wig = 1,)
 /*
 	prices = list(/obj/item/clothing/head/chicken = 1,
