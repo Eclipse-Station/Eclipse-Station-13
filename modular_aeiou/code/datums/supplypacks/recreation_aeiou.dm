@@ -1,4 +1,4 @@
-/datum/supply_packs/recreation/air_rifle
+/datum/supply_packs/recreation/air_rifle	//Crate of two air rifles, and a tube of BBs
 	name = "Air Rifle Crate"
 	contains = list(
 			/obj/random/projectile/shotgun/airrifle = 2,
