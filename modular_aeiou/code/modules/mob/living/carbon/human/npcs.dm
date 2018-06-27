@@ -1,6 +1,6 @@
 /mob/living/carbon/human/monkey/contrabandito
 	name = "Contrabandito"
-	maxhealth = 150
+	maxHealth = 150
 
 	can_enter_vent_with = list(
     /obj)
