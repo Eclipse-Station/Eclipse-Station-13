@@ -2970,6 +2970,7 @@
 #include "modular_aeiou\code\modules\client\preference_setup\loadout\loadout_head.dm"
 #include "modular_aeiou\code\modules\client\preference_setup\loadout\loadout_suit.dm"
 #include "modular_aeiou\code\modules\clothing\glasses\glasses.dm"
+#include "modular_aeiou\code\modules\mob\living\carbon\human\npcs.dm"
 #include "modular_aeiou\code\modules\power\laser_centcom_aeiou.dm"
 #include "modular_aeiou\code\modules\power\lighting.dm"
 #include "modular_aeiou\code\modules\projectiles\ammunition\caseless.dm"
