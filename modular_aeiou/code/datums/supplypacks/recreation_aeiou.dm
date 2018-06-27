@@ -18,5 +18,4 @@
 
 /obj/random/projectile/shotgun/airrifle/item_to_spawn()
 	return pick(prob(20);/obj/item/weapon/gun/projectile/shotgun/pump/air_rifle,		//weighted 20-to-1
-				prob(1);/obj/item/weapon/gun/projectile/shotgun/pump/air_rifle/le
-				)
+			prob(1);/obj/item/weapon/gun/projectile/shotgun/pump/air_rifle/le)
