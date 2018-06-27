@@ -225,12 +225,12 @@
 
 	contraband = list(/obj/item/clothing/suit/judgerobe = 1,
 					/obj/item/clothing/head/powdered_wig = 1,
-					///obj/item/weapon/gun/magic/wand = 2, //Gotta port wands
-					///obj/item/clothing/glasses/sunglasses/garb = 2,//Not here either
+					///obj/item/weapon/gun/magic/wand = 2,
+					///obj/item/clothing/glasses/sunglasses/garb = 2,
 					/obj/item/clothing/glasses/sunglasses/blindfold = 1,
 					/obj/item/clothing/mask/muzzle = 2)
 
-/*	premium = list(/obj/item/clothing/suit/pirate/captain = 2,//NONE OF THEM ARE HERE.
+/*	premium = list(/obj/item/clothing/suit/pirate/captain = 2,
 				/obj/item/clothing/head/pirate/captain = 2,
 				/obj/item/clothing/head/helmet/roman = 1,
 				/obj/item/clothing/head/helmet/roman/legionaire = 1,
