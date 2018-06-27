@@ -176,7 +176,7 @@
 					/obj/item/clothing/under/sexyclown = 1,
 					/obj/item/clothing/mask/gas/sexymime = 1,
 					/obj/item/clothing/under/sexymime = 1,
-					/*/obj/item/clothing/mask/rat/bat = 1,
+					/obj/item/clothing/mask/rat/bat = 1,
 					/obj/item/clothing/mask/rat/bee = 1,
 					/obj/item/clothing/mask/rat/bear = 1,
 					/obj/item/clothing/mask/rat/raven = 1,
