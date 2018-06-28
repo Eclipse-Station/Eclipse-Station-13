@@ -2959,6 +2959,7 @@
 #include "maps\tether\tether.dm"
 #include "maps\tether\submaps\_tether_submaps.dm"
 #include "maps\~map_system\maps.dm"
+#include "modular_aeiou\code\datums\supplypacks\recreation_aeiou.dm"
 #include "modular_aeiou\code\game\machinery\stove_aeiou.dm"
 #include "modular_aeiou\code\game\machinery\vending_aeiou.dm"
 #include "modular_aeiou\code\game\objects\balls.dm"
