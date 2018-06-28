@@ -4,6 +4,7 @@
 	name = "the great succ" //those things are invisible don't taze me
 	unacidable = 1
 	anchored = 1.0
+	invisibility = 101
 	mouse_opacity = 0
 	var/delay = 1 //amount of ticks until next succ
 	var/timer = 0
@@ -74,6 +75,7 @@
 	unacidable = 1
 	anchored = 1.0
 	mouse_opacity = 0
+	invisibility = 101
 	var/activated = 1
 	var/length = 10 //default range of which wind blows things away
 	var/pull_anchored = 0 //a fucking hurricane
