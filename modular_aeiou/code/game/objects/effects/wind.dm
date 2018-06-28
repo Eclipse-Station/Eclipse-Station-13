@@ -76,6 +76,7 @@
 	anchored = 1.0
 	mouse_opacity = 0
 	invisibility = 101
+	var/strength = 2//for how much tiles does the wind push
 	var/activated = 1
 	var/length = 10 //default range of which wind blows things away
 	var/pull_anchored = 0 //a fucking hurricane
@@ -116,6 +117,7 @@
 		defer_powernet_rebuild = 1
 
 	// Let's just make this one loop.
+	var/push
 	for(var/turf/T in affected)
 		sleep(2)
 		for(var/atom/X in T.contents)
@@ -133,7 +135,8 @@
 							if (!pull_anchored) continue // Don't pull anchored stuff unless configured
 							step_towards(X, direction)  // step just once if anchored
 							continue
-					step_towards(X, direction)
+					for(push = 1; push<=strength; push++)
+						step_towards(X, direction)
 
 				else if(istype(X,/mob/living/carbon/human))
 					var/mob/living/carbon/human/H = X
@@ -142,7 +145,8 @@
 						if(M.magpulse)
 							step_towards(H, direction) //step just once with magboots
 							continue
-					step_towards(H, direction)
+					for(push = 1; push<=strength; push++)
+						step_towards(H, direction)
 
 	if(defer_powernet_rebuild != 2)
 		defer_powernet_rebuild = 0
