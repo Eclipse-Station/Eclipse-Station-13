@@ -161,8 +161,8 @@
 	user << "The fire has [X] burning logs in it."
 	if(grill)
 		user << "The [src] has a crude grill plate over it."
-	if(grill)
-		user << "The [src] has a crude grill plate over it."
+	if(stake)
+		user << "The [src] has a makeshift stake plate over it, perfect for witches and space templars."
 
 /obj/structure/bonfire/proc/extinguish()
 	if(burning)
