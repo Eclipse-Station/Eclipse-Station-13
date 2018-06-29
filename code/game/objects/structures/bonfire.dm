@@ -118,7 +118,7 @@
 		var/obj/item/stack/S = F.split(1)
 		if(S)
 			S.forceMove(src)
-			to_chat(user, "<span class='warning'>You add one\the [new_fuel] to \the [src].</span>")
+			to_chat(user, "<span class='warning'>You add one \the [new_fuel] to \the [src].</span>")
 			update_icon()
 			return TRUE
 		return FALSE
