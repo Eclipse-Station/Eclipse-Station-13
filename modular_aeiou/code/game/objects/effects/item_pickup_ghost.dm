@@ -1,4 +1,5 @@
 //Stolen from baystation for AEIOU like the dirty pirate i am. Code is from thasc. -Kates.
+//haha I did it first - Nestor
 
 /obj/effect/temporary/item_pickup_ghost
 	var/lifetime = 0.1 SECONDS

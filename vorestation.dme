@@ -2962,6 +2962,7 @@
 #include "modular_aeiou\code\datums\supplypacks\recreation_aeiou.dm"
 #include "modular_aeiou\code\game\machinery\vending_aeiou.dm"
 #include "modular_aeiou\code\game\objects\balls.dm"
+#include "modular_aeiou\code\game\objects\effects\wind.dm"
 #include "modular_aeiou\code\game\objects\items\weapons\forms_heads.dm"
 #include "modular_aeiou\code\game\objects\items\weapons\pillows_aeiou.dm"
 #include "modular_aeiou\code\game\objects\items\weapons\tools.dm"
