@@ -13,7 +13,7 @@
 
 /obj/item/clothing/under/storage/attack_hand(mob/user as mob)
 	if (pockets.handle_attack_hand(user))
-		user.visible_message("\The [user] rummage in the [src] chest pocket.</span>", "You rummage in the [src] chest pocket.")
+		user.visible_message("\The [user] rummage in the [src] chest pocket.", "You rummage in the [src] chest pocket.")
 		..(user)
 
 /obj/item/clothing/under/storage/MouseDrop(obj/over_object as obj)
