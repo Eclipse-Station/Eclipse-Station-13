@@ -9,6 +9,7 @@
 	var/burning = FALSE
 	var/next_fuel_consumption = 0 // world.time of when next item in fuel list gets eatten to sustain the fire.
 	var/grill = FALSE
+	var/stake = FALSE
 	var/material/material
 	var/set_temperature = T0C + 30	//K
 	var/heating_power = 80000
@@ -42,6 +43,7 @@
 			if("Stake")
 				R.use(1)
 				can_buckle = TRUE
+				stake = TRUE
 				buckle_require_restraints = TRUE
 				to_chat(user, "<span class='notice'>You add a rod to \the [src].</span>")
 				var/mutable_appearance/rod_underlay = mutable_appearance('icons/obj/structures.dmi', "bonfire_rod")
@@ -116,7 +118,7 @@
 		var/obj/item/stack/S = F.split(1)
 		if(S)
 			S.forceMove(src)
-			to_chat(user, "<span class='warning'>You add \the [new_fuel] to \the [src].</span>")
+			to_chat(user, "<span class='warning'>You add one \the [new_fuel] to \the [src].</span>")
 			update_icon()
 			return TRUE
 		return FALSE
@@ -154,6 +156,13 @@
 		return FALSE
 	return TRUE
 
+/obj/structure/bonfire/examine(mob/user)
+	var/X = get_fuel_amount()
+	user << "The fire has [X] burning logs in it."
+	if(grill)
+		user << "The [src] has a crude grill plate over it."
+	if(stake)
+		user << "The [src] has a makeshift stake plate over it, perfect for witches and space templars."
 
 /obj/structure/bonfire/proc/extinguish()
 	if(burning)
