@@ -4,9 +4,6 @@
  *		Fireaxe
  *		Double-Bladed Energy Swords
  *		Glass spears
- *		Sledgehammer
- *		Mjollnir
- *		God Bat
  */
 
 /*##################################################################

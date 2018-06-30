@@ -36,6 +36,17 @@
 	else
 		icon_state = "pocketrifle-empty"
 
+/obj/item/weapon/gun/projectile/shotgun/pump/rifle/pocketrifleblack
+	item_state = "pocketrifle_b"
+	icon_state = "pocketrifle_b"
+
+/obj/item/weapon/gun/projectile/shotgun/pump/rifle/pocketrifleblack/update_icon()
+	..()
+	if(ammo_magazine)
+		icon_state = "pocketrifle_b"
+	else
+		icon_state = "pocketrifle_b-empty"
+
 //Perfect for your slavic snipers.
 /obj/item/weapon/gun/projectile/shotgun/pump/rifle/scoped//aeiou addition
 	name = "scoped bolt action rifle"
