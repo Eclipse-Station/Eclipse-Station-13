@@ -25,7 +25,7 @@
 	name = "prototype SMG"
 	desc = "A protoype lightweight, fast firing gun. Uses 9mm rounds."
 	icon = 'icons/obj/gun.dmi'
-	icon_state = "saber"//ugly
+	icon_state = "saber"//Still ugly
 	w_class = ITEMSIZE_NORMAL
 	load_method = MAGAZINE  //This should fix it
 	max_shells = 22
@@ -46,16 +46,12 @@
 //		list(mode_name="short bursts",   burst=5, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-15,-15,-30,-30), dispersion=list(0.6, 1.0, 1.0, 1.0, 1.2)),
 )
 
-
-
 /obj/item/weapon/gun/projectile/automatic/saber/update_icon()
 	..()
 	if(ammo_magazine)
 		icon_state = "saber"
 	else
 		icon_state = "saber-e"
-
-
 
 /obj/item/weapon/gun/projectile/automatic/c20r
 	name = "submachine gun"
