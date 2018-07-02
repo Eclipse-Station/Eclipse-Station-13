@@ -1,4 +1,4 @@
-/obj/machinery/computer/supplycomp//THIS IS THE ACTUAL BIG BOY CONSOLE
+/obj/machinery/computer/supplycomp //THIS IS THE ACTUAL BIG BOY CONSOLE
 	name = "supply control console"
 	desc = "Used to order supplies, approve requests, and control the shuttle."
 	icon_keyboard = "tech_key"
