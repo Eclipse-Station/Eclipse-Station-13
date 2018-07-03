@@ -145,6 +145,7 @@
 #define MAT_STEEL			"steel"
 #define MAT_GLASS			"glass"
 #define MAT_SILVER			"silver"
+#define MAT_URANIUM			"uranium"
 #define MAT_GOLD			"gold"
 #define MAT_TITANIUM		"titanium"
 #define MAT_PHORON			"phoron"

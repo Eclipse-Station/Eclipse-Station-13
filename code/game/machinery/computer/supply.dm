@@ -1,5 +1,6 @@
-/obj/machinery/computer/supplycomp
+/obj/machinery/computer/supplycomp //THIS IS THE ACTUAL BIG BOY CONSOLE
 	name = "supply control console"
+	desc = "Used to order supplies, approve requests, and control the shuttle."
 	icon_keyboard = "tech_key"
 	icon_screen = "supply"
 	light_color = "#b88b2e"
@@ -7,11 +8,12 @@
 	circuit = /obj/item/weapon/circuitboard/supplycomp
 	var/temp = null
 	var/reqtime = 0 //Cooldown for requisitions - Quarxink
-	var/can_order_contraband = 0
+	var/contraband = 0
 	var/last_viewed_group = "categories"
 
-/obj/machinery/computer/ordercomp
-	name = "supply ordering console"
+/obj/machinery/computer/ordercomp//THIS CAN ONLY REQUEST
+	name = "supply requesting console"
+	desc = "Used to request supplies from cargo."
 	icon_screen = "request"
 	circuit = /obj/item/weapon/circuitboard/ordercomp
 	var/temp = null
@@ -208,9 +210,9 @@
 	return
 
 /obj/machinery/computer/supplycomp/emag_act(var/remaining_charges, var/mob/user)
-	if(!can_order_contraband)
+	if(!contraband)
 		user << "<span class='notice'>Special supplies unlocked.</span>"
-		can_order_contraband = 1
+		contraband = 1
 		req_access = list()
 		return 1
 
@@ -265,7 +267,7 @@
 			temp += "<b>Request from: [last_viewed_group]</b><BR><BR>"
 			for(var/supply_name in supply_controller.supply_packs )
 				var/datum/supply_packs/N = supply_controller.supply_packs[supply_name]
-				if((N.contraband && !can_order_contraband) || N.group != last_viewed_group) continue								//Have to send the type instead of a reference to
+				if((N.contraband && !contraband) || N.group != last_viewed_group) continue								//Have to send the type instead of a reference to
 				temp += "<A href='?src=\ref[src];doorder=[supply_name]'>[supply_name]</A> Cost: [N.cost]<BR>"		//the obj because it would get caught by the garbage
 
 	else if (href_list["doorder"])

@@ -328,7 +328,7 @@
 
 /obj/item/ammo_magazine/m9mmR/saber
 	desc = "A very high capacity double stack magazine made specially for the SABER SMG. Filled with 22 bullets."
-	icon_state = "SABER-1"
+	icon_state = "S9mm-22"
 	mag_type = MAGAZINE
 	ammo_type = /obj/item/ammo_casing/a9mm
 	matter = list(DEFAULT_WALL_MATERIAL = 1200)

@@ -30,3 +30,5 @@
 
 #define SIMPLE_SIGN(X) ((X) < 0 ? -1 : 1)
 #define SIGN(X)        ((X) ? SIMPLE_SIGN(X) : 0)
+
+#define NUM_E 2.71828183 //Don't yell at me i don't know why this exist but TG reasons

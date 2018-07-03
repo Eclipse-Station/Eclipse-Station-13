@@ -27,8 +27,6 @@
 		icon_state = "oldAK-empty"
 
 
-
-
 /obj/item/weapon/gun/projectile/automatic/protekt //WIP, it need an action button so you can switch the stock more easily. Maybe a timer.
 	name = "Protekt-9" //aeiou addition
 	desc = "For the discerning mercenary on a budget. The common ammunition and low maintenance have assured its place in back alleys and gambling dens across the sector. Uses .45 rounds."
