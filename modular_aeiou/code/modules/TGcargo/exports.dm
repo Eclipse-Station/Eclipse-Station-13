@@ -197,10 +197,10 @@ Credit dupes that require a lot of manual work shouldn't be removed, unless they
 	total_cost = 0
 	total_amount = 0
 
-//GLOBAL_LIST_EMPTY(exports_list)
-//GLOB.crafting_recipes
-//GLOB.exports_list
-//var/list/global/clothing_choices
+// GLOBAL_LIST_EMPTY(exports_list)
+// GLOB.crafting_recipes
+// GLOB.exports_list
+// var/list/global/clothing_choices
 
 //var/list/global/exports_list = list()
 var/global/list/exports_list = list()
