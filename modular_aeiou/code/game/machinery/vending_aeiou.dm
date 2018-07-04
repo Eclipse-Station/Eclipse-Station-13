@@ -37,7 +37,7 @@
 					/obj/item/clothing/mask/gas/plaguedoctor = 1,
 					///obj/item/clothing/suit/toggle/owlwings = 1,
 					///obj/item/clothing/under/schoolgirl/red = 1,
-					///obj/item/clothing/under/schoolgirl/green = 1,//They are missing. We need to port them.
+					///obj/item/clothing/under/schoolgirl/green = 1,
 					///obj/item/clothing/under/schoolgirl/orange = 1,
 					///obj/item/clothing/suit/toggle/owlwings/griffinwings = 1,
 					///obj/item/clothing/under/griffin = 1,
@@ -51,7 +51,7 @@
 					///obj/item/clothing/mask/frog = 1,
 					///obj/item/clothing/mask/rat/tribal = 1,
 					///obj/item/clothing/mask/rat = 1,
-					///obj/item/clothing/head/sombrero/green = 1,//Got to add them on mobs
+					///obj/item/clothing/head/sombrero/green = 1,
 					///obj/item/clothing/glasses/cold = 1,
 					///obj/item/clothing/glasses/heat = 1,
 					///obj/item/clothing/under/jester = 1,
@@ -114,7 +114,8 @@
 					/obj/item/clothing/under/dress/sailordress =1,
 					/obj/item/clothing/ears/earmuffs/headphones = 2,
 					/obj/item/clothing/head/philosopher_wig = 1,
-					/obj/item/clothing/head/powdered_wig = 1,)
+					/obj/item/clothing/head/powdered_wig = 1,
+					)
 /*
 	prices = list(/obj/item/clothing/head/chicken = 1,
 					/obj/item/clothing/suit/chickensuit = 1,
@@ -220,7 +221,8 @@
 					/obj/item/clothing/under/dress/sailordress =1,
 					/obj/item/clothing/ears/earmuffs/headphones = 2,
 					/obj/item/clothing/head/philosopher_wig = 1,
-					/obj/item/clothing/head/powdered_wig = 1,)
+					/obj/item/clothing/head/powdered_wig = 1,
+					)
 */
 
 	contraband = list(/obj/item/clothing/suit/judgerobe = 1,
