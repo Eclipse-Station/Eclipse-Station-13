@@ -144,6 +144,13 @@ item_path: /obj/item/clothing/glasses/sunglasses/fluff/clout
 # ######## R CKEYS
 # ######## S CKEYS
 
+{
+ckey: shadzfen
+character_name: Ulawa-Radithax
+item_path: /obj/item/weapon/coin/uranium
+item_desc: This is a coin pressed out of stable uranium. The 'heads' side depicts a carp facing outward while the 'tails' side features its tail.
+}
+
 #{
 #ckey: silencedmp5a5
 #character_name: Serdykov Antoz
@@ -203,4 +210,28 @@ item_path: /obj/item/clothing/suit/storage/hooded/wintercoat/roiz
 ckey: zigfie
 character_name: Zaoozaoo Xrimxuqmqixzix
 item_path: /obj/item/clothing/head/fluff/zao
+}
+
+
+# ######## MEDALS AWARDED ON AEIOU
+
+{
+ckey: Alicia Jewel
+character_name: Summer Artea
+item_path: /obj/item/clothing/accessory/medal/conduct
+item_desc: A bronze medal awarded for distinguished conduct. While it is the most basic award, it is still a great honor. On 2562-07-03, this was awarded to Summer Artea.
+}
+
+{
+ckey: Kevak
+character_name: Rii Vatari
+item_path: /obj/item/clothing/accessory/medal/conduct
+item_desc: A bronze medal awarded for distinguished conduct. While it is the most basic award, it is still a great honor. On 2562-07-03, this was awarded to Rii Vatari.
+}
+
+{
+ckey: Seuz4
+character_name: Luna Stahl
+item_path: /obj/item/clothing/accessory/medal/conduct
+item_desc: A bronze medal awarded for distinguished conduct. While it is the most basic award, it is still a great honor. On 2562-07-03, this was awarded to Luna Stahl.
 }
