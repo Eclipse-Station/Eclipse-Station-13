@@ -128,6 +128,7 @@
 	attack_verb = list("bashed", "bludgeoned", "thrashed", "whacked")
 	sharp = 0
 	edge = 1
+	var/edged = 0
 
 /obj/item/weapon/shovel/spade
 	name = "spade"
@@ -138,6 +139,16 @@
 	throwforce = 7.0
 	w_class = ITEMSIZE_SMALL
 
+/*
+/obj/item/weapon/shovel/attackby(obj/item/weapon/W, mob/user as mob) //aeiou addition
+	if(istype(W, /obj/item/weapon/whetstone))
+		if(!edged)
+			force = force * 1.5
+			user.visible_message("[user] has sharpened \the [src]", "You finish sharpening \the [src].")
+			edged = 1
+		else	
+			to_chat(user, "<span class='notice'>[src] can't be sharpened further.</span>")
+*/
 
 /**********************Mining car (Crate like thing, not the rail car)**************************/
 
