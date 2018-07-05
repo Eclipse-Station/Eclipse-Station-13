@@ -1,5 +1,5 @@
 
-
+//This is just a storage for the original TG code.
 //The ammo/gun is stored in a back slot item
 /obj/item/minigunpack
 	name = "backpack power source"

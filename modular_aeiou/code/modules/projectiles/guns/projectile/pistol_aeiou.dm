@@ -8,6 +8,7 @@
 	item_state = "usp"
 	caliber = ".45"
 	load_method = MAGAZINE
+	magazine_type = /obj/item/ammo_magazine/m45P12
 	allowed_magazines = list(/obj/item/ammo_magazine/m45P12, /obj/item/ammo_magazine/m45)
 	can_flashlight = 1
 //	canmagnum = 1 unused code due to fork and stuff.
@@ -18,10 +19,9 @@
 	w_class = 2
 //	fire_sound = 'sound/weapons/pistol_glock17_1.ogg'
 
-/obj/item/weapon/gun/projectile/usp/ui_action_click()
-	toggle_gunlight()
 
-/obj/item/weapon/gun/projectile/usp/update_icon()
+/obj/item/weapon/gun/projectile/usp/update_icon() //Credit to Lohikar#1882 for the cut_overlays() idea.
+	cut_overlays()
 	if(ammo_magazine)
 		if(ammo_magazine.stored_ammo.len)
 			icon_state = "usp[silenced ? "-can" : ""]"
@@ -31,6 +31,7 @@
 		icon_state = "usp[silenced ? "-can" : ""]-locked-nomag"
 //	icon_state = "usp[silenced ? "-can" : ""][chambered ? "" : "-locked"][magazine_ammo ? "" : "-nomag"]"	//Don't uncomment. Won't work due to lack of a 'chambered' mechanic.
 	if(F && can_flashlight)
+		cut_overlays()
 		var/iconF = "flight"
 		if(F.on)
 			iconF = "flight_on"
