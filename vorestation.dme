@@ -2975,6 +2975,7 @@
 #include "modular_aeiou\code\modules\client\preference_setup\loadout\loadout_general.dm"
 #include "modular_aeiou\code\modules\client\preference_setup\loadout\loadout_head.dm"
 #include "modular_aeiou\code\modules\client\preference_setup\loadout\loadout_suit.dm"
+#include "modular_aeiou\code\modules\client\preference_setup\loadout\loadout_xeno_AEIOU.dm"
 #include "modular_aeiou\code\modules\clothing\glasses\glasses.dm"
 #include "modular_aeiou\code\modules\clothing\under\miscellaneous_aeiou.dm"
 #include "modular_aeiou\code\modules\mob\living\carbon\human\npcs.dm"

@@ -110,7 +110,7 @@
 //AEIOU Adds
 	var/sound_override = 0 //aeiou edit
 	var/silencer = 0
-
+//AEIOU adding end
 
 /obj/item/weapon/gun/CtrlClick(mob/user)
 	if(can_flashlight && ishuman(user) && src.loc == usr && !user.incapacitated(INCAPACITATION_ALL))
@@ -323,7 +323,7 @@
 				verbs -= /obj/item/weapon/gun/verb/give_dna
 				verbs -= /obj/item/weapon/gun/verb/allow_dna
 
-	if(istype(A, /obj/item/device/flashlight/maglight))
+	if(istype(A, /obj/item/device/flashlight/maglight))// AEIOU addition
 		var/obj/item/device/flashlight/maglight/S = A
 		if(can_flashlight)
 			if(!F)
@@ -335,79 +335,37 @@
 			else
 				user << "<span class='notice'>[src] already has a light.</span>"
 
-
-	if(istype(A, /obj/item/weapon/screwdriver))
+	if(istype(A, /obj/item/weapon/screwdriver))// AEIOU addition
 		if(F)
 			for(var/obj/item/device/flashlight/maglight/S in src)
 				user.put_in_hands(F)
 				F = null
 				user << "<span class='notice'>You unscrew the seclite from [src].</span>"
 				update_icon()
+		else	
+			user << "<span class='notice'>[src] has no light.</span>"
 
 
-/*		if(F)
-			for(var/obj/item/device/flashlight/maglight/S in src)
-			user.drop_item()
-			bcell = null
-			user << "<span class='notice'>You remove the cell from the [src].</span>"
-			status = 0
-			update_icon()
-		return
+//aeiou addition
 
-		qdel(src)*/
-
-
-
-
-/obj/item/weapon/gun/verb/toggle_gunlight()
+/obj/item/weapon/gun/verb/toggle_gunlight()// AEIOU addition
 		set name = "Adjust light"
 		set category = "Object"
 		set desc = "Click to toggle your weapon's attached flashlight."
 		set src in usr
+		turn_on_gunlight()
 
-
-/obj/item/weapon/gun/proc/turn_on_gunlight()
-
+/obj/item/weapon/gun/proc/turn_on_gunlight() // AEIOU addition
 	if(!F)
 		return
-
 	var/mob/living/carbon/human/user = usr
 	if(!isturf(user.loc))
 		user << "<span class='warning'>You cannot turn the light on while in this [user.loc]!</span>"
 	F.on = !F.on
 	user << "<span class='notice'>You toggle the gunlight [F.on ? "on":"off"].</span>"
-
+	set_light(light_brightness)
 	playsound(user, 'sound/weapons/empty.ogg', 100, 1)
-
 	return
-
-
-
-
-
-/*
-		if(flight)
-			if(bcell)
-				bcell.update_icon()
-				user.put_in_hands(bcell)
-				bcell = null
-				user << "<span class='notice'>You remove the cell from the [src].</span>"
-				status = 0
-				update_icon()
-				return
-			..()
-
-	if(istype(A, /obj/item/device/flashlight/seclite)
-		if(can_flashlight)
-			if(!gun_light)
-				user.drop_item()
-				W.loc = src
-				bcell = W
-				user << "<span class='notice'>You install a flashlight on the [src].</span>"
-				update_icon()
-			else
-				user << "<span class='notice'>The [src] already has a flashlight.</span>"
-*/
 
 
 /obj/item/weapon/gun/emag_act(var/remaining_charges, var/mob/user)
