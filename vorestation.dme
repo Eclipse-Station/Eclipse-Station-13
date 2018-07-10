@@ -2978,6 +2978,7 @@
 #include "modular_aeiou\code\modules\client\preference_setup\loadout\loadout_xeno_AEIOU.dm"
 #include "modular_aeiou\code\modules\clothing\glasses\glasses.dm"
 #include "modular_aeiou\code\modules\clothing\under\miscellaneous_aeiou.dm"
+#include "modular_aeiou\code\modules\mining\mine_items_aeiou.dm"
 #include "modular_aeiou\code\modules\mob\living\carbon\human\npcs.dm"
 #include "modular_aeiou\code\modules\power\laser_centcom_aeiou.dm"
 #include "modular_aeiou\code\modules\power\lighting.dm"
