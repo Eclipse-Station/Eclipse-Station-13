@@ -215,7 +215,7 @@
 	var/debug_glow = 0//to remove
 
 
-/obj/structure/flora/tree/sif/attackby(var/obj/item/I, var/mob/user)
+/obj/structure/flora/tree/sif/attackby(var/obj/item/weapon/I, var/mob/user)
 	if(istype(I, /obj/item/weapon/reagent_containers/))
 		if(!tap)
 			user << "<span class='notice'>There is no tap in \the [src].</span>"
@@ -263,6 +263,25 @@
 		else
 			user << "<span class='notice'>[src] already has a tap.</span>"
 		return 1
+
+	visible_message("<span class='danger'>\The [user] hits \the [src] with \the [I]!</span>")
+
+	var/damage_to_do = I.force
+	if(!I.sharp && !I.edge)
+		damage_to_do = round(damage_to_do / 4)
+	if(damage_to_do > 0)
+		if(I.sharp && I.edge)
+			playsound(get_turf(src), 'sound/effects/woodcutting.ogg', 50, 1)
+		else
+			playsound(get_turf(src), I.hitsound, 50, 1)
+		if(damage_to_do > 5)
+			adjust_health(-damage_to_do)
+		else
+			to_chat(user, "<span class='warning'>\The [I] is ineffective at harming \the [src].</span>")
+
+	hit_animation()
+	user.setClickCooldown(user.get_attack_speed(I))
+	user.do_attack_animation(src)
 
 /obj/structure/flora/tree/sif/attack_hand(mob/user as mob)
 	if(tap == 1)
