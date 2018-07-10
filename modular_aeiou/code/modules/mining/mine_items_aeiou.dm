@@ -34,6 +34,10 @@
 /obj/item/weapon/pickaxe/heavydutydrill/proc/turnOn(mob/user as mob)
 	if(on) return
 
+	if(enginefailed)
+		unjam(user)
+		return
+
 	visible_message("You start pulling the string on \the [src].", "[usr] starts pulling the string on the [src].")
 
 	if(max_fuel <= 0)
@@ -72,6 +76,20 @@
 		turnOn(user)
 	else
 		turnOff(user)
+
+/obj/item/weapon/pickaxe/heavydutydrill/proc/unjam(mob/user as mob)
+	if(!enginefailed) return
+
+	visible_message("You begin clearing the jam of \the [src] with a loud grinding!", "[usr] begin clearing the jam on \the [src] with a loud grinding!")
+	playsound(user, 'sound/weapons/chainsaw_turnoff.ogg',40,3)
+	if(prob(75))
+		visible_message("You clear \the [src] jam!", "[usr] clears \the [src] jam.")
+		enginefailed = 0
+	else
+		visible_message("You fail to clear \the [src] jam!", "[usr] failed to clear \the [src] jam.")
+
+
+
 
 /obj/item/weapon/pickaxe/heavydutydrill/afterattack(atom/A as mob|obj|turf|area, mob/user as mob, proximity)
 	if(!proximity) return
