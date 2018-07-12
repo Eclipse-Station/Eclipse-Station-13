@@ -17,7 +17,7 @@
 	var/enginefailed = 0 //Is the engine currently stuck. If 1, it needs to be cleared.
 	var/drill_bit = null //The actual drill in contact with the surface.
 	var/engine = null //This is the engine that powers the drill. Better engines are faster
-	var/filter = null //This will determine the engine fuel efficiency.
+	var/airfilter = null //This will determine the engine fuel efficiency.
 	var/fuel_consumed = 0 //placeholder
 	var/fuel_efficiency = 1 //This is the var which determines how much you consume fuel.
 
@@ -175,64 +175,64 @@
 //																	//
 //////////////////////////////////////////////////////////////////////
 
-//Drill bit
+/obj/item/drillparts
+	name = "Drill part"
+	desc = "This is not supposed to be spawned in ever."
+	icon = 'modular_aeiou/icons/obj/tree_tap.dmi'	
+	w_class = ITEMSIZE_SMALL
+	force = 5
 
-/obj/item/drillbit
+//Drill air filter
+
+/obj/item/drillparts/drillairfilters
+	name = "basic air filter"
+	desc = "An engine air filter meant for combustible engines. This one seems pretty basic."
+	icon_state = "treetap0"
+	var/aspiration = 1	
+
+/obj/item/drillparts/drillairfilters/advanced
+	name = "advanced air filter"
+	desc = "An engine air filter meant for combustible engines. This one seems decently refined."
+	aspiration = 0.5
+
+/obj/item/drillparts/drillairfilters/refined
+	name = "refined drill air filter"
+	desc = "An engine air filter meant for combustible engines. This looks like a high quality part."
+	aspiration = 0.25
+
+
+//Drill bits
+
+/obj/item/drillparts/drillbit
 	name = "basic drill bit"
-	desc = "A small metal tap with a crude faucet. Sturdy enough to be rammed in a tree."
-	icon = 'modular_aeiou/icons/obj/tree_tap.dmi'
+	desc = "A drilling assembly meant for piercing solid rock. It seems pretty basic."
 	icon_state = "treetap0"
 	var/dullness = 30
 
-/obj/item/drillbit/advanced
+/obj/item/drillparts/drillbit/advanced
 	name = "advanced drill bit"
-	desc = "A small metal tap with a crude faucet. Sturdy enough to be rammed in a tree."
+	desc = "A drilling assembly meant for piercing solid rock. This one seems decently refined."
 	dullness = 15
 
-/obj/item/drillbit/refined
+/obj/item/drillparts/drillbit/refined
 	name = "refined drill bit"
-	desc = "A small metal tap with a crude faucet. Sturdy enough to be rammed in a tree."
+	desc = "A drilling assembly meant for piercing solid rock. This looks like a high quality part."
 	dullness = 1
 
+//Drill engine
 
-//Drill ENGINE
-
-/obj/item/drillbit
-	name = "basic drill engine"
-	desc = "A small metal tap with a crude faucet. Sturdy enough to be rammed in a tree."
-	icon = 'modular_aeiou/icons/obj/tree_tap.dmi'
+/obj/item/drillparts/drillairfilters
+	name = "basic drill air filter"
+	desc = "A engine air filter meant for combustible engines"
 	icon_state = "treetap0"
-	w_class = ITEMSIZE_SMALL
-	force = 3
 	var/enginepower = 50
 
-/obj/item/drillbit/advanced
-	name = "advanced drill engine"
-	desc = "A small metal tap with a crude faucet. Sturdy enough to be rammed in a tree."
+/obj/item/drillparts/drillairfilters/advanced
+	name = "advanced drill air filter"
+	desc = "A engine air filter meant for combustible engines"
 	enginepower = 100
 
-/obj/item/drillbit/refined
-	name = "refined drill engine"
-	desc = "A small metal tap with a crude faucet. Sturdy enough to be rammed in a tree."
+/obj/item/drillparts/drillairfilters/refined
+	name = "refined drill air filter"
+	desc = "A engine air filter meant for combustible engines"
 	enginepower = 150
-
-//Drill filters
-
-/obj/item/drillfilters
-	name = "basic drill filter"
-	desc = "A small metal tap with a crude faucet. Sturdy enough to be rammed in a tree."
-	icon = 'modular_aeiou/icons/obj/tree_tap.dmi'
-	icon_state = "treetap0"
-	w_class = ITEMSIZE_SMALL
-	force = 3
-	var/aspiration = 1
-
-/obj/item/drillfilters/advanced
-	name = "advanced drill filter"
-	desc = "A small metal tap with a crude faucet. Sturdy enough to be rammed in a tree."
-	aspiration = 0.5
-
-/obj/item/drillfilters/refined
-	name = "refined drill filter"
-	desc = "A small metal tap with a crude faucet. Sturdy enough to be rammed in a tree."
-	aspiration = 0.25
