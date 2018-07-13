@@ -4,5 +4,5 @@
 	icon = 'modular_aeiou/icons/obj/tree_tap.dmi'
 	icon_state = "treetap0"
 	w_class = ITEMSIZE_SMALL
-	force = 3
+	force = 5
 
