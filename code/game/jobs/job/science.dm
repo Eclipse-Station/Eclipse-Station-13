@@ -12,6 +12,8 @@
 	idtype = /obj/item/weapon/card/id/science/head
 	req_admin_notify = 1
 	economic_modifier = 15
+	whitelist_only = 1
+	
 	access = list(access_rd, access_heads, access_tox, access_genetics, access_morgue,
 			            access_tox_storage, access_teleporter, access_sec_doors,
 			            access_research, access_robotics, access_xenobiology, access_ai_upload, access_tech_storage,

@@ -71,14 +71,14 @@
 	"mihi","wan","six","salve","tartu")
 	machine_understands = FALSE
 
-/datum/language/tajsign
+/*/datum/language/tajsign
 	name = LANGUAGE_SIIK_TAJR
 	desc = "A type of sign language mostly based on tail movements that was used during the Tajaran rebellion."
 	signlang_verb = list("uses their tail to convey", "gestures with their tail", "gestures with their tail elaborately")
 	colour = "tajaran"
 	key = "l"
 	flags = WHITELISTED | SIGNLANG | NO_STUTTER | NONVERBAL
-
+*/
 /datum/language/lanius
 	name = LANGUAGE_LANIUS
 	desc = "The ear-piercing language, consisting of high-pitched screeches and metal clunking."

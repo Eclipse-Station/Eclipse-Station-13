@@ -87,6 +87,11 @@
 		if(jobban_isbanned(user, rank))
 			. += "<del>[rank]</del></td><td><b> \[BANNED]</b></td></tr>"
 			continue
+		// // // BEGIN AEIOU EDIT // // //
+		if(!is_job_whitelisted(user, rank))
+			. += "<del>[rank]</del></td><td><b> \[WHITELIST]</b></td></tr>"
+			continue
+		// // // END AEIOU EDIT // // //
 		if(!job.player_old_enough(user.client))
 			var/available_in_days = job.available_in_days(user.client)
 			. += "<del>[rank]</del></td><td> \[IN [(available_in_days)] DAYS]</td></tr>"
