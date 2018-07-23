@@ -35,6 +35,7 @@ seiga - Vox
 sepulchre - Vox
 sepulchre - Xenomorph Hybrid
 silverTalismen - Diona
+silverTalismen - Vox
 silvertalismen - Xenochimera
 TheMostAmazingBird - Vox
 singo - Gutter

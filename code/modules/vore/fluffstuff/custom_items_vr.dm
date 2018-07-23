@@ -747,7 +747,7 @@
 	random_emote = list("hisses softly with a blush on his face", "yelps in embarrassment", "grunts a little")
 	assigned_proc = /mob/living/carbon/human/proc/use_reagent_implant_roiz
 
-/obj/item/weapon/implant/reagent_generator/roiz/implanted(mob/living/carbon/source)
+/obj/item/weapon/implant/reagent_generator/roiz/post_implant(mob/living/carbon/source)
 	processing_objects += src
 	to_chat(source, "<span class='notice'>You implant [source] with \the [src].</span>")
 	source.verbs |= assigned_proc
@@ -815,7 +815,7 @@
 	random_emote = list("hisses softly with a blush on her face", "bites down on her lower lip", "lets out a light huff")
 	assigned_proc = /mob/living/carbon/human/proc/use_reagent_implant_jasmine
 
-/obj/item/weapon/implant/reagent_generator/jasmine/implanted(mob/living/carbon/source)
+/obj/item/weapon/implant/reagent_generator/jasmine/post_implant(mob/living/carbon/source)
 	processing_objects += src
 	to_chat(source, "<span class='notice'>You implant [source] with \the [src].</span>")
 	source.verbs |= assigned_proc
@@ -883,7 +883,7 @@
 	random_emote = list("hisses softly with a blush on her face", "yelps in embarrassment", "grunts a little")
 	assigned_proc = /mob/living/carbon/human/proc/use_reagent_implant_yonra
 
-/obj/item/weapon/implant/reagent_generator/yonra/implanted(mob/living/carbon/source)
+/obj/item/weapon/implant/reagent_generator/yonra/post_implant(mob/living/carbon/source)
 	processing_objects += src
 	to_chat(source, "<span class='notice'>You implant [source] with \the [src].</span>")
 	source.verbs |= assigned_proc
@@ -967,7 +967,7 @@
 	random_emote = list("trembles and huffs, panting from the exertion.", "sees what has happened and covers her face with both hands!", "whimpers softly, her legs shivering, knees pointed inward from the feeling.")
 	assigned_proc = /mob/living/carbon/human/proc/use_reagent_implant_rischi
 
-/obj/item/weapon/implant/reagent_generator/rischi/implanted(mob/living/carbon/source)
+/obj/item/weapon/implant/reagent_generator/rischi/post_implant(mob/living/carbon/source)
 	processing_objects += src
 	to_chat(source, "<span class='notice'>You implant [source] with \the [src].</span>")
 	source.verbs |= assigned_proc
@@ -1033,7 +1033,7 @@
 	self_emote_descriptor = list("grab", "pick", "snatch")
 	assigned_proc = /mob/living/carbon/human/proc/use_reagent_implant_pumila_apple
 
-/obj/item/weapon/implant/reagent_generator/pumila_apple/implanted(mob/living/carbon/source)
+/obj/item/weapon/implant/reagent_generator/pumila_apple/post_implant(mob/living/carbon/source)
 	processing_objects += src
 	to_chat(source, "<span class='notice'>You implant [source] with \the [src].</span>")
 	source.verbs |= assigned_proc
@@ -1726,7 +1726,7 @@
 	random_emote = list("hisses softly with a blush on his face", "yelps in embarrassment", "grunts a little")
 	assigned_proc = /mob/living/carbon/human/proc/use_reagent_implant_evian
 
-/obj/item/weapon/implant/reagent_generator/evian/implanted(mob/living/carbon/source)
+/obj/item/weapon/implant/reagent_generator/evian/post_implant(mob/living/carbon/source)
 	processing_objects += src
 	to_chat(source, "<span class='notice'>You implant [source] with \the [src].</span>")
 	source.verbs |= assigned_proc
