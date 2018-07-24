@@ -103,6 +103,12 @@ var/global/datum/controller/occupations/job_master
 			if(flag && (!player.client.prefs.be_special & flag))
 				Debug("FOC flag failed, Player: [player], Flag: [flag], ")
 				continue
+			// // // Begin AEIOU edit // // //
+			if(player.mind && player.mind.special_role)		//are we antagonist?
+				if(job in player.mind.antag_job_restrictions)			//Is our role in the antag restricted jobs?
+					Debug("FOC incompatible with antagonist role, Player: [player], Antag: [player.mind.special_role]")
+					continue
+			// // // End AEIOU edit // // //
 			if(player.client.prefs.GetJobDepartment(job, level) & job.flag)
 				Debug("FOC pass, Player: [player], Level:[level]")
 				candidates += player

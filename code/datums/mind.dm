@@ -70,6 +70,9 @@
 
 	//used to store what traits the player had picked out in their preferences before joining, in text form.
 	var/list/traits = list()
+	
+	//AEIOU edit: Antag job restrictions
+	var/list/antag_job_restrictions = list()
 
 /datum/mind/New(var/key)
 	src.key = key
