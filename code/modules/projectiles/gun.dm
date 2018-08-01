@@ -354,6 +354,7 @@
 		set desc = "Click to toggle your weapon's attached flashlight."
 		set src in usr
 		turn_on_gunlight()
+		
 
 /obj/item/weapon/gun/proc/turn_on_gunlight() // AEIOU addition
 	if(!F)
@@ -365,6 +366,7 @@
 	user << "<span class='notice'>You toggle the gunlight [F.on ? "on":"off"].</span>"
 	set_light(light_brightness)
 	playsound(user, 'sound/weapons/empty.ogg', 100, 1)
+	update_icon()
 	return
 
 

@@ -11,12 +11,12 @@
 	projectile_type = /obj/item/projectile/bullet/pistol/medium
 	magazine_type = /obj/item/ammo_magazine/m45usp/p12
 	allowed_magazines = list(/obj/item/ammo_magazine/m45usp/p12)
-	can_flashlight = 1
+	can_flashlight = 1 //This allow the flashlight, IRC
 	flight_x_offset = 16 //Flight is Flash-light
 	flight_y_offset = 12
-	recoil = 0
+	recoil = 0 //no screenshake
 	w_class = 2 //Small
-	sound_override = 1
+	sound_override = 1 //This variable allows for sounds independant of the round.
 	fire_sound = 'sound/weapons/pistol_glock17_1.ogg'
 //	magazine_type = /obj/item/ammo_magazine/m45
 //	allowed_magazines = list(/obj/item/ammo_magazine/m45)
