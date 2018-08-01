@@ -8,15 +8,17 @@
 	item_state = "usp"
 	caliber = ".45"
 	load_method = MAGAZINE
-	magazine_type = /obj/item/ammo_magazine/m45P12
-	allowed_magazines = list(/obj/item/ammo_magazine/m45P12, /obj/item/ammo_magazine/m45)
+	magazine_type = /obj/item/ammo_magazine/m45usp/p12
+	allowed_magazines = list(/obj/item/ammo_magazine/m45usp/p12)
 	can_flashlight = 1
-//	canmagnum = 1 unused code due to fork and stuff.
 	flight_x_offset = 16 //Flight is Flash-light
 	flight_y_offset = 12
 	recoil = 0
+	w_class = 2 //Small
+//	magazine_type = /obj/item/ammo_magazine/m45
+//	allowed_magazines = list(/obj/item/ammo_magazine/m45)
 //	spread = 5
-	w_class = 2
+//	canmagnum = 1 unused code due to fork and stuff.
 //	fire_sound = 'sound/weapons/pistol_glock17_1.ogg'
 
 
