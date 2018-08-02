@@ -2,6 +2,6 @@
 	name = "webley slug"
 	fire_sound = 'sound/weapons/gunshot/shotgun.ogg'
 	damage = 17
-	armor_penetration = 0
+	armor_penetration = 10
 	agony = 40
-	embed_chance = 60
+	embed_chance = 80
