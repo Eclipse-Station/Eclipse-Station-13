@@ -2988,6 +2988,7 @@
 #include "modular_aeiou\code\modules\projectiles\ammunition\caseless.dm"
 #include "modular_aeiou\code\modules\projectiles\ammunition\magazines_aeiou.dm"
 #include "modular_aeiou\code\modules\projectiles\ammunition\rounds_caseless.dm"
+#include "modular_aeiou\code\modules\projectiles\guns\projectile\automatic_aeiou.dm"
 #include "modular_aeiou\code\modules\projectiles\guns\projectile\boltaction_aeiou.dm"
 #include "modular_aeiou\code\modules\projectiles\guns\projectile\pistol_aeiou.dm"
 #include "modular_aeiou\code\modules\projectiles\guns\projectile\shotgun_aeiou.dm"

@@ -333,9 +333,9 @@
 	if(sap_type == 2)//purple sap
 		icon_state = "tree_sif2"
 		desc = "It's a tree, except this one seems quite alien.  It glows a deep violet."
-	if(sap_type == 3)
+	if(sap_type == 3)//third sap
 		icon_state = "tree_sif3"
-		desc = "It's a tree, except this one seems quite alien.  It glows a deep blue."
+		desc = "It's a tree, except this one seems quite alien.  It glows a low brownish orange."
 //	else
 //		icon_state = "tree_sif"
 	update_icon()

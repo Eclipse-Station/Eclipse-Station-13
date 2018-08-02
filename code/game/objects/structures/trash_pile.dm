@@ -1,4 +1,4 @@
-/obj/structure/trash_pile
+/obj/structure/trash_pile //VIRGO ONE
 	name = "trash pile"
 	desc = "A heap of garbage, but maybe there's something interesting inside?"
 	icon = 'icons/obj/trash_piles.dmi'
