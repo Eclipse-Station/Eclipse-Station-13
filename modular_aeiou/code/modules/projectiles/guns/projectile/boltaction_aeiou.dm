@@ -29,23 +29,16 @@
 	load_method = SINGLE_CASING
 	action_sound = 'sound/weapons/riflebolt.ogg'
 
-/obj/item/weapon/gun/projectile/shotgun/pump/rifle/pockrifle/update_icon()
+/obj/item/weapon/gun/projectile/shotgun/pump/rifle/pocketrifle/update_icon()
 	..()
 	if(ammo_magazine)
-		icon_state = "pocketrifle"
+		icon_state = "[initial(icon_state)]"
 	else
-		icon_state = "pocketrifle-empty"
+		icon_state = "[initial(icon_state)]-e"
 
 /obj/item/weapon/gun/projectile/shotgun/pump/rifle/pocketrifleblack
-	item_state = "pocketrifle_b"
-	icon_state = "pocketrifle_b"
-
-/obj/item/weapon/gun/projectile/shotgun/pump/rifle/pocketrifleblack/update_icon()
-	..()
-	if(ammo_magazine)
-		icon_state = "pocketrifle_b"
-	else
-		icon_state = "pocketrifle_b-empty"
+	item_state = "pocketrifleb"
+	icon_state = "pocketrifleb"
 
 //Perfect for your slavic snipers.
 /obj/item/weapon/gun/projectile/shotgun/pump/rifle/scoped//aeiou addition
