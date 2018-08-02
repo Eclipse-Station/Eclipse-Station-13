@@ -1,14 +1,14 @@
 /obj/item/ammo_magazine/m45usp/p12
-		name = "handgun magazine (P12 Compact)"
-		desc = "A special magazine designated to fit the P12 pistol. Uses .45 ammo."
-		icon_state = "uspmag-12"
-		icon = 'modular_aeiou/icons/obj/ammo_aeiou.dmi'
-		ammo_type = /obj/item/ammo_casing/a45
-		caliber = ".45"
-		max_ammo = 12
+	name = "handgun magazine (P12 Compact)"
+	desc = "A special magazine designated to fit the P12 pistol. Uses .45 ammo."
+	icon_state = "uspmag-12"
+	icon = 'modular_aeiou/icons/obj/ammo_aeiou.dmi'
+	ammo_type = /obj/item/ammo_casing/a45
+	caliber = ".45"
+	max_ammo = 12
 
-	/obj/item/ammo_magazine/m45usp/p12/empty
-		initial_ammo = 0
+/obj/item/ammo_magazine/m45usp/p12/empty
+	initial_ammo = 0
 
 /obj/item/ammo_magazine/s177bb
 	name = "tube of BBs"
