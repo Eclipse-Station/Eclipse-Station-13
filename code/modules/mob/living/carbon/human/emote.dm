@@ -667,12 +667,11 @@
 				if(!muzzled)
 					message = "[species.scream_verb]!"
 					m_type = 2
-					/* Removed, pending the location of some actually good, properly licensed sounds.
+					/* AEIOU EDIT - Re-added and updated with new GOON CODE sounds. Check the License file for details. - HTG */
 					if(get_gender() == FEMALE)
 						playsound(loc, "[species.female_scream_sound]", 80, 1)
 					else
 						playsound(loc, "[species.male_scream_sound]", 80, 1) //default to male screams if no gender is present.
-					*/
 				else
 					message = "makes a very loud noise."
 					m_type = 2
