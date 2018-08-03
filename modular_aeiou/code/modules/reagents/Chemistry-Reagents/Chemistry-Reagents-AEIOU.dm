@@ -1,6 +1,6 @@
-/datum/reagent/toxin/aliensap
-	name = "Alien Sap"
-	id = "aliensap"
+/datum/reagent/toxin/bluesap //This is the first sap. Blue one.
+	name = "Blue Sap"
+	id = "bluesap"
 	description = "Glowing blue liquid."
 	reagent_state = LIQUID
 	color = "#91f9ff" // rgb(145, 249, 255)
@@ -8,8 +8,7 @@
 	strength = 10
 	mrate_static = TRUE
 
-
-/datum/reagent/bullvalene
+/datum/reagent/bullvalene // I really can't recall this thing purpose
 	name = "Bullvalene "
 	id = "bullvalene"
 	description = "Glowing red liquid."
@@ -18,16 +17,7 @@
 	metabolism = 0.01
 	mrate_static = TRUE
 
-
-/datum/reagent/ash
-	name = "Ash"
-	id = "ash"
-	description = "Supposedly phoenixes rise from these, but you've never seen it."
-	reagent_state = LIQUID
-	color = "#C8A5DC"
-	taste_description = "ash"
-
-/datum/reagent/purplesap
+/datum/reagent/purplesap //
 	name = "Purple sap"
 	id = "purplesap"
 	description = "Purple liquid. It is very sticky and smells of amonia."
@@ -51,3 +41,11 @@
 		else
 			M.sleeping = max(M.sleeping, 20)
 			M.drowsyness = max(M.drowsyness, 60)
+
+/datum/reagent/ash
+	name = "Ash"
+	id = "ash"
+	description = "Supposedly phoenixes rise from these, but you've never seen it."
+	reagent_state = LIQUID
+	color = "#C8A5DC"
+	taste_description = "ash"
