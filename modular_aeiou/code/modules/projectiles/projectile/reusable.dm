@@ -47,6 +47,7 @@
 	check_armour = "melee"
 	combustion = FALSE
 	ammo_type = /obj/item/ammo_casing/caseless/a177bb
+	var/drop_chance = 20		//chance to get a functional reusable bullet
 
 
 //Sadly, reinventing the wheel is a bit necessary here in order to suppress an
@@ -136,3 +137,22 @@
 		return 0
 
 	return 1
+
+/obj/item/projectile/bullet/reusable/air_rifle_bb/handle_drop()
+	if(!dropped)
+		if(prob(drop_chance))		//if you win the bullet lottery, have a new bullet
+			new ammo_type(src.loc)
+		else
+			new /obj/item/fluff/mangled_bb(src.loc)		//defined below
+		dropped = TRUE
+
+//Mangled, non-reusable BB. Technically not a bullet, but here for ease of organization.
+/obj/item/trash/mangled_bb		
+	name = "mangled BB"
+	w_class = ITEMSIZE_TINY
+	desc = "This is rubbish. No way this'll fit in your air rifle."
+	description_info = "This is useless, other than for a negligible bit of materials."
+	materials = list(DEFAULT_WALL_MATERIAL = 10)
+	icon = 'modular_aeiou/icons/obj/projectile_aeiou.dmi'
+	icon_state = "bb-steel"
+	sharp = FALSE
