@@ -143,7 +143,7 @@
 		if(prob(drop_chance))		//if you win the bullet lottery, have a new bullet
 			new ammo_type(src.loc)
 		else
-			new /obj/item/fluff/mangled_bb(src.loc)		//defined below
+			new /obj/item/trash/mangled_bb(src.loc)		//defined below
 		dropped = TRUE
 
 //Mangled, non-reusable BB. Technically not a bullet, but here for ease of organization.
