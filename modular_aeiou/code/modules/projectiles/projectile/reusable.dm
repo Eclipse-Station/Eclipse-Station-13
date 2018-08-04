@@ -151,8 +151,7 @@
 	name = "mangled BB"
 	w_class = ITEMSIZE_TINY
 	desc = "This is rubbish. No way this'll fit in your air rifle."
-	description_info = "This is useless, other than for a negligible bit of materials."
-	materials = list(DEFAULT_WALL_MATERIAL = 10)
+	description_info = "This is useless."
 	icon = 'modular_aeiou/icons/obj/projectile_aeiou.dmi'
 	icon_state = "bb-steel"
 	sharp = FALSE
