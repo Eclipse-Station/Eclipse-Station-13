@@ -38,7 +38,7 @@
 
 /obj/item/weapon/gun/projectile/shotgun/pump/air_rifle/le		//limited edition
 	name = "\improper Cuban Pete limited-edition air rifle"
-	desc = "A Cuban Pete carbine-action, two-hundred-shot Range Master air-rifle with a fake compass on the stock and a carving of this thing which tells time."
+	desc = "A Cuban Pete carbine-action, sixty-shot Range Master air-rifle with a fake compass on the stock and a carving of this thing which tells time."
 	icon_state = "ryder-le"
 
 	var/fake_compass_reading = "null"			//i am aware this is a string that says null
