@@ -6,7 +6,7 @@
 	fire_sound = 'sound/weapons/gunshot_air_rifle.ogg'
 //	item_state = ""		//we'll use shotgun item states for now so you can sling one across your back
 	force = 5
-	max_shells = 100	//100 round capacity
+	max_shells = 60	//60 round capacity
 	caliber = "177pellet"		//.177 pellet
 	ammo_type = /obj/item/ammo_casing/caseless/a177bb
 	projectile_type = /obj/item/projectile/bullet/reusable/air_rifle_bb
