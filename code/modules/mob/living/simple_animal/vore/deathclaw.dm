@@ -12,7 +12,8 @@
 
 	maxHealth = 200
 	health = 200
-
+	intelligence_level = SA_HUMANOID
+	
 	melee_damage_lower = 10
 	melee_damage_upper = 60
 

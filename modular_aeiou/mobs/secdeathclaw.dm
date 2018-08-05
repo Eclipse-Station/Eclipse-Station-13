@@ -26,7 +26,7 @@
 	
 	follow_until_time = 100	//it should stop chasing someone after ten seconds and attempt to go back to spawn
 	returns_home = 1	//this tells it to go back to spawn
-	intelligence_level = 3
+	intelligence_level = SA_HUMANOID
 	
 	old_x = -16
 	old_y = 0
