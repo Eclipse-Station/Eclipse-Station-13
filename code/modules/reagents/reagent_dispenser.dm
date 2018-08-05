@@ -94,6 +94,10 @@
 	amount_per_transfer_from_this = 10
 	var/modded = 0
 	var/obj/item/device/assembly_holder/rig = null
+	
+	//AEIOU added vars
+	var/proj_min_dmg_for_explosion = 20	//20 damage needed to trigger an explosion if projectile won't ignite something.
+	var/proj_impact_leak_chance = 10	//10% to leak if shot by a projectile that will not trigger an explosion.
 
 /obj/structure/reagent_dispensers/fueltank/New()
 	..()
@@ -159,7 +163,16 @@
 			log_game("[key_name(Proj.firer)] shot fueltank at [loc.loc.name] ([loc.x],[loc.y],[loc.z]).")
 
 		if(!istype(Proj ,/obj/item/projectile/beam/lastertag) && !istype(Proj ,/obj/item/projectile/beam/practice) )
-			explode()
+			// // // BEGIN AEIOU EDIT // // //
+			if(Proj.combustion || Proj.damage >= proj_min_dmg_for_explosion)		//if the bullet would ignite something or damage greater thn 20...
+				explode()		//boom baby
+			else if(prob(proj_impact_leak_chance))		//10% chance to make it leak
+				modded = TRUE		//it will leak and can be easily fixed. Not necessarily unwrenched manually. 
+				leak_fuel(amount_per_transfer_from_this/10.0)
+				message_admins("Fueltank at [loc.loc.name] ([loc.x],[loc.y],[loc.z]) leaking fuel due to gunshot.")
+				log_game("Fueltank at [loc.loc.name] ([loc.x],[loc.y],[loc.z]) leaking fuel due to gunshot.")
+			// // // END AEIOU EDIT // // //
+
 
 /obj/structure/reagent_dispensers/fueltank/ex_act()
 	explode()
