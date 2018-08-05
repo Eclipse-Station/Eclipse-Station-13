@@ -229,7 +229,7 @@
 				var/transferred = min(G.reagents.maximum_volume - G.reagents.total_volume, sap)
 				sap -= transferred
 				G.reagents.add_reagent("phoron", transferred)//badly done yeah. Ideally, you would have a list of reagents to pull from then to add.
-				G.reagents.add_reagent("aliensap", transferred)
+				G.reagents.add_reagent("bluesap", transferred)
 				sap_amount = transferred * 2
 				user.visible_message("<span class='notice'>[user] collects [sap_amount] from \the [src] into \the [G].</span>", "<span class='notice'>You collect [sap_amount] units of sap from \the [src] into \the [G].</span>")
 				return 1
@@ -247,7 +247,7 @@
 				var/transferred = min(G.reagents.maximum_volume - G.reagents.total_volume, sap)
 				sap -= transferred
 				G.reagents.add_reagent("phoron", transferred)
-				G.reagents.add_reagent("aliensap", transferred)
+				G.reagents.add_reagent("orangesap", transferred)
 				sap_amount = transferred * 2
 				user.visible_message("<span class='notice'>[user] collects [sap_amount] from \the [src] into \the [G].</span>", "<span class='notice'>You collect [sap_amount] units of sap from \the [src] into \the [G].</span>")
 				return 1
