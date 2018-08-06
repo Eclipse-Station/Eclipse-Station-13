@@ -166,11 +166,12 @@
 			// // // BEGIN AEIOU EDIT // // //
 			if(Proj.combustion || Proj.damage >= proj_min_dmg_for_explosion)		//if the bullet would ignite something or damage greater thn 20...
 				explode()		//boom baby
-			else if(prob(proj_impact_leak_chance))		//10% chance to make it leak
+			else if(prob(proj_impact_leak_chance) && !modded)		//10% chance to make it leak
 				modded = TRUE		//it will leak and can be easily fixed. Not necessarily unwrenched manually. 
 				leak_fuel(amount_per_transfer_from_this/10.0)
 				message_admins("Fueltank at [loc.loc.name] ([loc.x],[loc.y],[loc.z]) leaking fuel due to gunshot.")
 				log_game("Fueltank at [loc.loc.name] ([loc.x],[loc.y],[loc.z]) leaking fuel due to gunshot.")
+				visible_message("<span class='warning'>You hear a faint dripping noise coming from \the [src]...</span>")
 			// // // END AEIOU EDIT // // //
 
 
