@@ -1,5 +1,7 @@
 /mob/living/carbon/human/proc/handle_emote_vr(var/act,var/m_type=1,var/message = null)
 
+	var/datum/gender/T = gender_datums[get_visible_gender()] //We could go ahead and replace every single 'their' with this. - HTG
+
 	switch(act)
 		if ("vwag")
 			if(toggle_tail_vr(message = 1))
