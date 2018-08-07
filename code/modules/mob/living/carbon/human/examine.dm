@@ -295,7 +295,7 @@
 	msg += attempt_vr(src,"examine_pickup_size",args) //VOREStation Code
 	msg += attempt_vr(src,"examine_step_size",args) //VOREStation Code
 	msg += attempt_vr(src,"examine_nif",args) //VOREStation Code
-	msg += attempt_vr(src,"examine_tone",args) //VOREStation Code
+//	msg += attempt_vr(src,"examine_tone",args) //VOREStation Code	//AEIOU edit: the examine_tone() is commented out so this effectively calls a nonexistent proc
 
 	if(mSmallsize in mutations)
 		msg += "[T.He] [T.is] very short!<br>"
