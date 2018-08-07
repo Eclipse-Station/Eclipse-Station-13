@@ -5,6 +5,18 @@
 	..(user, infix = custom_infix)
 
 	var/msg = ""
+	
+	// // // BEGIN AEIOU EDIT // // //
+	// Prints borg name and icon to chat. Stolen from /code/modules/mob/living/carbon/human/examine.dm
+	msg += "<span class='info'>*---------*<br>This is "
+	if(icon)
+		msg += "\icon[icon] " //fucking BYOND: this should stop dreamseeker crashing if we -somehow- examine somebody before their icon is generated
+
+	msg += "<EM>[src.name]</EM>"
+	msg += "</span><br>"	//end the info span, and newline before we do the bruteloss.
+	// // // END AEIOU EDIT // // //
+
+	
 	msg += "<span class='warning'>"
 	if (src.getBruteLoss())
 		if (src.getBruteLoss() < 75)
