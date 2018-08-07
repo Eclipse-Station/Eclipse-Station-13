@@ -75,6 +75,11 @@
 	var/recruit_cmd_str = "Hey,"	// The thing you prefix commands with when bossing them around
 	var/intelligence_level = SA_ANIMAL// How 'smart' the mob is ICly, used to deliniate between animal, robot, and humanoid SAs.
 
+//AEIOU EDIT START
+	var/leather_amount = 0				// How much ~~meat~~ LEATHER to drop from this mob when butchered
+	var/obj/leather_type				// The ~~meat~~ LEATHER object to drop
+//AEIOU EDIT END
+
 	//Mob environment settings
 	var/minbodytemp = 250			// Minimum "okay" temperature in kelvin
 	var/maxbodytemp = 350			// Maximum of above
@@ -679,6 +684,7 @@
 	if(meat_type && (stat == DEAD))	//if the animal has a meat, and if it is dead.
 		if(istype(O, /obj/item/weapon/material/knife) || istype(O, /obj/item/weapon/material/knife/butch))
 			harvest(user)
+			harvest_leather(user)
 	else
 		ai_log("attackby() I was weapon'd by: [user]",2)
 		if(O.force)
@@ -839,6 +845,19 @@
 		else
 			user.visible_message("<span class='danger'>[user] butchers \the [src] messily!</span>")
 			gib()
+
+// Harvest an animal leather - AEIOU shit. It's just a lazy copy paste.
+/mob/living/simple_animal/proc/harvest_leather(var/mob/user)
+	var/actual_leather_amount = max(1,(leather_amount/2))
+	if(leather_type && actual_leather_amount>0 && (stat == DEAD))
+		for(var/i=0;i<actual_leather_amount;i++)
+			var/obj/item/leather = new leather_type(get_turf(src))
+			leather.name = "[src.name] [leather.name]"
+		if(issmall(src))
+			user.visible_message("<span class='danger'>[user] gathers leather from \the [src]!</span>")
+			qdel(src)
+		else
+			user.visible_message("<span class='danger'>[user] gathers leather from \the [src] messily!</span>")
 
 /mob/living/simple_animal/handle_fire()
 	return
