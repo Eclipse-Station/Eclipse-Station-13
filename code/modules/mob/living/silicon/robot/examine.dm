@@ -1,5 +1,7 @@
 /mob/living/silicon/robot/examine(mob/user)
-	var/custom_infix = custom_name ? ", [modtype] [braintype]" : ""
+	var/custom_infix = ""
+	if(custom_name)
+		custom_infix = ", [modtype] [braintype]"
 	..(user, infix = custom_infix)
 
 	var/msg = ""
@@ -26,9 +28,12 @@
 
 	switch(src.stat)
 		if(CONSCIOUS)
-			if(!src.client)	msg += "It appears to be in stand-by mode.\n" //afk
-		if(UNCONSCIOUS)		msg += "<span class='warning'>It doesn't seem to be responding.</span>\n"
-		if(DEAD)			msg += "<span class='deadsay'>It looks completely unsalvageable.</span>\n"
+			if(!src.client)	
+				msg += "It appears to be in stand-by mode.\n" //afk
+		if(UNCONSCIOUS)		
+			msg += "<span class='warning'>It doesn't seem to be responding.</span>\n"
+		if(DEAD)			
+			msg += "<span class='deadsay'>It looks completely unsalvageable.</span>\n"
 	msg += attempt_vr(src,"examine_bellies_borg",args) //VOREStation Edit
 
 	// VOREStation Edit: Start
