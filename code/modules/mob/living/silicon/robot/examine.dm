@@ -58,7 +58,7 @@
 	// VOREStation Edit: End
 
 	msg += "*---------*"
-	msg += "</span>"		//AEIOU Edit: Ends the spans above
+	msg += "</span>"		//AEIOU Edit: Ends the info span above, where the borg name stuff is
 
 	if(print_flavor_text()) msg += "\n[print_flavor_text()]\n"
 
