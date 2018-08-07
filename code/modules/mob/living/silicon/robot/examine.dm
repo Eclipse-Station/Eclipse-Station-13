@@ -1,19 +1,23 @@
+// // // BEGIN AEIOU EDIT // // //
+// ..(user, infix = custom_infix) was causing runtiming because there's no infix in mob/living/examine()
+//this is moved down to the actual examine bits.
 /mob/living/silicon/robot/examine(mob/user)
 	var/custom_infix = ""
 	if(custom_name)
 		custom_infix = ", [modtype] [braintype]"
-	..(user, infix = custom_infix)
+	..(user)
 
 	var/msg = ""
 	
-	// // // BEGIN AEIOU EDIT // // //
 	// Prints borg name and icon to chat. Stolen from /code/modules/mob/living/carbon/human/examine.dm
 	msg += "<span class='info'>*---------*<br>This is "
 	if(icon)
 		msg += "\icon[icon] " //fucking BYOND: this should stop dreamseeker crashing if we -somehow- examine somebody before their icon is generated
 
 	msg += "<EM>[src.name]</EM>"
-	msg += "</span><br>"	//end the info span, and newline before we do the bruteloss.
+	if(custom_name)
+		msg += custom_infix
+	msg += ".<br>"	//newline before we do the damage texts. 
 	// // // END AEIOU EDIT // // //
 
 	
@@ -54,6 +58,7 @@
 	// VOREStation Edit: End
 
 	msg += "*---------*"
+	msg += "</span>"		//AEIOU Edit: Ends the spans above
 
 	if(print_flavor_text()) msg += "\n[print_flavor_text()]\n"
 
