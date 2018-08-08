@@ -41,6 +41,9 @@
 	meat_amount = 1
 	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
 
+	leather_amount = 1
+	leather_type = /obj/item/stack/material/animalhide/cat
+
 	var/turns_since_scan = 0
 	var/mob/flee_target
 
