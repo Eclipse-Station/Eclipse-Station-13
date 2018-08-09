@@ -99,18 +99,17 @@
 	var/shaded_charge = FALSE
 	var/ammo_x_offset = 2
 	var/ammo_y_offset = 0
-	var/can_flashlight = 0
+	var/can_flashlight = 0 //This means "Can we add a light to this"
 	var/obj/item/device/flashlight/F = null //added by aeiou
-	var/gun_light = FALSE
+	var/gun_light = FALSE //Is there a light
 	var/light_state = "flight"
 	var/light_brightness = 4
-	var/flight_x_offset = 0
+	var/flight_x_offset = 0 //Variables for the overlay
 	var/flight_y_offset = 0
 
 //AEIOU Adds
-	var/sound_override = 0 //aeiou edit
-	var/silencer = 0
-//AEIOU adding end
+	var/sound_override = 0 //aeiou edit This allows to use custom noises instead of the bullet noise like most guns
+	var/silencer = 0 //I think it just makes the gun quieter
 
 /obj/item/weapon/gun/CtrlClick(mob/user)
 	if(can_flashlight && ishuman(user) && src.loc == usr && !user.incapacitated(INCAPACITATION_ALL))
@@ -128,6 +127,7 @@
 
 	playsound(src, 'sound/machines/button.ogg', 25)
 	update_icon()
+
 //VOREStation Add End
 
 /obj/item/weapon/gun/New()
@@ -341,6 +341,8 @@
 				user.put_in_hands(F)
 				F = null
 				user << "<span class='notice'>You unscrew the seclite from [src].</span>"
+				toggle_flashlight()
+				set_light(0)
 				update_icon()
 		else	
 			user << "<span class='notice'>[src] has no light.</span>"
@@ -365,10 +367,11 @@
 	F.on = !F.on
 	user << "<span class='notice'>You toggle the gunlight [F.on ? "on":"off"].</span>"
 	set_light(light_brightness)
-	playsound(user, 'sound/weapons/empty.ogg', 100, 1)
+	playsound(user, 'sound/weapons/empty.ogg', 70, 1)
 	update_icon()
 	return
 
+//AEIOU edition end
 
 /obj/item/weapon/gun/emag_act(var/remaining_charges, var/mob/user)
 	if(dna_lock && attached_lock.controller_lock)
