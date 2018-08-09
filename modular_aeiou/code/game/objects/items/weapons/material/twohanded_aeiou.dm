@@ -14,7 +14,7 @@
 	desc = "A long, heavy hammer meant to be used with both hands. Typically used for breaking rocks and driving posts, it can also be used for breaking bones or driving points home."
 	description_info = "This weapon can cleave, striking nearby lesser, hostile enemies close to the primary target.  It must be held in both hands to do this."
 	unwielded_force_divisor = 0.25
-	force = 20
+	force = 25
 	force_divisor = 0.9 // 10/42 with hardness 60 (steel) and 0.25 unwielded divisor
 	hitsound = 'sound/weapons/heavysmash.ogg'
 	icon = 'modular_aeiou/icons/obj/weapons_aeiou.dmi'
@@ -23,7 +23,7 @@
 	dulled_divisor = 0.95	//Still metal on a stick
 	sharp = 0
 	edge = 0
-	force_wielded = 36
+	force_wielded = 40
 	attack_verb = list("attacked", "smashed", "crushed", "wacked", "pounded")
 	applies_material_colour = 0
 
@@ -71,6 +71,7 @@
 	force = 50
 	throwforce = 15
 	force_wielded = 75
+	slowdown = 0
 
 /*
 /obj/item/weapon/material/twohanded/sledgehammer/mjollnir/afterattack(var/atom/impacted)
