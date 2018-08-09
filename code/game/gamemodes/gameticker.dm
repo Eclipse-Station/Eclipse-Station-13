@@ -361,7 +361,7 @@ var/global/datum/controller/gameticker/ticker
 						time_left -= 1 MINUTES
 						sleep(600)
 					if(!delay_end)
-						to_chat(world, "<span class='notice'><b>Round ended. Rebooting world.</b></span>")
+						to_chat(world, "<span class='notice'><b>Round ended. Rebooting world.</b></span>")		//AEIOU edit
 						world.Reboot()
 					else
 						to_chat(world, "<span class='notice'><b>An admin has delayed the round end.</b></span>")
