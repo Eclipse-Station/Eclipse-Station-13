@@ -52,7 +52,7 @@ var/global/datum/emergency_shuttle_controller/emergency_shuttle
 		if (autopilot)
 			set_launch_countdown(SHUTTLE_LEAVETIME)	//get ready to return
 			var/estimated_time = round(estimate_launch_time()/60,1)
-			world.log << "Shuttle at station."
+			world.log << "Shuttle has arrived at station."		//AEIOU edit
 			if (evac)
 				emergency_shuttle_docked.Announce(replacetext(replacetext(using_map.emergency_shuttle_docked_message, "%dock_name%", "[using_map.dock_name]"),  "%ETD%", "[estimated_time] minute\s"))
 			else
