@@ -21,6 +21,9 @@ var/global/datum/emergency_shuttle_controller/emergency_shuttle
 	var/datum/announcement/priority/emergency_shuttle_docked = new(0, new_sound = sound('sound/AI/shuttledock.ogg'))
 	var/datum/announcement/priority/emergency_shuttle_called = new(0, new_sound = sound('sound/AI/shuttlecalled.ogg'))
 	var/datum/announcement/priority/emergency_shuttle_recalled = new(0, new_sound = sound('sound/AI/shuttlerecalled.ogg'))
+	
+	// AEIOU added vars
+	var/shift_change_horn = TRUE		//Should we have a shift-change horn when the shuttle gets called?
 
 /datum/emergency_shuttle_controller/New()
 	escape_pods = list()
@@ -49,7 +52,7 @@ var/global/datum/emergency_shuttle_controller/emergency_shuttle
 		if (autopilot)
 			set_launch_countdown(SHUTTLE_LEAVETIME)	//get ready to return
 			var/estimated_time = round(estimate_launch_time()/60,1)
-
+			world.log << "Shuttle has arrived at station."		//AEIOU edit
 			if (evac)
 				emergency_shuttle_docked.Announce(replacetext(replacetext(using_map.emergency_shuttle_docked_message, "%dock_name%", "[using_map.dock_name]"),  "%ETD%", "[estimated_time] minute\s"))
 			else
@@ -106,6 +109,14 @@ var/global/datum/emergency_shuttle_controller/emergency_shuttle
 	priority_announcement.Announce(replacetext(replacetext(using_map.shuttle_called_message, "%dock_name%", "[using_map.dock_name]"),  "%ETA%", "[estimated_time] minute\s"))
 	atc.shift_ending()
 
+	// // // BEGIN AEIOU EDIT // // //
+	world.log << "Scheduled crew transfer has begun."		//let the guy in the console see it
+	if(shift_change_horn)
+		spawn(48)		//1 mile at speed of sound in air at 0C, 1 bar pressure = 4.8574... seconds. This assumes the colony is at 1 mile away, and the horn is originating from there.
+			world << sound('sound/items/AirHorn.ogg', repeat = 0, wait = 0, volume = 10, channel = 3)	//Shift change horn
+	// // // END AEIOU EDIT // // //
+
+	
 //recalls the shuttle
 /datum/emergency_shuttle_controller/proc/recall()
 	if (!can_recall()) return

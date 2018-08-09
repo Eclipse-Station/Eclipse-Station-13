@@ -361,6 +361,7 @@ var/global/datum/controller/gameticker/ticker
 						time_left -= 1 MINUTES
 						sleep(600)
 					if(!delay_end)
+						to_chat(world, "<span class='notice'><b>Round ended. Rebooting world.</b></span>")		//AEIOU edit
 						world.Reboot()
 					else
 						to_chat(world, "<span class='notice'><b>An admin has delayed the round end.</b></span>")
@@ -382,6 +383,7 @@ var/global/datum/controller/gameticker/ticker
 		return 1
 
 /datum/controller/gameticker/proc/declare_completion()
+	world.log <<  "Round ended. Mode: [mode.name]."		//AEIOU edit: log to console that the round is over
 	world << "<br><br><br><H1>A round of [mode.name] has ended!</H1>"
 	for(var/mob/Player in player_list)
 		if(Player.mind && !isnewplayer(Player))
