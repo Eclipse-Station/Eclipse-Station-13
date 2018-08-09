@@ -133,7 +133,16 @@
 	user.put_in_hands(tape)
 	playsound(src, 'sound/effects/tape.ogg',25)
 
-/obj/item/weapon/ducttape
+/obj/item/weapon/tape_roll/attackby(obj/item/W as obj, mob/user as mob) //AEIOU EDIT. THIS IS TO CRAFT THE GLASS SHIV.
+	if(istype(W,/obj/item/weapon/material/shard))
+//		var/obj/item/weapon/material/shard/B = W
+		to_chat(user, "<span class='notice'>You hastily craft a pointy stick out of the tape and the shard. This doesn't even look remotely legal..</span>")
+		new /obj/item/weapon/glassshiv/(user.loc)
+		qdel(W)
+		qdel(src)
+		return
+
+/obj/item/weapon/ducttape //This is a child of the above 
 	name = "tape"
 	desc = "A piece of sticky tape."
 	icon = 'icons/obj/bureaucracy.dmi'

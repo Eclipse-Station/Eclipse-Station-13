@@ -2966,6 +2966,7 @@
 #include "modular_aeiou\code\game\machinery\stove_aeiou.dm"
 #include "modular_aeiou\code\game\objects\balls.dm"
 #include "modular_aeiou\code\game\objects\effects\wind.dm"
+#include "modular_aeiou\code\game\objects\items\weapons\crafted_weapons_aeiou.dm"
 #include "modular_aeiou\code\game\objects\items\weapons\forms_heads.dm"
 #include "modular_aeiou\code\game\objects\items\weapons\pan_aeiou.dm"
 #include "modular_aeiou\code\game\objects\items\weapons\pillows_aeiou.dm"
