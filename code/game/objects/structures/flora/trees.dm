@@ -239,7 +239,7 @@
 				sap -= transferred
 				G.reagents.add_reagent("phoron", transferred)
 				G.reagents.add_reagent("purplesap", transferred)
-				sap_amount = transferred * 1
+				sap_amount = transferred * 2
 				user.visible_message("<span class='notice'>[user] collects [sap_amount] from \the [src] into \the [G].</span>", "<span class='notice'>You collect [sap_amount] units of sap from \the [src] into \the [G].</span>")
 				return 1
 			if(sap_type == 3)
