@@ -3,8 +3,7 @@
 	name = "glass shiv"
 	desc = "A poorly crafted shit"
 	icon = 'modular_aeiou/icons/obj/weapons_aeiou.dmi'
-	icon_state = "glassshiv"
-	item_state = "glass_shiv"
+	icon_state = "glass_shiv"
 	force = 7 //Small but not nothing
 	embed_chance = 100 //this should go in everytime
 	throwforce = 2
@@ -13,7 +12,7 @@
 
 /obj/item/weapon/glassshiv/afterattack
 	force = 1
-	embed_chance = embed_chance / 2
+	embed_chance = 15
 
 /* //Disabled for testing.
 /obj/item/weapon/glassshiv/afterattack(atom/A as mob|obj|turf|area, mob/user as mob)
