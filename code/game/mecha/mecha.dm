@@ -70,6 +70,9 @@
 	var/max_equip = 3
 	var/datum/events/events
 
+	var/nanotrasen_mech = 0 //This is for sounds. Nano mechs use nano sounds (mostly). Same for syndi mech var.
+	var/syndi_mech = 0
+
 /obj/mecha/drain_power(var/drain_check)
 
 	if(drain_check)
@@ -899,7 +902,12 @@
 		set_dir(dir_in)
 		src.log_message("[mmi_as_oc] moved in as pilot.")
 		if(!hasInternalDamage())
-			src.occupant << sound('sound/mecha/nominal.ogg',volume=50)
+			if(nanotrasen_mech)
+				src.occupant << sound('sound/mecha/nominalnano.ogg',volume=50)
+			if(syndi_mech)
+				src.occupant << sound('sound/mecha/nominalsyndi.ogg',volume=50)
+			else
+				src.occupant << sound('sound/mecha/nominal.ogg',volume=50)
 		return 1
 	else
 		return 0
@@ -1136,8 +1144,14 @@
 		src.icon_state = src.reset_icon()
 		set_dir(dir_in)
 		playsound(src, 'sound/machines/windowdoor.ogg', 50, 1)
+		sleep(2)
 		if(!hasInternalDamage())
-			src.occupant << sound('sound/mecha/nominal.ogg',volume=50)
+			if(nanotrasen_mech)
+				src.occupant << sound('sound/mecha/nominalnano.ogg',volume=50)
+			if(syndi_mech)
+				src.occupant << sound('sound/mecha/nominalsyndi.ogg',volume=50)
+			else
+				src.occupant << sound('sound/mecha/nominal.ogg',volume=50)
 		return 1
 	else
 		return 0
@@ -1316,6 +1330,9 @@
 
 
 /obj/mecha/proc/report_internal_damage()
+	src.occupant << sound('sound/mecha/internaldmgalarm.ogg',volume=50)
+	sleep(10)
+	src.occupant << sound('sound/mecha/critnano.ogg',volume=50)
 	var/output = null
 	var/list/dam_reports = list(
 										"[MECHA_INT_FIRE]" = "<font color='red'><b>INTERNAL FIRE</b></font>",

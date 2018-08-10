@@ -86,6 +86,7 @@
 		chassis.use_power(energy_drain)
 		chassis.visible_message("<span class='danger'>[chassis] starts to drill [target]</span>", "<span class='warning'>You hear the drill.</span>")
 		occupant_message("<span class='danger'>You start to drill [target]</span>")
+		playsound(target, 'sound/mecha/mechdrill.ogg', 20, 1)
 		var/T = chassis.loc
 		var/C = target.loc	//why are these backwards? we may never know -Pete
 		if(do_after_cooldown(target))
@@ -137,6 +138,7 @@
 		chassis.use_power(energy_drain)
 		chassis.visible_message("<span class='danger'>[chassis] starts to drill [target]</span>", "<span class='warning'>You hear the drill.</span>")
 		occupant_message("<span class='danger'>You start to drill [target]</span>")
+		playsound(target, 'sound/items/Deconstruct.ogg', 20, 1)
 		var/T = chassis.loc
 		var/C = target.loc	//why are these backwards? we may never know -Pete
 		if(do_after_cooldown(target))
