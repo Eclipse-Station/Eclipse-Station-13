@@ -5,7 +5,7 @@
 	reagent_state = LIQUID
 	color = "#91f9ff" // rgb(145, 249, 255)
 	metabolism = 0.01
-	strength = 10
+	strength = 10//Don't drink it
 	mrate_static = TRUE
 
 /datum/reagent/bullvalene // I really can't recall this thing purpose
@@ -17,7 +17,7 @@
 	metabolism = 0.01
 	mrate_static = TRUE
 
-/datum/reagent/purplesap //
+/datum/reagent/purplesap 
 	name = "Purple sap"
 	id = "purplesap"
 	description = "Purple liquid. It is very sticky and smells of amonia."

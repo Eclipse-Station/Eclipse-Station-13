@@ -1,4 +1,4 @@
-/datum/reagent/hannoa
+/datum/reagent/hannoa //heals burn
 	name = "hannoa"
 	id = "hannoa"
 	description = "A powerful clotting agent that treats brute damage very quickly but takes a long time to be metabolised. Overdoses easily, reacts badly with other chemicals."
