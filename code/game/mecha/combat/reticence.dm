@@ -85,5 +85,6 @@
 		alpha = 255
 		src.occupant_message("<font color='red'>You disable [src] invisiblity.</font>")
 	src.log_message("Toggled invisiblity.")
+	src.occupant << sound('sound/effects/phasein.ogg',volume=50)
 	return
 
