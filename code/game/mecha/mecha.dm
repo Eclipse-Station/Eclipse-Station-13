@@ -463,7 +463,10 @@
 	internal_damage |= int_dam_flag
 	pr_internal_damage.start()
 	log_append_to_last("Internal damage of type [int_dam_flag].",1)
-	occupant << sound('sound/machines/warning-buzzer.ogg',wait=0)
+	//occupant << sound('sound/machines/warning-buzzer.ogg',wait=0)
+	src.occupant << sound('sound/mecha/internaldmgalarm.ogg',volume=50)
+	sleep(6)
+	src.occupant << sound('sound/mecha/critnano.ogg',volume=50)
 	return
 
 /obj/mecha/proc/clearInternalDamage(int_dam_flag)
@@ -904,8 +907,10 @@
 		if(!hasInternalDamage())
 			if(nanotrasen_mech)
 				src.occupant << sound('sound/mecha/nominalnano.ogg',volume=50)
+				return
 			if(syndi_mech)
 				src.occupant << sound('sound/mecha/nominalsyndi.ogg',volume=50)
+				return
 			else
 				src.occupant << sound('sound/mecha/nominal.ogg',volume=50)
 		return 1
@@ -1148,10 +1153,13 @@
 		if(!hasInternalDamage())
 			if(nanotrasen_mech)
 				src.occupant << sound('sound/mecha/nominalnano.ogg',volume=50)
+				return
 			if(syndi_mech)
 				src.occupant << sound('sound/mecha/nominalsyndi.ogg',volume=50)
+				return
 			else
 				src.occupant << sound('sound/mecha/nominal.ogg',volume=50)
+				return
 		return 1
 	else
 		return 0
@@ -1330,9 +1338,6 @@
 
 
 /obj/mecha/proc/report_internal_damage()
-	src.occupant << sound('sound/mecha/internaldmgalarm.ogg',volume=50)
-	sleep(10)
-	src.occupant << sound('sound/mecha/critnano.ogg',volume=50)
 	var/output = null
 	var/list/dam_reports = list(
 										"[MECHA_INT_FIRE]" = "<font color='red'><b>INTERNAL FIRE</b></font>",

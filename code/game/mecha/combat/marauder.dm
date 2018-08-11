@@ -42,6 +42,7 @@
 	name = "Mauler"
 	icon_state = "mauler"
 	initial_icon = "mauler"
+	nanotrasen_mech = 0
 	syndi_mech = 1
 	operation_req_access = list(access_syndicate)
 	wreckage = /obj/effect/decal/mecha_wreckage/mauler
