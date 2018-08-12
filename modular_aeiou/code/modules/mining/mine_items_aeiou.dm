@@ -2,7 +2,7 @@
 	name = "heavy duty drill"
 	desc = "Vroom vroom."
 	icon = 'modular_aeiou/icons/obj/weapons_aeiou.dmi'
-	icon_state = "hdd0"
+	icon_state = "thdd0"
 	item_state = "chainsaw0"
 	w_class = ITEMSIZE_LARGE
 	slot_flags = SLOT_BACK
@@ -161,10 +161,10 @@
 
 /obj/item/weapon/pickaxe/heavydutydrill/update_icon()
 	if(on)
-		icon_state = "hdd01"
+		icon_state = "thdd01"
 		item_state = "chainsaw1"
 	else
-		icon_state = "hdd00"
+		icon_state = "thdd00"
 		item_state = "chainsaw0"
 
 //////////////////////////////////////////////////////////////////////
