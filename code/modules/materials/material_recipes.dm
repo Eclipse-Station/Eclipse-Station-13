@@ -192,3 +192,13 @@
 	recipes += new/datum/stack_recipe("alien wood floor tile", /obj/item/stack/tile/wood/sif, 1, 4, 20)
 	recipes -= new/datum/stack_recipe("wood floor tile", /obj/item/stack/tile/wood, 1, 4, 20)
 	recipes -= new/datum/stack_recipe("wooden chair", /obj/structure/bed/chair/wood, 3, time = 10, one_per_turf = 1, on_floor = 1)
+
+/material/leather/generate_recipes()
+	..()
+	recipes += new/datum/stack_recipe("botanist gloves", /obj/item/clothing/gloves/botanic_leather, 4, time = 50)
+	recipes += new/datum/stack_recipe("leather jacket", /obj/item/clothing/suit/storage/toggle/leather_jacket, 10, time = 50)
+	recipes += new/datum/stack_recipe("leather shoes", /obj/item/clothing/shoes/leather, 4, time = 50)
+	recipes += new/datum/stack_recipe("leather coat", /obj/item/clothing/suit/leathercoat, 4, 4, time = 50)
+	recipes += new/datum/stack_recipe("leather satchel", /obj/item/weapon/storage/backpack/satchel, 4, time = 500)
+	recipes += new/datum/stack_recipe("leather chaps", /obj/item/clothing/accessory/chaps, 5, time = 30)
+
