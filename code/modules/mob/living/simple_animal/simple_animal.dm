@@ -76,8 +76,8 @@
 	var/intelligence_level = SA_ANIMAL// How 'smart' the mob is ICly, used to deliniate between animal, robot, and humanoid SAs.
 
 //AEIOU EDIT START
-	var/leather_amount = 0				// How much ~~meat~~ LEATHER to drop from this mob when butchered
-	var/obj/leather_type				// The ~~meat~~ LEATHER object to drop
+	var/leather_amount = 1													// How much ~~meat~~ LEATHER to drop from this mob when butchered
+	var/obj/leather_type = /obj/item/stack/material/animalhide/default		// The ~~meat~~ LEATHER object to drop
 //AEIOU EDIT END
 
 	//Mob environment settings

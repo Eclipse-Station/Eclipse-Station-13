@@ -53,6 +53,17 @@
 /obj/item/stack/material/animalhide/xeno
 	amount = 50
 
+/obj/item/stack/material/animalhide/default
+	name = "animal skin"
+	desc = "The by-product of some animal farming."
+	singular_name = "animal skin piece"
+	icon_state = "sheet-hide"
+	no_variants = FALSE
+
+/obj/item/stack/material/animalhide/default
+	amount = 50
+
+
 //don't see anywhere else to put these, maybe together they could be used to make the xenos suit?
 /obj/item/stack/material/xenochitin
 	name = "alien chitin"
