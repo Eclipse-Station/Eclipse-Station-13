@@ -1,7 +1,7 @@
 //Shiv
 /obj/item/weapon/glassshiv
 	name = "glass shiv"
-	desc = "A poorly crafted shit"
+	desc = "A poorly crafted shiv."
 	icon = 'modular_aeiou/icons/obj/weapons_aeiou.dmi'
 	icon_state = "glass_shiv"
 	force = 7 //Small but not nothing

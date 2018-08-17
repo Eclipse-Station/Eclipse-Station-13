@@ -19,7 +19,7 @@
 	var/engine = null //This is the engine that powers the drill. Better engines are faster
 	var/airfilter = null //This will determine the engine fuel efficiency.
 	var/fuel_consumed = 0 //placeholder
-	var/fuel_efficiency = 1 //This is the var which determines how much you consume fuel.
+	var/fuel_efficiency = 30 //This is the var which determines how much you consume fuel.
 
 /obj/item/weapon/pickaxe/heavydutydrill/New()
 	var/datum/reagents/R = new/datum/reagents(max_fuel)
@@ -55,6 +55,7 @@
 			attack_verb = list("shredded", "ripped", "torn")
 			playsound(src, 'sound/weapons/chainsaw_startup.ogg',60,3)
 			force = active_force
+//			fuel_efficiency = (airfilter.aspiration)*1
 			edge = 1
 			sharp = 1
 			on = 1
@@ -133,7 +134,38 @@
 		if(prob(1))
 			enginefail()
 
-		
+/obj/item/weapon/pickaxe/heavydutydrill/attackby(obj/item/weapon/W, mob/user)
+	if(istype(W, /obj/item/drillparts/drillairfilters))
+		if(!airfilter)
+			user.drop_item()
+			W.loc = src
+			airfilter = W
+			user << "<span class='notice'>You install a filter in [src].</span>"
+			update_icon()
+		else
+			user << "<span class='notice'>[src] already has a filter.</span>"	
+
+	if(istype(W, /obj/item/drillparts/drillbit))
+		if(!drill_bit)
+			user.drop_item()
+			W.loc = src
+			drill_bit = W
+			user << "<span class='notice'>You install a tip in [src].</span>"
+			update_icon()
+		else
+			user << "<span class='notice'>[src] already has a tip.</span>"	
+
+	if(istype(W, /obj/item/drillparts/drillengine))
+		if(!engine )
+			user.drop_item()
+			W.loc = src
+			engine  = W
+			user << "<span class='notice'>You install an engine in [src].</span>"
+			update_icon()
+		else
+			user << "<span class='notice'>[src] already has a engine.</span>"	
+
+
 /obj/item/weapon/pickaxe/heavydutydrill/proc/enginefail()
 	force = inactive_force
 	edge = 0
@@ -221,18 +253,18 @@
 
 //Drill engine
 
-/obj/item/drillparts/drillairfilters
-	name = "basic drill air filter"
-	desc = "A engine air filter meant for combustible engines"
+/obj/item/drillparts/drillengine
+	name = "basic drill engine"
+	desc = "A engine engine meant for combustible engines"
 	icon_state = "treetap0"
 	var/enginepower = 50
 
-/obj/item/drillparts/drillairfilters/advanced
-	name = "advanced drill air filter"
-	desc = "A engine air filter meant for combustible engines"
+/obj/item/drillparts/drillengine/advanced
+	name = "advanced drill engine"
+	desc = "A engine meant for combustible engines"
 	enginepower = 100
 
-/obj/item/drillparts/drillairfilters/refined
-	name = "refined drill air filter"
-	desc = "A engine air filter meant for combustible engines"
+/obj/item/drillparts/drillengine/refined
+	name = "refined drill engine"
+	desc = "A engine meant for combustible engines"
 	enginepower = 150
