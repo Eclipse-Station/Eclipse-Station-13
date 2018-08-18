@@ -75,6 +75,12 @@
 	var/recruit_cmd_str = "Hey,"	// The thing you prefix commands with when bossing them around
 	var/intelligence_level = SA_ANIMAL// How 'smart' the mob is ICly, used to deliniate between animal, robot, and humanoid SAs.
 
+//AEIOU EDIT START
+	var/leather_amount = 1													// How much ~~meat~~ LEATHER to drop from this mob when butchered
+	var/obj/leather_type = /obj/item/stack/material/animalhide/default		// The ~~meat~~ LEATHER object to drop
+//AEIOU EDIT END
+
+
 	//Mob environment settings
 	var/minbodytemp = 250			// Minimum "okay" temperature in kelvin
 	var/maxbodytemp = 350			// Maximum of above

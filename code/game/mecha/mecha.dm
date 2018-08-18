@@ -464,7 +464,7 @@
 	pr_internal_damage.start()
 	log_append_to_last("Internal damage of type [int_dam_flag].",1)
 	//occupant << sound('sound/machines/warning-buzzer.ogg',wait=0)
-	src.occupant << sound('sound/mecha/internaldmgalarm.ogg',volume=50)
+	src.occupant << sound('sound/mecha/internaldmgalarm.ogg',volume=30)
 	sleep(6)
 	src.occupant << sound('sound/mecha/critnano.ogg',volume=50)
 	return
