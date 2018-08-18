@@ -75,11 +75,6 @@
 	var/recruit_cmd_str = "Hey,"	// The thing you prefix commands with when bossing them around
 	var/intelligence_level = SA_ANIMAL// How 'smart' the mob is ICly, used to deliniate between animal, robot, and humanoid SAs.
 
-//AEIOU EDIT START
-	var/leather_amount = 1													// How much ~~meat~~ LEATHER to drop from this mob when butchered
-	var/obj/leather_type = /obj/item/stack/material/animalhide/default		// The ~~meat~~ LEATHER object to drop
-//AEIOU EDIT END
-
 	//Mob environment settings
 	var/minbodytemp = 250			// Minimum "okay" temperature in kelvin
 	var/maxbodytemp = 350			// Maximum of above
@@ -605,13 +600,12 @@
 /mob/living/simple_animal/bullet_act(var/obj/item/projectile/Proj)
 	ai_log("bullet_act() I was shot by: [Proj.firer]",2)
 
-	/* VOREStation Edit - Ace doesn't like bonus SA damage. */
-	//AEIOU Edit: WELL, I DO. ^Spitzer
+	/* VOREStation Edit - Ace doesn't like bonus SA damage.
 	//Projectiles with bonus SA damage
 	if(!Proj.nodamage)
 		if(!Proj.SA_vulnerability || Proj.SA_vulnerability == intelligence_level)
 			Proj.damage += Proj.SA_bonus_damage
-	// VOREStation Edit End
+	*/ // VOREStation Edit End
 	. = ..()
 
 	if(Proj.firer)
@@ -684,7 +678,6 @@
 	if(meat_type && (stat == DEAD))	//if the animal has a meat, and if it is dead.
 		if(istype(O, /obj/item/weapon/material/knife) || istype(O, /obj/item/weapon/material/knife/butch))
 			harvest(user)
-			harvest_leather(user)
 	else
 		ai_log("attackby() I was weapon'd by: [user]",2)
 		if(O.force)
@@ -803,8 +796,6 @@
 		var/mob/living/L = target_mob
 		if(L.stat != DEAD)
 			return 1
-		if(L.invisibility < INVISIBILITY_LEVEL_ONE)
-			return 1
 	if (istype(target_mob,/obj/mecha))
 		var/obj/mecha/M = target_mob
 		if (M.occupant)
@@ -845,19 +836,6 @@
 		else
 			user.visible_message("<span class='danger'>[user] butchers \the [src] messily!</span>")
 			gib()
-
-// Harvest an animal leather - AEIOU shit. It's just a lazy copy paste.
-/mob/living/simple_animal/proc/harvest_leather(var/mob/user)
-	var/actual_leather_amount = max(1,(leather_amount/2))
-	if(leather_type && actual_leather_amount>0 && (stat == DEAD))
-		for(var/i=0;i<actual_leather_amount;i++)
-			var/obj/item/leather = new leather_type(get_turf(src))
-			leather.name = "[src.name] [leather.name]"
-		if(issmall(src))
-			user.visible_message("<span class='danger'>[user] gathers leather from \the [src]!</span>")
-			qdel(src)
-		else
-			user.visible_message("<span class='danger'>[user] gathers leather from \the [src] messily!</span>")
 
 /mob/living/simple_animal/handle_fire()
 	return
@@ -937,7 +915,7 @@
 				continue
 			else if(L in friends)
 				continue
-			else if(L.invisibility >= INVISIBILITY_LEVEL_ONE)
+			else if(L.alpha <= EFFECTIVE_INVIS)
 				continue
 			else if(!SA_attackable(L))
 				continue
@@ -1266,7 +1244,7 @@
 		ai_log("AttackTarget() Bailing because we're disabled",2)
 		LoseTarget()
 		return 0
-	if(!target_mob || !SA_attackable(target_mob) || (target_mob.invisibility >= INVISIBILITY_LEVEL_ONE))
+	if(!target_mob || !SA_attackable(target_mob) || (target_mob.alpha <= EFFECTIVE_INVIS)) //if the target went invisible, you can't follow it
 		LoseTarget()
 		return 0
 	if(!(target_mob in ListTargets(view_range)))

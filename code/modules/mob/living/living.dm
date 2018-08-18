@@ -13,7 +13,6 @@
 	var/mutable_appearance/dsma = new(dsoverlay) //Changing like ten things, might as well.
 	dsma.alpha = 0
 	dsma.plane = PLANE_LIGHTING
-//	dsma.layer = LIGHTING_LAYER + 0.1
 	dsma.blend_mode = BLEND_ADD
 	dsoverlay.appearance = dsma
 
@@ -1257,12 +1256,6 @@ default behaviour is:
 	else
 		return ..()
 
-
-// Whether the mob is able to see
-/mob/living/proc/has_vision()
-	return !(eye_blind || (disabilities & BLIND) || stat)
-
-
 //Add an entry to overlays, assuming it exists
 /mob/living/proc/apply_hud(cache_index, var/image/I)
 	hud_list[cache_index] = I
@@ -1282,3 +1275,10 @@ default behaviour is:
 /mob/living/proc/make_hud_overlays()
 	return
 
+
+/mob/living/proc/has_vision()
+	return !(eye_blind || (disabilities & BLIND) || stat || blinded)
+
+
+/mob/living/proc/dirties_floor()	// If we ever decide to add fancy conditionals for making dirty floors (floating, etc), here's the proc.
+	return makes_dirt
