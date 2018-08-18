@@ -82,6 +82,7 @@
 	set src = usr.loc
 	set popup_menu = 0
 
+	playsound(loc, 'sound/items/goggles_charge.ogg', 50, 1, -6)
 	orescanner.attack_self(usr)
 
 // VORESTATION EDIT END
