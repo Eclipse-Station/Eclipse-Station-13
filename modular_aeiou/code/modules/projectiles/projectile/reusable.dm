@@ -40,7 +40,7 @@
 	icon_state = "bb-steel"
 	damage = 3
 	agony = 15		//they sting to get hit by, even at post-ricochet velocities
-	SA_bonus_damage = 37		//40 damage against simplemobs
+	SA_bonus_damage = 32		//35 damage against simplemobs
 	SA_vulnerability = SA_ANIMAL
 	fire_sound = 'sound/weapons/gunshot_air_rifle.ogg'
 	sharp = 0
@@ -115,10 +115,20 @@
 							"<span class='danger'>\The [src] hits \the [target] in the eye!</span>",
 							"<span class='userdanger'>\The [src] hits you in the eye!</span>"
 							)
+							
 				message_already_sent = TRUE
 				agony = 75
 				if(target.can_feel_pain())
 					target.emote("scream")
+				
+				target.Blind(5)		//blind them for a few seconds
+				target.eye_blurry = 5
+				
+				if(!(target.disabilities & NEARSIGHTED))	//a check to see if they're already nearsighted, so we don't accidentally cure their vision
+					target.disabilities |= NEARSIGHTED
+					spawn(300)		//30 seconds
+						target.disabilities &= ~NEARSIGHTED
+	
 	if(!message_already_sent)
 		if(silenced)
 			to_chat(target_mob, "<span class='danger'>You've been hit in the [parse_zone(def_zone)] by \the [src]!</span>")
@@ -143,15 +153,16 @@
 		if(prob(drop_chance))		//if you win the bullet lottery, have a new bullet
 			new ammo_type(src.loc)
 		else
-			new /obj/item/trash/mangled_bb(src.loc)		//defined below
+			new /obj/item/ammo_casing/spent/mangled_bb(src.loc)		//defined below
 		dropped = TRUE
 
 //Mangled, non-reusable BB. Technically not a bullet, but here for ease of organization.
-/obj/item/trash/mangled_bb		
+/obj/item/ammo_casing/spent/mangled_bb		
 	name = "mangled BB"
-	w_class = ITEMSIZE_TINY
-	desc = "This is rubbish. No way this'll fit in your air rifle."
-	description_info = "This is useless."
+	caliber = "unusable"
+	desc = "A dented piece of zinc-coated steel airgun shot."
+	description_info = "This won't reload into your air rifle, but it can be recycled at an autolathe for a tiny amount of metal."
 	icon = 'modular_aeiou/icons/obj/projectile_aeiou.dmi'
 	icon_state = "bb-steel"
 	sharp = FALSE
+	matter = list(DEFAULT_WALL_MATERIAL = 10)
