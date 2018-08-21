@@ -1,11 +1,11 @@
 
-/obj/item/weapon/gun/projectile/shotgun/pump/rifle/synthd
+/obj/item/weapon/gun/projectile/shotgun/pump/rifle/synthd //This is a special synthetic gun for pixel. 
 	desc = "A reproduction of an almost ancient weapon design from the early 20th century, fitted and modified for today's use with better ergonomics and a synthetic stock. It remains popular with hunters and marksmen across the universe. Uses 7.62mm rounds."
 	icon = 'modular_aeiou/icons/obj/gun_aeiou.dmi'
 	item_state = "sboltaction"
 	icon_state = "sboltaction"
 
-/obj/item/weapon/gun/projectile/shotgun/pump/rifle/lever/synthd
+/obj/item/weapon/gun/projectile/shotgun/pump/rifle/lever/synthd //This is a special synthetic gun for pixel. 
 	desc = "A reproduction of an almost ancient weapon design from the 19th century, fitted and modified for today's use with better ergonomics and a synthetic stock. This one uses a lever-action to move new rounds in the chamber. Uses 7.62mm rounds"
 	icon = 'modular_aeiou/icons/obj/gun_aeiou.dmi'
 	icon_state = "sleveraction"
