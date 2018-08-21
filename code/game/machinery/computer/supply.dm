@@ -30,6 +30,7 @@
 	if(..())
 		return
 	user.set_machine(src)
+	playsound(src,"keyboard_sound",40,1)
 	var/dat
 	if(temp)
 		dat = temp

@@ -68,6 +68,8 @@
 	/obj/item/clothing/suit/storage/apron/overalls = 1,
 	/obj/item/clothing/head/rabbitears =1,
 	/obj/item/clothing/head/sombrero = 1,
+	/obj/item/clothing/head/sombrero/green = 1,
+	/obj/item/clothing/head/sombrero/shamebrero,
 	/obj/item/clothing/accessory/poncho = 1,
 	/obj/item/clothing/accessory/poncho/green,
 	/obj/item/clothing/accessory/poncho/red,

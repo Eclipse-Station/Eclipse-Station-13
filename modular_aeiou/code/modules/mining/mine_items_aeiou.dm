@@ -1,4 +1,4 @@
-/obj/item/weapon/pickaxe/heavydutydrill
+/obj/item/weapon/pickaxe/heavydutydrill //AEIOU project
 	name = "heavy duty drill"
 	desc = "Vroom vroom."
 	icon = 'modular_aeiou/icons/obj/weapons_aeiou.dmi'
@@ -6,19 +6,19 @@
 	item_state = "chainsaw0"
 	w_class = ITEMSIZE_LARGE
 	slot_flags = SLOT_BACK
-	digspeed = 120 //VERY SLOW
+	digspeed = 120 //VERY SLOW. Digspeed is a delay. Lower is better.
 	slowdown = 1
 	matter = list(DEFAULT_WALL_MATERIAL = 3750)
 	var/on = 0 //Is the engine running
 	var/open = 0 //Is the maintenance panel open
-	var/max_fuel = 100
-	var/active_force = 35
+	var/max_fuel = 100 //Amount of fuel. It is evident.
+	var/active_force = 35 
 	var/inactive_force = 10
 	var/enginefailed = 0 //Is the engine currently stuck. If 1, it needs to be cleared.
 	var/drill_bit = null //The actual drill in contact with the surface.
-	var/engine = null //This is the engine that powers the drill. Better engines are faster
+	var/engine = null //This is the engine that powers the drill. Better engines are faster.
 	var/airfilter = null //This will determine the engine fuel efficiency.
-	var/fuel_consumed = 0 //placeholder
+	var/fuel_consumed = 0 //placeholder. This is used for fuel consumption calculations.
 	var/fuel_efficiency = 30 //This is the var which determines how much you consume fuel.
 
 /obj/item/weapon/pickaxe/heavydutydrill/New()
@@ -166,7 +166,7 @@
 			user << "<span class='notice'>[src] already has a engine.</span>"	
 
 
-/obj/item/weapon/pickaxe/heavydutydrill/proc/enginefail()
+/obj/item/weapon/pickaxe/heavydutydrill/proc/enginefail() //This is the process for a jammed engine. You need to activate it in hand to solve the issue.
 	force = inactive_force
 	edge = 0
 	sharp = 0

@@ -164,7 +164,6 @@
 	w_class = ITEMSIZE_HUGE
 //	materials = list()
 //	matter = list(DEFAULT_WALL_MATERIAL = 10000)
-	burst_size = 3
 	automatic = 1
 	fire_delay = 1
 	fire_sound = 'sound/weapons/laser.ogg'
@@ -200,8 +199,7 @@
 		if(H.back != ammo_pack)
 			ammo_pack.return_gun()
 		if(ammo_pack.overheat < ammo_pack.overheat_max)
-			ammo_pack.overheat += burst_size
-
+			ammo_pack.overheat += 3 //Normally there would be a burst size reference but our guns don't work like that. I've remplaced it with a 3 instead.
 			..()
 		else
 			to_chat(usr, "The gun's heat sensor locked the trigger to prevent lens damage.")
