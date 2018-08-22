@@ -115,10 +115,14 @@ var/global/datum/emergency_shuttle_controller/emergency_shuttle
 	world.log << "Scheduled crew transfer has begun."		//let the guy in the console see it
 	if(shift_change_horn)
 		spawn(48)		//1 mile at speed of sound in air at 0C, 1 bar pressure = 4.8574... seconds. This assumes the colony is at 1 mile away, and the horn is originating from there.
-			world << sound(shift_change_horn_file, repeat = 0, wait = 0, volume = shift_change_horn_volume, channel = 3)	//Shift change horn
-	// // // END AEIOU EDIT // // //
-
+			blow_horn()
 	
+/datum/emergency_shuttle_controller/proc/blow_horn()
+	world << sound(shift_change_horn_file, repeat = 0, wait = 0, volume = shift_change_horn_volume, channel = 3)
+	shift_change_horn = FALSE
+	// // // END AEIOU EDIT // // //
+		
+		
 //recalls the shuttle
 /datum/emergency_shuttle_controller/proc/recall()
 	if (!can_recall()) return
