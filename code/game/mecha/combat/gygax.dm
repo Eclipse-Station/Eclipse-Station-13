@@ -70,6 +70,7 @@
 		step_energy_drain = step_energy_drain*overload_coeff
 		src.occupant_message("<font color='red'>You enable leg actuators overload.</font>")
 	src.log_message("Toggled leg actuators overload.")
+	playsound(src, 'sound/mecha/mechanical_toggle.ogg', 50, 1)
 	return
 
 /obj/mecha/combat/gygax/dyndomove(direction)
