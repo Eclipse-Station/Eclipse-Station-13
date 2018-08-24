@@ -1051,6 +1051,7 @@
 	else		set_light(light_range - lights_power)
 	src.occupant_message("Toggled lights [lights?"on":"off"].")
 	log_message("Toggled lights [lights?"on":"off"].")
+	playsound(src, 'sound/mecha/heavylightswitch.ogg', 50, 1)
 	return
 
 
@@ -1149,17 +1150,17 @@
 		src.icon_state = src.reset_icon()
 		set_dir(dir_in)
 		playsound(src, 'sound/machines/windowdoor.ogg', 50, 1)
-		sleep(2)
-		if(!hasInternalDamage())
-			if(nanotrasen_mech)
-				src.occupant << sound('sound/mecha/nominalnano.ogg',volume=50)
-				return
-			if(syndi_mech)
-				src.occupant << sound('sound/mecha/nominalsyndi.ogg',volume=50)
-				return
-			else
-				src.occupant << sound('sound/mecha/nominal.ogg',volume=50)
-				return
+		spawn(4) //This is a delay
+			if(!hasInternalDamage()) //If there is internal damage there is no nominal statement!
+				if(nanotrasen_mech)
+					src.occupant << sound('sound/mecha/nominalnano.ogg',volume=50)
+					return
+				if(syndi_mech)
+					src.occupant << sound('sound/mecha/nominalsyndi.ogg',volume=50)
+					return
+				else
+					src.occupant << sound('sound/mecha/nominal.ogg',volume=50)
+					return
 		return 1
 	else
 		return 0
