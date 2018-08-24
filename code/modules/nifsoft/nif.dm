@@ -47,6 +47,7 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 	var/obj/item/device/communicator/commlink/comm		// The commlink requires this
 
 	var/global/icon/big_icon
+	var/global/startup_sound = 'sound/items/NifStartupNoise1.ogg'
 	var/global/click_sound = 'sound/items/nif_click.ogg'
 	var/global/bad_sound = 'sound/items/nif_tone_bad.ogg'
 	var/global/good_sound = 'sound/items/nif_tone_good.ogg'
@@ -307,6 +308,8 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 					comm.register_device(saved_name)
 				else if(human)
 					comm.register_device(human.name)
+			spawn(10) //delay
+				human << startup_sound
 			notify("Calibration complete! User data stored!")
 
 //Called each life() tick on the mob
