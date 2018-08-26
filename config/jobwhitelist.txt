@@ -27,3 +27,14 @@ SilencedMP5A5 - Research Director
 SilencedMP5A5 - Chief Engineer
 SilencedMP5A5 -  Chief Medical Officer
 EvilJackCarver - Chief Engineer
+VulpesLegan - Head of Personnel
+VulpesLegan - Chief Engineer
+DirtyOldHarry - Captain
+DirtyOldHarry - Head of Security
+DirtyOldHarry - Chief Medical Officer
+HawkerTheGreat - Captain
+HawkerTheGreat - Head of Personnel
+HawkerTheGreat - Head of Security
+HawkerTheGreat - Research Director
+HawkerTheGreat - Chief Medical Officer
+HawkerTheGreat - Chief Engineer
