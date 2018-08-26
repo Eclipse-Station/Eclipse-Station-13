@@ -232,7 +232,7 @@
 		if("leathershoes")
 			new/obj/item/clothing/shoes/leather(loc)
 		if("leatherchaps")
-			new/obj/item/clothing/under/pants/chaps
+			new/obj/item/clothing/accessory/chaps
 		if("leathercoat")
 			new/obj/item/clothing/suit/leathercoat(loc)
 		if("leatherjacket")

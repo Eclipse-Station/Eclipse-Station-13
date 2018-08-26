@@ -7,7 +7,7 @@
 	icon_state = "mecha_equip"
 	force = 5
 	origin_tech = list(TECH_MATERIAL = 2)
-	var/equip_cooldown = 0
+	var/equip_cooldown = 0 //Fire delay
 	var/equip_ready = 1
 	var/energy_drain = 0
 	var/obj/mecha/chassis = null
@@ -15,10 +15,14 @@
 	var/salvageable = 1
 	var/required_type = /obj/mecha //may be either a type or a list of allowed types
 
+//AEIOU EDIT
+	var/ready_sound = 'sound/mecha/mech_reload_default.ogg' //Sound to play once done reloading.
 
 /obj/item/mecha_parts/mecha_equipment/proc/do_after_cooldown(target=1)
 	sleep(equip_cooldown)
 	set_ready_state(1)
+	if(ready_sound)
+		playsound(loc, ready_sound, 50, 1, -1)
 	if(target && chassis)
 		return 1
 	return 0

@@ -242,6 +242,7 @@
 
 /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/missile_rack/explosive
 	name = "\improper SRM-8 missile rack"
+	desc = "A weapon for full sized exosuit. This rectangular module fires small explosive missiles at close range targets."
 	icon_state = "mecha_missilerack"
 	projectile = /obj/item/missile
 	fire_sound = 'sound/weapons/rpg.ogg'
@@ -294,6 +295,25 @@
 
 /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/missile_rack/flashbang/clusterbang/limited/rearm()
 	return//Extra bit of security
+
+//AEIOU EDIT START
+/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/missile_rack/explosive/heavy
+	name = "\improper SRM-16 missile rack"
+	desc = "A weapon for full sized exosuit. This rectangular module fires heavy explosive missiles at close range targets. It cost quite of energy to fire and reload!"
+	projectiles = 2
+	projectile = /obj/item/missile/heavy
+	projectile_energy_cost = 1300
+	equip_cooldown = 200
+
+/obj/item/missile/heavy
+	throw_impact(atom/hit_atom)
+		if(primed)
+			explosion(hit_atom, 0, 3, 4, 8)
+			qdel(src)
+		else
+			..()
+		return
+//AEIOU EDIT END
 
 //////////////
 //Fire-based//
