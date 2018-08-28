@@ -15,7 +15,7 @@
 	var/vore_standing_too = 0			// Can also eat non-stunned mobs
 	var/vore_ignores_undigestable = 1	// Refuse to eat mobs who are undigestable by the prefs toggle.
 
-	var/vore_default_mode = DM_DIGEST	// Default bellymode (DM_DIGEST, DM_HOLD, DM_ABSORB)
+	var/vore_default_mode = DM_HOLD	// Default bellymode (DM_DIGEST, DM_HOLD, DM_ABSORB)
 	var/vore_default_flags = DM_FLAG_ITEMWEAK // Itemweak by default
 	var/vore_digest_chance = 25			// Chance to switch to digest mode if resisted
 	var/vore_absorb_chance = 0			// Chance to switch to absorb mode if resisted
