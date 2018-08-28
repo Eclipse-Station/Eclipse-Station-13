@@ -885,6 +885,14 @@ var/list/name_to_material
 	melting_point = T0C+300
 	protectiveness = 3 // 13%
 
+/material/animalhide
+	name = "leather"
+	icon_colour = "#5C4831"
+	flags = MATERIAL_PADDING
+	ignition_point = T0C+300
+	melting_point = T0C+300
+	protectiveness = 2 // 13%
+
 /material/carpet
 	name = "carpet"
 	display_name = "comfy"

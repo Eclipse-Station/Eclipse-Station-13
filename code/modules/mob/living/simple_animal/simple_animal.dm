@@ -77,7 +77,7 @@
 
 //AEIOU EDIT START
 	var/leather_amount = 1													// How much ~~meat~~ LEATHER to drop from this mob when butchered
-	var/obj/leather_type = /obj/item/stack/material/animalhide/default		// The ~~meat~~ LEATHER object to drop
+	var/obj/leather_type = /obj/item/stack/material/animalhide				// The ~~meat~~ LEATHER object to drop
 //AEIOU EDIT END
 
 
@@ -684,6 +684,7 @@
 	if(meat_type && (stat == DEAD))	//if the animal has a meat, and if it is dead.
 		if(istype(O, /obj/item/weapon/material/knife) || istype(O, /obj/item/weapon/material/knife/butch))
 			harvest(user)
+
 	else
 		ai_log("attackby() I was weapon'd by: [user]",2)
 		if(O.force)
@@ -831,6 +832,14 @@
 // Harvest an animal's delicious byproducts
 /mob/living/simple_animal/proc/harvest(var/mob/user)
 	var/actual_meat_amount = max(1,(meat_amount/2))
+	var/actual_leather_amount = max(1,(leather_amount/2))//AEIOU
+	if(leather_type && actual_leather_amount>0 && (stat == DEAD))//Put first so it doesn't gib it.
+		for(var/i=0;i<actual_leather_amount;i++)
+			var/obj/item/leather = new leather_type(get_turf(src))
+			leather.name = "[src.name] [leather.name]"
+		if(issmall(src))
+			user.visible_message("<span class='danger'>[user] gathers leather from \the [src]!</span>")
+
 	if(meat_type && actual_meat_amount>0 && (stat == DEAD))
 		for(var/i=0;i<actual_meat_amount;i++)
 			var/obj/item/meat = new meat_type(get_turf(src))

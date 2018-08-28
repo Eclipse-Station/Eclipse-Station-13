@@ -97,7 +97,7 @@
 
 	// If target is standing we might pounce and eat them
 	if(target_mob.canmove && prob(vore_pounce_chance))
-		target_mob.Weaken(5)
+		target_mob.Weaken(3)
 		target_mob.visible_message("<span class='danger'>\the [src] pounces on \the [target_mob]!</span>!")
 
 	// If they're down or we can eat standing, do it
