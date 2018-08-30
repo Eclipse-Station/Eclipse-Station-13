@@ -68,7 +68,7 @@
 	icon_dead = "prettyboi-dead"
 	icon_rest = "prettyboi_rest"
 
-	vore_pounce_chance = 40
+	vore_pounce_chance = 30
 
 	attacktext = list("malsnuggled","scrunched","squeezed","assaulted","violated")
 	speak = list("I FEEL SOFT.","FEED ME!","Feelin' fine... So fine!","F-F-F-F-darn.","Delicious!","Still craving meat...","PET ME!","I am become softness.","I AM BIG MEAN HUG MACHINE!","Honk...")

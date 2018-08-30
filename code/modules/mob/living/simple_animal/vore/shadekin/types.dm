@@ -48,7 +48,7 @@
 	vore_default_mode = DM_HEAL
 	vore_escape_chance = 75
 	vore_standing_too = 1
-	vore_pounce_chance = 100
+	vore_pounce_chance = 35
 	swallowTime = 4 SECONDS //A little longer to compensate for the above
 	vore_ignores_undigestable = FALSE
 	attacktext = list("shoved")
