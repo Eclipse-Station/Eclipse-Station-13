@@ -6,9 +6,9 @@
 	icon = 'modular_aeiou/icons/obj/vending_aeiou.dmi'
 	icon_state = "theater"
 	icon_deny = "theater-deny"
-//	req_access_txt = "46" //Theatre access needed, unless hacked.
 	product_slogans = "Dress for success!;Suited and booted!;It's show time!;Why leave style up to fate? Use AutoDrobe!"
 	vend_reply = "Thank you for using AutoDrobe!"
+//	req_access_txt = "46" //Theatre access needed, unless hacked.
 
 	products = list(
 	/obj/item/clothing/head/chicken = 1,
@@ -64,17 +64,17 @@
 	/obj/item/clothing/under/sexyclown = 1,
 	/obj/item/clothing/mask/gas/sexymime = 1,
 	/obj/item/clothing/under/sexymime = 1,
-	/obj/item/clothing/mask/horsehead,
+	/obj/item/clothing/mask/horsehead = 1,
 	/obj/item/clothing/suit/storage/apron/overalls = 1,
 	/obj/item/clothing/head/rabbitears =1,
 	/obj/item/clothing/head/sombrero = 1,
 	/obj/item/clothing/head/sombrero/green = 1,
 	/obj/item/clothing/head/sombrero/shamebrero,
 	/obj/item/clothing/accessory/poncho = 1,
-	/obj/item/clothing/accessory/poncho/green,
-	/obj/item/clothing/accessory/poncho/red,
-	/obj/item/clothing/accessory/poncho/purple,
-	/obj/item/clothing/accessory/poncho/blue,
+	/obj/item/clothing/accessory/poncho/green = 1,
+	/obj/item/clothing/accessory/poncho/red = 1,
+	/obj/item/clothing/accessory/poncho/purple = 1,
+	/obj/item/clothing/accessory/poncho/blue = 1,
 	/obj/item/clothing/under/dress/maid = 1,
 	/obj/item/clothing/under/dress/maid/janitor = 1,
 	/obj/item/clothing/under/dress/maid/sexy = 1,

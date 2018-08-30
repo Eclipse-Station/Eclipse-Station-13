@@ -840,7 +840,7 @@
 		if(issmall(src))
 			user.visible_message("<span class='danger'>[user] gathers leather from \the [src]!</span>")
 
-	if(meat_type && actual_meat_amount>0 && (stat == DEAD))
+	if(meat_type && actual_meat_amount>0 && (stat == DEAD))//unedited just moved
 		for(var/i=0;i<actual_meat_amount;i++)
 			var/obj/item/meat = new meat_type(get_turf(src))
 			meat.name = "[src.name] [meat.name]"
