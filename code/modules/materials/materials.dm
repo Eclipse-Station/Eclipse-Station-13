@@ -880,14 +880,16 @@ var/list/name_to_material
 	name = "leather"
 	icon_colour = "#5C4831"
 	stack_origin_tech = list(TECH_MATERIAL = 2)
+	stack_type = /obj/item/stack/material/leather
 	flags = MATERIAL_PADDING
 	ignition_point = T0C+300
 	melting_point = T0C+300
 	protectiveness = 3 // 13%
 
 /material/animalhide
-	name = "leather"
+	name = "animal hide"
 	icon_colour = "#5C4831"
+	stack_type = /obj/item/stack/material/animalhide
 	flags = MATERIAL_PADDING
 	ignition_point = T0C+300
 	melting_point = T0C+300

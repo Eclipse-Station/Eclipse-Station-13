@@ -58,7 +58,7 @@
 	desc = "The by-product of some animal farming."
 	singular_name = "animal skin piece"
 	icon_state = "sheet-hide"
-	no_variants = FALSE
+	no_variants = 1
 
 /obj/item/stack/material/animalhide
 	amount = 50
