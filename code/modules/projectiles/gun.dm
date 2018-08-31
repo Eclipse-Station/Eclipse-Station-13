@@ -100,34 +100,71 @@
 	var/ammo_x_offset = 2
 	var/ammo_y_offset = 0
 	var/can_flashlight = 0 //This means "Can we add a light to this"
-	var/obj/item/device/flashlight/F = null //added by aeiou
-	var/gun_light = FALSE //Is there a light
-	var/light_state = "flight"
-	var/light_brightness = 4
+	var/obj/item/device/flashlight/flght = null //The actual light attachement.
+	var/gun_light = 0 //is the light on(?)
+	var/light_state = "flght"
+	var/light_brightness = 4 //The bright shine
 	var/flight_x_offset = 0 //Variables for the overlay
-	var/flight_y_offset = 0
+	var/flight_y_offset = 0 //Same.
 
 //AEIOU Adds
 	var/sound_override = 0 //aeiou edit This allows to use custom noises instead of the bullet noise like most guns
 	var/silencer = 0 //I think it just makes the gun quieter
 
-/obj/item/weapon/gun/CtrlClick(mob/user)
+//////////////////////////////////////
+/obj/item/weapon/gun/AltClick(mob/user)
 	if(can_flashlight && ishuman(user) && src.loc == usr && !user.incapacitated(INCAPACITATION_ALL))
 		toggle_flashlight()
 	else
 		return ..()
 
-/obj/item/weapon/gun/proc/toggle_flashlight()
+/obj/item/weapon/gun/proc/toggle_flashlight(user)
+	if(!flght)
+		user << "<span class='notice'>There is no light attached to [src].</span>"
+		return
+	user << "<span class='notice'>You toggle the gunlight [flght.on ? "on":"off"].</span>"
 	if(gun_light)
 		set_light(0)
-		gun_light = FALSE
+		gun_light = !gun_light
 	else
 		set_light(light_brightness)
-		gun_light = TRUE
-
-	playsound(src, 'sound/machines/button.ogg', 25)
+		gun_light = !gun_light
+	flght.on = !flght.on
+	playsound(src, 'sound/machines/button.ogg', 35)
+//	set_light(light_brightness)
 	update_icon()
 
+///////////
+/*
+/obj/item/weapon/gun/AltClick(mob/user)
+	if(can_flashlight && ishuman(user) && src.loc == usr && !user.incapacitated(INCAPACITATION_ALL))
+		toggle_flashlight()
+	else
+		return ..()
+
+/obj/item/weapon/gun/verb/toggle_gunlight()
+		set name = "Adjust light"
+		set category = "Object"
+		set desc = "Click to toggle your weapon's attached flashlight."
+		set src in usr
+		turn_on_gunlight()
+
+/obj/item/weapon/gun/proc/turn_on_gunlight()
+	if(!Flight)
+		return
+	var/mob/living/carbon/human/user = usr
+	if(!isturf(user.loc))
+		user << "<span class='warning'>You cannot turn the light on while in this [user.loc]!</span>"
+	Flight.on = Flight.!on
+	user << "<span class='notice'>You toggle the gunlight [Flight.on ? "on":"off"].</span>"
+	set_light(light_brightness)
+	playsound(user, 'sound/weapons/empty.ogg', 70, 1)
+	update_icon()
+	return
+*/
+
+//AEIOU edition end
+////////////////////////////////////////////////////////////////
 //VOREStation Add End
 
 /obj/item/weapon/gun/New()
@@ -326,52 +363,26 @@
 	if(istype(A, /obj/item/device/flashlight/maglight))// AEIOU addition
 		var/obj/item/device/flashlight/maglight/S = A
 		if(can_flashlight)
-			if(!F)
+			if(!flght)
 				user.drop_item()
 				A.loc = src
-				F = A
+				flght = A
 				user << "<span class='notice'>You click [S] into place on [src].</span>"
 				update_icon()
 			else
 				user << "<span class='notice'>[src] already has a light.</span>"
 
 	if(istype(A, /obj/item/weapon/screwdriver))// AEIOU addition
-		if(F)
+		if(flght)
 			for(var/obj/item/device/flashlight/maglight/S in src)
-				user.put_in_hands(F)
-				F = null
+				user.put_in_hands(flght)
+				flght = null
 				user << "<span class='notice'>You unscrew the seclite from [src].</span>"
 				toggle_flashlight()
 				set_light(0)
 				update_icon()
 		else	
 			user << "<span class='notice'>[src] has no light.</span>"
-
-
-//aeiou addition
-
-/obj/item/weapon/gun/verb/toggle_gunlight()// AEIOU addition
-		set name = "Adjust light"
-		set category = "Object"
-		set desc = "Click to toggle your weapon's attached flashlight."
-		set src in usr
-		turn_on_gunlight()
-		
-
-/obj/item/weapon/gun/proc/turn_on_gunlight() // AEIOU addition
-	if(!F)
-		return
-	var/mob/living/carbon/human/user = usr
-	if(!isturf(user.loc))
-		user << "<span class='warning'>You cannot turn the light on while in this [user.loc]!</span>"
-	F.on = !F.on
-	user << "<span class='notice'>You toggle the gunlight [F.on ? "on":"off"].</span>"
-	set_light(light_brightness)
-	playsound(user, 'sound/weapons/empty.ogg', 70, 1)
-	update_icon()
-	return
-
-//AEIOU edition end
 
 /obj/item/weapon/gun/emag_act(var/remaining_charges, var/mob/user)
 	if(dna_lock && attached_lock.controller_lock)
@@ -841,6 +852,7 @@
 	var/datum/firemode/new_mode = firemodes[sel_mode]
 	new_mode.apply_to(src)
 	to_chat(user, "<span class='notice'>\The [src] is now set to [new_mode.name].</span>")
+	playsound(src.loc, 'sound/weapons/empty.ogg', 40, 1)
 
 	return new_mode
 

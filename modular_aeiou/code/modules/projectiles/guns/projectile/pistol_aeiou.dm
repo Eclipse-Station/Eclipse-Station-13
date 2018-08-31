@@ -35,10 +35,10 @@
 	else
 		icon_state = "usp[silenced ? "-can" : ""]-locked-nomag"
 //	icon_state = "usp[silenced ? "-can" : ""][chambered ? "" : "-locked"][magazine_ammo ? "" : "-nomag"]"	//Don't uncomment. Won't work due to lack of a 'chambered' mechanic.
-	if(F && can_flashlight)
+	if(flght && can_flashlight)
 		cut_overlays()
 		var/iconF = "flight"
-		if(F.on)
+		if(flght.on)
 			iconF = "flight_on"
 		add_overlay(image(icon = icon, icon_state = iconF, pixel_x = flight_x_offset, pixel_y = flight_y_offset))
 	return
