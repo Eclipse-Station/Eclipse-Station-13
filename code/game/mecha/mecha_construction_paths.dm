@@ -332,19 +332,19 @@
 					 //6
 					 list("key"=/obj/item/stack/material/steel,
 					 		"backkey"=/obj/item/weapon/screwdriver,
-					 		"desc"="Advanced capacitor is secured"),
+					 		"desc"="Capacitor is secured"),
 					 //7
 					 list("key"=/obj/item/weapon/screwdriver,
 					 		"backkey"=/obj/item/weapon/crowbar,
-					 		"desc"="Advanced capacitor is installed"),
+					 		"desc"="Capacitor is installed"),
 					 //8
 					 list("key"=/obj/item/weapon/stock_parts/capacitor/adv,
 					 		"backkey"=/obj/item/weapon/screwdriver,
-					 		"desc"="Advanced scanner module is secured"),
+					 		"desc"="Scanner module is secured"),
 					 //9
 					 list("key"=/obj/item/weapon/screwdriver,
 					 		"backkey"=/obj/item/weapon/crowbar,
-					 		"desc"="Advanced scanner module is installed"),
+					 		"desc"="Scanner module is installed"),
 					 //10
 					 list("key"=/obj/item/weapon/stock_parts/scanning_module/adv,
 					 		"backkey"=/obj/item/weapon/screwdriver,
@@ -475,7 +475,7 @@
 					holder.icon_state = "gygax8"
 			if(10)
 				if(diff==FORWARD)
-					user.visible_message("[user] installs advanced scanner module to [holder].", "You install advanced scanner module to [holder].")
+					user.visible_message("[user] installs the scanner module into [holder].", "You install the scanner module into [holder].")
 					qdel(used_atom)
 					holder.icon_state = "gygax11"
 				else
@@ -483,26 +483,26 @@
 					holder.icon_state = "gygax9"
 			if(9)
 				if(diff==FORWARD)
-					user.visible_message("[user] secures the advanced scanner module.", "You secure the advanced scanner module.")
+					user.visible_message("[user] secures the scanner module.", "You secure the scanner module.")
 					holder.icon_state = "gygax12"
 				else
-					user.visible_message("[user] removes the advanced scanner module from [holder].", "You remove the advanced scanner module from [holder].")
+					user.visible_message("[user] removes the scanner module from [holder].", "You remove the scanner module from [holder].")
 					new /obj/item/weapon/stock_parts/scanning_module/adv(get_turf(holder))
 					holder.icon_state = "gygax10"
 			if(8)
 				if(diff==FORWARD)
-					user.visible_message("[user] installs advanced capacitor to [holder].", "You install advanced capacitor to [holder].")
+					user.visible_message("[user] installs the capacitor into [holder].", "You install the capacitor into [holder].")
 					qdel(used_atom)
 					holder.icon_state = "gygax13"
 				else
-					user.visible_message("[user] unfastens the advanced scanner module.", "You unfasten the advanced scanner module.")
+					user.visible_message("[user] unfastens the scanner module.", "You unfasten the scanner module.")
 					holder.icon_state = "gygax11"
 			if(7)
 				if(diff==FORWARD)
-					user.visible_message("[user] secures the advanced capacitor.", "You secure the advanced capacitor.")
+					user.visible_message("[user] secures the capacitor.", "You secure the capacitor.")
 					holder.icon_state = "gygax14"
 				else
-					user.visible_message("[user] removes the advanced capacitor from [holder].", "You remove the advanced capacitor from [holder].")
+					user.visible_message("[user] removes the capacitor from [holder].", "You remove the capacitor from [holder].")
 					new /obj/item/weapon/stock_parts/capacitor/adv(get_turf(holder))
 					holder.icon_state = "gygax12"
 			if(6)
@@ -510,7 +510,7 @@
 					user.visible_message("[user] installs internal armor layer to [holder].", "You install internal armor layer to [holder].")
 					holder.icon_state = "gygax15"
 				else
-					user.visible_message("[user] unfastens the advanced capacitor.", "You unfasten the advanced capacitor.")
+					user.visible_message("[user] unfastens the capacitor.", "You unfasten the capacitor.")
 					holder.icon_state = "gygax13"
 			if(5)
 				if(diff==FORWARD)
@@ -835,19 +835,19 @@
 					 //6
 					 list("key"=/obj/item/stack/material/steel,
 					 		"backkey"=/obj/item/weapon/screwdriver,
-					 		"desc"="Advanced capacitor is secured"),
+					 		"desc"="capacitor is secured"),
 					 //7
 					 list("key"=/obj/item/weapon/screwdriver,
 					 		"backkey"=/obj/item/weapon/crowbar,
-					 		"desc"="Advanced capacitor is installed"),
+					 		"desc"="capacitor is installed"),
 					 //8
 					 list("key"=/obj/item/weapon/stock_parts/capacitor/adv,
 					 		"backkey"=/obj/item/weapon/screwdriver,
-					 		"desc"="Advanced scanner module is secured"),
+					 		"desc"="scanner module is secured"),
 					 //9
 					 list("key"=/obj/item/weapon/screwdriver,
 					 		"backkey"=/obj/item/weapon/crowbar,
-					 		"desc"="Advanced scanner module is installed"),
+					 		"desc"="scanner module is installed"),
 					 //10
 					 list("key"=/obj/item/weapon/stock_parts/scanning_module/adv,
 					 		"backkey"=/obj/item/weapon/screwdriver,
@@ -979,7 +979,7 @@
 					holder.icon_state = "durand8"
 			if(10)
 				if(diff==FORWARD)
-					user.visible_message("[user] installs advanced scanner module to [holder].", "You install advanced scanner module to [holder].")
+					user.visible_message("[user] installs the scanner module to [holder].", "You install the scanner module to [holder].")
 					qdel(used_atom)
 					holder.icon_state = "durand11"
 				else
@@ -987,26 +987,26 @@
 					holder.icon_state = "durand9"
 			if(9)
 				if(diff==FORWARD)
-					user.visible_message("[user] secures the advanced scanner module.", "You secure the advanced scanner module.")
+					user.visible_message("[user] secures the scanner module.", "You secure the scanner module.")
 					holder.icon_state = "durand12"
 				else
-					user.visible_message("[user] removes the advanced scanner module from [holder].", "You remove the advanced scanner module from [holder].")
+					user.visible_message("[user] removes the scanner module from [holder].", "You remove the scanner module from [holder].")
 					new /obj/item/weapon/stock_parts/scanning_module/adv(get_turf(holder))
 					holder.icon_state = "durand10"
 			if(8)
 				if(diff==FORWARD)
-					user.visible_message("[user] installs advanced capacitor to [holder].", "You install advanced capacitor to [holder].")
+					user.visible_message("[user] installs the capacitor to [holder].", "You install the capacitor to [holder].")
 					qdel(used_atom)
 					holder.icon_state = "durand13"
 				else
-					user.visible_message("[user] unfastens the advanced scanner module.", "You unfasten the advanced scanner module.")
+					user.visible_message("[user] unfastens the scanner module.", "You unfasten the scanner module.")
 					holder.icon_state = "durand11"
 			if(7)
 				if(diff==FORWARD)
-					user.visible_message("[user] secures the advanced capacitor.", "You secure the advanced capacitor.")
+					user.visible_message("[user] secures the capacitor.", "You secure the capacitor.")
 					holder.icon_state = "durand14"
 				else
-					user.visible_message("[user] removes the advanced capacitor from [holder].", "You remove the advanced capacitor from [holder].")
+					user.visible_message("[user] removes the capacitor from [holder].", "You remove the capacitor from [holder].")
 					new /obj/item/weapon/stock_parts/capacitor/adv(get_turf(holder))
 					holder.icon_state = "durand12"
 			if(6)
@@ -1014,7 +1014,7 @@
 					user.visible_message("[user] installs internal armor layer to [holder].", "You install internal armor layer to [holder].")
 					holder.icon_state = "durand15"
 				else
-					user.visible_message("[user] unfastens the advanced capacitor.", "You unfasten the advanced capacitor.")
+					user.visible_message("[user] unfastens the capacitor.", "You unfasten the capacitor.")
 					holder.icon_state = "durand13"
 			if(5)
 				if(diff==FORWARD)
@@ -1242,7 +1242,7 @@
 					holder.icon_state = "odysseus6"
 			if(6)
 				if(diff==FORWARD)
-					user.visible_message("[user] installs internal armor layer to [holder].", "You install internal armor layer to [holder].")
+					user.visible_message("[user] installs internal armor layer into [holder].", "You install internal armor layer into [holder].")
 					holder.icon_state = "odysseus9"
 				else
 					user.visible_message("[user] unfastens the peripherals control module.", "You unfasten the peripherals control module.")
@@ -1258,7 +1258,7 @@
 					holder.icon_state = "odysseus8"
 			if(4)
 				if(diff==FORWARD)
-					user.visible_message("[user] welds internal armor layer to [holder].", "You weld the internal armor layer to [holder].")
+					user.visible_message("[user] welds internal armor layer into [holder].", "You weld the internal armor layer into [holder].")
 					holder.icon_state = "odysseus11"
 				else
 					user.visible_message("[user] unfastens the internal armor layer.", "You unfasten the internal armor layer.")
