@@ -32,6 +32,9 @@
 	//var/magazine_states = 0
 	//var/list/icon_keys = list()		//keys
 	//var/list/ammo_states = list()	//values
+	
+	//AEIOU vars
+	var/hide_ammo_count = FALSE		//do we want to hide ammo, for whatever reason (e.g. a concealed gun)?
 
 /obj/item/weapon/gun/projectile/New(loc, var/starts_loaded = 1)
 	..()
@@ -226,9 +229,10 @@
 
 /obj/item/weapon/gun/projectile/examine(mob/user)
 	..(user)
-	if(ammo_magazine)
-		user << "It has \a [ammo_magazine] loaded."
-	user << "Has [getAmmo()] round\s remaining."
+	if(!hide_ammo_count)
+		if(ammo_magazine)
+			user << "It has \a [ammo_magazine] loaded."
+		user << "Has [getAmmo()] round\s remaining."
 	return
 
 /obj/item/weapon/gun/projectile/proc/getAmmo()
