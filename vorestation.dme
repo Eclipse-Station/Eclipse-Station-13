@@ -2999,6 +2999,7 @@
 #include "modular_aeiou\code\modules\projectiles\guns\projectile\gatling.dm"
 #include "modular_aeiou\code\modules\projectiles\guns\projectile\pistol_aeiou.dm"
 #include "modular_aeiou\code\modules\projectiles\guns\projectile\shotgun_aeiou.dm"
+#include "modular_aeiou\code\modules\projectiles\guns\projectile\zippo_gun.dm"
 #include "modular_aeiou\code\modules\projectiles\projectile\bullets_aeiou.dm"
 #include "modular_aeiou\code\modules\projectiles\projectile\reusable.dm"
 #include "modular_aeiou\code\modules\reagents\Chemistry-Recipes_AEIOU.dm"
