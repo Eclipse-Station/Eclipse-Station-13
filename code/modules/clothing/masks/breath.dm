@@ -11,6 +11,8 @@
 	var/hanging = 0
 	action_button_name = "Adjust Breath Mask"
 
+/obj/item/clothing/mask/breath/AltClick(mob/living/user)
+	adjust_mask(user)
 
 /obj/item/clothing/mask/breath/proc/adjust_mask(mob/user)
 	if(user.canmove && !user.stat)
