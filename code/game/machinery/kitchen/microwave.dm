@@ -22,6 +22,17 @@
 
 // see code/modules/food/recipes_microwave.dm for recipes
 
+// // // BEGIN AEIOU EDIT // // //
+/obj/machinery/microwave/AltClick(mob/user)  //microwave quick start
+	if(isliving(user) && in_range(src, user) && !user.incapacitated())	//are you living, in range, and not incapacitated?
+		cook()
+	else if (isAI(user) || isrobot(user))	//are you an AI/borg?
+		cook()
+	else
+		return ..()
+// // // END AEIOU EDIT
+
+	
 /*******************
 *   Initialising
 ********************/
