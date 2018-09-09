@@ -75,3 +75,25 @@
 			to_chat(user, "<span class='notice'>The thing which tells time says it is currently [stationtime2text()].</span>")
 		else
 			to_chat(user, "<span class='notice'>The clock's digits are too small to read from here. You'll have to get closer if you want to read it.</span>")
+
+/obj/item/weapon/gun/projectile/sawnoff //Niim sprite made by kates
+	name = "old breakaction shotgun"
+	desc = "A venerable single barrel, single shot shotgun. Uses 12g rounds."
+	icon = 'modular_aeiou/icons/obj/gun_aeiou.dmi'
+	icon_state = "sawedoff"
+	recoil = 3
+	handle_casings = CYCLE_CASINGS //player has to take the old casing out manually before reloading
+	load_method = SINGLE_CASING
+	max_shells = 1 //literally just a barrel
+	w_class = ITEMSIZE_NORMAL
+	ammo_type = /obj/item/ammo_casing/a12g/pellet
+	caliber = "12g"
+
+/obj/item/weapon/gun/projectile/sawnoff/update_icon()
+	..()
+	if(loaded.len)
+		icon_state = "sawedoff"
+	else
+		icon_state = "sawedoff-e"
+
+	
