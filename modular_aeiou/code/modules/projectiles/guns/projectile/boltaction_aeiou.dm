@@ -34,9 +34,9 @@
 	if(ammo_magazine)
 		icon_state = "[initial(icon_state)]"
 	else
-		icon_state = "[initial(icon_state)]-e"
+		icon_state = "[initial(icon_state)]-empty"
 
-/obj/item/weapon/gun/projectile/shotgun/pump/rifle/pocketrifleblack
+/obj/item/weapon/gun/projectile/shotgun/pump/rifle/pocketrifle/black
 	item_state = "pocketrifleb"
 	icon_state = "pocketrifleb"
 
