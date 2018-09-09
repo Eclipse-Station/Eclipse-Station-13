@@ -354,10 +354,3 @@ var/global/list/obj/item/device/communicator/all_communicators = list()
 
 	icon_state = initial(icon_state)
 
-/obj/item/device/communicator/watch/AltClick(user) //AEIOU edit
-	initialize_exonet(user)
-	alert_called = 0
-	update_icon()
-	ui_interact(user)
-	if(video_source)
-		watch_video(user)

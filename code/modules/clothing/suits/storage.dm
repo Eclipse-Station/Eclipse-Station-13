@@ -53,8 +53,7 @@
 			return
 		update_clothing_icon()	//so our overlays update
 
-/obj/item/clothing/suit/storage/toggle/AltClick()
-	..()
+/obj/item/clothing/suit/storage/toggle/AltClick(var/mob/user)
 	toggle()
 
 /obj/item/clothing/suit/storage/hooded/toggle
