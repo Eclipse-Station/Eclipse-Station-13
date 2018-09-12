@@ -1,0 +1,16 @@
+Right-clicking the chat box brings up a menu. You can use that to save some spicy shaggin' sessions.
+Your sprite represents your hitbox. The larger it is, the easier you are to hit. This means at 200% scale, you are 4 times easier to hit than if you were at 100% scale. The sacrifices we make for style.
+Sometimes the round will just be a bust. C'est la vie.
+The more obscure and underused a game mechanic is, the less likely your victims are to be able to deal with it.
+Space is cold and it will quickly freeze you to death if you don't protect yourself. (This isn't how thermodynamics really works, but just roll with it.)
+Sometimes admins will do stuff. Just go along with it.
+Sometimes you won't be able to assist in a situation, no matter how good you are at the game. Try not to stress too much about it.
+As an Engineer, build Teleporters to help your team reach the frontlines faster.
+As a Pathfinder, the wiki with the information you're probably looking for is the BayStation wiki.
+As a Pathfinder, you will never have all your personnel come back safely unless you go to Virgo 4's beach. Even then, them coming back is not a guarantee.
+As the Research Director, you are essentially an assistant with access to a bunch of fun toys. Try not to go overboard.
+The quartermaster is not a head of staff and will never be one.
+Sometimes you need more than just a tip.
+Clowns are whitelist-only because, contrary to popular belief, not everyone is funny. This probably includes you.
+No one man can be the star of the show. Let others share the spotlight once in a while.
+To defeat the slaughter demon, shoot at it until it dies.
