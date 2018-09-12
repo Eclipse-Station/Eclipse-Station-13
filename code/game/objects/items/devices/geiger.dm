@@ -60,6 +60,8 @@
 	toggle()
 
 /obj/item/device/geiger/proc/toggle(var/mob/user)//Moved here to easy the alt click process
+	if(!isliving(usr))
+		return 0
 	scanning = !scanning
 	update_icon()
 	to_chat(user, "<span class='notice'>\icon[src] You switch [scanning ? "on" : "off"] \the [src].</span>")
