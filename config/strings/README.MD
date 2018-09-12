@@ -13,6 +13,6 @@ This format exists so that if someone is unsure if a tip is serious or not, they
 ### When adding meme tips, please consider the following:
 
 * Does it look like a serious tip and follow the format of one? Is it false and will following it cause serious damage to the station or crew; e.g.: "As an Engineer, nitrogen is a better coolant than phoron"? **Don't add it, period.**
-* Does it look like a serious tip and follow the format of one? Is it false, but following it won't seriously harm anyone; e.g.: "Did you know? Throwing your gun at a Deathclaw is an effective deterrent"? **Strip it of the serious tip formatting.**
+* Does it look like a serious tip and follow the format of one? Is it false, but following it won't seriously harm anyone; e.g.: "Did you know? Throwing a doughnut at the officer trying to arrest you is more effective than running"? **Strip it of the serious tip formatting.**
 * Is it obviously silly, but follows the format of a meme tip; e.g.: "As an Engineer, building teleporters will help your team reach the front lines faster"? **Consider stripping off the serious-tip formatting, if it doesn't detract from the joke.**
 * Is it a serious tip, but doesn't really fit in with the serious tips; e.g.: "As a Pathfinder, the information you're probably looking for is on the Bay wiki"? **If it is factually accurate, feel free to add it.**
