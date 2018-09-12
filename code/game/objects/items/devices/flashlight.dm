@@ -36,6 +36,28 @@
 		verbs -= /obj/item/device/flashlight/verb/toggle
 	..()
 
+// // // BEGIN AEIOU EDIT // // //
+/obj/item/device/flashlight/AltClick(mob/user)
+	switch(brightness_level)
+		if("low")
+			brightness_level = "medium"
+			power_usage = brightness_levels["medium"]
+		if("medium")
+			brightness_level = "high"
+			power_usage = brightness_levels["high"]
+		if("high")
+			brightness_level = "low"
+			power_usage = brightness_levels["low"]
+		else		//sanity check failed
+			error("[src] held by [usr] at [loc.x],[loc.y],[loc.z]: Attempted to alt-click switch brightness levels, but somehow was in a nonexistant brightness level. user = [user], brightness_level = [brightness_level]. Attempting to correct...")
+			brightness_level = "medium"
+			power_usage = brightness_levels["medium"]
+			ASSERT(brightness_level == "medium")		//brightness level should be on medium. If this fails, something isn't being set right.
+	to_chat(user,"<span class='notice'>You set the brightness level on \the [src] to [brightness_level].</span>")
+	update_icon()
+	
+// // // END AEIOU EDIT // // //
+
 /obj/item/device/flashlight/Destroy()
 	if(power_use)
 		processing_objects -= src
