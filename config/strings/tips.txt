@@ -8,6 +8,7 @@ Did you know? You can use Alt-(arrow key) to lock where your character is facing
 Did you know? You can use the tab key to toggle between WASD ('hotkey mode') and arrow keys for movement. Hotkey mode's hotkeys can be viewed from the OOC tab > 'hotkeys-help' or by typing 'hotkeys-help' into the command bar.
 Did you know? You can press F3 (or T in hotkey mode) to bring up the chat dialogue box, or F4 (or 5 inhotkey mode) to bring up the emote dialogue box. Opening either will show the 'typing' speech balloon over your character's head.
 Did you know? Your signature is very difficult, if not impossible, to forge. You can sign something by typing [sign].
+Did you know? You can alt-click a tile adjacent to you, or yourself, to list the contents in the top right. Perfect for those times when you can't drink your alcohol properly because the screen's shaking!
 Did you know? You don't need to use [br] to insert a line break in paperwork, hitting the enter/return key will do the same.
 Did you know? People are the most valuable resource you can get. Two engineers could spend an entire round without saying anything to each other outside of work-related stuff. However, starting conversation - even if it's something as simple as a 'what's up?' - can gain you the most valuable resource there is - a friend.
 Did you know? A paper bin can work as a ghetto jetpack in space. Grab a paper bin, put it in your backpack, and you instantly have 30 easy-to-access sheets of paper to throw to change your direction.
