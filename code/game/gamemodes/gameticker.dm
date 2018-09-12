@@ -65,6 +65,12 @@ var/global/datum/controller/gameticker/ticker
 						for(var/i=0, i<10, i++)
 							sleep(1)
 							vote.process()
+
+			// // // AEIOU EDIT: Tip of the Round // // //
+			if((pregame_timeleft <= send_tip_at) && !tip_sent)		//it's time to send a tip
+				send_tip_of_the_round()
+			// // // END AEIOU EDIT: Tip of the Round // // //
+
 			if(pregame_timeleft <= 0)
 				current_state = GAME_STATE_SETTING_UP
 				Master.SetRunLevel(RUNLEVEL_SETUP)
