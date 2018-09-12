@@ -2977,6 +2977,7 @@
 #include "modular_aeiou\code\game\objects\items\weapons\tree_tap.dm"
 #include "modular_aeiou\code\game\objects\items\weapons\material\sledgehammer_construction.dm"
 #include "modular_aeiou\code\game\objects\items\weapons\material\twohanded_aeiou.dm"
+#include "modular_aeiou\code\modules\admin\verbs\totr.dm"
 #include "modular_aeiou\code\modules\client\preference_setup\loadout\loadout_eyes.dm"
 #include "modular_aeiou\code\modules\client\preference_setup\loadout\loadout_general.dm"
 #include "modular_aeiou\code\modules\client\preference_setup\loadout\loadout_head.dm"
