@@ -1,6 +1,6 @@
 ## Tip of the Round system
 
-The Tip of the Round system pulls one string from the tips.txt (95% chance) or the sillytips (5% chance). The relevant code for this is completely self-contained in /modular_aeiou/code/modules/admin/verbs/totr.dm.
+The Tip of the Round system pulls one string from the tips.txt (95% chance) or the sillytips (5% chance). The relevant code for this is mostly self-contained in /modular_aeiou/code/modules/admin/verbs/totr.dm.
 
 ### When adding serious tips, please follow this format:
 
