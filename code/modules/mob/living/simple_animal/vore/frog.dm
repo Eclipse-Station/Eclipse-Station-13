@@ -23,7 +23,7 @@
 // Activate Noms!
 /mob/living/simple_animal/hostile/frog
 	vore_active = 1
-	vore_pounce_chance = 50
+	vore_pounce_chance = 30
 	vore_icons = SA_ICON_LIVING
 
 /mob/living/simple_animal/hostile/frog/space

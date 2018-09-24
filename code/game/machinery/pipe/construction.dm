@@ -123,8 +123,19 @@ Buildable meters
 	if ( usr.stat || usr.restrained() || !usr.canmove )
 		return
 
-	set_dir(turn(src.dir, -90)) // Rotate clockwise
-	fixdir()
+// // // BEGIN AEIOU EDIT // // //
+	rotate_pipe()
+
+/obj/item/pipe/proc/rotate_pipe()
+	if(isliving(usr) && in_range(src,usr))		//do we live, and are we in range?
+		if(usr.stat || usr.restrained() || !usr.canmove)	//if we can't interact with it, don't try
+			return 0
+		set_dir(turn(src.dir, -90)) // Rotate clockwise
+		fixdir()
+
+/obj/item/pipe/AltClick()
+	rotate_pipe()
+// // // END AEIOU EDIT // // //
 
 // If you want to disable pipe dir changing when pulled, uncomment this
 // /obj/item/pipe/Move()

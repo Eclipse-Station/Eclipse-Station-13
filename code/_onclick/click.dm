@@ -48,6 +48,11 @@
 		return
 
 	var/list/modifiers = params2list(params)
+	// // // BEGIN AEIOU EDIT // // //
+	if(modifiers["shift"] && modifiers["middle"])		//shift MMB
+		ShiftMiddleClickOn(A)
+		return 1
+	// // // END AEIOU EDIT // // //
 	if(modifiers["shift"] && modifiers["ctrl"])
 		CtrlShiftClickOn(A)
 		return 1
@@ -216,6 +221,18 @@
 /atom/proc/MiddleClick(var/mob/M as mob)
 	return
 */
+
+// // // BEGIN AEIOU EDIT // // //
+/*
+	Shift middle click
+	Used as a quick pointing shortcut.
+	Should not be overridden.
+*/
+/mob/proc/ShiftMiddleClickOn(var/atom/A)
+	src.pointed(A)
+	return
+
+// // // END AEIOU EDIT // // //
 
 /*
 	Shift click

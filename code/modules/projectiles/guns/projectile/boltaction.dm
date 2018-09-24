@@ -52,7 +52,7 @@
 /obj/item/weapon/gun/projectile/shotgun/pump/rifle/lever
 	name = "lever-action rifle"
 	desc = "A reproduction of an almost ancient weapon design from the 19th century. This one uses a lever-action to move new rounds into the chamber. Uses 7.62mm rounds."
-	icon = 'modular_aeiou/icons/obj/gun_aeiou.dmi'
+	icon = 'icons/obj/gun.dmi'
 	item_state = "leveraction"
 	icon_state = "leveraction"
 	fire_sound = 'sound/weapons/rifleshot.ogg'

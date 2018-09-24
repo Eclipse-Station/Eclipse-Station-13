@@ -1,0 +1,154 @@
+Did you know? You can click-and-drag yourself into a chair while adjacent to it to sit down in it.
+Did you know? The resist button will allow you to resist your way out of handcuffs, being buckled in a chair or a bed, stomachs, locked lockers, and more. If you're stuck, try resisting!
+Did you know? You can add items to boxes if you can click on the box, including if it's already in your backpack. No need to play Item Tetris!
+Did you know? In the event of radio malfunctions, shortwave radios can be used without opening the microphone to anyone talking nearby. Simply hold it in your hand and type .l (lowercase L) if it's in your left hand, or .r if it's in your right. Intercoms can be used in the same way using the .i radio shortcut.
+Did you know? Setting your intent to anything other than 'help' will cause you to bump into someone, rather than passing through them.
+Did you know? Setting your intent to anything other than 'help' will allow you to walk into taped-off areas, without someone lifting the tape. This will damage the tape and make it pretty obvious that someone went in, though.
+Did you know? You can use Alt-(arrow key) to lock where your character is facing, allowing you to 'back away' or strafe.
+Did you know? You can use the tab key to toggle between WASD ('hotkey mode') and arrow keys for movement. Hotkey mode's hotkeys can be viewed from the OOC tab > 'hotkeys-help' or by typing 'hotkeys-help' into the command bar.
+Did you know? You can press F3 (or T in hotkey mode) to bring up the chat dialogue box, or F4 (or 5 inhotkey mode) to bring up the emote dialogue box. Opening either will show the 'typing' speech balloon over your character's head.
+Did you know? Your signature is very difficult, if not impossible, to forge. You can sign something by typing [sign].
+Did you know? You can alt-click a tile adjacent to you, or yourself, to list the contents in the top right. Perfect for those times when you can't drink your alcohol properly because the screen's shaking!
+Did you know? You don't need to use [br] to insert a line break in paperwork, hitting the enter/return key will do the same.
+Did you know? People are the most valuable resource you can get. Two engineers could spend an entire round without saying anything to each other outside of work-related stuff. However, starting conversation - even if it's something as simple as a 'what's up?' - can gain you the most valuable resource there is - a friend.
+Did you know? A paper bin can work as a ghetto jetpack in space. Grab a paper bin, put it in your backpack, and you instantly have 30 easy-to-access sheets of paper to throw to change your direction.
+Did you know? Your scale has some bearing on gameplay. If you are large enough, you can pick someone else up as if they were an item. If you're small enough, you can occupy a tile with another person. There are other changes, experiment to find out more!
+Did you know? Some vore-mobs won't even try to ingest you if you set your digestibility to 'false' in the Vore Panel. This doesn't mean that they won't keep beating your deceased, lifeless corpse to death, though.
+Did you know? You can turn off your PDA's messenger. If you keep getting spam and have a communicator, you could consider using the communicator for messenging, as the communicator isn't affected by spam.
+Did you know? If you examine something and then look at the 'Examine' tab, it will show the description blurb as well as the name up there, too. However, it can also show fluff text (such as info about a cigarette company or a player's fluff text), descriptive text (e.g. how to use something), as well as antag-specific text (e.g. notes for antags) if any of the three are set.
+Did you know? You can add a note to your character's memory by using the 'Add Note' verb in the IC tab. You can check those notes at any time with the 'Notes' verb, or by typing 'notes' in the command bar. Useful for remembering your ATM pin.
+Did you know? Shortwave radios automatically adjust the channels you can talk on based on the access on your ID.
+Did you know? You can open boxes, backpacks, and similar containers by dragging their sprite onto yours. This will allow you to move its contents if it's on not in your hand. However, it will NOT allow you to take something out of a box in your backpack.
+Did you know? You can fit a lighter in a pack of cigarettes.
+Did you know? Lots of overwear, such as labcoats and hoodies, have pockets in them that you can use to store things.
+Did you know? You can usually dial the regulator on your oxygen tank back a bit. Most species require only 16 kPa of oxygen to breathe. Vox breathe phoron, and Teshari only require 12 kPa.
+Did you know? Universal tape recorders automatically translate content when it plays back its tape.
+Did you know? Magboots prevent you from being knocked down by pressure differences.
+Did you know? Phoron will burn at a minimum of 126 Celsius (400 Kelvin) and autoignite, if able, at 246 Celsius (520 Kelvin).
+Did you know? At standard 21% airmix, you need approximately 76.2 kPa ambient pressure to breathe.
+Did you know? Even if you are not a Medical Doctor, it's still a good idea to know the core four healing chemicals. It may not fix broken bones, but if you pass out, it could keep you stable enough for a medical team to get to you. A mnemonic: Bicaridine for Brute, Kelotaine for Kelvin (temperature), activated Charcoal for Chemicals, and Salbutamol for Suffocation.
+As an Antagonist, you can change your hairstyle by using a mirror in a shower. This is useful if you're on the lam and people without a security HUD are looking for a man with an afro.
+As an Antagonist, there are many places around the station to hide contraband. A few for starters: Secure briefcases in maintence, body bags, and those little wall-mounted fire safety closets. Experiment to find more!
+As an Antagonist, you can craft a shiv by using a glass shard on a roll of tape. It has a 100% chance to embed itself in your target, but does rubbish for damage.
+As an Antagonist, subverting the AI can make it a very powerful ally. However, you should be very wary of the wording in your laws, as it can easily turn the tables on you.
+As an Antagonist, you can make Engineering's life a living hell by using a cryptographic sequencer on a bunch of doors to restricted areas.
+As an Engineer, phoron has the second-highest specific heat in the game, requiring 200 Joules of energy to heat 1 mole by 1 degree Kelvin. This is second only to volatile fuel vapor.
+As an Engineer, nitrogen and oxygen both have the lowest specific heat out of any gas in the game, requiring only 20 Joules of energy to heat 1 mole by 1 degree Kelvin.
+As an Engineer, you can pry open heavy shutters, such as the ones to gas storage by the engine, if there is no power.
+As an Engineer, remember to wear mesons and radiation-shielding equipment when working near the Supermatter.
+As an Engineer, remember the station doesn't necessarily need 1.21 Gigawatts of power. Sometimes the tried-and-true, safer setup that only generates 1.5 Megawatts is better than the risky hellburn you've got going there.
+As an Engineer, hotwiring the engine (i.e. wiring the output directly to the station's power grid) is a very bad idea. Anyone not wearing gloves that touches an accidentally-shocked door or needs to manipulate wiring will be far more injured, the more power is in the grid.
+As an Engineer, it's a good idea to replace the omnifilters going by the engine to regular gas filters, as there's a known issue where they will sometimes filter out nothing, despite being set to filter out a gas.
+As an Engineer, the PACMAN generator in hard storage can buy you some time to set up the engine in a zero-power environment. Don't forget to grab the fuel from the crate right by it.
+As an Atmospheric Technician, whether you can unwrench a pipe or not is dependent on both internal and external pressure. If the difference is greater than 202.65 kPa, you won't be able to unwrench it.
+As an Atmospheric Technician, consider using the cooling heat exchanger on the intake line: Cooler gas takes up less volume, and thus is processed more quickly.
+As an Atmospheric Technician, syphons are far less effective against contaminations and fires than simply scrubbing out the contaminants.
+As an Atmospheric Technician, you can remotely control any air alarm at the Central Atmospherics Computer. You can even set the remote control status from there if the air alarm is in alarm, useful if you'll need to get back into the air alarm later to finish fixing something.
+As an Atmospheric Technician, you can control most of the huge Stationary Air Scrubbers from the console in the pump station. This can be found by going up the ladder in the side hall of Atmospherics.
+As the Chief Engineer, your RIGsuit's radiation protection will allow you to safely set up the Supermatter.
+As the Chief Engineer, the forgotten City of Pipes also falls under your doorstep. It's a good idea to make sure you know how to find and fix sabotage, or solve other miscellaneous issues.
+As the Chief Engineer, you are in charge of coordinating any repair efforts. Make sure your engineers know who they can count on near the start of the round, or you will have great difficulty in getting them to do anything later.
+As the Chief Engineer, you can rename areas, or define new ones, using your blueprints found in your locker.
+As the Chief Engineer, you are responsible for upkeep of the AI and cyborgs. If they get funny laws, it's on you to fix them, or decommission them.
+As a Security Officer, communicate and coordinate with your fellow officers. You can use .s to access the Security channel on your headset.
+As a Security Officer, remember that there are three sides to every story: What person A says, what person B says, and what actually happened.
+As a Security Officer, remember that correlation does not necessarily mean causation. Someone may have just been in the wrong place at the wrong time.
+As a Security Officer, if you are wearing HUD glasses, you can see someone's criminal records by examining them.
+As a Security Officer, remember that you answer to the Warden when you are inside the brig area. He can have you arrested for trespass if you become a nuisance.
+As a Security OFficer, remember that many times, an arrest can be avoided by simply talking to the people involved and working out the problem between them.
+As a Security Officer, it's a good idea to be visible to the crew. Mingle with them a bit, talk with them. You might find a useful informant, or better yet, a friend.
+As a Warden, you are the protector of the Brig and handler of its prisoners when little is happening. If a situation arises, you are also in charge of distributing the armoury.
+As a Warden, keep track of what all is checked out of the armoury should a situation arise, and ensure it's all checked back in when the situation passes.
+As a Warden, you are responsible for the brig area. It is very unwise to step outside the brig, unless there is absolutely no security on shift, or barring extenuating circumstances.
+As a Warden, you are authorised to carry any weapon available to you inside the Security wing, barring semi- or automatic rifle-calibre firearms, explosives, or pulse rifles - regardless of the security level. Outside of the brig, however, you are only permitted to carry less-than-lethal weaponry that can fit in your backpack on code green.
+As the Head of Security, you are expected to coordinate your security force to handle any threat.
+As the Head of Security, remember that executions cannot be authorised without a Head of Staff tribunal, with a full-badged Colony Director (not an Acting CD) present during the execution. You must also fax Central Command with further details regarding the crimes.
+As the Head of Security, it's a good idea to be visible to your security forces and talk with them from time to time. People tend to question orders from those that they dislike or see as incompetent.
+As a Scientist, improved stock parts will make machines more efficient, or may unlock better features.
+As a Scientist, work with Robotics and coordinate who gets what materials.
+As a Scientist, it's a good idea to coordinate with Mining to let them know what sort of materials you need.
+As a Scientist, shoving the contents of a toolbox in the destructive analyser can help kickstart research. The toolbox will also get you started on combat technology.
+As a Scientist, while deconstructing syringe guns and other miscellaneous things laying around is an easy way to get high research levels, it's possible to get high levels without pilfering supplies.
+As a Scientist, you can order glass, metal, and plastic through Cargo fairly cheaply. They come in 50-sheet stacks.
+As a Scientist, sync your research to the database often.
+As a Scientist, you start with a hacked autolathe, which can print out valuable items for general use and research.
+As a Scientist, you can get very high levels without exiting your lab. Use the starting items from the tables and then try out the ones from the protolathe.
+As a Roboticist, coordinate with Research and let them know what supplies you need.
+As a Roboticist, remember to wear your eye protection when welding. You will quickly go blind otherwise.
+As a Roboticist, you can repair brute damage on cyborgs by using a welder on them.
+As a Roboticist, you can repair burn damage on cyborgs by opening their cover, removing the battery, and using cable inside them.
+As a Xenobiologist, don't over-discipline your slimes. If you punish them while they are behaving, they may end up going into a frenzy, unable to be calmed down.
+As a Xenobiologist, you cannot kill a slime by spraying it with a fire extinguisher if it's on the same tile as a body. The spray will not hit the slime.
+As a Xenobiologist, it's a good idea to ask Robotics to build you a Slime Securitron, to increase your chance of surviving a close encounter with one - they will automatically punish any misbehaving slimes, without over-disciplining them.
+As an Explorer, your main job is exactly what the title implies. Make note of any devices or artifacts of interest, make contact with any indigenous life, and make new discoveries in the interest of science and advancing knowledge.
+As an Explorer, be wary of adverse weather conditions.
+As an Explorer, you are permitted to carry lethal weaponry, but only inside your department, or in transit to and from the gateway or exploration shuttle. If you go off duty, it's a good idea to turn your weaponry in to R&D or Security to avoid a Major Contraband charge!
+As an Explorer, you answer to a Pathfinder. If there is no Pathfinder, you answer to the Research Director.
+As a Pathfinder, you are responsible for your team of Explorers. You may also recruit additional expedition personnel, such as security, medics, or engineers.
+As a Pathfinder, in the absence of a Pilot, you are permitted to fly the shuttle yourself.
+As a Pathfinder, your job is to ensure that all crew on the mission return safely, and that all valuable biological, archaeological and technological specimens are brought back and handed off to the appropriate science staff.
+As the Research Director, you have the AI system integrity restoration computer in your office. You can use this to repair a damaged or destroyed AI.
+As the Research Director, you have a circuit board in your office to construct an additional AI should it be needed.
+As a Search and Rescue team, most of your duties are going to be done off-station. Bring what you'll need to stabilise someone before you bring them back to the Tether.
+As a Search and Rescue team, remember to get someone to a safe location before triage. That Deathclaw chewing on your patient's leg is going to hinder your efforts to save them.
+As a Search and Rescue team, remember that stasis bags only slow down the progression rate of injuries; it does not stop injuries completely.
+As a Search and Rescue team, remember that stasis bags have a limited air supply.
+As a Psychiatrist, your job is more roleplay-oriented than mechanics-oriented. Your job will be very boring if you don't play it as such.
+As a Psychiatrist, you have the authority to declare someone mentally unfit for duty, and strip them of any title they may have once had.
+As a Paramedic, you're trained in triage, not cure. Unless there's not a medical doctor on board, you should only treat them enough to get them stabilised, so you can get them to Medbay without dying. This also saves your supplies.
+As a Paramedic, you have access to Maintenance. Use this to get to out-of-the-way areas quicker, or rescue suffocating crewmembers trapped in Maintenance.
+As a Paramedic, remember that syringes should not be used on multiple patients. Grab a fresh, sterile one after each use.
+As a Medical Doctor, corpses with the "...and their soul has departed" description no longer have a ghost attached to them and aren't revivable or clonable. It's a good idea to check back from time to time, though, and see if the soul comes back.
+As a Medical Doctor, your PDA's cartridge will allow you to use your PDA as a medical scanner, if a health scanner is unavailable. A proper health scanner is still superior, however.
+As a Medical Doctor, remember that Cryogenics only works when it's cold. However, setting the freezer too low will just make it run the whole shift, draining lots of power as it does so.
+As a Medical Doctor, doing the bare minimum to treat a patient just to shove them out the door so they can get back to work is a waste of roleplay opportunity. Speak with the patient, keep them informed!
+As a Medical Doctor, the standard health scanner won't always give you the complete story. Listen to what your patients tell you.
+As a Medical Doctor, you can use the stethescope and penlight to check for organ damage without using the full body scanner.
+As a Medical Doctor, you can overdose someone with Bicaridine to temporarily suppress internal bleeding. This will not stop it, however.
+As a Chemist, you can fill autoinjectors with other chemicals using a syringe. You can inject Dexaline into one to stabilise a suffocating patient, or soporific to sedate a combatitive subject.
+As a Chemist, you can refill the CMO's hypospray with a syringe.
+As a Chemist, there are dozens of chemicals that can heal, and even more that can cause harm. Experiment!
+As a Chemist, you can mix similar chemicals to 'stack' the results. For example, mixing Kelotaine and Dermaline will heal burn damage faster than either one alone. Watch out for chemicals that mix together!
+As the Chief Medical Officer, ensure that the other Heads of Staff have gotten a backup implant.
+As the Chief Medical Officer, you should make sure the crew have their suit sensors adjusted as necessary for the alert level.
+As the AI, your cameras operate off of power separate from the main grid. You will not lose your cameras in the event of a power loss.
+As the AI, you can double-click on someone to track them.
+As the AI, you can shift-click an airlock to open or close it, ctrl-click to drop or raise the bolts, or alt-click to shock a door. If you don't want someone to know a door is bolted, you can middle-click it to toggle the bolt lights.
+As the AI, you can ctrl-click on an APC to turn on the master breaker.
+As the AI, you can ctrl-click on a turret to activate or deactivate it, or alt-click on one to toggle the lethal mode.
+As the AI, you have access to every radio channel. If Telecommunications goes out, you can still use the intercoms near you to speak on a department channel. Most department channels will be between 134.7 and 135.9.
+As a Cyborg, you are extremely vulnerable to EMPs as EMPs both stun you and damage you. The ion rifle in the armory can kill you in seconds.
+As a Cyborg, you do not take toxin or suffocation damage, or have to worry about disease, pressure, or radiation. Use this to your advantage.
+As a Cyborg, you cannot be disarmed of your built-in equipment. You can, however, be stunned with a flash or an EMP.
+As a Cyborg, you can use the same hotkeys as an AI to interact with airlocks, APCs, and so forth.
+As the Quartermaster, remember that it's always a good idea to leave a paper trail. Not only does it cover your backside, it will also deter someone from ordering something they have no business ordering if they have to give you proof that they were the one that ordered it.
+As a Cargo Technician, remember that sending off unused crates you may find in maintenance will give you supply points.
+As a Cargo Technician, you can use the disposals system to mail off a package if someone ordered something they can't immediately pick up (e.g. medical supplies).
+As a Cargo Technician, it is never a good idea to turn off the safety of the Mulebots, even if you're an Antagonist.
+As a Shaft Miner, remember that a bluespace shelter capsule will not stop hail.
+As a Shaft Miner, your radio cannot transmit or receive while you're in the Underdark.
+As a Shaft Miner, the mining drill is the only way to get solid hydrogen.
+As a Bartender, your weapons permit only covers the Bar area, and your shotgun. Carrying it around the station with you is a great way to rack up a contraband charge.
+As a Bartender, the drinks you start with only give you the basics. If you want more advanced mixtures, look into working with chemistry, hydroponics, or even mining for things to grind up and throw in!
+As a Botanist, pure ammonia is better as a fertilizer than your standard EZ-Grow.
+As a Botanist, injecting different chemicals into your plants will yield different effects. Experiment!
+As a Chaplain, slapping your Religious Text against a water tank will bless it and convert all the water to Holy Water. Slapping your Religious Text against someone's head will have no special effect.
+As a Chef, experimenting with the Microwave is generally ill-advised and will rarely bring good results. The blender and food processor are much more forgiving.
+As a Chef, coordinate with Hydroponics to get the ingredients you need for your culinary masterpieces!
+As an Intern, you have no more access than a regular Visitor. You'll have to go through the Head of Personnel, or the Head of the department you're interning under, for more access.
+As an Internal Affairs Agent, remember that you are an arbitrator, first and foremost. This may impact your social life, but you are required by your job to put aside emotional or business attachment to any particular crew member in order to function.
+As an Internal Affairs Agent, trust the facts that you find. Make sure you have sufficient evidence before you do anything.Your actions will most certainly be questioned down the line.
+As a Janitor, remember to let Forensics finish their investigation before you begin to clean up a crime scene.
+As a Janitor, remember to put down wet-floor signs where you mop, even if you have space cleaner in your bucket. If you don't, you could easily eat a Workplace Hazard charge.
+As a Librarian, the back room of your Library can be used to host an old-fashioned tabletop game.
+As a Pilot, you report to the Head of Personnel, not the Research Director.
+As a Pilot, you are responsible for the safety of the crew aboard your ship while you're on-duty. This sadly means that throwing the clown out of the airlock while in mid-space is a no-no.
+As a Pilot, you are better trained to operate the shuttle than others, and may have benefits in terms of shuttle travel speed and failure rates when piloting.
+As a Visitor, you don't work here. Technically, you answer to no-one, but the Colony Director can still demand you leave their station, and the Security team can still arrest you for violating Corporate Regulations while on-property.
+As the Colony Director, you have access over the entire station. This makes you a high-value target.
+As the Colony Director, you should know at the very least how the gist of each department works. If necessary, you should be able to step in and take the reins if there is literally no-one else able to do so.
+As the Colony Director, you are not above Corporate Regulations. Security can step in and arrest you if you violate them.
+As a Command Secretary, you are not a head of staff and have no real authority. You only have access to the bridge and fax machines, and in times of crisis you'll be expected to keep Central Command up-to-date with what's going on while the Heads of Staff are fixing the problem.
+As the Head of Personnel, your ID has the power to give someone access over the entire station. This makes you a high-value target.
+As the Head of Personnel, you are the next in line to become the Acting Colony Director in times of crisis. If you do not feel you can do so, feel free to hand the reins over to another Head of Staff.
+As the Head of Personnel, it's a good idea to talk to the crew. You're really the only Head able to take time and listen to the complaints and concerns of the crew. You are the (wo)man of the People. Try to chat with them every once in a blue moon.

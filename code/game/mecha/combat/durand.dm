@@ -45,6 +45,7 @@
 	if(usr!=src.occupant)
 		return
 	defence = !defence
+	playsound(src, 'sound/mecha/duranddefencemode.ogg', 50, 1)
 	if(defence)
 		deflect_chance = defence_deflect
 		src.occupant_message("<font color='blue'>You enable [src] defence mode.</font>")
@@ -54,6 +55,7 @@
 		src.occupant_message("<font color='red'>You disable [src] defence mode.</font>")
 		defence_mode = 0
 	src.log_message("Toggled defence mode.")
+
 	return
 
 

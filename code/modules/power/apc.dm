@@ -442,6 +442,31 @@
 			update_icon()
 			updating_icon = 0
 
+// // // BEGIN AEIOU EDIT // // //
+/obj/machinery/power/apc/proc/toggle_lock(mob/user)
+	if(isliving(user) && (in_range(src,user) || issilicon(user)))		//we want isliving() so ghosts can't try any spooky business
+		if(emagged)
+			to_chat(user,"The panel is unresponsive.")
+		else if(opened)
+			to_chat(user,"You must close the cover to swipe an ID card.")
+		else if(wiresexposed)
+			to_chat(user,"You must close the wire panel.")
+		else if(stat & (BROKEN|MAINT))
+			to_chat(user,"Nothing happens.")
+		else if(hacker)
+			to_chat(user,"<span class='warning'>Access denied.</span>")
+		else
+			if(src.allowed(usr) && !isWireCut(APC_WIRE_IDSCAN))
+				locked = !locked
+				to_chat(user,"You [ locked ? "lock" : "unlock"] the APC interface.")
+				update_icon()
+			else
+				to_chat(user,"<span class='warning'>Access denied.</span>")
+
+/obj/machinery/power/apc/AltClick(mob/user)
+	toggle_lock(user)
+// // // END AEIOU EDIT // // //
+
 //attack with an item - open/close cover, insert cell, or (un)lock interface
 
 /obj/machinery/power/apc/attackby(obj/item/W, mob/user)
@@ -526,23 +551,7 @@
 			update_icon()
 
 	else if (istype(W, /obj/item/weapon/card/id)||istype(W, /obj/item/device/pda))			// trying to unlock the interface with an ID card
-		if(emagged)
-			to_chat(user,"The panel is unresponsive.")
-		else if(opened)
-			to_chat(user,"You must close the cover to swipe an ID card.")
-		else if(wiresexposed)
-			to_chat(user,"You must close the wire panel.")
-		else if(stat & (BROKEN|MAINT))
-			to_chat(user,"Nothing happens.")
-		else if(hacker)
-			to_chat(user,"<span class='warning'>Access denied.</span>")
-		else
-			if(src.allowed(usr) && !isWireCut(APC_WIRE_IDSCAN))
-				locked = !locked
-				to_chat(user,"You [ locked ? "lock" : "unlock"] the APC interface.")
-				update_icon()
-			else
-				to_chat(user,"<span class='warning'>Access denied.</span>")
+		toggle_lock(user)		//AEIOU Edit
 	else if (istype(W, /obj/item/stack/cable_coil) && !terminal && opened && has_electronics!=2)
 		var/turf/T = loc
 		if(istype(T) && !T.is_plating())

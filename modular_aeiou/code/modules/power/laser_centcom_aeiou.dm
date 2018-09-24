@@ -1,4 +1,4 @@
-/obj/machinery/power/laser_centcom
+/obj/machinery/power/laser_centcom //Most of this code was copied from other sources.
 	name = "laser power selling device"
 	desc = "A high draw power selling laser directed toward centcom. Don't stand in front of it!"
 	icon_state = "smes"
@@ -11,12 +11,11 @@
 	active_power_usage = 300000
 //	circuit = /obj/item/weapon/circuitboard/laser_centcom //Comment in once we have the circuit.
 
-	var/active = 0
-	var/state = 0
-	var/on = 0
-	var/powered = 0
+	var/active = 0 //Pumping power?
+	var/state = 0 
+	var/laser_status = 0 //Is the device actually doing it's 'thing'
 	var/locked = 0
-	var/credits = 0
+	var/credits = 0 //Placeholder VAR
 
 
 
@@ -39,11 +38,13 @@
 			if(src.active==1)
 				src.active = 0
 				user << "You turn off [src]."
+				laser_status = 0
 				playsound(src.loc, 'sound/items/change_jaws.ogg', 75, 1)
 			else
 				src.active = 1
 				user << "You turn on [src]."
 				playsound(src.loc, 'sound/items/change_jaws.ogg', 75, 1)
+				laser_status = 1
 			update_icon()
 		else
 			user << "<span class='warning'>The controls are locked!</span>"
@@ -52,7 +53,7 @@
 		return 1
 
 /obj/machinery/power/laser_centcom/process()
-	if(on)
+	if(laser_status)
 		return 1
 
 	if(!(use_power || idle_power_usage || active_power_usage))
@@ -67,18 +68,8 @@
 		return
 	return
 
-
-
- /*       
-	while(recharging)
-		if(!do_after(user, 10, src))
-			break
-		playsound(get_turf(src),'sound/items/change_drill.ogg',25,1)
-		if(power_supply.give(60) < 60)
-			break
-*/
-
-
+/obj/machinery/power/laser_centcom/examine(mob/user)
+	user << "The laser has accumulated [credits]." //This is mostly preliminary stuff.
 
 /obj/machinery/power/laser_centcom/attackby(obj/item/W, mob/user)
 

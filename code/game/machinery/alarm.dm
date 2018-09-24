@@ -767,6 +767,12 @@
 		return
 
 	if(istype(W, /obj/item/weapon/card/id) || istype(W, /obj/item/device/pda))// trying to unlock the interface with an ID card
+// // // BEGIN AEIOU EDIT // // //
+		toggle_locked(user)		//turned into a proc for alt-click functionality.
+	return ..()
+
+/obj/machinery/alarm/proc/toggle_locked(mob/user)
+	if(isliving(user) && (in_range(src,user) || issilicon(user)))		//we want isliving() so ghosts can't try any spooky business
 		if(stat & (NOPOWER|BROKEN))
 			user << "It does nothing"
 			return
@@ -777,7 +783,10 @@
 			else
 				user << "<span class='warning'>Access denied.</span>"
 			return
-	return ..()
+			
+/obj/machinery/alarm/AltClick(mob/user)
+	toggle_locked(user)
+// // // END AEIOU EDIT // // //
 
 /obj/machinery/alarm/power_change()
 	..()

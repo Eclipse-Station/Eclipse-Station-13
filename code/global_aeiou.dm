@@ -1,12 +1,12 @@
 //This is for the round end stats system.
 /*EVerything commented out because it sucks
-/*
+
 /hook/roundend/proc/round_facts_print()//first proc
     for(var/i = 1 to 10)
         world << "<b>Shift facts!</b>"
 //		var/line = pick_n_take(fluff_info)
         world << "line"
-*/
+
 
 //var/randomfacts = "Nothing"
 
@@ -77,3 +77,4 @@ var/global/list/fluff_info = list(
 //cans_opened++
 //    world << "[cans_opened] cans were drank today!",
 */
+

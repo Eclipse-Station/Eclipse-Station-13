@@ -42,7 +42,7 @@
 /mob/living/simple_animal/hostile/dragon
 	vore_active = 1
 	vore_capacity = 3
-	vore_pounce_chance = 50 // Might eat before killing now.
+	vore_pounce_chance = 30 // Might eat before killing now.
 	vore_icons = SA_ICON_LIVING
 
 /mob/living/simple_animal/hostile/dragon/virgo3b

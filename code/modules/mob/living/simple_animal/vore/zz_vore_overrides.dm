@@ -73,7 +73,7 @@
 	pixel_y = 0
 
 	vore_capacity = 3
-	vore_pounce_chance = 75
+	vore_pounce_chance = 40
 
 /mob/living/simple_animal/hostile/alien/sentinel/praetorian
 	icon = 'icons/mob/vore64x64.dmi'
@@ -159,7 +159,7 @@
 
 /mob/living/simple_animal/cat/fluff
 	vore_ignores_undigestable = 0
-	vore_pounce_chance = 100
+	vore_pounce_chance = 30
 	vore_digest_chance = 0 // just use the toggle
 	vore_default_mode = DM_HOLD //can use the toggle if you wanna be catfood
 
@@ -198,7 +198,7 @@
 
 /mob/living/simple_animal/fox/fluff
 	vore_ignores_undigestable = 0
-	vore_pounce_chance = 100
+	vore_pounce_chance = 30
 	vore_digest_chance = 0 // just use the toggle
 	vore_default_mode = DM_HOLD //can use the toggle if you wanna be foxfood
 

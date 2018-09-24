@@ -150,7 +150,8 @@ var/list/admin_verbs_spawn = list(
 	/client/proc/spawn_chemdisp_cartridge,
 	/client/proc/map_template_load,
 	/client/proc/map_template_upload,
-	/client/proc/map_template_load_on_new_z
+	/client/proc/map_template_load_on_new_z,
+	/client/proc/cmd_admin_show_tip			//AEIOU Edit
 	)
 
 var/list/admin_verbs_server = list(
@@ -323,7 +324,8 @@ var/list/admin_verbs_hideable = list(
 	/client/proc/roll_dices,
 	/proc/possess,
 	/proc/release,
-	/datum/admins/proc/set_tcrystals
+	/datum/admins/proc/set_tcrystals,
+	/client/proc/cmd_admin_show_tip			//AEIOU Edit
 	)
 var/list/admin_verbs_mod = list(
 	/client/proc/cmd_admin_pm_context,	//right-click adminPM interface,

@@ -1,4 +1,4 @@
-/obj/machinery/power/potato_aeiou
+/obj/machinery/power/potato_aeiou //Same concept as the centcom laser. Reward engineering for good power management. Here it's science, other one is stuff.
 	name = "Potato machine"
 	desc = "A specialised, complex scanner getting super good research and shit."
 	anchored = 1

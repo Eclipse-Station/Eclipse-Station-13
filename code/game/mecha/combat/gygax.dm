@@ -76,6 +76,7 @@
 		src.occupant_message("<font color='red'>You enable leg actuators overload.</font>")
 		leg_overload_mode = 1
 	src.log_message("Toggled leg actuators overload.")
+	playsound(src, 'sound/mecha/mechanical_toggle.ogg', 50, 1)
 	return
 
 /obj/mecha/combat/gygax/dyndomove(direction)

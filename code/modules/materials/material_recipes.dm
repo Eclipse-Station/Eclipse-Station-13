@@ -108,7 +108,7 @@
 
 /material/sandstone/generate_recipes()
 	..()
-	recipes += new/datum/stack_recipe("planting bed", /obj/machinery/portable_atmospherics/hydroponics/soil, 3, time = 10, one_per_turf = 1, on_floor = 1)
+	recipes += new/datum/stack_recipe("soil", /obj/machinery/portable_atmospherics/hydroponics/soil, 5, time = 25, one_per_turf = 1, on_floor = 1)
 
 /material/plastic/generate_recipes()
 	..()
@@ -194,7 +194,7 @@
 	recipes -= new/datum/stack_recipe("wooden chair", /obj/structure/bed/chair/wood, 3, time = 10, one_per_turf = 1, on_floor = 1)
 
 /material/leather/generate_recipes()
-	..()
+	recipes = list()
 	recipes += new/datum/stack_recipe("botanist gloves", /obj/item/clothing/gloves/botanic_leather, 4, time = 50)
 	recipes += new/datum/stack_recipe("leather jacket", /obj/item/clothing/suit/storage/toggle/leather_jacket, 10, time = 50)
 	recipes += new/datum/stack_recipe("leather shoes", /obj/item/clothing/shoes/leather, 4, time = 50)
