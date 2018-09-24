@@ -57,6 +57,10 @@
 	set name = "Toggle leg actuators overload"
 	set src = usr.loc
 	set popup_menu = 0
+	leg_overload()
+
+
+/obj/mecha/combat/gygax/leg_overload()
 	if(usr!=src.occupant)
 		return
 	if(overload)
@@ -64,11 +68,13 @@
 		step_in = initial(step_in)
 		step_energy_drain = initial(step_energy_drain)
 		src.occupant_message("<font color='blue'>You disable leg actuators overload.</font>")
+		leg_overload_mode = 0
 	else
 		overload = 1
 		step_in = min(1, round(step_in/2))
 		step_energy_drain = step_energy_drain*overload_coeff
 		src.occupant_message("<font color='red'>You enable leg actuators overload.</font>")
+		leg_overload_mode = 1
 	src.log_message("Toggled leg actuators overload.")
 	return
 
@@ -105,3 +111,13 @@
 	if (href_list["toggle_leg_overload"])
 		src.overload()
 	return
+
+
+
+/obj/mecha/combat/gygax/GrantActions(mob/living/user, human_occupant = 0)
+	..()
+	overload_action.Grant(user, src)
+
+/obj/mecha/combat/gygax/RemoveActions(mob/living/user, human_occupant = 0)
+	..()
+	overload_action.Remove(user, src)

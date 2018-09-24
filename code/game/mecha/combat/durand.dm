@@ -34,20 +34,25 @@
 	return
 
 
-/obj/mecha/combat/durand/verb/defence_mode()
+/obj/mecha/combat/durand/verb/engage_defence_mode()
 	set category = "Exosuit Interface"
 	set name = "Toggle defence mode"
 	set src = usr.loc
 	set popup_menu = 0
+	defence_mode()
+
+/obj/mecha/combat/durand/defence_mode()
 	if(usr!=src.occupant)
 		return
 	defence = !defence
 	if(defence)
 		deflect_chance = defence_deflect
 		src.occupant_message("<font color='blue'>You enable [src] defence mode.</font>")
+		defence_mode = 1
 	else
 		deflect_chance = initial(deflect_chance)
 		src.occupant_message("<font color='red'>You disable [src] defence mode.</font>")
+		defence_mode = 0
 	src.log_message("Toggled defence mode.")
 	return
 
@@ -73,3 +78,11 @@
 	if (href_list["toggle_defence_mode"])
 		src.defence_mode()
 	return
+
+/obj/mecha/combat/durand/GrantActions(mob/living/user, human_occupant = 0)
+	..()
+	defense_action.Grant(user, src)
+
+/obj/mecha/combat/durand/RemoveActions(mob/living/user, human_occupant = 0)
+	..()
+	defense_action.Remove(user, src)
