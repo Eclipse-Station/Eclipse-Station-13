@@ -489,7 +489,7 @@
 	pr_internal_damage.start()
 	log_append_to_last("Internal damage of type [int_dam_flag].",1)
 	//occupant << sound('sound/machines/warning-buzzer.ogg',wait=0)
-	src.occupant << sound('sound/mecha/internaldmgalarm.ogg',volume=30)
+	src.occupant << sound('sound/mecha/internaldmgalarm.ogg',volume=50)
 	sleep(6)
 	src.occupant << sound('sound/mecha/critnano.ogg',volume=50)
 	return
@@ -1081,7 +1081,6 @@
 	else		set_light(light_range - lights_power)
 	src.occupant_message("Toggled lights [lights?"on":"off"].")
 	log_message("Toggled lights [lights?"on":"off"].")
-	playsound(src, 'sound/mecha/heavylightswitch.ogg', 50, 1)
 	return
 
 
@@ -1182,17 +1181,17 @@
 		src.icon_state = src.reset_icon()
 		set_dir(dir_in)
 		playsound(src, 'sound/machines/windowdoor.ogg', 50, 1)
-		spawn(4) //This is a delay
-			if(!hasInternalDamage()) //If there is internal damage there is no nominal statement!
-				if(nanotrasen_mech)
-					src.occupant << sound('sound/mecha/nominalnano.ogg',volume=50)
-					return
-				if(syndi_mech)
-					src.occupant << sound('sound/mecha/nominalsyndi.ogg',volume=50)
-					return
-				else
-					src.occupant << sound('sound/mecha/nominal.ogg',volume=50)
-					return
+		sleep(2)
+		if(!hasInternalDamage())
+			if(nanotrasen_mech)
+				src.occupant << sound('sound/mecha/nominalnano.ogg',volume=50)
+				return
+			if(syndi_mech)
+				src.occupant << sound('sound/mecha/nominalsyndi.ogg',volume=50)
+				return
+			else
+				src.occupant << sound('sound/mecha/nominal.ogg',volume=50)
+				return
 		return 1
 	else
 		return 0
@@ -2096,21 +2095,7 @@
 
 //////////////////////////////////////// Specific Ability Actions  ///////////////////////////////////////////////
 //Need to be granted by the mech type, Not default abilities.
-/*
-/datum/action/innate/mecha/mech_toggle_thrusters
-	name = "Toggle Thrusters"
-	button_icon_state = "mech_thrusters_off"
 
-/datum/action/innate/mecha/mech_toggle_thrusters/Activate()
-	if(!owner || !chassis || chassis.occupant != owner)
-		return
-	if(chassis.get_charge() > 0)
-		chassis.thrusters_active = !chassis.thrusters_active
-		button_icon_state = "mech_thrusters_[chassis.thrusters_active ? "on" : "off"]"
-		chassis.log_message("Toggled thrusters.")
-		chassis.occupant_message("<font color='[chassis.thrusters_active ?"blue":"red"]'>Thrusters [chassis.thrusters_active ?"en":"dis"]abled.")
-
-*/
 /datum/action/innate/mecha/mech_defence_mode
 	name = "Toggle Defence Mode"
 	button_icon_state = "mech_defense_mode_off"
