@@ -96,4 +96,8 @@
 	else
 		icon_state = "sawedoff-e"
 
-	
+/obj/item/weapon/gun/projectile/shotgun/pump/Airstrike
+	name = "pointer shotgun"
+	desc = "A weird ass gun that calls down death on you. Description pending! Feel free to suggest better. Uses special 12G slugs."
+	icon_state = "shotgun"
+	ammo_type = /obj/item/ammo_casing/a12g/airstrike
