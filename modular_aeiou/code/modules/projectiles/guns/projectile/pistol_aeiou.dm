@@ -43,6 +43,6 @@
 		add_overlay(image(icon = icon, icon_state = iconF, pixel_x = flight_x_offset, pixel_y = flight_y_offset))
 	return
 
-
 /obj/item/weapon/gun/projectile/usp/suppressed
 	silenced = TRUE
+
