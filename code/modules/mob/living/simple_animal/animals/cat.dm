@@ -41,9 +41,6 @@
 	meat_amount = 1
 	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
 
-	leather_amount = 1
-	leather_type = /obj/item/stack/material/animalhide/cat
-
 	var/turns_since_scan = 0
 	var/mob/flee_target
 
@@ -93,7 +90,6 @@
 
 /mob/living/simple_animal/cat/react_to_attack(var/atom/A)
 	if(A == src) return
-	if(icon_state == "cak") return
 	flee_target = A
 	turns_since_scan = 5
 
@@ -177,6 +173,7 @@
 	icon_living = "kitten"
 	icon_dead = "kitten_dead"
 	gender = NEUTER
+	holder_type = /obj/item/weapon/holder/cat/kitten //VOREStation Edit
 
 // Leaving this here for now.
 /obj/item/weapon/holder/cat/fluff/bones
@@ -197,11 +194,11 @@
 	holder_type = /obj/item/weapon/holder/cat/fluff/bones
 	var/friend_name = "Erstatz Vryroxes"
 
-
 /mob/living/simple_animal/cat/kitten/New()
 	gender = pick(MALE, FEMALE)
 	..()
 
-
-
-
+// VOREStation Edit - Adds generic tactical kittens
+/obj/item/weapon/holder/cat/kitten
+	icon_state = "kitten"
+	w_class = ITEMSIZE_SMALL
