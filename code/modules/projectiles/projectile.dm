@@ -343,7 +343,7 @@
 
 				before_move()
 				Move(location.return_turf())
-		after_move()
+				after_move()
 
 				if(!bumped && !isturf(original))
 					if(loc == get_turf(original))

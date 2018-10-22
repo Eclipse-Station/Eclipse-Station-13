@@ -369,11 +369,11 @@
 				flght = A
 				user << "<span class='notice'>You click [S] into place on [src].</span>"
 				update_icon()
-			else
+		else
 			to_chat(user, "<span class='warning'>\The [src] is not accepting modifications at this time.</span>")
 	..()
 
-	if(istype(A, /obj/item/weapon/screwdriver))// AEIOU addition
+	if(istype(A, /obj/item/weapon/tool/screwdriver))// AEIOU addition
 		if(flght)
 			for(var/obj/item/device/flashlight/maglight/S in src)
 				user.put_in_hands(flght)
@@ -382,7 +382,7 @@
 				toggle_flashlight()
 				set_light(0)
 				update_icon()
-		else	
+		else
 			user << "<span class='notice'>[src] has no light.</span>"
 
 /obj/item/weapon/gun/emag_act(var/remaining_charges, var/mob/user)

@@ -15,11 +15,11 @@
 
 /obj/item/weapon/circuitboard/supplycomp/construct(var/obj/machinery/computer/supplycomp/SC)
 	if (..(SC))
-		SC.contraband = contraband_enabled
+		SC.can_order_contraband = contraband_enabled
 
 /obj/item/weapon/circuitboard/supplycomp/deconstruct(var/obj/machinery/computer/supplycomp/SC)
 	if (..(SC))
-		contraband_enabled = SC.contraband
+		contraband_enabled = SC.can_order_contraband
 
 /obj/item/weapon/circuitboard/supplycomp/attackby(obj/item/I as obj, mob/user as mob)
 	if(istype(I,/obj/item/device/multitool))
