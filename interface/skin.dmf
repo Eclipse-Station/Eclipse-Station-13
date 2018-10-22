@@ -34,7 +34,7 @@ macro "borghotkeymode"
 		command = "northface"
 	elem 
 		name = "NORTH+REP"
-		command = ".moveup"
+		command = ".north"
 	elem 
 		name = "ALT+EAST"
 		command = "eastfaceperm"
@@ -43,7 +43,7 @@ macro "borghotkeymode"
 		command = "eastface"
 	elem 
 		name = "EAST+REP"
-		command = ".moveright"
+		command = ".east"
 	elem 
 		name = "ALT+SOUTH"
 		command = "southfaceperm"
@@ -52,7 +52,7 @@ macro "borghotkeymode"
 		command = "southface"
 	elem 
 		name = "SOUTH+REP"
-		command = ".movedown"
+		command = ".south"
 	elem 
 		name = "INSERT"
 		command = "a-intent right"
@@ -88,16 +88,16 @@ macro "borghotkeymode"
 		command = ".me"
 	elem 
 		name = "A+REP"
-		command = ".moveleft"
+		command = ".west"
 	elem 
 		name = "CTRL+A+REP"
-		command = ".moveleft"
+		command = ".west"
 	elem 
 		name = "D+REP"
-		command = ".moveright"
+		command = ".east"
 	elem 
 		name = "CTRL+D+REP"
-		command = ".moveright"
+		command = ".east"
 	elem 
 		name = "F"
 		command = "a-intent left"
@@ -130,19 +130,19 @@ macro "borghotkeymode"
 		command = ".southwest"
 	elem "s_key"
 		name = "S+REP"
-		command = ".movedown"
+		command = ".south"
 	elem 
 		name = "CTRL+S+REP"
-		command = ".movedown"
+		command = ".south"
 	elem 
 		name = "T"
 		command = ".say"
 	elem "w_key"
 		name = "W+REP"
-		command = ".moveup"
+		command = ".north"
 	elem 
 		name = "CTRL+W+REP"
-		command = ".moveup"
+		command = ".north"
 	elem 
 		name = "X"
 		command = ".northeast"
@@ -246,7 +246,7 @@ macro "macro"
 		command = "westface"
 	elem 
 		name = "WEST+REP"
-		command = ".moveleft"
+		command = ".west"
 	elem 
 		name = "ALT+NORTH"
 		command = "northfaceperm"
@@ -255,7 +255,7 @@ macro "macro"
 		command = "northface"
 	elem 
 		name = "NORTH+REP"
-		command = ".moveup"
+		command = ".north"
 	elem 
 		name = "ALT+EAST"
 		command = "eastfaceperm"
@@ -264,7 +264,7 @@ macro "macro"
 		command = "eastface"
 	elem 
 		name = "EAST+REP"
-		command = ".moveright"
+		command = ".east"
 	elem 
 		name = "ALT+SOUTH"
 		command = "southfaceperm"
@@ -273,7 +273,7 @@ macro "macro"
 		command = "southface"
 	elem 
 		name = "SOUTH+REP"
-		command = ".movedown"
+		command = ".south"
 	elem 
 		name = "INSERT"
 		command = "a-intent right"
@@ -294,10 +294,10 @@ macro "macro"
 		command = "a-intent harm"
 	elem 
 		name = "CTRL+A+REP"
-		command = ".moveleft"
+		command = ".west"
 	elem 
 		name = "CTRL+D+REP"
-		command = ".moveright"
+		command = ".east"
 	elem 
 		name = "CTRL+E"
 		command = "quick-equip"
@@ -315,10 +315,10 @@ macro "macro"
 		command = ".southwest"
 	elem 
 		name = "CTRL+S+REP"
-		command = ".movedown"
+		command = ".south"
 	elem 
 		name = "CTRL+W+REP"
-		command = ".moveup"
+		command = ".north"
 	elem 
 		name = "CTRL+X"
 		command = ".northeast"
@@ -413,7 +413,7 @@ macro "hotkeymode"
 		command = "westface"
 	elem 
 		name = "WEST+REP"
-		command = ".moveleft"
+		command = ".west"
 	elem 
 		name = "ALT+NORTH"
 		command = "northfaceperm"
@@ -422,7 +422,7 @@ macro "hotkeymode"
 		command = "northface"
 	elem 
 		name = "NORTH+REP"
-		command = ".moveup"
+		command = ".north"
 	elem 
 		name = "ALT+EAST"
 		command = "eastfaceperm"
@@ -431,7 +431,7 @@ macro "hotkeymode"
 		command = "eastface"
 	elem 
 		name = "EAST+REP"
-		command = ".moveright"
+		command = ".east"
 	elem 
 		name = "ALT+SOUTH"
 		command = "southfaceperm"
@@ -440,7 +440,7 @@ macro "hotkeymode"
 		command = "southface"
 	elem 
 		name = "SOUTH+REP"
-		command = ".movedown"
+		command = ".south"
 	elem 
 		name = "INSERT"
 		command = "a-intent right"
@@ -479,16 +479,16 @@ macro "hotkeymode"
 		command = "subtle"
 	elem 
 		name = "A+REP"
-		command = ".moveleft"
+		command = ".west"
 	elem 
 		name = "CTRL+A+REP"
-		command = ".moveleft"
+		command = ".west"
 	elem 
 		name = "D+REP"
-		command = ".moveright"
+		command = ".east"
 	elem 
 		name = "CTRL+D+REP"
-		command = ".moveright"
+		command = ".east"
 	elem 
 		name = "E"
 		command = "quick-equip"
@@ -533,19 +533,19 @@ macro "hotkeymode"
 		command = ".southwest"
 	elem "s_key"
 		name = "S+REP"
-		command = ".movedown"
+		command = ".south"
 	elem 
 		name = "CTRL+S+REP"
-		command = ".movedown"
+		command = ".south"
 	elem 
 		name = "T"
 		command = ".say"
 	elem "w_key"
 		name = "W+REP"
-		command = ".moveup"
+		command = ".north"
 	elem 
 		name = "CTRL+W+REP"
-		command = ".moveup"
+		command = ".north"
 	elem 
 		name = "X"
 		command = ".northeast"
@@ -649,7 +649,7 @@ macro "borgmacro"
 		command = "westface"
 	elem 
 		name = "WEST+REP"
-		command = ".moveleft"
+		command = ".west"
 	elem 
 		name = "ALT+NORTH"
 		command = "northfaceperm"
@@ -658,7 +658,7 @@ macro "borgmacro"
 		command = "northface"
 	elem 
 		name = "NORTH+REP"
-		command = ".moveup"
+		command = ".north"
 	elem 
 		name = "ALT+EAST"
 		command = "eastfaceperm"
@@ -667,7 +667,7 @@ macro "borgmacro"
 		command = "eastface"
 	elem 
 		name = "EAST+REP"
-		command = ".moveright"
+		command = ".east"
 	elem 
 		name = "ALT+SOUTH"
 		command = "southfaceperm"
@@ -676,7 +676,7 @@ macro "borgmacro"
 		command = "southface"
 	elem 
 		name = "SOUTH+REP"
-		command = ".movedown"
+		command = ".south"
 	elem 
 		name = "INSERT"
 		command = "a-intent right"
@@ -697,10 +697,10 @@ macro "borgmacro"
 		command = "a-intent left"
 	elem 
 		name = "CTRL+A+REP"
-		command = ".moveleft"
+		command = ".west"
 	elem 
 		name = "CTRL+D+REP"
-		command = ".moveright"
+		command = ".east"
 	elem 
 		name = "CTRL+F"
 		command = "a-intent left"
@@ -715,10 +715,10 @@ macro "borgmacro"
 		command = ".southwest"
 	elem 
 		name = "CTRL+S+REP"
-		command = ".movedown"
+		command = ".south"
 	elem 
 		name = "CTRL+W+REP"
-		command = ".moveup"
+		command = ".north"
 	elem 
 		name = "CTRL+X"
 		command = ".northeast"
@@ -1092,7 +1092,7 @@ window "chemdispenser_reagents"
 window "mainwindow"
 	elem "mainwindow"
 		type = MAIN
-		pos = 794,130
+		pos = 281,0
 		size = 640x440
 		anchor1 = none
 		anchor2 = none
@@ -1100,12 +1100,13 @@ window "mainwindow"
 		is-default = true
 		saved-params = "pos;size;is-minimized;is-maximized"
 		title = "AEIOUstation"
+		is-maximized = true
 		icon = 'icons\\virgoicon.png'
 		macro = "macro"
 		menu = "menu"
 	elem "hotkey_toggle"
 		type = BUTTON
-		pos = -400,62
+		pos = 560,420
 		size = 80x20
 		anchor1 = 100,100
 		anchor2 = none
@@ -1117,7 +1118,7 @@ window "mainwindow"
 	elem "mainvsplit"
 		type = CHILD
 		pos = 3,0
-		size = 637x58
+		size = 634x416
 		anchor1 = 0,0
 		anchor2 = 100,100
 		background-color = none
@@ -1126,8 +1127,8 @@ window "mainwindow"
 		is-vert = true
 	elem "input"
 		type = INPUT
-		pos = 3,62
-		size = 637x20
+		pos = 3,420
+		size = 517x20
 		anchor1 = 0,100
 		anchor2 = 100,100
 		background-color = #d3b5b5
@@ -1136,7 +1137,7 @@ window "mainwindow"
 		saved-params = "command"
 	elem "saybutton"
 		type = BUTTON
-		pos = -440,62
+		pos = 520,420
 		size = 40x20
 		anchor1 = 100,100
 		anchor2 = none
@@ -1334,11 +1335,10 @@ window "rpane"
 window "browserwindow"
 	elem "browserwindow"
 		type = MAIN
-		pos = 776,39
+		pos = 281,0
 		size = 640x480
 		anchor1 = none
 		anchor2 = none
-		background-color = none
 		saved-params = "pos;size;is-minimized;is-maximized"
 		title = "Browser"
 		is-pane = true
