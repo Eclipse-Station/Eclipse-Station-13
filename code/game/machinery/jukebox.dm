@@ -124,7 +124,7 @@
 		return
 	if(default_deconstruction_crowbar(user, W))
 		return
-	if(istype(W, /obj/item/weapon/wirecutters))
+	if(istype(W, /obj/item/weapon/tool/wirecutters))
 		return wires.Interact(user)
 	if(istype(W, /obj/item/device/multitool))
 		return wires.Interact(user)
@@ -254,7 +254,7 @@
 		data["tracks"] = nano_tracks
 
 	// update the ui if it exists, returns null if no ui is passed/found
-	ui = nanomanager.try_update_ui(user, src, ui_key, ui, data, force_open)
+	ui = GLOB.nanomanager.try_update_ui(user, src, ui_key, ui, data, force_open)
 	if (!ui)
 		ui = new(user, src, ui_key, "jukebox.tmpl", title, 450, 600)
 		ui.set_initial_data(data)

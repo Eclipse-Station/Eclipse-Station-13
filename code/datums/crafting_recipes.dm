@@ -10,7 +10,7 @@
 	reqs = list(/obj/item/weapon/handcuffs/cable = 1,
 	/obj/item/stack/rods = 1)
 	time = 80
-	tools = list(/obj/item/weapon/wirecutters)
+//	tools = list(/obj/item/weapon/wirecutters)
 
 
 
@@ -20,7 +20,7 @@
 	reqs = list(/obj/item/weapon/gun/energy/taser/xeno = 1,
 	/obj/item/weapon/stock_parts/capacitor/adv = 1, /obj/item/weapon/stock_parts/micro_laser/high = 1)
 	time = 40
-	tools = list(/obj/item/weapon/screwdriver, /obj/item/crafting/blueprint/dexenotaser, /obj/item/device/integrated_electronics/wirer)
+//	tools = list(/obj/item/weapon/screwdriver, /obj/item/crafting/blueprint/dexenotaser, /obj/item/device/integrated_electronics/wirer)
 	can_be_deconstructed = 1
 
 
@@ -31,7 +31,7 @@
 	/obj/item/weapon/cell = 1,
 	/obj/item/weapon/ore/bluespace_crystal = 3)
 	time = 40
-	tools = list(/obj/item/weapon/screwdriver, /obj/item/crafting/blueprint/sizegunovercharge)
+//	tools = list(/obj/item/weapon/screwdriver, /obj/item/crafting/blueprint/sizegunovercharge)
 
 
 //////////////////////////////////////////////////////	///
