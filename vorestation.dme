@@ -3020,5 +3020,11 @@
 #include "modular_aeiou\code\modules\TGcargo\exports\weapons.dm"
 #include "modular_aeiou\code\modules\vore\fluffstuff\custom_boxes_aeiou_vr.dm"
 #include "modular_aeiou\code\modules\vore\fluffstuff\custom_permits_aeiou_vr.dm"
+#include "modular_aeiou\lore_override\glasses.dm"
+#include "modular_aeiou\lore_override\guns.dm"
+#include "modular_aeiou\lore_override\sleevecard.dm"
 #include "modular_aeiou\mobs\secdeathclaw.dm"
+#include "modular_aeiou\multiphase\gun.dm"
+#include "modular_aeiou\multiphase\locker.dm"
+#include "modular_aeiou\multiphase\projectile.dm"
 // END_INCLUDE
