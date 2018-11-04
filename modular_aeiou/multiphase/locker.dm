@@ -27,7 +27,7 @@
 		/obj/item/weapon/storage/belt/security,
 		/obj/item/device/flash,
 		/obj/item/weapon/melee/baton/loaded,
-		/obj/item/weapon/gun/energy/gun/multiphase,	//AEIOU change - replaces plain egun with multiphase gun
+		/obj/item/weapon/gun/energy/gun/multiphase,
 		/obj/item/weapon/cell/device/weapon,
 		/obj/item/clothing/accessory/holster/waist,
 		/obj/item/weapon/melee/telebaton,
@@ -36,3 +36,4 @@
 		/obj/item/clothing/shoes/boots/winter/security,
 		/obj/item/device/flashlight/maglight,
 		/obj/item/clothing/mask/gas/half)
+//AEIOU change - replaces plain egun with multiphase gun
