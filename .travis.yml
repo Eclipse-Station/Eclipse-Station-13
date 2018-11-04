@@ -47,6 +47,6 @@ script:
   # Run our test
   - cp config/example/* config/
   - echo "#define ${TEST_DEFINE} 1" > ${TEST_FILE}
-  - DreamMaker vorestation.dme
-  - if [ $RUN -eq 1 ]; then DreamDaemon vorestation.dmb -invisible -trusted -core 2>&1 | tee log.txt; fi
+  - DreamMaker aeioustation.dme
+  - if [ $RUN -eq 1 ]; then DreamDaemon aeioustation.dmb -invisible -trusted -core 2>&1 | tee log.txt; fi
   - if [ $RUN -eq 1 ]; then grep "All Unit Tests Passed" log.txt; fi
