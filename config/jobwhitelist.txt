@@ -22,6 +22,7 @@ JANGOFETTjo - Head of Personnel
 JANGOFETTjo - Research Director
 SilencedMP5A5 - Colony Director
 SilencedMP5A5 - Head of Personnel
+Leon962 - Chief Medical Officer
 SilencedMP5A5 - Head of Security
 SilencedMP5A5 - Research Director
 SilencedMP5A5 - Chief Engineer
@@ -29,12 +30,18 @@ SilencedMP5A5 -  Chief Medical Officer
 EvilJackCarver - Chief Engineer
 VulpesLegan - Head of Personnel
 VulpesLegan - Chief Engineer
-DirtyOldHarry - Captain
-DirtyOldHarry - Head of Security
+DirtyOldHarry - Colony Director
+DirtyOldHarry - Head of Personnel
 DirtyOldHarry - Chief Medical Officer
-HawkerTheGreat - Captain
+HawkerTheGreat - Colony Director
 HawkerTheGreat - Head of Personnel
 HawkerTheGreat - Head of Security
 HawkerTheGreat - Research Director
 HawkerTheGreat - Chief Medical Officer
 HawkerTheGreat - Chief Engineer
+ChiefSpectre - Head of Personnel
+GingeraleDragon - Head of Personnel
+rsmr - Research Director
+rsmr - Head of Personnel
+rsmr - Colony Director
+GingeraleDragon - Head of Security
