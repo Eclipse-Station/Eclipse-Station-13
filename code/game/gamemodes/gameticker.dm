@@ -391,6 +391,7 @@ var/global/datum/controller/gameticker/ticker
 /datum/controller/gameticker/proc/declare_completion()
 	world.log <<  "Round ended. Mode: [mode.name]."		//AEIOU edit: log to console that the round is over
 	world << "<br><br><br><H1>A round of [mode.name] has ended!</H1>"
+	lobby_message(message = "Transfer shuttle has arrived at CC! New round begins after server restart! <@&439778970599292938>", color = "#FE9500") //AEIOUstation add
 	for(var/mob/Player in player_list)
 		if(Player.mind && !isnewplayer(Player))
 			if(Player.stat != DEAD)

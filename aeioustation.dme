@@ -3056,6 +3056,7 @@
 #include "modular_aeiou\code\modules\reagents\Chemistry-Reagents\Chemistry-Reagents-Food-AEIOU.dm"
 #include "modular_aeiou\code\modules\reagents\Chemistry-Reagents\Chemistry-Reagents-Medicine_AEIOU.dm"
 #include "modular_aeiou\code\modules\reagents\Chemistry-Reagents\Chemistry-Reagents-Other.dm"
+#include "modular_aeiou\code\modules\unsorted\lobbyping.dm"
 #include "modular_aeiou\code\modules\vore\fluffstuff\custom_boxes_aeiou_vr.dm"
 #include "modular_aeiou\code\modules\vore\fluffstuff\custom_permits_aeiou_vr.dm"
 #include "modular_aeiou\lore_override\glasses.dm"

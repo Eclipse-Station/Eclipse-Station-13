@@ -14,6 +14,8 @@ var/list/admin_verbs_default = list(
 	)
 
 var/list/admin_verbs_admin = list(
+	/client/proc/discord_test,
+	/client/proc/discord_msg,
 	/client/proc/player_panel_new, //shows an interface for all players, with links to various panels,
 	/datum/admins/proc/set_tcrystals,
 	/datum/admins/proc/add_tcrystals,
