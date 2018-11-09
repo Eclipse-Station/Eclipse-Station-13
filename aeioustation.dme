@@ -3037,6 +3037,7 @@
 #include "modular_aeiou\code\modules\clothing\suits\miscellaneous_aeiou.dm"
 #include "modular_aeiou\code\modules\mining\mine_items_aeiou.dm"
 #include "modular_aeiou\code\modules\mob\living\carbon\human\npcs.dm"
+#include "modular_aeiou\code\modules\mob\living\carbon\human\species\station\icon_override.dm"
 #include "modular_aeiou\code\modules\power\laser_centcom_aeiou.dm"
 #include "modular_aeiou\code\modules\power\lighting.dm"
 #include "modular_aeiou\code\modules\projectiles\ammunition\caseless_aeiou.dm"
