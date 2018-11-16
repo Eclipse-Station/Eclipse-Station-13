@@ -13,9 +13,9 @@ var/global/list/all_traits = list()			// All of 'em at once (same instances)
 
 var/global/list/custom_species_bases = list() // Species that can be used for a Custom Species icon base
 
-//stores numeric player size options indexed by name
+//stores numeric player size options indexed by name  AEIOU edit - changed Macro to Giant
 var/global/list/player_sizes_list = list(
-		"Macro" 	= RESIZE_HUGE,
+		"Giant" 	= RESIZE_HUGE,
 		"Big" 		= RESIZE_BIG,
 		"Normal" 	= RESIZE_NORMAL,
 		"Small" 	= RESIZE_SMALL,

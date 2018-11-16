@@ -69,7 +69,7 @@
 		to_chat(H,"<span class='warning'>You must be WEARING the uniform to change your size.</span>")
 		return
 
-	var/new_size = input("Put the desired size (25-200%)", "Set Size", 200) as num|null
+	var/new_size = input("Put the desired size (50-150%)", "Set Size", 100) as num|null
 
 	//Check AGAIN because we accepted user input which is blocking.
 	if (src != H.w_uniform)

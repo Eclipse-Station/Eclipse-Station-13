@@ -44,7 +44,7 @@
 	chance_maxm = 1
 
 	activate(var/mob/living/carbon/mob,var/multiplier)
-		var/newsize = rand (25, 200)
+		var/newsize = rand (50, 150) //aeiou edit - size
 		mob.resize(newsize/100)
 		viewers(mob) << "<span class='warning'>[mob.name] suddenly changes size!</span>"
 

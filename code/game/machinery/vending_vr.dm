@@ -1,6 +1,6 @@
 //Tweaked existing vendors
 /obj/machinery/vending/hydroseeds/New()
-	products += list(/obj/item/seeds/shrinkshroom = 3,/obj/item/seeds/megashroom = 3)
+	contraband += list(/obj/item/seeds/shrinkshroom = 3,/obj/item/seeds/megashroom = 3) //AEIOU edit - makes nerfed size shrooms available only via hacking
 	..()
 
 /obj/machinery/vending/security/New()
