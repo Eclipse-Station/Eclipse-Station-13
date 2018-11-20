@@ -128,7 +128,7 @@
 	activate()
 		if((. = ..()))
 			var/alter_size = 0
-			var/new_size = input("Put the desired size alteration (up to +- 10%)", "Alter Size", 200) as num
+			var/new_size = input("Put the desired size alteration (up to +- 10%)", "Alter Size", 10) as num
 			alter_size = (nif.human.size_multiplier * 100) + new_size
 			if ((alter_size > 150)||(alter_size < 50))
 				to_chat(nif.human,"<span class='notice'>The safety features of the NIF Program indicate that further size alteration might cause permanent damage and have been disabled.</span>")
@@ -138,7 +138,7 @@
 				return
 			else
 				nif.human.resize(alter_size/100)
-				to_chat(nif.human,"<span class='notice'>You alter your size to [new_size]%</span>")
+				to_chat(nif.human,"<span class='notice'>You alter your size by [new_size]%</span>")
 
 			nif.human.visible_message("<span class='warning'>Swirling streams of nanites move under [nif.human]'s surface as they change size!</span>","<span class='notice'>Swirling streams of nanites travel around your body, changing your size!</span>")
 			nif.human.update_icons() //Apply matrix transform asap

@@ -85,7 +85,7 @@
 		H.update_icons() //Just want the matrix transform
 		return
 
-	if (!IsInRange(new_size,25,200))
+	if (!IsInRange(new_size,50,150))
 		to_chat(H,"<span class='notice'>The safety features of the uniform prevent you from choosing this size.</span>")
 		return
 
