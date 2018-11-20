@@ -15,7 +15,7 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 //Nanotech Implant Foundation
 /obj/item/device/nif
 	name = "nanite implant framework"
-	desc = "Experimental piece of technology, capable of printing new \
+	desc = "A somewhat diminished knockoff of a Kitsuhana nano working surface, in a box. Can print new \
 	implants inside living hosts on the fly based on software uploads. Must be surgically \
 	implanted in the head to work. May eventually wear out and break."
 
@@ -563,11 +563,11 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 	desc = "A copy of a copy of a copy of a copy of... this can't be any good, right? Surely?"
 	durability = 10
 
-/obj/item/device/nif/authentic //AEIOU edit - No KHI allowed. Also no 1000 durability NIFs allowed. Ree.
-	name = "\improper Elite NIF"
-	desc = "A far more expensive version of Nanite Implant Framework. Features more durable replicators \
-	and far more robust nanomachines. Basically just a high-endurance NIF."
-	durability = 350
+/obj/item/device/nif/authentic
+	name = "\improper Kitsuhana NIF"
+	desc = "An actual Kitsuhana working surface, in a box. From a society slightly less afraid \
+	of self-replicating nanotechnology. Basically just a high-endurance NIF."
+	durability = 1000
 
 /obj/item/device/nif/bioadap
 	name = "bioadaptive NIF"

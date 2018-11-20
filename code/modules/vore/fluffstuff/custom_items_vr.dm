@@ -1995,7 +1995,7 @@
 
 	icon = 'icons/vore/custom_items_vr.dmi'
 	icon_state = "penlightlynn"
-	
+
 //Knightfall5:Ashley Kifer
 /obj/item/clothing/accessory/medal/nobel_science/fluff/ashley
 	name = "nobel sciences award"

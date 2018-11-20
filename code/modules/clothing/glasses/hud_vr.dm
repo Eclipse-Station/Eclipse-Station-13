@@ -1,7 +1,7 @@
 /obj/item/clothing/glasses/omnihud
 	name = "\improper AR glasses"
-	desc = "The WT-62 AR Glasses are a design from Ward-Takahashi GMB. These feature a small \
-	Nanotrasen Logo taped atop WT's logo on one of the temples."
+	desc = "The KHI-62 AR Glasses are a design from Kitsuhana Heavy Industries. These are a cheap export version \
+	for Nanotrasen. Probably not as complete as KHI could make them, but more readily available for NT."
 	origin_tech = list(TECH_MAGNET = 3, TECH_BIO = 3)
 	var/obj/item/clothing/glasses/hud/omni/hud = null
 	var/mode = "civ"
@@ -67,7 +67,7 @@
 
 /obj/item/clothing/glasses/omnihud/med
 	name = "\improper AR-M glasses"
-	desc = "The WT-62-M AR glasses are a design from Ward-Takahashi GMB. \
+	desc = "The KHI-62-M AR glasses are a design from Kitsuhana Heavy Industries. \
 	These have been upgraded with medical records access and virus database integration."
 	mode = "med"
 	action_button_name = "AR Console (Crew Monitor)"
@@ -81,7 +81,7 @@
 
 /obj/item/clothing/glasses/omnihud/sec
 	name = "\improper AR-S glasses"
-	desc = "The WT-62-S AR glasses are a design from Ward-Takahashi GMB. \
+	desc = "The KHI-62-S AR glasses are a design from Kitsuhana Heavy Industries. \
 	These have been upgraded with security records integration and flash protection."
 	mode = "sec"
 	flash_protection = FLASH_PROTECTION_MAJOR
@@ -96,7 +96,7 @@
 
 /obj/item/clothing/glasses/omnihud/eng
 	name = "\improper AR-E glasses"
-	desc = "The WT-62-E AR glasses are a design from Ward-Takahashi GMB. \
+	desc = "The KHI-62-E AR glasses are a design from Kitsuhana Heavy Industries. \
 	These have been upgraded with advanced electrochromic lenses to protect your eyes during welding."
 	mode = "eng"
 	flash_protection = FLASH_PROTECTION_MAJOR
@@ -110,7 +110,7 @@
 
 /obj/item/clothing/glasses/omnihud/rnd
 	name = "\improper AR-R glasses"
-	desc = "The WT-62-R AR glasses are a design from Ward-Takahashi GMB. \
+	desc = "The KHI-62-R AR glasses are a design from Kitsuhana Heavy Industries. \
 	These have been ... modified ... to fit into a different frame."
 	mode = "sci"
 	icon = 'icons/obj/clothing/glasses.dmi'
@@ -156,7 +156,7 @@
 
 /obj/item/clothing/glasses/omnihud/all
 	name = "\improper AR-B glasses"
-	desc = "The WT-62-B AR glasses are a design from Ward-Takahashi GMB. \
+	desc = "The KHI-62-B AR glasses are a design from Kitsuhana Heavy Industries. \
 	These have been upgraded with every feature the lesser models have. Now we're talkin'."
 	mode = "best"
 	flash_protection = FLASH_PROTECTION_MAJOR
@@ -169,3 +169,18 @@
     item_state_slots = list(slot_r_hand_str = "blindfold", slot_l_hand_str = "blindfold")
     body_parts_covered = 0
     enables_planes = list(VIS_CH_ID,VIS_CH_WANTED,VIS_CH_IMPTRACK,VIS_CH_IMPLOYAL,VIS_CH_IMPCHEM)
+    var/eye = null
+
+/obj/item/clothing/glasses/hud/security/eyepatch/verb/switcheye()
+	set name = "Switch Eyepatch"
+	set category = "Object"
+	set src in usr
+	if(!istype(usr, /mob/living)) return
+	if(usr.stat) return
+
+	eye = !eye
+	if(eye)
+		icon_state = "[icon_state]_1"
+	else
+		icon_state = initial(icon_state)
+	update_clothing_icon()
