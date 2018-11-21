@@ -50,7 +50,7 @@
 				victim = M
 				//.take_blood(null, 30)
 				if(victim)
-					to_chat(M, "You feel a sharp stabbing pain, coming from inside!")
+					to_chat(M, "You feel needles poking you all around your body!")
 					var/i
 					var/pain = rand(1, 6)
 					for(i=1; i<=pain; i++)

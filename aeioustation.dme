@@ -3061,6 +3061,8 @@
 #include "modular_aeiou\code\modules\vore\fluffstuff\custom_permits_aeiou_vr.dm"
 #include "modular_aeiou\lore_override\glasses.dm"
 #include "modular_aeiou\lore_override\guns.dm"
+#include "modular_aeiou\lore_override\nif.dm"
+#include "modular_aeiou\lore_override\resleeving.dm"
 #include "modular_aeiou\lore_override\sleevecard.dm"
 #include "modular_aeiou\mobs\secdeathclaw.dm"
 #include "modular_aeiou\multiphase\gun.dm"

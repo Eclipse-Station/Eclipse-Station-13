@@ -116,12 +116,12 @@
 				spanstyle = "color:purple;"
 			if(DM_HEAL)
 				spanstyle = "color:green;"
-			if(DM_SHRINK)
+	/*		if(DM_SHRINK)
 				spanstyle = "color:purple;"
 			if(DM_GROW)
 				spanstyle = "color:purple;"
 			if(DM_SIZE_STEAL)
-				spanstyle = "color:purple;"
+				spanstyle = "color:purple;"   no size vore*/
 			if(DM_TRANSFORM)
 				switch(B.tf_mode)
 					if(DM_TRANSFORM_MALE)
@@ -239,9 +239,9 @@
 		dat += "<br><a href='?src=\ref[src];b_bulge_size=\ref[selected]'>Required examine size:</a>"
 		dat += " [selected.bulge_size*100]%"
 
-		//Size that prey will be grown/shrunk to.
+/*		//Size that prey will be grown/shrunk to. -- AEIOU edit - No.
 		dat += "<br><a href='?src=\ref[src];b_grow_shrink=\ref[selected]'>Shrink/Grow size:</a>"
-		dat += "[selected.shrink_grow_size*100]%"
+		dat += "[selected.shrink_grow_size*100]%" */
 
 		//Belly escapability
 		dat += "<br><a href='?src=\ref[src];b_escapable=\ref[selected]'>Belly Interactions ([selected.escapable ? "On" : "Off"])</a>"
@@ -639,7 +639,7 @@
 			to_chat(user,"<span class='notice'>Invalid size.</span>")
 		else if(new_bulge)
 			selected.bulge_size = (new_bulge/100)
-
+/*  -- AEIOU edit - no. Just no.
 	if(href_list["b_grow_shrink"])
 		var/new_grow = input(user, "Choose the size that prey will be grown/shrunk to, ranging from 25% to 200%", "Set Growth Shrink Size.", selected.shrink_grow_size) as num|null
 		if (new_grow == null)
@@ -648,7 +648,7 @@
 			selected.shrink_grow_size = 1 //Set it to the default
 			to_chat(user,"<span class='notice'>Invalid size.</span>")
 		else if(new_grow)
-			selected.shrink_grow_size = (new_grow*0.01)
+			selected.shrink_grow_size = (new_grow*0.01) */
 
 	if(href_list["b_burn_dmg"])
 		var/new_damage = input(user, "Choose the amount of burn damage prey will take per tick. Ranges from 0 to 6.", "Set Belly Burn Damage.", selected.digest_burn) as num|null

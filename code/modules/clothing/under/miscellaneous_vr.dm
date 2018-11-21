@@ -69,7 +69,7 @@
 		to_chat(H,"<span class='warning'>You must be WEARING the uniform to change your size.</span>")
 		return
 
-	var/new_size = input("Put the desired size (25-200%)", "Set Size", 200) as num|null
+	var/new_size = input("Put the desired size (50-150%)", "Set Size", 100) as num|null
 
 	//Check AGAIN because we accepted user input which is blocking.
 	if (src != H.w_uniform)
@@ -85,7 +85,7 @@
 		H.update_icons() //Just want the matrix transform
 		return
 
-	if (!IsInRange(new_size,25,200))
+	if (!IsInRange(new_size,50,150))
 		to_chat(H,"<span class='notice'>The safety features of the uniform prevent you from choosing this size.</span>")
 		return
 

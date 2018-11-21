@@ -162,7 +162,7 @@ default behaviour is:
 					now_pushing = 0
 					return
 			// Handle grabbing, stomping, and such of micros!
-			if(handle_micro_bump_other(tmob)) return
+//			if(handle_micro_bump_other(tmob)) return -- AEIOU edit. LET'S NOT.
 			// VOREStation Edit - End
 
 			if(istype(tmob, /mob/living/carbon/human) && (FAT in tmob.mutations))
