@@ -5,7 +5,6 @@
 	density = 1
 	anchored = 1
 	use_power = 1
-
 	idle_power_usage = 5
 	active_power_usage = 100
 	flags = OPENCONTAINER | NOREACT
@@ -13,7 +12,6 @@
 	var/operating = 0 // Is it on?
 	var/dirty = 0 // = {0..100} Does it need cleaning?
 	var/broken = 0 // ={0,1,2} How broken is it???
-	var/efficiency = 0
 	var/global/list/datum/recipe/available_recipes // List of the recipes you can use
 	var/global/list/acceptable_items // List of the items you can put in
 	var/global/list/acceptable_reagents // List of the reagents you can put in
@@ -22,17 +20,6 @@
 
 // see code/modules/food/recipes_microwave.dm for recipes
 
-// // // BEGIN AEIOU EDIT // // //
-/obj/machinery/microwave/AltClick(mob/user)  //microwave quick start
-	if(isliving(user) && in_range(src, user) && !user.incapacitated())	//are you living, in range, and not incapacitated?
-		cook()
-	else if (isAI(user) || isrobot(user))	//are you an AI/borg?
-		cook()
-	else
-		return ..()
-// // // END AEIOU EDIT
-
-	
 /*******************
 *   Initialising
 ********************/
@@ -46,8 +33,6 @@
 	component_parts += new /obj/item/weapon/stock_parts/console_screen(src)
 	component_parts += new /obj/item/weapon/stock_parts/motor(src)
 	component_parts += new /obj/item/weapon/stock_parts/capacitor(src)
-	component_parts += new /obj/item/weapon/stock_parts/micro_laser(src)
-	
 
 	if (!available_recipes)
 		available_recipes = new
@@ -68,18 +53,7 @@
 		acceptable_items |= /obj/item/weapon/holder
 		acceptable_items |= /obj/item/weapon/reagent_containers/food/snacks/grown
 
-
 	RefreshParts()
-
-
-
-/obj/machinery/microwave/RefreshParts()
-	..()
-	var/E
-	for(var/obj/item/weapon/stock_parts/micro_laser/M in component_parts)
-		E += M.rating
-	efficiency = E
-
 
 /*******************
 *   Item Adding
@@ -323,7 +297,7 @@
 		if (stat & (NOPOWER|BROKEN))
 			return 0
 		use_power(500)
-		sleep(max(12-2*efficiency,2))
+		sleep(10)
 	return 1
 
 /obj/machinery/microwave/proc/has_extra_item()
