@@ -25,36 +25,36 @@
 */
 
 //Natje: Awen Henry
-/obj/item/clothing/head/fluff/awoo
+/obj/item/clothing/head/fluff/wolfgirl
     name = "Wolfgirl Hat"
     desc = "An odd, small hat with two strings attached to it."
 
-    icon_state = "awoohat"
+    icon_state = "wolfgirlhat"
     icon = 'icons/vore/custom_clothes_vr.dmi'
     icon_override = 'icons/vore/custom_onmob_vr.dmi'
 
 //Natje: Awen Henry
-/obj/item/clothing/shoes/fluff/awoo
+/obj/item/clothing/shoes/fluff/wolfgirl
     name = "Red Sandals"
     desc = "A pair of sandals that make you want to awoo!"
 
-    icon_state = "awoosandals"
+    icon_state = "wolfgirlsandals"
     icon = 'icons/vore/custom_clothes_vr.dmi'
     icon_override = 'icons/vore/custom_onmob_vr.dmi'
 
 //Natje: Awen Henry
-/obj/item/clothing/under/fluff/awoo
+/obj/item/clothing/under/fluff/wolfgirl
 	name = "Wolfgirl Clothes"
 	desc = "A set of clothes almost identical to those Wolf Girls always wear..."
 
 	icon = 'icons/vore/custom_clothes_vr.dmi'
-	icon_state = "awoouni"
-	worn_state = "awoouni_mob"
+	icon_state = "wolfgirluni"
+	worn_state = "wolfgirluni_mob"
 	rolled_sleeves = 0
 	rolled_down = 0
 
 	icon_override = 'icons/vore/custom_clothes_vr.dmi'
-	item_state = "awoouni_mob"
+	item_state = "wolfgirluni_mob"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS|LEGS
 
 //SpoopyLizz: Roiz Lizden
@@ -693,6 +693,11 @@
 	icon_override = 'icons/vore/custom_clothes_vr.dmi'
 	item_state = "rig-hos_mob"
 
+	//Slightly improved security voidsuit, which when made, was:
+	//armor = list(melee = 50, bullet = 25, laser = 25, energy = 5, bomb = 45, bio = 100, rad = 10)
+	armor = list("melee" = 60, "bullet" = 35, "laser" = 35, "energy" = 15, "bomb" = 50, "bio" = 100, "rad" = 10)
+	species_restricted = null
+
 //HOS Hardsuit Helmet
 /obj/item/clothing/head/helmet/space/void/security/fluff/hos // ToDo: Rig version.
 	name = "\improper prototype voidsuit helmet"
@@ -703,6 +708,9 @@
 
 	icon_override = 'icons/vore/custom_clothes_vr.dmi'
 	item_state = "rig0-hos_mob"
+
+	armor = list("melee" = 60, "bullet" = 35, "laser" = 35, "energy" = 15, "bomb" = 50, "bio" = 100, "rad" = 10)
+	species_restricted = null
 
 //adk09:Lethe
 /obj/item/clothing/head/helmet/hos/fluff/lethe

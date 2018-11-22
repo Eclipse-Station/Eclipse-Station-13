@@ -199,7 +199,7 @@
 				var/oldnutrition = (M.nutrition * 0.05)
 				M.nutrition = (M.nutrition * 0.95)
 				owner.nutrition += oldnutrition
-
+/* AEIOU removal
 //////////////////////////// DM_SHRINK ////////////////////////////
 	else if(digest_mode == DM_SHRINK)
 
@@ -248,7 +248,7 @@
 					var/oldnutrition = (M.nutrition * 0.05)
 					M.nutrition = (M.nutrition * 0.95)
 					owner.nutrition += oldnutrition
-
+*/
 ///////////////////////////// DM_HEAL /////////////////////////////
 	else if(digest_mode == DM_HEAL)
 

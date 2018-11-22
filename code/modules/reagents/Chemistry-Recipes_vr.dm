@@ -14,7 +14,7 @@
 	id = "macrocillin"
 	result = "macrocillin"
 	// POLARISTODO requires_heating = 1
-	required_reagents = list("sizeoxadone" = 20, "diethylamine" = 20)
+	required_reagents = list("sizeoxadone" = 20, "diethylamine" = 20, "phoron" = 5)
 	result_amount = 1
 
 /datum/chemical_reaction/microcillin
@@ -22,7 +22,7 @@
 	id = "microcillin"
 	result = "microcillin"
 	// POLARISTODO requires_heating = 1
-	required_reagents = list("sizeoxadone" = 20, "sodiumchloride" = 20)
+	required_reagents = list("sizeoxadone" = 20, "sodiumchloride" = 20, "phoron" = 5)
 	result_amount = 1
 
 /datum/chemical_reaction/normalcillin
