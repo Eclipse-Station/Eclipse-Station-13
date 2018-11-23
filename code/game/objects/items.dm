@@ -742,6 +742,7 @@ modules/mob/living/carbon/human/life.dm if you die, you will be zoomed out.
 	if(!inhands)
 		apply_blood(standing)			//Some items show blood when bloodied
 		apply_accessories(standing)		//Some items sport accessories like webbing
+		apply_polychromic(standing)		//polychromic clothing
 
 	//Return our icon
 	return standing
@@ -822,6 +823,10 @@ modules/mob/living/carbon/human/life.dm if you die, you will be zoomed out.
 //STUB
 /obj/item/proc/apply_accessories(var/image/standing)
 	return standing
+//STUB
+/obj/item/proc/apply_polychromic(var/image/standing)
+	//visible_message("you fucked up, Nestor")
+	return standing
 
 /*
  *	Assorted tool procs, so any item can emulate any tool, if coded
@@ -847,3 +852,6 @@ modules/mob/living/carbon/human/life.dm if you die, you will be zoomed out.
 
 /obj/item/proc/is_welder()
 	return FALSE
+
+
+

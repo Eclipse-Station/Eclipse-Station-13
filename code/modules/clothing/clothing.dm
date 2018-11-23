@@ -201,7 +201,7 @@
 	var/obj/item/weapon/cell/cell = 0
 	var/fingerprint_chance = 0	//How likely the glove is to let fingerprints through
 	var/obj/item/clothing/gloves/ring = null		//Covered ring
-	var/mob/living/carbon/human/wearer = null	//Used for covered rings when dropping
+//	var/mob/living/carbon/human/wearer = null	//Used for covered rings when dropping
 	var/glove_level = 2			//What "layer" the glove is on
 	var/overgloves = 0			//Used by gauntlets and arm_guards
 	var/punch_force = 0			//How much damage do these gloves add to a punch?
