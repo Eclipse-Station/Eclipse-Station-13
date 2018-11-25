@@ -122,3 +122,4 @@
 	name = "handcuffs"
 	path =/obj/item/weapon/handcuffs
 	hidden = 1
+
