@@ -101,3 +101,8 @@
 /datum/category_item/autolathe/engineering/camera_assembly
 	name = "camera assembly"
 	path =/obj/item/weapon/camera_assembly
+
+/datum/category_item/autolathe/engineering/dryingrack //AEIOU addition
+	name = "drying rack electronics"
+	path = /obj/item/weapon/circuitboard/dryingrack
+
