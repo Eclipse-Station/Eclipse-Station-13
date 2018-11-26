@@ -102,6 +102,9 @@
 		return 1
 
 	if(href_list["ready"])
+		if(!is_player_whitelisted(src))
+			discord_redirect(usr)//AEIOU addition
+			return 0
 		if(!ticker || ticker.current_state <= GAME_STATE_PREGAME) // Make sure we don't ready up after the round has started
 			ready = text2num(href_list["ready"])
 		else
@@ -332,6 +335,9 @@
 	if(!ticker || ticker.current_state != GAME_STATE_PLAYING)
 		usr << "<font color='red'>The round is either not ready, or has already finished...</font>"
 		return 0
+	if(!is_player_whitelisted(src))
+		discord_redirect(src)//Aeiou addition
+		return 0
 	if(!config.enter_allowed)
 		usr << "<span class='notice'>There is an administrative lock on entering the game!</span>"
 		return 0
@@ -449,6 +455,9 @@
 
 /mob/new_player/proc/create_character(var/turf/T)
 	if (!attempt_vr(src,"spawn_checks_vr",list())) return 0 // VOREStation Insert
+	if(!is_player_whitelisted(usr))
+		discord_redirect(usr)//Aeiou addition
+		return 0
 	spawning = 1
 	close_spawn_windows()
 

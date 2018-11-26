@@ -11,6 +11,8 @@ var/list/admin_verbs_default = list(
 //	/client/proc/cmd_mod_say,
 //	/client/proc/deadchat				//toggles deadchat on/off,
 //	/client/proc/toggle_ahelp_sound,
+	/client/proc/add_to_whitelist, //aeiou addition - whitelist
+	/client/proc/reload_whitelist,
 	)
 
 var/list/admin_verbs_admin = list(
