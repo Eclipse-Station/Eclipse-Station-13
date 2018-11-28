@@ -531,8 +531,8 @@ var/world_topic_spam_protect_time = world.timeofday
 	s += "<b>AEIOU-Station 13<b>"
 	s += "<b>[station_name()]</b>";
 	s += " ("
-	s += "<a href=\"http://www.aeiou-station.space/wiki/\">" //Change this to wherever you want the hub to link to.
-	s += "Wiki"
+	s += "<a href=\"http://www.aeiou-station.space/\">" //Change this to wherever you want the hub to link to.
+	s += "Site"
 	s += " / "
 	s += "<a href=\"https://discord.gg/xuS4t9U\">" //Change this to wherever you want the hub to link to.
 	s += "Discord"  //Replace this with something else. Or ever better, delete it and uncomment the game version.
