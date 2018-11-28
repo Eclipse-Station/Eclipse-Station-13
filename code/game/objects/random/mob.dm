@@ -41,16 +41,17 @@
 	var/build_path = item_to_spawn()
 
 	var/mob/living/simple_animal/M = new build_path(src.loc)
-	M.ai_inactive = 1 //Don't fight eachother while we're still setting up!
-	if(mob_faction)
-		M.faction = mob_faction
-	M.returns_home = mob_returns_home
-	M.wander = mob_wander
-	M.wander_distance = mob_wander_distance
-	if(overwrite_hostility)
-		M.hostile = mob_hostile
-		M.retaliate = mob_retaliate
-	M.ai_inactive = 0 //Now you can kill eachother if your faction didn't override.
+	if(!istype(M, /obj/random/mouseremains)) //aeiou edit to prevent that gross runtime
+		M.ai_inactive = 1 //Don't fight eachother while we're still setting up!
+		if(mob_faction)
+			M.faction = mob_faction
+		M.returns_home = mob_returns_home
+		M.wander = mob_wander
+		M.wander_distance = mob_wander_distance
+		if(overwrite_hostility)
+			M.hostile = mob_hostile
+			M.retaliate = mob_retaliate
+		M.ai_inactive = 0 //Now you can kill eachother if your faction didn't override.
 
 	if(pixel_x || pixel_y)
 		M.pixel_x = pixel_x
