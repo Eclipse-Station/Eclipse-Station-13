@@ -1,7 +1,7 @@
 // Define a place to save in character setup
 /datum/preferences
 	var/vantag_volunteer = 0	// What state I want to be in, in terms of being affected by antags.
-	var/vantag_preference = VANTAG_NONE	// Whether I'd like to volunteer to be an antag at some point.
+	var/vantag_preference = VANTAG_KIDNAP// Whether I'd like to volunteer to be an antag at some point.
 
 // Definition of the stuff for Sizing
 /datum/category_item/player_setup_item/vore/vantag
