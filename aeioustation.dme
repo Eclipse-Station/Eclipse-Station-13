@@ -3011,6 +3011,7 @@
 #include "maps\submaps\surface_submaps\wilderness\wilderness.dm"
 #include "maps\submaps\surface_submaps\wilderness\wilderness_areas.dm"
 #include "maps\~map_system\maps.dm"
+#include "modular_aeiou\code\datums\traits\traits_aeiou.dm"
 #include "modular_aeiou\code\game\machinery\lava_aeiou.dm"
 #include "modular_aeiou\code\game\machinery\stove_aeiou.dm"
 #include "modular_aeiou\code\game\machinery\vending_aeiou.dm"

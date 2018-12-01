@@ -67,7 +67,7 @@
 	var/scream_verb = "screams"
 	/* AEIOU EDIT - Re-added and updated with new GOON CODE sounds. Check the License file for details. - HTG */
 	var/male_scream_sound = 'sound/goonstation/voice/male_scream.ogg'
-	var/female_scream_sound = 'sound/goonstation/voice/female_scream.ogg' 
+	var/female_scream_sound = 'sound/goonstation/voice/female_scream.ogg'
 	var/male_cough_sounds = list('sound/effects/mob_effects/m_cougha.ogg','sound/effects/mob_effects/m_coughb.ogg', 'sound/effects/mob_effects/m_coughc.ogg')
 	var/female_cough_sounds = list('sound/effects/mob_effects/f_cougha.ogg','sound/effects/mob_effects/f_coughb.ogg')
 	var/male_sneeze_sound = 'sound/effects/mob_effects/sneeze.ogg'
@@ -173,6 +173,7 @@
 	var/has_glowing_eyes = 0								// Whether the eyes are shown above all lighting
 	var/water_movement = 0									// How much faster or slower the species is in water
 	var/snow_movement = 0									// How much faster or slower the species is on snow
+	var/voracious = 0										// Very Obvious Remark, Eh?
 
 
 	var/item_slowdown_mod = 1								// How affected by item slowdown the species is.
