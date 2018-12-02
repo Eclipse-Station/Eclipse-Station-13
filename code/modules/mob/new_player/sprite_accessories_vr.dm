@@ -1017,49 +1017,6 @@
 		body_parts = list(BP_HEAD)
 		body_parts = list(BP_L_FOOT,BP_R_FOOT,BP_L_HAND,BP_R_HAND,BP_TORSO)
 
-	insect_abdomen_tail
-		name = "Insect abdomen tail"
-		icon_state = "insect_abdomen_tail"
-		color_blend_mode = ICON_MULTIPLY
-		body_parts = list(BP_TORSO,BP_GROIN)
-
-	insect_socks
-		name = "Insect socks"
-		icon_state = "insect_socks"
-		color_blend_mode = ICON_MULTIPLY
-		body_parts = list(BP_L_FOOT,BP_R_FOOT,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_L_HAND,BP_R_HAND)
-
-	insect_torso_f
-		name = "Insect torso female"
-		icon_state = "insect_torso_f"
-		color_blend_mode = ICON_MULTIPLY
-		body_parts = list(BP_TORSO,BP_GROIN)
-
-	insect_torso_m
-		name = "Insect torso male"
-		icon_state = "insect_torso_m"
-		color_blend_mode = ICON_MULTIPLY
-		body_parts = list(BP_TORSO,BP_GROIN)
-
-	insect_face
-		name = "Insect face"
-		icon_state = "insect_face"
-		color_blend_mode = ICON_MULTIPLY
-		body_parts = list(BP_HEAD)
-
-	insect_antennae
-		name = "Insect antennae - aeiou edition"
-		icon_state = "insect_antennae"
-		color_blend_mode = ICON_MULTIPLY
-		body_parts = list(BP_HEAD)
-
-	insect_thorax
-		name = "Insect thoraxs"
-		icon_state = "insect_thorax"
-		color_blend_mode = ICON_MULTIPLY
-		body_parts = list(BP_TORSO,BP_GROIN)
-
-
 	heterochromia
 		name = "Heterochromia"
 		icon_state = "heterochromia"
