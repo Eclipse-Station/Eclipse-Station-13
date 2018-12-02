@@ -26,7 +26,7 @@
 //Neutral
 /datum/trait/voracious_appetite
 	name = "Voracious Appetite"
-	desc = "Marks you as a degenerate."
+	desc = "Gives you ability to eat people. Sheeesh."
 	cost = 0
 	var_changes = list("voracious" = 1)
 
