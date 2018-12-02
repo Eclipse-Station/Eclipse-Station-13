@@ -787,7 +787,7 @@
 						"New Berlin on Nov-Ferrum",
 						"a settlement needing our help",
 						"Forward Base Sigma-Alpha in ArCon space")
-
+/*
 /datum/lore/organization/gov/imperial
 	name = "Auream Imperium"
 	short_name = "Imperial"
@@ -884,3 +884,4 @@
 							"near Cor Galaxia",
 							"Segmentum Obscurum", // Basically their home territory, where our telescopes can't see. They prefer to keep it that way. They call it something else internally.
 							)
+*/ //NO SPACE ELVES AEIOU edit
