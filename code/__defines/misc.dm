@@ -108,7 +108,7 @@
 
 // Setting this much higher than 1024 could allow spammers to DOS the server easily.
 #define MAX_MESSAGE_LEN       2048 //VOREStation Edit - I'm not sure about "easily". It can be a little longer.
-#define MAX_PAPER_MESSAGE_LEN 6144
+#define MAX_PAPER_MESSAGE_LEN 9216 //AEIOU edit - more space on paper MOAR
 #define MAX_BOOK_MESSAGE_LEN  24576
 #define MAX_RECORD_LENGTH	  24576
 #define MAX_LNAME_LEN         64

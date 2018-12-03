@@ -7,6 +7,7 @@
 	var/trashcan = FALSE //It's always sunny in the wrestling ring.
 	var/base_species = null // Unused outside of a few species
 	var/selects_bodytype = FALSE // Allows the species to choose from body types intead of being forced to be just one.
+	var/voracious = 0 //AEIOU addition
 
 /datum/species/custom
 	name = SPECIES_CUSTOM

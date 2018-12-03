@@ -691,7 +691,7 @@
 				to_chat(usr, "You need at least one hand in good working order to snap your fingers.")
 				return
 
-			var/safe = 99 //We have a 1% chance to break our fingers.
+/*			var/safe = 99 //We have a 1% chance to break our fingers.
 			var/list/involved_parts = list(BP_L_HAND, BP_R_HAND)
 			for(var/organ_name in involved_parts)
 				var/obj/item/organ/external/E = get_organ(organ_name)
@@ -702,7 +702,7 @@
 			var/breaking = pick(involved_parts)
 			var/obj/item/organ/external/E = get_organ(breaking)
 
-			/* AEIOU EDIT - Added feature for naughty spammers - HTG */
+
 			if(prob(safe))
 				playsound(loc, 'sound/effects/fingersnap.ogg', 50, 1, -3)
 				custom_emote(1, "snaps [T.his] fingers.")
@@ -718,7 +718,7 @@
 					E.fracture()
 					playsound(loc, 'sound/effects/snap.ogg', 50, 1)
 					custom_emote(1, "<span class='danger'>breaks [T.his] fingers! That looked painful.</span>") // I need ideas, dont let me forget! - HTG
-					log_and_message_admins("broke [T.his] [breaking] with *snap, ahahah.", src)
+					log_and_message_admins("broke [T.his] [breaking] with *snap, ahahah.", src)*/
 
 		if("swish")
 			src.animate_tail_once()

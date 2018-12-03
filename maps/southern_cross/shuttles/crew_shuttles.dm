@@ -155,10 +155,10 @@
 
 /datum/shuttle_destination/shuttle1/docked_SC/get_arrival_message()
 	return "Attention, [master.my_shuttle.visible_name] has arrived to the Arrivals Dock."
-
+/*
 /datum/shuttle_destination/shuttle1/docked_SC/get_departure_message()
 	return "Attention, [master.my_shuttle.visible_name] has departed the Arrivals Dock."
-
+*/
 
 /datum/shuttle_destination/shuttle2/docked_SC
 	name = "Southern Cross Docking Port"
@@ -171,10 +171,10 @@
 
 /datum/shuttle_destination/shuttle2/docked_SC/get_arrival_message()
 	return "Attention, [master.my_shuttle.visible_name] has arrived to the Arrivals Dock."
-
+/*
 /datum/shuttle_destination/shuttle2/docked_SC/get_departure_message()
 	return "Attention, [master.my_shuttle.visible_name] has departed the Arrivals Dock."
-
+*/
 
 /datum/shuttle_destination/shuttle1/sif_orbit
 	name = "Sif Orbit"
@@ -227,10 +227,10 @@
 
 /datum/shuttle_destination/shuttle1/main_base/get_arrival_message()
 	return "Attention, [master.my_shuttle.visible_name] has arrived to the Main Outpost."
-
+/*
 /datum/shuttle_destination/shuttle1/main_base/get_departure_message()
 	return "Attention, [master.my_shuttle.visible_name] has departed the Main Outpost."
-
+*/
 /datum/shuttle_destination/shuttle2/main_base
 	name = "Main Outpost"
 	my_area = /area/shuttle/shuttle2/planet
@@ -242,9 +242,8 @@
 
 /datum/shuttle_destination/shuttle2/main_base/get_arrival_message()
 	return "Attention, [master.my_shuttle.visible_name] has arrived to the Main Outpost."
-
-/datum/shuttle_destination/shuttle2/main_base/get_departure_message()
-	return "Attention, [master.my_shuttle.visible_name] has departed the Main Outpost."
+/*/datum/shuttle_destination/shuttle2/main_base/get_departure_message()
+	return "Attention, [master.my_shuttle.visible_name] has departed the Main Outpost."*/
 
 
 /datum/shuttle_destination/shuttle1/mining_base
