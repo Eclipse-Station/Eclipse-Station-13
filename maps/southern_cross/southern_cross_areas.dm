@@ -822,6 +822,7 @@
 /area/hallway/primary/seconddeck/dockhallway
 	name = "\improper Shuttle Dock Hallway"
 	icon_state = "docking_hallway"
+	requires_power = 0 //AEIOU addition
 
 /area/hallway/secondary/seconddeck/research_medical
 	name = "Research Medical Hallway"

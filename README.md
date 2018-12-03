@@ -4,7 +4,7 @@
 
 Going to make a Pull Request? Make sure you read the [CONTRIBUTING.md](.github/CONTRIBUTING.md) first!
 
-AEIOUstation is a fork of the VOREstation code branch, that is Polaris fork branch, which itself a fork of the Baystation12 code branch, for the game Space Station 13.
+AEIOUstation is a fork of the Virgo code branch, that is Polaris fork branch, which itself a fork of the Baystation12 code branch, for the game Space Station 13.
 
 ---
 
