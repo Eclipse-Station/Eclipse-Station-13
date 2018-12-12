@@ -126,6 +126,7 @@
 
 //Area flags, possibly more to come
 #define RAD_SHIELDED 1 //shielded from radiation, clearly
+#define HUME_SHIELDED 2 //Shielded from reality-warping. Un-clearly???
 
 // Convoluted setup so defines can be supplied by Bay12 main server compile script.
 // Should still work fine for people jamming the icons into their repo.
