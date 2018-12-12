@@ -153,7 +153,7 @@
 			else
 				owner.nutrition += 4.5*(damage_gain)/difference
 
-
+/*
 //////////////////////////// DM_ABSORB ////////////////////////////
 	else if(digest_mode == DM_ABSORB)
 
@@ -185,7 +185,7 @@
 				to_chat(owner,"<span class='notice'>You feel like a part of you is missing.</span>")
 				owner.nutrition -= 100
 				to_update = TRUE
-
+*/
 //////////////////////////// DM_DRAIN ////////////////////////////
 	else if(digest_mode == DM_DRAIN)
 
@@ -272,8 +272,8 @@
 				M.nutrition += 1
 
 /////////////////////////// DM_TRANSFORM ///////////////////////////
-	else if(digest_mode == DM_TRANSFORM)
-		process_tf(tf_mode, touchable_mobs)
+	/*else if(digest_mode == DM_TRANSFORM)
+		process_tf(tf_mode, touchable_mobs)*/
 
 /////////////////////////// Make any noise ///////////////////////////
 	if(play_sound)

@@ -90,7 +90,7 @@
 			if(prob(5))
 				playsound(M, 'sound/effects/splat.ogg', 50, 1)
 				B.release_specific_contents(A)
-
+/*
 /datum/reagent/unsorbitol
 	name = "Unsorbitol"
 	id = "unsorbitol"
@@ -120,7 +120,7 @@
 				playsound(M, 'sound/vore/schlorp.ogg', 50, 1)
 				P.absorbed = 0
 				M.visible_message("<font color='green'><b>Something spills into [M]'s [lowertext(B.name)]!</b></font>")
-
+*/
 //Special toxins for solargrubs
 
 /datum/reagent/grubshock

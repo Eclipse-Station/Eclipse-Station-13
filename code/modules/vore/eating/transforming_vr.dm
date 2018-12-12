@@ -246,7 +246,7 @@
 		M.verbs +=  /mob/living/carbon/human/proc/regenerate
 		M.verbs +=  /mob/living/proc/set_size
 		M.shapeshifter_select_shape()
-
+/*
 /obj/belly/proc/put_in_egg(var/atom/movable/M, message=0)
 	var/mob/living/carbon/human/O = owner
 	var/egg_path = /obj/structure/closet/secure_closet/egg
@@ -261,4 +261,4 @@
 	egg.name = egg_name
 	if(message)
 		to_chat(M, "<span class='notice'>You lose sensation of your body, feeling only the warmth around you as you're encased in an egg.</span>")
-		to_chat(O, "<span class='notice'>Your body shifts as you encase [M] in an egg.</span>")
+		to_chat(O, "<span class='notice'>Your body shifts as you encase [M] in an egg.</span>")*/
