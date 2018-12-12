@@ -110,6 +110,7 @@
 	handle_silent()
 	handle_drugged()
 	handle_slurring()
+	handle_insanity() //Aeiou addition
 
 /mob/living/proc/handle_stunned()
 	if(stunned)
@@ -145,6 +146,11 @@
 	if(paralysis)
 		AdjustParalysis(-1)
 	return paralysis
+
+/mob/living/proc/handle_insanity() //aeiou addition
+	if((insanity) && (prob(5)))
+		insanity -= 1
+	return insanity
 
 /mob/living/proc/handle_disabilities()
 	//Eyes
