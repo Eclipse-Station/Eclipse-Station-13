@@ -38,7 +38,6 @@
 				var/mob/living/simple_animal/redmob/reddie = hit_atom
 				reddie.bluespace_impact(src)
 			else
-				qdel(src)
 				blink_mob(hit_atom)
 		qdel(src)
 
