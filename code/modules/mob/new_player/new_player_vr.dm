@@ -45,7 +45,7 @@
 		//Went into negatives
 		if(points_left < 0 || traits_left < 0)
 			pass = FALSE
-			to_chat(src,"<span class='warning'>Your custom species is not playable. Reconfigure your traits on the VORE tab.</span>")
+			to_chat(src,"<span class='warning'>Your custom species is not playable. Reconfigure your traits on the Extra tab.</span>")
 
 	//Final popup notice
 	if (!pass)
