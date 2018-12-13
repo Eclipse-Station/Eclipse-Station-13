@@ -155,7 +155,7 @@
 			return 1
 
 	if(href_list["late_join"])
-
+//		load_aeiouwhitelist()
 		if(!ticker || ticker.current_state != GAME_STATE_PLAYING)
 			usr << "<font color='red'>The round is either not ready, or has already finished...</font>"
 			return
@@ -454,10 +454,7 @@
 
 
 /mob/new_player/proc/create_character(var/turf/T)
-	if (!attempt_vr(src,"spawn_checks_vr",list())) return 0 // VOREStation Insert
-	if(!is_player_whitelisted(usr))
-		discord_redirect(usr)//Aeiou addition
-		return 0
+	if(!attempt_vr(src,"spawn_checks_vr",list())) return 0 // VOREStation Insert
 	spawning = 1
 	close_spawn_windows()
 

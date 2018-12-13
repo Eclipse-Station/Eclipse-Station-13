@@ -12,6 +12,10 @@
 		src << "Guests may not use OOC."
 		return
 
+	if(!is_key_whitelisted(key))
+		src << "Non-whitelisted users may not use OOC. Join our discord server at https://discord.gg/xuS4t9U to get whitelisted."
+		return
+
 	msg = sanitize(msg)
 	if(!msg)	return
 

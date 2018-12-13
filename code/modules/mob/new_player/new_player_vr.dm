@@ -3,7 +3,7 @@
 
 	//No OOC notes
 	if (config.allow_Metadata && client && client.prefs && (isnull(client.prefs.metadata) || length(client.prefs.metadata) < 15))
-		to_chat(src,"<span class='warning'>Please set informative OOC notes related to RP preferences. This has to include ERP as well. Set them using the 'OOC Notes' button on the 'General' tab in character setup.</span>")
+		to_chat(src,"<span class='warning'>Please set informative OOC notes related to RP preferences. Set them using the 'OOC Notes' button on the 'General' tab in character setup.</span>")
 		pass = FALSE
 
 	//Are they on the VERBOTEN LIST?
@@ -14,7 +14,7 @@
 	//Do they have their scale properly setup?
 	if(!client.prefs.size_multiplier)
 		pass = FALSE
-		to_chat(src,"<span class='warning'>You have not set your scale yet. Do this on the VORE tab in character setup.</span>")
+		to_chat(src,"<span class='warning'>You have not set your scale yet. Do this on the Extra tab in character setup.</span>")
 
 	//Custom species checks
 	if (client && client.prefs && client.prefs.species == "Custom Species")
@@ -22,7 +22,7 @@
 		//Didn't name it
 		if(!client.prefs.custom_species)
 			pass = FALSE
-			to_chat(src,"<span class='warning'>You have to name your custom species. Do this on the VORE tab in character setup.</span>")
+			to_chat(src,"<span class='warning'>You have to name your custom species. Do this on the Extra tab in character setup.</span>")
 
 		//Check traits/costs
 		var/list/megalist = client.prefs.pos_traits + client.prefs.neu_traits + client.prefs.neg_traits

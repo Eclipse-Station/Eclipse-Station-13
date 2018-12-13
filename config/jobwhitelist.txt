@@ -12,8 +12,6 @@ Cebutris - Colony Director
 Cebutris - Head of Personnel
 Cebutris - Head of Security
 Cebutris - Chief Medical Officer
-EldritchClown - Colony Director
-EldritchClown - Head of Personnel
 Stickydragon - Chief Engineer
 iliketurles - Research Director
 Gman222 - Colony Director
@@ -28,20 +26,16 @@ SilencedMP5A5 - Research Director
 SilencedMP5A5 - Chief Engineer
 SilencedMP5A5 -  Chief Medical Officer
 EvilJackCarver - Chief Engineer
-VulpesLegan - Head of Personnel
-VulpesLegan - Chief Engineer
-DirtyOldHarry - Colony Director
-DirtyOldHarry - Head of Personnel
-DirtyOldHarry - Chief Medical Officer
-HawkerTheGreat - Colony Director
-HawkerTheGreat - Head of Personnel
-HawkerTheGreat - Head of Security
-HawkerTheGreat - Research Director
-HawkerTheGreat - Chief Medical Officer
-HawkerTheGreat - Chief Engineer
 ChiefSpectre - Head of Personnel
-GingeraleDragon - Head of Personnel
-rsmr - Research Director
-rsmr - Head of Personnel
-rsmr - Colony Director
-GingeraleDragon - Head of Security
+Rsmr - Research Director
+Rsmr - Head of Personnel
+Rsmr - Colony Director
+kirbytehpink - Chief Medical Officer
+pixelexip - Chief Medical Officer
+sirfoxalot - Research Director
+sirfoxalot - Head of Security
+sirfoxalot - Head of Personnel
+SirFoxALot - Research Director
+SirFoxALot - Head of Personnel
+SirFoxALot - Head of Security
+drexample - Research Director
