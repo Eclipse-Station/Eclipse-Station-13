@@ -102,7 +102,8 @@ var/datum/species/shapeshifter/promethean/prometheans
 		/mob/living/carbon/human/proc/shapeshifter_select_wings, //VOREStation Add,
 		/mob/living/carbon/human/proc/shapeshifter_select_tail, //VOREStation Add,
 		/mob/living/carbon/human/proc/shapeshifter_select_ears, //VOREStation Add,
-		/mob/living/carbon/human/proc/regenerate
+		/mob/living/carbon/human/proc/regenerate,
+		/mob/living/proc/insidePanel //AEIOU add
 		)
 
 	valid_transform_species = list(SPECIES_HUMAN, SPECIES_HUMAN_VATBORN, SPECIES_UNATHI, SPECIES_TAJ, SPECIES_SKRELL, SPECIES_DIONA, SPECIES_TESHARI, SPECIES_MONKEY)
