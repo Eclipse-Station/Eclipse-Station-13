@@ -59,10 +59,10 @@
 	inherent_verbs = list(/mob/living/carbon/human/proc/cromch, /mob/living/carbon/human/proc/lanius_produce)
 
 /datum/species/carnifex/proc/calculate_exposure(var/mob/living/carbon/human/H) //ALWAYS RETURN SOMETHING LESS OR EQUAL 0.75 OR ATMOS WILL BREAK
-	if(istype(H.wear_suit, /obj/item/clothing/suit/gelsuit)) //It just lowers the loss of oxygen, not negates it completely
-		return 0.1
 	if(istype(H.wear_suit, /obj/item/clothing/suit/gelsuit/deluxe))//THIS ONE DOES
 		return 0.05
+	if(istype(H.wear_suit, /obj/item/clothing/suit/gelsuit)) //It just lowers the loss of oxygen, not negates it completely
+		return 0.1
 	if((istype(H.wear_suit, /obj/item/clothing/suit/space/)) && (istype(H.head, /obj/item/clothing/head/helmet/space/)))
 		return 0
 	if(istype(H.wear_suit, /obj/item/clothing/suit/space/))
@@ -120,9 +120,9 @@
 
 
 /datum/species/carnifex/handle_environment_special(var/mob/living/carbon/human/H)
-	if (H.buildup > 1.2)
-		H.buildup -= 1.5
-	if(prob(35) && (H.health < H.maxHealth))
+	if (H.buildup > 1.25)
+		H.buildup -= 1.25
+	if(prob(50) && (H.health < H.maxHealth))
 		H.adjustBruteLoss(-0.3)
 		H.adjustFireLoss(-0.2)
 		H.adjustBrainLoss(-0.5)
@@ -147,8 +147,13 @@
 /datum/species/carnifex/equip_survival_gear(var/mob/living/carbon/human/H)
 	H.unEquip(H.wear_suit)
 	H.unEquip(H.head)
-	H.equip_to_slot_or_del(new /obj/item/clothing/suit/space/void/medical/alt/carnifex, slot_wear_suit)
-	H.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/space/rig/medical, slot_head)
+	if ((H.client.prefs.economic_status == CLASS_UPPER) || (H.client.prefs.economic_status == CLASS_UPMID))
+		var/obj/item/clothing/suit/gelsuit/Gsuit = new /obj/item/clothing/suit/gelsuit
+		H.equip_to_slot_or_del(Gsuit, slot_wear_suit)
+		Gsuit.ToggleHelm()
+	else
+		H.equip_to_slot_or_del(new /obj/item/clothing/suit/space/void/medical/alt/carnifex, slot_wear_suit)
+		H.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/space/rig/medical, slot_head)
 /*
 /datum/species/carnifex/handle_death(var/mob/living/carbon/human/H)
 	..()
@@ -165,31 +170,3 @@
 	icon_state = "ore_platinum"
 	parent_organ = BP_TORSO
 
-
-/obj/item/clothing/suit/gelsuit
-	name = "adaptive gel suit"
-	desc = "A membranous substance, capable of shielding its wearer from gaseous contaminants."
-	icon = 'modular_aeiou/icons/mob/clothing/onmob/lanius.dmi'
-	icon_state = "gelcore"
-	icon_override = 'modular_aeiou/icons/mob/clothing/onmob/lanius.dmi'
-	item_state = "adaptive_gel"
-	gas_transfer_coefficient = 0.01
-	permeability_coefficient = 0.01
-	body_parts_covered = 0
-	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 100, rad = 20)
-	siemens_coefficient = 0.8
-	item_flags = THICKMATERIAL | PHORONGUARD | AIRTIGHT
-
-/obj/item/clothing/suit/gelsuit/deluxe
-	name = "advanced adaptive gel suit"
-	desc = "A membranous substance, capable of shielding its wearer from gaseous contaminants. This one seems to be extremely thick."
-	icon = 'modular_aeiou/icons/mob/clothing/onmob/lanius.dmi'
-	icon_state = "gelcore_deluxe"
-	icon_override = 'modular_aeiou/icons/mob/clothing/onmob/lanius.dmi'
-	item_state = "adaptive_gel_deluxe"
-	gas_transfer_coefficient = 0.01
-	permeability_coefficient = 0.01
-	body_parts_covered = 0
-	armor = list(melee = 15, bullet = 5, laser = 10,energy = 10, bomb = 5, bio = 100, rad = 50)
-	siemens_coefficient = 0.4
-	item_flags = THICKMATERIAL | PHORONGUARD | STOPPRESSUREDAMAGE | AIRTIGHT
