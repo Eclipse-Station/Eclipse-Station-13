@@ -3087,4 +3087,6 @@
 #include "modular_aeiou\multiphase\gun.dm"
 #include "modular_aeiou\multiphase\locker.dm"
 #include "modular_aeiou\multiphase\projectile.dm"
+#include "modular_aeiou\radio_panic_button\encryption_keys.dm"
+#include "modular_aeiou\radio_panic_button\radio.dm"
 // END_INCLUDE

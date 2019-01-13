@@ -12,7 +12,10 @@ var/global/list/default_internal_channels = list(
 	num2text(SEC_I_FREQ)=list(access_security),
 	num2text(SCI_FREQ) = list(access_tox,access_robotics,access_xenobiology),
 	num2text(SUP_FREQ) = list(access_cargo),
-	num2text(SRV_FREQ) = list(access_janitor, access_hydroponics)
+	num2text(SRV_FREQ) = list(access_janitor, access_hydroponics),
+	
+	//AEIOU addition - panic button
+	num2text(PANIC_FREQ) = list(access_medical_equip,access_security)		//Security and medical should be able to hear your screams for help. Security so that they can hear your assailant taunt you, medical so they can figure out about where you are and save your dying ass.
 )
 
 var/global/list/default_medbay_channels = list(
@@ -48,6 +51,9 @@ var/global/list/default_medbay_channels = list(
 	throw_range = 9
 	w_class = ITEMSIZE_SMALL
 	show_messages = 1
+	
+	//AEIOU addition: Frequency lock. In this file instead of modular/radio_panic_button/radio.dm for ease of sight-read debugging.
+	var/freqlock = FALSE		//lock the frequency, be it for panic functionality or radios we just don't want players toying with the channel knob on
 
 	matter = list("glass" = 25,DEFAULT_WALL_MATERIAL = 75)
 	var/const/FREQ_LISTENING = 1
@@ -200,6 +206,9 @@ var/global/list/default_medbay_channels = list(
 		. = 1
 
 	else if (href_list["freq"])
+		// // // BEGIN AEIOU EDIT: Frequency lock.
+		if(freqlock)	//AEIOU edit
+			return FALSE
 		var/new_frequency = (frequency + text2num(href_list["freq"]))
 		if ((new_frequency < PUBLIC_LOW_FREQ || new_frequency > PUBLIC_HIGH_FREQ))
 			new_frequency = sanitize_frequency(new_frequency)
@@ -224,7 +233,9 @@ var/global/list/default_medbay_channels = list(
 	else if(href_list["spec_freq"])
 		var freq = href_list["spec_freq"]
 		if(has_channel_access(usr, freq))
-			set_frequency(text2num(freq))
+			if(!freqlock)		//AEIOU edit
+				set_frequency(text2num(freq))
+			// // // END AEIOU EDIT // // //
 		. = 1
 	if(href_list["nowindow"]) // here for pAIs, maybe others will want it, idk
 		return 1
