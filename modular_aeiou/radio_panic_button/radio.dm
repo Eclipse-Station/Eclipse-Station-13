@@ -4,13 +4,13 @@
 /obj/item/device/radio
 	action_button_name = "Toggle Emergency Function"		//helpful icon at top of screen.
 	var/can_toggle_emergency_mode = TRUE		//Can the panic function be toggled?
-	var/panic_enabled = FALSE
+	var/panic_enabled = FALSE			//Is the panic function currently enabled?
 	var/panic_mode_will_turn_off_speaker = TRUE
 	
 	//Storage variables.
-	var/panic_prev_frequency
-	var/panic_speaker_state
-	var/panic_mic_state
+	var/panic_prev_frequency		//freq it was on before you hit the button
+	var/panic_speaker_state			//was the speaker on when you pressed the button
+	var/panic_mic_state				//ditto, for mic
 	var/panic_frequency_lock = FALSE		//Is the frequency locked because of us?
 
 /obj/item/device/radio/ui_action_click()
@@ -33,7 +33,7 @@
 		user = usr
 		
 	//Null checks.
-	ASSERT(user)	//null check, so if there wasn't a usr it doesn't break things.
+	ASSERT(user)
 	ASSERT(src)
 
 	if(!can_toggle_emergency_mode)		//can we even toggle it?
@@ -53,16 +53,16 @@
 		to_chat(user, "<span class='warning'>You cannot activate \the [src]'s panic function in your current state.</span>")
 		return FALSE
 
-// All the checks have either passed or been bypassed so far, so we definitely CAN use the panic button.
+// All the checks have passed so far, so we definitely CAN use the panic button.
 
 	if(user.incapacitated() & INCAPACITATION_DEFAULT)	//if we are restrained or fully buckled, it'll be a little bit harder to use our panic button.
-		user.visible_message("<span class='warning'>[user] begins to reach for [src].</span>","<span class='notice'>You begin reaching for the panic button on [src].</span>")		//Give the hostage taker a chance to stop us.
+		user.visible_message("<span class='warning'>[user] begins to reach for [src].</span>","<span class='notice'>You begin reaching for the panic button on [src].</span>")		//Give the hostage-taker a chance to stop us.
 		if(do_after(user, 5 SECONDS, incapacitation_flags = INCAPACITATION_DISABLED))
 			toggle_panic_alarm(user, TRUE, FALSE)
 			return TRUE
 		else		//you were moved, so sad...
 			to_chat(user,"<span class='warning'>You fail to activate \the [src]'s emergency function.</span>")
-			return null	//for proc feedback
+			return FALSE
 
 	else		//we're not under arrest, so we get to go ahead and just press the damn thing.
 		toggle_panic_alarm(user, TRUE, FALSE)
