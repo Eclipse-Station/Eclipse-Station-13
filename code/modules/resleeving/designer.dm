@@ -141,7 +141,7 @@
 	data["disk"] = disk ? 1 : 0
 	data["diskStored"] = disk && disk.stored ? 1 : 0
 
-	ui = nanomanager.try_update_ui(user, src, ui_key, ui, data, force_open)
+	ui = GLOB.nanomanager.try_update_ui(user, src, ui_key, ui, data, force_open)
 	if (!ui)
 		ui = new(user, src, ui_key, "body_designer.tmpl", "Body Design Console", 400, 600)
 		ui.set_initial_data(data)
@@ -309,8 +309,8 @@
 		return
 
 	if(href_list["size_multiplier"])
-		var/new_size = input(user, "Choose your character's size, ranging from 25% to 200%", "Character Preference") as num|null
-		if(new_size && IsInRange(new_size,25,200))
+		var/new_size = input(user, "Choose your character's size, ranging from 50% to 150%", "Character Preference") as num|null
+		if(new_size && IsInRange(new_size,50,150))
 			active_br.sizemult = (new_size/100)
 			preview_icon = null
 		return 1

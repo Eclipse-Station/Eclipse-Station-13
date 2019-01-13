@@ -38,13 +38,22 @@
 		if(isitem(A) && !did_an_item)
 			var/obj/item/I = A
 			if(mode_flags & DM_FLAG_ITEMWEAK)
-				I.gurgle_contaminate(src, cont_flavor)
-				items_preserved |= I
-				to_update = TRUE
+				if(digest_mode == DM_HOLD)
+					if(istype(I,/obj/item/weapon/reagent_containers/food))
+						digest_item(I)
+					else
+						items_preserved |= I
+				else
+					I.gurgle_contaminate(src, cont_flavor)
+					items_preserved |= I
 			else
-				digest_item(I)
-			to_update = TRUE
-			did_an_item = TRUE
+				I.gurgle_contaminate(src, cont_flavor)
+				if(I.digest_stage && I.digest_stage > 0)
+					digest_item(I)
+				else
+					digest_item(I)
+					did_an_item = TRUE
+				to_update = TRUE
 
 		//Handle eaten mobs
 		else if(isliving(A))
@@ -144,7 +153,7 @@
 			else
 				owner.nutrition += 4.5*(damage_gain)/difference
 
-
+/*
 //////////////////////////// DM_ABSORB ////////////////////////////
 	else if(digest_mode == DM_ABSORB)
 
@@ -176,7 +185,7 @@
 				to_chat(owner,"<span class='notice'>You feel like a part of you is missing.</span>")
 				owner.nutrition -= 100
 				to_update = TRUE
-
+*/
 //////////////////////////// DM_DRAIN ////////////////////////////
 	else if(digest_mode == DM_DRAIN)
 
@@ -190,7 +199,7 @@
 				var/oldnutrition = (M.nutrition * 0.05)
 				M.nutrition = (M.nutrition * 0.95)
 				owner.nutrition += oldnutrition
-
+/* AEIOU removal
 //////////////////////////// DM_SHRINK ////////////////////////////
 	else if(digest_mode == DM_SHRINK)
 
@@ -239,7 +248,7 @@
 					var/oldnutrition = (M.nutrition * 0.05)
 					M.nutrition = (M.nutrition * 0.95)
 					owner.nutrition += oldnutrition
-
+*/
 ///////////////////////////// DM_HEAL /////////////////////////////
 	else if(digest_mode == DM_HEAL)
 
@@ -263,8 +272,8 @@
 				M.nutrition += 1
 
 /////////////////////////// DM_TRANSFORM ///////////////////////////
-	else if(digest_mode == DM_TRANSFORM)
-		process_tf(tf_mode, touchable_mobs)
+	/*else if(digest_mode == DM_TRANSFORM)
+		process_tf(tf_mode, touchable_mobs)*/
 
 /////////////////////////// Make any noise ///////////////////////////
 	if(play_sound)

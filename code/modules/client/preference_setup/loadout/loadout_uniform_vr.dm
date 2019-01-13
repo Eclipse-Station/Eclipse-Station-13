@@ -8,6 +8,7 @@
 	path = /obj/item/clothing/under/pt/sifguard
 
 //KHI Uniforms
+/*
 /datum/gear/uniform/job_khi/cmd
 	display_name = "khi uniform, cmd"
 	path = /obj/item/clothing/under/rank/khi/cmd
@@ -32,7 +33,7 @@
 	display_name = "khi uniform, sci"
 	path = /obj/item/clothing/under/rank/khi/sci
 	allowed_roles = list("Research Director","Scientist", "Roboticist", "Xenobiologist")
-
+*/ //Aeiou removal - KHI removal
 //Federation jackets
 /datum/gear/suit/job_fed/sec
 	display_name = "fed uniform, sec"

@@ -676,7 +676,7 @@
 							"if told you I'd have to kill you",
 							"... wait, why am I even telling you this? Just let me pass",
 							"stop asking questions")
-
+/* AEIOU edit - fuck khi
 /datum/lore/organization/gov/kitsuhana
 	name = "Kitsuhana Heavy Industries"
 	short_name = "Kitsuhana"
@@ -730,7 +730,7 @@
 						"a Kitsuhana ringworld in Lund VI",
 						"a Kitsuhana ringworld in Dais IX",
 						"a Kitsuhana ringworld in Leibert II-b")
-
+*/
 /datum/lore/organization/gov/ares
 	name = "Ares Confederation"
 	short_name = "ArCon"
@@ -787,7 +787,7 @@
 						"New Berlin on Nov-Ferrum",
 						"a settlement needing our help",
 						"Forward Base Sigma-Alpha in ArCon space")
-
+/*
 /datum/lore/organization/gov/imperial
 	name = "Auream Imperium"
 	short_name = "Imperial"
@@ -884,3 +884,4 @@
 							"near Cor Galaxia",
 							"Segmentum Obscurum", // Basically their home territory, where our telescopes can't see. They prefer to keep it that way. They call it something else internally.
 							)
+*/ //NO SPACE ELVES AEIOU edit

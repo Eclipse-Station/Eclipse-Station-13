@@ -49,7 +49,8 @@
 	minimal_access = list(access_hydroponics)
 
 	outfit_type = /decl/hierarchy/outfit/job/service/gardener
-	alt_titles = list("Gardener")
+	alt_titles = list("Gardener", "Hydroponicist")
+	//YEASTOLOGIST WHEN
 
 //Cargo
 /datum/job/qm

@@ -223,7 +223,7 @@
 	var/path = pick(prob(6);/obj/item/weapon/storage/pill_bottle/tramadol,
 					prob(4);/obj/item/weapon/storage/pill_bottle/happy,
 					prob(4);/obj/item/weapon/storage/pill_bottle/zoom,
-					prob(4);/obj/item/weapon/gun/energy/sizegun,
+				//	prob(4);/obj/item/weapon/gun/energy/sizegun, -- AEIOU edit
 					prob(3);/obj/item/weapon/material/butterfly,
 					prob(3);/obj/item/weapon/material/butterfly/switchblade,
 					prob(3);/obj/item/clothing/gloves/knuckledusters,
@@ -239,7 +239,7 @@
 					prob(1);/obj/item/device/bodysnatcher,
 					prob(1);/obj/item/weapon/beartrap,
 					prob(1);/obj/item/weapon/cell/hyper/empty,
-					prob(1);/obj/item/weapon/disk/nifsoft/compliance,
+			//		prob(1);/obj/item/weapon/disk/nifsoft/compliance, -- AEIOU edit
 					prob(1);/obj/item/weapon/material/knife/tacknife,
 					prob(1);/obj/item/weapon/reagent_containers/syringe/steroid)
 
