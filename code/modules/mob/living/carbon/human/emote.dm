@@ -677,6 +677,7 @@
 					m_type = 2
 
 		if("snap", "snaps") /* AEIOU EDIT - Added feature for naughty spammers - HTG */
+			m_type = 2
 			var/mob/living/carbon/human/H = src
 			var/obj/item/organ/external/L = H.get_organ("l_hand")
 			var/obj/item/organ/external/R = H.get_organ("r_hand")
@@ -687,38 +688,13 @@
 			if(R && (!(R.status & ORGAN_DESTROYED)) && (!(R.splinted)) && (!(R.status & ORGAN_BROKEN)))
 				right_hand_good = 1
 
-			if(!left_hand_good && !right_hand_good) //This is all that is required to snap... You can snap in cuffs, right?
+			if(!left_hand_good && !right_hand_good)
 				to_chat(usr, "You need at least one hand in good working order to snap your fingers.")
 				return
 
-			var/safe = 99 //We have a 1% chance to break our fingers.
-			var/list/involved_parts = list(BP_L_HAND, BP_R_HAND)
-			for(var/organ_name in involved_parts)
-				var/obj/item/organ/external/E = get_organ(organ_name)
-				if(!E || E.is_stump() || E.splinted || (E.status & ORGAN_BROKEN))
-					involved_parts -= organ_name
-					safe -= 4 //Add 4% to the chance for each injured hand. (5% Chance to break our fingers in total.)
+			message = "snaps [T.his] fingers."
+			playsound(loc, 'sound/effects/fingersnap.ogg', 50, 1, -3)
 
-			var/breaking = pick(involved_parts)
-			var/obj/item/organ/external/E = get_organ(breaking)
-
-			/* AEIOU EDIT - Added feature for naughty spammers - HTG */
-			if(prob(safe))
-				playsound(loc, 'sound/effects/fingersnap.ogg', 50, 1, -3)
-				custom_emote(1, "snaps [T.his] fingers.")
-			else
-				if(E.cannot_break)
-					src.Weaken(5)
-					E.droplimb(1,DROPLIMB_EDGE)
-					playsound(loc, 'sound/effects/snap.ogg', 50, 1)
-					custom_emote(1, "<span class='danger'>snaps [T.his] fingers right off!</span>") // I need ideas, dont let me forget! - HTG
-					log_and_message_admins("lost [T.his] [breaking] with *snap, ahahah.", src)
-				else
-					src.Weaken(5)
-					E.fracture()
-					playsound(loc, 'sound/effects/snap.ogg', 50, 1)
-					custom_emote(1, "<span class='danger'>breaks [T.his] fingers! That looked painful.</span>") // I need ideas, dont let me forget! - HTG
-					log_and_message_admins("broke [T.his] [breaking] with *snap, ahahah.", src)
 
 		if("swish")
 			src.animate_tail_once()

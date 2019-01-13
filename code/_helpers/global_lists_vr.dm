@@ -13,9 +13,9 @@ var/global/list/all_traits = list()			// All of 'em at once (same instances)
 
 var/global/list/custom_species_bases = list() // Species that can be used for a Custom Species icon base
 
-//stores numeric player size options indexed by name
+//stores numeric player size options indexed by name  AEIOU edit - changed Macro to Giant
 var/global/list/player_sizes_list = list(
-		"Macro" 	= RESIZE_HUGE,
+		"Giant" 	= RESIZE_HUGE,
 		"Big" 		= RESIZE_BIG,
 		"Normal" 	= RESIZE_NORMAL,
 		"Small" 	= RESIZE_SMALL,
@@ -23,10 +23,8 @@ var/global/list/player_sizes_list = list(
 
 //stores vantag settings indexed by name
 var/global/list/vantag_choices_list = list(
-		VANTAG_NONE		=	"No Involvement",
-		VANTAG_VORE		=	"Be Prey",
 		VANTAG_KIDNAP	=	"Be Kidnapped",
-		VANTAG_KILL		=	"Be Killed")
+		VANTAG_KILL		=	"Be Killed")//aeiou edit - we don't run vore events
 
 /* Time to finally undo this. Replaced with digest_act on these items.
 //Important items that are preserved when people are digested, etc.
@@ -100,17 +98,18 @@ var/global/list/struggle_sounds = list(
 		"Squish3" = 'sound/vore/squish3.ogg',
 		"Squish4" = 'sound/vore/squish4.ogg')
 
-
+/*
 var/global/list/global_egg_types = list(
 		"Unathi" 		= UNATHI_EGG,
 		"Tajaran" 		= TAJARAN_EGG,
 		"Akula" 		= AKULA_EGG,
 		"Skrell" 		= SKRELL_EGG,
+		"Nevrean"		= NEVREAN_EGG,
 		"Sergal" 		= SERGAL_EGG,
 		"Human"			= HUMAN_EGG,
 		"Slime"			= SLIME_EGG,
 		"Egg"			= EGG_EGG,
-		"Xenochimera" 	= XENOCHIMERA_EGG,
+		"Xenochimera" 		= XENOCHIMERA_EGG,
 		"Xenomorph"		= XENOMORPH_EGG)
 
 var/global/list/tf_egg_types = list(
@@ -119,12 +118,13 @@ var/global/list/tf_egg_types = list(
 	"Akula" 		= /obj/structure/closet/secure_closet/egg/shark,
 	"Skrell" 		= /obj/structure/closet/secure_closet/egg/skrell,
 	"Sergal"		= /obj/structure/closet/secure_closet/egg/sergal,
+	"Nevrean"		= /obj/structure/closet/secure_closet/egg/nevrean,
 	"Human"			= /obj/structure/closet/secure_closet/egg/human,
 	"Slime"			= /obj/structure/closet/secure_closet/egg/slime,
 	"Egg"			= /obj/structure/closet/secure_closet/egg,
-	"Xenochimera"	= /obj/structure/closet/secure_closet/egg/scree,
+	"Xenochimera"		= /obj/structure/closet/secure_closet/egg/scree,
 	"Xenomorph"		= /obj/structure/closet/secure_closet/egg/xenomorph)
-
+*/
 var/global/list/edible_trash = list(/obj/item/trash,
 				/obj/item/device/flashlight,
 				/obj/item/toy/figure,

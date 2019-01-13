@@ -9,8 +9,6 @@
 #undef TOTAL_HUDS //Undo theirs.
 #define     TOTAL_HUDS 14 // Total number of HUDs.
 
-#define VANTAG_NONE    "hudblank"
-#define VANTAG_VORE    "vantag_vore"
 #define VANTAG_KIDNAP  "vantag_kidnap"
 #define VANTAG_KILL    "vantag_kill"
 

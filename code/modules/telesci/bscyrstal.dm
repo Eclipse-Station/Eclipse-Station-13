@@ -34,7 +34,11 @@
 		s.set_up(5, 1, T)
 		s.start()
 		if(isliving(hit_atom))
-			blink_mob(hit_atom)
+			if(istype(hit_atom, /mob/living/simple_animal/redmob)) //redspace mobs don't like being stabilized
+				var/mob/living/simple_animal/redmob/reddie = hit_atom
+				reddie.bluespace_impact(src)
+			else
+				blink_mob(hit_atom)
 		qdel(src)
 
 // Artifical bluespace crystal, doesn't give you much research.

@@ -1,6 +1,13 @@
 var/global/list/special_roles = list( //keep synced with the defines BE_* in setup.dm --rastaf
 //some autodetection here.
 // TODO: Update to new antagonist system.
+
+// // // BEGIN AEIOU EDIT // // //
+/* This edit is a patch to allow users to select their antag candidacy, because
+ * for some reason, IS_MODE_COMPILED is failing. So, we're going to go ahead and
+ * manually enable these all. For the sake of easy reversion later, the original
+ * is here, commented out.
+
 	"traitor" = IS_MODE_COMPILED("traitor"),             // 0
 	"operative" = IS_MODE_COMPILED("nuclear"),           // 1
 	"changeling" = IS_MODE_COMPILED("changeling"),       // 2
@@ -16,6 +23,25 @@ var/global/list/special_roles = list( //keep synced with the defines BE_* in set
 	"diona" = 1,                                         // 12
 	"loyalist" = IS_MODE_COMPILED("revolution"),         // 13
 	"pAI candidate" = 1, // -- TLE                       // 14
+
+*/
+	"traitor" = 1,										// 0
+	"operative" = 1,									// 1
+	"changeling" = 1,									// 2
+	"wizard" = 1,										// 3
+	"malf AI" = 1,										// 4
+	"revolutionary" = 1, 								// 5
+	"alien candidate" = 1, //always show				// 6
+	"positronic brain" = 1,								// 7
+	"cultist" = 1,										// 8
+	"renegade" = 1,										// 9
+	"ninja" = "true",									// 10
+	"raider" = 1,										// 11
+	"diona" = 1,										// 12
+	"loyalist" = 1,										// 13
+	"pAI candidate" = 1, // -- TLE						// 14
+
+// // // END AEIOU EDIT // // //
 )
 
 /datum/category_item/player_setup_item/antagonism/candidacy

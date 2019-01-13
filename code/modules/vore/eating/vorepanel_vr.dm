@@ -110,13 +110,13 @@
 				spanstyle = ""
 			if(DM_DIGEST)
 				spanstyle = "color:red;"
-			if(DM_ABSORB)
-				spanstyle = "color:purple;"
+/*			if(DM_ABSORB)
+				spanstyle = "color:purple;"*/
 			if(DM_DRAIN)
 				spanstyle = "color:purple;"
 			if(DM_HEAL)
 				spanstyle = "color:green;"
-			if(DM_SHRINK)
+	/*		if(DM_SHRINK)
 				spanstyle = "color:purple;"
 			if(DM_GROW)
 				spanstyle = "color:purple;"
@@ -147,8 +147,8 @@
 					if(DM_TRANSFORM_FEMALE_EGG)
 						spanstyle = "color:purple;"
 					if(DM_EGG)
-						spanstyle = "color:purple;"
-
+						spanstyle = "color:purple;"*/
+//vore is as lore-wrenching as it is, transformation vore is the last thing we need
 		dat += "<span style='[spanstyle]'> ([B.contents.len])</span></a></li>"
 
 	if(user.vore_organs.len < BELLIES_MAX)
@@ -191,8 +191,8 @@
 
 		//Digest Mode Button
 		dat += "<br><a href='?src=\ref[src];b_mode=\ref[selected]'>Belly Mode:</a>"
-		var/mode = selected.digest_mode
-		dat += " [mode == DM_TRANSFORM ? selected.tf_mode : mode]"
+//		var/mode = selected.digest_mode
+//		dat += " [mode == DM_TRANSFORM ? selected.tf_mode : mode]"
 
 		//Mode addons button
 		dat += "<br><a href='?src=\ref[src];b_addons=\ref[selected]'>Mode Addons:</a>"
@@ -239,9 +239,9 @@
 		dat += "<br><a href='?src=\ref[src];b_bulge_size=\ref[selected]'>Required examine size:</a>"
 		dat += " [selected.bulge_size*100]%"
 
-		//Size that prey will be grown/shrunk to.
+/*		//Size that prey will be grown/shrunk to. -- AEIOU edit - No.
 		dat += "<br><a href='?src=\ref[src];b_grow_shrink=\ref[selected]'>Shrink/Grow size:</a>"
-		dat += "[selected.shrink_grow_size*100]%"
+		dat += "[selected.shrink_grow_size*100]%" */
 
 		//Belly escapability
 		dat += "<br><a href='?src=\ref[src];b_escapable=\ref[selected]'>Belly Interactions ([selected.escapable ? "On" : "Off"])</a>"
@@ -511,19 +511,19 @@
 
 	if(href_list["b_mode"])
 		var/list/menu_list = selected.digest_modes.Copy()
-		if(istype(usr,/mob/living/carbon/human))
-			menu_list += DM_TRANSFORM
+/*		if(istype(usr,/mob/living/carbon/human))
+			menu_list += DM_TRANSFORM*/
 
 		var/new_mode = input("Choose Mode (currently [selected.digest_mode])") as null|anything in menu_list
 		if(!new_mode)
 			return 0
 
-		if(new_mode == DM_TRANSFORM) //Snowflek submenu
+	/*	if(new_mode == DM_TRANSFORM) //Snowflek submenu
 			var/list/tf_list = selected.transform_modes
 			var/new_tf_mode = input("Choose TF Mode (currently [selected.tf_mode])") as null|anything in tf_list
 			if(!new_tf_mode)
 				return 0
-			selected.tf_mode = new_tf_mode
+			selected.tf_mode = new_tf_mode*/
 
 		selected.digest_mode = new_mode
 		selected.items_preserved.Cut() //Re-evaltuate all items in belly on belly-mode change
@@ -639,7 +639,7 @@
 			to_chat(user,"<span class='notice'>Invalid size.</span>")
 		else if(new_bulge)
 			selected.bulge_size = (new_bulge/100)
-
+/*  -- AEIOU edit - no. Just no.
 	if(href_list["b_grow_shrink"])
 		var/new_grow = input(user, "Choose the size that prey will be grown/shrunk to, ranging from 25% to 200%", "Set Growth Shrink Size.", selected.shrink_grow_size) as num|null
 		if (new_grow == null)
@@ -648,7 +648,7 @@
 			selected.shrink_grow_size = 1 //Set it to the default
 			to_chat(user,"<span class='notice'>Invalid size.</span>")
 		else if(new_grow)
-			selected.shrink_grow_size = (new_grow*0.01)
+			selected.shrink_grow_size = (new_grow*0.01) */
 
 	if(href_list["b_burn_dmg"])
 		var/new_damage = input(user, "Choose the amount of burn damage prey will take per tick. Ranges from 0 to 6.", "Set Belly Burn Damage.", selected.digest_burn) as num|null
@@ -744,18 +744,18 @@
 
 	if(href_list["saveprefs"])
 		if(!user.save_vore_prefs())
-			alert("ERROR: Virgo-specific preferences failed to save!","Error")
+			alert("ERROR: Vore-specific preferences failed to save!","Error")
 		else
-			to_chat(user,"<span class='notice'>Virgo-specific preferences saved!</span>")
+			to_chat(user,"<span class='notice'>Vore-specific preferences saved!</span>")
 
 	if(href_list["applyprefs"])
 		var/alert = alert("Are you sure you want to reload character slot preferences? This will remove your current vore organs and eject their contents.","Confirmation","Reload","Cancel")
 		if(!alert == "Reload")
 			return 0
 		if(!user.apply_vore_prefs())
-			alert("ERROR: Virgo-specific preferences failed to apply!","Error")
+			alert("ERROR: Vore-specific preferences failed to apply!","Error")
 		else
-			to_chat(user,"<span class='notice'>Virgo-specific preferences applied from active slot!</span>")
+			to_chat(user,"<span class='notice'>Vore-specific preferences applied from active slot!</span>")
 
 	if(href_list["setflavor"])
 		var/new_flavor = html_encode(input(usr,"What your character tastes like (40ch limit). This text will be printed to the pred after 'X tastes of...' so just put something like 'strawberries and cream':","Character Flavor",user.vore_taste) as text|null)

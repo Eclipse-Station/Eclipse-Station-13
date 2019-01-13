@@ -12,7 +12,7 @@
 	var/icon_base = "magboots"
 	action_button_name = "Toggle Magboots"
 	var/obj/item/clothing/shoes/shoes = null	//Undershoes
-	var/mob/living/carbon/human/wearer = null	//For shoe procs
+//	var/mob/living/carbon/human/wearer = null	//For shoe procs
 	step_volume_mod = 1.3
 
 /obj/item/clothing/shoes/magboots/proc/set_slowdown()
@@ -86,8 +86,7 @@
 	name = "vox magclaws"
 	item_state = "boots-vox"
 	icon_state = "boots-vox"
-	item_flags = PHORONGUARD
-	phoronproof = 1
+	flags = PHORONGUARD
 	species_restricted = list(SPECIES_VOX)
 
 	action_button_name = "Toggle the magclaws"

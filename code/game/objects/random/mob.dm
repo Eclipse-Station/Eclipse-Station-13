@@ -41,16 +41,17 @@
 	var/build_path = item_to_spawn()
 
 	var/mob/living/simple_animal/M = new build_path(src.loc)
-	M.ai_inactive = 1 //Don't fight eachother while we're still setting up!
-	if(mob_faction)
-		M.faction = mob_faction
-	M.returns_home = mob_returns_home
-	M.wander = mob_wander
-	M.wander_distance = mob_wander_distance
-	if(overwrite_hostility)
-		M.hostile = mob_hostile
-		M.retaliate = mob_retaliate
-	M.ai_inactive = 0 //Now you can kill eachother if your faction didn't override.
+	if(!istype(M, /obj/random/mouseremains)) //aeiou edit to prevent that gross runtime
+		M.ai_inactive = 1 //Don't fight eachother while we're still setting up!
+		if(mob_faction)
+			M.faction = mob_faction
+		M.returns_home = mob_returns_home
+		M.wander = mob_wander
+		M.wander_distance = mob_wander_distance
+		if(overwrite_hostility)
+			M.hostile = mob_hostile
+			M.retaliate = mob_retaliate
+		M.ai_inactive = 0 //Now you can kill eachother if your faction didn't override.
 
 	if(pixel_x || pixel_y)
 		M.pixel_x = pixel_x
@@ -186,3 +187,16 @@
 				prob(5);/mob/living/simple_animal/hostile/hivebot/range/laser,
 				prob(5);/mob/living/simple_animal/hostile/hivebot/range/strong,
 				prob(5);/mob/living/simple_animal/hostile/hivebot/range/guard)
+
+//Mice
+
+/obj/random/mob/mouse
+	name = "Random Mouse"
+	desc = "This is a random boring maus."
+	icon_state = "mouse_gray"
+
+/obj/random/mob/mouse/item_to_spawn()
+	return pick(prob(15);/mob/living/simple_animal/mouse/white,
+				prob(30);/mob/living/simple_animal/mouse/brown,
+				prob(30);/mob/living/simple_animal/mouse/gray,
+				prob(25);/obj/random/mouseremains) //because figuring out how to come up with it picking nothing is beyond my coding ability.

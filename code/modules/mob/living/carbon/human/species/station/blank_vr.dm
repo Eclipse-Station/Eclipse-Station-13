@@ -7,6 +7,7 @@
 	var/trashcan = FALSE //It's always sunny in the wrestling ring.
 	var/base_species = null // Unused outside of a few species
 	var/selects_bodytype = FALSE // Allows the species to choose from body types intead of being forced to be just one.
+	var/voracious = 0 //AEIOU addition
 
 /datum/species/custom
 	name = SPECIES_CUSTOM
@@ -17,8 +18,8 @@
 	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/punch, /datum/unarmed_attack/bite)
 
 	blurb = "This is a custom species where you can assign various species traits to them as you wish, to \
-	create a (hopefully) balanced species. You will see the options to customize them on the VORE tab once \
-	you select and set this species as your species. Please look at the VORE tab if you select this species."
+	create a (hopefully) balanced species. You will see the options to customize them on the Extra tab once \
+	you select and set this species as your species. Please look at the Extra tab if you select this species."
 
 	name_language = null // Use the first-name last-name generator rather than a language scrambler
 	min_age = 18

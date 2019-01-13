@@ -1247,8 +1247,8 @@
 	for(var/obj/item/device/perfect_tele_beacon/B in beacons)
 		B.tele_hand = null
 	beacons.Cut()
-	qdel_null(power_source)
-	qdel_null(spk)
+	QDEL_NULL(power_source)
+	QDEL_NULL(spk)
 	return ..()
 
 /obj/item/device/perfect_tele/update_icon()
@@ -1271,12 +1271,12 @@
 		return ..()
 
 /obj/item/device/perfect_tele/attack_self(mob/user)
-	if(!(user.ckey in warned_users))
+/*	if(!(user.ckey in warned_users))
 		warned_users |= user.ckey
 		alert(user,"This device can be easily used to break ERP preferences due to the nature of teleporting \
 		and tele-vore. Make sure you carefully examine someone's OOC prefs before teleporting them if you are \
 		going to use this device for ERP purposes. This device records all warnings given and teleport events for \
-		admin review in case of pref-breaking, so just don't do it.","OOC WARNING")
+		admin review in case of pref-breaking, so just don't do it.","OOC WARNING")*/  //ABSOLUTELY FUCKING NOT - AEIOU EDIT
 
 	var/choice = alert(user,"What do you want to do?","[src]","Create Beacon","Cancel","Target Beacon")
 	switch(choice)
@@ -1519,7 +1519,7 @@
 			return
 
 	..()
-
+/*
 /obj/item/device/perfect_tele_beacon/attack_self(mob/user)
 	if(!isliving(user))
 		return
@@ -1532,7 +1532,7 @@
 			if(do_after(user,5 SECONDS,src))
 				user.unEquip(src)
 				forceMove(bellychoice)
-				user.visible_message("<span class='warning'>[user] eats a telebeacon!</span>","You eat the the beacon!")
+				user.visible_message("<span class='warning'>[user] eats a telebeacon!</span>","You eat the the beacon!")*/ //AEIOU EDIT - FUCK NO
 
 // A single-beacon variant for use by miners (or whatever)
 /obj/item/device/perfect_tele/one_beacon
@@ -1912,11 +1912,11 @@
 			"<span class='danger'>\The [user] is falling on \the [src]! It looks like [tempgender] trying to commit suicide.</span>"))
 		return (BRUTELOSS|FIRELOSS)
 
-/obj/item/weapon/melee/fluffstuff/awoosword
+/obj/item/weapon/melee/fluffstuff/wolfgirlsword
 	name = "Wolfgirl Sword Replica"
 	desc = "A replica of a large, scimitar-like sword with a dull edge. Ceremonial... until it isn't."
 	icon = 'icons/obj/weapons_vr.dmi'
-	icon_state = "awoosword"
+	icon_state = "wolfgirlsword"
 	slot_flags = SLOT_BACK | SLOT_OCLOTHING
 	active_force = 15
 	active_throwforce = 7
@@ -1928,16 +1928,16 @@
 	w_class = ITEMSIZE_SMALL
 	origin_tech = list(TECH_MATERIAL = 2, TECH_COMBAT = 1)
 	item_icons = list(slot_l_hand_str = 'icons/mob/items/lefthand_melee_vr.dmi', slot_r_hand_str = 'icons/mob/items/righthand_melee_vr.dmi', slot_back_str = 'icons/vore/custom_items_vr.dmi', slot_wear_suit_str = 'icons/vore/custom_items_vr.dmi')
-	var/active_state = "awoosword"
-	allowed = list(/obj/item/weapon/shield/fluff/awooshield)
+	var/active_state = "wolfgirlsword"
+	allowed = list(/obj/item/weapon/shield/fluff/wolfgirlshield)
 	damtype = HALLOSS
 
-/obj/item/weapon/melee/fluffstuff/awoosword/dropped(var/mob/user)
+/obj/item/weapon/melee/fluffstuff/wolfgirlsword/dropped(var/mob/user)
 	..()
 	if(!istype(loc,/mob))
 		deactivate(user)
 
-/obj/item/weapon/melee/fluffstuff/awoosword/activate(mob/living/user)
+/obj/item/weapon/melee/fluffstuff/wolfgirlsword/activate(mob/living/user)
 	if(!active)
 		to_chat(user, "<span class='notice'>The [src] is now sharpened. It will cut!</span>")
 
@@ -1949,7 +1949,7 @@
 	damtype = BRUTE
 
 
-/obj/item/weapon/melee/fluffstuff/awoosword/deactivate(mob/living/user)
+/obj/item/weapon/melee/fluffstuff/wolfgirlsword/deactivate(mob/living/user)
 	if(active)
 		to_chat(user, "<span class='notice'>The [src] grows dull!</span>")
 	..()
@@ -1995,7 +1995,7 @@
 
 	icon = 'icons/vore/custom_items_vr.dmi'
 	icon_state = "penlightlynn"
-	
+
 //Knightfall5:Ashley Kifer
 /obj/item/clothing/accessory/medal/nobel_science/fluff/ashley
 	name = "nobel sciences award"

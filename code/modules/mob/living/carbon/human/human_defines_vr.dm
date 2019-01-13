@@ -5,5 +5,5 @@
 
 	var/wagging = 0 //UGH.
 	var/flapping = 0
-	var/vantag_pref = VANTAG_NONE //What's my status?
+	var/vantag_pref = VANTAG_KIDNAP //What's my status?
 	var/impersonate_bodytype //For impersonating a bodytype
