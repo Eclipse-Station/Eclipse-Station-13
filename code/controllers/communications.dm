@@ -146,8 +146,8 @@ var/list/radiochannels = list(
 	"Entertainment" = ENT_FREQ,
 	"Medical(I)"	= MED_I_FREQ,
 	"Security(I)"	= SEC_I_FREQ,
-	"Emergency"		= PANIC_FREQ			//AEIOU addition
-)
+	"Emergency"		= PANIC_FREQ
+)	//AEIOU Addition on L-149: Add emergency channel for panic button functionality.
 
 // central command channels, i.e deathsquid & response teams
 var/list/CENT_FREQS = list(ERT_FREQ, DTH_FREQ)
@@ -157,6 +157,7 @@ var/list/ANTAG_FREQS = list(SYND_FREQ, RAID_FREQ)
 
 //Department channels, arranged lexically
 var/list/DEPT_FREQS = list(AI_FREQ, COMM_FREQ, ENG_FREQ, ENT_FREQ, MED_FREQ, PANIC_FREQ, SEC_FREQ, SCI_FREQ, SRV_FREQ, SUP_FREQ)	//AEIOU edit: Added panic frequency to department channels.
+
 #define TRANSMISSION_WIRE	0
 #define TRANSMISSION_RADIO	1
 
@@ -164,7 +165,6 @@ var/list/DEPT_FREQS = list(AI_FREQ, COMM_FREQ, ENG_FREQ, ENT_FREQ, MED_FREQ, PAN
 	//AEIOU addition: Panic button frequency
 	if(frequency == PANIC_FREQ)
 		return "emergradio"
-
 	// Antags!
 	if (frequency in ANTAG_FREQS)
 		return "syndradio"
