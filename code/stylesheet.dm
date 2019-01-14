@@ -59,7 +59,7 @@ em						{font-style: normal;font-weight: bold;}
 .supradio				{color: #5F4519;}
 .srvradio				{color: #6eaa2c;}
 .expradio				{color: #555555;}
-.emergradio				{color: #000000;	background-color: #ffbb77;}		/* Emergency radio function */
+.emergradio				{color: #000000;	background-color: #ffbb77;}		/* AEIOU Addition: Emergency radio function gets a special colour to make it easy to see */
 
 /* Miscellaneous */
 .name					{font-weight: bold;}

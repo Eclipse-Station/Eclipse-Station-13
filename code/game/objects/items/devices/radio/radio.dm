@@ -14,7 +14,7 @@ var/global/list/default_internal_channels = list(
 	num2text(SUP_FREQ) = list(access_cargo),
 	num2text(SRV_FREQ) = list(access_janitor, access_hydroponics),
 	num2text(PANIC_FREQ) = list(access_medical_equip,access_security)
-)	//AEIOU Addition on L 16: Add panic button. //Security and medical should be able to hear your screams for help. Security so that they can hear your assailant taunt you, medical so they can figure out about where you are and save your dying ass.
+)	//AEIOU Addition on L-16: Add panic button. //Security and medical should be able to hear your screams for help. Security so that they can hear your assailant taunt you, medical so they can figure out about where you are and save your dying ass.
 
 var/global/list/default_medbay_channels = list(
 	num2text(PUB_FREQ) = list(),
