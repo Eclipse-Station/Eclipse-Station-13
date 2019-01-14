@@ -96,15 +96,14 @@ Variables:
 
 #### toggle_panic_alarm
 ```DM
-/obj/item/device/radio/proc/toggle_panic_alarm(mob/user, sanity_checks_pass = FALSE, admin_called = TRUE)
+/obj/item/device/radio/proc/toggle_panic_alarm(mob/user, sanity_checks_pass = FALSE)
 ```
 
-Toggles the panic alarm.
+Toggles the panic alarm and notifies administrators. This proc exists purely to make it cleaner to call the toggle code from multiple places.
 
 Variables:
 * `mob/user` - The user.
 * `sanity_checks_pass` - Used in the check for malformed proc calls. If this is false, the proc assumes it didn't go through the sanity checks and calls `CRASH()`, aborting the proc.
-* `admin_called` - Used in the check for malformed proc calls. If this is true and `sanity_checks_pass` is false, the proc assumes the malformed proc call was due to an administrator calling the proc directly, and sends feedback to chat.
 
 #### force_panic_alarm
 ```DM
@@ -116,3 +115,21 @@ Force-toggles the panic alarm. Intended for event use, not called directly. If t
 Variables:
 * `fake_name` - The name to display in the radio message.
 * `fake_area` - The area name to display in the radio message.
+
+#### panic_enable
+```DM
+/obj/item/device/radio/proc/panic_enable()
+```
+
+Enables the panic alarm. This proc exists to make it cleaner for force_panic_alarm to call pretty much the same code.
+
+No variables.
+
+#### panic_disable
+```DM
+/obj/item/device/radio/proc/panic_disable()
+```
+
+Disables the panic alarm. This proc exists to make it cleaner for force_panic_alarm to call pretty much the same code.
+
+No variables.
