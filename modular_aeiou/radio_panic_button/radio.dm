@@ -121,7 +121,7 @@
 			if("Use 'Unknown'")
 				fake_name = "Unknown"
 			else			//sanity check
-				message_admins("[key_name_admin(usr)] - operating on \"[src]\" at ([loc.x], [loc.y], [loc.z]) (<A HREF='?_src_=holder;adminplayerobservecoodjump=1;X=[loc.x];Y=[loc.y];Z=[loc.z]'>JMP</a>): invalid response to switch statement line 163. Expected: <\"Cancel\" | \"Enter a Name\" | \"Use 'Unknown'\">, got \"[null_handler]\"; crashing proc")		
+				message_admins("[key_name_admin(usr)] - operating on \"[src]\" at ([loc.x], [loc.y], [loc.z]) (<A HREF='?_src_=holder;adminplayerobservecoodjump=1;X=[loc.x];Y=[loc.y];Z=[loc.z]'>JMP</a>): invalid response to switch statement line 110. Expected: <\"Cancel\" | \"Enter a Name\" | \"Use 'Unknown'\">, got \"[null_handler]\"; crashing proc")		
 				CRASH("Invalid response to switch statement. Expected: <\"Cancel\" | \"Enter a Name\" | \"Use 'Unknown'\">, got \"[null_handler]\".")
 
 		
@@ -142,7 +142,7 @@
 				to_chat(usr, "<span class='warning'>Proc force_panic_alarm() aborted: Cancelled by user.</span>")
 				return FALSE
 			else	//another sanity check
-				message_admins("[key_name_admin(usr)] - operating on \"[src]\" at ([loc.x], [loc.y], [loc.z]) (<A HREF='?_src_=holder;adminplayerobservecoodjump=1;X=[loc.x];Y=[loc.y];Z=[loc.z]'>JMP</a>): invalid response to switch statement line 184. Expected: <\"Cancel\" | \"Enter a Name\" | \"Use current location\">, got \"[area_handler]\"; crashing proc")		
+				message_admins("[key_name_admin(usr)] - operating on \"[src]\" at ([loc.x], [loc.y], [loc.z]) (<A HREF='?_src_=holder;adminplayerobservecoodjump=1;X=[loc.x];Y=[loc.y];Z=[loc.z]'>JMP</a>): invalid response to switch statement line 131. Expected: <\"Cancel\" | \"Enter a Name\" | \"Use current location\">, got \"[area_handler]\"; crashing proc")		
 				CRASH("Invalid response to switch statement. Expected: <\"Cancel\" | \"Enter a Name\" | \"Use current location\">, got \"[area_handler]\".")
 
 	//at this point we should have a fake area and a fake person hitting the button.
