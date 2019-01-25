@@ -14,3 +14,14 @@
 	item_state = "shamebrero"
 	desc = "Once it's on, it never comes off."
 
+/obj/item/clothing/head/ushanka
+	..()
+	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
+
+/obj/item/clothing/head/beanie
+	..()
+	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
+
+/obj/item/clothing/head/beanie_loose
+	..()
+	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
