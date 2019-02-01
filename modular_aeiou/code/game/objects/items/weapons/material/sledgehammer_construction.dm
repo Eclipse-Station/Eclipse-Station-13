@@ -89,7 +89,7 @@
 		return
 
 
-	if(istype(thing, /obj/item/weapon/wrench) && construction_stage == 7)
+	if(istype(thing, /obj/item/weapon/tool/wrench) && construction_stage == 7)
 		user.visible_message("<span class='notice'>\The [user] whacks at \the [src] like a caveman, shaping the metal with \the [thing] into a rough handle, finishing it off.</span>")
 		increment_construction_stage()
 		playsound(src.loc, 'sound/weapons/smash5.ogg', 100, 1)
