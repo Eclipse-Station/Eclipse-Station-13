@@ -4,12 +4,9 @@
 	desc = "A poorly crafted shiv."
 	icon = 'modular_aeiou/icons/obj/weapons_aeiou.dmi'
 	icon_state = "glass_shiv"
-	force = 12 //Small but not nothing //EDIT: damage increased to consider the embed_chance formula
+	force = 7 //Small but not nothing
 	embed_chance = 100 //this should go in everytime
 	throwforce = 2
-
-	sharp = 1 //now it should *actually* go in every time
-
 	w_class = ITEMSIZE_SMALL
 	attack_verb = list("attacked", "stabbed", "poked", "stabbed", "pierced")
 

@@ -3080,8 +3080,6 @@
 #include "modular_aeiou\lore_override\nif.dm"
 #include "modular_aeiou\lore_override\resleeving.dm"
 #include "modular_aeiou\lore_override\sleevecard.dm"
-#include "modular_aeiou\maps\submaps\surface_submaps\wilderness\wilderness.dm"
-#include "modular_aeiou\maps\submaps\surface_submaps\wilderness\wilderness_areas.dm"
 #include "modular_aeiou\mobs\redmobs.dm"
 #include "modular_aeiou\mobs\secdeathclaw.dm"
 #include "modular_aeiou\mobs\redmobs\abstraction.dm"
