@@ -47,7 +47,7 @@
 
 // To be added: Templates for surface exploration when they are made.
 
-/*/datum/map_template/surface/wilderness/normal/spider1
+/datum/map_template/surface/wilderness/normal/spider1
 	name = "Spider Nest 1"
 	desc = "A small spider nest, in the forest."
 	mappath = 'maps/submaps/surface_submaps/wilderness/spider1.dmm'
@@ -208,4 +208,4 @@
 	name = "Manor1"
 	desc = "Whodunit"
 	mappath = 'maps/submaps/surface_submaps/wilderness/Manor1.dmm'
-	cost = 20*/
+	cost = 20
