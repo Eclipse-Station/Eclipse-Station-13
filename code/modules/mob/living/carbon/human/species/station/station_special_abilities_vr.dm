@@ -909,7 +909,7 @@
 
 
 /mob/living/carbon/human/proc/cromch()
-	set name = "Eat food"
+	set name = "Consume held object"
 	set category = "Abilities"
 	var/usesound = 'sound/effects/roboteat.ogg'
 	var/mob/living/carbon/human/C = usr
@@ -962,10 +962,11 @@
 			var/total_material = stack.matter[material]
 			total_material *= amount
 			if (C.nutrition < total_material/30 + 60)
+				qdel(stack)
 				C << "You're too hungry for that."
 				return
 			else
-				visible_message("<font color='red'><B>[C] produces some steel sheets!</font></B>")
+				visible_message("<font color='red'><B>[C] sheds some steel sheets!</font></B>")
 				C.nutrition -= (total_material/20)
 	else
 		var/amount = input(C,"How many?") as null|anything in items
@@ -976,10 +977,11 @@
 			var/total_material = stack.matter[material]
 			total_material *= amount
 			if (C.nutrition < total_material/20 + 60)
+				qdel(stack)
 				C << "You're too hungry for that."
 				return
 			else
-				visible_message("<font color='red'><B>[C] produces some glass sheets!</font></B>")
+				visible_message("<font color='red'><B>[C] sheds some glass sheets!</font></B>")
 				C.nutrition -= (total_material/15)
 
 

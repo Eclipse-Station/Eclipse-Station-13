@@ -10,4 +10,4 @@
 
 /datum/gear/eyes/fakewelding
 	display_name = "dark goggles"
-	path = /obj/item/clothing/glasses/welding/fake
+	path = /obj/item/clothing/glasses/fake
