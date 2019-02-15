@@ -261,7 +261,7 @@ GLOBAL_LIST_BOILERPLATE(all_singularities, /obj/singularity)
 			allowed_size = STAGE_SUPER
 
 	if (current_size != allowed_size && current_size != STAGE_SUPER)
-		expand(null, current_size > allowed_size)
+		expand(null, current_size < allowed_size) //AEIOU-Station Edit: Fixed singulo grow/shrink messages being backwards.
 	return 1
 
 /obj/singularity/proc/eat()

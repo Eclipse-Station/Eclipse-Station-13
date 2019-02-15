@@ -822,7 +822,7 @@
 	if(panel_open)
 		wires.Interact(user)
 
-	user << browse(dat, "window=suit_cycler")
+	user << browse(dat, "window=suit_cycler;size=400x435") //AEIOU-Station Edit: Opened too small when size was omitted.
 	onclose(user, "suit_cycler")
 	return
 
