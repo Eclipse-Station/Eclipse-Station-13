@@ -49,13 +49,6 @@
 
 // To be added: Templates for surface exploration when they are made.
 
-/*/datum/map_template/surface/wilderness/normal/Junkyard1
-	name = "Junkyard 1"
-	desc = "An old refuse dump for unwanted tech and broken mechs. Handle with care."
-	mappath = 'modular_aeiou/maps/submaps/surface_submaps/wilderness/Junkyard1.dmm'
-	allow_duplicates = FALSE //It has a lootable phazon wreck in it and some power tools, and some of that stuff is a little too good to allow more than one of these to exist
-	annihilate = TRUE //destroys trees during generation so they don't mess things up
-	cost = 10*/
 
 /datum/map_template/surface/wilderness/normal/Hunted
 	name = "Hunted"
