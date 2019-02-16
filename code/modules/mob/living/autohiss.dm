@@ -10,14 +10,14 @@
 	return message // no autohiss at this level
 
 /mob/living/carbon/human/handle_autohiss(message, datum/language/L)
-	if(!client || client.autohiss_mode == AUTOHISS_OFF) // no need to process if there's no client or they have autohiss off
+	if(!client || autohiss_mode == AUTOHISS_OFF) // no need to process if there's no client or they have autohiss off //AEIOU-Station Edit: autohiss_mode is now a human mob var.
 		return message
-	return species.handle_autohiss(message, L, client.autohiss_mode)
+	return species.handle_autohiss(message, L, autohiss_mode) //AEIOU-Station Edit: autohiss_mode is now a human mob var.
 
-/client
+/mob/living/carbon/human //AEIOU-Station Edit: Instead of /client - Fixed autohiss being lost on disconnect.
 	var/autohiss_mode = AUTOHISS_OFF
 
-/client/verb/toggle_autohiss()
+/mob/living/carbon/human/verb/toggle_autohiss() //AEIOU-Station Edit: Instead of /client - Autohiss fix.
 	set name = "Toggle Auto-Hiss"
 	set desc = "Toggle automatic hissing as Unathi and r-rolling as Taj"
 	set category = "OOC"
