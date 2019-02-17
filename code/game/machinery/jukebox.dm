@@ -128,7 +128,7 @@
 		return wires.Interact(user)
 	if(istype(W, /obj/item/device/multitool))
 		return wires.Interact(user)
-	if(istype(W, /obj/item/weapon/wrench))
+	if(istype(W, /obj/item/weapon/tool/wrench))
 		user.visible_message("<span class='warning'>[user] has [anchored ? "un" : ""]secured \the [src].</span>", "<span class='notice'>You [anchored ? "un" : ""]secure \the [src].</span>")
 		anchored = !anchored
 		playsound(src, W.usesound, 50, 1)
@@ -287,7 +287,7 @@
 		return
 	if(default_deconstruction_crowbar(user, W))
 		return
-	if(istype(W, /obj/item/weapon/wrench))
+	if(istype(W, /obj/item/weapon/tool/wrench))
 		if(playing)
 			StopPlaying()
 		user.visible_message("<span class='warning'>[user] has [anchored ? "un" : ""]secured \the [src].</span>", "<span class='notice'>You [anchored ? "un" : ""]secure \the [src].</span>")

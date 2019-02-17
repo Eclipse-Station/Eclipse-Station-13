@@ -86,7 +86,7 @@
 	cooldown = 40
 
 /obj/machinery/fitness/heavy/lifter/attackby(obj/item/weapon/W as obj, mob/user as mob)
-	if(istype(W, /obj/item/weapon/wrench))
+	if(istype(W, /obj/item/weapon/tool/wrench))
 		playsound(src.loc, 'sound/items/Deconstruct.ogg', 75, 1)
 		weight = ((weight) % qualifiers.len) + 1
 		to_chat(user, "You set the machine's weight level to [weight].")
