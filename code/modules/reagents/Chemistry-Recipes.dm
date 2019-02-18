@@ -2334,7 +2334,6 @@
 	result_amount = 6	// Roughly 120u per phoron sheet //VOREStation Edit
 	result_amount = 4
 
-
 /datum/chemical_reaction/cakobots
 	name = "Cak-o-bots"
 	id = "cakobots"
@@ -2354,4 +2353,43 @@
 	var/location = get_turf(holder.my_atom)
 	for(var/i = 1, i <= created_volume, i++)
 		new /mob/living/simple_animal/cat/cak(location)
+	return
+
+/*
+====================
+	Aurora Food
+====================
+*/
+/datum/chemical_reaction/food/dough
+	inhibitors = list("water" = 1, "beer" = 1) //To prevent it messing with batter recipes
+
+/datum/chemical_reaction/coating/batter
+	name = "Batter"
+	id = "batter"
+	result = "batter"
+	required_reagents = list("egg" = 3, "flour" = 10, "water" = 5, "sodiumchloride" = 2)
+	result_amount = 20
+
+/datum/chemical_reaction/coating/beerbatter
+	name = "Beer Batter"
+	id = "beerbatter"
+	result = "beerbatter"
+	required_reagents = list("egg" = 3, "flour" = 10, "beer" = 5, "sodiumchloride" = 2)
+	result_amount = 20
+
+/datum/chemical_reaction/food/browniemix
+	name = "Brownie Mix"
+	id = "browniemix"
+	result = "browniemix"
+	required_reagents = list("flour" = 5, "coco" = 5, "sugar" = 5)
+	result_amount = 15
+
+/datum/chemical_reaction/food/butter
+	name = "Butter"
+	id = "butter"
+
+/datum/chemical_reaction/food/butter/on_reaction(var/datum/reagents/holder, var/created_volume)
+	var/location = get_turf(holder.my_atom)
+	for(var/i = 1, i <= created_volume, i++)
+		new /obj/item/weapon/reagent_containers/food/snacks/spreads/butter(location)
 	return
