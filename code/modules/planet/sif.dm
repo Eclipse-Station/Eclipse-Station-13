@@ -329,16 +329,17 @@ var/datum/planet/sif/planet_sif = null
 
 			// Lazy wind code
 			if(prob(10))
+				var/datum/gender/TL = gender_datums[L.get_visible_gender()] //AEIOU-Station Edit: Use gender datum system.
 				if(istype(L.get_active_hand(), /obj/item/weapon/melee/umbrella))
 					var/obj/item/weapon/melee/umbrella/U = L.get_active_hand()
 					if(U.open)
-						L.visible_message("<span class='danger'>[L] struggles to keep hold of their umbrella!</span>","<span class='danger'>You struggle to keep hold of your umbrella!</span>") //AEIOU Edit -- Adds a message visible to people who can see you
+						L.visible_message("<span class='danger'>[L] struggles to keep hold of [TL.his] umbrella!</span>","<span class='danger'>You struggle to keep hold of your umbrella!</span>") //AEIOU Edit -- Adds a message visible to people who can see you
 						L.Stun(2)	// This is not nearly as long as it seems //AEIOU Edit -- I don't know what happened between the time this was added and now, but 20 seconds is way too long
 						playsound(L, 'sound/effects/rustle1.ogg', 100, 1)	// Closest sound I've got to "Umbrella in the wind"
 				else if(istype(L.get_inactive_hand(), /obj/item/weapon/melee/umbrella))
 					var/obj/item/weapon/melee/umbrella/U = L.get_inactive_hand()
 					if(U.open)
-						L.visible_message("<span class='danger'>[L]'s umbrella is yanked from their hand by the wind!</span>","<span class='danger'>A gust of wind yanks the umbrella from your hand!</span>") //AEIOU Edit -- Same as the other message
+						L.visible_message("<span class='danger'>[L]'s umbrella is yanked from [TL.his] hand by the wind!</span>","<span class='danger'>A gust of wind yanks the umbrella from your hand!</span>") //AEIOU Edit -- Same as the other message
 						playsound(L, 'sound/effects/rustle1.ogg', 100, 1)
 						L.drop_from_inventory(U)
 						U.toggle_umbrella()
