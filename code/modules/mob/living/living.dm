@@ -862,6 +862,12 @@ default behaviour is:
 	if(istype(src.loc, /obj/item/weapon/holder))
 		escape_inventory(src.loc)
 		return
+	//AEIOU-Station Add: To dismount vehicles, unbuckling isn't enough.
+	if(istype(buckled, /obj/vehicle))
+		var/obj/vehicle/V = buckled
+		V.unload(src)
+		return TRUE
+	//AEIOU-Station Add End
 
 	//unbuckling yourself
 	if(buckled)
