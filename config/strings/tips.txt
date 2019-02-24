@@ -26,6 +26,7 @@ Did you know? Magboots prevent you from being knocked down by pressure differenc
 Did you know? Phoron will burn at a minimum of 126 Celsius (400 Kelvin) and autoignite, if able, at 246 Celsius (520 Kelvin).
 Did you know? At standard 21% airmix, you need approximately 76.2 kPa ambient pressure to breathe.
 Did you know? Even if you are not a Medical Doctor, it's still a good idea to know the core four healing chemicals. It may not fix broken bones, but if you pass out, it could keep you stable enough for a medical team to get to you. A mnemonic: Bicaridine for Brute, Kelotaine for Kelvin (temperature), activated Charcoal for Chemicals, and Salbutamol for Suffocation.
+Did you know? Umbrellas will deflect hail, but are affected by wind. If you're holding one open in your off-hand, you might lose it.
 As an Antagonist, you can change your hairstyle by using a mirror in a shower. This is useful if you're on the lam and people without a security HUD are looking for a man with an afro.
 As an Antagonist, there are many places around the station to hide contraband. A few for starters: Secure briefcases in maintence, body bags, and those little wall-mounted fire safety closets. Experiment to find more!
 As an Antagonist, you can craft a shiv by using a glass shard on a roll of tape. It has a 100% chance to embed itself in your target, but does rubbish for damage.
@@ -54,7 +55,7 @@ As a Security Officer, remember that there are three sides to every story: What 
 As a Security Officer, remember that correlation does not necessarily mean causation. Someone may have just been in the wrong place at the wrong time.
 As a Security Officer, if you are wearing HUD glasses, you can see someone's criminal records by examining them.
 As a Security Officer, remember that you answer to the Warden when you are inside the brig area. He can have you arrested for trespass if you become a nuisance.
-As a Security OFficer, remember that many times, an arrest can be avoided by simply talking to the people involved and working out the problem between them.
+As a Security Officer, remember that many times, an arrest can be avoided by simply talking to the people involved and working out the problem between them.
 As a Security Officer, it's a good idea to be visible to the crew. Mingle with them a bit, talk with them. You might find a useful informant, or better yet, a friend.
 As a Warden, you are the protector of the Brig and handler of its prisoners when little is happening. If a situation arises, you are also in charge of distributing the armoury.
 As a Warden, keep track of what all is checked out of the armoury should a situation arise, and ensure it's all checked back in when the situation passes.
