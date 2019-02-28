@@ -16,7 +16,6 @@
 	sort_category = "Xenowear"
 	whitelisted = "Vox"
 
-
 /datum/gear/gloves/vox
 	display_name = "insulated gauntlets (Vox)"
 	path = /obj/item/clothing/gloves/vox

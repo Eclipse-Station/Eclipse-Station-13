@@ -16,7 +16,7 @@
 	attackby(obj/item/weapon/W as obj, mob/user as mob)
 		return
 
-/obj/structure/reagent_dispensers/New()
+/obj/structure/reagent_dispensers/initialize()
 	var/datum/reagents/R = new/datum/reagents(5000)
 	reagents = R
 	R.my_atom = src
@@ -73,7 +73,7 @@
 	icon_state = "watertank"
 	amount_per_transfer_from_this = 10
 
-/obj/structure/reagent_dispensers/watertank/New()
+/obj/structure/reagent_dispensers/watertank/initialize()
 	..()
 	reagents.add_reagent("water", 1000)
 
@@ -82,7 +82,7 @@
 	desc = "A highly-pressurized water tank made to hold vast amounts of water.."
 	icon_state = "watertank_high"
 
-/obj/structure/reagent_dispensers/watertank/high/New()
+/obj/structure/reagent_dispensers/watertank/high/initialize()
 	..()
 	reagents.add_reagent("water", 4000)
 
@@ -94,12 +94,8 @@
 	amount_per_transfer_from_this = 10
 	var/modded = 0
 	var/obj/item/device/assembly_holder/rig = null
-	
-	//AEIOU added vars
-	var/proj_min_dmg_for_explosion = 20	//20 damage needed to trigger an explosion if projectile won't ignite something.
-	var/proj_impact_leak_chance = 10	//10% to leak if shot by a projectile that will not trigger an explosion.
 
-/obj/structure/reagent_dispensers/fueltank/New()
+/obj/structure/reagent_dispensers/fueltank/initialize()
 	..()
 	reagents.add_reagent("fuel",1000)
 
@@ -163,17 +159,7 @@
 			log_game("[key_name(Proj.firer)] shot fueltank at [loc.loc.name] ([loc.x],[loc.y],[loc.z]).")
 
 		if(!istype(Proj ,/obj/item/projectile/beam/lastertag) && !istype(Proj ,/obj/item/projectile/beam/practice) )
-			// // // BEGIN AEIOU EDIT // // //
-			if(Proj.combustion || Proj.damage >= proj_min_dmg_for_explosion)		//if the bullet would ignite something or damage greater thn 20...
-				explode()		//boom baby
-			else if(prob(proj_impact_leak_chance) && !modded)		//10% chance to make it leak
-				modded = TRUE		//it will leak and can be easily fixed. Not necessarily unwrenched manually. 
-				leak_fuel(amount_per_transfer_from_this/10.0)
-				message_admins("Fueltank at [loc.loc.name] ([loc.x],[loc.y],[loc.z]) leaking fuel due to gunshot.")
-				log_game("Fueltank at [loc.loc.name] ([loc.x],[loc.y],[loc.z]) leaking fuel due to gunshot.")
-				visible_message("<span class='warning'>You hear a faint dripping noise coming from \the [src]...</span>")
-			// // // END AEIOU EDIT // // //
-
+			explode()
 
 /obj/structure/reagent_dispensers/fueltank/ex_act()
 	explode()
@@ -219,7 +205,7 @@
 	density = 0
 	amount_per_transfer_from_this = 45
 
-/obj/structure/reagent_dispensers/peppertank/New()
+/obj/structure/reagent_dispensers/peppertank/initialize()
 	..()
 	reagents.add_reagent("condensedcapsaicin",1000)
 
@@ -241,7 +227,7 @@
 	cupholder = 1
 	cups = 10
 
-/obj/structure/reagent_dispensers/water_cooler/New()
+/obj/structure/reagent_dispensers/water_cooler/initialize()
 	..()
 	if(bottle)
 		reagents.add_reagent("water",120)
@@ -366,7 +352,7 @@
 	icon_state = "beertankTEMP"
 	amount_per_transfer_from_this = 10
 
-/obj/structure/reagent_dispensers/beerkeg/New()
+/obj/structure/reagent_dispensers/beerkeg/initialize()
 	..()
 	reagents.add_reagent("beer",1000)
 
@@ -384,7 +370,7 @@
 	amount_per_transfer_from_this = 10
 	anchored = 1
 
-/obj/structure/reagent_dispensers/virusfood/New()
+/obj/structure/reagent_dispensers/virusfood/initialize()
 	..()
 	reagents.add_reagent("virusfood", 1000)
 
@@ -396,6 +382,30 @@
 	amount_per_transfer_from_this = 10
 	anchored = 1
 
-/obj/structure/reagent_dispensers/acid/New()
+/obj/structure/reagent_dispensers/acid/initialize()
 	..()
 	reagents.add_reagent("sacid", 1000)
+
+//Cooking oil refill tank
+/obj/structure/reagent_dispensers/cookingoil
+	name = "cooking oil tank"
+	desc = "A fifty-litre tank of commercial-grade corn oil, intended for use in large scale deep fryers. Store in a cool, dark place"
+	icon = 'icons/obj/objects.dmi'
+	icon_state = "oiltank"
+	amount_per_transfer_from_this = 120
+
+/obj/structure/reagent_dispensers/cookingoil/initialize()
+		..()
+		reagents.add_reagent("cornoil",5000)
+
+/obj/structure/reagent_dispensers/cookingoil/bullet_act(var/obj/item/projectile/Proj)
+	if(Proj.get_structure_damage())
+		explode()
+
+/obj/structure/reagent_dispensers/cookingoil/ex_act()
+	explode()
+
+/obj/structure/reagent_dispensers/cookingoil/proc/explode()
+	reagents.splash_area(get_turf(src), 3)
+	visible_message(span("danger", "The [src] bursts open, spreading oil all over the area."))
+	qdel(src)

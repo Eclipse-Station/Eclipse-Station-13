@@ -9,7 +9,7 @@
 	5. The gameticker is created.
 
 */
-var/global/datum/global_init/init = new ()
+
 
 /*
 	Pre-map initialization stuff should go here.
@@ -467,13 +467,13 @@ var/world_topic_spam_protect_time = world.timeofday
 /world/proc/load_motd()
 	join_motd = file2text("config/motd.txt")
 
-
+/*
 /proc/load_configuration()
 	config = new /datum/configuration()
 	config.load("config/config.txt")
 	config.load("config/game_options.txt","game_options")
 	config.loadsql("config/dbconfig.txt")
-	config.loadforumsql("config/forumdbconfig.txt")
+	config.loadforumsql("config/forumdbconfig.txt")*/
 
 /hook/startup/proc/loadMods()
 	world.load_mods()

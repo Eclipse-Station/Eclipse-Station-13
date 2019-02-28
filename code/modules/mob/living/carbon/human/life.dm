@@ -37,6 +37,11 @@
 	set invisibility = 0
 	set background = BACKGROUND_ENABLED
 
+
+	///////////////////////// CITADEL STATION ADDITIONS START
+	var/timeSinceLastTick = world.time - lastLifeProc
+	///////////////////////// CITADEL STATION ADDITIONS END
+
 	if (transforming)
 		return
 
@@ -94,6 +99,11 @@
 	name = get_visible_name()
 
 	pulse = handle_pulse()
+
+
+	///////////////////////// CITADEL STATION ADDITIONS START
+	emoteDanger = max(0, emoteDanger - (timeSinceLastTick / 10))
+	///////////////////////// CITADEL STATION ADDITIONS END
 
 /mob/living/carbon/human/proc/handle_some_updates()
 	if(life_tick > 5 && timeofdeath && (timeofdeath < 5 || world.time - timeofdeath > 6000))	//We are long dead, or we're junk mobs spawned like the clowns on the clown shuttle
@@ -291,7 +301,7 @@
 			radiation -= 4 * RADIATION_SPEED_COEFFICIENT
 
 		if(damage)
-			damage *= isSynthetic() ? 0.5 : species.radiation_mod
+			damage *= species.radiation_mod
 			adjustToxLoss(damage * RADIATION_SPEED_COEFFICIENT)
 			updatehealth()
 			if(!isSynthetic() && organs.len)
@@ -1376,6 +1386,11 @@
 
 	// Puke if toxloss is too high
 	if(!stat)
+		if (getToxLoss() >= 30 && isSynthetic())
+			if(!confused)
+				if(prob(5))
+					to_chat(src, "<span class='danger'>You lose directional control!</span>")
+					Confuse(10)
 		if (getToxLoss() >= 45)
 			spawn vomit()
 

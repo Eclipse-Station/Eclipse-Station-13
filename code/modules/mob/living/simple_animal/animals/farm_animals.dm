@@ -111,9 +111,6 @@
 	meat_amount = 6
 	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
 
-	leather_amount = 6
-	leather_type = /obj/item/stack/material/animalhide/corgi
-
 	var/datum/reagents/udder = null
 
 /mob/living/simple_animal/cow/New()

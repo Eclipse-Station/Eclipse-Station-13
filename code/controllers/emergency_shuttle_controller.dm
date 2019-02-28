@@ -21,7 +21,7 @@ var/global/datum/emergency_shuttle_controller/emergency_shuttle
 	var/datum/announcement/priority/emergency_shuttle_docked = new(0, new_sound = sound('sound/AI/shuttledock.ogg'))
 	var/datum/announcement/priority/emergency_shuttle_called = new(0, new_sound = sound('sound/AI/shuttlecalled.ogg'))
 	var/datum/announcement/priority/emergency_shuttle_recalled = new(0, new_sound = sound('sound/AI/shuttlerecalled.ogg'))
-	
+
 	// AEIOU added vars
 	var/shift_change_horn = TRUE		//Should we have a shift-change horn when the shuttle gets called?
 	var/shift_change_horn_file = 'sound/items/AirHorn.ogg'
@@ -116,13 +116,13 @@ var/global/datum/emergency_shuttle_controller/emergency_shuttle
 	if(shift_change_horn)
 		spawn(48)		//1 mile at speed of sound in air at 0C, 1 bar pressure = 4.8574... seconds. This assumes the colony is at 1 mile away, and the horn is originating from there.
 			blow_horn()
-	
+
 /datum/emergency_shuttle_controller/proc/blow_horn()
 	world << sound(shift_change_horn_file, repeat = 0, wait = 0, volume = shift_change_horn_volume, channel = 3)
 	shift_change_horn = FALSE
 	// // // END AEIOU EDIT // // //
-		
-		
+
+
 //recalls the shuttle
 /datum/emergency_shuttle_controller/proc/recall()
 	if (!can_recall()) return
