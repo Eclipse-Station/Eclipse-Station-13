@@ -318,3 +318,9 @@
 	armor = list(melee = 65, bullet = 50, laser = 50,energy = 25, bomb = 50, bio = 100, rad = 50)
 	allowed = list(/obj/item/device/flashlight,/obj/item/weapon/tank,/obj/item/device/suit_cooling_unit,/obj/item/weapon/gun)
 	slowdown = 1.5
+
+
+/obj/item/clothing/suit/space/void/medical/alt/lanius
+	species_restricted = list("Human", "Skrell", "Promethean", "Carnifex")
+	name = "repurposed medical voidsuit"
+	desc = "A hasty solution from VeyMed to confine Carnifex in a sealed enviroment. Doesn't offer much protection, but allows the user to move more freely."

@@ -75,7 +75,7 @@
 	num_alternate_languages = 3
 	secondary_langs = list(LANGUAGE_SKRELLIAN)
 	name_language = LANGUAGE_SKRELLIAN
-	assisted_langs = list(LANGUAGE_EAL, LANGUAGE_TERMINUS, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX)
+	assisted_langs = list(LANGUAGE_EAL, LANGUAGE_TERMINUS, LANGUAGE_SKRELLIANFAR, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX)	//AEIOU edit: Removes Skrellian from assisted languages as a patch
 	color_mult = 1
 	inherent_verbs = list(/mob/living/proc/shred_limb)
 
@@ -159,6 +159,7 @@
 	num_alternate_languages = 3
 	secondary_langs = list(LANGUAGE_TERMINUS)
 	name_language = LANGUAGE_TERMINUS
+	assisted_langs = list(LANGUAGE_EAL, LANGUAGE_SKRELLIAN, LANGUAGE_SKRELLIANFAR, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX)	//AEIOU edit: Zorren can speak Terminus unassisted.
 
 	min_age = 18
 	max_age = 80
@@ -198,6 +199,7 @@
 	num_alternate_languages = 3
 	secondary_langs = list(LANGUAGE_TERMINUS)
 	name_language = LANGUAGE_TERMINUS
+	assisted_langs = list(LANGUAGE_EAL, LANGUAGE_SKRELLIAN, LANGUAGE_SKRELLIANFAR, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX)	//AEIOU edit: Zorren can speak Terminus unassisted.
 
 	min_age = 18
 	max_age = 80
@@ -253,6 +255,16 @@
     which has a heavy emphasis on utilizing tail positioning and ear twitches to communicate intent."
 
 	primitive_form = "Wolpin"
+
+		/* AEIOU EDIT - Re-added and updated with new GOON CODE sounds. Check the License file for details.*/
+	speech_sounds = list('sound/goonstation/voice/growl1.ogg','sound/goonstation/voice/growl2.ogg','sound/goonstation/voice/growl3.ogg')
+	speech_chance = 20
+
+	scream_verb = "howls"
+	male_scream_sound = 'sound/goonstation/voice/howl.ogg'
+	female_scream_sound = 'sound/goonstation/voice/howl.ogg'
+
+
 
 	spawn_flags = SPECIES_CAN_JOIN
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR

@@ -20,6 +20,8 @@
 	var/active_regen = FALSE //Used for the regenerate proc in human_powers.dm
 	var/active_regen_delay = 300
 
+	no_vore = 1 //AEIOU addition - vore can be toggled on in perks
+
 	var/buildup = 0 //For laniuses
 
 ///////////////////////// CITADEL STATION ADDITIONS START
