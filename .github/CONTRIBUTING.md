@@ -22,7 +22,7 @@ These are just guidelines, not rules, use your best judgment and feel free to pr
 
 ### Code of Conduct
 
-This project adheres to the Contributor Covenant [code of conduct](CODE_OF_CONDUCT.md).
+This project adheres to the Contributor Covenant [code of conduct](code_of_conduct.md).
 By participating, you are expected to uphold this code.
 
 ## How Can I Contribute?
