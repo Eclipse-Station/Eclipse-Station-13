@@ -1,3 +1,6 @@
+/obj/item/weapon/pen/crayon/
+	var/color_description
+
 /obj/item/weapon/pen/crayon/red
 	icon_state = "crayonred"
 	colour = "#DA0000"

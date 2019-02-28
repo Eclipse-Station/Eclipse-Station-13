@@ -19,9 +19,8 @@
 	var/use_external_power = 0 //if set, the weapon will look for an external power source to draw from, otherwise it recharges magically
 	var/recharge_time = 4
 	var/charge_tick = 0
-	var/infinite_supply = 0 //AEIOU edit. This is for the gatling icons.
 	var/charge_delay = 75	//delay between firing and charging
-	recoil_m = 0 //micros getting fucked
+
 	var/battery_lock = 0	//If set, weapon cannot switch batteries
 
 /obj/item/weapon/gun/energy/New()
@@ -157,9 +156,6 @@
 	return
 
 /obj/item/weapon/gun/energy/update_icon(var/ignore_inhands)
-	if(infinite_supply)//AEIOU edit. This is for the gatling icons.)//aeiou edit
-		icon_state = icon_state
-		return
 	if(power_supply == null)
 		if(modifystate)
 			icon_state = "[modifystate]_open"

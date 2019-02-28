@@ -82,7 +82,7 @@
 	desc = "A special helmet designed for work in a hazardous, low pressure environment. Has reinforced plating."
 	icon_state = "rig0-mining"
 	item_state_slots = list(slot_r_hand_str = "mining_helm", slot_l_hand_str = "mining_helm")
-	armor = list(melee = 50, bullet = 5, laser = 20, energy = 5, bomb = 55, bio = 100, rad = 40)
+	armor = list(melee = 50, bullet = 5, laser = 20, energy = 5, bomb = 55, bio = 100, rad = 20)
 	light_overlay = "helmet_light_dual"
 
 /obj/item/clothing/suit/space/void/mining
@@ -90,7 +90,7 @@
 	desc = "A special suit that protects against hazardous, low pressure environments. Has reinforced plating."
 	icon_state = "rig-mining"
 	item_state_slots = list(slot_r_hand_str = "mining_voidsuit", slot_l_hand_str = "mining_voidsuit")
-	armor = list(melee = 50, bullet = 5, laser = 20, energy = 5, bomb = 55, bio = 100, rad = 40)
+	armor = list(melee = 50, bullet = 5, laser = 20, energy = 5, bomb = 55, bio = 100, rad = 20)
 
 //Mining Surplus Voidsuit
 
@@ -164,11 +164,6 @@
 	desc = "A more recent model of Vey-Med voidsuit, exchanging physical protection for fully unencumbered movement and a complete range of motion."
 	slowdown = 0
 	armor = list(melee = 20, bullet = 5, laser = 20,energy = 5, bomb = 15, bio = 100, rad = 30)
-
-/obj/item/clothing/suit/space/void/medical/alt/lanius
-	species_restricted = list("Human", "Skrell", "Promethean", "Carnifex")
-	name = "repurposed medical voidsuit"
-	desc = "A hasty solution from VeyMed to confine Carnifex in a sealed enviroment. Doesn't offer much protection, but allows the user to move more freely."
 
 //Security
 /obj/item/clothing/head/helmet/space/void/security
@@ -308,3 +303,18 @@
 	desc = "An atmos resistant voidsuit for space."
 	icon_state = "rig-pilot2"
 	item_state = "rig-pilot2"
+
+//Captain (cit addition, the idea is to replace the "colony director armor" which doesnt function like a voidsuit
+/obj/item/clothing/head/helmet/space/void/captain
+	desc = "Shiny blue helmet, complete with far-too-big golden visor. It probably doesn't protects from bright flashes."
+	name = "colony director voidsuit helmet"
+	icon_state = "capvoid"
+	armor = list(melee = 65, bullet = 50, laser = 50,energy = 25, bomb = 50, bio = 100, rad = 50)
+
+/obj/item/clothing/suit/space/void/captain
+	desc = "Sleek, blue and gold suit, fitted with spaceproofing and protective inserts. Fits like an oversized, shiny glove."
+	name = "colony director voidsuit"
+	icon_state = "capsuit_void"
+	armor = list(melee = 65, bullet = 50, laser = 50,energy = 25, bomb = 50, bio = 100, rad = 50)
+	allowed = list(/obj/item/device/flashlight,/obj/item/weapon/tank,/obj/item/device/suit_cooling_unit,/obj/item/weapon/gun)
+	slowdown = 1.5

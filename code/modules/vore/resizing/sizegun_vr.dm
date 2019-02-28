@@ -10,7 +10,6 @@
 	item_state = null	//so the human update icon uses the icon_state instead
 	fire_sound = 'sound/weapons/wave.ogg'
 	charge_cost = 240
-	recoil_m = 2 //micro and macro usage
 	projectile_type = /obj/item/projectile/beam/sizelaser
 	origin_tech = list(TECH_BLUESPACE = 4)
 	modifystate = "sizegun-shrink"

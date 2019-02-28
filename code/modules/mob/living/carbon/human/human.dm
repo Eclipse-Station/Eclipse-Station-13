@@ -6,12 +6,11 @@
 	icon_state = "nothing"
 
 	has_huds = TRUE 					//We do have HUDs (like health, wanted, status, not inventory slots)
-	var/outgoing_melee_damage_percent = 1 //base buff
+
 	var/embedded_flag					//To check if we've need to roll for damage on movement while an item is imbedded in us.
 	var/obj/item/weapon/rig/wearing_rig // This is very not good, but it's much much better than calling get_rig() every update_canmove() call.
 	var/last_push_time					//For human_attackhand.dm, keeps track of the last use of disarm
 
-	var/buildup = 0 //For laniuses
 	var/spitting = 0 					//Spitting and spitting related things. Any human based ranged attacks, be it innate or added abilities.
 	var/spit_projectile = null			//Projectile type.
 	var/spit_name = null 				//String
@@ -20,7 +19,15 @@
 	var/can_defib = 1					//Horrible damage (like beheadings) will prevent defibbing organics.
 	var/active_regen = FALSE //Used for the regenerate proc in human_powers.dm
 	var/active_regen_delay = 300
-	no_vore = 1 //AEIOU addition - vore can be toggled on in perks
+
+	var/buildup = 0 //For laniuses
+
+///////////////////////// CITADEL STATION ADDITIONS START
+
+	var/emoteDanger = 1					// What the current danger for spamming emotes is - shared between different types of emotes to keep people from just
+										// flip/snap/flip/snap.  Decays at a rate of 1 per second to a minimum of 1.
+
+///////////////////////// CITADEL STATION ADDITIONS END
 
 /mob/living/carbon/human/New(var/new_loc, var/new_species = null)
 

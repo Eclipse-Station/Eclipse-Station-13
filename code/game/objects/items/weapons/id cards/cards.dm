@@ -4,7 +4,6 @@
  *		ID CARD
  *		FINGERPRINT CARD HOLDER
  *		FINGERPRINT CARD
- *		Emag
  */
 
 
