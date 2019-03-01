@@ -148,7 +148,7 @@
 
 	ui = GLOB.nanomanager.try_update_ui(user, src, ui_key, ui, data, force_open)
 	if(!ui)
-		ui = new(user, src, ui_key, "fission_engine.tmpl", "Nuclear Fission Core", 500, 300)
+		ui = new(user, src, ui_key, "fission_engine.tmpl", "Nuclear Fission Core", 500, 600)
 		ui.set_initial_data(data)
 		ui.open()
 		ui.set_auto_update(1)
@@ -366,21 +366,20 @@
 				decaying_rods++
 			rod.meltdown()
 		var/rad_power = decay_heat / REACTOR_RADS_TO_MJ
-		message_admins("btw [name] explosion power is: [rad_power]")
 		if(announce)
 			world << sound('sound/effects/carter_alarm_cut.ogg')
 			spawn(1 SECONDS)
-				world << "<font size='15' color='red'><b>DUCK AND COVER</b></font>"
+				world << "<font size='5' color='red'><b>DUCK AND COVER</b></font>"
 
 		// Give the alarm time to play. Then... FLASH! AH-AH!
 		spawn(15 SECONDS)
-			radiation_repository.z_radiate(locate(1, 1, z), rad_power, 1)
+			radiation_repository.z_radiate(locate(1, 1, z), rad_power / 10, 1)
 			for(var/mob/living/mob in living_mob_list)
 				var/turf/T = get_turf(mob)
 				if(T && (loc.z == T.z))
 					var/root_distance = sqrt( 1 / (get_dist(mob, src) + 1) )
 					var/rads = rad_power * root_distance
-					var/eye_safety = 0
+					var/eye_safety = 3 // Don't stun unless they have the correct eye organs.
 					if(iscarbon(mob))
 						var/mob/living/carbon/M = mob
 						eye_safety = M.eyecheck()
@@ -401,14 +400,11 @@
 									H << "<span class='danger'>You are blinded by the flash!</span>"
 									H.eye_blind = 5
 									H.eye_blurry = 5
-									H.disabilities |= NEARSIGHTED
-									spawn(60 SECONDS)
-										H.disabilities &= ~NEARSIGHTED
 								else if(E.damage > 10)
 									H << "<span class='warning'>Your eyes burn.</span>"
 						if (!H.isSynthetic())
 							H.radiation += max(rads / 10, 0) // Not even a radsuit can save you now.
-						H.apply_damage(max((rads / 10) * H.species.radiation_mod, 0), BURN) // Radiation burns
+						H.apply_damage(max((rads / 10) * H.species.radiation_mod, 0), BURN) // Flash burns
 
 		// Some engines just want to see the world burn.
 		spawn(17 SECONDS)

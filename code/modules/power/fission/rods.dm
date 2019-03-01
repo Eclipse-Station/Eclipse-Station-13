@@ -178,7 +178,7 @@
 /obj/item/weapon/fuelrod/boron
 	name = "boron control rod"
 	desc = "A nuclear control rod."
-	color = "#D1C9B6"
+	color = "#6F6E6A"
 	reflective = 0
 	specific_heat = 11	// J/(mol*K)
 	molar_mass = 0.011	// kg/mol
