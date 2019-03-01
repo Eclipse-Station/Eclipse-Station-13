@@ -58,3 +58,15 @@
 	name = pick("Spicy Crust Pizzeria", "Soap and Care Products", "Sally's Computer Parts", "Steve's Chocolate Pastries", "Smith & Christian's Plastics","Standard Containers & Packaging Co.", "Sanitary Chemical Purgation (LTD)")
 	name += " delivery crate"
 	return ..()
+
+
+//AEIOU: Hunted PoI, also useful for dropping active beartraps onto the unsuspecting crew
+
+/obj/item/weapon/beartrap/autotrap
+	name = "autotrap"
+	desc = "A mechanically-activated leg trap. Hopefully you noticed it was open before you stepped on it."
+
+/obj/item/weapon/beartrap/autotrap/New()
+	anchored = 1
+	deployed = 1
+	update_icon()

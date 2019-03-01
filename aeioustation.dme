@@ -10,7 +10,6 @@
 #define DEBUG
 // END_PREFERENCES
 // BEGIN_INCLUDE
-#include <n_json\JSON\JSON.dme>
 #include "code\_away_mission_tests.dm"
 #include "code\_macros.dm"
 #include "code\_macros_vr.dm"
@@ -3086,6 +3085,8 @@
 #include "modular_aeiou\lore_override\nif.dm"
 #include "modular_aeiou\lore_override\resleeving.dm"
 #include "modular_aeiou\lore_override\sleevecard.dm"
+#include "modular_aeiou\maps\submaps\surface_submaps\wilderness\wilderness.dm"
+#include "modular_aeiou\maps\submaps\surface_submaps\wilderness\wilderness_areas.dm"
 #include "modular_aeiou\mobs\redmobs.dm"
 #include "modular_aeiou\mobs\secdeathclaw.dm"
 #include "modular_aeiou\mobs\redmobs\abstraction.dm"
