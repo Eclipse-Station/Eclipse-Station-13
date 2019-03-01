@@ -28,11 +28,13 @@
 
 	if(!istype(loc, /obj/machinery/power/fission))
 		var/turf/T = get_turf(src)
-
 		equalize(T.return_air(), gasefficiency)
 
-		if(integrity == 0 && decay_heat > 0)
-			var/power = (tick_life() / REACTOR_RADS_TO_MJ)
+		if(decay_heat > 0 && !istype(loc, /obj/item/weapon/storage/briefcase/fission))
+			var/insertion_multiplier = 0.1
+			if (integrity == 0)
+				insertion_multiplier = 1
+			var/power = (tick_life(0, insertion_multiplier) / REACTOR_RADS_TO_MJ)
 			add_thermal_energy(power)
 			radiation_repository.radiate(src, max(power * 1.5, 0))
 
@@ -86,8 +88,10 @@
 /obj/item/weapon/fuelrod/proc/heat_capacity()
 	. = specific_heat * (mass / molar_mass)
 
-/obj/item/weapon/fuelrod/proc/tick_life(var/apply_heat = 0)
+/obj/item/weapon/fuelrod/proc/tick_life(var/apply_heat = 0, var/insertion_override = 0)
 	var/applied_insertion = get_insertion()
+	if (insertion_override)
+		applied_insertion = insertion_override
 	if(lifespan < 1 && life > 0)
 		life = 0
 	else if(life > 0)
@@ -169,4 +173,15 @@
 	molar_mass = 0.108	// kg/mol
 	mass = 10 // kg
 	melting_point = 1235
+	lifespan = 4800
+
+/obj/item/weapon/fuelrod/boron
+	name = "boron control rod"
+	desc = "A nuclear control rod."
+	color = "#D1C9B6"
+	reflective = 0
+	specific_heat = 11	// J/(mol*K)
+	molar_mass = 0.011	// kg/mol
+	mass = 2 // kg
+	melting_point = 2349
 	lifespan = 4800

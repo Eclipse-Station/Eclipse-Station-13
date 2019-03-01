@@ -76,7 +76,7 @@
 
 		data["core_temp"] = round(linked.temperature)
 		data["max_temp"] = round(linked.max_temp)
-		data["warn_point"] = round(linked.warning_point * 100)
+		data["cutoff_point"] = linked.cutoff_temp
 
 		data["rods"] = new /list(linked.rods.len)
 		for(var/i=1,i<=linked.rods.len,i++)
@@ -108,14 +108,14 @@
 		var/obj/item/weapon/fuelrod/rod = locate(href_list["rod_insertion"])
 		if(istype(rod) && rod.loc == linked)
 			var/new_insersion = input(usr,"Enter new insertion (0-100)%","Insertion control",rod.insertion * 100) as num
-			rod.insertion = between(0, new_insersion / 100, 100)
+			rod.insertion = between(0, new_insersion / 100, 1)
 
-	if(href_list["warn_point"])
-		var/new_warning = input(usr,"Enter new warning point (0-100)%","Warning point",linked.warning_point * 100) as num
-		linked.warning_point = between(0, new_warning / 100, 1)
-		if (linked.warning_point == 0)
-			message_admins("[key_name(usr)] switched off warning reports on [linked]",0,1)
-			log_game("[linked] warnings were switched off by [key_name(usr)]")
+	if(href_list["cutoff_point"])
+		var/new_cutoff = input(usr,"Enter new cutoff point in Kelvin","Cutoff point",linked.cutoff_temp) as num
+		linked.cutoff_temp = between(0, new_cutoff, linked.max_temp)
+		if (linked.cutoff_temp == 0)
+			message_admins("[key_name(usr)] switched off auto shutdown on [linked]",0,1)
+			log_game("[linked] auto shutdown was switched off by [key_name(usr)]")
 
 	usr.set_machine(src)
 	src.add_fingerprint(usr)

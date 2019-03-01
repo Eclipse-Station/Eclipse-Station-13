@@ -16,10 +16,10 @@
 	var/gasefficiency = 0.5
 	var/health = 3000
 	var/max_health = 3000
-	var/warning_point = 0.75
 	var/warning_delay = 20
 	var/meltwarned = 0
 	var/lastwarning = 0
+	var/cutoff_temp = 600
 	var/rod_capacity = 9
 	var/mapped_in = 0
 	// Material properties from Tungsten Carbide, otherwise core'll be too weak.
@@ -37,7 +37,8 @@
 	rods = new()
 	pipes = new()
 	radio = new /obj/item/device/radio{channels=list("Engineering")
-		icon = 'icons/obj/robot_component.dmi'}(src)
+		icon = 'icons/obj/robot_component.dmi'
+		icon_state = "radio"}(src)
 	if (mapped_in)
 		anchor()
 
@@ -58,19 +59,28 @@
 	if(!istype(L)) 	//We are in a crate or somewhere that isn't turf, if we return to turf resume processing but stop for now.
 		return
 
-	//announce_warning()
-
 	var/decay_heat = 0
 	var/activerods = 0
+	var/disabledrods = 0
+	var/meltedrods = 0
 	if(rods.len > 0)
 		for(var/i=1,i<=rods.len,i++)
 			var/obj/item/weapon/fuelrod/rod = rods[i]
+			if (rod.is_melted())
+				meltedrods++
+			if(cutoff_temp > 0 && rod.reflective && temperature > cutoff_temp && rod.insertion > 0)
+				rod.insertion = 0
+				disabledrods++
 			if(rod.life > 0)
 				decay_heat += rod.tick_life(decay_archived > 0 ? 1 : 0)
 				if(rod.reflective)
 					activerods += rod.get_insertion()
 				else
 					activerods -= rod.get_insertion()
+		if(disabledrods > 0)
+			radio.autosay("Core exceeded temperature bounds, and has been shut down.", "Nuclear Monitor", "Engineering")
+		if (meltedrods > 0)
+			announce_warning(meltedrods)
 
 	decay_archived = decay_heat
 	add_thermal_energy(decay_heat * activerods)
@@ -121,7 +131,7 @@
 
 	data["core_temp"] = round(temperature)
 	data["max_temp"] = round(max_temp)
-	data["warn_point"] = round(warning_point * 100)
+	data["cutoff_point"] = cutoff_temp
 
 	data["rods"] = new /list(rods.len)
 	for(var/i=1,i<=rods.len,i++)
@@ -144,7 +154,10 @@
 		ui.set_auto_update(1)
 
 /obj/machinery/power/fission/Topic(href,href_list)
-	if(..()) return 1
+	if(..())
+		return 1
+	if(exploded)
+		return 1
 
 	if(href_list["rod_eject"])
 		var/obj/item/weapon/fuelrod/rod = locate(href_list["rod_eject"])
@@ -157,23 +170,22 @@
 			var/new_insersion = input(usr,"Enter new insertion (0-100)%","Insertion control",rod.insertion * 100) as num
 			rod.insertion = between(0, new_insersion / 100, 1)
 
-	if(href_list["warn_point"])
-		var/new_warning = input(usr,"Enter new warning point (0-100)%","Warning point",warning_point * 100) as num
-		warning_point = between(0, new_warning / 100, 1)
-		if (warning_point == 0)
-			message_admins("[key_name(usr)] switched off warning reports on [src]",0,1)
-			log_game("[src] warnings were switched off by [key_name(usr)]")
+	if(href_list["cutoff_point"])
+		var/new_cutoff = input(usr,"Enter new cutoff point in Kelvin","Cutoff point",cutoff_temp) as num
+		cutoff_temp = between(0, new_cutoff, max_temp)
+		if (cutoff_temp == 0)
+			message_admins("[key_name(usr)] switched off auto shutdown on [src]",0,1)
+			log_game("[src] auto shutdown was switched off by [key_name(usr)]")
 
 	usr.set_machine(src)
 	src.add_fingerprint(usr)
 
 /obj/machinery/power/fission/attackby(var/obj/item/weapon/W as obj, var/mob/user as mob)
-	if(!anchored)
-		if(istype(W, /obj/item/weapon/tool/wrench))
-			playsound(src.loc, 'sound/items/Ratchet.ogg', 50, 1)
-			user << "<span class='notice'>You fasten \the [src] into place</span>"
-			anchor()
-			return
+	add_fingerprint(user)
+	if(exploded)
+		return ..()
+
+	if(!anchored && !W.is_wrench())
 		return ..()
 
 	if(istype(W, /obj/item/device/multitool))
@@ -216,19 +228,19 @@
 			eject_rod(rod)
 		return
 
-	if(!istype(W, /obj/item/weapon/tool/wrench))
+	if(!W.is_wrench())
 		return ..()
 
-	add_fingerprint(user)
-
-	if(rods.len > 0)
+	if(anchored && rods.len > 0)
 		user << "<span class='warning'>You cannot unwrench \the [src], while it contains fuel rods.</span>"
 		return 1
 
-	playsound(src.loc, 'sound/items/Ratchet.ogg', 50, 1)
-	user << "<span class='notice'>You begin to unfasten \the [src]...</span>"
-	if (do_after(user, 40))
+	playsound(src, W.usesound, 75, 1)
+	if (!anchored || do_after(user, 40))
 		anchor()
+		user.visible_message("[user.name] [anchored ? "secures" : "unsecures"] the bolts holding [src.name] to the floor.", \
+				"You [anchored ? "secure" : "unsecure"] the bolts holding [src] to the floor.", \
+				"You hear a ratchet.")
 
 /obj/machinery/power/fission/proc/equalize(datum/gas_mixture/env, var/efficiency)
 	var/datum/gas_mixture/sharer = env.remove(efficiency * env.total_moles)
@@ -326,31 +338,14 @@
 		anchored = 0
 		pipes = new()
 
-/* /obj/machinery/power/fission/proc/announce_warning()
-	lastwarning = world.timeofday
-	var/integrity = get_integrity()
-	var/alert_msg = " Integrity at [integrity]%"
-
+/obj/machinery/power/fission/proc/announce_warning(var/meltedrods)
 	if((world.timeofday - lastwarning) >= warning_delay * 10)
 		lastwarning = world.timeofday
 		if(src.powered())
-
-	if(temperature > (max_temp * warning_point))
-		alert_msg = emergency_alert + alert_msg
-		lastwarning = world.timeofday - WARNING_DELAY * 4
-	else if(health < health_archived) // Losing health.
-		alert_msg = warning_alert + alert_msg
-	else
-		alert_msg = null
-	if(alert_msg)
-		radio.autosay(alert_msg, "Nuclear Monitor", "Engineering")
-		//Public alerts
-		if((damage > emergency_point) && !public_alert)
-			radio.autosay("WARNING: SUPERMATTER CRYSTAL DELAMINATION IMMINENT!", "Nuclear Monitor")
-			public_alert = 1
-		else if(public_alert)
-			radio.autosay(alert_msg, "Nuclear Monitor")
-			public_alert = 0*/
+			if (meltedrods == 1)
+				radio.autosay("Warning! A rod has melted!", "Nuclear Monitor", "Engineering")
+			else
+				radio.autosay("Warning! [meltedrods] rods have melted!", "Nuclear Monitor", "Engineering")
 
 /obj/machinery/power/fission/proc/go_nuclear()
 	if (health < 1 && !exploded)
@@ -360,6 +355,8 @@
 		message_admins("[name] exploding in 15 seconds at ([x],[y],[z] - <A HREF='?_src_=holder;adminplayerobservecoodjump=1;X=[x];Y=[y];Z=[z]'>JMP</a>)",0,1)
 		log_game("[name] exploded at ([x],[y],[z])")
 		exploded = 1
+		if(!anchored)
+			anchor()
 		var/decaying_rods = 0
 		var/decay_heat = 0
 		for(var/i=1,i<=rods.len,i++)
@@ -369,6 +366,7 @@
 				decaying_rods++
 			rod.meltdown()
 		var/rad_power = decay_heat / REACTOR_RADS_TO_MJ
+		message_admins("btw [name] explosion power is: [rad_power]")
 		if(announce)
 			world << sound('sound/effects/carter_alarm_cut.ogg')
 			spawn(1 SECONDS)
@@ -376,6 +374,7 @@
 
 		// Give the alarm time to play. Then... FLASH! AH-AH!
 		spawn(15 SECONDS)
+			radiation_repository.z_radiate(locate(1, 1, z), rad_power, 1)
 			for(var/mob/living/mob in living_mob_list)
 				var/turf/T = get_turf(mob)
 				if(T && (loc.z == T.z))
@@ -408,9 +407,8 @@
 								else if(E.damage > 10)
 									H << "<span class='warning'>Your eyes burn.</span>"
 						if (!H.isSynthetic())
-							H.apply_damage(max((rads / 10) * H.species.radiation_mod, 0), BURN)
-					mob.apply_effect(rads, IRRADIATE)
-					mob.radiation += max(rads / 10, 0) // Not even a radsuit can save you now.
+							H.radiation += max(rads / 10, 0) // Not even a radsuit can save you now.
+						H.apply_damage(max((rads / 10) * H.species.radiation_mod, 0), BURN) // Radiation burns
 
 		// Some engines just want to see the world burn.
 		spawn(17 SECONDS)
