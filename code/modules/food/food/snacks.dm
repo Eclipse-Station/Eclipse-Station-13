@@ -4445,33 +4445,37 @@ END CITADEL CHANGE */
 	nutriment_amt = 2
 
 /obj/item/weapon/reagent_containers/food/snacks/chip/on_consume(mob/M as mob)
+	. = ..()
 	if(reagents && reagents.total_volume)
 		icon_state = bitten_state
-	. = ..()
 
 /obj/item/weapon/reagent_containers/food/snacks/chip/salsa
 	name = "salsa chip"
 	desc = "A portion sized chip good for dipping. This one has salsa on it."
 	icon_state = "chip_salsa"
 	bitten_state = "chip_half"
+	nutriment_desc = list("fried tortilla chips" = 1, "salsa" = 1)
 
 /obj/item/weapon/reagent_containers/food/snacks/chip/guac
 	name = "guac chip"
 	desc = "A portion sized chip good for dipping. This one has guac on it."
 	icon_state = "chip_guac"
 	bitten_state = "chip_half"
+	nutriment_desc = list("fried tortilla chips" = 1, "guacamole" = 1)
 
 /obj/item/weapon/reagent_containers/food/snacks/chip/cheese
 	name = "cheese chip"
 	desc = "A portion sized chip good for dipping. This one has cheese sauce on it."
 	icon_state = "chip_cheese"
 	bitten_state = "chip_half"
+	nutriment_desc = list("fried tortilla chips" = 1, "cheese" = 1)
 
 /obj/item/weapon/reagent_containers/food/snacks/chip/nacho
 	name = "nacho chip"
 	desc = "A nacho ship stray from a plate of cheesy nachos."
 	icon_state = "chip_nacho"
 	bitten_state = "chip_half"
+	nutriment_desc = list("nacho chips" = 2)
 
 /obj/item/weapon/reagent_containers/food/snacks/chip/nacho/salsa
 	name = "nacho chip"
@@ -4505,8 +4509,10 @@ END CITADEL CHANGE */
 
 /obj/item/weapon/reagent_containers/food/snacks/chipplate/attack_hand(mob/user as mob)
 	var/obj/item/weapon/reagent_containers/food/snacks/returningitem = new vendingobject(loc)
+	if(!returningitem.reagents)
+		returningitem.initialize()
 	returningitem.reagents.clear_reagents()
-	reagents.trans_to(returningitem, bitesize)
+	reagents.trans_to_holder(returningitem.reagents, bitesize)
 	returningitem.bitesize = bitesize/2
 	user.put_in_hands(returningitem)
 	if (reagents && reagents.total_volume)
@@ -4556,21 +4562,23 @@ END CITADEL CHANGE */
 	else if (istype(item,/obj/item/weapon/reagent_containers/food/snacks/chip) && (item.icon_state == "chip" || item.icon_state == "chip_half"))
 		returningitem = new chiptrans(src)
 	if(returningitem)
+		if(!returningitem.reagents)
+			returningitem.initialize() // initialise it so things don't break
 		returningitem.reagents.clear_reagents() //Clear the new chip
 		var/memed = 0
-		item.reagents.trans_to(returningitem, item.reagents.total_volume) //Old chip to new chip
+		item.reagents.trans_to_holder(returningitem.reagents, item.reagents.total_volume) //Old chip to new chip
 		if(item.icon_state == "chip_half")
 			returningitem.icon_state = "[returningitem.icon_state]_half"
 			returningitem.bitesize = Clamp(returningitem.reagents.total_volume,1,10)
 		else if(prob(1))
 			memed = 1
-			user << "You scoop up some dip with the chip, but mid-scop, the chip breaks off into the dreadful abyss of dip, never to be seen again..."
+			user << "You scoop up some dip with the chip, but mid-scoop, the chip breaks off into the dreadful abyss of dip, never to be seen again..."
 			returningitem.icon_state = "[returningitem.icon_state]_half"
 			returningitem.bitesize = Clamp(returningitem.reagents.total_volume,1,10)
 		else
 			returningitem.bitesize = Clamp(returningitem.reagents.total_volume*0.5,1,10)
 		qdel(item)
-		reagents.trans_to(returningitem, bitesize) //Dip to new chip
+		reagents.trans_to_holder(returningitem.reagents, bitesize) //Dip to new chip
 		user.put_in_hands(returningitem)
 
 		if (reagents && reagents.total_volume)
@@ -4599,7 +4607,7 @@ END CITADEL CHANGE */
 	nachotrans = /obj/item/weapon/reagent_containers/food/snacks/chip/nacho/guac
 	chiptrans = /obj/item/weapon/reagent_containers/food/snacks/chip/guac
 	icon_state = "dip_guac"
-	nutriment_desc = list("guacmole" = 20)
+	nutriment_desc = list("guacamole" = 20)
 	nutriment_amt = 20
 
 //burritos
