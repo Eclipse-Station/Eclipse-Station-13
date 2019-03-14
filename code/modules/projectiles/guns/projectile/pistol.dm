@@ -258,7 +258,7 @@
 
 /obj/item/weapon/gun/projectile/pirate
 	name = "zip gun"
-	desc = "Little more than a barrel, handle, and firing mechanism, cheap makeshift firearms like this one are not uncommon in frontier systems.Uses..basically any bullet."
+	desc = "Little more than a barrel, handle, and firing mechanism, cheap makeshift firearms like this one are not uncommon in frontier systems."
 	icon_state = "sawnshotgun"
 	item_state = "sawnshotgun"
 	handle_casings = CYCLE_CASINGS //player has to take the old casing out manually before reloading
@@ -302,12 +302,6 @@
 	max_shells = 2
 	ammo_type = /obj/item/ammo_casing/a357
 	projectile_type = /obj/item/projectile/bullet/pistol/strong
-
-
-	firemodes = list(
-		list(mode_name="Quick", burst=1, fire_delay=0, burst_accuracy = list(-4.0), dispersion = list(-4.0)),
-		list(mode_name="Aimed", burst=1, burst_delay=2, fire_delay=4, move_delay=4),
-		)
 
 /obj/item/weapon/gun/projectile/luger
 	name = "\improper P08 Luger"

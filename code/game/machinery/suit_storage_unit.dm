@@ -987,184 +987,27 @@
 		if(helmet) helmet.refit_for_species(target_species)
 		if(suit) suit.refit_for_species(target_species)
 
-	switch(target_department)
-		if("Engineering")
-			if(helmet)
-				helmet.name = "engineering voidsuit helmet"
-				helmet.icon_state = "rig0-engineering"
-				helmet.item_state = "rig0-engineering"
-			if(suit)
-				suit.name = "engineering voidsuit"
-				suit.icon_state = "rig-engineering"
-				suit.item_state = "rig-engineering"
-				suit.item_state_slots[slot_r_hand_str] = "eng_voidsuit"
-				suit.item_state_slots[slot_l_hand_str] = "eng_voidsuit"
-		if("Mining")
-			if(helmet)
-				helmet.name = "mining voidsuit helmet"
-				helmet.icon_state = "rig0-mining"
-				helmet.item_state = "rig0-mining"
-			if(suit)
-				suit.name = "mining voidsuit"
-				suit.icon_state = "rig-mining"
-				suit.item_state = "rig-mining"
-				suit.item_state_slots[slot_r_hand_str] = "mining_voidsuit"
-				suit.item_state_slots[slot_l_hand_str] = "mining_voidsuit"
-		if("Medical")
-			if(helmet)
-				helmet.name = "medical voidsuit helmet"
-				helmet.icon_state = "rig0-medical"
-				helmet.item_state = "rig0-medical"
-			if(suit)
-				suit.name = "medical voidsuit"
-				suit.icon_state = "rig-medical"
-				suit.item_state = "rig-medical"
-				suit.item_state_slots[slot_r_hand_str] = "medical_voidsuit"
-				suit.item_state_slots[slot_l_hand_str] = "medical_voidsuit"
-		if("Security")
-			if(helmet)
-				helmet.name = "security voidsuit helmet"
-				helmet.icon_state = "rig0-sec"
-				helmet.item_state = "rig0-sec"
-			if(suit)
-				suit.name = "security voidsuit"
-				suit.icon_state = "rig-sec"
-				suit.item_state = "rig-sec"
-				suit.item_state_slots[slot_r_hand_str] = "sec_voidsuit"
-				suit.item_state_slots[slot_l_hand_str] = "sec_voidsuit"
-		if("Crowd Control")
-			if(helmet)
-				helmet.name = "crowd control voidsuit helmet"
-				helmet.icon_state = "rig0-sec_riot"
-				helmet.item_state = "rig0-sec_riot"
-			if(suit)
-				suit.name = "crowd control voidsuit"
-				suit.icon_state = "rig-sec_riot"
-				suit.item_state = "rig-sec_riot"
-				suit.item_state_slots[slot_r_hand_str] = "sec_voidsuit_riot"
-				suit.item_state_slots[slot_l_hand_str] = "sec_voidsuit_riot"
-		if("Atmos")
-			if(helmet)
-				helmet.name = "atmospherics voidsuit helmet"
-				helmet.icon_state = "rig0-atmos"
-				helmet.item_state = "rig0-atmos"
-			if(suit)
-				suit.name = "atmospherics voidsuit"
-				suit.icon_state = "rig-atmos"
-				suit.item_state = "rig-atmos"
-				suit.item_state_slots[slot_r_hand_str] = "atmos_voidsuit"
-				suit.item_state_slots[slot_l_hand_str] = "atmos_voidsuit"
-		if("HAZMAT")
-			if(helmet)
-				helmet.name = "HAZMAT voidsuit helmet"
-				helmet.icon_state = "rig0-engineering_rad"
-				helmet.item_state = "rig0-engineering_rad"
-			if(suit)
-				suit.name = "HAZMAT voidsuit"
-				suit.icon_state = "rig-engineering_rad"
-				suit.item_state = "rig-engineering_rad"
-				suit.item_state_slots[slot_r_hand_str] = "eng_voidsuit_rad"
-				suit.item_state_slots[slot_l_hand_str] = "eng_voidsuit_rad"
-		if("Construction")
-			if(helmet)
-				helmet.name = "Construction voidsuit helmet"
-				helmet.icon_state = "rig0-engineering_con"
-				helmet.item_state = "rig0-engineering_con"
-			if(suit)
-				suit.name = "Construction voidsuit"
-				suit.icon_state = "rig-engineering_con"
-				suit.item_state = "rig-engineering_con"
-				suit.item_state_slots[slot_r_hand_str] = "eng_voidsuit_con"
-				suit.item_state_slots[slot_l_hand_str] = "eng_voidsuit_con"
-		if("Biohazard")
-			if(helmet)
-				helmet.name = "Biohazard voidsuit helmet"
-				helmet.icon_state = "rig0-medical_bio"
-				helmet.item_state = "rig0-medical_bio"
-			if(suit)
-				suit.name = "Biohazard voidsuit"
-				suit.icon_state = "rig-medical_bio"
-				suit.item_state = "rig-medical_bio"
-				suit.item_state_slots[slot_r_hand_str] = "medical_voidsuit_bio"
-				suit.item_state_slots[slot_l_hand_str] = "medical_voidsuit_bio"
-		if("Emergency Medical Response")
-			if(helmet)
-				helmet.name = "emergency medical response voidsuit helmet"
-				helmet.icon_state = "rig0-medical_emt"
-				helmet.item_state = "rig0-medical_emt"
-			if(suit)
-				suit.name = "emergency medical response voidsuit"
-				suit.icon_state = "rig-medical_emt"
-				suit.item_state = "rig-medical_emt"
-				suit.item_state_slots[slot_r_hand_str] = "medical_voidsuit_emt"
-				suit.item_state_slots[slot_l_hand_str] = "medical_voidsuit_emt"
-		if("^%###^%$" || "Mercenary")
-			if(helmet)
-				helmet.name = "blood-red voidsuit helmet"
-				helmet.icon_state = "rig0-syndie"
-				helmet.item_state = "rig0-syndie"
-			if(suit)
-				suit.name = "blood-red voidsuit"
-				suit.item_state = "rig-syndie"
-				suit.icon_state = "rig-syndie"
-				suit.item_state_slots[slot_r_hand_str] = "syndie_voidsuit"
-				suit.item_state_slots[slot_l_hand_str] = "syndie_voidsuit"
-		if("Charring")
-			if(helmet)
-				helmet.name = "soot-covered voidsuit helmet"
-				helmet.icon_state = "rig0-firebug"
-				helmet.item_state = "rig0-firebug"
-			if(suit)
-				suit.name = "soot-covered voidsuit"
-				suit.item_state = "rig-firebug"
-				suit.icon_state = "rig-firebug"
-				suit.item_state_slots[slot_r_hand_str] = "rig-firebug"
-				suit.item_state_slots[slot_l_hand_str] = "rig-firebug"
-		if("Exploration")
-			if(helmet)
-				helmet.name = "exploration voidsuit helmet"
-				helmet.icon_state = "helm_explorer"
-				helmet.item_state = "helm_explorer"
-			if(suit)
-				suit.name = "exploration voidsuit"
-				suit.icon_state = "void_explorer"
-				suit.item_state = "void_explorer"
-				suit.item_state_slots[slot_r_hand_str] = "wiz_voidsuit"
-				suit.item_state_slots[slot_l_hand_str] = "wiz_voidsuit"
-		if("Old Exploration")
-			if(helmet)
-				helmet.name = "exploration voidsuit helmet"
-				helmet.icon_state = "helm_explorer2"
-				helmet.item_state = "helm_explorer2"
-			if(suit)
-				suit.name = "exploration voidsuit"
-				suit.icon_state = "void_explorer2"
-				suit.item_state = "void_explorer2"
-				suit.item_state_slots[slot_r_hand_str] = "wiz_voidsuit"
-				suit.item_state_slots[slot_l_hand_str] = "wiz_voidsuit"
-		if("Pilot")
-			if(helmet)
-				helmet.name = "pilot voidsuit helmet"
-				helmet.icon_state = "rig0_pilot"
-				helmet.item_state = "pilot_helm"
-			if(suit)
-				suit.name = "pilot voidsuit"
-				suit.icon_state = "rig-pilot"
-				suit.item_state = "rig-pilot"
-				suit.item_state_slots[slot_r_hand_str] = "sec_voidsuitTG"
-				suit.item_state_slots[slot_l_hand_str] = "sec_voidsuitTG"
-		if("Pilot Blue")
-			if(helmet)
-				helmet.name = "pilot voidsuit helmet"
-				helmet.icon_state = "rig0_pilot2"
-				helmet.item_state = "pilot_helm2"
-			if(suit)
-				suit.name = "pilot voidsuit"
-				suit.icon_state = "rig-pilot2"
-				suit.item_state = "rig-pilot2"
-				suit.item_state_slots[slot_r_hand_str] = "sec_voidsuitTG"
-				suit.item_state_slots[slot_l_hand_str] = "sec_voidsuitTG"
+	//AEIOU-Station Edit: Say hello to a less bloated way to do this. Lookup tables are in suit_storage_unit_vr.dm.
+	if(target_department)
+		if(helmet)
+			helmet.name = paintjobs_helmet[target_department][1]
+			helmet.icon_state = paintjobs_helmet[target_department][2]
+			helmet.item_state = paintjobs_helmet[target_department][3]
+		if(suit)
+			suit.name = paintjobs_suit[target_department][1]
+			suit.icon_state = paintjobs_suit[target_department][2]
+			suit.item_state = paintjobs_suit[target_department][3]
+			suit.item_state_slots[slot_r_hand_str] = paintjobs_suit[target_department][4]
+			suit.item_state_slots[slot_l_hand_str] = paintjobs_suit[target_department][4]
+			if(suit.helmet) // Another facet of this edit. Helmets inside suits are no longer ignored.
+				suit.helmet.name = paintjobs_helmet[target_department][1]
+				suit.helmet.icon_state = paintjobs_helmet[target_department][2]
+				suit.helmet.item_state = paintjobs_helmet[target_department][3]
 
 
-	if(helmet) helmet.name = "refitted [helmet.name]"
-	if(suit) suit.name = "refitted [suit.name]"
+	if(target_species != SPECIES_HUMAN) // The original model isn't "refitted"
+		if(helmet) helmet.name = "refitted [helmet.name]"
+		if(suit)
+			suit.name = "refitted [suit.name]"
+			if(suit.helmet) suit.helmet.name = "refitted [suit.helmet.name]"
+	//AEIOU-Station Edit End

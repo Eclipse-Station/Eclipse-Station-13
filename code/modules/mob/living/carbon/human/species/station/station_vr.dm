@@ -75,9 +75,9 @@
 	num_alternate_languages = 3
 	secondary_langs = list(LANGUAGE_SKRELLIAN)
 	name_language = LANGUAGE_SKRELLIAN
+	assisted_langs = list(LANGUAGE_EAL, LANGUAGE_TERMINUS, LANGUAGE_SKRELLIANFAR, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX)	//AEIOU edit: Removes Skrellian from assisted languages as a patch
 	color_mult = 1
 	inherent_verbs = list(/mob/living/proc/shred_limb)
-	assisted_langs = list(LANGUAGE_EAL, LANGUAGE_TERMINUS, LANGUAGE_SKRELLIANFAR, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX)	//AEIOU edit: Removes Skrellian from assisted languages as a patch
 
 	min_age = 18
 	max_age = 80
@@ -256,13 +256,14 @@
 
 	primitive_form = "Wolpin"
 
-	/* AEIOU EDIT - Re-added and updated with new GOON CODE sounds. Check the License file for details. - HTG */
+		/* AEIOU EDIT - Re-added and updated with new GOON CODE sounds. Check the License file for details.*/
 	speech_sounds = list('sound/goonstation/voice/growl1.ogg','sound/goonstation/voice/growl2.ogg','sound/goonstation/voice/growl3.ogg')
 	speech_chance = 20
 
 	scream_verb = "howls"
 	male_scream_sound = 'sound/goonstation/voice/howl.ogg'
 	female_scream_sound = 'sound/goonstation/voice/howl.ogg'
+
 
 
 	spawn_flags = SPECIES_CAN_JOIN
@@ -399,7 +400,7 @@ datum/species/harpy
 
 	blurb = "An Avian species, coming from a distant planet, the Rapalas are the very proud race.\
 	Sol researchers have commented on them having a very close resemblance to the mythical race called 'Harpies',\
-	who are known for having massive winged arms and talons as feet. They've been clocked at speeds of over 35 miler per hour chasing the planet's many fish-like fauna.\
+	who are known for having massive winged arms and talons as feet. They've been clocked at speeds of over 35 miles per hour chasing the planet's many fish-like fauna.\
 	The Rapalan's home-world 'Verita' is a strangely habitable gas giant, while no physical earth exists, there are fertile floating islands orbiting around the planet from past asteroid activity."
 
 	//primitive_form = "Saru"

@@ -329,13 +329,6 @@
 	caliber = "rocket"
 	matter = list(DEFAULT_WALL_MATERIAL = 10000)
 
-/obj/item/ammo_casing/HEwarhead
-	name = "explosive warhead"
-	desc = "A high explosive warhead designed to be fired from a launcher."
-	icon_state = "rocketshell"
-	projectile_type = /obj/item/missile
-	caliber = "HEwarhead"
-
 /obj/item/ammo_casing/cap
 	name = "cap"
 	desc = "A cap for children toys."
