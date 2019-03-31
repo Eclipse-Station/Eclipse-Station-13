@@ -1,0 +1,1579 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/turf/template_noop,
+/area/submap/Hunted)
+"ab" = (
+/turf/simulated/wall/log_sif,
+/area/submap/Hunted)
+"ac" = (
+/mob/living/simple_animal/hostile/bear/brown{
+	desc = "Stronger than the average bear.";
+	health = 240;
+	icon_state = "brownbear-1";
+	maxHealth = 240;
+	name = "sif grizzly";
+	taser_kill = 0
+	},
+/turf/simulated/floor/wood/sif,
+/area/submap/Hunted)
+"ad" = (
+/turf/simulated/floor/outdoors/grass/sif/forest/planetuse,
+/area/submap/Hunted)
+"ae" = (
+/obj/item/weapon/beartrap/autotrap{
+	alpha = 140;
+	color = "#35c1cd";
+	desc = "A mechanically-activated leg trap that has been bolted down. This one has been cleverly painted to blend in with the growth.";
+	name = "camouflaged trap"
+	},
+/turf/simulated/floor/outdoors/grass/sif/forest/planetuse,
+/area/submap/Hunted)
+"af" = (
+/obj/structure/undies_wardrobe,
+/turf/simulated/floor/wood/sif,
+/area/submap/Hunted)
+"ag" = (
+/turf/simulated/floor/wood/sif{
+	icon_state = "sifwood_broken5"
+	},
+/area/submap/Hunted)
+"ah" = (
+/obj/structure/bed,
+/turf/simulated/floor/wood/sif,
+/area/submap/Hunted)
+"ai" = (
+/obj/item/weapon/beartrap/autotrap{
+	alpha = 140;
+	color = "#35c1cd";
+	desc = "A mechanically-activated leg trap that has been bolted down. This one has been cleverly painted to blend in with the growth.";
+	name = "camouflaged trap"
+	},
+/turf/template_noop,
+/area/submap/Hunted)
+"aj" = (
+/obj/structure/sink/kitchen{
+	dir = 4;
+	icon_state = "sink_alt";
+	pixel_x = 0
+	},
+/turf/simulated/floor/wood/sif,
+/area/submap/Hunted)
+"ak" = (
+/obj/structure/closet/cabinet,
+/obj/random/multiple/gun/projectile/shotgun,
+/turf/simulated/floor/wood/sif,
+/area/submap/Hunted)
+"al" = (
+/obj/effect/gibspawner/human,
+/obj/effect/decal/remains/human,
+/turf/simulated/floor/wood/sif,
+/area/submap/Hunted)
+"am" = (
+/obj/item/device/flashlight/lantern,
+/turf/simulated/floor/wood/sif,
+/area/submap/Hunted)
+"an" = (
+/obj/structure/loot_pile/maint/trash,
+/turf/simulated/floor/outdoors/grass/sif/forest/planetuse,
+/area/submap/Hunted)
+"ao" = (
+/obj/structure/closet/cabinet,
+/turf/simulated/floor/wood/sif,
+/area/submap/Hunted)
+"ap" = (
+/obj/effect/decal/remains/human,
+/obj/item/clothing/suit/storage/hooded/wintercoat,
+/obj/item/clothing/shoes/boots/winter,
+/turf/simulated/floor/wood/sif,
+/area/submap/Hunted)
+"aq" = (
+/obj/effect/decal/cleanable/blood/tracks/paw{
+	color = "#FF0000";
+	dir = 1;
+	icon_state = "claw1"
+	},
+/obj/item/weapon/bone/ribs,
+/turf/simulated/floor/wood/sif,
+/area/submap/Hunted)
+"ar" = (
+/obj/effect/decal/cleanable/blood/tracks/paw{
+	color = "#FF0000";
+	dir = 4;
+	icon_state = "claw2"
+	},
+/obj/effect/decal/cleanable/blood/tracks/paw{
+	color = "#FF0000";
+	dir = 4;
+	icon_state = "claw1"
+	},
+/turf/simulated/floor/wood/sif{
+	icon_state = "sifwood_broken3"
+	},
+/area/submap/Hunted)
+"as" = (
+/mob/living/simple_animal/hostile/bear/brown{
+	health = 0;
+	icon_state = "brownbear-dead";
+	was_bloodied = 1
+	},
+/turf/simulated/floor/wood/sif,
+/area/submap/Hunted)
+"at" = (
+/obj/effect/gibspawner/human,
+/turf/simulated/floor/wood/sif,
+/area/submap/Hunted)
+"au" = (
+/turf/simulated/floor/wood/sif,
+/area/submap/Hunted)
+"av" = (
+/turf/simulated/floor/wood/sif{
+	icon_state = "sifwood_broken3"
+	},
+/area/submap/Hunted)
+"aw" = (
+/obj/effect/decal/cleanable/blood/tracks/paw{
+	color = "#FF0000";
+	dir = 1;
+	icon_state = "claw1"
+	},
+/obj/effect/decal/cleanable/blood/tracks/paw{
+	color = "#FF0000";
+	dir = 1;
+	icon_state = "claw2"
+	},
+/turf/simulated/floor/wood/sif,
+/area/submap/Hunted)
+"ax" = (
+/obj/item/device/flashlight/lantern,
+/obj/structure/table/woodentable,
+/turf/simulated/floor/wood/sif,
+/area/submap/Hunted)
+"ay" = (
+/obj/item/stack/material/log/sif,
+/turf/template_noop,
+/area/submap/Hunted)
+"az" = (
+/obj/effect/wingrille_spawn,
+/turf/simulated/floor/wood/sif,
+/area/submap/Hunted)
+"aA" = (
+/obj/structure/table/woodentable,
+/turf/simulated/floor/wood/sif,
+/area/submap/Hunted)
+"aB" = (
+/obj/structure/closet/crate/trashcart,
+/obj/item/trash/chips,
+/obj/item/trash/liquidfood,
+/obj/item/trash/sosjerky,
+/obj/item/trash/tastybread,
+/turf/simulated/floor/outdoors/grass/sif/forest/planetuse,
+/area/submap/Hunted)
+"aC" = (
+/turf/simulated/floor/wood/sif{
+	icon_state = "sifwood_broken0"
+	},
+/area/submap/Hunted)
+"aD" = (
+/obj/effect/decal/cleanable/blood/tracks/paw{
+	color = "#FF0000";
+	dir = 1;
+	icon_state = "claw1"
+	},
+/obj/effect/decal/cleanable/blood/splatter/animated,
+/turf/simulated/floor/wood/sif,
+/area/submap/Hunted)
+"aE" = (
+/obj/structure/simple_door/sifwood,
+/turf/simulated/floor/wood/sif,
+/area/submap/Hunted)
+"aF" = (
+/obj/structure/bonfire/permanent/sifwood,
+/obj/item/trash/waffles,
+/turf/simulated/floor/outdoors/grass/sif/forest/planetuse,
+/area/submap/Hunted)
+"aG" = (
+/obj/item/stack/material/log/sif,
+/turf/simulated/floor/outdoors/grass/sif/forest/planetuse,
+/area/submap/Hunted)
+"aH" = (
+/obj/structure/bed,
+/obj/effect/decal/remains/human,
+/obj/effect/decal/cleanable/blood/splatter/animated,
+/obj/effect/gibspawner/human,
+/obj/item/clothing/suit/storage/hooded/wintercoat,
+/obj/item/clothing/shoes/boots/winter,
+/turf/simulated/floor/wood/sif,
+/area/submap/Hunted)
+"aI" = (
+/obj/structure/barricade{
+	material = /material/wood/sif
+	},
+/turf/simulated/floor/wood/sif,
+/area/submap/Hunted)
+"aJ" = (
+/obj/effect/decal/cleanable/blood/tracks/paw{
+	color = "#FF0000";
+	dir = 1;
+	icon_state = "claw1"
+	},
+/obj/effect/decal/cleanable/blood/tracks/paw{
+	color = "#FF0000";
+	dir = 1;
+	icon_state = "claw2"
+	},
+/obj/effect/decal/cleanable/blood/splatter/animated,
+/turf/simulated/floor/wood/sif,
+/area/submap/Hunted)
+"aK" = (
+/obj/fiftyspawner/sifwood,
+/turf/simulated/floor/outdoors/grass/sif/forest/planetuse,
+/area/submap/Hunted)
+"aL" = (
+/obj/structure/reagent_dispensers/fueltank,
+/turf/simulated/floor/outdoors/grass/sif/forest/planetuse,
+/area/submap/Hunted)
+"aM" = (
+/obj/structure/closet/crate{
+	opened = 1
+	},
+/turf/simulated/floor/outdoors/grass/sif/forest/planetuse,
+/area/submap/Hunted)
+"aN" = (
+/obj/item/weapon/gun/projectile/shotgun/doublebarrel/sawn,
+/obj/structure/table/woodentable,
+/turf/simulated/floor/outdoors/grass/sif/forest/planetuse,
+/area/submap/Hunted)
+"aO" = (
+/obj/item/weapon/material/shard{
+	icon_state = "medium"
+	},
+/obj/structure/table/woodentable,
+/turf/simulated/floor/outdoors/grass/sif/forest/planetuse,
+/area/submap/Hunted)
+"aP" = (
+/obj/item/weapon/bone/leg,
+/turf/simulated/floor/wood/sif{
+	icon_state = "sifwood_broken_4"
+	},
+/area/submap/Hunted)
+"aQ" = (
+/obj/effect/decal/remains/human,
+/obj/item/clothing/suit/storage/hooded/wintercoat,
+/obj/item/clothing/shoes/boots/winter,
+/obj/effect/decal/cleanable/blood/splatter/animated,
+/turf/simulated/floor/wood/sif,
+/area/submap/Hunted)
+"aR" = (
+/obj/effect/decal/cleanable/blood/tracks/paw{
+	color = "#FF0000";
+	dir = 1;
+	icon_state = "claw1"
+	},
+/obj/effect/decal/cleanable/blood/tracks/paw{
+	color = "#FF0000";
+	dir = 1;
+	icon_state = "claw2"
+	},
+/mob/living/simple_animal/hostile/bear/brown{
+	health = 0;
+	icon_state = "brownbear-dead";
+	was_bloodied = 1
+	},
+/turf/simulated/floor/wood/sif{
+	icon_state = "sifwood_broken3"
+	},
+/area/submap/Hunted)
+"aS" = (
+/obj/item/stack/material/plastic{
+	amount = 50
+	},
+/obj/item/weapon/weldingtool,
+/obj/structure/table/woodentable,
+/turf/simulated/floor/outdoors/grass/sif/forest/planetuse,
+/area/submap/Hunted)
+"aT" = (
+/obj/item/stack/material/log/sif,
+/obj/item/stack/material/log/sif,
+/turf/simulated/floor/outdoors/grass/sif/forest/planetuse,
+/area/submap/Hunted)
+"aU" = (
+/obj/structure/closet/crate,
+/turf/simulated/floor/outdoors/grass/sif/forest/planetuse,
+/area/submap/Hunted)
+"aV" = (
+/obj/item/weapon/material/shard{
+	icon_state = "small"
+	},
+/turf/simulated/floor/outdoors/grass/sif/forest/planetuse,
+/area/submap/Hunted)
+"aW" = (
+/obj/item/weapon/crossbowframe,
+/obj/structure/table/woodentable,
+/turf/simulated/floor/outdoors/grass/sif/forest/planetuse,
+/area/submap/Hunted)
+"aX" = (
+/obj/effect/decal/cleanable/blood/splatter/animated,
+/turf/simulated/floor/wood/sif,
+/area/submap/Hunted)
+"aY" = (
+/obj/effect/decal/cleanable/blood/tracks/paw{
+	color = "#FF0000";
+	icon_state = "claw1"
+	},
+/turf/simulated/floor/wood/sif{
+	icon_state = "sifwood_broken1"
+	},
+/area/submap/Hunted)
+"aZ" = (
+/obj/effect/decal/cleanable/blood/tracks/paw{
+	color = "#FF0000";
+	dir = 4;
+	icon_state = "claw1"
+	},
+/obj/effect/decal/cleanable/blood/tracks/paw{
+	color = "#FF0000";
+	dir = 4;
+	icon_state = "claw2"
+	},
+/turf/simulated/floor/wood/sif,
+/area/submap/Hunted)
+"ba" = (
+/obj/effect/decal/cleanable/blood/tracks/paw{
+	color = "#FF0000";
+	dir = 4;
+	icon_state = "claw2"
+	},
+/turf/simulated/floor/wood/sif,
+/area/submap/Hunted)
+"bb" = (
+/obj/item/weapon/tool/screwdriver,
+/obj/item/weapon/tool/wrench,
+/obj/structure/table/woodentable,
+/turf/simulated/floor/outdoors/grass/sif/forest/planetuse,
+/area/submap/Hunted)
+"bc" = (
+/obj/item/stack/material/log/sif,
+/obj/structure/railing,
+/turf/template_noop,
+/area/submap/Hunted)
+"bd" = (
+/obj/structure/railing,
+/turf/simulated/floor/outdoors/grass/sif/forest/planetuse,
+/area/submap/Hunted)
+"be" = (
+/obj/structure/railing,
+/turf/simulated/floor/outdoors/dirt,
+/area/submap/Hunted)
+"bf" = (
+/obj/effect/decal/cleanable/blood/tracks/footprints{
+	icon_state = "wheels"
+	},
+/turf/simulated/floor/wood/sif,
+/area/submap/Hunted)
+"bg" = (
+/obj/item/clothing/shoes/boots/jungle,
+/turf/simulated/floor/wood/sif,
+/area/submap/Hunted)
+"bh" = (
+/obj/structure/bed/chair/wood,
+/turf/simulated/floor/wood/sif,
+/area/submap/Hunted)
+"bi" = (
+/obj/effect/decal/cleanable/blood/splatter/animated,
+/turf/simulated/floor/outdoors/dirt,
+/area/submap/Hunted)
+"bj" = (
+/obj/item/weapon/stool{
+	material = /material/wood/sif
+	},
+/turf/simulated/floor/outdoors/grass/sif/forest/planetuse,
+/area/submap/Hunted)
+"bk" = (
+/obj/structure/table/woodentable,
+/turf/simulated/floor/outdoors/grass/sif/forest/planetuse,
+/area/submap/Hunted)
+"bl" = (
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/outdoors/dirt,
+/area/submap/Hunted)
+"bm" = (
+/obj/item/weapon/bone,
+/turf/simulated/floor/outdoors/dirt,
+/area/submap/Hunted)
+"bn" = (
+/obj/structure/table/woodentable,
+/obj/structure/reagent_dispensers/beerkeg,
+/turf/simulated/floor/outdoors/grass/sif/forest/planetuse,
+/area/submap/Hunted)
+"bo" = (
+/obj/effect/decal/cleanable/blood/tracks{
+	icon_state = "human1"
+	},
+/turf/simulated/floor/wood/sif,
+/area/submap/Hunted)
+"bp" = (
+/obj/item/weapon/bone/ribs,
+/turf/simulated/floor/outdoors/dirt,
+/area/submap/Hunted)
+"bq" = (
+/obj/effect/decal/cleanable/blood{
+	icon_state = "u_dangerous_l"
+	},
+/turf/simulated/floor/outdoors/dirt,
+/area/submap/Hunted)
+"br" = (
+/obj/machinery/microwave{
+	use_power = 0
+	},
+/turf/simulated/floor/wood/sif,
+/area/submap/Hunted)
+"bs" = (
+/obj/item/weapon/reagent_containers/food/snacks/badrecipe,
+/obj/item/weapon/reagent_containers/food/snacks/beans,
+/obj/structure/table/woodentable,
+/turf/simulated/floor/wood/sif,
+/area/submap/Hunted)
+"bt" = (
+/obj/item/weapon/stool{
+	material = /material/wood/sif
+	},
+/turf/simulated/floor/wood/sif,
+/area/submap/Hunted)
+"bu" = (
+/obj/structure/bed/chair/comfy/brown,
+/turf/simulated/floor/wood/sif,
+/area/submap/Hunted)
+"bv" = (
+/obj/structure/coatrack{
+	coat = /obj/item/clothing/suit/storage/det_trench
+	},
+/obj/item/weapon/staff/broom,
+/turf/simulated/floor/wood/sif,
+/area/submap/Hunted)
+"bw" = (
+/obj/effect/decal/cleanable/blood/tracks/paw{
+	color = "#FF0000";
+	dir = 1;
+	icon_state = "claw1"
+	},
+/obj/effect/decal/cleanable/blood/tracks/paw{
+	color = "#FF0000";
+	dir = 1;
+	icon_state = "claw2"
+	},
+/turf/simulated/floor/wood/sif{
+	icon_state = "sifwood_broken2"
+	},
+/area/submap/Hunted)
+"bx" = (
+/obj/random/toolbox,
+/obj/structure/table/woodentable,
+/turf/simulated/floor/outdoors/grass/sif/forest/planetuse,
+/area/submap/Hunted)
+"by" = (
+/obj/structure/bed/chair/comfy/brown{
+	dir = 4
+	},
+/turf/simulated/floor/wood/sif,
+/area/submap/Hunted)
+"bz" = (
+/obj/item/stack/material/log/sif,
+/turf/simulated/floor/outdoors/dirt,
+/area/submap/Hunted)
+"bA" = (
+/obj/structure/railing{
+	icon_state = "railing0";
+	dir = 1
+	},
+/turf/template_noop,
+/area/submap/Hunted)
+"bB" = (
+/obj/structure/closet/secure_closet/freezer/fridge,
+/obj/item/weapon/reagent_containers/food/drinks/bottle/orangejuice,
+/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer,
+/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer,
+/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer,
+/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer,
+/obj/item/weapon/reagent_containers/food/snacks/bearmeat,
+/obj/item/weapon/reagent_containers/food/snacks/bearmeat,
+/turf/simulated/floor/wood/sif,
+/area/submap/Hunted)
+"bC" = (
+/obj/structure/closet/crate/bin,
+/turf/simulated/floor/wood/sif,
+/area/submap/Hunted)
+"bD" = (
+/obj/structure/fireplace{
+	dir = 8;
+	icon_state = "fireplace";
+	pixel_x = 0
+	},
+/turf/simulated/floor/wood/sif,
+/area/submap/Hunted)
+"bE" = (
+/obj/structure/bed/chair/comfy/brown{
+	dir = 1
+	},
+/turf/simulated/floor/wood/sif,
+/area/submap/Hunted)
+"bF" = (
+/turf/simulated/floor/outdoors/dirt,
+/area/submap/Hunted)
+"bG" = (
+/turf/simulated/floor/reinforced,
+/area/submap/Hunted)
+"bH" = (
+/turf/simulated/wall/titanium,
+/area/submap/Hunted)
+"bI" = (
+/obj/structure/droppod_door{
+	icon_state = "droppod_door_closed";
+	dir = 4
+	},
+/turf/simulated/wall/titanium,
+/area/submap/Hunted)
+"bJ" = (
+/obj/structure/droppod_door,
+/turf/simulated/wall/titanium,
+/area/submap/Hunted)
+"bK" = (
+/obj/structure/droppod_door{
+	icon_state = "droppod_door_closed";
+	dir = 8
+	},
+/turf/simulated/wall/titanium,
+/area/submap/Hunted)
+"bL" = (
+/obj/item/weapon/reagent_containers/food/snacks/cheesiehonkers,
+/obj/structure/table/woodentable,
+/turf/simulated/floor/wood/sif,
+/area/submap/Hunted)
+"bM" = (
+/obj/item/weapon/material/shard,
+/turf/simulated/floor/outdoors/grass/sif/forest/planetuse,
+/area/submap/Hunted)
+"bN" = (
+/obj/structure/railing{
+	icon_state = "railing0";
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/grass/sif/forest/planetuse,
+/area/submap/Hunted)
+"bO" = (
+/obj/item/weapon/arrow/rod,
+/obj/item/weapon/arrow/rod,
+/obj/item/weapon/arrow/rod,
+/obj/structure/grille{
+	density = 0;
+	icon_state = "brokengrille"
+	},
+/obj/item/weapon/material/shard,
+/obj/item/weapon/material/shard{
+	icon_state = "small"
+	},
+/turf/simulated/floor/wood/sif,
+/area/submap/Hunted)
+"bP" = (
+/obj/effect/decal/cleanable/blood/tracks/paw{
+	color = "#FF0000";
+	icon_state = "claw1"
+	},
+/obj/effect/decal/cleanable/blood/splatter/animated,
+/turf/simulated/floor/wood/sif,
+/area/submap/Hunted)
+"bQ" = (
+/obj/item/weapon/storage/firstaid,
+/turf/simulated/floor/wood/sif,
+/area/submap/Hunted)
+"bR" = (
+/obj/structure/table/woodentable,
+/obj/fiftyspawner/leather,
+/turf/simulated/floor/wood/sif,
+/area/submap/Hunted)
+"bS" = (
+/obj/effect/decal/cleanable/blood{
+	color = "#FF0000";
+	icon_state = "mfloor3"
+	},
+/turf/simulated/floor/outdoors/dirt,
+/area/submap/Hunted)
+"bT" = (
+/obj/effect/decal/cleanable/blood/splatter/animated,
+/turf/simulated/floor/outdoors/grass/sif/forest/planetuse,
+/area/submap/Hunted)
+"bU" = (
+/obj/item/weapon/arrow/rod,
+/obj/item/weapon/arrow/rod,
+/obj/item/weapon/arrow/rod,
+/obj/effect/decal/cleanable/blood/splatter/animated,
+/turf/simulated/floor/outdoors/dirt,
+/area/submap/Hunted)
+"bV" = (
+/obj/effect/decal/cleanable/ash,
+/turf/simulated/floor/outdoors/grass/sif/forest/planetuse,
+/area/submap/Hunted)
+"bW" = (
+/obj/item/trash/candy/proteinbar,
+/turf/simulated/floor/outdoors/grass/sif/forest/planetuse,
+/area/submap/Hunted)
+
+(1,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+ai
+aa
+aa
+bj
+ad
+bj
+aa
+aa
+aa
+aa
+aa
+ai
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(2,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+bk
+bk
+bk
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+ay
+aa
+aa
+"}
+(3,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+ay
+aa
+aa
+aa
+aa
+bc
+bF
+bF
+bm
+bA
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(4,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+be
+bl
+bF
+bF
+bA
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(5,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+bi
+bU
+bF
+bp
+bS
+bN
+ad
+ad
+ad
+ad
+aG
+ad
+ad
+aa
+aa
+aa
+aa
+aa
+"}
+(6,1,1) = {"
+aa
+aa
+ad
+ad
+ad
+ae
+ad
+ad
+ad
+ad
+ad
+ad
+bT
+bd
+bF
+bq
+bz
+bN
+ad
+ad
+aG
+ad
+ad
+ad
+ad
+aa
+aa
+aa
+aa
+aa
+"}
+(7,1,1) = {"
+aa
+aa
+ad
+ab
+ab
+az
+ab
+ab
+ab
+bO
+ab
+ab
+ad
+bd
+bm
+bF
+bF
+bN
+ad
+aG
+ad
+ad
+ad
+ad
+aG
+aa
+aa
+aa
+aa
+aa
+"}
+(8,1,1) = {"
+aa
+aa
+ad
+ab
+af
+ag
+ah
+ab
+ax
+au
+af
+ab
+ad
+ad
+bn
+bk
+bk
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+bF
+aa
+aa
+aa
+aa
+"}
+(9,1,1) = {"
+aa
+aa
+ad
+ab
+ao
+at
+aA
+ab
+aX
+aP
+ak
+ab
+ad
+ad
+ad
+bj
+bj
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+bF
+ai
+bF
+aa
+bF
+bF
+"}
+(10,1,1) = {"
+aa
+aa
+ae
+az
+aQ
+au
+aX
+ab
+aH
+aY
+bP
+ab
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+bF
+bF
+ad
+aa
+aa
+bF
+aa
+bF
+bF
+"}
+(11,1,1) = {"
+aa
+aa
+ad
+ab
+am
+av
+ac
+ab
+ab
+ab
+ba
+ab
+ab
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+bF
+ad
+ad
+bH
+bK
+bH
+ad
+bF
+"}
+(12,1,1) = {"
+ad
+ad
+ad
+ab
+ah
+aX
+aC
+aE
+aI
+aC
+aZ
+au
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ad
+ad
+ad
+ad
+ad
+bG
+bG
+bG
+bJ
+aa
+bF
+"}
+(13,1,1) = {"
+ad
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+au
+aX
+aZ
+aX
+aE
+bf
+bo
+br
+aj
+bB
+ab
+ad
+aa
+aa
+aa
+bF
+ad
+bH
+bI
+bH
+ad
+aa
+"}
+(14,1,1) = {"
+ad
+ab
+af
+ak
+aq
+aw
+aD
+aJ
+aR
+bw
+ba
+au
+ab
+au
+ap
+au
+au
+bC
+ab
+ad
+aa
+aa
+aa
+bF
+bF
+bF
+aa
+bF
+aa
+aa
+"}
+(15,1,1) = {"
+ae
+az
+ag
+al
+ar
+aA
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+au
+aX
+bs
+aA
+bL
+ab
+ad
+aa
+bF
+aa
+bF
+ae
+bF
+bF
+aa
+bF
+bF
+"}
+(16,1,1) = {"
+ad
+ab
+ah
+ax
+as
+ah
+ab
+aL
+ad
+aU
+ad
+ad
+ab
+au
+bQ
+bt
+bt
+bt
+ab
+ad
+aa
+aa
+bF
+ad
+bG
+ad
+bF
+ai
+bF
+aa
+"}
+(17,1,1) = {"
+ad
+ab
+ab
+ab
+ab
+ab
+ab
+aM
+ad
+aV
+ad
+ad
+ab
+au
+au
+au
+au
+au
+ab
+ad
+aa
+aa
+ad
+bH
+bG
+bH
+bF
+bF
+aa
+aa
+"}
+(18,1,1) = {"
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+aN
+aW
+ad
+ad
+az
+au
+au
+au
+aX
+au
+az
+ad
+bF
+aa
+bG
+bG
+bG
+bJ
+bF
+aa
+bF
+aa
+"}
+(19,1,1) = {"
+aa
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+aO
+bb
+bM
+ad
+ab
+bg
+au
+au
+by
+au
+ab
+ad
+aa
+aa
+ad
+bH
+bI
+bH
+aa
+aa
+aa
+aa
+"}
+(20,1,1) = {"
+aa
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+aS
+bx
+ad
+ad
+ab
+bh
+au
+bu
+bR
+bE
+ab
+ad
+aa
+bF
+aa
+aa
+bF
+bF
+bF
+bF
+aa
+aa
+"}
+(21,1,1) = {"
+aa
+ad
+aB
+ad
+bV
+aG
+ad
+ad
+aT
+ad
+ad
+ad
+ab
+au
+au
+bv
+bD
+au
+ab
+ad
+aa
+bF
+bF
+bF
+aa
+bF
+bF
+aa
+bF
+aa
+"}
+(22,1,1) = {"
+aa
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ab
+aE
+ab
+ab
+ab
+ab
+ab
+ad
+aa
+aa
+bF
+aa
+aa
+bF
+aa
+bF
+aa
+aa
+"}
+(23,1,1) = {"
+aa
+an
+ad
+aF
+bV
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(24,1,1) = {"
+aa
+ad
+ad
+ad
+ad
+aK
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ae
+ad
+ad
+ad
+ad
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(25,1,1) = {"
+aa
+ad
+ad
+ad
+bW
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+ay
+aa
+aa
+aa
+aa
+"}
+(26,1,1) = {"
+aa
+ad
+ad
+ad
+ad
+ad
+aG
+ad
+ad
+ad
+ad
+ad
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+ay
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(27,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+ai
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+ai
+aa
+aa
+aa
+aa
+"}
+(28,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+ay
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(29,1,1) = {"
+ai
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+ay
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}
+(30,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+"}

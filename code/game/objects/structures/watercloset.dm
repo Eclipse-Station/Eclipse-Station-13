@@ -53,15 +53,6 @@
 			update_icon()
 			return
 
-	if(istype(I, /obj/item/weapon/reagent_containers))
-		to_chat(user, "<span class='notice'>You start to [cistern ? "replace the lid on the cistern" : "lift the lid off the cistern"].</span>")
-		playsound(loc, 'sound/effects/stonedoor_openclose.ogg', 50, 1)
-		if(do_after(user, 30))
-			user.visible_message("<span class='notice'>[user] [cistern ? "replaces the lid on the cistern" : "lifts the lid off the cistern"]!</span>", "<span class='notice'>You [cistern ? "replace the lid on the cistern" : "lift the lid off the cistern"]!</span>", "You hear grinding porcelain.")
-			cistern = !cistern
-			update_icon()
-			return
-
 	if(istype(I, /obj/item/weapon/grab))
 		user.setClickCooldown(user.get_attack_speed(I))
 		var/obj/item/weapon/grab/G = I
@@ -140,13 +131,12 @@
 	var/watertemp = "normal"	//freezing, normal, or boiling
 	var/is_washing = 0
 	var/list/temperature_settings = list("normal" = 310, "boiling" = T0C+100, "freezing" = T0C)
-	var/list/temperature_normal_settings = list("cold" = T20C, "hot" = 345,"normal" = 310)
 
 /obj/machinery/shower/New()
 	..()
 	create_reagents(50)
 
-//add heat controls? when emagged, you can freeze to death in it? - I think i did it?
+//add heat controls? when emagged, you can freeze to death in it?
 
 /obj/effect/mist
 	name = "mist"
@@ -166,75 +156,6 @@
 			process_heat(M)
 		for (var/atom/movable/G in src.loc)
 			G.clean_blood()
-
-/*Was used as reference
-obj/structure/reagent_dispensers/verb/set_APTFT() //set amount_per_transfer_from_this
-	set name = "Set transfer amount"
-	set category = "Object"
-	set src in view(1)
-	var/N = input("Amount per transfer from this:","[src]") as null|anything in possible_transfer_amounts
-	if (N)
-		amount_per_transfer_from_this = N
-*/
-
-/obj/machinery/shower/verb/set_temp() //set temperature
-    set name = "Set Temperature"
-    set category = "Object"
-    set src in view(1)
-    var/N = input(usr, "Current Watertemp: [watertemp]") as null|anything in temperature_normal_settings
-//    set_temp()
-    if (N)
-        watertemp = N
-        to_chat(usr, "The shower has been turned to [watertemp]")
-        return
-    else
-        return
-
-
-/obj/machinery/shower/attackby(obj/item/I as obj, mob/user as mob)
-	if(I.type == /obj/item/device/analyzer)
-		to_chat(user, "<span class='notice'>The water temperature seems to be [watertemp].</span>")
-	if(istype(I, /obj/item/weapon/wrench))
-		var/newtemp = input(user, "What setting would you like to set the temperature valve to?", "Water Temperature Valve") in temperature_settings
-		to_chat(user, "<span class='notice'>You begin to adjust the temperature valve with \the [I].</span>")
-		playsound(src.loc, I.usesound, 50, 1)
-		if(do_after(user, 50 * I.toolspeed))
-			watertemp = newtemp
-			user.visible_message("<span class='notice'>[user] adjusts the shower with \the [I].</span>", "<span class='notice'>You adjust the shower with \the [I].</span>")
-			add_fingerprint(user)
-
-
-
-
-/*
-/obj/item/clothing/mask/breath/proc/adjust_mask(mob/user)
-	if(user.canmove && !user.stat)
-		src.hanging = !src.hanging
-		if (src.hanging)
-			gas_transfer_coefficient = 1
-			body_parts_covered = body_parts_covered & ~FACE
-			item_flags = item_flags & ~AIRTIGHT
-			icon_state = "breathdown"
-			user << "Your mask is now hanging on your neck."
-		else
-			gas_transfer_coefficient = initial(gas_transfer_coefficient)
-			body_parts_covered = initial(body_parts_covered)
-			item_flags = initial(item_flags)
-			icon_state = initial(icon_state)
-			user << "You pull the mask up to cover your face."
-		update_clothing_icon()
-
-/obj/item/clothing/mask/breath/attack_self(mob/user)
-	adjust_mask(user)
-
-/obj/item/clothing/mask/breath/verb/toggle()
-		set category = "Object"
-		set name = "Adjust mask"
-		set src in usr
-
-		adjust_mask(usr)
-
-*/
 
 /obj/machinery/shower/attackby(obj/item/I as obj, mob/user as mob)
 	if(I.type == /obj/item/device/analyzer)
@@ -353,12 +274,6 @@ obj/structure/reagent_dispensers/verb/set_APTFT() //set amount_per_transfer_from
 				if(H.belt.clean_blood())
 					H.update_inv_belt(0)
 			H.clean_blood(washshoes)
-
-			var/obj/item/organ/external/head/head = H.organs_by_name[BP_HEAD]
-			if(istype(head))
-				head.forehead_graffiti = null
-				head.graffiti_style = null
-
 		else
 			if(M.wear_mask)						//if the mob is not human, it cleans the mask without asking for bitflags
 				if(M.wear_mask.clean_blood())
@@ -468,8 +383,6 @@ obj/structure/reagent_dispensers/verb/set_APTFT() //set amount_per_transfer_from
 	if(!Adjacent(user)) return		//Person has moved away from the sink
 
 	user.clean_blood()
-
-
 	if(ishuman(user))
 		user:update_inv_gloves()
 	for(var/mob/V in viewers(src, null))
@@ -525,12 +438,6 @@ obj/structure/reagent_dispensers/verb/set_APTFT() //set amount_per_transfer_from
 	if(user.loc != location) return				//User has moved
 	if(!I) return 								//Item's been destroyed while washing
 	if(user.get_active_hand() != I) return		//Person has switched hands or the item in their hands
-
-	if(istype(O, /obj/item/organ/external/head))
-		var/obj/item/organ/external/head/head = O
-		head.forehead_graffiti = null
-		head.graffiti_style = null
-
 
 	O.clean_blood()
 	user.visible_message( \

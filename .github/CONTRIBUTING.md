@@ -22,7 +22,7 @@ These are just guidelines, not rules, use your best judgment and feel free to pr
 
 ### Code of Conduct
 
-This project adheres to the Contributor Covenant [code of conduct](CODE_OF_CONDUCT.md).
+This project adheres to the Contributor Covenant [code of conduct](code_of_conduct.md).
 By participating, you are expected to uphold this code.
 
 ## How Can I Contribute?
@@ -50,13 +50,13 @@ Any code submissions that do not meet our coding standards are likely to be reje
 * Your submission must pass Travis CI checking. The checks are important, prevent many common mistakes, and even experienced coders get caught by it sometimes. If you think there is a bug in Travis, open an issue. (One known Travis issue is comments in the middle of multi-line lists, just don't do it)
 * Your PR should not have an excessive number of commits unless it is a large project or includes many separate remote commits (such as a pull from Polaris). If you need to keep tweaking your PR to pass Travis or to satisfy a maintainer's requests and are making many commits, you should squash them in the end and update your PR accordingly so these commits don't clog up the history.
 * You can create a WIP PR, and if so, please mark it with [WIP] in the title so it can be labeled appropriately. These can't sit forever, though.
-* If your pull request has many no-conflict merge commits ('merge from master' into your PR branch), it cannot be merged. Squash and make a new PR/forcepush to your PR branch.
+* It is highly recommended to make an effort to keep your branch clean, ideally free from merge commits if possible. Keep in mind that everything you do will show up in AEIOU-Station's history tree, and a branch that's too messy won't be merged. There are techniques to updating cleanly and multiple methods of cleaning up a messy history. You're encouraged to ask around if you don't know how.
 
 ### Git Commit Messages
 
 * Limit the first line to 72 characters or less, otherwise it truncates the title with '...', wrapping the rest into the description.
 * Reference issues and pull requests liberally.
-* Use the GitHub magic words "Fixed/Fixes/Fix, Resolved/Resolves/Resolve, Closed/Closes/Close", as in, "Closes #1928", as this will automatically close that issue when the PR is merged if it is a fix for that issue.
+* If your PR fixes an open issue, use one of the GitHub magic words: "Fixed/Fixes/Fix, Resolved/Resolves/Resolve, Closed/Closes/Close", as this will automatically close that issue when the PR is merged. For example, "Closes #1928".
 
 ## Licensing
 AEIOU-Station is licensed under the GNU Affero General Public License version 3, which can be found in full in LICENSE-AGPL3.txt.
