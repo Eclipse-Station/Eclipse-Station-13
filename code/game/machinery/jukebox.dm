@@ -25,14 +25,32 @@
 	var/datum/wires/jukebox/wires = null
 	var/hacked = 0 // Whether to show the hidden songs or not
 	var/freq = 0 // Currently no effect, will return in phase II of mediamanager.
-
-	var/loop_mode = JUKEMODE_REPEAT_SONG			// Behavior when finished playing a song
+	//VOREStation Add
+	var/loop_mode = JUKEMODE_PLAY_ONCE			// Behavior when finished playing a song
 	var/max_queue_len = 3						// How many songs are we allowed to queue up?
-	var/datum/track/current_track				// Currently playing song
-	var/list/datum/track/queue = list()			// Queued songs
-	var/list/datum/track/tracks = list()		// Available tracks
-	var/list/datum/track/secret_tracks = list() // Only visible if hacked
-	var/list/datum/track/cursed_tracks = list() //
+	var/list/queue = list()
+	//VOREStation Add End
+	var/datum/track/current_track
+	var/list/datum/track/tracks = list(
+		new/datum/track("Beyond", 'sound/ambience/ambispace.ogg'),
+		new/datum/track("Clouds of Fire", 'sound/music/clouds.s3m'),
+		new/datum/track("D`Bert", 'sound/music/title2.ogg'),
+		new/datum/track("D`Fort", 'sound/ambience/song_game.ogg'),
+		new/datum/track("Floating", 'sound/music/main.ogg'),
+		new/datum/track("Endless Space", 'sound/music/space.ogg'),
+		new/datum/track("Part A", 'sound/misc/TestLoop1.ogg'),
+		new/datum/track("Scratch", 'sound/music/title1.ogg'),
+		new/datum/track("Trai`Tor", 'sound/music/traitor.ogg'),
+		new/datum/track("Stellar Transit", 'sound/ambience/space/space_serithi.ogg'),
+	)
+
+	// Only visible if hacked
+	var/list/datum/track/secret_tracks = list(
+		new/datum/track("Clown", 'sound/music/clown.ogg'),
+		new/datum/track("Space Asshole", 'sound/music/space_asshole.ogg'),
+		new/datum/track("Thunderdome", 'sound/music/THUNDERDOME.ogg'),
+		new/datum/track("Russkiy rep Diskoteka", 'sound/music/russianrapdisco.ogg')
+	)
 
 /obj/machinery/media/jukebox/New()
 	..()
@@ -48,19 +66,16 @@
 // On initialization, copy our tracks from the global list
 /obj/machinery/media/jukebox/initialize()
 	. = ..()
-	if(all_jukebox_tracks.len < 1)
+	if(LAZYLEN(all_jukebox_tracks)) //Global list has tracks
+		tracks.Cut()
+		secret_tracks.Cut()
+		for(var/datum/track/T in all_jukebox_tracks) //Load them
+			if(T.secret)
+				secret_tracks |= T
+			else
+				tracks |= T
+	else if(!LAZYLEN(tracks)) //We don't even have default tracks
 		stat |= BROKEN // No tracks configured this round!
-		return
-	// Ootherwise load from the global list!
-	for(var/datum/track/T in all_jukebox_tracks)
-		if(T.secret)
-			secret_tracks |= T
-		else	if(T.cursed)
-			cursed_tracks |= T
-		else
-			tracks |= T
-
-	return
 
 /obj/machinery/media/jukebox/process()
 	if(!playing)
@@ -124,11 +139,13 @@
 		return
 	if(default_deconstruction_crowbar(user, W))
 		return
-	if(istype(W, /obj/item/weapon/tool/wirecutters))
+	if(W.is_wirecutter())
 		return wires.Interact(user)
 	if(istype(W, /obj/item/device/multitool))
 		return wires.Interact(user)
-	if(istype(W, /obj/item/weapon/wrench))
+	if(W.is_wrench())
+		if(playing)
+			StopPlaying()
 		user.visible_message("<span class='warning'>[user] has [anchored ? "un" : ""]secured \the [src].</span>", "<span class='notice'>You [anchored ? "un" : ""]secure \the [src].</span>")
 		anchored = !anchored
 		playsound(src, W.usesound, 50, 1)
@@ -174,11 +191,11 @@
 		return
 
 	if(!anchored)
-		usr << "<span class='warning'>You must secure \the [src] first.</span>"
+		to_chat(usr, "<span class='warning'>You must secure \the [src] first.</span>")
 		return
 
 	if(inoperable())
-		usr << "\The [src] doesn't appear to function."
+		to_chat(usr, "\The [src] doesn't appear to function.")
 		return
 
 	if(href_list["change_track"])
@@ -187,24 +204,15 @@
 			current_track = T
 			StartPlaying()
 	else if(href_list["loopmode"])
-		if(!emagged)
-			var/newval = text2num(href_list["loopmode"])
-			loop_mode = sanitize_inlist(newval, list(JUKEMODE_NEXT, JUKEMODE_RANDOM, JUKEMODE_REPEAT_SONG, JUKEMODE_PLAY_ONCE), loop_mode)
-		else
-			return
+		var/newval = text2num(href_list["loopmode"])
+		loop_mode = sanitize_inlist(newval, list(JUKEMODE_NEXT, JUKEMODE_RANDOM, JUKEMODE_REPEAT_SONG, JUKEMODE_PLAY_ONCE), loop_mode)
 	else if(href_list["volume"])
-		if(!emagged)
-			var/newval = input("Choose Jukebox volume (0-100%)", "Jukebox volume", round(volume * 100.0))
-			newval = sanitize_integer(text2num(newval), min = 0, max = 100, default = volume * 100.0)
-			volume = newval / 100.0
-			update_music() // To broadcast volume change without restarting song
-		else
-			return
+		var/newval = input("Choose Jukebox volume (0-100%)", "Jukebox volume", round(volume * 100.0))
+		newval = sanitize_integer(text2num(newval), min = 0, max = 100, default = volume * 100.0)
+		volume = newval / 100.0
+		update_music() // To broadcast volume change without restarting song
 	else if(href_list["stop"])
-		if(!emagged)
-			StopPlaying()
-		else
-			return
+		StopPlaying()
 	else if(href_list["play"])
 		if(emagged)
 			playsound(src.loc, 'sound/items/AirHorn.ogg', 100, 1)
@@ -212,15 +220,18 @@
 				if(M.get_ear_protection() >= 2)
 					continue
 				M.sleeping = 0
-				M.stuttering += 10
-				M.ear_deaf += 20
-				M.Weaken(2)
+				M.stuttering += 20
+				M.ear_deaf += 30
+				M.Weaken(3)
 				if(prob(30))
 					M.Stun(10)
 					M.Paralyse(4)
-
+				else
+					M.make_jittery(500)
+			spawn(15)
+				explode()
 		else if(current_track == null)
-			usr << "No track selected."
+			to_chat(usr, "No track selected.")
 		else
 			StartPlaying()
 
@@ -228,7 +239,7 @@
 
 /obj/machinery/media/jukebox/interact(mob/user)
 	if(inoperable())
-		usr << "\The [src] doesn't appear to function."
+		to_chat(usr, "\The [src] doesn't appear to function.")
 		return
 	ui_interact(user)
 
@@ -287,7 +298,7 @@
 		return
 	if(default_deconstruction_crowbar(user, W))
 		return
-	if(istype(W, /obj/item/weapon/wrench))
+	if(W.is_wrench())
 		if(playing)
 			StopPlaying()
 		user.visible_message("<span class='warning'>[user] has [anchored ? "un" : ""]secured \the [src].</span>", "<span class='notice'>You [anchored ? "un" : ""]secure \the [src].</span>")
@@ -302,13 +313,6 @@
 	if(!emagged)
 		emagged = 1
 		StopPlaying()
-		tracks.Remove(secret_tracks)
-		tracks.Remove(tracks)
-		tracks.Add(cursed_tracks)
-		process()
-		loop_mode = JUKEMODE_REPEAT_SONG
-		NextTrack()
-		StartPlaying()
 		visible_message("<span class='danger'>\The [src] makes a fizzling sound.</span>")
 		update_icon()
 		return 1

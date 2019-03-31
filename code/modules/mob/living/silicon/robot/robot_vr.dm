@@ -29,10 +29,18 @@
 					   "mechoid-Service",
 					   "mechoid-Janitor",
 					   "mechoid-Combat",
-					   "mechoid-Combat-roll"
+					   "mechoid-Combat-roll",
+					   "Noble-CLN",
+					   "Noble-SRV",
+					   "Noble-DIG",
+					   "Noble-MED",
+					   "Noble-SEC",
+					   "Noble-ENG",
+					   "Noble-STD"
 					   )					//List of all used sprites that are in robots_vr.dmi
 
 
+/* AEIOU-Station Removal: We don't need this.
 /mob/living/silicon/robot/verb/robot_nom(var/mob/living/T in living_mobs(1))
 	set name = "Robot Nom"
 	set category = "IC"
@@ -40,7 +48,7 @@
 
 	if (stat != CONSCIOUS)
 		return
-	return feed_grabbed_to_self(src,T)
+	return feed_grabbed_to_self(src,T)*/
 
 /mob/living/silicon/robot/updateicon()
 	vr_sprite_check()
@@ -172,7 +180,7 @@
 	buckle_movable = TRUE
 	buckle_lying = FALSE
 
-/mob/living/silicon/robot/New()
+/mob/living/silicon/robot/New(loc,var/unfinished = 0)
 	..()
 	riding_datum = new /datum/riding/dogborg(src)
 

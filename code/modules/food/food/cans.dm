@@ -1,41 +1,9 @@
 /obj/item/weapon/reagent_containers/food/drinks/cans
 	volume = 40 //just over one and a half cups
 	amount_per_transfer_from_this = 5
-//	flags = 0 //starts closed
-	flags = !OPENCONTAINER
+	flags = 0 //starts closed
 
 //DRINKS
-
-
-
-/*
-/obj/item/weapon/reagent_containers/food/drinks/cans/attack(mob/M, mob/user)
-	if(user.a_intent == I_HURT && user.zone_sel.selecting != BP_HEAD)
-//	if(M == user && !src.reagents.total_volume && user.a_intent == INTENT_HARM && user.zone_selected == "head")
-		user.visible_message("<span class='warning'>[user] crushes the can of [src] on [user] their forehead!</span>", "<span class='notice'>You crush the can of [src] on your forehead.</span>")
-		playsound(user.loc,'sound/weapons/pierce.ogg', rand(10,50), 1)
-		var/obj/item/trash/can/crushed_can = new /obj/item/trash/can(user.loc)
-		crushed_can.icon_state = icon_state
-		qdel(src)
-	..()
-*/
-
-/obj/item/weapon/reagent_containers/food/drinks/cans/attack_self(mob/user)
-	if(!is_open_container())
-		open(user)
-		return 1
-	if(reagents.total_volume>0)
-		user << "<span class='notice'>There is still some liquid left in the [src]!</span>"
-		return 1
-
-	else
-		user.visible_message("[user] crushes the can of [src].", "You crush the can of [src].")
-		playsound(user.loc,'sound/weapons/pierce.ogg', rand(10,50), 1)
-		var/obj/item/trash/can/crushed_can = new /obj/item/trash/can(user.loc)
-		crushed_can.icon_state = icon_state
-		qdel(src)
-
-
 
 /obj/item/weapon/reagent_containers/food/drinks/cans/cola
 	name = "\improper Space Cola"
@@ -43,20 +11,7 @@
 	icon_state = "cola"
 	center_of_mass = list("x"=16, "y"=10)
 
-/*
-/obj/item/weapon/reagent_containers/food/drinks/cans/cola/attack_self(mob/living/user as mob)
-	if(user.a_intent == I_HURT && volume = 0
-		if(icon_state == "scrap")
-			user.show_message("<span class='warning'>\The [src] is already crumpled.</span>")
-			return
-		//crumple dat paper
-		info = stars(info,85)
-		user.visible_message("\The [user] crumples \the [src] into a ball!")
-		icon_state = "scrap"
-		return
-*/
-
-/obj/item/weapon/reagent_containers/food/drinks/cans/cola/New()
+/obj/item/weapon/reagent_containers/food/drinks/cans/cola/initialize()
 	..()
 	reagents.add_reagent("cola", 30)
 
@@ -66,7 +21,7 @@
 	icon_state = "waterbottle"
 	center_of_mass = list("x"=15, "y"=8)
 
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle/New()
+/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle/initialize()
 	..()
 	reagents.add_reagent("water", 30)
 
@@ -76,7 +31,7 @@
 	icon_state = "space_mountain_wind"
 	center_of_mass = list("x"=16, "y"=10)
 
-/obj/item/weapon/reagent_containers/food/drinks/cans/space_mountain_wind/New()
+/obj/item/weapon/reagent_containers/food/drinks/cans/space_mountain_wind/initialize()
 	..()
 	reagents.add_reagent("spacemountainwind", 30)
 
@@ -86,7 +41,7 @@
 	icon_state = "thirteen_loko"
 	center_of_mass = list("x"=16, "y"=8)
 
-/obj/item/weapon/reagent_containers/food/drinks/cans/thirteenloko/New()
+/obj/item/weapon/reagent_containers/food/drinks/cans/thirteenloko/initialize()
 	..()
 	reagents.add_reagent("thirteenloko", 30)
 
@@ -96,7 +51,7 @@
 	icon_state = "dr_gibb"
 	center_of_mass = list("x"=16, "y"=10)
 
-/obj/item/weapon/reagent_containers/food/drinks/cans/dr_gibb/New()
+/obj/item/weapon/reagent_containers/food/drinks/cans/dr_gibb/initialize()
 		..()
 		reagents.add_reagent("dr_gibb", 30)
 
@@ -106,7 +61,7 @@
 	icon_state = "starkist"
 	center_of_mass = list("x"=16, "y"=10)
 
-/obj/item/weapon/reagent_containers/food/drinks/cans/starkist/New()
+/obj/item/weapon/reagent_containers/food/drinks/cans/starkist/initialize()
 	..()
 	reagents.add_reagent("brownstar", 30)
 
@@ -116,7 +71,7 @@
 	icon_state = "space-up"
 	center_of_mass = list("x"=16, "y"=10)
 
-/obj/item/weapon/reagent_containers/food/drinks/cans/space_up/New()
+/obj/item/weapon/reagent_containers/food/drinks/cans/space_up/initialize()
 	..()
 	reagents.add_reagent("space_up", 30)
 
@@ -126,7 +81,7 @@
 	icon_state = "lemon-lime"
 	center_of_mass = list("x"=16, "y"=10)
 
-/obj/item/weapon/reagent_containers/food/drinks/cans/lemon_lime/New()
+/obj/item/weapon/reagent_containers/food/drinks/cans/lemon_lime/initialize()
 	..()
 	reagents.add_reagent("lemon_lime", 30)
 
@@ -136,7 +91,7 @@
 	icon_state = "ice_tea_can"
 	center_of_mass = list("x"=16, "y"=10)
 
-/obj/item/weapon/reagent_containers/food/drinks/cans/iced_tea/New()
+/obj/item/weapon/reagent_containers/food/drinks/cans/iced_tea/initialize()
 	..()
 	reagents.add_reagent("icetea", 30)
 
@@ -146,7 +101,7 @@
 	icon_state = "purple_can"
 	center_of_mass = list("x"=16, "y"=10)
 
-/obj/item/weapon/reagent_containers/food/drinks/cans/grape_juice/New()
+/obj/item/weapon/reagent_containers/food/drinks/cans/grape_juice/initialize()
 	..()
 	reagents.add_reagent("grapejuice", 30)
 
@@ -156,7 +111,7 @@
 	icon_state = "tonic"
 	center_of_mass = list("x"=16, "y"=10)
 
-/obj/item/weapon/reagent_containers/food/drinks/cans/tonic/New()
+/obj/item/weapon/reagent_containers/food/drinks/cans/tonic/initialize()
 	..()
 	reagents.add_reagent("tonic", 50)
 
@@ -166,7 +121,7 @@
 	icon_state = "sodawater"
 	center_of_mass = list("x"=16, "y"=10)
 
-/obj/item/weapon/reagent_containers/food/drinks/cans/sodawater/New()
+/obj/item/weapon/reagent_containers/food/drinks/cans/sodawater/initialize()
 	..()
 	reagents.add_reagent("sodawater", 50)
 
@@ -176,6 +131,6 @@
 	icon_state = "gingerale"
 	center_of_mass = list("x"=16, "y"=10)
 
-/obj/item/weapon/reagent_containers/food/drinks/cans/gingerale/New()
+/obj/item/weapon/reagent_containers/food/drinks/cans/gingerale/initialize()
 	..()
 	reagents.add_reagent("gingerale", 30)

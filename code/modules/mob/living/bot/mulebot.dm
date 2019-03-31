@@ -25,7 +25,6 @@
 
 	var/atom/movable/load
 
-//	var/paused = 0
 	var/crates_only = 1
 	var/auto_return = 1
 	var/safety = 1

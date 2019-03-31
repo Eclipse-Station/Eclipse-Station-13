@@ -32,9 +32,11 @@
 	//var/magazine_states = 0
 	//var/list/icon_keys = list()		//keys
 	//var/list/ammo_states = list()	//values
-	
+
+
 	//AEIOU vars
 	var/hide_ammo_count = FALSE		//do we want to hide ammo, for whatever reason (e.g. a concealed gun/custom loaded text)?
+
 
 /obj/item/weapon/gun/projectile/New(loc, var/starts_loaded = 1)
 	..()
