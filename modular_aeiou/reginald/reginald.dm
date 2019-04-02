@@ -14,7 +14,7 @@
  */
 
 //Debug mode override.
-//#define OVERRIDE_DATE_CHECK TRUE
+#define OVERRIDE_DATE_CHECK 0
 
 // .../code/modules/mob/living/simple_animal/animals/crab.dm
 // Some Discord jokes just go too far. This is one of them.
@@ -81,6 +81,6 @@
 	delete_me = TRUE
 	return
 
-#ifdef OVERRIDE_DATE_CHECK
+#if OVERRIDE_DATE_CHECK
 	#warning Overriding date check on Reginald for testing. This should not be compiled for production with this enabled...
 #endif
