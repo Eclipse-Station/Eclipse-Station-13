@@ -14,7 +14,7 @@
  */
 
 //code overrides.
-#define OVERRIDE_DATE_CHECK TRUE
+#define OVERRIDE_DATE_CHECK FALSE
 
 // .../code/modules/mob/living/simple_animal/animals/crab.dm
 // Some Discord jokes just go too far. This is one of them.
@@ -23,7 +23,8 @@
 	name = "\proper Reginald"
 	icon_state = "sif_crab"
 	desc = ""
-	
+	description_fluff = "He's just visiting from Elsewhere."
+
 /mob/living/simple_animal/crab/reginald/New()
 	. = ..()
 	
