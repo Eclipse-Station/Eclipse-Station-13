@@ -45,3 +45,6 @@ var/obj/effect/lobby_image = new /obj/effect/lobby_image
 		if(client)
 			handle_privacy_poll()
 			client.playtitlemusic()
+
+	if(!is_player_whitelisted(src))
+		discord_redirect(src)//aeiou addition

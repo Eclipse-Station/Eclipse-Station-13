@@ -22,6 +22,7 @@ hawkerthegreat - Vox
 inuzari - Diona
 jemli - Gutter
 ktccd - Diona
+Dwarftower - Diona
 mewchild - Diona
 mewchild - Vox
 natje - Xenochimera
@@ -31,7 +32,7 @@ rikaru19xjenkins  - Xenomorph Hybrid
 rikaru19xjenkins - Xenochimera
 rixunie - Diona
 rixunie - Gutter
-seiga - Vox
+KirbytehPink - Vox
 sepulchre - Vox
 sepulchre - Xenomorph Hybrid
 silverTalismen - Diona
@@ -42,3 +43,4 @@ singo - Gutter
 sloaff - Vox-Pidgin
 some~user - Species
 sloaff - Skeleton
+

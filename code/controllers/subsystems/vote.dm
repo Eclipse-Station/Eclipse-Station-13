@@ -286,13 +286,13 @@ SUBSYSTEM_DEF(vote)
 			. += "(<a href='?src=\ref[src];vote=cancel'>Cancel Vote</a>) "
 	else
 		. += "<h2>Start a vote:</h2><hr><ul><li>"
-		if(admin || config.allow_vote_restart)
+		if(admin || config.allow_vote_restart || is_key_whitelisted(C.key))
 			. += "<a href='?src=\ref[src];vote=restart'>Restart</a>"
 		else
 			. += "<font color='grey'>Restart (Disallowed)</font>"
 		. += "</li><li>"
 
-		if(admin || config.allow_vote_restart)
+		if(admin || config.allow_vote_restart || is_key_whitelisted(C.key))
 			. += "<a href='?src=\ref[src];vote=crew_transfer'>Crew Transfer</a>"
 		else
 			. += "<font color='grey'>Crew Transfer (Disallowed)</font>"
