@@ -3115,5 +3115,6 @@
 #include "modular_aeiou\multiphase\gun.dm"
 #include "modular_aeiou\multiphase\locker.dm"
 #include "modular_aeiou\multiphase\projectile.dm"
+#include "modular_aeiou\secgun\secgun.dm"
 #include "modular_citadel\code\game\objects\items\trash.dm"
 // END_INCLUDE
