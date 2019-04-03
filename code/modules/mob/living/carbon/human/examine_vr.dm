@@ -124,9 +124,12 @@
 */
 
 /mob/living/carbon/human/proc/examine_nutrition()
+
 	if(!show_pudge()) //Some clothing or equipment can hide this.
 		return ""
 	var/message = ""
+	return message
+/* ECLIPSE EDIT - Yeah let's fucking not.
 	var/nutrition_examine = round(nutrition)
 	var/t_He 	= "It" //capitalised for use at the start of each line.
 	var/t_His 	= "Its"
@@ -176,7 +179,7 @@
 		if(4075 to 10000) // Four or more people.
 			message = "<span class='warning'>[t_He] [t_is] so absolutely stuffed that you aren't sure how it's possible to move. [t_He] can't seem to swell any bigger. The surface of [t_his] belly looks sorely strained!</span>\n"
 	return message
-
+*/
 
 /*
 /mob/living/carbon/human/proc/examine_weight()

@@ -2,9 +2,9 @@
 	var/pass = TRUE
 
 	//No OOC notes
-	if (config.allow_Metadata && client && client.prefs && (isnull(client.prefs.metadata) || length(client.prefs.metadata) < 15))
+	/*if (config.allow_Metadata && client && client.prefs && (isnull(client.prefs.metadata) || length(client.prefs.metadata) < 15))
 		to_chat(src,"<span class='warning'>Please set informative OOC notes related to RP preferences. This has to include ERP as well. Set them using the 'OOC Notes' button on the 'General' tab in character setup.</span>")
-		pass = FALSE
+		pass = FALSE    ECLIPSE EDIT - They are unnecessary.*/
 
 	//Are they on the VERBOTEN LIST?
 	if (prevent_respawns.Find(client.prefs.real_name))
