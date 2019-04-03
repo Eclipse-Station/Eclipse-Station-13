@@ -4,11 +4,11 @@
 /obj/item/minigunpack
 	name = "backpack power source"
 	desc = "The massive external power source for the laser gatling gun."
-	icon = 'modular_aeiou/icons/obj/gun_aeiou.dmi'
+	icon = 'modular_eclipse/icons/obj/gun_eclipse.dmi'
 	icon_state = "holstered"
 	item_state = "backpack"
-//	lefthand_file = 'modular_aeiou/icons/mob/items/guns_lefthand.dmi'
-//	righthand_file = 'modular_aeiou/icons/mob/items/guns_righthand.dmi'
+//	lefthand_file = 'modular_eclipse/icons/mob/items/guns_lefthand.dmi'
+//	righthand_file = 'modular_eclipse/icons/mob/items/guns_righthand.dmi'
 	slot_flags = SLOT_BACK
 	w_class = ITEMSIZE_HUGE
 	var/obj/item/weapon/gun/energy/laser/minigun/linkedgun = null
@@ -141,12 +141,12 @@
 /obj/item/weapon/gun/energy/laser/minigun
 	name = "laser gatling gun"
 	desc = "An advanced laser cannon with an incredible rate of fire. Requires a bulky backpack power source to use."
-	icon = 'modular_aeiou/icons/obj/gun_aeiou.dmi'
+	icon = 'modular_eclipse/icons/obj/gun_eclipse.dmi'
 	icon_state = "minigun_spin"
 	item_state = "minigun"
 	item_icons = list(
-        slot_l_hand_str = 'modular_aeiou/icons/mob/items/guns_lefthand_aeiou.dmi',
-        slot_r_hand_str = 'modular_aeiou/icons/mob/items/guns_righthand_aeiou.dmi'
+        slot_l_hand_str = 'modular_eclipse/icons/mob/items/guns_lefthand_eclipse.dmi',
+        slot_r_hand_str = 'modular_eclipse/icons/mob/items/guns_righthand_eclipse.dmi'
         )
 
 	firemodes = list(
@@ -155,8 +155,8 @@
 		)
 
 
-//	lefthand_file = 'modular_aeiou/icons/mob/items/guns_lefthand.dmi'
-//	righthand_file = 'modular_aeiou/icons/mob/items/guns_righthand.dmi'
+//	lefthand_file = 'modular_eclipse/icons/mob/items/guns_lefthand.dmi'
+//	righthand_file = 'modular_eclipse/icons/mob/items/guns_righthand.dmi'
 //	flags_1 = CONDUCT_1
 	slowdown = 1
 	battery_lock = 1
@@ -169,7 +169,7 @@
 	fire_sound = 'sound/weapons/laser.ogg'
 	charge_cost = 200
 	projectile_type = /obj/item/projectile/beam/burstlaser
-//	magazine_type = modular_aeiou/obj/item/ammo_magazine/internal/minigun
+//	magazine_type = modular_eclipse/obj/item/ammo_magazine/internal/minigun
 //	casing_ejector = FALSE
 //	flags_2 = SLOWS_WHILE_IN_HAND_2
 	var/obj/item/minigunpack/ammo_pack = null

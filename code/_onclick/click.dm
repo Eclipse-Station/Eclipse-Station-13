@@ -48,11 +48,11 @@
 		return
 
 	var/list/modifiers = params2list(params)
-	// // // BEGIN AEIOU EDIT // // //
+	// // // BEGIN ECLIPSE EDIT // // //
 	if(modifiers["shift"] && modifiers["middle"])		//shift MMB
 		ShiftMiddleClickOn(A)
 		return 1
-	// // // END AEIOU EDIT // // //
+	// // // END ECLIPSE EDIT // // //
 	if(modifiers["shift"] && modifiers["ctrl"])
 		CtrlShiftClickOn(A)
 		return 1
@@ -222,7 +222,7 @@
 	return
 */
 
-// // // BEGIN AEIOU EDIT // // //
+// // // BEGIN ECLIPSE EDIT // // //
 /*
 	Shift middle click
 	Used as a quick pointing shortcut.
@@ -232,7 +232,7 @@
 	src.pointed(A)
 	return
 
-// // // END AEIOU EDIT // // //
+// // // END ECLIPSE EDIT // // //
 
 /*
 	Shift click

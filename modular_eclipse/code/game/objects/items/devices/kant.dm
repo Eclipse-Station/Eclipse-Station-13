@@ -57,7 +57,7 @@
 /obj/item/device/kant/attack_self(var/mob/user)
 	toggle()
 
-/obj/item/device/kant/AltClick()//AEIOU EDIT
+/obj/item/device/kant/AltClick()//ECLIPSE EDIT
 	toggle()
 
 /obj/item/device/kant/proc/toggle(var/mob/user)//Moved here to easy the alt click process

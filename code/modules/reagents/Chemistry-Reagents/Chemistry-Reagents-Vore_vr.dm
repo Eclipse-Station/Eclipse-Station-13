@@ -14,7 +14,7 @@
 
 /datum/reagent/macrocillin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(M.size_multiplier < RESIZE_HUGE)
-		if(prob(50)) //AEIOU edit - lowers potency of the drug, courtesy of SCP13
+		if(prob(50)) //Eclipse edit - lowers potency of the drug, courtesy of SCP13
 			M.resize(M.size_multiplier+0.01)//Incrrease 1% per tick.
 	return
 
@@ -29,7 +29,7 @@
 
 /datum/reagent/microcillin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(M.size_multiplier > RESIZE_TINY)
-		if(prob(50)) //AEIOU edit - lowers potency of the drug, courtesy of SCP13
+		if(prob(50)) //Eclipse edit - lowers potency of the drug, courtesy of SCP13
 			M.resize(M.size_multiplier-0.01) //Decrease 1% per tick.
 	return
 

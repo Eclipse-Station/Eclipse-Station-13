@@ -68,7 +68,7 @@
 	S.cd = "/"
 	if(!slot)	slot = default_slot
 	if(slot != SAVE_RESET) // SAVE_RESET will reset the slot as though it does not exist, but keep the current slot for saving purposes.
-	//AEIOU-Station Edit: Cleaned up proc. SAVE_RESET now resets slot. Also, it makes no sense to keep the current slot after reset.
+	//Eclipse-Station Edit: Cleaned up proc. SAVE_RESET now resets slot. Also, it makes no sense to keep the current slot after reset.
 		slot = sanitize_integer(slot, 1, config.character_slots, default_slot)
 		if(slot != default_slot)
 			default_slot = slot
@@ -82,7 +82,7 @@
 			return 0
 		S.dir.Remove("character[default_slot]")
 	S.cd = "/character[default_slot]"
-	//AEIOU-Station Edit End
+	//Eclipse-Station Edit End
 
 	player_setup.load_character(S)
 	return 1

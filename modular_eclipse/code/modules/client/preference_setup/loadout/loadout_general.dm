@@ -1,5 +1,5 @@
 /*
-//	AEIOU's general loadout items go here
+//	Eclipse's general loadout items go here
 */
 
 /datum/gear/tennis

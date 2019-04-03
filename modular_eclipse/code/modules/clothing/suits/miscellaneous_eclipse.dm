@@ -2,8 +2,8 @@
 	name = "tech priest garb"
 	desc = "May contain toasters and tentacles."
 	icon_state = "adeptus"
-	icon = 'modular_aeiou/icons/obj/clothing/suits_aeiou.dmi'
-	icon_override = 'modular_aeiou/icons/mob/clothing/suits_aeiou.dmi'
+	icon = 'modular_eclipse/icons/obj/clothing/suits_eclipse.dmi'
+	icon_override = 'modular_eclipse/icons/mob/clothing/suits_eclipse.dmi'
 	blood_overlay_type = "armor"
 	body_parts_covered = UPPER_TORSO
 	siemens_coefficient = 3.0
@@ -12,7 +12,7 @@
 	name = "adaptive gel"
 	desc = "A membranous substance, capable of shielding its wearer from gaseous contaminants."
 	item_state = "gel_helm"
-	icon_override = 'modular_aeiou/icons/mob/clothing/onmob/lanius.dmi'
+	icon_override = 'modular_eclipse/icons/mob/clothing/onmob/lanius.dmi'
 	permeability_coefficient = 0.01
 	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 100, rad = 20)
 	body_parts_covered = HEAD|FACE|EYES
@@ -22,9 +22,9 @@
 /obj/item/clothing/suit/gelsuit
 	name = "adaptive gel suit"
 	desc = "A membranous substance, capable of shielding its wearer from gaseous contaminants."
-	icon = 'modular_aeiou/icons/mob/clothing/onmob/lanius.dmi'
+	icon = 'modular_eclipse/icons/mob/clothing/onmob/lanius.dmi'
 	icon_state = "gelcore"
-	icon_override = 'modular_aeiou/icons/mob/clothing/onmob/lanius.dmi'
+	icon_override = 'modular_eclipse/icons/mob/clothing/onmob/lanius.dmi'
 	item_state = "adaptive_gel"
 	var/obj/item/clothing/head/gel_helm
 	var/helmtype = /obj/item/clothing/head/gel_helm
@@ -113,9 +113,9 @@
 /obj/item/clothing/suit/gelsuit/deluxe
 	name = "advanced adaptive gel suit"
 	desc = "A membranous substance, capable of shielding its wearer from gaseous contaminants. This one seems to be extremely thick."
-	icon = 'modular_aeiou/icons/mob/clothing/onmob/lanius.dmi'
+	icon = 'modular_eclipse/icons/mob/clothing/onmob/lanius.dmi'
 	icon_state = "gelcore_deluxe"
-	icon_override = 'modular_aeiou/icons/mob/clothing/onmob/lanius.dmi'
+	icon_override = 'modular_eclipse/icons/mob/clothing/onmob/lanius.dmi'
 	item_state = "adaptive_gel_deluxe"
 	oxyheal = 0.5
 	helmtype = /obj/item/clothing/head/gel_helm/deluxe
@@ -127,7 +127,7 @@
 	name = "advanced adaptive gel"
 	desc = "A membranous substance, capable of shielding its wearer from gaseous contaminants. This one seems to be extremely thick."
 	item_state = "gel_helm_deluxe"
-	icon_override = 'modular_aeiou/icons/mob/clothing/onmob/lanius.dmi'
+	icon_override = 'modular_eclipse/icons/mob/clothing/onmob/lanius.dmi'
 	permeability_coefficient = 0.01
 	armor = list(melee = 10, bullet = 5, laser = 5,energy = 5, bomb = 5, bio = 100, rad = 50)
 	body_parts_covered = HEAD|FACE|EYES

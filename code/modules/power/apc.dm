@@ -439,7 +439,7 @@
 			update_icon()
 			updating_icon = 0
 
-// // // BEGIN AEIOU EDIT // // //
+// // // BEGIN ECLIPSE EDIT // // //
 /obj/machinery/power/apc/proc/toggle_lock(mob/user)
 	if(isliving(user) && (in_range(src,user) || issilicon(user)))		//we want isliving() so ghosts can't try any spooky business
 		if(emagged)
@@ -462,7 +462,7 @@
 
 /obj/machinery/power/apc/AltClick(mob/user)
 	toggle_lock(user)
-// // // END AEIOU EDIT // // //
+// // // END ECLIPSE EDIT // // //
 
 //attack with an item - open/close cover, insert cell, or (un)lock interface
 
@@ -548,7 +548,7 @@
 			update_icon()
 
 	else if (istype(W, /obj/item/weapon/card/id)||istype(W, /obj/item/device/pda))			// trying to unlock the interface with an ID card
-		toggle_lock(user)		//AEIOU Edit
+		toggle_lock(user)		//Eclipse Edit
 	else if (istype(W, /obj/item/stack/cable_coil) && !terminal && opened && has_electronics!=2)
 		var/turf/T = loc
 		if(istype(T) && !T.is_plating())

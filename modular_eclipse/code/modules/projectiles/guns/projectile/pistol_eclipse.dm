@@ -3,7 +3,7 @@
 	name = "\improper P12 Compact"
 	desc = "Renowned on Earth for its legendary reliability, this .45 handgun is still in use in some militaries throughout the galaxy. Has a threaded barrel to mount a suppressor. Has an accessory rail to mount a flashlight. Rated for +P ammunition."
 	origin_tech = "combat=4;materials=2;engineering=4"
-	icon = 'modular_aeiou/icons/obj/gun_aeiou.dmi'
+	icon = 'modular_eclipse/icons/obj/gun_eclipse.dmi'
 	icon_state = "usp"
 	item_state = "usp"
 	caliber = ".45"

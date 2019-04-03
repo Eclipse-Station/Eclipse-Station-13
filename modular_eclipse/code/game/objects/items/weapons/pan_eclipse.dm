@@ -4,7 +4,7 @@
 	icon_state = "sledgehammer0"
 	force = 18
 	hitsound = 'sound/weapons/pan_hit.ogg'
-	icon = 'modular_aeiou/icons/obj/weapons_aeiou.dmi'
+	icon = 'modular_eclipse/icons/obj/weapons_eclipse.dmi'
 	w_class = ITEMSIZE_LARGE
 	sharp = 0
 	edge = 0

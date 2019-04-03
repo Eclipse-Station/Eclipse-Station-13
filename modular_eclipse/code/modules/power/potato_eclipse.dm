@@ -1,4 +1,4 @@
-/obj/machinery/power/potato_aeiou //Same concept as the centcom laser. Reward engineering for good power management. Here it's science, other one is stuff.
+/obj/machinery/power/potato_eclipse //Same concept as the centcom laser. Reward engineering for good power management. Here it's science, other one is stuff.
 	name = "Potato machine"
 	desc = "A specialised, complex scanner getting super good research and shit."
 	anchored = 1
@@ -17,18 +17,18 @@
 	var/integrity = 130
 	var/locked = 0
 
-/obj/machinery/power/potato_aeiou/initialize()
+/obj/machinery/power/potato_eclipse/initialize()
 	. = ..()
 	if(state == 2 && anchored)
 		connect_to_network()
 
-/obj/machinery/power/potato_aeiou/attack_hand(mob/user as mob)
+/obj/machinery/power/potato_eclipse/attack_hand(mob/user as mob)
 	src.add_fingerprint(user)
 	activate(user)
 
 	user.visible_message("<span class='notice'>[user] toggles the [src] switch.</span>","<span class='notice'>You toggle the [src] switch.</span>")
 
-/obj/machinery/power/potato_aeiou/proc/activate(mob/user as mob)
+/obj/machinery/power/potato_eclipse/proc/activate(mob/user as mob)
 	if(state == 2)
 		if(!powernet)
 			user << "\The [src] isn't connected to a wire."
@@ -48,7 +48,7 @@
 		return 1
 
 
-/obj/machinery/power/potato_aeiou/process()
+/obj/machinery/power/potato_eclipse/process()
 	if(on)
 		return 1
 
@@ -63,7 +63,7 @@
 		return
 	return
 
-/obj/machinery/power/potato_aeiou/attackby(obj/item/W, mob/user)
+/obj/machinery/power/potato_eclipse/attackby(obj/item/W, mob/user)
 
 	if(istype(W, /obj/item/weapon/tool/wrench))
 		if(active)

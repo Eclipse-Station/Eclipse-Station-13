@@ -61,10 +61,10 @@ var/global/datum/controller/gameticker/ticker
 					while(SSvote.time_remaining)
 						sleep(1)
 
-			// // // AEIOU EDIT: Tip of the Round // // //
+			// // // ECLIPSE EDIT: Tip of the Round // // //
 			if((pregame_timeleft <= send_tip_at) && !tip_sent)		//it's time to send a tip
 				send_tip_of_the_round()
-			// // // END AEIOU EDIT: Tip of the Round // // //
+			// // // END ECLIPSE EDIT: Tip of the Round // // //
 
 			if(pregame_timeleft <= 0)
 				current_state = GAME_STATE_SETTING_UP
@@ -363,7 +363,7 @@ var/global/datum/controller/gameticker/ticker
 						time_left -= 1 MINUTES
 						sleep(600)
 					if(!delay_end)
-						to_chat(world, "<span class='notice'><b>Round ended. Rebooting world.</b></span>")		//AEIOU edit
+						to_chat(world, "<span class='notice'><b>Round ended. Rebooting world.</b></span>")		//Eclipse edit
 						world.Reboot()
 					else
 						to_chat(world, "<span class='notice'><b>An admin has delayed the round end.</b></span>")
@@ -385,7 +385,7 @@ var/global/datum/controller/gameticker/ticker
 		return 1
 
 /datum/controller/gameticker/proc/declare_completion()
-	world.log <<  "Round ended. Mode: [mode.name]."		//AEIOU edit: log to console that the round is over
+	world.log <<  "Round ended. Mode: [mode.name]."		//Eclipse edit: log to console that the round is over
 	world << "<br><br><br><H1>A round of [mode.name] has ended!</H1>"
 	for(var/mob/Player in player_list)
 		if(Player.mind && !isnewplayer(Player))

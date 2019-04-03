@@ -10,7 +10,7 @@
 	icon = 'icons/vore/custom_items_vr.dmi'
 	icon_state = "backup_implant"
 
-/obj/item/weapon/implant/backup/get_data()	//AEIOU edit - no more KHI
+/obj/item/weapon/implant/backup/get_data()	//Eclipse edit - no more KHI
 	var/dat = {"
 <b>Implant Specifications:</b><BR>
 <b>Name:</b> [using_map.company_name] Employee Backup Implant<BR>

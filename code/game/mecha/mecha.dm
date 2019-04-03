@@ -43,7 +43,7 @@
 
 
 
-	//strafing and actions - AEIOU edit Or addition
+	//strafing and actions - Eclipse edit Or addition
 	var/strafe = FALSE
 	var/defence_mode = 0
 	var/leg_overload_mode = 0
@@ -90,7 +90,7 @@
 //Working exosuit vars
 	var/list/cargo = list()
 	var/cargo_capacity = 3
-//Action datums aeiou edit
+//Action datums eclipse edit
 	var/datum/action/innate/mecha/mech_eject/eject_action = new
 	var/datum/action/innate/mecha/mech_toggle_internals/internals_action = new
 	var/datum/action/innate/mecha/mech_cycle_equip/cycle_action = new
@@ -388,7 +388,7 @@
 	return
 
 ////////////////////////////////////////
-////////  AEIOU EDIT DUD PROCS  ////////
+////////  ECLIPSE EDIT DUD PROCS  ////////
 ////////////////////////////////////////
 
 /obj/mecha/proc/defence_mode()
@@ -2002,7 +2002,7 @@
 
 
 
-/////AEIOU EDIT - Clickable icon addition
+/////ECLIPSE EDIT - Clickable icon addition
 
 
 /obj/mecha/proc/GrantActions(mob/living/user, human_occupant = 0)

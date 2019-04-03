@@ -1,7 +1,7 @@
 /obj/item/weapon/gun/projectile/shotgun/pump/air_rifle
 	name = "air rifle"
 	desc = "You'll shoot your eye out, kid..."
-	icon = 'modular_aeiou/icons/obj/gun_aeiou.dmi'
+	icon = 'modular_eclipse/icons/obj/gun_eclipse.dmi'
 	icon_state = "ryder"
 	fire_sound = 'sound/weapons/gunshot_air_rifle.ogg'
 //	item_state = ""		//we'll use shotgun item states for now so you can sling one across your back
@@ -26,7 +26,7 @@
 						)
 			chambered.loc = get_turf(src)//Eject casing
 			chambered = null
-			
+
 		else
 			qdel(chambered)		//it's a used "casing", so destroy it.
 			chambered = null
@@ -47,7 +47,7 @@
 
 /obj/item/weapon/gun/projectile/shotgun/pump/air_rifle/le/examine(mob/living/user)
 	. = ..()
-	
+
 	nice_direction = "unset"		//debugging and sanity checks
 
 	if(isliving(user))		//necessary to avoid runtiming
@@ -79,7 +79,7 @@
 /obj/item/weapon/gun/projectile/sawnoff //Niim sprite made by kates
 	name = "old breakaction shotgun"
 	desc = "A venerable single barrel, single shot shotgun. Uses 12g rounds."
-	icon = 'modular_aeiou/icons/obj/gun_aeiou.dmi'
+	icon = 'modular_eclipse/icons/obj/gun_eclipse.dmi'
 	icon_state = "sawedoff"
 	recoil = 3
 	handle_casings = CYCLE_CASINGS //player has to take the old casing out manually before reloading
@@ -96,4 +96,3 @@
 	else
 		icon_state = "sawedoff-e"
 
-	

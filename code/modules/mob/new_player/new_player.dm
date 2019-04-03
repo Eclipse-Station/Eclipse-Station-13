@@ -68,7 +68,7 @@
 
 	output += "</div>"
 
-	panel = new(src, "Welcome","Welcome", 210, 285, src) //AEIOU-Station Edit: 210x280 was too small for post-roundstart menu.
+	panel = new(src, "Welcome","Welcome", 210, 285, src) //Eclipse-Station Edit: 210x280 was too small for post-roundstart menu.
 	panel.set_window_options("can_close=0")
 	panel.set_content(output)
 	panel.open()

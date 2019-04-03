@@ -5,7 +5,7 @@
 	req_tech = list(TECH_BIO = 3, TECH_MATERIAL = 3, TECH_DATA = 3) //relatively easy to aquire in case a crewmember loses their. Somehow.
 	materials = list(DEFAULT_WALL_MATERIAL = 3000, "glass" = 4000)
 	build_path = /obj/item/clothing/suit/gelsuit
-	sort_string = "AEIOU"
+	sort_string = "Eclipse"
 
 /datum/design/item/medical/gelsuit_deluxe
 	name = "Advanced adaptive gel suit design"

@@ -3,7 +3,7 @@
 /obj/machinery/vending/autodrobe
 	name = "\improper AutoDrobe"
 	desc = "A vending machine for costumes."
-	icon = 'modular_aeiou/icons/obj/vending_aeiou.dmi'
+	icon = 'modular_eclipse/icons/obj/vending_eclipse.dmi'
 	icon_state = "theater"
 	icon_deny = "theater-deny"
 	product_slogans = "Dress for success!;Suited and booted!;It's show time!;Why leave style up to fate? Use AutoDrobe!"

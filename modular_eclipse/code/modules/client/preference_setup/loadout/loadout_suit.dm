@@ -1,5 +1,5 @@
 /*
-// ALL AEIOU SUIT SLOT LOADOUT ITEMS GO HERE
+// ALL ECLIPSE SUIT SLOT LOADOUT ITEMS GO HERE
 // You lost the game. - kates
 */
 

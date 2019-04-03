@@ -3,7 +3,7 @@
 // When adding a new PoI, please add it to this list.
 #if MAP_TEST
 /*#include "spider1.dmm"
-#include "Flake.dmm"	//AEIOU Edit: The duplicate entries are left here but commented for more convenient reference when making new areas
+#include "Flake.dmm"	//Eclipse Edit: The duplicate entries are left here but commented for more convenient reference when making new areas
 #include "MCamp1.dmm"
 #include "Rocky1.dmm"
 #include "Rocky2.dmm"
@@ -53,7 +53,7 @@
 /datum/map_template/surface/wilderness/normal/Hunted
 	name = "Hunted"
 	desc = "Some vacation hunters from Sol bit off more than they could chew."
-	mappath = 'modular_aeiou/maps/submaps/surface_submaps/wilderness/Hunted.dmm'
+	mappath = 'modular_eclipse/maps/submaps/surface_submaps/wilderness/Hunted.dmm'
 	allow_duplicates = FALSE
 	annihilate = TRUE
 	cost = 20

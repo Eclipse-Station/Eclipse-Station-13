@@ -15,8 +15,8 @@
 /obj/item/clothing/under/polychromic	//enables all three overlays to reduce copypasta and defines basic stuff
 	name = "polychromic suit"
 	desc = "For when you want to show off your horrible colour coordination skills."
-	icon = 'modular_aeiou/icons/obj/clothing/polychromic_uniforms.dmi'
-	icon_override = 'modular_aeiou/icons/mob/clothing/onmob/polychromic_uniforms.dmi'
+	icon = 'modular_eclipse/icons/obj/clothing/polychromic_uniforms.dmi'
+	icon_override = 'modular_eclipse/icons/mob/clothing/onmob/polychromic_uniforms.dmi'
 	icon_state = "polysuit"
 	item_color = "polysuit"
 	item_state = "sl_suit"

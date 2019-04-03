@@ -17,7 +17,7 @@
 		SPECIES_ZORREN_FLAT,
 		SPECIES_ZORREN_HIGH
 	)
-	//AEIOU-Station Add: Lookup tables for apply_paintjob edit.
+	//Eclipse-Station Add: Lookup tables for apply_paintjob edit.
 	var/paintjobs_helmet = list(
 		"Engineering" = list("engineering voidsuit helmet", "rig0-engineering", "rig0-engineering"),
 		"Mining" = list("mining voidsuit helmet", "rig0-mining", "rig0-mining"),
@@ -56,7 +56,7 @@
 		"Pilot" = list("pilot voidsuit", "rig-pilot", "rig-pilot", "sec_voidsuitTG"),
 		"Pilot Blue" = list("pilot voidsuit", "rig-pilot2", "rig-pilot2", "sec_voidsuitTG", "sec_voidsuitTG")
 	)
-	//AEIOU-Station Add End
+	//Eclipse-Station Add End
 
 // Old Exploration is too WIP to use right now
 /obj/machinery/suit_cycler/exploration

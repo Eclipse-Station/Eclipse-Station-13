@@ -2,7 +2,7 @@
 /obj/item/weapon/glassshiv
 	name = "glass shiv"
 	desc = "A poorly crafted shiv."
-	icon = 'modular_aeiou/icons/obj/weapons_aeiou.dmi'
+	icon = 'modular_eclipse/icons/obj/weapons_eclipse.dmi'
 	icon_state = "glass_shiv"
 	force = 12 //Small but not nothing // EDIT: Adjusted damage to account for embed_chance formula
 	embed_chance = 100 //this should go in everytime

@@ -5,7 +5,7 @@ var/const/RESIZE_BIG = 1.25
 var/const/RESIZE_NORMAL = 1
 var/const/RESIZE_SMALL = 0.75
 var/const/RESIZE_TINY = 0.5
-//AEIOU edits ^^^^ Size
+//Eclipse edits ^^^^ Size
 //average
 var/const/RESIZE_A_HUGEBIG = (RESIZE_HUGE + RESIZE_BIG) / 2
 var/const/RESIZE_A_BIGNORMAL = (RESIZE_BIG + RESIZE_NORMAL) / 2

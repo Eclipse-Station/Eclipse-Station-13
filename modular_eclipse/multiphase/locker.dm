@@ -36,4 +36,4 @@
 		/obj/item/clothing/shoes/boots/winter/security,
 		/obj/item/device/flashlight/maglight,
 		/obj/item/clothing/mask/gas/half)
-//AEIOU change - replaces plain egun with multiphase gun
+//Eclipse change - replaces plain egun with multiphase gun

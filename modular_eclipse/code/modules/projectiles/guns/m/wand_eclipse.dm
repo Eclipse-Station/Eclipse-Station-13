@@ -1,7 +1,7 @@
 /obj/item/weapon/gun/magic/wand
 	name = "wand of nothing"
 	desc = "It's not just a stick, it's a MAGIC stick!"
-	icon = 'modular_aeiou/icons/obj/magic_aeiou.dmi'
+	icon = 'modular_eclipse/icons/obj/magic_eclipse.dmi'
 	icon_state = "nothingwand"
 	item_state = "wand"
 	w_class = ITEMSIZE_SMALL

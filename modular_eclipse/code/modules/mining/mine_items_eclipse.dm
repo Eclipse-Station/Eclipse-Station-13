@@ -1,7 +1,7 @@
-/obj/item/weapon/pickaxe/heavydutydrill //AEIOU project
+/obj/item/weapon/pickaxe/heavydutydrill //Eclipse project
 	name = "heavy duty drill"
 	desc = "Vroom vroom."
-	icon = 'modular_aeiou/icons/obj/weapons_aeiou.dmi'
+	icon = 'modular_eclipse/icons/obj/weapons_eclipse.dmi'
 	icon_state = "thdd0"
 	item_state = "chainsaw0"
 	w_class = ITEMSIZE_LARGE
@@ -12,7 +12,7 @@
 	var/on = 0 //Is the engine running
 	var/open = 0 //Is the maintenance panel open
 	var/max_fuel = 100 //Amount of fuel. It is evident.
-	var/active_force = 35 
+	var/active_force = 35
 	var/inactive_force = 10
 	var/enginefailed = 0 //Is the engine currently stuck. If 1, it needs to be cleared.
 	var/drill_bit = null //The actual drill in contact with the surface.
@@ -143,7 +143,7 @@
 			user << "<span class='notice'>You install a filter in [src].</span>"
 			update_icon()
 		else
-			user << "<span class='notice'>[src] already has a filter.</span>"	
+			user << "<span class='notice'>[src] already has a filter.</span>"
 
 	if(istype(W, /obj/item/drillparts/drillbit))
 		if(!drill_bit)
@@ -153,7 +153,7 @@
 			user << "<span class='notice'>You install a tip in [src].</span>"
 			update_icon()
 		else
-			user << "<span class='notice'>[src] already has a tip.</span>"	
+			user << "<span class='notice'>[src] already has a tip.</span>"
 
 	if(istype(W, /obj/item/drillparts/drillengine))
 		if(!engine )
@@ -163,7 +163,7 @@
 			user << "<span class='notice'>You install an engine in [src].</span>"
 			update_icon()
 		else
-			user << "<span class='notice'>[src] already has a engine.</span>"	
+			user << "<span class='notice'>[src] already has a engine.</span>"
 
 
 /obj/item/weapon/pickaxe/heavydutydrill/proc/enginefail() //This is the process for a jammed engine. You need to activate it in hand to solve the issue.
@@ -210,7 +210,7 @@
 /obj/item/drillparts
 	name = "Drill part"
 	desc = "This is not supposed to be spawned in ever."
-	icon = 'modular_aeiou/icons/obj/tree_tap.dmi'	
+	icon = 'modular_eclipse/icons/obj/tree_tap.dmi'
 	w_class = ITEMSIZE_SMALL
 	force = 5
 
@@ -220,7 +220,7 @@
 	name = "basic air filter"
 	desc = "An engine air filter meant for combustible engines. This one seems pretty basic."
 	icon_state = "treetap0"
-	var/aspiration = 1	
+	var/aspiration = 1
 
 /obj/item/drillparts/drillairfilters/advanced
 	name = "advanced air filter"

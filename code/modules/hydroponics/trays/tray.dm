@@ -512,7 +512,7 @@
 				return
 
 			user << "You plant the [S.seed.seed_name] [S.seed.seed_noun]."
-			seed_planted_shift++//aeiou edit
+			seed_planted_shift++//eclipse edit
 			plant_seeds(S)
 
 		else

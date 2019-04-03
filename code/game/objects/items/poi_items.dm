@@ -60,7 +60,7 @@
 	return ..()
 
 
-//AEIOU: Hunted PoI, also useful for dropping active beartraps onto the unsuspecting crew
+//Eclipse: Hunted PoI, also useful for dropping active beartraps onto the unsuspecting crew
 
 /obj/item/weapon/beartrap/autotrap
 	name = "autotrap"

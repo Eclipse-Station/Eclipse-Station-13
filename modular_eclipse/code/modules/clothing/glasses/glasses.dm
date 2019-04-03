@@ -1,5 +1,5 @@
 /*
-//	AEIOU's eyewear goes here!
+//	Eclipse's eyewear goes here!
 */
 
 /obj/item/clothing/glasses/fake

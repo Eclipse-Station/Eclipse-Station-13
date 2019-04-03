@@ -2,7 +2,7 @@ var/global/list/special_roles = list( //keep synced with the defines BE_* in set
 //some autodetection here.
 // TODO: Update to new antagonist system.
 
-// // // BEGIN AEIOU EDIT // // //
+// // // BEGIN ECLIPSE EDIT // // //
 /* This edit is a patch to allow users to select their antag candidacy, because
  * for some reason, IS_MODE_COMPILED is failing. So, we're going to go ahead and
  * manually enable these all. For the sake of easy reversion later, the original
@@ -41,7 +41,7 @@ var/global/list/special_roles = list( //keep synced with the defines BE_* in set
 	"loyalist" = 1,										// 13
 	"pAI candidate" = 1, // -- TLE						// 14
 
-// // // END AEIOU EDIT // // //
+// // // END ECLIPSE EDIT // // //
 )
 
 /datum/category_item/player_setup_item/antagonism/candidacy

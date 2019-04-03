@@ -676,7 +676,7 @@
 							"if told you I'd have to kill you",
 							"... wait, why am I even telling you this? Just let me pass",
 							"stop asking questions")
-/* AEIOU edit - fuck khi
+/* Eclipse edit - fuck khi
 /datum/lore/organization/gov/kitsuhana
 	name = "Kitsuhana Heavy Industries"
 	short_name = "Kitsuhana"
@@ -884,4 +884,4 @@
 							"near Cor Galaxia",
 							"Segmentum Obscurum", // Basically their home territory, where our telescopes can't see. They prefer to keep it that way. They call it something else internally.
 							)
-*/ //NO SPACE ELVES AEIOU edit
+*/ //NO SPACE ELVES Eclipse edit

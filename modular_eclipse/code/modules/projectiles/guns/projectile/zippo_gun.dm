@@ -11,7 +11,7 @@
 	var/concealed_desc = "The zippo. Something feels off about this one, though..."
 	var/name_override = FALSE		//prevents the name from changing when concealed/revealed.
 	var/desc_override = FALSE
-	icon = 'modular_aeiou/icons/obj/zippo_gun.dmi'
+	icon = 'modular_eclipse/icons/obj/zippo_gun.dmi'
 	icon_state = "zippogun"
 	item_state = "zippo"
 	var/finish = "steel"		//gold, silver, etc/ Future implementation.
@@ -35,12 +35,12 @@
 /obj/item/weapon/gun/projectile/zippo_gun/New()
 	. = ..()
 	consume_next_projectile()
-	
+
 /obj/item/weapon/gun/projectile/zippo_gun/examine(mob/user)
 	hide_ammo_count = concealed		//If we're concealed, we don't want to show the ammo left. That'd be a huge tell
 	..(user)		//continue as planned.
 
-	
+
 /obj/item/weapon/gun/projectile/zippo_gun/verb/conceal()
 	set name = "Fold/Unfold Zippo"
 	set category = "Object"
@@ -51,7 +51,7 @@
 	if(concealed)
 		icon_state = "[initial(icon_state)]-[finish]-concealed"
 		description_info = concealed_desc_info
-		
+
 		if(!name_override)
 			name = concealed_name
 		if(!desc_override)
@@ -59,7 +59,7 @@
 	else
 		icon_state = "[initial(icon_state)]-[finish]"
 		description_info = initial(description_info)
-		
+
 		if(!name_override)
 			name = initial(name)
 		if(!desc_override)
@@ -78,7 +78,7 @@
 				shot.loc = get_turf(src)
 			chamber_exposed = TRUE
 			return 1
-		else 
+		else
 			if(loaded.len)
 				to_chat(user, "<span class='notice'>You close the breech, allowing you to fire.</span>")
 				var/obj/item/ammo_casing/C = loaded[1]
@@ -89,7 +89,7 @@
 			chamber_exposed = FALSE
 	else	//if the gun is folded, unfold it.
 		toggle_concealed()
-	
+
 	add_fingerprint(user)
 
 /obj/item/weapon/gun/projectile/zippo_gun/attack_hand(mob/user as mob)
@@ -127,18 +127,18 @@
 					return TRUE
 				else		//user moved or cancelled
 					to_chat(user, "<span class='notice'>The pieces of [src] fall back into their original place.</span>")
-					
+
 		else	//gun is concealed, so unfold it.
 			if(!chamber_exposed)		//somehow the chamber isn't exposed. log it as an error and fix it
 				error("[src] held by [user] at location [x], [y], [z]: Attempted toggle_concealed() where concealed == TRUE but chamber_exposed == FALSE. Attempting to correct error.")
 				log_error("[src] held by [user] at location [x], [y], [z]: Attempted toggle_concealed() where concealed == TRUE but chamber_exposed == FALSE. Attempting to correct...")
 				chamber_exposed = TRUE
 				ASSERT(chamber_exposed)	//If the chamber is still not exposed for some reason, crash the proc
-				
+
 /* Normally I would put more code here telling the previous check to run through
  * all the checks again. However, if the errored part of the proc gets this far,
- * this means the ASSERT(chamber_exposed) check did not evaluate to FALSE, and  
- * thus it did not crash. This means we can proceed as planned, since the error 
+ * this means the ASSERT(chamber_exposed) check did not evaluate to FALSE, and
+ * thus it did not crash. This means we can proceed as planned, since the error
  * was able to correct itself properly.
  */
 			if (do_after(user, 40))

@@ -1,5 +1,5 @@
-/datum/sprite_accessory/marking/aeiou
-	icon = 'modular_aeiou/icons/mob/human_races/markings_aeiou.dmi'
+/datum/sprite_accessory/marking/eclipse
+	icon = 'modular_eclipse/icons/mob/human_races/markings_eclipse.dmi'
 
 	frog_head
 		name = "Frog head"

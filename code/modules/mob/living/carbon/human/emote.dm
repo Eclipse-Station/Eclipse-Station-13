@@ -726,7 +726,7 @@
 				if(!muzzled)
 					message = "[species.scream_verb]!"
 					m_type = 2
-					// AEIOU EDIT - Re-added and updated with new GOON CODE sounds
+					// ECLIPSE EDIT - Re-added and updated with new GOON CODE sounds
 					if(get_gender() == FEMALE)
 						playsound(loc, "[species.female_scream_sound]", 80, 1)
 					else

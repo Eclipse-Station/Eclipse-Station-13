@@ -300,5 +300,5 @@
 	mobs_to_pick_from = list(
 		/mob/living/simple_animal/shadekin
 	)
-//AEIOU EDIT: Shadekin do not exist in our lore
+//ECLIPSE EDIT: Shadekin do not exist in our lore
 */

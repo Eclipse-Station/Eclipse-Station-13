@@ -11,10 +11,10 @@
 	var/hanging = 0
 	action_button_name = "Adjust Breath Mask"
 
-// // // BEGIN AEIOU EDIT // // //
+// // // BEGIN ECLIPSE EDIT // // //
 /obj/item/clothing/mask/breath/AltClick(mob/living/user)
 	adjust_mask(user)
-// // // END AEIOU EDIT // // //
+// // // END ECLIPSE EDIT // // //
 
 /obj/item/clothing/mask/breath/proc/adjust_mask(mob/user)
 	if(user.canmove && !user.stat)

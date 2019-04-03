@@ -10,7 +10,7 @@
 
 //var/randomfacts = "Nothing"
 
-var/global_aeiou/datum/randomfacts/randomfacts = new()
+var/global_eclipse/datum/randomfacts/randomfacts = new()
 
 /datum/randomfacts
     var/cans_opened = 0
@@ -26,7 +26,7 @@ var/global_aeiou/datum/randomfacts/randomfacts = new()
     var/destroyed_research_items = 0
     var/items_sold_shift = 0
     var/disposals_flush_shift = 0
-    
+
     var/list/fact_things = list(
         "Stringboye with %value" = "var_name1",
         "Another stringy %value" = "var_name2")

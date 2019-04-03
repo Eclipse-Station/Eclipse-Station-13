@@ -162,7 +162,7 @@ default behaviour is:
 					now_pushing = 0
 					return
 			// Handle grabbing, stomping, and such of micros!
-//			if(handle_micro_bump_other(tmob)) return -- AEIOU edit. LET'S NOT.
+//			if(handle_micro_bump_other(tmob)) return -- Eclipse edit. LET'S NOT.
 			// VOREStation Edit - End
 
 			if(istype(tmob, /mob/living/carbon/human) && (FAT in tmob.mutations))
@@ -862,12 +862,12 @@ default behaviour is:
 	if(istype(src.loc, /obj/item/weapon/holder))
 		escape_inventory(src.loc)
 		return
-	//AEIOU-Station Add: To dismount vehicles, unbuckling isn't enough.
+	//Eclipse-Station Add: To dismount vehicles, unbuckling isn't enough.
 	if(istype(buckled, /obj/vehicle))
 		var/obj/vehicle/V = buckled
 		V.unload(src)
 		return TRUE
-	//AEIOU-Station Add End
+	//Eclipse-Station Add End
 
 	//unbuckling yourself
 	if(buckled)

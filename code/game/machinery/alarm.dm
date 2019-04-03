@@ -767,7 +767,7 @@
 		return
 
 	if(istype(W, /obj/item/weapon/card/id) || istype(W, /obj/item/device/pda))// trying to unlock the interface with an ID card
-// // // BEGIN AEIOU EDIT // // //
+// // // BEGIN ECLIPSE EDIT // // //
 		toggle_locked(user)		//turned into a proc for alt-click functionality.
 	return ..()
 
@@ -783,10 +783,10 @@
 			else
 				user << "<span class='warning'>Access denied.</span>"
 			return
-			
+
 /obj/machinery/alarm/AltClick(mob/user)
 	toggle_locked(user)
-// // // END AEIOU EDIT // // //
+// // // END ECLIPSE EDIT // // //
 
 /obj/machinery/alarm/power_change()
 	..()

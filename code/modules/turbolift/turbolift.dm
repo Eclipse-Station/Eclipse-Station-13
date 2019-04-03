@@ -168,7 +168,7 @@
 
 	current_floor = next_floor
 	control_panel_interior.visible_message("The elevator [moving_upwards ? "rises" : "descends"] smoothly.")
-	turbo_lift_floors_moved++ //aeiou edit
+	turbo_lift_floors_moved++ //eclipse edit
 
 	return (next_floor.delay_time || move_delay || 30)
 

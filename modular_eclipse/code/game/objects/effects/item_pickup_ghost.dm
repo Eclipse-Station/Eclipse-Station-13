@@ -1,4 +1,4 @@
-//Stolen from baystation for AEIOU like the dirty pirate i am. Code is from thasc. -Kates.
+//Stolen from baystation for Eclipse like the dirty pirate i am. Code is from thasc. -Kates.
 //haha I did it first - Nestor
 
 /obj/effect/temporary/item_pickup_ghost

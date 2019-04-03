@@ -1,20 +1,20 @@
 
-/obj/item/weapon/gun/projectile/shotgun/pump/rifle/synthd //This is a special synthetic gun for pixel. 
+/obj/item/weapon/gun/projectile/shotgun/pump/rifle/synthd //This is a special synthetic gun for pixel.
 	desc = "A reproduction of an almost ancient weapon design from the early 20th century, fitted and modified for today's use with better ergonomics and a synthetic stock. It remains popular with hunters and marksmen across the universe. Uses 7.62mm rounds."
-	icon = 'modular_aeiou/icons/obj/gun_aeiou.dmi'
+	icon = 'modular_eclipse/icons/obj/gun_eclipse.dmi'
 	item_state = "sboltaction"
 	icon_state = "sboltaction"
 
-/obj/item/weapon/gun/projectile/shotgun/pump/rifle/lever/synthd //This is a special synthetic gun for pixel. 
+/obj/item/weapon/gun/projectile/shotgun/pump/rifle/lever/synthd //This is a special synthetic gun for pixel.
 	desc = "A reproduction of an almost ancient weapon design from the 19th century, fitted and modified for today's use with better ergonomics and a synthetic stock. This one uses a lever-action to move new rounds in the chamber. Uses 7.62mm rounds"
-	icon = 'modular_aeiou/icons/obj/gun_aeiou.dmi'
+	icon = 'modular_eclipse/icons/obj/gun_eclipse.dmi'
 	icon_state = "sleveraction"
 	item_state = "sleveraction"
 
-/obj/item/weapon/gun/projectile/shotgun/pump/rifle/pocketrifle //aeiou addition
+/obj/item/weapon/gun/projectile/shotgun/pump/rifle/pocketrifle //eclipse addition
 	name = "pocket rifle"
 	desc = "What the hell is this? It look like someone sawn a bolt action into 4 parts! Looks more usefull as a club than anything.. Uses 7.62mm rounds."
-	icon = 'modular_aeiou/icons/obj/gun_aeiou.dmi'
+	icon = 'modular_eclipse/icons/obj/gun_eclipse.dmi'
 	item_state = "pocketrifle"
 	icon_state = "pocketrifle"
 	fire_sound = 'sound/weapons/rifleshot.ogg'
@@ -41,10 +41,10 @@
 	icon_state = "pocketrifleb"
 
 //Perfect for your slavic snipers.
-/obj/item/weapon/gun/projectile/shotgun/pump/rifle/scoped//aeiou addition
+/obj/item/weapon/gun/projectile/shotgun/pump/rifle/scoped//eclipse addition
 	name = "scoped bolt action rifle"
 	desc = "A reproduction of an almost ancient weapon design from the early 20th century. It's still popular among hunters and collectors due to its reliability. This one has a decent scope fitted on. Uses 7.62mm rounds."
-	icon = 'modular_aeiou/icons/obj/gun_aeiou.dmi'
+	icon = 'modular_eclipse/icons/obj/gun_eclipse.dmi'
 	item_state = "boltaction-scoped"
 	icon_state = "boltaction-scoped"
 	fire_sound = 'sound/weapons/rifleshot.ogg'
@@ -71,7 +71,7 @@
 	desc = "A special lever action rifle."
 	caliber = "7.62mm"
 	max_shells = 5
-	icon = 'modular_aeiou/icons/obj/gun_aeiou.dmi'
+	icon = 'modular_eclipse/icons/obj/gun_eclipse.dmi'
 	item_state = "levercarabine"
 	icon_state = "levercarabine"
 	origin_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 2)

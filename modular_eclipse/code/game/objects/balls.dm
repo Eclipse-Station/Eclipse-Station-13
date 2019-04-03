@@ -1,22 +1,22 @@
 /*
 //	BALLS - GLORIOUS BALLS
 //
-//	All sorts of balls exclusive to AEIOU go here!
+//	All sorts of balls exclusive to Eclipse go here!
 */
 
 /obj/item/toy/tennis
 	name = "classic tennis ball"
 	desc = "A classic tennis ball. It appears to have faint bite marks scattered all over its surface."
-	icon = 'modular_aeiou/icons/obj/balls.dmi'
+	icon = 'modular_eclipse/icons/obj/balls.dmi'
 	icon_state = "tennis_classic"
 	item_icons = list(
-		slot_l_hand_str = 'modular_aeiou/icons/mob/inhands/balls_left.dmi',
-		slot_r_hand_str = 'modular_aeiou/icons/mob/inhands/balls_right.dmi'
+		slot_l_hand_str = 'modular_eclipse/icons/mob/inhands/balls_left.dmi',
+		slot_r_hand_str = 'modular_eclipse/icons/mob/inhands/balls_right.dmi'
 		)
 	item_state_slots = list(slot_r_hand_str = "tennis_classic", slot_l_hand_str = "tennis_classic")
 	item_state = "tennis_classic"
 	slot_flags = SLOT_MASK | SLOT_HEAD | SLOT_EARS	//FLUFF ITEM - Doesn't matter where it goes
-	icon_override = 'modular_aeiou/icons/mob/mouthball.dmi'
+	icon_override = 'modular_eclipse/icons/mob/mouthball.dmi'
 	w_class = ITEMSIZE_SMALL
 	attack_verb = list("squished", "squashed", "hit")
 

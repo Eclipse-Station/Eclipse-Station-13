@@ -1,4 +1,4 @@
-/obj/item/clothing/mask/gas/owl_aeiou //SPECIAL THANKS to Cameron653 for all the help! -lbnesquik
+/obj/item/clothing/mask/gas/owl_eclipse //SPECIAL THANKS to Cameron653 for all the help! -lbnesquik
 	name = "Owl mask"
 	desc = "Twoooo! It seems to house some electronics near the mouth."
 	icon_state = "owl"
@@ -18,7 +18,7 @@
 		'sound/voice/chatter/owl_10.ogg'
 		)
 
-/obj/item/clothing/mask/gas/owl_aeiou/verb/toggle_voice()
+/obj/item/clothing/mask/gas/owl_eclipse/verb/toggle_voice()
 	set name = "Voice"
 	set category = "Object"
 	set desc = "Click to toggle your JUSTICE voice."
@@ -30,7 +30,7 @@
 	to_chat(M, "<span class='notice'>You move a switch on \the [src].</span>")
 	owl_voice_enabled = !owl_voice_enabled
 
-/obj/item/clothing/mask/gas/owl_aeiou/proc/play_owl_sound()
+/obj/item/clothing/mask/gas/owl_eclipse/proc/play_owl_sound()
     var/playing_sound = pick(sound_to_play)
     if(owl_voice_enabled)
         playsound(src, playing_sound, 25)

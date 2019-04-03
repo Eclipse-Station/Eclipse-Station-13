@@ -1276,7 +1276,7 @@
 		alert(user,"This device can be easily used to break ERP preferences due to the nature of teleporting \
 		and tele-vore. Make sure you carefully examine someone's OOC prefs before teleporting them if you are \
 		going to use this device for ERP purposes. This device records all warnings given and teleport events for \
-		admin review in case of pref-breaking, so just don't do it.","OOC WARNING")*/  //ABSOLUTELY FUCKING NOT - AEIOU EDIT
+		admin review in case of pref-breaking, so just don't do it.","OOC WARNING")*/  //ABSOLUTELY FUCKING NOT - ECLIPSE EDIT
 
 	var/choice = alert(user,"What do you want to do?","[src]","Create Beacon","Cancel","Target Beacon")
 	switch(choice)
@@ -1532,7 +1532,7 @@
 			if(do_after(user,5 SECONDS,src))
 				user.unEquip(src)
 				forceMove(bellychoice)
-				user.visible_message("<span class='warning'>[user] eats a telebeacon!</span>","You eat the the beacon!")*/ //AEIOU EDIT - FUCK NO
+				user.visible_message("<span class='warning'>[user] eats a telebeacon!</span>","You eat the the beacon!")*/ //ECLIPSE EDIT - FUCK NO
 
 // A single-beacon variant for use by miners (or whatever)
 /obj/item/device/perfect_tele/one_beacon

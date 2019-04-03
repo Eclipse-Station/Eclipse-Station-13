@@ -36,7 +36,7 @@
 /obj/item/projectile/bullet/reusable/air_rifle_bb
 	name = "\improper BB"
 	desc = "A .177 (4.5mm) BB. You'll probably want to stop staring at it and put some eye protection on..."
-	icon = 'modular_aeiou/icons/obj/projectile_aeiou.dmi'
+	icon = 'modular_eclipse/icons/obj/projectile_eclipse.dmi'
 	icon_state = "bb-steel"
 	damage = 3
 	agony = 15		//they sting to get hit by, even at post-ricochet velocities
@@ -92,7 +92,7 @@
 				if(eye_protection)
 					if(silenced)
 						to_chat(target_mob, "<span class='danger'>\The [src] bounces harmlessly off your [eye_protection]!</span>")
-					
+
 					else
 						target.visible_message(
 							"<span class='danger'>\The [src] bounces off \the [target]'s [eye_protection]!</span>",
@@ -115,20 +115,20 @@
 							"<span class='danger'>\The [src] hits \the [target] in the eye!</span>",
 							"<span class='userdanger'>\The [src] hits you in the eye!</span>"
 							)
-							
+
 				message_already_sent = TRUE
 				agony = 75
 				if(target.can_feel_pain())
 					target.emote("scream")
-				
+
 				target.Blind(5)		//blind them for a few seconds
 				target.eye_blurry = 5
-				
+
 				if(!(target.disabilities & NEARSIGHTED))	//a check to see if they're already nearsighted, so we don't accidentally cure their vision
 					target.disabilities |= NEARSIGHTED
 					spawn(300)		//30 seconds
 						target.disabilities &= ~NEARSIGHTED
-	
+
 	if(!message_already_sent)
 		if(silenced)
 			to_chat(target_mob, "<span class='danger'>You've been hit in the [parse_zone(def_zone)] by \the [src]!</span>")
@@ -136,7 +136,7 @@
 			visible_message("<span class='danger'>\The [target_mob] is hit by \the [src] in the [parse_zone(def_zone)]!</span>")//X has fired Y is now given by the guns so you cant tell who shot you if you could not see the shooter
 		message_already_sent = TRUE
 // // // // // END EDIT FOR SHOT-IN-EYE CHECK // // // // //
-		
+
 	//admin logs
 	if(!no_attack_log)
 		if(istype(firer, /mob) && istype(target_mob))
@@ -157,12 +157,12 @@
 		dropped = TRUE
 
 //Mangled, non-reusable BB. Technically not a bullet, but here for ease of organization.
-/obj/item/ammo_casing/spent/mangled_bb		
+/obj/item/ammo_casing/spent/mangled_bb
 	name = "mangled BB"
 	caliber = "unusable"
 	desc = "A dented piece of zinc-coated steel airgun shot."
 	description_info = "This won't reload into your air rifle, but it can be recycled at an autolathe for a tiny amount of metal."
-	icon = 'modular_aeiou/icons/obj/projectile_aeiou.dmi'
+	icon = 'modular_eclipse/icons/obj/projectile_eclipse.dmi'
 	icon_state = "bb-steel"
 	sharp = FALSE
 	matter = list(DEFAULT_WALL_MATERIAL = 10)

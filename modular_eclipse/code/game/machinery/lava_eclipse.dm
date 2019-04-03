@@ -1,5 +1,5 @@
 ////////////////////LAVA///////////////////////////////////////
-/obj/machinery/lavatile_aeiou
+/obj/machinery/lavatile_eclipse
 	name = "lava"
 	desc = "A"
 	icon = 'icons/turf/flooring/lava.dmi'

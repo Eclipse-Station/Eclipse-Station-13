@@ -13,9 +13,9 @@
 		new P(src)
 	..()
 	return
-// END - DO NOT EDIT PROTOTYPE		//AEIOU Edit: Above section commented out to avoid duplicates, but it stays so you can read it without checking the other file over and over
+// END - DO NOT EDIT PROTOTYPE		//Eclipse Edit: Above section commented out to avoid duplicates, but it stays so you can read it without checking the other file over and over
 */
-									//AEIOU Edit: This is where boxes of specific equipment should go to avoid desynchronization issues
+									//Eclipse Edit: This is where boxes of specific equipment should go to avoid desynchronization issues
 
 /* TEMPLATE
 // ckey:Character Name
