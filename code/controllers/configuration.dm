@@ -6,7 +6,7 @@ var/list/gamemode_cache = list()
 
 	var/nudge_script_path = "nudge.py"  // where the nudge.py script is located
 
-	var/hub_visibility = FALSE				//CITADEL CHANGE - HUB CONFIG
+	var/hub_visibility = TRUE				//CITADEL CHANGE - HUB CONFIG
 
 	var/log_ooc = 0						// log OOC channel
 	var/log_access = 0					// log login/logout
