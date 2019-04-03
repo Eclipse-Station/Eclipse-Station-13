@@ -8,7 +8,7 @@
 	if(!istype(target))
 		return
 
-	var/list/smite_types = list(SMITE_SHADEKIN_ATTACK,SMITE_SHADEKIN_NOMF,SMITE_REDSPACE_ABDUCT)
+	var/list/smite_types = list(SMITE_REDSPACE_ABDUCT) //AEIOU-Station Edit: Removed shadekin smites.
 
 	var/smite_choice = input("Select the type of SMITE for [target]","SMITE Type Choice") as null|anything in smite_types
 	if(!smite_choice)
@@ -18,6 +18,7 @@
 	feedback_add_details("admin_verb","SMITEV") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 	switch(smite_choice)
+	/* AEIOU-Station Removal: These don't exist anymore.
 		if(SMITE_SHADEKIN_ATTACK)
 			var/turf/Tt = get_turf(target) //Turf for target
 			
@@ -116,7 +117,7 @@
 				to_chat(target,"<span class='danger'>You're carried off into The Dark by the [shadekin]. Who knows if you'll find your way back?</span>")
 				target.ghostize()
 				qdel(target)
-				qdel(shadekin)
+				qdel(shadekin)*/
 
 		if(SMITE_REDSPACE_ABDUCT)
 			redspace_abduction(target, src)

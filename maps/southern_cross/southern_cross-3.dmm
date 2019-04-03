@@ -387,7 +387,7 @@
 	name = "Station Intercom (General)";
 	pixel_y = 21
 	},
-/obj/machinery/suit_cycler,
+/obj/machinery/suit_cycler/mining,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/mining_main/storage)
 "bd" = (

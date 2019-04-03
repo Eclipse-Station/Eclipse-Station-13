@@ -40,6 +40,7 @@
 					   )					//List of all used sprites that are in robots_vr.dmi
 
 
+/* AEIOU-Station Removal: We don't need this.
 /mob/living/silicon/robot/verb/robot_nom(var/mob/living/T in living_mobs(1))
 	set name = "Robot Nom"
 	set category = "IC"
@@ -47,7 +48,7 @@
 
 	if (stat != CONSCIOUS)
 		return
-	return feed_grabbed_to_self(src,T)
+	return feed_grabbed_to_self(src,T)*/
 
 /mob/living/silicon/robot/updateicon()
 	vr_sprite_check()

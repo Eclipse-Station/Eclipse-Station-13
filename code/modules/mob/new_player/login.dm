@@ -3,7 +3,7 @@
 var/obj/effect/lobby_image = new /obj/effect/lobby_image
 
 /obj/effect/lobby_image
-	name = "AEIOU"
+	name = "Eclipse"
 	desc = "How are you reading this?"
 	screen_loc = "1,1"
 
@@ -45,6 +45,3 @@ var/obj/effect/lobby_image = new /obj/effect/lobby_image
 		if(client)
 			handle_privacy_poll()
 			client.playtitlemusic()
-
-	if(!is_player_whitelisted(src))
-		discord_redirect(src)//aeiou addition

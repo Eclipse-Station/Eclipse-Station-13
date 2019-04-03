@@ -440,7 +440,9 @@
 
 	// VOREStation Start
 	if(ooc_notes)
-		msg += "<span class = 'deptradio'>OOC Notes:</span> <a href='?src=\ref[src];ooc_notes=1'>\[View\]</a>\n"
+		var/mob/living/carbon/human/F = user
+		if(F.ooc_notes)
+			msg += "<span class = 'deptradio'>OOC Notes:</span> <a href='?src=\ref[src];ooc_notes=1'>\[View\]</a>\n"
 
 	if(ishuman(user))
 		var/mob/living/carbon/human/F = user
