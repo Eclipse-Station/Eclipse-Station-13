@@ -135,7 +135,7 @@
 	w_class = ITEMSIZE_SMALL
 
 
-/obj/item/weapon/shovel/attackby(obj/item/weapon/W, mob/user as mob) //aeiou addition
+/obj/item/weapon/shovel/attackby(obj/item/weapon/W, mob/user as mob) //eclipse addition
 	if(istype(W, /obj/item/weapon/whetstone))
 		if(!edged)
 			force = force * 1.5

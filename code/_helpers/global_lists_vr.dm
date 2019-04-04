@@ -13,7 +13,7 @@ var/global/list/all_traits = list()			// All of 'em at once (same instances)
 
 var/global/list/custom_species_bases = list() // Species that can be used for a Custom Species icon base
 
-//stores numeric player size options indexed by name  AEIOU edit - changed Macro to Giant
+//stores numeric player size options indexed by name  Eclipse edit - changed Macro to Giant
 var/global/list/player_sizes_list = list(
 		"Giant" 	= RESIZE_HUGE,
 		"Big" 		= RESIZE_BIG,
@@ -24,7 +24,7 @@ var/global/list/player_sizes_list = list(
 //stores vantag settings indexed by name
 var/global/list/vantag_choices_list = list(
 		VANTAG_KIDNAP	=	"Be Kidnapped",
-		VANTAG_KILL		=	"Be Killed")//aeiou edit - we don't run vore events
+		VANTAG_KILL		=	"Be Killed")//eclipse edit - we don't run vore events
 
 /* Time to finally undo this. Replaced with digest_act on these items.
 //Important items that are preserved when people are digested, etc.

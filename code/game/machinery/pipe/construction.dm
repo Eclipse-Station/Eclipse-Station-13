@@ -123,7 +123,7 @@ Buildable meters
 	if ( usr.stat || usr.restrained() || !usr.canmove )
 		return
 
-// // // BEGIN AEIOU EDIT // // //
+// // // BEGIN ECLIPSE EDIT // // //
 	rotate_pipe()
 
 /obj/item/pipe/proc/rotate_pipe()
@@ -135,7 +135,7 @@ Buildable meters
 
 /obj/item/pipe/AltClick()
 	rotate_pipe()
-// // // END AEIOU EDIT // // //
+// // // END ECLIPSE EDIT // // //
 
 // If you want to disable pipe dir changing when pulled, uncomment this
 // /obj/item/pipe/Move()

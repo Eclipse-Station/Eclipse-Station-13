@@ -22,7 +22,7 @@ var/global/datum/emergency_shuttle_controller/emergency_shuttle
 	var/datum/announcement/priority/emergency_shuttle_called = new(0, new_sound = sound('sound/AI/shuttlecalled.ogg'))
 	var/datum/announcement/priority/emergency_shuttle_recalled = new(0, new_sound = sound('sound/AI/shuttlerecalled.ogg'))
 
-	// AEIOU added vars
+	// Eclipse added vars
 	var/shift_change_horn = TRUE		//Should we have a shift-change horn when the shuttle gets called?
 	var/shift_change_horn_file = 'sound/items/AirHorn.ogg'
 	var/shift_change_horn_volume = 10
@@ -54,7 +54,7 @@ var/global/datum/emergency_shuttle_controller/emergency_shuttle
 		if (autopilot)
 			set_launch_countdown(SHUTTLE_LEAVETIME)	//get ready to return
 			var/estimated_time = round(estimate_launch_time()/60,1)
-			world.log << "Shuttle has arrived at station."		//AEIOU edit
+			world.log << "Shuttle has arrived at station."		//Eclipse edit
 			if (evac)
 				emergency_shuttle_docked.Announce(replacetext(replacetext(using_map.emergency_shuttle_docked_message, "%dock_name%", "[using_map.dock_name]"),  "%ETD%", "[estimated_time] minute\s"))
 			else
@@ -111,7 +111,7 @@ var/global/datum/emergency_shuttle_controller/emergency_shuttle
 	priority_announcement.Announce(replacetext(replacetext(using_map.shuttle_called_message, "%dock_name%", "[using_map.dock_name]"),  "%ETA%", "[estimated_time] minute\s"))
 	atc.shift_ending()
 
-	// // // BEGIN AEIOU EDIT // // //
+	// // // BEGIN ECLIPSE EDIT // // //
 	world.log << "Scheduled crew transfer has begun."		//let the guy in the console see it
 	if(shift_change_horn)
 		spawn(48)		//1 mile at speed of sound in air at 0C, 1 bar pressure = 4.8574... seconds. This assumes the colony is at 1 mile away, and the horn is originating from there.
@@ -120,7 +120,7 @@ var/global/datum/emergency_shuttle_controller/emergency_shuttle
 /datum/emergency_shuttle_controller/proc/blow_horn()
 	world << sound(shift_change_horn_file, repeat = 0, wait = 0, volume = shift_change_horn_volume, channel = 3)
 	shift_change_horn = FALSE
-	// // // END AEIOU EDIT // // //
+	// // // END ECLIPSE EDIT // // //
 
 
 //recalls the shuttle

@@ -38,7 +38,7 @@
 	set category = "Object"
 	set src in oview(1)
 
-// // // BEGIN AEIOU EDIT // // //
+// // // BEGIN ECLIPSE EDIT // // //
 	start_cycle(usr)
 
 /obj/machinery/washing_machine/AltClick(mob/user)
@@ -52,7 +52,7 @@
 		user << "The washing machine cannot run in this state."
 		return
 
-// // // END AEIOU EDIT // // //
+// // // END ECLIPSE EDIT // // //
 
 	if(locate(/mob,washing))
 		state = 8

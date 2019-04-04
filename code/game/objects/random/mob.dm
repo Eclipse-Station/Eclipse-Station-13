@@ -41,7 +41,7 @@
 	var/build_path = item_to_spawn()
 
 	var/mob/living/simple_animal/M = new build_path(src.loc)
-	if(!istype(M, /obj/random/mouseremains)) //aeiou edit to prevent that gross runtime
+	if(!istype(M, /obj/random/mouseremains)) //eclipse edit to prevent that gross runtime
 		M.ai_inactive = 1 //Don't fight eachother while we're still setting up!
 		if(mob_faction)
 			M.faction = mob_faction

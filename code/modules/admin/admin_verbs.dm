@@ -154,7 +154,7 @@ var/list/admin_verbs_spawn = list(
 	/client/proc/map_template_load,
 	/client/proc/map_template_upload,
 	/client/proc/map_template_load_on_new_z,
-	/client/proc/cmd_admin_show_tip //AEIOU add
+	/client/proc/cmd_admin_show_tip //Eclipse add
 	)
 
 var/list/admin_verbs_server = list(

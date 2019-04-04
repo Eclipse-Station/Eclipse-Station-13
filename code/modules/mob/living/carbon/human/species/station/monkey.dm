@@ -27,7 +27,7 @@
 	hud_type = /datum/hud_data/monkey
 	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat/monkey
 
-	/* AEIOU EDIT - Re-added and updated with new GOON CODE sounds. Check the License file for details. - HTG */
+	/* ECLIPSE EDIT - Re-added and updated with new GOON CODE sounds. Check the License file for details. - HTG */
 	male_scream_sound = 'sound/goonstation/voice/monkey_scream.ogg'
 	female_scream_sound = 'sound/goonstation/voice/monkey_scream.ogg'
 

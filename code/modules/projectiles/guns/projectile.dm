@@ -34,7 +34,7 @@
 	//var/list/ammo_states = list()	//values
 
 
-	//AEIOU vars
+	//Eclipse vars
 	var/hide_ammo_count = FALSE		//do we want to hide ammo, for whatever reason (e.g. a concealed gun/custom loaded text)?
 
 

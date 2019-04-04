@@ -5,7 +5,7 @@
 //#define DM_UNABSORB								"Unabsorb"
 #define DM_DRAIN								"Drain"
 //#define DM_SHRINK								"Shrink"
-//#define DM_GROW									"Grow"  aeiou edits
+//#define DM_GROW									"Grow"  eclipse edits
 //#define DM_SIZE_STEAL							"Size Steal"
 #define DM_HEAL									"Heal"
 //#define DM_EGG 									"Encase In Egg"

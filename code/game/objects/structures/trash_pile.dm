@@ -114,14 +114,14 @@
 					I = produce_beta_item()
 				else if(luck <= chance_alpha+chance_beta+chance_gamma)
 					I = produce_gamma_item()
-					rare_trash_found++//aeiou edit
+					rare_trash_found++//eclipse edit
 
 				//We either have an item to hand over or we don't, at this point!
 				if(I)
 					searchedby += user.ckey
 					I.forceMove(get_turf(src))
 					to_chat(H,"<span class='notice'>You found \a [I]!</span>")
-					trash_piles_searched++//aeiou edit
+					trash_piles_searched++//eclipse edit
 
 	else
 		return ..()
@@ -223,7 +223,7 @@
 	var/path = pick(prob(6);/obj/item/weapon/storage/pill_bottle/tramadol,
 					prob(4);/obj/item/weapon/storage/pill_bottle/happy,
 					prob(4);/obj/item/weapon/storage/pill_bottle/zoom,
-				//	prob(4);/obj/item/weapon/gun/energy/sizegun, -- AEIOU edit
+				//	prob(4);/obj/item/weapon/gun/energy/sizegun, -- Eclipse edit
 					prob(3);/obj/item/weapon/material/butterfly,
 					prob(3);/obj/item/weapon/material/butterfly/switchblade,
 					prob(3);/obj/item/clothing/gloves/knuckledusters,
@@ -239,7 +239,7 @@
 					prob(1);/obj/item/device/bodysnatcher,
 					prob(1);/obj/item/weapon/beartrap,
 					prob(1);/obj/item/weapon/cell/hyper/empty,
-			//		prob(1);/obj/item/weapon/disk/nifsoft/compliance, -- AEIOU edit
+			//		prob(1);/obj/item/weapon/disk/nifsoft/compliance, -- Eclipse edit
 					prob(1);/obj/item/weapon/material/knife/tacknife,
 					prob(1);/obj/item/weapon/reagent_containers/syringe/steroid)
 
@@ -293,7 +293,7 @@
 	. = ..()
 	var/atom/A = get_holder_at_turf_level(src)
 	A.visible_message("[.] crawls out of \the [src].")
-	mouse_spawned_shift++//aeiou edit
+	mouse_spawned_shift++//eclipse edit
 
 /obj/structure/mob_spawner/mouse_nest/get_death_report(var/mob/living/L)
 	..()

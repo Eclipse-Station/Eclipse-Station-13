@@ -117,7 +117,7 @@
 
 
 /datum/category_item/player_setup_item/vore/ears/content(var/mob/user)
-	. += "<h2>AEIOU Station Settings</h2>"
+	. += "<h2>Eclipse Station Settings</h2>"
 
 	if(!pref.preview_icon)
 		pref.update_preview_icon()

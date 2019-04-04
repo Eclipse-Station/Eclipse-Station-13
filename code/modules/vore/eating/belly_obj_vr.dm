@@ -37,7 +37,7 @@
 
 	//I don't think we've ever altered these lists. making them static until someone actually overrides them somewhere.
 	//Actual full digest modes
-	var/tmp/static/list/digest_modes = list(DM_HOLD,DM_DIGEST,DM_DRAIN,DM_HEAL) //AEIOU edit - removed weird vore
+	var/tmp/static/list/digest_modes = list(DM_HOLD,DM_DIGEST,DM_DRAIN,DM_HEAL) //Eclipse edit - removed weird vore
 	//Digest mode addon flags
 	var/tmp/static/list/mode_flag_list = list("Numbing" = DM_FLAG_NUMBING, "Itemweak" = DM_FLAG_ITEMWEAK, "Stripping" = DM_FLAG_STRIPPING)
 	//Transformation modes

@@ -400,11 +400,11 @@
 	suit_sprites = 'icons/mob/taursuits_naga_vr.dmi'
 
 /*
-/datum/sprite_accessory/tail/taur/naga/naga_aeiou //AEIOU edit. Stolen from citadel.
+/datum/sprite_accessory/tail/taur/naga/naga_eclipse //Eclipse edit. Stolen from citadel.
 	name = "Alternate naga (Taur)"
-	icon = 'modular_aeiou/icons/mob/vore/taurs_aeiou.dmi'
-	icon_state = "naga_aeiou_s"
-	extra_overlay = "naga_aeiou_markings"
+	icon = 'modular_eclipse/icons/mob/vore/taurs_eclipse.dmi'
+	icon_state = "naga_eclipse_s"
+	extra_overlay = "naga_eclipse_markings"
 	suit_sprites = 0
 */
 

@@ -8,7 +8,7 @@
 	if(!istype(target))
 		return
 
-	var/list/smite_types = list(SMITE_REDSPACE_ABDUCT) //AEIOU-Station Edit: Removed shadekin smites.
+	var/list/smite_types = list(SMITE_REDSPACE_ABDUCT) //Eclipse Edit: Removed shadekin smites.
 
 	var/smite_choice = input("Select the type of SMITE for [target]","SMITE Type Choice") as null|anything in smite_types
 	if(!smite_choice)
@@ -18,15 +18,15 @@
 	feedback_add_details("admin_verb","SMITEV") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 	switch(smite_choice)
-	/* AEIOU-Station Removal: These don't exist anymore.
+	/* Eclipse Removal: These don't exist anymore.
 		if(SMITE_SHADEKIN_ATTACK)
 			var/turf/Tt = get_turf(target) //Turf for target
-			
+
 			if(target.loc != Tt)
 				return //Too hard to attack someone in something
-			
+
 			var/turf/Ts //Turf for shadekin
-			
+
 			//Try to find nondense turf
 			for(var/direction in cardinal)
 				var/turf/T = get_step(target,direction)
@@ -82,7 +82,7 @@
 				return
 
 			var/turf/Tt = get_turf(target)
-			
+
 			if(target.loc != Tt)
 				return //Can't nom when not exposed
 
@@ -161,7 +161,7 @@ var/redspace_abduction_z
 	//Lower left corner of a working box
 	var/llc_x = max(0,halfbox-target.x) + min(target.x+halfbox, world.maxx) - size_of_square
 	var/llc_y = max(0,halfbox-target.y) + min(target.y+halfbox, world.maxy) - size_of_square
-	
+
 	//Copy them all
 	for(var/x = llc_x to llc_x+size_of_square)
 		for(var/y = llc_y to llc_y+size_of_square)
@@ -197,7 +197,7 @@ var/redspace_abduction_z
 				T.density = FALSE
 				T.opacity = FALSE
 				T.vis_contents.Cut()
-	
+
 	for(var/x = llc_x to llc_x+size_of_square) //Bottom
 		for(var/y = llc_y to llc_y+1)
 			if(prob(50))

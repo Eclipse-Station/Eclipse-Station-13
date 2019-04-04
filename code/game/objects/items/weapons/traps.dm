@@ -98,7 +98,7 @@
 	set_dir(L.dir)
 	can_buckle = 1
 	buckle_mob(L)
-	playsound(src.loc, 'sound/effects/snap.ogg', 70, 1) // AEIOU edit: mechanical traps really ought to make a sound when they snap
+	playsound(src.loc, 'sound/effects/snap.ogg', 70, 1) // Eclipse edit: mechanical traps really ought to make a sound when they snap
 	L << "<span class='danger'>The steel jaws of \the [src] bite into you, trapping you in place!</span>"
 	deployed = 0
 	can_buckle = initial(can_buckle)

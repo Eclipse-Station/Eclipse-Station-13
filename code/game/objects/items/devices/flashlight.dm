@@ -36,7 +36,7 @@
 		verbs -= /obj/item/device/flashlight/verb/toggle
 	..()
 
-// // // BEGIN AEIOU EDIT // // //
+// // // BEGIN ECLIPSE EDIT // // //
 /obj/item/device/flashlight/AltClick(mob/user)
 	switch(brightness_level)
 		if("low")
@@ -55,8 +55,8 @@
 			ASSERT(brightness_level == "medium")		//brightness level should be on medium. If this fails, something isn't being set right.
 	to_chat(user,"<span class='notice'>You set the brightness level on \the [src] to [brightness_level].</span>")
 	update_icon()
-	
-// // // END AEIOU EDIT // // //
+
+// // // END ECLIPSE EDIT // // //
 
 /obj/item/device/flashlight/Destroy()
 	if(power_use)

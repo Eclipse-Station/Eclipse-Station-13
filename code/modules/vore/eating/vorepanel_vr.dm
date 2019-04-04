@@ -239,7 +239,7 @@
 		dat += "<br><a href='?src=\ref[src];b_bulge_size=\ref[selected]'>Required examine size:</a>"
 		dat += " [selected.bulge_size*100]%"
 
-/*		//Size that prey will be grown/shrunk to. -- AEIOU edit - No.
+/*		//Size that prey will be grown/shrunk to. -- Eclipse edit - No.
 		dat += "<br><a href='?src=\ref[src];b_grow_shrink=\ref[selected]'>Shrink/Grow size:</a>"
 		dat += "[selected.shrink_grow_size*100]%" */
 
@@ -639,7 +639,7 @@
 			to_chat(user,"<span class='notice'>Invalid size.</span>")
 		else if(new_bulge)
 			selected.bulge_size = (new_bulge/100)
-/*  -- AEIOU edit - no. Just no.
+/*  -- Eclipse edit - no. Just no.
 	if(href_list["b_grow_shrink"])
 		var/new_grow = input(user, "Choose the size that prey will be grown/shrunk to, ranging from 25% to 200%", "Set Growth Shrink Size.", selected.shrink_grow_size) as num|null
 		if (new_grow == null)
