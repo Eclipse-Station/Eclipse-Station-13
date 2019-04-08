@@ -154,14 +154,14 @@
 		target.throw_at(get_edge_target_turf(target, throwdir), rand(1,6), 10)
 		return 1
 
-/obj/item/weapon/gun/launcher/spikethrower/pistol//AEIOU addition
+/obj/item/weapon/gun/launcher/spikethrower/pistol//Eclipse addition
 	name = "spike thrower"
 	desc = "A vicious alien projectile weapon. Parts of it quiver gelatinously, as though the thing is insectile and alive. It fits in one hand."
 	max_spikes = 2
 	w_class = ITEMSIZE_NORMAL
 	spikes = 2
 	release_force = 20
-	icon = 'modular_aeiou/icons/obj/gun_aeiou.dmi'
+	icon = 'modular_eclipse/icons/obj/gun_eclipse.dmi'
 	icon_state = "dart_thrower2"
 	item_state = "dart_thrower"
 	fire_sound_text = "a strange noise"

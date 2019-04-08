@@ -147,7 +147,7 @@
 		AdjustParalysis(-1)
 	return paralysis
 
-/mob/living/proc/handle_insanity() //aeiou addition
+/mob/living/proc/handle_insanity() //eclipse addition
 	if((insanity) && (prob(5)))
 		insanity -= 1
 	return insanity

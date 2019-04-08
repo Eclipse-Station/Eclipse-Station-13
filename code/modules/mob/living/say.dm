@@ -432,10 +432,10 @@ proc/get_radio_key_from_channel(var/channel)
 					if(dst > w_scramble_range && dst <= world.view) //Inside whisper 'visible' range
 						M.show_message("<span class='game say'><span class='name'>[src.name]</span> [w_not_heard].</span>", 2)
 
-				if(ishuman(src))//this helps with the voice masks with the owl_aeiou.dm file
+				if(ishuman(src))//this helps with the voice masks with the owl_eclipse.dm file
 					var/mob/living/carbon/human/human = src
-					if(istype(human.wear_mask, /obj/item/clothing/mask/gas/owl_aeiou))
-						var/obj/item/clothing/mask/gas/owl_aeiou/owl_mask = wear_mask
+					if(istype(human.wear_mask, /obj/item/clothing/mask/gas/owl_eclipse))
+						var/obj/item/clothing/mask/gas/owl_eclipse/owl_mask = wear_mask
 						owl_mask.play_owl_sound()
 
 

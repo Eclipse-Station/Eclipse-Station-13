@@ -12,12 +12,12 @@ var/list/dreams = list(
 	"the virologist","the roboticist","the chef","the bartender","the chaplain","the librarian","a mouse","an ert member",
 	"a beach","the holodeck","a smokey room","a voice","the cold","a mouse","an operating table","the bar","the rain","a skrell",
 	"an unathi","a tajaran","the ai core","the mining station","the research station","a beaker of strange liquid"
-	)//AEIOU edit - removed vore dreams. Fuck this, it's too on the nose even for Virgo
+	)//Eclipse edit - removed vore dreams. Fuck this, it's too on the nose even for Virgo
 
 var/list/nightmares = list("a cup full of teeth", "your corpse", "blood", "fire", "pain", "a game of speared eyeballs", "rotting gardenias",
 	"hate", "spilled guts", "a malfunctioning AI", "a dead patient", "nuclear fire", "a monster", "betrayal", "a poison", "a headache",
 	"a traitor", "an eye-eating spider", "needles", "a sink full of blood", "a frenzied synth", "a maniac", "the screams", "a straveling cat"
-	)//AEIOU addition - insanity nightmares
+	)//Eclipse addition - insanity nightmares
 
 mob/living/carbon/proc/dream()
 	dreaming = 1

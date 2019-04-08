@@ -7,8 +7,8 @@
 	if(flags & ANTAG_OVERRIDE_JOB)
 		player.assigned_role = role_text
 	player.special_role = role_text
-	
-	//AEIOU edit: Adds antag job restrictions to player's mind datum for job selection.
+
+	//Eclipse edit: Adds antag job restrictions to player's mind datum for job selection.
 	player.antag_job_restrictions = restricted_jobs
 
 	if(istype(player.current, /mob/observer/dead))

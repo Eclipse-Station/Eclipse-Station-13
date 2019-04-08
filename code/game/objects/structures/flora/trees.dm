@@ -204,15 +204,15 @@
 
 // Sif trees
 
-/obj/structure/flora/tree/sif //AEIOU edit. The tree gives you tap.
+/obj/structure/flora/tree/sif //Eclipse edit. The tree gives you tap.
 	name = "glowing tree"
 	desc = "It's a tree, except this one seems quite alien.  It glows a deep blue."
-	icon = 'modular_aeiou/icons/obj/flora/deadtrees_aeiou.dmi'
+	icon = 'modular_eclipse/icons/obj/flora/deadtrees_eclipse.dmi'
 //	icon_state = "tree_sif1"
 //	base_state = "tree_sif1"
 	product = /obj/item/stack/material/log/sif
 	var/obj/item/weapon/t_t = null
-	var/tap = 0 //Actually a variable used to start production or stop it. - AEIOU
+	var/tap = 0 //Actually a variable used to start production or stop it. - Eclipse
 	var/sap = 1 //The actual liquid. Trees aren't reagents containers so i hacked this quickly.
 	var/max_sap = 15
 	var/sap_amount = 0 //placeholder
@@ -345,7 +345,7 @@
 //		icon_state = "tree_sif"
 	update_icon()
 	processing_objects |= src
-	
+
 
 /obj/structure/flora/tree/sif/update_icon()
 	if(sap_type == 1)
@@ -354,7 +354,7 @@
 		set_light(5, 1, "#7a48a0")//Purple sap
 	if(sap_type == 3)
 		set_light(5, 1, "#e9955c")//third sap
-	var/image/glow = image(icon = 'modular_aeiou/icons/obj/flora/deadtrees_aeiou.dmi', icon_state = "[icon_state]_glow")
+	var/image/glow = image(icon = 'modular_eclipse/icons/obj/flora/deadtrees_eclipse.dmi', icon_state = "[icon_state]_glow")
 	glow.plane = PLANE_LIGHTING_ABOVE
 	debug_glow = glow
 	overlays = list(glow)

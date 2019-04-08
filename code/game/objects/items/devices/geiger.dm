@@ -56,7 +56,7 @@
 /obj/item/device/geiger/attack_self(var/mob/user)
 	toggle()
 
-/obj/item/device/geiger/AltClick()//AEIOU EDIT
+/obj/item/device/geiger/AltClick()//ECLIPSE EDIT
 	toggle()
 
 /obj/item/device/geiger/proc/toggle(var/mob/user)//Moved here to easy the alt click process

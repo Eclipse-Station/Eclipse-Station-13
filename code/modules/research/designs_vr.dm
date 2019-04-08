@@ -25,7 +25,7 @@
 	name = "Bluespace jumpsuit"
 	id = "bsjumpsuit"
 	req_tech = list(TECH_BLUESPACE = 4, TECH_MATERIAL = 5, TECH_POWER = 3)
-	materials = list(DEFAULT_WALL_MATERIAL = 5000, "glass" = 4000, "uranium" = 2000, "diamond" = 3000) //AEIOU edit - made tech levels higher and more expensive
+	materials = list(DEFAULT_WALL_MATERIAL = 5000, "glass" = 4000, "uranium" = 2000, "diamond" = 3000) //Eclipse edit - made tech levels higher and more expensive
 	build_path = /obj/item/clothing/under/bluespace
 	sort_string = "TAAAC"
 

@@ -120,7 +120,7 @@
 
 /datum/nifsoft/sizechange
 	name = "Mass Alteration"
-	desc = "A system that allows one to change their weight and height slightly, through minor mass rearrangement. Causes significant wear when installed." //AEIOU edit - description
+	desc = "A system that allows one to change their weight and height slightly, through minor mass rearrangement. Causes significant wear when installed." //Eclipse edit - description
 	list_pos = NIF_SIZECHANGE
 	cost = 750
 	wear = 6

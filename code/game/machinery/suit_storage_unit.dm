@@ -822,7 +822,7 @@
 	if(panel_open)
 		wires.Interact(user)
 
-	user << browse(dat, "window=suit_cycler;size=400x435") //AEIOU-Station Edit: Opened too small when size was omitted.
+	user << browse(dat, "window=suit_cycler;size=400x435") //Eclipse Edit: Opened too small when size was omitted.
 	onclose(user, "suit_cycler")
 	return
 
@@ -987,7 +987,7 @@
 		if(helmet) helmet.refit_for_species(target_species)
 		if(suit) suit.refit_for_species(target_species)
 
-	//AEIOU-Station Edit: Say hello to a less bloated way to do this. Lookup tables are in suit_storage_unit_vr.dm.
+	//Eclipse Edit: Say hello to a less bloated way to do this. Lookup tables are in suit_storage_unit_vr.dm.
 	if(target_department)
 		if(helmet)
 			helmet.name = paintjobs_helmet[target_department][1]
@@ -1010,4 +1010,4 @@
 		if(suit)
 			suit.name = "refitted [suit.name]"
 			if(suit.helmet) suit.helmet.name = "refitted [suit.helmet.name]"
-	//AEIOU-Station Edit End
+	//Eclipse Edit End

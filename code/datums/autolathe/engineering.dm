@@ -102,7 +102,7 @@
 	name = "camera assembly"
 	path =/obj/item/weapon/camera_assembly
 
-/datum/category_item/autolathe/engineering/dryingrack //AEIOU addition
+/datum/category_item/autolathe/engineering/dryingrack //Eclipse addition
 	name = "drying rack electronics"
 	path = /obj/item/weapon/circuitboard/dryingrack
 

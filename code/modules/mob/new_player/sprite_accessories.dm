@@ -552,7 +552,7 @@
 		name = "Nia"
 		icon_state = "hair_nia"
 		flags = HAIR_TIEABLE
-		
+
 	unkept
 		name = "Unkept"
 		icon_state = "hair_unkept"
@@ -1214,9 +1214,9 @@
 		icon_state = "facial_dorsalfrill"
 		species_allowed = list("Unathi", "Pastrian")
 
-	una_dorsalfinl//aeiou edit
+	una_dorsalfinl//eclipse edit
 		name = "Unathi Dorsal Fin"
-		icon = 'modular_aeiou/icons/mob/human_face_aeiou.dmi'
+		icon = 'modular_eclipse/icons/mob/human_face_eclipse.dmi'
 		icon_state = "facial_dorsalfin"
 		species_allowed = list("Unathi", "Pastrian")
 

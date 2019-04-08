@@ -1,15 +1,15 @@
-# AEIOUstation
+# Eclipse Station
 [![forthebadge](https://forthebadge.com/images/badges/built-with-resentment.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/contains-technical-debt.svg)](https://forthebadge.com)
 
 
 Going to make a Pull Request? Make sure you read the [CONTRIBUTING.md](.github/CONTRIBUTING.md) first!
 
-AEIOUstation is a fork of the Virgo code branch, that is Polaris fork branch, which itself a fork of the Baystation12 code branch, for the game Space Station 13.
+Eclipse Station is a fork of the Virgo code branch, that is Polaris fork branch, which itself a fork of the Baystation12 code branch, for the game Space Station 13.
 
 ---
 
 ### LICENSE
-The code for AEIOUstation is licensed under the [GNU Affero General Public License](http://www.gnu.org/licenses/agpl.html) version 3, which can be found in full in LICENSE-AGPL3.txt.
+The code for Eclipse Station is licensed under the [GNU Affero General Public License](http://www.gnu.org/licenses/agpl.html) version 3, which can be found in full in LICENSE-AGPL3.txt.
 
 Code with a git authorship date prior to `1420675200 +0000` (2015/01/08 00:00) are licensed under the GNU General Public License version 3, which can be found in full in LICENSE-GPL3.txt.
 

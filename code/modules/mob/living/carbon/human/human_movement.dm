@@ -197,7 +197,7 @@
 		return
 
 	var/S = pick(footstep_sounds)
-	step_taken_shift++//aeiou edit
+	step_taken_shift++//eclipse edit
 	if(!S) return
 
 	// Play every 20 steps while walking, for the sneak
