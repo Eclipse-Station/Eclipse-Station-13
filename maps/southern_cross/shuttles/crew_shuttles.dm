@@ -1,3 +1,8 @@
+/* This file contains extensive Eclipse Edits. Not all of them may be marked.
+ * It is strongly recommended you check this file for differences when pulling
+ * from upstream.
+ */
+
 //Shuttle 1
 
 /obj/machinery/computer/shuttle_control/web/shuttle1
@@ -12,7 +17,7 @@
 	web_master_type = /datum/shuttle_web_master/shuttle1
 	autopilot = TRUE
 	can_autopilot = TRUE
-	autopilot_delay = 60
+	autopilot_delay = 45		//Eclipse edit: 90 seconds (AP timers are doubled)
 	autopilot_first_delay = 300 // Ten minutes at roundstart. Two minutes otherwise.
 
 /datum/shuttle_web_master/shuttle1
@@ -25,20 +30,18 @@
 
 	path_nodes = list(
 		/datum/shuttle_destination/shuttle1/outside_SC,
-		/datum/shuttle_destination/shuttle1/sif_orbit,
 		/datum/shuttle_destination/shuttle1/sky,
 		/datum/shuttle_destination/shuttle1/main_base
-	)
+	)	//Eclipse Edit: Removed /datum/shuttle_destination/shuttle1/sif_orbit - unused
 
 /datum/shuttle_autopath/shuttle1/to_home
 	start = /datum/shuttle_destination/shuttle1/main_base
 
 	path_nodes = list(
 		/datum/shuttle_destination/shuttle1/sky,
-		/datum/shuttle_destination/shuttle1/sif_orbit,
 		/datum/shuttle_destination/shuttle1/outside_SC,
 		/datum/shuttle_destination/shuttle1/root
-	)
+	)	//Eclipse Edit: Removed /datum/shuttle_destination/shuttle1/sif_orbit - unused
 
 //Shuttle 2
 
@@ -54,8 +57,9 @@
 	web_master_type = /datum/shuttle_web_master/shuttle2
 	autopilot = TRUE
 	can_autopilot = TRUE
-	autopilot_delay = 60
-	autopilot_first_delay = 380 // Twelve and a half minutes at roundstart. Two minutes otherwise. This should leave when the first shuttle arrives at the outpost.
+	autopilot_delay = 45		//Eclipse edit: 90 seconds (AP timers are doubled)
+//	autopilot_first_delay = 380 // Twelve and a half minutes at roundstart. Two minutes otherwise. This should leave when the first shuttle arrives at the outpost.
+	autopilot_first_delay = 400 //Eclipse edit: Try to synchronise Shuttle 2 departing SCross when Shuttle 1 departs outpost
 
 /datum/shuttle_web_master/shuttle2
 	destination_class = /datum/shuttle_destination/shuttle2
@@ -67,20 +71,18 @@
 
 	path_nodes = list(
 		/datum/shuttle_destination/shuttle2/outside_SC,
-		/datum/shuttle_destination/shuttle2/sif_orbit,
 		/datum/shuttle_destination/shuttle2/sky,
 		/datum/shuttle_destination/shuttle2/main_base
-	)
+	)	//Eclipse Edit: Removed /datum/shuttle_destination/shuttle1/sif_orbit - unused
 
 /datum/shuttle_autopath/shuttle2/to_home
 	start = /datum/shuttle_destination/shuttle2/main_base
 
 	path_nodes = list(
 		/datum/shuttle_destination/shuttle2/sky,
-		/datum/shuttle_destination/shuttle2/sif_orbit,
 		/datum/shuttle_destination/shuttle2/outside_SC,
 		/datum/shuttle_destination/shuttle2/root
-	)
+	)	//Eclipse Edit: Removed /datum/shuttle_destination/shuttle1/sif_orbit - unused
 
 
 
@@ -129,9 +131,9 @@
 	preferred_interim_area = /area/shuttle/shuttle1/transit
 
 	routes_to_make = list(
-		/datum/shuttle_destination/shuttle1/sif_orbit = 30 SECONDS,
+		/datum/shuttle_destination/shuttle1/sky = 30 SECONDS,
 		/datum/shuttle_destination/shuttle1/docked_SC = 0
-	)
+	)	//Eclipse Edit: Replaced sif_orbit with sky - unused
 
 /datum/shuttle_destination/shuttle2/outside_SC
 	name = "Outside of NLS Southern Cross"
@@ -139,9 +141,9 @@
 	preferred_interim_area = /area/shuttle/shuttle2/transit
 
 	routes_to_make = list(
-		/datum/shuttle_destination/shuttle2/sif_orbit = 30 SECONDS,
+		/datum/shuttle_destination/shuttle2/sky = 30 SECONDS,
 		/datum/shuttle_destination/shuttle2/docked_SC = 0
-	)
+	)	//Eclipse Edit: Removed /datum/shuttle_destination/shuttle1/sif_orbit - unused
 
 
 /datum/shuttle_destination/shuttle1/docked_SC
@@ -176,6 +178,9 @@
 	return "Attention, [master.my_shuttle.visible_name] has departed the Arrivals Dock."
 */
 
+// // // ECLIPSE REMOVAL // // //
+// // // Rationale: Unused feature, never implemented, degrades player QoL
+/*
 /datum/shuttle_destination/shuttle1/sif_orbit
 	name = "Sif Orbit"
 	my_area = /area/shuttle/shuttle1/orbit
@@ -193,7 +198,8 @@
 	routes_to_make = list(
 		/datum/shuttle_destination/shuttle2/sky = 30 SECONDS
 	)
-
+*/
+// // // END ECLIPSE REMOVAL // // //
 
 /datum/shuttle_destination/shuttle1/sky
 	name = "Skies of Sif"
