@@ -36,7 +36,7 @@ var/datum/manifest_controller/mnfst = new/datum/manifest_controller
 	//DELETE THE OLD JSON
 
 	// OUTPUT AS JSON
-	fdel("C:/xampp/htdocs/manifest/manifest.json")
+	fdel("/opt/lampp/htdocs/manifest/manifest.json")
 //	usr << json_encode(output)
 	output = json_encode(output)
-	text2file(output, "C:/xampp/htdocs/manifest/manifest.json")
+	text2file(output, "/opt/lampp/htdocs/manifest/manifest.json")
