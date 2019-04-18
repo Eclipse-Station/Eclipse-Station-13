@@ -527,7 +527,7 @@ var/world_topic_spam_protect_time = world.timeofday
 	if (config && config.server_name)
 		s += "<b>[config.server_name]</b> &#8212; "
 
-	s += "<b>Eclipse Station 13</b>"
+	s += "<b>Eclipse Station 13 - <b>"
 	s += "<b>[station_name()]</b>";
 	s += " ("
 	s += "<a href=\"http://www.eclipse-station.space/\">" //Change this to wherever you want the hub to link to.
@@ -537,9 +537,9 @@ var/world_topic_spam_protect_time = world.timeofday
 	s += "<a href=\"https://discord.gg/xuS4t9U\">" //Change this to wherever you want the hub to link to.
 	s += "Discord"  //Replace this with something else. Or ever better, delete it and uncomment the game version.
 	s += "</a>"
+	s += ")\]"
+	s += "<br><small><i>Heavy RolePlay, antags (w/ vote, no murderbone), diverse character creation menu.</i></small><br>"
 	s += ")"
-	s += "<br><small><i>Heavy RolePlay, antagonists (w/ vote, no murderbone), diverse character creation menu.</i></small><br>"
-
 	var/list/features = list()
 
 	if(ticker)

@@ -1,0 +1,3245 @@
+*** Begin Log: Sun Nov 25 18:07:30 2018 ***
+World opened on network port 63499.
+29 global variables
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Direction Set (/decl/observ/dir_set): New()
+Global Variables (/datum/controller/global_vars): InitGlobaldir set event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Mob Equipped (/decl/observ/mob_equipped): New()
+Global Variables (/datum/controller/global_vars): InitGlobalmob equipped event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Item Equipped (/decl/observ/item_equipped): New()
+Global Variables (/datum/controller/global_vars): InitGlobalitem equipped event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Logged In (/decl/observ/logged_in): New()
+Global Variables (/datum/controller/global_vars): InitGloballogged in event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Moved (/decl/observ/moved): New()
+Global Variables (/datum/controller/global_vars): InitGlobalmoved event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Mob Unequipped (/decl/observ/mob_unequipped): New()
+Global Variables (/datum/controller/global_vars): InitGlobalmob unequipped event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Item Unequipped (/decl/observ/item_unequipped): New()
+Global Variables (/datum/controller/global_vars): InitGlobalitem unequipped event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot execute .raise event(). (/exception), null)
+/datum/controller (/datum/controller): Destroy(0)
+qdel(/datum/controller (/datum/controller), 0)
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+Running revision:
+master
+2018-11-25
+551c2d74894d122127582b44389cf6f1124e3c87
+Map Loading Complete
+Feedback database connection established.
+SQL database connection established.
+[2018-11-25T18:13:13] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+  src: Random Mouse (/obj/random/mob/mouse)
+  src.loc: the plating (110,105,1) (/turf/simulated/floor/plating)
+  call stack:
+  Random Mouse (/obj/random/mob/mouse): spawn item()
+  Random Mouse (/obj/random/mob/mouse): New(the plating (110,105,1) (/turf/simulated/floor/plating))
+[2018-11-25T18:13:13] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+  src: Random Mouse (/obj/random/mob/mouse)
+  src.loc: the plating (147,106,1) (/turf/simulated/floor/plating)
+  call stack:
+  Random Mouse (/obj/random/mob/mouse): spawn item()
+  Random Mouse (/obj/random/mob/mouse): New(the plating (147,106,1) (/turf/simulated/floor/plating))
+[2018-11-25T18:13:13] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+  src: Random Mouse (/obj/random/mob/mouse)
+  src.loc: the plating (111,151,1) (/turf/simulated/floor/plating)
+  call stack:
+  Random Mouse (/obj/random/mob/mouse): spawn item()
+  Random Mouse (/obj/random/mob/mouse): New(the plating (111,151,1) (/turf/simulated/floor/plating))
+[2018-11-25T18:13:13] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+[2018-11-25T18:13:13] Runtime in alarm_monitor.dm,8: Cannot read null.all_handlers
+  proc name: New (/datum/nano_module/alarm_monitor/all/New)
+  usr: (NULL) (0,0,0) (NULL) ()
+  usr.loc: (NULL) (0,0,0) (NULL) ()
+[2018-11-25T18:13:13] Runtime in subystems.dm,41: Cannot read null.all_handlers
+  proc name: init subsystems (/mob/living/silicon/proc/init_subsystems)
+  usr: (NULL) (0,0,0) (NULL) ()
+  usr.loc: (NULL) (0,0,0) (NULL) ()
+Initialized Mapping subsystem within 0 seconds!
+Initializing objects
+Initialized 724170 atoms
+## TESTING: Late initialized 3415 atoms
+Initialized Atoms subsystem within 16.9 seconds!
+Initialized Machines subsystem within 3 seconds!
+Initialized Shuttles subsystem within 0.1 seconds!
+Initialized Lighting subsystem within 19.6 seconds!
+Processing Geometry...
+Initialized Air subsystem within 18.9 seconds!
+Initialized Planets subsystem within 11.6 seconds!
+Initialized HoloMiniMaps subsystem within 2.1 seconds!
+Initialized Overlay subsystem within 0.6 seconds!
+Initialized Xenoarch subsystem within 1.9 seconds!
+Initialized Circuit subsystem within 0.1 seconds!
+Initializations complete within 74.9 seconds!
+## TESTING: MC: Runlevel changed from NULL to 1
+## TESTING: MC: Runlevel changed from 1 to 2
+## TESTING: MC: Runlevel changed from 2 to 4
+Sun Nov 25 18:36:15 2018
+## ERROR: hook_vr itself failed or runtimed. Exception below.
+## ERROR: hook_vr catch: Cannot read null.items_by_name on persist_vr.dm:254
+Stopped server.
+World opened on network port 63499.
+29 global variables
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Direction Set (/decl/observ/dir_set): New()
+Global Variables (/datum/controller/global_vars): InitGlobaldir set event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Mob Equipped (/decl/observ/mob_equipped): New()
+Global Variables (/datum/controller/global_vars): InitGlobalmob equipped event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Item Equipped (/decl/observ/item_equipped): New()
+Global Variables (/datum/controller/global_vars): InitGlobalitem equipped event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Logged In (/decl/observ/logged_in): New()
+Global Variables (/datum/controller/global_vars): InitGloballogged in event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Moved (/decl/observ/moved): New()
+Global Variables (/datum/controller/global_vars): InitGlobalmoved event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Mob Unequipped (/decl/observ/mob_unequipped): New()
+Global Variables (/datum/controller/global_vars): InitGlobalmob unequipped event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Item Unequipped (/decl/observ/item_unequipped): New()
+Global Variables (/datum/controller/global_vars): InitGlobalitem unequipped event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot execute .raise event(). (/exception), null)
+/datum/controller (/datum/controller): Destroy(0)
+qdel(/datum/controller (/datum/controller), 0)
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+Running revision:
+master
+2018-11-25
+551c2d74894d122127582b44389cf6f1124e3c87
+Map Loading Complete
+Feedback database connection established.
+SQL database connection established.
+[2018-11-25T18:55:14] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+  src: Random Mouse (/obj/random/mob/mouse)
+  src.loc: the plating (145,150,1) (/turf/simulated/floor/plating)
+  call stack:
+  Random Mouse (/obj/random/mob/mouse): spawn item()
+  Random Mouse (/obj/random/mob/mouse): New(the plating (145,150,1) (/turf/simulated/floor/plating))
+[2018-11-25T18:55:14] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+  src: Random Mouse (/obj/random/mob/mouse)
+  src.loc: the plating (111,151,1) (/turf/simulated/floor/plating)
+  call stack:
+  Random Mouse (/obj/random/mob/mouse): spawn item()
+  Random Mouse (/obj/random/mob/mouse): New(the plating (111,151,1) (/turf/simulated/floor/plating))
+[2018-11-25T18:55:14] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+  src: Random Mouse (/obj/random/mob/mouse)
+  src.loc: the plating (93,105,2) (/turf/simulated/floor/plating)
+  call stack:
+  Random Mouse (/obj/random/mob/mouse): spawn item()
+  Random Mouse (/obj/random/mob/mouse): New(the plating (93,105,2) (/turf/simulated/floor/plating))
+[2018-11-25T18:55:14] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+[2018-11-25T18:55:15] Runtime in alarm_monitor.dm,8: Cannot read null.all_handlers
+  proc name: New (/datum/nano_module/alarm_monitor/all/New)
+  usr: (NULL) (0,0,0) (NULL) ()
+  usr.loc: (NULL) (0,0,0) (NULL) ()
+[2018-11-25T18:55:15] Runtime in subystems.dm,41: Cannot read null.all_handlers
+  proc name: init subsystems (/mob/living/silicon/proc/init_subsystems)
+  usr: (NULL) (0,0,0) (NULL) ()
+  usr.loc: (NULL) (0,0,0) (NULL) ()
+Initialized Mapping subsystem within 0 seconds!
+Initializing objects
+Initialized 724938 atoms
+## TESTING: Late initialized 3387 atoms
+Initialized Atoms subsystem within 17.1 seconds!
+Initialized Machines subsystem within 3.1 seconds!
+Initialized Shuttles subsystem within 0 seconds!
+Initialized Lighting subsystem within 19.6 seconds!
+Processing Geometry...
+Initialized Air subsystem within 19 seconds!
+Initialized Planets subsystem within 16.5 seconds!
+Initialized HoloMiniMaps subsystem within 2.2 seconds!
+Initialized Overlay subsystem within 0.6 seconds!
+Initialized Xenoarch subsystem within 2.1 seconds!
+Initialized Circuit subsystem within 0.1 seconds!
+Initializations complete within 80.4 seconds!
+## TESTING: MC: Runlevel changed from NULL to 1
+## TESTING: MC: Runlevel changed from 1 to 2
+## TESTING: MC: Runlevel changed from 2 to 4
+[2018-11-25T19:16:20] Runtime in unsorted.dm,1312: CANARY: Old human update_icons_all was called.
+  proc name: crash with (/proc/crash_with)
+  usr: (the floor) (166,110,2) (/turf/simulated/floor/tiled/white) ()
+  usr.loc: (the floor) (166,110,2) (/turf/simulated/floor/tiled/white) ()
+## TESTING: GC: -- [0x200d5e9] | /obj/item/clothing/head/hood/winter was unable to be GC'd --
+## TESTING: GC: -- [0x200d5e8] | /obj/item/clothing/suit/storage/hooded/wintercoat was unable to be GC'd --
+Sun Nov 25 19:45:44 2018
+## ERROR: hook_vr itself failed or runtimed. Exception below.
+## ERROR: hook_vr catch: Cannot read null.items_by_name on persist_vr.dm:254
+## TESTING: GC: -- [0x200d2d2] | /obj/item/clothing/head/welding/knight was unable to be GC'd --
+[2018-11-25T19:53:54] Runtime in airlock.dm,504: undefined variable /mob/observer/dead/var/hallucination
+  proc name: bumpopen (/obj/machinery/door/airlock/bumpopen)
+  usr: (the floor) (203,55,8) (/turf/unsimulated/floor) (rsmr)
+  usr.loc: (the floor) (203,55,8) (/turf/unsimulated/floor) (rsmr)
+Stopped server.
+World opened on network port 63499.
+29 global variables
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Direction Set (/decl/observ/dir_set): New()
+Global Variables (/datum/controller/global_vars): InitGlobaldir set event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Mob Equipped (/decl/observ/mob_equipped): New()
+Global Variables (/datum/controller/global_vars): InitGlobalmob equipped event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Item Equipped (/decl/observ/item_equipped): New()
+Global Variables (/datum/controller/global_vars): InitGlobalitem equipped event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Logged In (/decl/observ/logged_in): New()
+Global Variables (/datum/controller/global_vars): InitGloballogged in event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Moved (/decl/observ/moved): New()
+Global Variables (/datum/controller/global_vars): InitGlobalmoved event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Mob Unequipped (/decl/observ/mob_unequipped): New()
+Global Variables (/datum/controller/global_vars): InitGlobalmob unequipped event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Item Unequipped (/decl/observ/item_unequipped): New()
+Global Variables (/datum/controller/global_vars): InitGlobalitem unequipped event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot execute .raise event(). (/exception), null)
+/datum/controller (/datum/controller): Destroy(0)
+qdel(/datum/controller (/datum/controller), 0)
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+Running revision:
+master
+2018-11-25
+551c2d74894d122127582b44389cf6f1124e3c87
+Map Loading Complete
+Feedback database connection established.
+SQL database connection established.
+[2018-11-25T20:07:39] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+  src: Random Mouse (/obj/random/mob/mouse)
+  src.loc: the plating (73,128,1) (/turf/simulated/floor/plating)
+  call stack:
+  Random Mouse (/obj/random/mob/mouse): spawn item()
+  Random Mouse (/obj/random/mob/mouse): New(the plating (73,128,1) (/turf/simulated/floor/plating))
+[2018-11-25T20:07:39] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+  src: Random Mouse (/obj/random/mob/mouse)
+  src.loc: the plating (151,73,2) (/turf/simulated/floor/plating)
+  call stack:
+  Random Mouse (/obj/random/mob/mouse): spawn item()
+  Random Mouse (/obj/random/mob/mouse): New(the plating (151,73,2) (/turf/simulated/floor/plating))
+[2018-11-25T20:07:39] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+  src: Random Mouse (/obj/random/mob/mouse)
+  src.loc: the plating (149,92,2) (/turf/simulated/floor/plating)
+  call stack:
+  Random Mouse (/obj/random/mob/mouse): spawn item()
+  Random Mouse (/obj/random/mob/mouse): New(the plating (149,92,2) (/turf/simulated/floor/plating))
+[2018-11-25T20:07:39] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+[2018-11-25T20:07:39] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+[2018-11-25T20:07:39] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+[2018-11-25T20:07:39] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+[2018-11-25T20:07:39] Runtime in alarm_monitor.dm,8: Cannot read null.all_handlers
+  proc name: New (/datum/nano_module/alarm_monitor/all/New)
+  usr: (NULL) (0,0,0) (NULL) ()
+  usr.loc: (NULL) (0,0,0) (NULL) ()
+[2018-11-25T20:07:39] Runtime in subystems.dm,41: Cannot read null.all_handlers
+  proc name: init subsystems (/mob/living/silicon/proc/init_subsystems)
+  usr: (NULL) (0,0,0) (NULL) ()
+  usr.loc: (NULL) (0,0,0) (NULL) ()
+Initialized Mapping subsystem within 0 seconds!
+Initializing objects
+Initialized 724081 atoms
+## TESTING: Late initialized 3518 atoms
+Initialized Atoms subsystem within 19.3 seconds!
+Initialized Machines subsystem within 3.3 seconds!
+Initialized Shuttles subsystem within 0 seconds!
+Initialized Lighting subsystem within 19.9 seconds!
+Processing Geometry...
+Initialized Air subsystem within 19.4 seconds!
+Initialized Planets subsystem within 28.6 seconds!
+Initialized HoloMiniMaps subsystem within 2.3 seconds!
+Initialized Overlay subsystem within 0.6 seconds!
+Initialized Xenoarch subsystem within 1.9 seconds!
+Initialized Circuit subsystem within 0.1 seconds!
+Initializations complete within 95.5 seconds!
+## TESTING: MC: Runlevel changed from NULL to 1
+Stopped server.
+World opened on network port 63499.
+29 global variables
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Direction Set (/decl/observ/dir_set): New()
+Global Variables (/datum/controller/global_vars): InitGlobaldir set event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Mob Equipped (/decl/observ/mob_equipped): New()
+Global Variables (/datum/controller/global_vars): InitGlobalmob equipped event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Item Equipped (/decl/observ/item_equipped): New()
+Global Variables (/datum/controller/global_vars): InitGlobalitem equipped event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Logged In (/decl/observ/logged_in): New()
+Global Variables (/datum/controller/global_vars): InitGloballogged in event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Moved (/decl/observ/moved): New()
+Global Variables (/datum/controller/global_vars): InitGlobalmoved event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Mob Unequipped (/decl/observ/mob_unequipped): New()
+Global Variables (/datum/controller/global_vars): InitGlobalmob unequipped event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Item Unequipped (/decl/observ/item_unequipped): New()
+Global Variables (/datum/controller/global_vars): InitGlobalitem unequipped event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot execute .raise event(). (/exception), null)
+/datum/controller (/datum/controller): Destroy(0)
+qdel(/datum/controller (/datum/controller), 0)
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+Running revision:
+master
+2018-11-25
+551c2d74894d122127582b44389cf6f1124e3c87
+Map Loading Complete
+Feedback database connection established.
+SQL database connection established.
+[2018-11-25T20:19:42] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+  src: Random Mouse (/obj/random/mob/mouse)
+  src.loc: the plating (147,106,1) (/turf/simulated/floor/plating)
+  call stack:
+  Random Mouse (/obj/random/mob/mouse): spawn item()
+  Random Mouse (/obj/random/mob/mouse): New(the plating (147,106,1) (/turf/simulated/floor/plating))
+[2018-11-25T20:19:42] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+  src: Random Mouse (/obj/random/mob/mouse)
+  src.loc: the plating (151,73,2) (/turf/simulated/floor/plating)
+  call stack:
+  Random Mouse (/obj/random/mob/mouse): spawn item()
+  Random Mouse (/obj/random/mob/mouse): New(the plating (151,73,2) (/turf/simulated/floor/plating))
+[2018-11-25T20:19:42] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+  src: Random Mouse (/obj/random/mob/mouse)
+  src.loc: the plating (149,92,2) (/turf/simulated/floor/plating)
+  call stack:
+  Random Mouse (/obj/random/mob/mouse): spawn item()
+  Random Mouse (/obj/random/mob/mouse): New(the plating (149,92,2) (/turf/simulated/floor/plating))
+[2018-11-25T20:19:42] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+[2018-11-25T20:19:42] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+[2018-11-25T20:19:42] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+[2018-11-25T20:19:42] Runtime in alarm_monitor.dm,8: Cannot read null.all_handlers
+  proc name: New (/datum/nano_module/alarm_monitor/all/New)
+  usr: (NULL) (0,0,0) (NULL) ()
+  usr.loc: (NULL) (0,0,0) (NULL) ()
+[2018-11-25T20:19:42] Runtime in subystems.dm,41: Cannot read null.all_handlers
+  proc name: init subsystems (/mob/living/silicon/proc/init_subsystems)
+  usr: (NULL) (0,0,0) (NULL) ()
+  usr.loc: (NULL) (0,0,0) (NULL) ()
+[2018-11-25T20:19:52] Runtime in mob.dm,44: Undefined variable /obj/random/mob/spider/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+Initialized Mapping subsystem within 0 seconds!
+Initializing objects
+Initialized 724638 atoms
+## TESTING: Late initialized 3529 atoms
+Initialized Atoms subsystem within 17.2 seconds!
+Initialized Machines subsystem within 2.8 seconds!
+Initialized Shuttles subsystem within 0.1 seconds!
+Initialized Lighting subsystem within 19.4 seconds!
+Processing Geometry...
+Initialized Air subsystem within 19.3 seconds!
+Initialized Planets subsystem within 19.2 seconds!
+Initialized HoloMiniMaps subsystem within 2.2 seconds!
+Initialized Overlay subsystem within 0.6 seconds!
+Initialized Xenoarch subsystem within 2 seconds!
+Initialized Circuit subsystem within 0.1 seconds!
+Initializations complete within 83.3 seconds!
+## TESTING: MC: Runlevel changed from NULL to 1
+## TESTING: MC: Runlevel changed from 1 to 2
+## TESTING: MC: Runlevel changed from 2 to 4
+## TESTING: GC: -- [0x201476b] | /obj/item/clothing/head/hood/winter was unable to be GC'd --
+## TESTING: GC: -- [0x2014758] | /obj/item/clothing/suit/storage/hooded/wintercoat was unable to be GC'd --
+[2018-11-25T20:34:45] Runtime in trait.dm,14: Undefined variable /datum/species/custom/var/italian
+
+  proc name: apply (/datum/trait/proc/apply)
+  usr: (NULL) (0,0,0) (NULL) (2birdie)
+  usr.loc: (NULL) (0,0,0) (NULL) (2birdie)
+Sun Nov 25 21:08:06 2018
+## TESTING: GC: -- [0x20148b0] | /obj/effect/mine was unable to be GC'd --
+## TESTING: GC: -- [0x2014877] | /obj/effect/mine was unable to be GC'd --
+## TESTING: GC: -- [0x2014890] | /obj/structure/table/standard was unable to be GC'd --
+Sun Nov 25 22:15:07 2018
+## TESTING: Ahelp action: ticket
+Scheduled crew transfer has begun.
+Shuttle has arrived at station.
+## TESTING: Ahelp action: reply
+## TESTING: GC: -- [0x200d726] | /obj/structure/table/rack was unable to be GC'd --
+[2018-11-25T22:40:54] Runtime in ,: bad arg name 'used_weapon'
+  usr: (the snow) (93,219,5) (/turf/simulated/floor/outdoors/snow/sif/planetuse) (seuz4)
+  usr.loc: (the snow) (93,219,5) (/turf/simulated/floor/outdoors/snow/sif/planetuse) (seuz4)
+[2018-11-25T22:40:54] Runtime in ,: bad arg name 'used_weapon'
+  usr: (the snow) (93,219,5) (/turf/simulated/floor/outdoors/snow/sif/planetuse) (seuz4)
+  usr.loc: (the snow) (93,219,5) (/turf/simulated/floor/outdoors/snow/sif/planetuse) (seuz4)
+[2018-11-25T22:40:54] Runtime in ,: bad arg name 'used_weapon'
+  usr: (the snow) (93,219,5) (/turf/simulated/floor/outdoors/snow/sif/planetuse) (seuz4)
+  usr.loc: (the snow) (93,219,5) (/turf/simulated/floor/outdoors/snow/sif/planetuse) (seuz4)
+[2018-11-25T22:40:54] Runtime in ,: bad arg name 'used_weapon'
+  usr: (the snow) (93,219,5) (/turf/simulated/floor/outdoors/snow/sif/planetuse) (seuz4)
+  usr.loc: (the snow) (93,219,5) (/turf/simulated/floor/outdoors/snow/sif/planetuse) (seuz4)
+[2018-11-25T22:40:54] Runtime in ,: bad arg name 'used_weapon'
+  usr: (the snow) (93,219,5) (/turf/simulated/floor/outdoors/snow/sif/planetuse) (seuz4)
+  usr.loc: (the snow) (93,219,5) (/turf/simulated/floor/outdoors/snow/sif/planetuse) (seuz4)
+[2018-11-25T22:40:54] Runtime in ,: bad arg name 'used_weapon'
+  usr: (the snow) (93,219,5) (/turf/simulated/floor/outdoors/snow/sif/planetuse) (seuz4)
+  usr.loc: (the snow) (93,219,5) (/turf/simulated/floor/outdoors/snow/sif/planetuse) (seuz4)
+[2018-11-25T22:40:54] Runtime in ,: bad arg name 'used_weapon'
+  usr: (the snow) (93,219,5) (/turf/simulated/floor/outdoors/snow/sif/planetuse) (seuz4)
+  usr.loc: (the snow) (93,219,5) (/turf/simulated/floor/outdoors/snow/sif/planetuse) (seuz4)
+[2018-11-25T22:40:54] Runtime in ,: bad arg name 'used_weapon'
+  usr: (the snow) (93,219,5) (/turf/simulated/floor/outdoors/snow/sif/planetuse) (seuz4)
+  usr.loc: (the snow) (93,219,5) (/turf/simulated/floor/outdoors/snow/sif/planetuse) (seuz4)
+[2018-11-25T22:40:54] Runtime in ,: bad arg name 'used_weapon'
+  usr: (the snow) (93,219,5) (/turf/simulated/floor/outdoors/snow/sif/planetuse) (seuz4)
+  usr.loc: (the snow) (93,219,5) (/turf/simulated/floor/outdoors/snow/sif/planetuse) (seuz4)
+[2018-11-25T22:40:54] Runtime in ,: bad arg name 'used_weapon'
+  usr: (the snow) (93,219,5) (/turf/simulated/floor/outdoors/snow/sif/planetuse) (seuz4)
+  usr.loc: (the snow) (93,219,5) (/turf/simulated/floor/outdoors/snow/sif/planetuse) (seuz4)
+  (This error will now be silenced for 10 minutes)
+## TESTING: MC: Runlevel changed from 4 to 8
+Round ended. Mode: Extended.
+## ERROR: Hook '/hook/roundend/proc/stop_all_media' failed or runtimed.
+[2018-11-25T22:42:35] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+  proc name: persist nif data (/proc/persist_nif_data)
+## TESTING: Persist (PID): Saving stuff from Donovan Fleming to /datum/preferences ([0x210701e2]).
+[2018-11-25T22:42:35] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+  proc name: persist nif data (/proc/persist_nif_data)
+## TESTING: Persist (PID): Saving stuff from Mirho Al'Manq to /datum/preferences ([0x21078ef7]).
+Stopped server.
+World opened on network port 63499.
+29 global variables
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Direction Set (/decl/observ/dir_set): New()
+Global Variables (/datum/controller/global_vars): InitGlobaldir set event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Mob Equipped (/decl/observ/mob_equipped): New()
+Global Variables (/datum/controller/global_vars): InitGlobalmob equipped event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Item Equipped (/decl/observ/item_equipped): New()
+Global Variables (/datum/controller/global_vars): InitGlobalitem equipped event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Logged In (/decl/observ/logged_in): New()
+Global Variables (/datum/controller/global_vars): InitGloballogged in event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Moved (/decl/observ/moved): New()
+Global Variables (/datum/controller/global_vars): InitGlobalmoved event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Mob Unequipped (/decl/observ/mob_unequipped): New()
+Global Variables (/datum/controller/global_vars): InitGlobalmob unequipped event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Item Unequipped (/decl/observ/item_unequipped): New()
+Global Variables (/datum/controller/global_vars): InitGlobalitem unequipped event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot execute .raise event(). (/exception), null)
+/datum/controller (/datum/controller): Destroy(0)
+qdel(/datum/controller (/datum/controller), 0)
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+Running revision:
+master
+2018-11-26
+ed448d5c17405530e639fae0876f3be50086272f
+Map Loading Complete
+Feedback database connection established.
+SQL database connection established.
+[2018-11-25T22:53:20] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+  src: Random Mouse (/obj/random/mob/mouse)
+  src.loc: the plating (147,106,1) (/turf/simulated/floor/plating)
+  call stack:
+  Random Mouse (/obj/random/mob/mouse): spawn item()
+  Random Mouse (/obj/random/mob/mouse): New(the plating (147,106,1) (/turf/simulated/floor/plating))
+[2018-11-25T22:53:20] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+  src: Random Mouse (/obj/random/mob/mouse)
+  src.loc: the plating (111,151,1) (/turf/simulated/floor/plating)
+  call stack:
+  Random Mouse (/obj/random/mob/mouse): spawn item()
+  Random Mouse (/obj/random/mob/mouse): New(the plating (111,151,1) (/turf/simulated/floor/plating))
+[2018-11-25T22:53:20] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+  src: Random Mouse (/obj/random/mob/mouse)
+  src.loc: the plating (107,161,2) (/turf/simulated/floor/plating)
+  call stack:
+  Random Mouse (/obj/random/mob/mouse): spawn item()
+  Random Mouse (/obj/random/mob/mouse): New(the plating (107,161,2) (/turf/simulated/floor/plating))
+[2018-11-25T22:53:20] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+[2018-11-25T22:53:20] Runtime in alarm_monitor.dm,8: Cannot read null.all_handlers
+  proc name: New (/datum/nano_module/alarm_monitor/all/New)
+  usr: (NULL) (0,0,0) (NULL) ()
+  usr.loc: (NULL) (0,0,0) (NULL) ()
+[2018-11-25T22:53:20] Runtime in subystems.dm,41: Cannot read null.all_handlers
+  proc name: init subsystems (/mob/living/silicon/proc/init_subsystems)
+  usr: (NULL) (0,0,0) (NULL) ()
+  usr.loc: (NULL) (0,0,0) (NULL) ()
+[2018-11-25T22:53:23] Runtime in humans.dm,253: undefined proc or verb /list/makerandom().
+
+  proc name: New (/obj/effect/decal/cleanable/mucus/mapped/New)
+Initialized Mapping subsystem within 0 seconds!
+Initializing objects
+Initialized 724162 atoms
+## TESTING: Late initialized 3376 atoms
+Initialized Atoms subsystem within 16.6 seconds!
+Initialized Machines subsystem within 2.9 seconds!
+Initialized Shuttles subsystem within 0.1 seconds!
+Initialized Lighting subsystem within 18.4 seconds!
+Processing Geometry...
+Initialized Air subsystem within 18.7 seconds!
+Initialized Planets subsystem within 12.5 seconds!
+Initialized HoloMiniMaps subsystem within 2 seconds!
+Initialized Overlay subsystem within 0.5 seconds!
+Initialized Xenoarch subsystem within 1.8 seconds!
+Initialized Circuit subsystem within 0.1 seconds!
+Initializations complete within 73.8 seconds!
+## TESTING: MC: Runlevel changed from NULL to 1
+## TESTING: MC: Runlevel changed from 1 to 2
+[2018-11-25T22:58:05] Runtime in new_player_aeiou.dm,22: Cannot read null.ckey
+  proc name: is player whitelisted (/proc/is_player_whitelisted)
+[2018-11-25T22:58:05] Runtime in new_player_aeiou.dm,22: Cannot read null.ckey
+  proc name: is player whitelisted (/proc/is_player_whitelisted)
+## TESTING: MC: Runlevel changed from 2 to 4
+## TESTING: GC: -- [0x200c448] | /obj/item/clothing/head/hood/winter was unable to be GC'd --
+## TESTING: GC: -- [0x200c44b] | /obj/item/clothing/suit/storage/hooded/wintercoat was unable to be GC'd --
+## TESTING: GC: -- [0x200d366] | /obj/item/clothing/head/hood/winter was unable to be GC'd --
+## TESTING: GC: -- [0x200d362] | /obj/item/clothing/suit/storage/hooded/wintercoat was unable to be GC'd --
+Sun Nov 25 23:16:35 2018
+## TESTING: GC: -- [0x200dd43] | /obj/item/mecha_parts/mecha_equipment/tool/syringe_gun was unable to be GC'd --
+## TESTING: GC: -- [0x200c2eb] | /obj/item/mecha_parts/mecha_equipment/tool/syringe_gun was unable to be GC'd --
+## TESTING: GC: -- [0x200c290] | /obj/item/mecha_parts/mecha_equipment/tool/syringe_gun was unable to be GC'd --
+[2018-11-25T23:19:24] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+  proc name: persist nif data (/proc/persist_nif_data)
+[2018-11-25T23:22:26] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+  proc name: persist nif data (/proc/persist_nif_data)
+[2018-11-25T23:25:30] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+  proc name: persist nif data (/proc/persist_nif_data)
+[2018-11-25T23:28:33] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+  proc name: persist nif data (/proc/persist_nif_data)
+[2018-11-25T23:31:37] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+  proc name: persist nif data (/proc/persist_nif_data)
+[2018-11-25T23:34:39] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+  proc name: persist nif data (/proc/persist_nif_data)
+[2018-11-25T23:37:41] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+  proc name: persist nif data (/proc/persist_nif_data)
+## TESTING: GC: -- [0x200cbba] | /obj/item/organ/external/hand/unbreakable/slime was unable to be GC'd --
+## TESTING: GC: -- [0x200cbfd] | /obj/item/organ/external/arm/unbreakable/slime was unable to be GC'd --
+[2018-11-25T23:40:43] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+  proc name: persist nif data (/proc/persist_nif_data)
+## TESTING: GC: -- [0x200cbea] | /obj/item/organ/external/head/unbreakable/slime was unable to be GC'd --
+## TESTING: GC: -- [0x200cbb9] | /obj/item/organ/external/hand/right/unbreakable/slime was unable to be GC'd --
+[2018-11-25T23:43:45] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+  proc name: persist nif data (/proc/persist_nif_data)
+## ERROR: hook_vr itself failed or runtimed. Exception below.
+## ERROR: hook_vr catch: Cannot read null.items_by_name on persist_vr.dm:254
+## TESTING: Ahelp action: handleissue
+## TESTING: Ahelp action: reply
+### VarEdit by Rsmr: /mob/observer/dead alpha=255
+[2018-11-25T23:46:49] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+  proc name: persist nif data (/proc/persist_nif_data)
+## TESTING: Ahelp action: resolve
+## TESTING: GC: -- [0x2014b22] | /obj/item/device/communicator/watch was unable to be GC'd --
+## TESTING: GC: -- [0x2014b2a] | /obj/item/weapon/book/codex/lore/robutt was unable to be GC'd --
+[2018-11-25T23:49:56] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+  proc name: persist nif data (/proc/persist_nif_data)
+[2018-11-25T23:53:30] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+  proc name: persist nif data (/proc/persist_nif_data)
+[2018-11-25T23:57:05] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+  proc name: persist nif data (/proc/persist_nif_data)
+### VarEdit by Rsmr: /obj/machinery/power/smes/buildable capacity=5e+009
+### VarEdit by Rsmr: /obj/machinery/power/smes/buildable charge=5e+009
+### VarEdit by Rsmr: /obj/machinery/power/smes/buildable output_level=2e+006
+### VarEdit by Rsmr: /obj/machinery/power/smes/buildable outputting=1
+[2018-11-26T00:00:38] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+  proc name: persist nif data (/proc/persist_nif_data)
+[2018-11-26T00:03:44] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+  proc name: persist nif data (/proc/persist_nif_data)
+## ERROR: attempt_vr runtimed when calling vore_attackby on Unknown (as Tekaluk).
+## ERROR: attempt_vr catch: CANARY: Old human update_icons was called. on unsorted.dm:1312
+[2018-11-26T00:06:50] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+  proc name: persist nif data (/proc/persist_nif_data)
+[2018-11-26T00:09:53] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+  proc name: persist nif data (/proc/persist_nif_data)
+connected
+[2018-11-26T00:12:59] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+  proc name: persist nif data (/proc/persist_nif_data)
+[2018-11-26T00:16:01] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+  proc name: persist nif data (/proc/persist_nif_data)
+Mon Nov 26 00:18:35 2018
+## ERROR: attempt_vr runtimed when calling vore_attackby on Unknown (as Tekaluk).
+## ERROR: attempt_vr catch: CANARY: Old human update_icons was called. on unsorted.dm:1312
+[2018-11-26T00:19:04] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+  proc name: persist nif data (/proc/persist_nif_data)
+[2018-11-26T00:20:17] Runtime in unsorted.dm,1312: CANARY: Old human update_icons_all was called.
+  proc name: crash with (/proc/crash_with)
+  usr: (the floor) (168,117,2) (/turf/simulated/floor/tiled/white) (solazius)
+  usr.loc: (the floor) (168,117,2) (/turf/simulated/floor/tiled/white) (solazius)
+[2018-11-26T00:22:06] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+  proc name: persist nif data (/proc/persist_nif_data)
+[2018-11-26T00:25:08] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+  proc name: persist nif data (/proc/persist_nif_data)
+## ERROR: attempt_vr runtimed when calling vore_attackby on Tekaluk.
+## ERROR: attempt_vr catch: CANARY: Old human update_icons was called. on unsorted.dm:1312
+[2018-11-26T00:28:12] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+  proc name: persist nif data (/proc/persist_nif_data)
+[2018-11-26T00:31:15] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+  proc name: persist nif data (/proc/persist_nif_data)
+[2018-11-26T00:34:18] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+  proc name: persist nif data (/proc/persist_nif_data)
+[2018-11-26T00:37:20] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+  proc name: persist nif data (/proc/persist_nif_data)
+[2018-11-26T00:40:23] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+  proc name: persist nif data (/proc/persist_nif_data)
+[2018-11-26T00:43:26] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+  proc name: persist nif data (/proc/persist_nif_data)
+[2018-11-26T00:46:28] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+  proc name: persist nif data (/proc/persist_nif_data)
+[2018-11-26T00:49:30] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+  proc name: persist nif data (/proc/persist_nif_data)
+[2018-11-26T00:52:31] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+  proc name: persist nif data (/proc/persist_nif_data)
+[2018-11-26T00:55:16] Runtime in helper.dm,92: list index out of bounds
+  proc name: get recent news (/obj/item/device/communicator/proc/get_recent_news)
+  usr: (the floor) (138,14,6) (/turf/simulated/floor/tiled/white) (solazius)
+  usr.loc: (the floor) (138,14,6) (/turf/simulated/floor/tiled/white) (solazius)
+[2018-11-26T00:55:16] Runtime in helper.dm,92: list index out of bounds
+  Caught by process: nanoui
+  proc name: get recent news (/obj/item/device/communicator/proc/get_recent_news)
+  src: /datum/nanoui (/datum/nanoui)
+  src.loc: /datum/nanoui (/datum/nanoui)
+[2018-11-26T00:55:18] Runtime in helper.dm,92: list index out of bounds
+  Caught by process: nanoui
+  proc name: get recent news (/obj/item/device/communicator/proc/get_recent_news)
+  src: /datum/nanoui (/datum/nanoui)
+  src.loc: /datum/nanoui (/datum/nanoui)
+[2018-11-26T00:55:20] Runtime in helper.dm,92: list index out of bounds
+  Caught by process: nanoui
+  proc name: get recent news (/obj/item/device/communicator/proc/get_recent_news)
+  src: /datum/nanoui (/datum/nanoui)
+  src.loc: /datum/nanoui (/datum/nanoui)
+[2018-11-26T00:55:34] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+  proc name: persist nif data (/proc/persist_nif_data)
+[2018-11-26T00:58:37] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+  proc name: persist nif data (/proc/persist_nif_data)
+[2018-11-26T01:01:40] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+  proc name: persist nif data (/proc/persist_nif_data)
+[2018-11-26T01:04:43] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+  proc name: persist nif data (/proc/persist_nif_data)
+[2018-11-26T01:05:44] Runtime in unsorted.dm,1312: CANARY: Old human update_icons_all was called.
+  proc name: crash with (/proc/crash_with)
+  usr: (the floor) (58,130,8) (/turf/unsimulated/floor) ()
+  usr.loc: (the floor) (58,130,8) (/turf/unsimulated/floor) ()
+[2018-11-26T01:06:29] Runtime in unsorted.dm,1312: CANARY: Old human update_icons_all was called.
+  proc name: crash with (/proc/crash_with)
+  usr: (the sand) (211,145,6) (/turf/simulated/mineral/sif) (solazius)
+  usr.loc: (the sand) (211,145,6) (/turf/simulated/mineral/sif) (solazius)
+[2018-11-26T01:07:47] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+  proc name: persist nif data (/proc/persist_nif_data)
+[2018-11-26T01:10:52] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+  proc name: persist nif data (/proc/persist_nif_data)
+[2018-11-26T01:13:54] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+  proc name: persist nif data (/proc/persist_nif_data)
+[2018-11-26T01:14:38] Runtime in unsorted.dm,1312: CANARY: Old human update_icons_all was called.
+  proc name: crash with (/proc/crash_with)
+  usr: (the sand) (210,70,6) (/turf/simulated/mineral/sif) (solazius)
+  usr.loc: (the sand) (210,70,6) (/turf/simulated/mineral/sif) (solazius)
+## TESTING: GC: -- [0x200cc28] | /obj/item/organ/external/foot/right/unbreakable/slime was unable to be GC'd --
+## TESTING: GC: -- [0x200cc02] | /obj/item/organ/external/leg/right/unbreakable/slime was unable to be GC'd --
+[2018-11-26T01:15:24] Runtime in life.dm,1362: Cannot read null.screen
+  Caught by Mobs subsystem
+  proc name: process glasses (/mob/living/carbon/human/proc/process_glasses)
+  src: (the sand) (187,73,6) (/turf/simulated/mineral/sif) (solazius)
+  src.loc: (the sand) (187,73,6) (/turf/simulated/mineral/sif) (solazius)
+[2018-11-26T01:15:26] Runtime in life.dm,1362: Cannot read null.screen
+  Caught by Mobs subsystem
+  proc name: process glasses (/mob/living/carbon/human/proc/process_glasses)
+  src: (the sand) (187,73,6) (/turf/simulated/mineral/sif) (solazius)
+  src.loc: (the sand) (187,73,6) (/turf/simulated/mineral/sif) (solazius)
+[2018-11-26T01:15:28] Runtime in life.dm,1362: Cannot read null.screen
+  Caught by Mobs subsystem
+  proc name: process glasses (/mob/living/carbon/human/proc/process_glasses)
+  src: (the sand) (187,73,6) (/turf/simulated/mineral/sif) (solazius)
+  src.loc: (the sand) (187,73,6) (/turf/simulated/mineral/sif) (solazius)
+[2018-11-26T01:15:30] Runtime in life.dm,1362: Cannot read null.screen
+  Caught by Mobs subsystem
+  proc name: process glasses (/mob/living/carbon/human/proc/process_glasses)
+  src: (the sand) (187,73,6) (/turf/simulated/mineral/sif) (solazius)
+  src.loc: (the sand) (187,73,6) (/turf/simulated/mineral/sif) (solazius)
+[2018-11-26T01:15:32] Runtime in life.dm,1362: Cannot read null.screen
+  Caught by Mobs subsystem
+  proc name: process glasses (/mob/living/carbon/human/proc/process_glasses)
+  src: (the sand) (187,73,6) (/turf/simulated/mineral/sif) (solazius)
+  src.loc: (the sand) (187,73,6) (/turf/simulated/mineral/sif) (solazius)
+[2018-11-26T01:15:34] Runtime in life.dm,1362: Cannot read null.screen
+  Caught by Mobs subsystem
+  proc name: process glasses (/mob/living/carbon/human/proc/process_glasses)
+  src: (the sand) (187,73,6) (/turf/simulated/mineral/sif) (solazius)
+  src.loc: (the sand) (187,73,6) (/turf/simulated/mineral/sif) (solazius)
+[2018-11-26T01:15:36] Runtime in life.dm,1362: Cannot read null.screen
+  Caught by Mobs subsystem
+  proc name: process glasses (/mob/living/carbon/human/proc/process_glasses)
+  src: (the sand) (187,73,6) (/turf/simulated/mineral/sif) (solazius)
+  src.loc: (the sand) (187,73,6) (/turf/simulated/mineral/sif) (solazius)
+[2018-11-26T01:15:38] Runtime in life.dm,1362: Cannot read null.screen
+  Caught by Mobs subsystem
+  proc name: process glasses (/mob/living/carbon/human/proc/process_glasses)
+  src: (the sand) (187,73,6) (/turf/simulated/mineral/sif) (solazius)
+  src.loc: (the sand) (187,73,6) (/turf/simulated/mineral/sif) (solazius)
+[2018-11-26T01:15:40] Runtime in life.dm,1362: Cannot read null.screen
+  Caught by Mobs subsystem
+  proc name: process glasses (/mob/living/carbon/human/proc/process_glasses)
+  src: (the sand) (187,73,6) (/turf/simulated/mineral/sif) (solazius)
+  src.loc: (the sand) (187,73,6) (/turf/simulated/mineral/sif) (solazius)
+[2018-11-26T01:15:42] Runtime in life.dm,1362: Cannot read null.screen
+  Caught by Mobs subsystem
+  proc name: process glasses (/mob/living/carbon/human/proc/process_glasses)
+  src: (the sand) (187,73,6) (/turf/simulated/mineral/sif) (solazius)
+  src.loc: (the sand) (187,73,6) (/turf/simulated/mineral/sif) (solazius)
+  (This error will now be silenced for 10 minutes)
+[2018-11-26T01:16:56] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+  proc name: persist nif data (/proc/persist_nif_data)
+Mon Nov 26 01:19:59 2018
+[2018-11-26T01:19:59] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+  proc name: persist nif data (/proc/persist_nif_data)
+[2018-11-26T01:20:00] Runtime in unsorted.dm,1312: CANARY: Old human update_icons_all was called.
+  proc name: crash with (/proc/crash_with)
+  usr: (the sand) (229,42,6) (/turf/simulated/mineral/floor/ignore_mapgen) (solazius)
+  usr.loc: (the sand) (229,42,6) (/turf/simulated/mineral/floor/ignore_mapgen) (solazius)
+## TESTING: GC: -- [0x200f1ae] | /obj/item/organ/external/head/unbreakable/slime was unable to be GC'd --
+## TESTING: GC: -- [0x200cc21] | /obj/item/organ/external/foot/unbreakable/slime was unable to be GC'd --
+## TESTING: GC: -- [0x200cc01] | /obj/item/organ/external/leg/unbreakable/slime was unable to be GC'd --
+## TESTING: GC: -- [0x2007c75] | /obj/item/organ/external/foot/right/unbreakable/slime was unable to be GC'd --
+## TESTING: GC: -- [0x2007c7f] | /obj/item/organ/external/leg/right/unbreakable/slime was unable to be GC'd --
+## TESTING: GC: -- [0x200f1c1] | /obj/item/organ/external/hand/right/unbreakable/slime was unable to be GC'd --
+## TESTING: GC: -- [0x200cbfe] | /obj/item/organ/external/arm/right/unbreakable/slime was unable to be GC'd --
+## TESTING: GC: -- [0x2007a6e] | /obj/item/organ/external/hand/unbreakable/slime was unable to be GC'd --
+[2018-11-26T01:23:02] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+  proc name: persist nif data (/proc/persist_nif_data)
+## TESTING: GC: -- [0x200c2b8] | /obj/belly was unable to be GC'd --
+[2018-11-26T01:25:54] Skipped 9 runtimes in life.dm,1362.
+[2018-11-26T01:26:06] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+  proc name: persist nif data (/proc/persist_nif_data)
+[2018-11-26T01:29:08] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+[2018-11-26T01:32:10] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+[2018-11-26T01:35:12] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+[2018-11-26T01:38:14] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+[2018-11-26T01:41:17] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+[2018-11-26T01:44:18] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+[2018-11-26T01:47:20] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+[2018-11-26T01:50:22] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+[2018-11-26T01:53:24] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+[2018-11-26T01:56:26] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+[2018-11-26T01:59:27] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+[2018-11-26T02:02:36] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+Scheduled crew transfer has begun.
+[2018-11-26T02:05:38] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+## TESTING: Ahelp action: handleissue
+## TESTING: Ahelp action: reply
+[2018-11-26T02:08:40] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+## TESTING: Ahelp action: resolve
+[2018-11-26T02:11:42] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+## TESTING: Ahelp action: reply
+Shuttle has arrived at station.
+[2018-11-26T02:14:45] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+## TESTING: Ahelp action: resolve
+[2018-11-26T02:17:49] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+## TESTING: MC: Runlevel changed from 4 to 8
+Round ended. Mode: Extended.
+## ERROR: Hook '/hook/roundend/proc/stop_all_media' failed or runtimed.
+[2018-11-26T02:18:44] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+## TESTING: Persist (PID): Saving stuff from Donovan Fleming to /datum/preferences ([0x21032551]).
+[2018-11-26T02:18:44] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+## TESTING: Persist (PID): Saving stuff from Yuka-Quelan to /datum/preferences ([0x2107926c]).
+## WARNING: Persist (PID): Skipping the alien drone (1) for persisting, as they have no prefs. in code/modules/vore/persist/persist_vr.dm at line 82 src:  usr: .
+[2018-11-26T02:18:44] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+## TESTING: Persist (PID): Saving stuff from Demios Tesserak to /datum/preferences ([0x2107c795]).
+Mon Nov 26 02:21:46 2018
+Shutting down Circuit subsystem...
+Shutting down Xenoarch subsystem...
+Shutting down Overlay subsystem...
+Shutting down HoloMiniMaps subsystem...
+Shutting down Planets subsystem...
+Shutting down Air subsystem...
+Shutting down Vote subsystem...
+Shutting down Transcore subsystem...
+Shutting down Persist subsystem...
+Shutting down Orbits subsystem...
+Shutting down Mobs subsystem...
+Shutting down Lighting subsystem...
+Shutting down Garbage subsystem...
+Shutting down Bellies subsystem...
+Shutting down Airflow subsystem...
+Shutting down Shuttles subsystem...
+Shutting down Machines subsystem...
+Shutting down Atoms subsystem...
+Shutting down Mapping subsystem...
+Shutdown complete
+Rebooted server.
+29 global variables
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Direction Set (/decl/observ/dir_set): New()
+Global Variables (/datum/controller/global_vars): InitGlobaldir set event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Mob Equipped (/decl/observ/mob_equipped): New()
+Global Variables (/datum/controller/global_vars): InitGlobalmob equipped event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Item Equipped (/decl/observ/item_equipped): New()
+Global Variables (/datum/controller/global_vars): InitGlobalitem equipped event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Logged In (/decl/observ/logged_in): New()
+Global Variables (/datum/controller/global_vars): InitGloballogged in event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Moved (/decl/observ/moved): New()
+Global Variables (/datum/controller/global_vars): InitGlobalmoved event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Mob Unequipped (/decl/observ/mob_unequipped): New()
+Global Variables (/datum/controller/global_vars): InitGlobalmob unequipped event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Item Unequipped (/decl/observ/item_unequipped): New()
+Global Variables (/datum/controller/global_vars): InitGlobalitem unequipped event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot execute .raise event(). (/exception), null)
+/datum/controller (/datum/controller): Destroy(0)
+qdel(/datum/controller (/datum/controller), 0)
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+Running revision:
+master
+2018-11-26
+ed448d5c17405530e639fae0876f3be50086272f
+Map Loading Complete
+Feedback database connection established.
+SQL database connection established.
+[2018-11-26T02:25:52] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+  src: Random Mouse (/obj/random/mob/mouse)
+  src.loc: the plating (147,106,1) (/turf/simulated/floor/plating)
+  call stack:
+  Random Mouse (/obj/random/mob/mouse): spawn item()
+  Random Mouse (/obj/random/mob/mouse): New(the plating (147,106,1) (/turf/simulated/floor/plating))
+[2018-11-26T02:25:52] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+  src: Random Mouse (/obj/random/mob/mouse)
+  src.loc: the plating (73,128,1) (/turf/simulated/floor/plating)
+  call stack:
+  Random Mouse (/obj/random/mob/mouse): spawn item()
+  Random Mouse (/obj/random/mob/mouse): New(the plating (73,128,1) (/turf/simulated/floor/plating))
+[2018-11-26T02:25:52] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+  src: Random Mouse (/obj/random/mob/mouse)
+  src.loc: the plating (145,150,1) (/turf/simulated/floor/plating)
+  call stack:
+  Random Mouse (/obj/random/mob/mouse): spawn item()
+  Random Mouse (/obj/random/mob/mouse): New(the plating (145,150,1) (/turf/simulated/floor/plating))
+[2018-11-26T02:25:52] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+[2018-11-26T02:25:52] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+[2018-11-26T02:25:52] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+[2018-11-26T02:25:52] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+[2018-11-26T02:25:52] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+[2018-11-26T02:25:52] Runtime in alarm_monitor.dm,8: Cannot read null.all_handlers
+  proc name: New (/datum/nano_module/alarm_monitor/all/New)
+  usr: (NULL) (0,0,0) (NULL) ()
+  usr.loc: (NULL) (0,0,0) (NULL) ()
+[2018-11-26T02:25:52] Runtime in subystems.dm,41: Cannot read null.all_handlers
+  proc name: init subsystems (/mob/living/silicon/proc/init_subsystems)
+  usr: (NULL) (0,0,0) (NULL) ()
+  usr.loc: (NULL) (0,0,0) (NULL) ()
+[2018-11-26T02:26:02] Runtime in mob.dm,44: Undefined variable /obj/random/mob/spider/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+Initialized Mapping subsystem within 0 seconds!
+Initializing objects
+Initialized 723982 atoms
+## TESTING: Late initialized 3433 atoms
+Initialized Atoms subsystem within 15.4 seconds!
+Initialized Machines subsystem within 2.8 seconds!
+Initialized Shuttles subsystem within 0.1 seconds!
+Initialized Lighting subsystem within 17.6 seconds!
+Processing Geometry...
+Initialized Air subsystem within 17.2 seconds!
+Initialized Planets subsystem within 16.3 seconds!
+Initialized HoloMiniMaps subsystem within 2 seconds!
+Initialized Overlay subsystem within 0.6 seconds!
+Initialized Xenoarch subsystem within 1.7 seconds!
+Initialized Circuit subsystem within 0 seconds!
+Initializations complete within 73.8 seconds!
+## TESTING: MC: Runlevel changed from NULL to 1
+## TESTING: MC: Runlevel changed from 1 to 2
+## TESTING: MC: Runlevel changed from 2 to 4
+## TESTING: GC: -- [0x2014c61] | /obj/structure/table/standard was unable to be GC'd --
+## TESTING: GC: -- [0x2014c36] | /obj/structure/table/standard was unable to be GC'd --
+## TESTING: GC: -- [0x2014ba2] | /obj/structure/table/woodentable was unable to be GC'd --
+## TESTING: GC: -- [0x2014c63] | /obj/item/clothing/head/hood/winter was unable to be GC'd --
+## TESTING: GC: -- [0x2014c56] | /obj/item/clothing/suit/storage/hooded/wintercoat was unable to be GC'd --
+## TESTING: GC: -- [0x3000075] | /mob/living/simple_animal/hostile/malf_drone/lesser was unable to be GC'd --
+## TESTING: GC: -- [0x300007c] | /mob/living/simple_animal/hostile/malf_drone/lesser was unable to be GC'd --
+## TESTING: GC: -- [0x200de01] | /obj/item/clothing/head/hood/winter was unable to be GC'd --
+## TESTING: GC: -- [0x200dddc] | /obj/item/clothing/suit/storage/hooded/wintercoat was unable to be GC'd --
+Mon Nov 26 09:20:21 2018
+Scheduled crew transfer has begun.
+Shuttle has arrived at station.
+## TESTING: MC: Runlevel changed from 4 to 8
+Round ended. Mode: Extended.
+## ERROR: Hook '/hook/roundend/proc/stop_all_media' failed or runtimed.
+[2018-11-26T09:36:13] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+  proc name: persist nif data (/proc/persist_nif_data)
+## TESTING: Persist (PID): Saving stuff from Donovan Fleming to /datum/preferences ([0x210063f8]).
+Shutting down Circuit subsystem...
+Shutting down Xenoarch subsystem...
+Shutting down Overlay subsystem...
+Shutting down HoloMiniMaps subsystem...
+Shutting down Planets subsystem...
+Shutting down Air subsystem...
+Shutting down Vote subsystem...
+Shutting down Transcore subsystem...
+Shutting down Persist subsystem...
+Shutting down Orbits subsystem...
+Shutting down Mobs subsystem...
+Shutting down Lighting subsystem...
+Shutting down Garbage subsystem...
+Shutting down Bellies subsystem...
+Shutting down Airflow subsystem...
+Shutting down Shuttles subsystem...
+Shutting down Machines subsystem...
+Shutting down Atoms subsystem...
+Shutting down Mapping subsystem...
+Shutdown complete
+Rebooted server.
+29 global variables
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Direction Set (/decl/observ/dir_set): New()
+Global Variables (/datum/controller/global_vars): InitGlobaldir set event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Mob Equipped (/decl/observ/mob_equipped): New()
+Global Variables (/datum/controller/global_vars): InitGlobalmob equipped event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Item Equipped (/decl/observ/item_equipped): New()
+Global Variables (/datum/controller/global_vars): InitGlobalitem equipped event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Logged In (/decl/observ/logged_in): New()
+Global Variables (/datum/controller/global_vars): InitGloballogged in event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Moved (/decl/observ/moved): New()
+Global Variables (/datum/controller/global_vars): InitGlobalmoved event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Mob Unequipped (/decl/observ/mob_unequipped): New()
+Global Variables (/datum/controller/global_vars): InitGlobalmob unequipped event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Item Unequipped (/decl/observ/item_unequipped): New()
+Global Variables (/datum/controller/global_vars): InitGlobalitem unequipped event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot execute .raise event(). (/exception), null)
+/datum/controller (/datum/controller): Destroy(0)
+qdel(/datum/controller (/datum/controller), 0)
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+Running revision:
+master
+2018-11-26
+ed448d5c17405530e639fae0876f3be50086272f
+Map Loading Complete
+Feedback database connection established.
+SQL database connection established.
+[2018-11-26T09:43:21] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+  src: Random Mouse (/obj/random/mob/mouse)
+  src.loc: the plating (111,151,1) (/turf/simulated/floor/plating)
+  call stack:
+  Random Mouse (/obj/random/mob/mouse): spawn item()
+  Random Mouse (/obj/random/mob/mouse): New(the plating (111,151,1) (/turf/simulated/floor/plating))
+[2018-11-26T09:43:21] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+  src: Random Mouse (/obj/random/mob/mouse)
+  src.loc: the plating (151,73,2) (/turf/simulated/floor/plating)
+  call stack:
+  Random Mouse (/obj/random/mob/mouse): spawn item()
+  Random Mouse (/obj/random/mob/mouse): New(the plating (151,73,2) (/turf/simulated/floor/plating))
+[2018-11-26T09:43:21] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+  src: Random Mouse (/obj/random/mob/mouse)
+  src.loc: the plating (157,103,2) (/turf/simulated/floor/plating)
+  call stack:
+  Random Mouse (/obj/random/mob/mouse): spawn item()
+  Random Mouse (/obj/random/mob/mouse): New(the plating (157,103,2) (/turf/simulated/floor/plating))
+[2018-11-26T09:43:21] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+[2018-11-26T09:43:21] Runtime in alarm_monitor.dm,8: Cannot read null.all_handlers
+  proc name: New (/datum/nano_module/alarm_monitor/all/New)
+  usr: (NULL) (0,0,0) (NULL) ()
+  usr.loc: (NULL) (0,0,0) (NULL) ()
+[2018-11-26T09:43:21] Runtime in subystems.dm,41: Cannot read null.all_handlers
+  proc name: init subsystems (/mob/living/silicon/proc/init_subsystems)
+  usr: (NULL) (0,0,0) (NULL) ()
+  usr.loc: (NULL) (0,0,0) (NULL) ()
+Initialized Mapping subsystem within 0 seconds!
+Initializing objects
+Initialized 724175 atoms
+## TESTING: Late initialized 3405 atoms
+Initialized Atoms subsystem within 15.1 seconds!
+Initialized Machines subsystem within 2.9 seconds!
+Initialized Shuttles subsystem within 0 seconds!
+Initialized Lighting subsystem within 16.6 seconds!
+Processing Geometry...
+Initialized Air subsystem within 17.1 seconds!
+Initialized Planets subsystem within 19.4 seconds!
+Initialized HoloMiniMaps subsystem within 2 seconds!
+Initialized Overlay subsystem within 0.5 seconds!
+Initialized Xenoarch subsystem within 1.8 seconds!
+Initialized Circuit subsystem within 0.1 seconds!
+Initializations complete within 75.6 seconds!
+## TESTING: MC: Runlevel changed from NULL to 1
+## TESTING: MC: Runlevel changed from 1 to 2
+## TESTING: MC: Runlevel changed from 2 to 4
+Mon Nov 26 15:57:36 2018
+Scheduled crew transfer has begun.
+Shuttle has arrived at station.
+## TESTING: MC: Runlevel changed from 4 to 8
+Round ended. Mode: Extended.
+## ERROR: Hook '/hook/roundend/proc/stop_all_media' failed or runtimed.
+Shutting down Circuit subsystem...
+Shutting down Xenoarch subsystem...
+Shutting down Overlay subsystem...
+Shutting down HoloMiniMaps subsystem...
+Shutting down Planets subsystem...
+Shutting down Air subsystem...
+Shutting down Vote subsystem...
+Shutting down Transcore subsystem...
+Shutting down Persist subsystem...
+Shutting down Orbits subsystem...
+Shutting down Mobs subsystem...
+Shutting down Lighting subsystem...
+Shutting down Garbage subsystem...
+Shutting down Bellies subsystem...
+Shutting down Airflow subsystem...
+Shutting down Shuttles subsystem...
+Shutting down Machines subsystem...
+Shutting down Atoms subsystem...
+Shutting down Mapping subsystem...
+Shutdown complete
+Rebooted server.
+29 global variables
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Direction Set (/decl/observ/dir_set): New()
+Global Variables (/datum/controller/global_vars): InitGlobaldir set event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Mob Equipped (/decl/observ/mob_equipped): New()
+Global Variables (/datum/controller/global_vars): InitGlobalmob equipped event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Item Equipped (/decl/observ/item_equipped): New()
+Global Variables (/datum/controller/global_vars): InitGlobalitem equipped event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Logged In (/decl/observ/logged_in): New()
+Global Variables (/datum/controller/global_vars): InitGloballogged in event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Moved (/decl/observ/moved): New()
+Global Variables (/datum/controller/global_vars): InitGlobalmoved event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Mob Unequipped (/decl/observ/mob_unequipped): New()
+Global Variables (/datum/controller/global_vars): InitGlobalmob unequipped event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Item Unequipped (/decl/observ/item_unequipped): New()
+Global Variables (/datum/controller/global_vars): InitGlobalitem unequipped event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot execute .raise event(). (/exception), null)
+/datum/controller (/datum/controller): Destroy(0)
+qdel(/datum/controller (/datum/controller), 0)
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+Running revision:
+master
+2018-11-26
+ed448d5c17405530e639fae0876f3be50086272f
+Map Loading Complete
+Feedback database connection established.
+SQL database connection established.
+[2018-11-26T16:21:18] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+  src: Random Mouse (/obj/random/mob/mouse)
+  src.loc: the floor (137,109,1) (/turf/simulated/floor/tiled/steel_dirty)
+  call stack:
+  Random Mouse (/obj/random/mob/mouse): spawn item()
+  Random Mouse (/obj/random/mob/mouse): New(the floor (137,109,1) (/turf/simulated/floor/tiled/steel_dirty))
+[2018-11-26T16:21:18] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+  src: Random Mouse (/obj/random/mob/mouse)
+  src.loc: the plating (145,150,1) (/turf/simulated/floor/plating)
+  call stack:
+  Random Mouse (/obj/random/mob/mouse): spawn item()
+  Random Mouse (/obj/random/mob/mouse): New(the plating (145,150,1) (/turf/simulated/floor/plating))
+[2018-11-26T16:21:18] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+  src: Random Mouse (/obj/random/mob/mouse)
+  src.loc: the plating (111,151,1) (/turf/simulated/floor/plating)
+  call stack:
+  Random Mouse (/obj/random/mob/mouse): spawn item()
+  Random Mouse (/obj/random/mob/mouse): New(the plating (111,151,1) (/turf/simulated/floor/plating))
+[2018-11-26T16:21:18] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+[2018-11-26T16:21:18] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+[2018-11-26T16:21:18] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+[2018-11-26T16:21:18] Runtime in alarm_monitor.dm,8: Cannot read null.all_handlers
+  proc name: New (/datum/nano_module/alarm_monitor/all/New)
+  usr: (NULL) (0,0,0) (NULL) ()
+  usr.loc: (NULL) (0,0,0) (NULL) ()
+[2018-11-26T16:21:18] Runtime in subystems.dm,41: Cannot read null.all_handlers
+  proc name: init subsystems (/mob/living/silicon/proc/init_subsystems)
+  usr: (NULL) (0,0,0) (NULL) ()
+  usr.loc: (NULL) (0,0,0) (NULL) ()
+[2018-11-26T16:21:22] Runtime in humans.dm,253: undefined proc or verb /list/makerandom().
+
+  proc name: New (/obj/effect/decal/cleanable/mucus/mapped/New)
+Initialized Mapping subsystem within 0 seconds!
+Initializing objects
+Initialized 725095 atoms
+## TESTING: Late initialized 3506 atoms
+Initialized Atoms subsystem within 19.3 seconds!
+Initialized Machines subsystem within 3.2 seconds!
+Initialized Shuttles subsystem within 0.1 seconds!
+Initialized Lighting subsystem within 19.4 seconds!
+Processing Geometry...
+Initialized Air subsystem within 19.5 seconds!
+Initialized Planets subsystem within 12 seconds!
+Initialized HoloMiniMaps subsystem within 2.3 seconds!
+Initialized Overlay subsystem within 0.6 seconds!
+Initialized Xenoarch subsystem within 2 seconds!
+Initialized Circuit subsystem within 0.1 seconds!
+Initializations complete within 78.6 seconds!
+## TESTING: MC: Runlevel changed from NULL to 1
+## TESTING: MC: Runlevel changed from 1 to 2
+## TESTING: MC: Runlevel changed from 2 to 4
+## TESTING: GC: -- [0x2015135] | /obj/structure/table/standard was unable to be GC'd --
+## TESTING: GC: -- [0x2015106] | /obj/structure/table/standard was unable to be GC'd --
+## TESTING: GC: -- [0x2015072] | /obj/structure/table/woodentable was unable to be GC'd --
+## TESTING: GC: -- [0x300008a] | /mob/living/simple_animal/hostile/malf_drone/lesser was unable to be GC'd --
+## TESTING: GC: -- [0x21008706] | /datum/effect/effect/system/spark_spread was unable to be GC'd --
+## TESTING: GC: -- [0x300007b] | /mob/living/simple_animal/hostile/mecha/malf_drone was unable to be GC'd --
+Mon Nov 26 17:27:09 2018
+## TESTING: GC: -- [0x2004d66] | /obj/structure/closet/crate/medical was unable to be GC'd --
+## TESTING: GC: -- [0x200b42e] | /obj/item/stack/material/steel was unable to be GC'd --
+## ERROR: hook_vr itself failed or runtimed. Exception below.
+## ERROR: hook_vr catch: Cannot read null.items_by_name on persist_vr.dm:254
+## TESTING: GC: -- [0x200fc7c] | /obj/item/device/communicator was unable to be GC'd --
+Mon Nov 26 20:29:18 2018
+Scheduled crew transfer has begun.
+Shuttle has arrived at station.
+## TESTING: MC: Runlevel changed from 4 to 8
+Round ended. Mode: Extended.
+## ERROR: Hook '/hook/roundend/proc/stop_all_media' failed or runtimed.
+[2018-11-26T20:45:22] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+  proc name: persist nif data (/proc/persist_nif_data)
+## TESTING: Persist (PID): Saving stuff from Blake Reid to /datum/preferences ([0x210063bc]).
+[2018-11-26T20:45:22] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+  proc name: persist nif data (/proc/persist_nif_data)
+## TESTING: Persist (PID): Saving stuff from Ulawa-Radithax to /datum/preferences ([0x2107a00c]).
+Shutting down Circuit subsystem...
+Shutting down Xenoarch subsystem...
+Shutting down Overlay subsystem...
+Shutting down HoloMiniMaps subsystem...
+Shutting down Planets subsystem...
+Shutting down Air subsystem...
+Shutting down Vote subsystem...
+Shutting down Transcore subsystem...
+Shutting down Persist subsystem...
+Shutting down Orbits subsystem...
+Shutting down Mobs subsystem...
+Shutting down Lighting subsystem...
+Shutting down Garbage subsystem...
+Shutting down Bellies subsystem...
+Shutting down Airflow subsystem...
+Shutting down Shuttles subsystem...
+Shutting down Machines subsystem...
+Shutting down Atoms subsystem...
+Shutting down Mapping subsystem...
+Shutdown complete
+Rebooted server.
+29 global variables
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Direction Set (/decl/observ/dir_set): New()
+Global Variables (/datum/controller/global_vars): InitGlobaldir set event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Mob Equipped (/decl/observ/mob_equipped): New()
+Global Variables (/datum/controller/global_vars): InitGlobalmob equipped event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Item Equipped (/decl/observ/item_equipped): New()
+Global Variables (/datum/controller/global_vars): InitGlobalitem equipped event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Logged In (/decl/observ/logged_in): New()
+Global Variables (/datum/controller/global_vars): InitGloballogged in event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Moved (/decl/observ/moved): New()
+Global Variables (/datum/controller/global_vars): InitGlobalmoved event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Mob Unequipped (/decl/observ/mob_unequipped): New()
+Global Variables (/datum/controller/global_vars): InitGlobalmob unequipped event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Item Unequipped (/decl/observ/item_unequipped): New()
+Global Variables (/datum/controller/global_vars): InitGlobalitem unequipped event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot execute .raise event(). (/exception), null)
+/datum/controller (/datum/controller): Destroy(0)
+qdel(/datum/controller (/datum/controller), 0)
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+Running revision:
+master
+2018-11-26
+ed448d5c17405530e639fae0876f3be50086272f
+Map Loading Complete
+Feedback database connection established.
+SQL database connection established.
+[2018-11-26T20:52:47] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+  src: Random Mouse (/obj/random/mob/mouse)
+  src.loc: the floor (137,109,1) (/turf/simulated/floor/tiled/steel_dirty)
+  call stack:
+  Random Mouse (/obj/random/mob/mouse): spawn item()
+  Random Mouse (/obj/random/mob/mouse): New(the floor (137,109,1) (/turf/simulated/floor/tiled/steel_dirty))
+[2018-11-26T20:52:47] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+  src: Random Mouse (/obj/random/mob/mouse)
+  src.loc: the plating (73,128,1) (/turf/simulated/floor/plating)
+  call stack:
+  Random Mouse (/obj/random/mob/mouse): spawn item()
+  Random Mouse (/obj/random/mob/mouse): New(the plating (73,128,1) (/turf/simulated/floor/plating))
+[2018-11-26T20:52:47] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+  src: Random Mouse (/obj/random/mob/mouse)
+  src.loc: the plating (108,137,1) (/turf/simulated/floor/plating)
+  call stack:
+  Random Mouse (/obj/random/mob/mouse): spawn item()
+  Random Mouse (/obj/random/mob/mouse): New(the plating (108,137,1) (/turf/simulated/floor/plating))
+[2018-11-26T20:52:47] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+[2018-11-26T20:52:47] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+[2018-11-26T20:52:47] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+[2018-11-26T20:52:47] Runtime in alarm_monitor.dm,8: Cannot read null.all_handlers
+  proc name: New (/datum/nano_module/alarm_monitor/all/New)
+  usr: (NULL) (0,0,0) (NULL) ()
+  usr.loc: (NULL) (0,0,0) (NULL) ()
+[2018-11-26T20:52:47] Runtime in subystems.dm,41: Cannot read null.all_handlers
+  proc name: init subsystems (/mob/living/silicon/proc/init_subsystems)
+  usr: (NULL) (0,0,0) (NULL) ()
+  usr.loc: (NULL) (0,0,0) (NULL) ()
+Initialized Mapping subsystem within 0 seconds!
+Initializing objects
+Initialized 724286 atoms
+## TESTING: Late initialized 3497 atoms
+Initialized Atoms subsystem within 17 seconds!
+Initialized Machines subsystem within 3.2 seconds!
+Initialized Shuttles subsystem within 0.1 seconds!
+Initialized Lighting subsystem within 18 seconds!
+Processing Geometry...
+Initialized Air subsystem within 18.5 seconds!
+Initialized Planets subsystem within 10.5 seconds!
+Initialized HoloMiniMaps subsystem within 2 seconds!
+Initialized Overlay subsystem within 0.6 seconds!
+Initialized Xenoarch subsystem within 2.2 seconds!
+Initialized Circuit subsystem within 0.1 seconds!
+Initializations complete within 72.3 seconds!
+## TESTING: MC: Runlevel changed from NULL to 1
+## TESTING: MC: Runlevel changed from 1 to 2
+## TESTING: MC: Runlevel changed from 2 to 4
+Mon Nov 26 21:50:22 2018
+[2018-11-26T21:50:22] Runtime in lightning_strike.dm,99: Cannot execute null.updatehealth().
+  proc name: lightning strike (/proc/lightning_strike)
+Tue Nov 27 00:20:16 2018
+## TESTING: GC: -- [0x200d203] | /obj/item/stack/tile/floor was unable to be GC'd --
+Tue Nov 27 01:45:20 2018
+## TESTING: GC: -- [0x2014ee8] | /obj/structure/table was unable to be GC'd --
+Tue Nov 27 03:22:34 2018
+Scheduled crew transfer has begun.
+Shuttle has arrived at station.
+## TESTING: MC: Runlevel changed from 4 to 8
+Round ended. Mode: Extended.
+## ERROR: Hook '/hook/roundend/proc/stop_all_media' failed or runtimed.
+[2018-11-27T03:38:23] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+  proc name: persist nif data (/proc/persist_nif_data)
+## TESTING: Persist (PID): Saving stuff from Blake Reid to /datum/preferences ([0x21006343]).
+Shutting down Circuit subsystem...
+Shutting down Xenoarch subsystem...
+Shutting down Overlay subsystem...
+Shutting down HoloMiniMaps subsystem...
+Shutting down Planets subsystem...
+Shutting down Air subsystem...
+Shutting down Vote subsystem...
+Shutting down Transcore subsystem...
+Shutting down Persist subsystem...
+Shutting down Orbits subsystem...
+Shutting down Mobs subsystem...
+Shutting down Lighting subsystem...
+Shutting down Garbage subsystem...
+Shutting down Bellies subsystem...
+Shutting down Airflow subsystem...
+Shutting down Shuttles subsystem...
+Shutting down Machines subsystem...
+Shutting down Atoms subsystem...
+Shutting down Mapping subsystem...
+Shutdown complete
+Rebooted server.
+29 global variables
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Direction Set (/decl/observ/dir_set): New()
+Global Variables (/datum/controller/global_vars): InitGlobaldir set event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Mob Equipped (/decl/observ/mob_equipped): New()
+Global Variables (/datum/controller/global_vars): InitGlobalmob equipped event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Item Equipped (/decl/observ/item_equipped): New()
+Global Variables (/datum/controller/global_vars): InitGlobalitem equipped event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Logged In (/decl/observ/logged_in): New()
+Global Variables (/datum/controller/global_vars): InitGloballogged in event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Moved (/decl/observ/moved): New()
+Global Variables (/datum/controller/global_vars): InitGlobalmoved event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Mob Unequipped (/decl/observ/mob_unequipped): New()
+Global Variables (/datum/controller/global_vars): InitGlobalmob unequipped event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Item Unequipped (/decl/observ/item_unequipped): New()
+Global Variables (/datum/controller/global_vars): InitGlobalitem unequipped event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot execute .raise event(). (/exception), null)
+/datum/controller (/datum/controller): Destroy(0)
+qdel(/datum/controller (/datum/controller), 0)
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+Running revision:
+master
+2018-11-26
+ed448d5c17405530e639fae0876f3be50086272f
+Map Loading Complete
+Feedback database connection established.
+SQL database connection established.
+[2018-11-27T03:45:09] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+  src: Random Mouse (/obj/random/mob/mouse)
+  src.loc: the plating (110,105,1) (/turf/simulated/floor/plating)
+  call stack:
+  Random Mouse (/obj/random/mob/mouse): spawn item()
+  Random Mouse (/obj/random/mob/mouse): New(the plating (110,105,1) (/turf/simulated/floor/plating))
+[2018-11-27T03:45:09] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+  src: Random Mouse (/obj/random/mob/mouse)
+  src.loc: the plating (145,150,1) (/turf/simulated/floor/plating)
+  call stack:
+  Random Mouse (/obj/random/mob/mouse): spawn item()
+  Random Mouse (/obj/random/mob/mouse): New(the plating (145,150,1) (/turf/simulated/floor/plating))
+[2018-11-27T03:45:09] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+  src: Random Mouse (/obj/random/mob/mouse)
+  src.loc: the plating (151,73,2) (/turf/simulated/floor/plating)
+  call stack:
+  Random Mouse (/obj/random/mob/mouse): spawn item()
+  Random Mouse (/obj/random/mob/mouse): New(the plating (151,73,2) (/turf/simulated/floor/plating))
+[2018-11-27T03:45:09] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+[2018-11-27T03:45:09] Runtime in alarm_monitor.dm,8: Cannot read null.all_handlers
+  proc name: New (/datum/nano_module/alarm_monitor/all/New)
+  usr: (NULL) (0,0,0) (NULL) ()
+  usr.loc: (NULL) (0,0,0) (NULL) ()
+[2018-11-27T03:45:09] Runtime in subystems.dm,41: Cannot read null.all_handlers
+  proc name: init subsystems (/mob/living/silicon/proc/init_subsystems)
+  usr: (NULL) (0,0,0) (NULL) ()
+  usr.loc: (NULL) (0,0,0) (NULL) ()
+Initialized Mapping subsystem within 0 seconds!
+Initializing objects
+Initialized 723417 atoms
+## TESTING: Late initialized 3521 atoms
+Initialized Atoms subsystem within 13.9 seconds!
+Initialized Machines subsystem within 2.5 seconds!
+Initialized Shuttles subsystem within 0 seconds!
+Initialized Lighting subsystem within 15.3 seconds!
+Processing Geometry...
+Initialized Air subsystem within 15.9 seconds!
+Initialized Planets subsystem within 15.8 seconds!
+Initialized HoloMiniMaps subsystem within 1.8 seconds!
+Initialized Overlay subsystem within 0.5 seconds!
+Initialized Xenoarch subsystem within 1.7 seconds!
+Initialized Circuit subsystem within 0.1 seconds!
+Initializations complete within 67.7 seconds!
+## TESTING: MC: Runlevel changed from NULL to 1
+## TESTING: MC: Runlevel changed from 1 to 2
+## TESTING: MC: Runlevel changed from 2 to 4
+Tue Nov 27 05:42:55 2018
+Shutting down Circuit subsystem...
+Shutting down Xenoarch subsystem...
+Shutting down Overlay subsystem...
+Shutting down HoloMiniMaps subsystem...
+Shutting down Planets subsystem...
+Shutting down Air subsystem...
+Shutting down Vote subsystem...
+Shutting down Transcore subsystem...
+Shutting down Persist subsystem...
+Shutting down Orbits subsystem...
+Shutting down Mobs subsystem...
+Shutting down Lighting subsystem...
+Shutting down Garbage subsystem...
+Shutting down Bellies subsystem...
+Shutting down Airflow subsystem...
+Shutting down Shuttles subsystem...
+Shutting down Machines subsystem...
+Shutting down Atoms subsystem...
+Shutting down Mapping subsystem...
+Shutdown complete
+Rebooted server.
+29 global variables
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Direction Set (/decl/observ/dir_set): New()
+Global Variables (/datum/controller/global_vars): InitGlobaldir set event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Mob Equipped (/decl/observ/mob_equipped): New()
+Global Variables (/datum/controller/global_vars): InitGlobalmob equipped event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Item Equipped (/decl/observ/item_equipped): New()
+Global Variables (/datum/controller/global_vars): InitGlobalitem equipped event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Logged In (/decl/observ/logged_in): New()
+Global Variables (/datum/controller/global_vars): InitGloballogged in event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Moved (/decl/observ/moved): New()
+Global Variables (/datum/controller/global_vars): InitGlobalmoved event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Mob Unequipped (/decl/observ/mob_unequipped): New()
+Global Variables (/datum/controller/global_vars): InitGlobalmob unequipped event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Item Unequipped (/decl/observ/item_unequipped): New()
+Global Variables (/datum/controller/global_vars): InitGlobalitem unequipped event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot execute .raise event(). (/exception), null)
+/datum/controller (/datum/controller): Destroy(0)
+qdel(/datum/controller (/datum/controller), 0)
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+Running revision:
+master
+2018-11-26
+ed448d5c17405530e639fae0876f3be50086272f
+Map Loading Complete
+Feedback database connection established.
+SQL database connection established.
+[2018-11-27T05:46:56] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+  src: Random Mouse (/obj/random/mob/mouse)
+  src.loc: the plating (73,128,1) (/turf/simulated/floor/plating)
+  call stack:
+  Random Mouse (/obj/random/mob/mouse): spawn item()
+  Random Mouse (/obj/random/mob/mouse): New(the plating (73,128,1) (/turf/simulated/floor/plating))
+[2018-11-27T05:46:56] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+  src: Random Mouse (/obj/random/mob/mouse)
+  src.loc: the plating (151,73,2) (/turf/simulated/floor/plating)
+  call stack:
+  Random Mouse (/obj/random/mob/mouse): spawn item()
+  Random Mouse (/obj/random/mob/mouse): New(the plating (151,73,2) (/turf/simulated/floor/plating))
+[2018-11-27T05:46:56] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+  src: Random Mouse (/obj/random/mob/mouse)
+  src.loc: the plating (160,152,2) (/turf/simulated/floor/plating)
+  call stack:
+  Random Mouse (/obj/random/mob/mouse): spawn item()
+  Random Mouse (/obj/random/mob/mouse): New(the plating (160,152,2) (/turf/simulated/floor/plating))
+[2018-11-27T05:46:56] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+[2018-11-27T05:46:56] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+[2018-11-27T05:46:56] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+[2018-11-27T05:46:56] Runtime in alarm_monitor.dm,8: Cannot read null.all_handlers
+  proc name: New (/datum/nano_module/alarm_monitor/all/New)
+  usr: (NULL) (0,0,0) (NULL) ()
+  usr.loc: (NULL) (0,0,0) (NULL) ()
+[2018-11-27T05:46:56] Runtime in subystems.dm,41: Cannot read null.all_handlers
+  proc name: init subsystems (/mob/living/silicon/proc/init_subsystems)
+  usr: (NULL) (0,0,0) (NULL) ()
+  usr.loc: (NULL) (0,0,0) (NULL) ()
+Initialized Mapping subsystem within 0 seconds!
+Initializing objects
+Initialized 723581 atoms
+## TESTING: Late initialized 3479 atoms
+Initialized Atoms subsystem within 14.4 seconds!
+Initialized Machines subsystem within 2.6 seconds!
+Initialized Shuttles subsystem within 0 seconds!
+Initialized Lighting subsystem within 16 seconds!
+Processing Geometry...
+Initialized Air subsystem within 16.2 seconds!
+Initialized Planets subsystem within 12.2 seconds!
+Initialized HoloMiniMaps subsystem within 1.9 seconds!
+Initialized Overlay subsystem within 0.5 seconds!
+Initialized Xenoarch subsystem within 1.9 seconds!
+Initialized Circuit subsystem within 0.1 seconds!
+Initializations complete within 65.9 seconds!
+## TESTING: MC: Runlevel changed from NULL to 1
+## TESTING: MC: Runlevel changed from 1 to 2
+[2018-11-27T05:51:37] Runtime in new_player_aeiou.dm,22: Cannot read null.ckey
+  proc name: is player whitelisted (/proc/is_player_whitelisted)
+## TESTING: MC: Runlevel changed from 2 to 4
+## TESTING: GC: -- [0x2011805] | /obj/item/clothing/head/hood/winter was unable to be GC'd --
+## TESTING: GC: -- [0x20117f9] | /obj/item/clothing/suit/storage/hooded/wintercoat was unable to be GC'd --
+Tue Nov 27 07:33:22 2018
+[2018-11-27T07:33:22] Runtime in unsorted.dm,1312: Warning: Sand(/turf/unsimulated/beach/sand) initialized multiple times!
+  proc name: crash with (/proc/crash_with)
+  usr: (the floor) (119,93,2) (/turf/simulated/floor/tiled) (zuperned)
+  usr.loc: (the floor) (119,93,2) (/turf/simulated/floor/tiled) (zuperned)
+[2018-11-27T07:33:22] Runtime in unsorted.dm,1312: Warning: Sand(/turf/unsimulated/beach/sand) initialized multiple times!
+  proc name: crash with (/proc/crash_with)
+  usr: (the floor) (119,93,2) (/turf/simulated/floor/tiled) (zuperned)
+  usr.loc: (the floor) (119,93,2) (/turf/simulated/floor/tiled) (zuperned)
+[2018-11-27T07:33:22] Runtime in unsorted.dm,1312: Warning: Sand(/turf/unsimulated/beach/sand) initialized multiple times!
+  proc name: crash with (/proc/crash_with)
+  usr: (the floor) (119,93,2) (/turf/simulated/floor/tiled) (zuperned)
+  usr.loc: (the floor) (119,93,2) (/turf/simulated/floor/tiled) (zuperned)
+[2018-11-27T07:33:23] Runtime in unsorted.dm,1312: Warning: Sand(/turf/unsimulated/beach/sand) initialized multiple times!
+  proc name: crash with (/proc/crash_with)
+  usr: (the floor) (119,93,2) (/turf/simulated/floor/tiled) (zuperned)
+  usr.loc: (the floor) (119,93,2) (/turf/simulated/floor/tiled) (zuperned)
+[2018-11-27T07:33:23] Runtime in unsorted.dm,1312: Warning: Sand(/turf/unsimulated/beach/sand) initialized multiple times!
+  proc name: crash with (/proc/crash_with)
+  usr: (the floor) (119,93,2) (/turf/simulated/floor/tiled) (zuperned)
+  usr.loc: (the floor) (119,93,2) (/turf/simulated/floor/tiled) (zuperned)
+[2018-11-27T07:33:23] Runtime in unsorted.dm,1312: Warning: Sand(/turf/unsimulated/beach/sand) initialized multiple times!
+  proc name: crash with (/proc/crash_with)
+  usr: (the floor) (119,93,2) (/turf/simulated/floor/tiled) (zuperned)
+  usr.loc: (the floor) (119,93,2) (/turf/simulated/floor/tiled) (zuperned)
+[2018-11-27T07:33:23] Runtime in unsorted.dm,1312: Warning: Sand(/turf/unsimulated/beach/sand) initialized multiple times!
+  proc name: crash with (/proc/crash_with)
+  usr: (the floor) (119,93,2) (/turf/simulated/floor/tiled) (zuperned)
+  usr.loc: (the floor) (119,93,2) (/turf/simulated/floor/tiled) (zuperned)
+[2018-11-27T07:33:23] Runtime in unsorted.dm,1312: Warning: Sand(/turf/unsimulated/beach/sand) initialized multiple times!
+  proc name: crash with (/proc/crash_with)
+  usr: (the floor) (119,93,2) (/turf/simulated/floor/tiled) (zuperned)
+  usr.loc: (the floor) (119,93,2) (/turf/simulated/floor/tiled) (zuperned)
+[2018-11-27T07:33:23] Runtime in unsorted.dm,1312: Warning: Sand(/turf/unsimulated/beach/sand) initialized multiple times!
+  proc name: crash with (/proc/crash_with)
+  usr: (the floor) (119,93,2) (/turf/simulated/floor/tiled) (zuperned)
+  usr.loc: (the floor) (119,93,2) (/turf/simulated/floor/tiled) (zuperned)
+[2018-11-27T07:33:23] Runtime in unsorted.dm,1312: Warning: Sand(/turf/unsimulated/beach/sand) initialized multiple times!
+  proc name: crash with (/proc/crash_with)
+  usr: (the floor) (119,93,2) (/turf/simulated/floor/tiled) (zuperned)
+  usr.loc: (the floor) (119,93,2) (/turf/simulated/floor/tiled) (zuperned)
+  (This error will now be silenced for 10 minutes)
+## TESTING: GC: -- [0x20148d1] | /obj/structure/table/woodentable/holotable was unable to be GC'd --
+## TESTING: GC: -- [0x200efc4] | /obj/structure/table/woodentable/holotable was unable to be GC'd --
+## TESTING: GC: -- [0x201498f] | /obj/structure/table/woodentable/holotable was unable to be GC'd --
+## TESTING: GC: -- [0x201498d] | /obj/structure/table/woodentable/holotable was unable to be GC'd --
+## TESTING: GC: -- [0x20148ca] | /obj/structure/table/woodentable/holotable was unable to be GC'd --
+## TESTING: GC: -- [0x20148e0] | /obj/structure/table/woodentable/holotable was unable to be GC'd --
+## TESTING: GC: -- [0x20148e2] | /obj/structure/table/woodentable/holotable was unable to be GC'd --
+## TESTING: GC: -- [0x20115a7] | /obj/structure/table/woodentable/holotable was unable to be GC'd --
+## TESTING: GC: -- [0x20117f9] | /obj/structure/table/woodentable/holotable was unable to be GC'd --
+## ERROR: hook_vr itself failed or runtimed. Exception below.
+## ERROR: hook_vr catch: Cannot read null.items_by_name on persist_vr.dm:254
+Tue Nov 27 11:57:15 2018
+Scheduled crew transfer has begun.
+Shuttle has arrived at station.
+## TESTING: MC: Runlevel changed from 4 to 8
+Round ended. Mode: Extended.
+## ERROR: Hook '/hook/roundend/proc/stop_all_media' failed or runtimed.
+[2018-11-27T12:13:39] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+  proc name: persist nif data (/proc/persist_nif_data)
+## TESTING: Persist (PID): Saving stuff from Blake Reid to /datum/preferences ([0x21006125]).
+Shutting down Circuit subsystem...
+Shutting down Xenoarch subsystem...
+Shutting down Overlay subsystem...
+Shutting down HoloMiniMaps subsystem...
+Shutting down Planets subsystem...
+Shutting down Air subsystem...
+Shutting down Vote subsystem...
+Shutting down Transcore subsystem...
+Shutting down Persist subsystem...
+Shutting down Orbits subsystem...
+Shutting down Mobs subsystem...
+Shutting down Lighting subsystem...
+Shutting down Garbage subsystem...
+Shutting down Bellies subsystem...
+Shutting down Airflow subsystem...
+Shutting down Shuttles subsystem...
+Shutting down Machines subsystem...
+Shutting down Atoms subsystem...
+Shutting down Mapping subsystem...
+Shutdown complete
+Rebooted server.
+29 global variables
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Direction Set (/decl/observ/dir_set): New()
+Global Variables (/datum/controller/global_vars): InitGlobaldir set event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Mob Equipped (/decl/observ/mob_equipped): New()
+Global Variables (/datum/controller/global_vars): InitGlobalmob equipped event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Item Equipped (/decl/observ/item_equipped): New()
+Global Variables (/datum/controller/global_vars): InitGlobalitem equipped event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Logged In (/decl/observ/logged_in): New()
+Global Variables (/datum/controller/global_vars): InitGloballogged in event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Moved (/decl/observ/moved): New()
+Global Variables (/datum/controller/global_vars): InitGlobalmoved event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Mob Unequipped (/decl/observ/mob_unequipped): New()
+Global Variables (/datum/controller/global_vars): InitGlobalmob unequipped event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Item Unequipped (/decl/observ/item_unequipped): New()
+Global Variables (/datum/controller/global_vars): InitGlobalitem unequipped event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot execute .raise event(). (/exception), null)
+/datum/controller (/datum/controller): Destroy(0)
+qdel(/datum/controller (/datum/controller), 0)
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+Running revision:
+master
+2018-11-26
+ed448d5c17405530e639fae0876f3be50086272f
+Map Loading Complete
+Feedback database connection established.
+SQL database connection established.
+[2018-11-27T12:20:37] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+  src: Random Mouse (/obj/random/mob/mouse)
+  src.loc: the plating (110,105,1) (/turf/simulated/floor/plating)
+  call stack:
+  Random Mouse (/obj/random/mob/mouse): spawn item()
+  Random Mouse (/obj/random/mob/mouse): New(the plating (110,105,1) (/turf/simulated/floor/plating))
+[2018-11-27T12:20:38] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+  src: Random Mouse (/obj/random/mob/mouse)
+  src.loc: the plating (149,92,2) (/turf/simulated/floor/plating)
+  call stack:
+  Random Mouse (/obj/random/mob/mouse): spawn item()
+  Random Mouse (/obj/random/mob/mouse): New(the plating (149,92,2) (/turf/simulated/floor/plating))
+[2018-11-27T12:20:38] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+  src: Random Mouse (/obj/random/mob/mouse)
+  src.loc: the plating (73,107,2) (/turf/simulated/floor/plating)
+  call stack:
+  Random Mouse (/obj/random/mob/mouse): spawn item()
+  Random Mouse (/obj/random/mob/mouse): New(the plating (73,107,2) (/turf/simulated/floor/plating))
+[2018-11-27T12:20:38] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+[2018-11-27T12:20:38] Runtime in alarm_monitor.dm,8: Cannot read null.all_handlers
+  proc name: New (/datum/nano_module/alarm_monitor/all/New)
+  usr: (NULL) (0,0,0) (NULL) ()
+  usr.loc: (NULL) (0,0,0) (NULL) ()
+[2018-11-27T12:20:38] Runtime in subystems.dm,41: Cannot read null.all_handlers
+  proc name: init subsystems (/mob/living/silicon/proc/init_subsystems)
+  usr: (NULL) (0,0,0) (NULL) ()
+  usr.loc: (NULL) (0,0,0) (NULL) ()
+[2018-11-27T12:20:39] Runtime in humans.dm,253: undefined proc or verb /list/makerandom().
+
+  proc name: New (/obj/effect/decal/cleanable/mucus/mapped/New)
+Initialized Mapping subsystem within 0 seconds!
+Initializing objects
+Initialized 723866 atoms
+## TESTING: Late initialized 3490 atoms
+Initialized Atoms subsystem within 14.7 seconds!
+Initialized Machines subsystem within 2.6 seconds!
+Initialized Shuttles subsystem within 0 seconds!
+Initialized Lighting subsystem within 15.7 seconds!
+Processing Geometry...
+Initialized Air subsystem within 16.2 seconds!
+Initialized Planets subsystem within 17.8 seconds!
+Initialized HoloMiniMaps subsystem within 1.8 seconds!
+Initialized Overlay subsystem within 0.5 seconds!
+Initialized Xenoarch subsystem within 2 seconds!
+Initialized Circuit subsystem within 0.1 seconds!
+Initializations complete within 71.6 seconds!
+## TESTING: MC: Runlevel changed from NULL to 1
+## TESTING: MC: Runlevel changed from 1 to 2
+## TESTING: MC: Runlevel changed from 2 to 4
+Stopped server.
+Tue Nov 27 15:10:40 2018
+World opened on network port 63499.
+29 global variables
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Direction Set (/decl/observ/dir_set): New()
+Global Variables (/datum/controller/global_vars): InitGlobaldir set event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Mob Equipped (/decl/observ/mob_equipped): New()
+Global Variables (/datum/controller/global_vars): InitGlobalmob equipped event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Item Equipped (/decl/observ/item_equipped): New()
+Global Variables (/datum/controller/global_vars): InitGlobalitem equipped event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Logged In (/decl/observ/logged_in): New()
+Global Variables (/datum/controller/global_vars): InitGloballogged in event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Moved (/decl/observ/moved): New()
+Global Variables (/datum/controller/global_vars): InitGlobalmoved event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Mob Unequipped (/decl/observ/mob_unequipped): New()
+Global Variables (/datum/controller/global_vars): InitGlobalmob unequipped event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Item Unequipped (/decl/observ/item_unequipped): New()
+Global Variables (/datum/controller/global_vars): InitGlobalitem unequipped event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot execute .raise event(). (/exception), null)
+/datum/controller (/datum/controller): Destroy(0)
+qdel(/datum/controller (/datum/controller), 0)
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+Running revision:
+master
+2018-11-27
+2570281d8a278fce554b2b182c0128cadba4e48a
+Map Loading Complete
+Feedback database connection established.
+SQL database connection established.
+[2018-11-27T15:13:11] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+  src: Random Mouse (/obj/random/mob/mouse)
+  src.loc: the plating (147,106,1) (/turf/simulated/floor/plating)
+  call stack:
+  Random Mouse (/obj/random/mob/mouse): spawn item()
+  Random Mouse (/obj/random/mob/mouse): New(the plating (147,106,1) (/turf/simulated/floor/plating))
+[2018-11-27T15:13:11] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+  src: Random Mouse (/obj/random/mob/mouse)
+  src.loc: the floor (137,109,1) (/turf/simulated/floor/tiled/steel_dirty)
+  call stack:
+  Random Mouse (/obj/random/mob/mouse): spawn item()
+  Random Mouse (/obj/random/mob/mouse): New(the floor (137,109,1) (/turf/simulated/floor/tiled/steel_dirty))
+[2018-11-27T15:13:11] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+  src: Random Mouse (/obj/random/mob/mouse)
+  src.loc: the plating (149,92,2) (/turf/simulated/floor/plating)
+  call stack:
+  Random Mouse (/obj/random/mob/mouse): spawn item()
+  Random Mouse (/obj/random/mob/mouse): New(the plating (149,92,2) (/turf/simulated/floor/plating))
+[2018-11-27T15:13:11] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+[2018-11-27T15:13:11] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+[2018-11-27T15:13:12] Runtime in alarm_monitor.dm,8: Cannot read null.all_handlers
+  proc name: New (/datum/nano_module/alarm_monitor/all/New)
+  usr: (NULL) (0,0,0) (NULL) ()
+  usr.loc: (NULL) (0,0,0) (NULL) ()
+[2018-11-27T15:13:12] Runtime in subystems.dm,41: Cannot read null.all_handlers
+  proc name: init subsystems (/mob/living/silicon/proc/init_subsystems)
+  usr: (NULL) (0,0,0) (NULL) ()
+  usr.loc: (NULL) (0,0,0) (NULL) ()
+Initialized Mapping subsystem within 0 seconds!
+Initializing objects
+Initialized 724420 atoms
+## TESTING: Late initialized 3509 atoms
+Initialized Atoms subsystem within 13.7 seconds!
+Initialized Machines subsystem within 2.5 seconds!
+Initialized Shuttles subsystem within 0.1 seconds!
+Initialized Lighting subsystem within 15.2 seconds!
+Processing Geometry...
+Initialized Air subsystem within 16.4 seconds!
+Initialized Planets subsystem within 17.4 seconds!
+Initialized HoloMiniMaps subsystem within 1.9 seconds!
+Initialized Overlay subsystem within 0.4 seconds!
+Initialized Xenoarch subsystem within 1.8 seconds!
+Initialized Circuit subsystem within 0.1 seconds!
+Initializations complete within 69.5 seconds!
+## TESTING: MC: Runlevel changed from NULL to 1
+## TESTING: MC: Runlevel changed from 1 to 2
+## TESTING: MC: Runlevel changed from 2 to 4
+Tue Nov 27 21:27:35 2018
+Scheduled crew transfer has begun.
+## TESTING: GC: -- [0x200666c] | /obj/machinery/atmospherics/pipe/manifold/visible/green was unable to be GC'd --
+[2018-11-27T21:37:38] Runtime in life.dm,1362: Cannot read null.screen
+  Caught by Mobs subsystem
+  proc name: process glasses (/mob/living/carbon/human/proc/process_glasses)
+  src: (the plating) (61,132,2) (/turf/simulated/floor) ()
+  src.loc: (the plating) (61,132,2) (/turf/simulated/floor) ()
+[2018-11-27T21:37:40] Runtime in life.dm,1362: Cannot read null.screen
+  Caught by Mobs subsystem
+  proc name: process glasses (/mob/living/carbon/human/proc/process_glasses)
+  src: (the plating) (61,132,2) (/turf/simulated/floor) ()
+  src.loc: (the plating) (61,132,2) (/turf/simulated/floor) ()
+[2018-11-27T21:37:42] Runtime in life.dm,1362: Cannot read null.screen
+  Caught by Mobs subsystem
+  proc name: process glasses (/mob/living/carbon/human/proc/process_glasses)
+  src: (the plating) (61,132,2) (/turf/simulated/floor) ()
+  src.loc: (the plating) (61,132,2) (/turf/simulated/floor) ()
+[2018-11-27T21:37:44] Runtime in life.dm,1362: Cannot read null.screen
+  Caught by Mobs subsystem
+  proc name: process glasses (/mob/living/carbon/human/proc/process_glasses)
+  src: (the plating) (61,132,2) (/turf/simulated/floor) ()
+  src.loc: (the plating) (61,132,2) (/turf/simulated/floor) ()
+[2018-11-27T21:37:47] Runtime in life.dm,1362: Cannot read null.screen
+  Caught by Mobs subsystem
+  proc name: process glasses (/mob/living/carbon/human/proc/process_glasses)
+  src: (the plating) (61,132,2) (/turf/simulated/floor) ()
+  src.loc: (the plating) (61,132,2) (/turf/simulated/floor) ()
+[2018-11-27T21:37:49] Runtime in life.dm,1362: Cannot read null.screen
+  Caught by Mobs subsystem
+  proc name: process glasses (/mob/living/carbon/human/proc/process_glasses)
+  src: (the plating) (61,132,2) (/turf/simulated/floor) ()
+  src.loc: (the plating) (61,132,2) (/turf/simulated/floor) ()
+[2018-11-27T21:37:51] Runtime in life.dm,1362: Cannot read null.screen
+  Caught by Mobs subsystem
+  proc name: process glasses (/mob/living/carbon/human/proc/process_glasses)
+  src: (the plating) (61,132,2) (/turf/simulated/floor) ()
+  src.loc: (the plating) (61,132,2) (/turf/simulated/floor) ()
+[2018-11-27T21:37:54] Runtime in life.dm,1362: Cannot read null.screen
+  Caught by Mobs subsystem
+  proc name: process glasses (/mob/living/carbon/human/proc/process_glasses)
+  src: (the plating) (61,132,2) (/turf/simulated/floor) ()
+  src.loc: (the plating) (61,132,2) (/turf/simulated/floor) ()
+[2018-11-27T21:37:56] Runtime in life.dm,1362: Cannot read null.screen
+  Caught by Mobs subsystem
+  proc name: process glasses (/mob/living/carbon/human/proc/process_glasses)
+  src: (the plating) (61,132,2) (/turf/simulated/floor) ()
+  src.loc: (the plating) (61,132,2) (/turf/simulated/floor) ()
+[2018-11-27T21:37:58] Runtime in life.dm,1362: Cannot read null.screen
+  Caught by Mobs subsystem
+  proc name: process glasses (/mob/living/carbon/human/proc/process_glasses)
+  src: (the plating) (61,132,2) (/turf/simulated/floor) ()
+  src.loc: (the plating) (61,132,2) (/turf/simulated/floor) ()
+  (This error will now be silenced for 10 minutes)
+Shuttle has arrived at station.
+[2018-11-27T21:39:11] Runtime in ,: bad arg name 'whispering'
+  usr: (the plating) (58,131,2) (/turf/simulated/floor) (infinitystrueend)
+  usr.loc: (the plating) (58,131,2) (/turf/simulated/floor) (infinitystrueend)
+## TESTING: MC: Runlevel changed from 4 to 8
+Round ended. Mode: Extended.
+## ERROR: Hook '/hook/roundend/proc/stop_all_media' failed or runtimed.
+[2018-11-27T21:44:09] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+  proc name: persist nif data (/proc/persist_nif_data)
+## TESTING: Persist (PID): Saving stuff from Blake Reid to /datum/preferences ([0x2107997b]).
+[2018-11-27T21:44:09] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+  proc name: persist nif data (/proc/persist_nif_data)
+## TESTING: Persist (PID): Saving stuff from Lance Bishop to /datum/preferences ([0x2107a7fe]).
+Shutting down Circuit subsystem...
+Shutting down Xenoarch subsystem...
+Shutting down Overlay subsystem...
+Shutting down HoloMiniMaps subsystem...
+Shutting down Planets subsystem...
+Shutting down Air subsystem...
+Shutting down Vote subsystem...
+Shutting down Transcore subsystem...
+Shutting down Persist subsystem...
+Shutting down Orbits subsystem...
+Shutting down Mobs subsystem...
+Shutting down Lighting subsystem...
+Shutting down Garbage subsystem...
+Shutting down Bellies subsystem...
+Shutting down Airflow subsystem...
+Shutting down Shuttles subsystem...
+Shutting down Machines subsystem...
+Shutting down Atoms subsystem...
+Shutting down Mapping subsystem...
+Shutdown complete
+Rebooted server.
+29 global variables
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Direction Set (/decl/observ/dir_set): New()
+Global Variables (/datum/controller/global_vars): InitGlobaldir set event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Mob Equipped (/decl/observ/mob_equipped): New()
+Global Variables (/datum/controller/global_vars): InitGlobalmob equipped event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Item Equipped (/decl/observ/item_equipped): New()
+Global Variables (/datum/controller/global_vars): InitGlobalitem equipped event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Logged In (/decl/observ/logged_in): New()
+Global Variables (/datum/controller/global_vars): InitGloballogged in event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Moved (/decl/observ/moved): New()
+Global Variables (/datum/controller/global_vars): InitGlobalmoved event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Mob Unequipped (/decl/observ/mob_unequipped): New()
+Global Variables (/datum/controller/global_vars): InitGlobalmob unequipped event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot read .events (/exception), null)
+Item Unequipped (/decl/observ/item_unequipped): New()
+Global Variables (/datum/controller/global_vars): InitGlobalitem unequipped event()
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+runtime error: bad index
+proc name: Error (/world/Error)
+  source file: error_handler.dm,18
+  usr: null
+  src: world
+  call stack:
+world: Error(Cannot execute .raise event(). (/exception), null)
+/datum/controller (/datum/controller): Destroy(0)
+qdel(/datum/controller (/datum/controller), 0)
+Global Variables (/datum/controller/global_vars): Initialize(/datum/controller (/datum/controller))
+Global Variables (/datum/controller/global_vars): New()
+Master (/datum/controller/master): New()
+world: ()
+Running revision:
+master
+2018-11-27
+2570281d8a278fce554b2b182c0128cadba4e48a
+Map Loading Complete
+Feedback database connection established.
+SQL database connection established.
+[2018-11-27T21:51:28] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+  src: Random Mouse (/obj/random/mob/mouse)
+  src.loc: the plating (108,137,1) (/turf/simulated/floor/plating)
+  call stack:
+  Random Mouse (/obj/random/mob/mouse): spawn item()
+  Random Mouse (/obj/random/mob/mouse): New(the plating (108,137,1) (/turf/simulated/floor/plating))
+[2018-11-27T21:51:28] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+  src: Random Mouse (/obj/random/mob/mouse)
+  src.loc: the plating (150,161,2) (/turf/simulated/floor/plating)
+  call stack:
+  Random Mouse (/obj/random/mob/mouse): spawn item()
+  Random Mouse (/obj/random/mob/mouse): New(the plating (150,161,2) (/turf/simulated/floor/plating))
+[2018-11-27T21:51:28] Runtime in mob.dm,44: Undefined variable /obj/random/mouseremains/var/ai_inactive
+
+  proc name: spawn item (/obj/random/mob/spawn_item)
+  src: Random Mouse (/obj/random/mob/mouse)
+  src.loc: the plating (109,135,3) (/turf/simulated/floor/plating)
+  call stack:
+  Random Mouse (/obj/random/mob/mouse): spawn item()
+  Random Mouse (/obj/random/mob/mouse): New(the plating (109,135,3) (/turf/simulated/floor/plating))
+[2018-11-27T21:51:29] Runtime in alarm_monitor.dm,8: Cannot read null.all_handlers
+  proc name: New (/datum/nano_module/alarm_monitor/all/New)
+  usr: (NULL) (0,0,0) (NULL) ()
+  usr.loc: (NULL) (0,0,0) (NULL) ()
+[2018-11-27T21:51:29] Runtime in subystems.dm,41: Cannot read null.all_handlers
+  proc name: init subsystems (/mob/living/silicon/proc/init_subsystems)
+  usr: (NULL) (0,0,0) (NULL) ()
+  usr.loc: (NULL) (0,0,0) (NULL) ()
+Initialized Mapping subsystem within 0 seconds!
+Initializing objects
+Initialized 723908 atoms
+## TESTING: Late initialized 3463 atoms
+Initialized Atoms subsystem within 16.8 seconds!
+Initialized Machines subsystem within 3.2 seconds!
+Initialized Shuttles subsystem within 0 seconds!
+Initialized Lighting subsystem within 18.1 seconds!
+Processing Geometry...
+Initialized Air subsystem within 19.3 seconds!
+Initialized Planets subsystem within 16.6 seconds!
+Initialized HoloMiniMaps subsystem within 2 seconds!
+Initialized Overlay subsystem within 0.6 seconds!
+Initialized Xenoarch subsystem within 1.9 seconds!
+Initialized Circuit subsystem within 0.1 seconds!
+Initializations complete within 78.9 seconds!
+## TESTING: MC: Runlevel changed from NULL to 1
+## TESTING: MC: Runlevel changed from 1 to 2
+## TESTING: MC: Runlevel changed from 2 to 1
+## TESTING: MC: Runlevel changed from 1 to 2
+[2018-11-27T22:00:20] Runtime in new_player_aeiou.dm,22: Cannot read null.ckey
+  proc name: is player whitelisted (/proc/is_player_whitelisted)
+## TESTING: MC: Runlevel changed from 2 to 4
+## TESTING: GC: -- [0x2014cd6] | /obj/structure/table/standard was unable to be GC'd --
+## TESTING: GC: -- [0x2014caa] | /obj/structure/table/standard was unable to be GC'd --
+## TESTING: GC: -- [0x2014c17] | /obj/structure/table/woodentable was unable to be GC'd --
+## TESTING: Ahelp action: reply
+## TESTING: GC: -- [0x3000069] | /mob/living/simple_animal/hostile/malf_drone/lesser was unable to be GC'd --
+## TESTING: GC: -- [0x20053af] | /obj/structure/closet/crate was unable to be GC'd --
+## TESTING: GC: -- [0x200522f] | /obj/structure/closet/crate was unable to be GC'd --
+## TESTING: Ahelp action: reply
+## TESTING: Ahelp action: reply
+Tue Nov 27 22:35:32 2018
+### VarEdit by DrExample: /obj/machinery/power/supermatter damage=100
+[2018-11-27T22:40:15] Runtime in life.dm,1362: Cannot read null.screen
+  Caught by Mobs subsystem
+  proc name: process glasses (/mob/living/carbon/human/proc/process_glasses)
+  src: (the floor) (102,73,2) (/turf/simulated/shuttle/floor) (infinitystrueend)
+  src.loc: (the floor) (102,73,2) (/turf/simulated/shuttle/floor) (infinitystrueend)
+[2018-11-27T22:40:17] Runtime in life.dm,1362: Cannot read null.screen
+  Caught by Mobs subsystem
+  proc name: process glasses (/mob/living/carbon/human/proc/process_glasses)
+  src: (the floor) (102,73,2) (/turf/simulated/shuttle/floor) (infinitystrueend)
+  src.loc: (the floor) (102,73,2) (/turf/simulated/shuttle/floor) (infinitystrueend)
+[2018-11-27T22:40:19] Runtime in life.dm,1362: Cannot read null.screen
+  Caught by Mobs subsystem
+  proc name: process glasses (/mob/living/carbon/human/proc/process_glasses)
+  src: (the floor) (102,73,2) (/turf/simulated/shuttle/floor) (infinitystrueend)
+  src.loc: (the floor) (102,73,2) (/turf/simulated/shuttle/floor) (infinitystrueend)
+[2018-11-27T22:40:21] Runtime in life.dm,1362: Cannot read null.screen
+  Caught by Mobs subsystem
+  proc name: process glasses (/mob/living/carbon/human/proc/process_glasses)
+  src: (the floor) (102,73,2) (/turf/simulated/shuttle/floor) (infinitystrueend)
+  src.loc: (the floor) (102,73,2) (/turf/simulated/shuttle/floor) (infinitystrueend)
+[2018-11-27T22:40:23] Runtime in life.dm,1362: Cannot read null.screen
+  Caught by Mobs subsystem
+  proc name: process glasses (/mob/living/carbon/human/proc/process_glasses)
+  src: (the floor) (102,73,2) (/turf/simulated/shuttle/floor) (infinitystrueend)
+  src.loc: (the floor) (102,73,2) (/turf/simulated/shuttle/floor) (infinitystrueend)
+[2018-11-27T22:40:25] Runtime in life.dm,1362: Cannot read null.screen
+  Caught by Mobs subsystem
+  proc name: process glasses (/mob/living/carbon/human/proc/process_glasses)
+  src: (the floor) (102,73,2) (/turf/simulated/shuttle/floor) (infinitystrueend)
+  src.loc: (the floor) (102,73,2) (/turf/simulated/shuttle/floor) (infinitystrueend)
+[2018-11-27T22:40:27] Runtime in life.dm,1362: Cannot read null.screen
+  Caught by Mobs subsystem
+  proc name: process glasses (/mob/living/carbon/human/proc/process_glasses)
+  src: (the floor) (102,73,2) (/turf/simulated/shuttle/floor) (infinitystrueend)
+  src.loc: (the floor) (102,73,2) (/turf/simulated/shuttle/floor) (infinitystrueend)
+[2018-11-27T22:40:29] Runtime in life.dm,1362: Cannot read null.screen
+  Caught by Mobs subsystem
+  proc name: process glasses (/mob/living/carbon/human/proc/process_glasses)
+  src: (the floor) (102,73,2) (/turf/simulated/shuttle/floor) (infinitystrueend)
+  src.loc: (the floor) (102,73,2) (/turf/simulated/shuttle/floor) (infinitystrueend)
+[2018-11-27T22:40:31] Runtime in life.dm,1362: Cannot read null.screen
+  Caught by Mobs subsystem
+  proc name: process glasses (/mob/living/carbon/human/proc/process_glasses)
+  src: (the floor) (102,73,2) (/turf/simulated/shuttle/floor) (infinitystrueend)
+  src.loc: (the floor) (102,73,2) (/turf/simulated/shuttle/floor) (infinitystrueend)
+[2018-11-27T22:40:33] Runtime in life.dm,1362: Cannot read null.screen
+  Caught by Mobs subsystem
+  proc name: process glasses (/mob/living/carbon/human/proc/process_glasses)
+  src: (the floor) (102,73,2) (/turf/simulated/shuttle/floor) (infinitystrueend)
+  src.loc: (the floor) (102,73,2) (/turf/simulated/shuttle/floor) (infinitystrueend)
+  (This error will now be silenced for 10 minutes)
+## TESTING: GC: -- [0x2013d7e] | /obj/effect/mine was unable to be GC'd --
+## TESTING: GC: -- [0x2013d80] | /obj/effect/mine was unable to be GC'd --
+## TESTING: GC: -- [0x2013d81] | /obj/effect/mine/emp was unable to be GC'd --
+## TESTING: GC: -- [0x2013d7a] | /obj/effect/mine/emp was unable to be GC'd --
+## TESTING: GC: -- [0x2013d7f] | /obj/effect/mine/emp was unable to be GC'd --
+## TESTING: GC: -- [0x2013d78] | /obj/effect/mine/emp was unable to be GC'd --
+## TESTING: GC: -- [0x2013d82] | /obj/effect/mine was unable to be GC'd --
+## ERROR: hook_vr itself failed or runtimed. Exception below.
+## ERROR: hook_vr catch: Cannot read null.items_by_name on persist_vr.dm:254
+## TESTING: GC: -- [0x2013d79] | /obj/effect/mine/emp was unable to be GC'd --
+## TESTING: GC: -- [0x2013d7d] | /obj/effect/mine/emp was unable to be GC'd --
+## TESTING: GC: -- [0x200cbbd] | /obj/item/clothing/head/hardhat was unable to be GC'd --
+## TESTING: GC: -- [0x2018c7b] | /obj/item/clothing/glasses/meson was unable to be GC'd --
+## TESTING: GC: -- [0x2008013] | /obj/item/clothing/shoes/magboots was unable to be GC'd --
+## TESTING: GC: -- [0x2008015] | /obj/item/clothing/head/helmet/space/void/engineering was unable to be GC'd --
+## TESTING: GC: -- [0x200802a] | /obj/item/weapon/tank/jetpack/carbondioxide was unable to be GC'd --
+[2018-11-27T22:50:43] Skipped 212 runtimes in life.dm,1362.
+## TESTING: GC: -- [0x2013d83] | /obj/effect/mine was unable to be GC'd --
+## TESTING: GC: -- [0x2013d12] | /obj/effect/mine/emp was unable to be GC'd --
+### VarEdit by DrExample: /obj/machinery/power/supermatter damage=500
+Tue Nov 27 23:36:04 2018
+### VarEdit by DrExample: /obj/machinery/power/supermatter damage=10
+## TESTING: GC: -- [0x2014b72] | /obj/effect/mine/emp was unable to be GC'd --
+## TESTING: GC: -- [0x2006481] | /obj/machinery/power/supermatter was unable to be GC'd --
+## TESTING: GC: -- [0x2014b46] | /obj/effect/mine was unable to be GC'd --
+## TESTING: GC: -- [0x2006476] | /obj/machinery/door/blast/regular was unable to be GC'd --
+## TESTING: GC: -- [0x2014b45] | /obj/effect/mine/emp was unable to be GC'd --
+## TESTING: GC: -- [0x2014b10] | /obj/effect/mine/stun was unable to be GC'd --
+## TESTING: GC: -- [0x2014b73] | /obj/effect/mine/stun was unable to be GC'd --
+## TESTING: GC: -- [0x2014b42] | /obj/effect/mine was unable to be GC'd --
+## TESTING: GC: -- [0x2014b44] | /obj/effect/mine was unable to be GC'd --
+## TESTING: GC: -- [0x2014b1f] | /obj/effect/mine/emp was unable to be GC'd --
+## TESTING: GC: -- [0x200552c] | /obj/effect/projectile/laser/impact was unable to be GC'd --
+Scheduled crew transfer has begun.
+Shuttle has arrived at station.
+## TESTING: MC: Runlevel changed from 4 to 8
+Round ended. Mode: Extended.
+## ERROR: Hook '/hook/roundend/proc/stop_all_media' failed or runtimed.
+[2018-11-28T00:18:34] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+## TESTING: Persist (PID): Saving stuff from Blake Reid to /datum/preferences ([0x21006363]).
+[2018-11-28T00:18:34] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+## TESTING: Persist (PID): Saving stuff from Lance Bishop to /datum/preferences ([0x210063bb]).
+[2018-11-28T00:18:34] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+## TESTING: Persist (PID): Saving stuff from Aatonoc Kovizanaa to /datum/preferences ([0x2100883b]).
+[2018-11-28T00:18:34] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+## TESTING: Persist (PID): Saving stuff from Nestor-X to /datum/preferences ([0x2100ffd2]).
+Connections: [0x5000000] [0x5000001] [0x5000004] 
+Run Time: 8789.8s
+Sleeping procs:
+/datum/effect/effect/system/ion_trail_follow/start 9
+/datum/controller/master/proc/StartProcessing
+/datum/controller/processScheduler/proc/start
+/datum/global_iterator/proc/start 22
+/mob/living/bot/Life
+/datum/shuttle/proc/long_jump
+/datum/controller/failsafe/Initialize
+/client/Stat
+/datum/effect/effect/system/spark_spread/start 6
+/mob/living/Move 6
+/datum/controller/plants/proc/process
+/datum/controller/gameticker/proc/process
+/datum/lore/atc_controller/proc/process
+/datum/controller/process/ticker/setup
+/datum/event/ionstorm/end
+Sent Topic message to world: Status
+Shutting down Circuit subsystem...
+Shutting down Xenoarch subsystem...
+Shutting down Overlay subsystem...
+Shutting down HoloMiniMaps subsystem...
+Shutting down Planets subsystem...
+Shutting down Air subsystem...
+Shutting down Vote subsystem...
+Shutting down Transcore subsystem...
+Shutting down Persist subsystem...
+Shutting down Orbits subsystem...
+Shutting down Mobs subsystem...
+Shutting down Lighting subsystem...
+Shutting down Garbage subsystem...
+Shutting down Bellies subsystem...
+Shutting down Airflow subsystem...
+Shutting down Shuttles subsystem...
+Shutting down Machines subsystem...
+Shutting down Atoms subsystem...
+Shutting down Mapping subsystem...
+Shutdown complete
+Rebooted server.

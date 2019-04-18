@@ -25,6 +25,10 @@ var/list/job_whitelist = list()
 		for (var/s in job_whitelist)
 			if(findtext(s,"[lowertext(M.ckey)] - [lowertext(rank)]"))
 				return 1
+			if(findtext(s,"[M.ckey] - [rank]"))
+				return 1
+			if(findtext(s,"[M.ckey] - [lowertext(rank)]"))
+				return 1
 			if(findtext(s,"[M.ckey] - All"))
 				return 1
 	return 0

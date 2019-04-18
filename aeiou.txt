@@ -1,0 +1,27 @@
+*** Begin Log: Tue Dec 11 20:15:59 2018 ***
+### VarEdit by DrExample: /datum/job/hop whitelist_only=0
+### VarEdit by DrExample: /datum/job/hop whitelist_only=1
+## TESTING: GC: -- [0x2009c7f] | /obj/item/stack/tile/floor was unable to be GC'd --
+Tue Dec 11 21:19:22 2018
+Scheduled crew transfer has begun.
+## TESTING: GC: -- [0x2007727] | /obj/structure/table/standard was unable to be GC'd --
+Shuttle has arrived at station.
+## TESTING: MC: Runlevel changed from 4 to 8
+Round ended. Mode: Extended.
+## ERROR: Hook '/hook/roundend/proc/stop_all_media' failed or runtimed.
+[2018-12-11T21:35:26] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+  proc name: persist nif data (/proc/persist_nif_data)
+## TESTING: Persist (PID): Saving stuff from Eddy Tibbir to /datum/preferences ([0x210061cd]).
+[2018-12-11T21:35:26] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+  proc name: persist nif data (/proc/persist_nif_data)
+## TESTING: Persist (PID): Saving stuff from Theesa Arana to /datum/preferences ([0x2107bc26]).
+[2018-12-11T21:35:26] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+  proc name: persist nif data (/proc/persist_nif_data)
+## TESTING: Persist (PID): Saving stuff from Jonathon Brown to /datum/preferences ([0x2107c597]).
+[2018-12-11T21:35:26] Runtime in persist_vr.dm,254: Cannot read null.items_by_name
+  proc name: persist nif data (/proc/persist_nif_data)
+## TESTING: Persist (PID): Saving stuff from Aleister Knight to /datum/preferences ([0x210063a3]).
+Stopped server.
+
+*** End Log: Tue Dec 11 21:43:29 2018 ***
+
