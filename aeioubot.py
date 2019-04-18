@@ -184,7 +184,7 @@ async def on_message(message):
             print(role)
             print(message.channel)
             if role in [y.name.lower() for y in message.author.roles]:
-                os.system("DreamDaemon aeioustation.dmb 1780 -trusted -logself")
+                os.system("DreamDaemon eclipsestation.dmb 1780 -trusted -logself")
                 await client.send_message(message.channel, "Started the server.")
                 return
                 break
