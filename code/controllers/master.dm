@@ -57,6 +57,8 @@ GLOBAL_VAR_INIT(CURRENT_TICKLIMIT, TICK_LIMIT_RUNNING)
 	var/map_loading = FALSE	//Are we loading in a new map?
 
 	var/current_runlevel	//for scheduling different subsystems for different stages of the round
+	
+	var/pending_start = FALSE		//Eclipse edit: Do we have a pending start request?
 
 	var/static/restart_clear = 0
 	var/static/restart_timeout = 0
@@ -191,6 +193,12 @@ GLOBAL_VAR_INIT(CURRENT_TICKLIMIT, TICK_LIMIT_RUNNING)
 
 	if (!current_runlevel)
 		SetRunLevel(RUNLEVEL_LOBBY)
+
+	// // // BEGIN ECLIPSE EDIT // // //
+	//"Start Now" should only start if we are safe to
+	if(pending_start)
+		ticker.pregame_timeleft = 1		//1 second, so it doesn't all go to shit as soon as everything comes online
+	// // // END ECLIPSE EDIT // // //
 
 	// Sort subsystems by display setting for easy access.
 	sortTim(subsystems, /proc/cmp_subsystem_display)
