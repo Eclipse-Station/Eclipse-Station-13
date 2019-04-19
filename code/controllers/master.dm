@@ -199,7 +199,6 @@ GLOBAL_VAR_INIT(CURRENT_TICKLIMIT, TICK_LIMIT_RUNNING)
 	if(pending_start)
 		ticker.pregame_timeleft = 1		//1 second, so it doesn't all go to shit as soon as everything comes online
 	// // // END ECLIPSE EDIT // // //
-
 	// Sort subsystems by display setting for easy access.
 	sortTim(subsystems, /proc/cmp_subsystem_display)
 	// Set world options.
