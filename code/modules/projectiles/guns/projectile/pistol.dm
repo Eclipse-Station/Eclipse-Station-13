@@ -52,8 +52,8 @@
 
 	var/mob/M = usr
 	var/list/options = list()
-	options["NT Mk. 58"] = "secguncomp"
-	options["NT Mk. 58 Custom"] = "secgundark"
+//	options["NT Mk. 58"] = "secguncomp"					//Eclipse removal: Done in the secgun itself, plus modular sprite weapons
+//	options["NT Mk. 58 Custom"] = "secgundark"			//Eclipse removal: See above
 	options["Colt M1911"] = "colt"
 	options["FiveSeven"] = "fnseven"
 	options["USP"] = "usp"

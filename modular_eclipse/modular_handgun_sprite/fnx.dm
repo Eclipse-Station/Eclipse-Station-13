@@ -15,41 +15,37 @@
 	mod_all_grip_styles = list("synth","tan")
 	mod_all_accessory_styles = list("")
 
+/obj/item/weapon/gun/projectile/modular/fnx/reset_skin_combos()
+	mod_reskin_options = list()
+
+	mod_reskin_options["black grips, blued slide"] = 1
+	mod_reskin_options["black grips, nickel slide"] = 2
+	mod_reskin_options["tan grips, blued slide"] = 3
+	mod_reskin_options["tan grips, parkerised tan slide"] = 4
+
+	mod_total_skin_combinations = mod_reskin_options.len
+
+
 /obj/item/weapon/gun/projectile/modular/fnx/random_skin/New()
 	..()
-	reset_skin()
+	reset_skin(0)
 
-/obj/item/weapon/gun/projectile/modular/fnx/proc/reset_skin(var/skin_number = 0)
+/obj/item/weapon/gun/projectile/modular/fnx/reset_skin(skin_number)
 	if(!skin_number)
-		skin_number = rand(1,4)
+		skin_number = rand(1,mod_total_skin_combinations)
 	
 	switch(skin_number)
 		if(1)		//blued steel slide, synthetic grips
 			mod_slide_style = "blued"
 			mod_grip_style = "synth"
-		else if(2)		//nickel slide, synthetic grips
+		if(2)		//nickel slide, synthetic grips
 			mod_slide_style = "nickel"
 			mod_grip_style = "synth"
-		else if(3)		//blued steel slide, tan grips
+		if(3)		//blued steel slide, tan grips
 			mod_slide_style = "blued"
 			mod_grip_style = "tan"
 		else		//parkerised tan slide, tan grips. Unknown numbers default to this.
 			mod_slide_style = "tan"
 			mod_grip_style = "tan"
+	update_icon()
 
-/obj/item/weapon/gun/projectile/modular/fnx/verb/reskin_gun()		//reskin the gun
-	set name = "Resprite gun"
-	set category = "Object"
-	set desc = "Click to choose a sprite for your gun."
-
-	var/mob/M = usr
-	var/list/options = list()
-	options["black grips, blued slide"] = 1
-	options["black grips, nickel slide"] = 2
-	options["tan grips, blued slide"] = 3
-	options["tan grips, tan slide"] = 4
-	var/choice = input(M,"Choose your sprite!","Resprite Gun") in options
-	if(src && choice && !M.stat && in_range(M,src))
-		reset_skin(choice)
-		M << "Your gun is now sprited with [choice]. Say hello to your new friend."
-		return 1

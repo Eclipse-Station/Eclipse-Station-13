@@ -43,10 +43,27 @@
 	var/mod_all_slide_styles = list("steel","blued")
 	var/mod_all_grip_styles = list("synth","wood","odgreen")
 	var/mod_all_accessory_styles = list("")
+	var/mod_reskin_permitted = TRUE
+	var/list/mod_reskin_options = list()
+	
+	var/mod_total_skin_combinations
+	
+
+/obj/item/weapon/gun/projectile/modular/proc/reset_skin_combos()
+	mod_reskin_options = list()		//Clear this list so if we have a malformed admin added entry, it can be purged.
+	
+	mod_reskin_options["black grips, blued slide"] = 1
+	mod_reskin_options["black grips, steel slide"] = 2
+	mod_reskin_options["olive grips, blued slide"] = 3
+	mod_reskin_options["olive grips, steel slide"] = 4
+
+	mod_total_skin_combinations = mod_reskin_options.len
 
 /obj/item/weapon/gun/projectile/modular/New()
 	..()
 	update_icon()
+	reset_skin_combos()
+
 
 /obj/item/weapon/gun/projectile/modular/proc/build_slide()
 	if(!mod_slide_style)
@@ -103,6 +120,49 @@
 	return rebuild_gun()
 
 
+/obj/item/weapon/gun/projectile/modular/verb/reskin_gun()		//reskin the gun
+	set name = "Resprite gun"
+	set category = "Object"
+	set desc = "Click to choose a sprite for your gun."
+	if(!mod_reskin_permitted)
+		usr << "<span class='warning'>Your weapon does not support reskinning.</span>"
+		return 0
+	if(!mod_reskin_options.len)
+		usr << "<span class='warning'>Your weapon has no alternate skins set.</span>"
+		return 0
+
+
+	var/mob/M = usr
+	var/choice = input(M,"Choose your sprite!","Resprite Gun") in mod_reskin_options
+	if(src && choice && !M.stat && in_range(M,src))
+		reset_skin(mod_reskin_options[choice])
+		M << "Your gun is now sprited with [choice]. Say hello to your new friend."
+		return 1
+
+
+// ALTER EVERYTHING BELOW HERE TO SUIT YOUR GUN AS NECESSARY.
+
+/obj/item/weapon/gun/projectile/modular/proc/reset_skin(var/skin_number = 0)		//Skin combinations.
+	if(!skin_number)		//Keep this, so you have a fallback in case fuckery happens.
+		skin_number = rand(1,mod_total_skin_combinations)
+	
+	//alter skins as necessary.
+	switch(skin_number)
+		if(1)		//blued steel slide, synthetic grips
+			mod_slide_style = "blued"
+			mod_grip_style = "synth"
+		if(2)		//brushed steel slide, synthetic grips
+			mod_slide_style = "steel"
+			mod_grip_style = "synth"
+		if(3)		//blued steel slide, olive green grip
+			mod_slide_style = "blued"
+			mod_grip_style = "odgreen"
+		else		//brushed steel slide, olive green grips. Unknown numbers default to this.
+			mod_slide_style = "steel"
+			mod_grip_style = "odgreen"
+	update_icon()
+	
+	
 //TEMPLATE
 //You'll still need to edit calibre and all that, but you should have no problem
 //doing that if you know enough of what you're doing to be doing this sort of
@@ -126,5 +186,38 @@
 	mod_all_slide_styles = list("")					//String list of all available  slide styles.
 	mod_all_grip_styles = list("")					//String list of all available grip styles.
 	mod_all_accessory_styles = list("")				//String list of all available accessories.
+	mod_reskin_permitted = TRUE						//Can you reskin? If not, no verb for you.
+	
+
+
+//RESKIN PROC
+/obj/item/weapon/gun/projectile/modular/GUN_NAME_HERE/reset_skin(skin_number)
+	if(!skin_number)		//Keep this, so you have a fallback in case fuckery happens.
+		skin_number = rand(1,mod_total_skin_combinations)
+	
+
+	switch(skin_number)
+		if(1)
+			mod_slide_style = "example"		//EDIT ME
+			mod_grip_style = "example"		//EDIT ME
+		if(2)
+			mod_slide_style = "example"		//EDIT ME
+			mod_grip_style = "example"		//EDIT ME
+		//Add more "if()" statements as you have skins, MINUS ONE.
+		else		//You always want a standalone "else" statement, so unknown styles will default to something instead of being invisible.
+			mod_slide_style = "example"		//EDIT ME
+			mod_grip_style = "example"		//EDIT ME
+	update_icon()
+
+//SKIN COMBINATION PROC
+/obj/item/weapon/gun/projectile/modular/GUN_NAME_HERE/reset_skin_combos()
+	mod_reskin_options = list()											//Clear list. Don't touch this.
+	mod_reskin_options["short style description"] = 1			//EDIT ME
+	mod_reskin_options["short style description"] = 2			//EDIT ME
+	mod_reskin_options["short style description"] = 3			//EDIT ME
+	mod_reskin_options["short style description"] = 4			//EDIT ME
+	// add more as necessary.
+
+	mod_total_skin_combinations = mod_reskin_options.len				//Set total skin combinations to however many you have set. Don't touch this.
 
 */
