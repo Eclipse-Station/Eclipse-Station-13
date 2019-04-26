@@ -43,9 +43,18 @@ var/datum/lore/atc_controller/atc = new/datum/lore/atc_controller
 		squelched = 0
 
 /datum/lore/atc_controller/proc/shift_ending(var/evac = 0)
+	// // // BEGIN ECLIPSE EDIT // // //
+	// This was optimised for Tether, which uses a tram. SCross does not feature a tram.
+	/*
 	msg("Automated Tram departing [using_map.station_name] for [using_map.dock_name] on routine transfer route.","NT Automated Tram") //VOREStation Edit - Tram, tho.
 	sleep(5 SECONDS)
 	msg("Automated Tram, cleared to complete routine transfer from [using_map.station_name] to [using_map.dock_name].") //VOREStation Edit - Tram, tho.
+	*/
+	msg("Automated Crew Transfer Shuttle departing [using_map.dock_name], enroute to [using_map.station_name], on routine transfer route.","Automated Crew Transfer Shuttle")
+	sleep(5 SECONDS)
+	msg("Automated Crew Transfer Shuttle, cleared to complete routine transfer of [using_map.station_name] via [using_map.dock_name].")		//somehow this feels messy, after looking at how polaris does it
+	// // // END ECLIPSE EDIT // // //
+
 
 /datum/lore/atc_controller/proc/random_convo()
 	var/one = pick(loremaster.organizations) //These will pick an index, not an instance
