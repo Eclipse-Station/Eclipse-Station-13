@@ -12,8 +12,9 @@ var/global/list/default_internal_channels = list(
 	num2text(SEC_I_FREQ)=list(access_security),
 	num2text(SCI_FREQ) = list(access_tox,access_robotics,access_xenobiology),
 	num2text(SUP_FREQ) = list(access_cargo),
-	num2text(SRV_FREQ) = list(access_janitor, access_hydroponics)
-)
+	num2text(SRV_FREQ) = list(access_janitor, access_hydroponics),
+	num2text(ATC_FREQ) = list(),
+)		//Eclipse Edit: Add ATC channel as internal
 
 var/global/list/default_medbay_channels = list(
 	num2text(PUB_FREQ) = list(),
