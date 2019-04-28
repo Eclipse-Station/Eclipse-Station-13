@@ -381,7 +381,7 @@
 
 
 /obj/item/device/radio/headset/proc/recalculateChannels(var/setDescription = 0)
-	src.channels = list("ATC" = 1)		//Eclipse Edit: You can hear ATC by default
+	src.channels = list("ATC (Local)" = 1, "ATC (Regional)" = 1)		//Eclipse Edit: You can hear ATC by default
 	src.translate_binary = 0
 	src.translate_hive = 0
 	src.syndie = 0
