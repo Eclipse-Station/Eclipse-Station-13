@@ -67,7 +67,8 @@ Radiochat range: 1441 to 1489 (most devices refuse to be tune to other frequency
 
 Radio:
 1459 - standard radio chat
-1465 - ATC			//Mithra Edit
+1465 - ATC Local			//Eclipse Edit
+1467 - ATC Regional			//Eclipse Edit
 1351 - Science
 1353 - Command
 1355 - Medical
@@ -123,7 +124,8 @@ var/const/SUP_FREQ = 1347
 var/const/EXP_FREQ = 1361
 
 //Eclipse Edit - ATC
-var/const/ATC_FREQ = 1465
+var/const/ATC_LOC_FREQ = 1465
+var/const/ATC_RGN_FREQ = 1467
 
 // internal department channels
 var/const/MED_I_FREQ = 1485
@@ -147,8 +149,9 @@ var/list/radiochannels = list(
 	"Entertainment" = ENT_FREQ,
 	"Medical(I)"	= MED_I_FREQ,
 	"Security(I)"	= SEC_I_FREQ,
-	"ATC"			= ATC_FREQ
-)		//Eclipse Edit: Added ATC frequency
+	"ATC (Local)"			= ATC_LOC_FREQ,
+	"ATC (Regional)"			= ATC_RGN_FREQ
+)		//Eclipse Edit: Added ATC frequencies
 
 // central command channels, i.e deathsquid & response teams
 var/list/CENT_FREQS = list(ERT_FREQ, DTH_FREQ)
