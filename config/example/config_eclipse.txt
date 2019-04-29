@@ -1,0 +1,35 @@
+## Eclipse specific configurations, for downstream servers.
+
+######### SHIFT END HORN
+
+## MASTER ENABLE
+## Comment to disable the shift change horn.
+ENABLE_SHIFT_HORN
+
+## HORN DELAY
+## How long should the shift end horn wait (after the proc clears) to blow the horn?
+## Default is 4.8 seconds (1 mile at 20 deg C, 1013 mbar ambient pressure).
+## Unit: Seconds
+SHIFT_HORN_DELAY 4.8
+
+## GLOBAL DISABLE
+## Uncomment this line to make the shift end horn only audible to players spawned
+## in-game or observing, not players on the lobby screen.
+#SHIFT_HORN_FOR_SPAWNED_PLAYERS_ONLY
+
+######### MISCELLANY
+
+## JOB WHITELISTS
+## Uses the jobwhitelist.txt file to whitelist specific jobs.
+## Comment to disable.
+USE_JOB_WHITELISTING
+
+## REGINALD DATE CHECK OVERRIDE
+## Forces Reginald to spawn, regardless of the day of week.
+## Uncomment to enable.
+#FORCE_SPAWN_REGINALD
+
+## TIPS OF THE ROUND
+## Should tips of the round be shown?
+## Comment to disable.
+ENABLE_TOTR

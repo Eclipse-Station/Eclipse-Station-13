@@ -13,6 +13,13 @@ var/list/job_whitelist = list()
 
 /proc/is_job_whitelisted(mob/M, var/rank)
 	var/datum/job/job = job_master.GetJob(rank)
+	// // // BEGIN ECLIPSE EDIT // // //
+	// Allows config option to disable job restrictions. Allows admins to bypass
+	if(check_rights(R_ADMIN, 0, M))		//They're admin
+		return 1
+	if(!config.usejobwhitelist)			//Whitelist disabled.
+		return 1
+	// // // END ECLIPSE EDIT // // //
 	if(!job.whitelist_only)
 		return 1
 	if(rank == USELESS_JOB) //VOREStation Edit - Visitor not Assistant

@@ -13,9 +13,6 @@
  * -Spitzer
  */
 
-//Debug mode override.
-#define OVERRIDE_DATE_CHECK 0
-
 // .../code/modules/mob/living/simple_animal/animals/crab.dm
 // Some Discord jokes just go too far. This is one of them.
 
@@ -28,8 +25,8 @@
 /mob/living/simple_animal/crab/reginald/New()
 	. = ..()
 	
-	if(OVERRIDE_DATE_CHECK)
-		desc = "It's Reginald. Yell at a coder that his date check is overridden."
+	if(config.force_reginald)
+		desc = "It's Reginald. He's here every day this week."
 	else
 		if(time2text(world.timeofday, "Day") == "Tuesday")
 			desc = "Everybody say 'Hi, Reginald'. But remember, he's only here on alternating Tuesdays."
@@ -46,11 +43,11 @@
 
 /obj/effect/landmark/reginald_spawner/New()
 //If the debug override above is true, we want to spawn it. No ifs, ands, or buts.
-	if(OVERRIDE_DATE_CHECK)
+	if(config.force_reginald)
 		new /mob/living/simple_animal/crab/reginald(src.loc)
 		log_debug("Reginald force-spawned.")
 		log_to_dd("Reginald force-spawned: Debug define set at compile time.")
-		message_admins("Reginald was force-spawned at ([src.loc.x], [src.loc.y], [src.loc.z]): Debug define set at compile time.")
+		message_admins("Reginald was force-spawned at ([src.loc.x], [src.loc.y], [src.loc.z]): Debug option set in config.")
 		delete_me = TRUE
 		return		//Implied 'else'.
 
@@ -80,7 +77,3 @@
 		
 	delete_me = TRUE
 	return
-
-#if OVERRIDE_DATE_CHECK
-	#warning Overriding date check on Reginald for testing. This should not be compiled for production with this enabled...
-#endif

@@ -62,7 +62,7 @@ var/global/datum/controller/gameticker/ticker
 						sleep(1)
 
 			// // // ECLIPSE EDIT: Tip of the Round // // //
-			if((pregame_timeleft <= send_tip_at) && !tip_sent)		//it's time to send a tip
+			if(config.tip_of_the_round && (pregame_timeleft <= send_tip_at) && !tip_sent)		//it's time to send a tip
 				send_tip_of_the_round()
 			// // // END ECLIPSE EDIT: Tip of the Round // // //
 
