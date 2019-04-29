@@ -26,7 +26,7 @@
 	. = ..()
 	
 	if(config.force_reginald)
-		desc = "It's Reginald. He's here every day this week."
+		desc = "It's Reginald. He's putting in some overtime right now."
 	else
 		if(time2text(world.timeofday, "Day") == "Tuesday")
 			desc = "Everybody say 'Hi, Reginald'. But remember, he's only here on alternating Tuesdays."
