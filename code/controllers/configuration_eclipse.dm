@@ -9,6 +9,7 @@
 	var/shift_end_horn_global = TRUE		//Play to everyone or just spawned characters?
 	
 	//Miscellaneous
+	var/vote_extensions = 2
 	var/tip_of_the_round = FALSE			//Tip of the Round
 	var/force_reginald = FALSE				//Force spawn Reginald.
 	var/usejobwhitelist = FALSE				//Job whitelisting
@@ -50,4 +51,6 @@
 				config.tip_of_the_round = TRUE
 			if("use_job_whitelisting")
 				config.usejobwhitelist = TRUE
+			if("vote_extensions")
+				config.vote_extensions = value as num
 	return 1

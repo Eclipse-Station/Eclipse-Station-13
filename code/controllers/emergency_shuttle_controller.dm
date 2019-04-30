@@ -114,7 +114,7 @@ var/global/datum/emergency_shuttle_controller/emergency_shuttle
 	// // // BEGIN ECLIPSE EDIT // // //
 	world.log << "Scheduled crew transfer has begun."		//let the guy in the console see it
 	if(config.shift_end_horn && !horn_has_fired)
-		spawn(config.shift_end_horn_delay)		//1 mile at speed of sound in air at 0C, 1 bar pressure = 4.8574... seconds. This assumes the colony is at 1 mile away, and the horn is originating from there.
+		spawn(config.shift_end_horn_delay)
 			blow_horn()
 
 /datum/emergency_shuttle_controller/proc/blow_horn()

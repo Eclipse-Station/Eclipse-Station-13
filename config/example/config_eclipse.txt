@@ -12,12 +12,17 @@ ENABLE_SHIFT_HORN
 ## Unit: Seconds
 SHIFT_HORN_DELAY 4.8
 
-## GLOBAL DISABLE
+## GLOBAL AUDIO DISABLE
 ## Uncomment this line to make the shift end horn only audible to players spawned
 ## in-game or observing, not players on the lobby screen.
 #SHIFT_HORN_FOR_SPAWNED_PLAYERS_ONLY
 
 ######### MISCELLANY
+
+## VOTE EXTENSIONS
+## How many votes for round extensions should players have?
+## Default is 2 votes.
+VOTE_EXTENSIONS 2
 
 ## JOB WHITELISTS
 ## Uses the jobwhitelist.txt file to whitelist specific jobs.
