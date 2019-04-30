@@ -43,10 +43,12 @@
 
 /obj/effect/landmark/reginald_spawner/New()
 //If the debug override above is true, we want to spawn it. No ifs, ands, or buts.
+	while(!config.eclipse_config_loaded)		//wait for config to be loaded, first, so we know if we need to force spawn Reginald.
+		sleep(5)
 	if(config.force_reginald)
 		new /mob/living/simple_animal/crab/reginald(src.loc)
 		log_debug("Reginald force-spawned.")
-		log_to_dd("Reginald force-spawned: Debug define set at compile time.")
+		log_to_dd("Reginald force-spawned: Debug option set in config.")
 		message_admins("Reginald was force-spawned at ([src.loc.x], [src.loc.y], [src.loc.z]): Debug option set in config.")
 		delete_me = TRUE
 		return		//Implied 'else'.
@@ -61,19 +63,24 @@
 			if(time2text(world.timeofday, "Day") == "Tuesday")
 				new /mob/living/simple_animal/crab/reginald(src.loc)
 				log_debug("Spawning Reginald...")
+				log_to_dd("Spawning Reginald...")
 			else
 				log_debug("Week 1, but not a Tuesday. Reginald not spawning.")
+				log_to_dd("Week 1, but not a Tuesday. Reginald not spawning.")
 		// Week 3.
 		if(15 to 21)
 			if(time2text(world.timeofday, "Day") == "Tuesday")
 				new /mob/living/simple_animal/crab/reginald(src.loc)
 				log_debug("Spawning Reginald...")
+				log_to_dd("Spawning Reginald...")
 			else
 				log_debug("Week 3, but not a Tuesday. Reginald not spawning.")
+				log_to_dd("Week 3, but not a Tuesday. Reginald not spawning.")
 //There are up to 5 Tuesdays in a month. To ensure maximum alternation, Reginald
 //does not appear the last week of the month.
 		else
 			log_debug("Not first or third week. Reginald not spawning.")
+			log_to_dd("Not first or third week. Reginald not spawning.")
 		
 	delete_me = TRUE
 	return

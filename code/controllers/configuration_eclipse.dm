@@ -3,6 +3,8 @@
 //
 
 /datum/configuration
+	var/eclipse_config_loaded = FALSE		//for things that require this, such as Reginald force spawning
+	
 	// Shift End Horn
 	var/shift_end_horn = FALSE				//Master Enable
 	var/shift_end_horn_delay = 48			//Delay, in 1/10 sec
@@ -13,7 +15,7 @@
 	var/wl_admins_too = FALSE				//Admins go through the whitelist too?
 
 	//Miscellaneous
-	var/vote_extensions = 2
+	var/vote_extensions = 2					//Number of vote extensions.
 	var/tip_of_the_round = FALSE			//Tip of the Round
 	var/force_reginald = FALSE				//Force spawn Reginald.
 
@@ -60,4 +62,6 @@
 				config.wl_admins_too = TRUE
 			if("vote_extensions")
 				config.vote_extensions = value
+	
+	config.eclipse_config_loaded = TRUE
 	return 1
