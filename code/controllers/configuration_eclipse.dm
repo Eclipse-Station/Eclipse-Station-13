@@ -57,7 +57,7 @@
 			if("use_job_whitelisting")
 				config.usejobwhitelist = TRUE
 			if("admins_restricted_by_whitelist")
-				config.wl_admins_too = true
+				config.wl_admins_too = TRUE
 			if("vote_extensions")
 				config.vote_extensions = value as num
 	return 1
