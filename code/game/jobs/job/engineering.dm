@@ -12,7 +12,7 @@
 	idtype = /obj/item/weapon/card/id/engineering/head
 	req_admin_notify = 1
 	economic_modifier = 10
-	whitelist_only = config.wl_head_roles		//Eclipse Edit: Config option.
+	whitelist_only = 1
 
 	minimum_character_age = 25
 	ideal_character_age = 50

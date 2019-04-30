@@ -12,7 +12,7 @@
 	idtype = /obj/item/weapon/card/id/security/head
 	req_admin_notify = 1
 	economic_modifier = 10
-	whitelist_only = (config.wl_head_roles || config.wl_security)		//Eclipse edit: Config option
+	whitelist_only = 1
 	
 	access = list(access_security, access_eva, access_sec_doors, access_brig, access_armory,
 			            access_forensics_lockers, access_morgue, access_maint_tunnels, access_all_personal_lockers,
@@ -44,7 +44,6 @@
 	minimal_access = list(access_security, access_eva, access_sec_doors, access_brig, access_armory, access_maint_tunnels, access_external_airlocks)
 	minimal_player_age = 5
 	outfit_type = /decl/hierarchy/outfit/job/security/warden
-	whitelist_only =  config.wl_security		//Eclipse edit: Config option
 
 /datum/job/detective
 	title = "Detective"
@@ -63,7 +62,6 @@
 	minimal_player_age = 3
 	outfit_type = /decl/hierarchy/outfit/job/security/detective
 	alt_titles = list("Forensic Technician" = /decl/hierarchy/outfit/job/security/detective/forensic, "Investigator")
-	whitelist_only =  config.wl_security		//Eclipse edit: Config option
 
 /datum/job/officer
 	title = "Security Officer"
@@ -82,4 +80,3 @@
 	minimal_player_age = 3
 	outfit_type = /decl/hierarchy/outfit/job/security/officer
 	alt_titles = list("Junior Officer")
-	whitelist_only =  config.wl_security		//Eclipse edit: Config option

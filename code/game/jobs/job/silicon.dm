@@ -11,7 +11,6 @@
 	minimal_player_age = 7
 	account_allowed = 0
 	economic_modifier = 0
-	whitelist_only = config.wl_silicons		//Eclipse Edit: Config option.
 
 /datum/job/ai/equip(var/mob/living/carbon/human/H)
 	if(!H)	return 0
@@ -46,7 +45,6 @@
 	alt_titles = list("Robot", "Drone")
 	account_allowed = 0
 	economic_modifier = 0
-	whitelist_only = config.wl_silicons		//Eclipse Edit: Config option.
 
 /datum/job/cyborg/equip(var/mob/living/carbon/human/H)
 	if(!H)	return 0

@@ -35,21 +35,6 @@ USE_JOB_WHITELISTING
 ## Uncomment to require them to be whitelisted.
 #ADMINS_RESTRICTED_BY_WHITELIST
 
-## HEAD ROLES RESTRICTIONS
-## Should head roles be restricted by whitelist?
-## Uncomment to enable restrictions.
-WL_HEAD_ROLES_RESTRICTED
-
-## SILICON RESTRICTIONS
-## Should AI and cyborgs be restricted by whitelist?
-## Uncomment to enable restrictions.
-#WL_SILICONS_RESTRICTED
-
-## SECURITY RESTRICTIONS
-## Should Security department jobs be restricted by whitelist?
-## Uncomment to enable restrictions.
-#WL_SECURITY_RESTRICTED
-
 #########
 # MISCELLANY
 #########
