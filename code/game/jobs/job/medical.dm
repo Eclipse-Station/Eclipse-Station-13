@@ -12,7 +12,7 @@
 	idtype = /obj/item/weapon/card/id/medical/head
 	req_admin_notify = 1
 	economic_modifier = 10
-	whitelist_only = 1
+	whitelist_only = config.wl_head_roles		//Eclipse Edit: Config option.
 
 	access = list(access_medical, access_medical_equip, access_morgue, access_genetics, access_heads,
 			access_chemistry, access_virology, access_cmo, access_surgery, access_RC_announce,

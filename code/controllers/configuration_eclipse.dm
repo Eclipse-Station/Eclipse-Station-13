@@ -7,12 +7,20 @@
 	var/shift_end_horn = FALSE				//Master Enable
 	var/shift_end_horn_delay = 48			//Delay, in 1/10 sec
 	var/shift_end_horn_global = TRUE		//Play to everyone or just spawned characters?
-	
+
+	// Job Whitelisting
+	var/usejobwhitelist = FALSE				//Job whitelisting enable
+	var/wl_admins_too = FALSE				//Admins go through the whitelist too?
+	var/wl_head_roles = FALSE				//Whitelist head roles?
+	var/wl_silicons = FALSE					//Whitelist silicons?
+	var/wl_security = FALSE					//Whitelist security?
+
 	//Miscellaneous
 	var/vote_extensions = 2
 	var/tip_of_the_round = FALSE			//Tip of the Round
 	var/force_reginald = FALSE				//Force spawn Reginald.
-	var/usejobwhitelist = FALSE				//Job whitelisting
+
+	
 
 /hook/startup/proc/read_eclipse_config()
 	var/list/Lines = file2list("config/config_eclipse.txt")
@@ -51,6 +59,14 @@
 				config.tip_of_the_round = TRUE
 			if("use_job_whitelisting")
 				config.usejobwhitelist = TRUE
+			if("admins_restricted_by_whitelist")
+				config.whitelist_admins_too = true
+			if("wl_head_roles_restricted")
+				config.wl_head_roles = TRUE
+			if("wl_silicons_restricted")
+				config.wl_silicons = TRUE
+			if("wl_security_restricted")
+				config.wl_security = TRUE
 			if("vote_extensions")
 				config.vote_extensions = value as num
 	return 1

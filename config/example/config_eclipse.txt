@@ -1,6 +1,8 @@
 ## Eclipse specific configurations, for downstream servers.
 
-######### SHIFT END HORN
+#########
+# SHIFT END HORN
+#########
 
 ## MASTER ENABLE
 ## Comment to disable the shift change horn.
@@ -17,7 +19,40 @@ SHIFT_HORN_DELAY 4.8
 ## in-game or observing, not players on the lobby screen.
 #SHIFT_HORN_FOR_SPAWNED_PLAYERS_ONLY
 
-######### MISCELLANY
+#########
+# WHITELISTING
+#########
+
+## MASTER ENABLE
+## Uses the jobwhitelist.txt file to whitelist specific jobs.
+## Comment to disable.
+USE_JOB_WHITELISTING
+
+## INCLUDE ADMINS
+## Should admins be required to be whitelisted as a job in order to play it? 
+## This will not stop them from spawning in a character using the admin tools,
+## only the game preferences.
+## Uncomment to require them to be whitelisted.
+#ADMINS_RESTRICTED_BY_WHITELIST
+
+## HEAD ROLES RESTRICTIONS
+## Should head roles be restricted by whitelist?
+## Uncomment to enable restrictions.
+WL_HEAD_ROLES_RESTRICTED
+
+## SILICON RESTRICTIONS
+## Should AI and cyborgs be restricted by whitelist?
+## Uncomment to enable restrictions.
+#WL_SILICONS_RESTRICTED
+
+## SECURITY RESTRICTIONS
+## Should Security department jobs be restricted by whitelist?
+## Uncomment to enable restrictions.
+#WL_SECURITY_RESTRICTED
+
+#########
+# MISCELLANY
+#########
 
 ## VOTE EXTENSIONS
 ## How many votes for round extensions should players have?
@@ -25,9 +60,7 @@ SHIFT_HORN_DELAY 4.8
 VOTE_EXTENSIONS 2
 
 ## JOB WHITELISTS
-## Uses the jobwhitelist.txt file to whitelist specific jobs.
-## Comment to disable.
-USE_JOB_WHITELISTING
+## Uses the jobwhitelist.txt file to whitelist 
 
 ## REGINALD DATE CHECK OVERRIDE
 ## Forces Reginald to spawn, regardless of the day of week.

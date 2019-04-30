@@ -15,7 +15,7 @@ var/list/job_whitelist = list()
 	var/datum/job/job = job_master.GetJob(rank)
 	// // // BEGIN ECLIPSE EDIT // // //
 	// Allows config option to disable job restrictions. Allows admins to bypass
-	if(check_rights(R_ADMIN, 0, M))		//They're admin
+	if(!config.wl_admins_too && check_rights(R_ADMIN, 0, M))		//They're admins.
 		return 1
 	if(!config.usejobwhitelist)			//Whitelist disabled.
 		return 1
