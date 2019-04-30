@@ -59,5 +59,5 @@
 			if("admins_restricted_by_whitelist")
 				config.wl_admins_too = TRUE
 			if("vote_extensions")
-				config.vote_extensions = value as num
+				config.vote_extensions = value
 	return 1
