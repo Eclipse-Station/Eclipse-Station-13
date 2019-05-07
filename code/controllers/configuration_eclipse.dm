@@ -11,11 +11,14 @@
 	var/shift_end_horn_global = TRUE		//Play to everyone or just spawned characters?
 
 	// Job Whitelisting
-	var/usejobwhitelist = FALSE				//Job whitelisting enable
+	var/usejobwhitelist = FALSE				//Master job whitelisting enable
+	var/wl_heads = FALSE					//Whitelist Heads of Staff?
+	var/wl_security = FALSE					//Whitelist Security department?
+	var/wl_silicons = FALSE					//Whitelist silicons?
 	var/wl_admins_too = FALSE				//Admins go through the whitelist too?
 
 	//Miscellaneous
-	var/vote_extensions = 2					//Number of vote extensions.
+	var/vote_extensions = 2
 	var/tip_of_the_round = FALSE			//Tip of the Round
 	var/force_reginald = FALSE				//Force spawn Reginald.
 
@@ -58,6 +61,12 @@
 				config.tip_of_the_round = TRUE
 			if("use_job_whitelisting")
 				config.usejobwhitelist = TRUE
+			if("whitelist_heads")
+				config.wl_heads = TRUE
+			if("whitelist_security")
+				config.wl_security = TRUE
+			if("whitelist_silicons")
+				config.wl_silicons = TRUE
 			if("admins_restricted_by_whitelist")
 				config.wl_admins_too = TRUE
 			if("vote_extensions")
