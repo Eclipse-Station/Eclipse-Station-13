@@ -19,13 +19,17 @@ var/list/job_whitelist = list()
 		return 1
 	if(!config.usejobwhitelist)			//Whitelist disabled.
 		return 1
+	if(job.wl_admin_only && check_rights(R_ADMIN, 0, M))		//Admin only ranks
+		return 1
 	// // // END ECLIPSE EDIT // // //
 	if(!job.whitelist_only)
 		return 1
 	if(rank == USELESS_JOB) //VOREStation Edit - Visitor not Assistant
 		return 1
+	/* Eclipse Removal - moved above in the edit
 	if(check_rights(R_ADMIN, 0))
 		return 1
+	*/
 	if(!job_whitelist)
 		return 0
 	if(M && rank)

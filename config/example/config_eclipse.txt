@@ -1,4 +1,4 @@
-## Eclipse specific configurations, for downstream servers.
+## Eclipse specific configurations, for downstream servers and dev environments.
 
 #########
 # SHIFT END HORN
@@ -35,6 +35,21 @@ USE_JOB_WHITELISTING
 ## Uncomment to require them to be whitelisted.
 #ADMINS_RESTRICTED_BY_WHITELIST
 
+## WHITELIST HEADS OF STAFF
+## Should heads of staff be whitelisted?
+## Uncomment to whitelist.
+WHITELIST_HEADS
+
+## WHITELIST SECURITY DEPARTMENT
+## Should the Security department be whitelisted?
+## Uncomment to whitelist.
+#WHITELIST_SECURITY
+
+## WHITELIST AI/CYBORG
+## Should silicons be whitelisted? This will not affect pAIs, only AI and borgs.
+## Uncomment to whitelist.
+#WHITELIST_SILICONS
+
 #########
 # MISCELLANY
 #########
@@ -43,9 +58,6 @@ USE_JOB_WHITELISTING
 ## How many votes for round extensions should players have?
 ## Default is 2 votes.
 VOTE_EXTENSIONS 2
-
-## JOB WHITELISTS
-## Uses the jobwhitelist.txt file to whitelist 
 
 ## REGINALD DATE CHECK OVERRIDE
 ## Forces Reginald to spawn, regardless of the day of week.
