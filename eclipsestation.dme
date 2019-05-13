@@ -201,6 +201,7 @@
 #include "code\controllers\autotransfer.dm"
 #include "code\controllers\communications.dm"
 #include "code\controllers\configuration.dm"
+#include "code\controllers\configuration_eclipse.dm"
 #include "code\controllers\configuration_vr.dm"
 #include "code\controllers\controller.dm"
 #include "code\controllers\emergency_shuttle_controller.dm"
