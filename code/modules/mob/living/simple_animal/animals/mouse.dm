@@ -142,20 +142,32 @@
 	
 	if(!config.mice_wires)		//If disabled by config, don't even bother.
 		return
-	var/turf/F = get_turf(src)
-	if(istype(F) && !F.is_plating())
+	var/turf/F = src.loc
+	if(istype(F) && F.is_plating())
 		var/obj/structure/cable/C = locate() in F
 		if(C && prob(config.mice_wire_chance))
+			var/start_loc = src.loc		//you can stop a mouse by pciking up thje... little ghuy. Yeah.
+		
+			var/chew_varb_start = pick("gnawing at","chewing up","biting into","eating at","nibbling at")		//diffiuculzt to taype while dtronk
+			var/chew_verb_finish = pick("bites into","gnaws into","eats through","nibbles into", "chews through")
+			
+			//add a vcooldown iwhenr youew so0ber
+			
+			visible_message("<span class='warning'>[src] begins [chew_varb_start] \the [C]...</span>")
+			sleep(2 SECONDS)		//sleetp tzwop secojnds to allw it zto cujhrew througvh
+			if(start_loc != src.loc)
+				return		//yayyyy you stiopped theh impeindign mouse timebiomb. The wiresy arte safe!
 			if(C.powernet.avail)
-				visible_message("<span class='warning'>[src] gnaws into the [C] and tenses up!</span>")
+				visible_message("<span class='warning'>[src] [chew_verb_finish] \the [C] and tenses up!</span>")
 				playsound(src, 'sound/effects/sparks2.ogg', 100, 1)
-				electrocute_act(C.powernet, C)
+				death()
 			else
-				visible_message("<span class='warning'>[src] chews through the [C].</span>")
-
+				visible_message("<span class='warning'>[src] [chew_verb_finish] \the [C].</span>")
+			
+			//sdpawn th enew bables
 			if(C.d1)	// 0-X cables are 1 unit, X-X cables are 2 units long
-				C = new/obj/item/stack/cable_coil(F, 2, C.color)
+				new/obj/item/stack/cable_coil(F, 2, C.color)
 			else
-				C = new/obj/item/stack/cable_coil(F, 1, C.color)
-			qdel(C)
-
+				new/obj/item/stack/cable_coil(F, 1, C.color)
+			C.investigate_log("was eaten by [src]/[usr ? usr : "no user"]/[ckey ? ckey : "no ckey"]","wires")		//admihn logghingggggggggggggg
+			C.Destroy()
