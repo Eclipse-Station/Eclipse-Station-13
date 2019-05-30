@@ -135,3 +135,27 @@
 
 /mob/living/simple_animal/mouse/cannot_use_vents()
 	return
+
+// // // BEGIN ECLIPSE EDITS // // //
+/mob/living/simple_animal/mouse/handle_wander_movement()
+	..()
+	
+	if(!config.mice_wires)		//If disabled by config, don't even bother.
+		return
+	var/turf/F = get_turf(src)
+	if(istype(F) && !F.is_plating())
+		var/obj/structure/cable/C = locate() in F
+		if(C && prob(config.mice_wire_chance))
+			if(C.powernet.avail)
+				visible_message("<span class='warning'>[src] gnaws into the [C] and tenses up!</span>")
+				playsound(src, 'sound/effects/sparks2.ogg', 100, 1)
+				electrocute_act(C.powernet, C)
+			else
+				visible_message("<span class='warning'>[src] chews through the [C].</span>")
+
+			if(C.d1)	// 0-X cables are 1 unit, X-X cables are 2 units long
+				C = new/obj/item/stack/cable_coil(F, 2, C.color)
+			else
+				C = new/obj/item/stack/cable_coil(F, 1, C.color)
+			qdel(C)
+

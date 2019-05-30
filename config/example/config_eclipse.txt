@@ -68,3 +68,15 @@ VOTE_EXTENSIONS 2
 ## Should tips of the round be shown?
 ## Comment to disable.
 ENABLE_TOTR
+
+## MOUSE WIRE EATING BEHAVIOURS
+## Should mice be able to eat wires? This will give Engineering a bit more to do
+## each shift, than 'set up engine, go to sleep'.
+## Uncomment to enable.
+#MICE_EAT_WIRES
+
+## MOUSE WIRE EATING CHANCE
+## If a mouse moves onto a wire tile, what're the odds it'll bite it?
+## Default is 5%
+## Units: Percentage
+MICE_WIRE_CHOMP_CHANCE 5

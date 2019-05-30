@@ -21,8 +21,8 @@
 	var/vote_extensions = 2
 	var/tip_of_the_round = FALSE			//Tip of the Round
 	var/force_reginald = FALSE				//Force spawn Reginald.
-
-	
+	var/mice_wires = FALSE					//Mice can eat wires
+	var/mice_wire_chance = 5				//Chance for a mouse to eat wires on the turf it's on.
 
 /hook/startup/proc/read_eclipse_config()
 	var/list/Lines = file2list("config/config_eclipse.txt")
@@ -71,6 +71,10 @@
 				config.wl_admins_too = TRUE
 			if("vote_extensions")
 				config.vote_extensions = value
+			if("mice_eat_wires")
+				config.mice_wires = TRUE
+			if("mice_wire_chomp_chance")
+				config.mice_wire_chance = value
 	
 	config.eclipse_config_loaded = TRUE
 	return 1
