@@ -52,7 +52,7 @@
 			if ("enable_shift_horn")
 				config.shift_end_horn = TRUE
 			if("shift_horn_delay")
-				config.shift_end_horn_delay = 10 * value
+				config.shift_end_horn_delay = 10 * text2num(value)
 			if("shift_horn_for_spawned_players_only")
 				config.shift_end_horn_global = FALSE
 			if("force_spawn_reginald")
@@ -70,11 +70,11 @@
 			if("admins_restricted_by_whitelist")
 				config.wl_admins_too = TRUE
 			if("vote_extensions")
-				config.vote_extensions = value
+				config.vote_extensions = text2num(value)
 			if("mice_eat_wires")
 				config.mice_wires = TRUE
 			if("mice_wire_chomp_chance")
-				config.mice_wire_chance = value
+				config.mice_wire_chance = text2num(value)
 	
 	config.eclipse_config_loaded = TRUE
 	return 1
