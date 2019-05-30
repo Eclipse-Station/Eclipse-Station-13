@@ -146,17 +146,18 @@
 	if(istype(F) && F.is_plating())
 		var/obj/structure/cable/C = locate() in F
 		if(C && prob(config.mice_wire_chance))
-			var/start_loc = src.loc		//you can stop a mouse by pciking up thje... little ghuy. Yeah.
+			var/start_loc = src.loc		//You can stop a mouse chewing through a wire by picking him up before he's done.
 		
-			var/chew_varb_start = pick("gnawing at","chewing up","biting into","eating at","nibbling at")		//diffiuculzt to taype while dtronk
+			//RANDOM WORDS! YAAAY.
+			var/chew_verb_start = pick("gnawing at","chewing up","biting into","eating at","nibbling at")
 			var/chew_verb_finish = pick("bites into","gnaws into","eats through","nibbles into", "chews through")
 			
-			//add a vcooldown iwhenr youew so0ber
+			//TODO TODO TODO: Add a global wire cooldown
 			
-			visible_message("<span class='warning'>[src] begins [chew_varb_start] \the [C]...</span>")
-			sleep(2 SECONDS)		//sleetp tzwop secojnds to allw it zto cujhrew througvh
+			visible_message("<span class='warning'>[src] begins [chew_verb_start] \the [C]...</span>")
+			sleep(2 SECONDS)		//sleep 2 seconds to allow it to chew through, and let players pick it up to disarm the impeding wire timebomb.
 			if(start_loc != src.loc)
-				return		//yayyyy you stiopped theh impeindign mouse timebiomb. The wiresy arte safe!
+				return		//yayyyy you stiopped theh impeindign mouse timebiomb. The wiresy arte safe!		//I'm keeping this drunken comment. ^Spitz
 			if(C.powernet.avail)
 				visible_message("<span class='warning'>[src] [chew_verb_finish] \the [C] and tenses up!</span>")
 				playsound(src, 'sound/effects/sparks2.ogg', 100, 1)
@@ -164,10 +165,10 @@
 			else
 				visible_message("<span class='warning'>[src] [chew_verb_finish] \the [C].</span>")
 			
-			//sdpawn th enew bables
+			//spawn the cable where the mouse chewed through the other.
 			if(C.d1)	// 0-X cables are 1 unit, X-X cables are 2 units long
 				new/obj/item/stack/cable_coil(F, 2, C.color)
 			else
 				new/obj/item/stack/cable_coil(F, 1, C.color)
-			C.investigate_log("was eaten by [src]/[usr ? usr : "no user"]/[ckey ? ckey : "no ckey"]","wires")		//admihn logghingggggggggggggg
+			C.investigate_log("was eaten by [src]/[usr ? usr : "no user"]/[ckey ? ckey : "no ckey"]","wires")		//admin logging, theoretically
 			C.Destroy()
