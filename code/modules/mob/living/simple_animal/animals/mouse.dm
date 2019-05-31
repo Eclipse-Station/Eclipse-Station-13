@@ -191,17 +191,17 @@
 	Ref: \ref[src]<br><br>\
 	Wire chewing:</span>")
 	if(!config.mice_wires)
-		to_chat(usr, "<span class='warning'>Cannot chew wires: Disabled by configuration.</span>")
+		to_chat(usr, "<span class='warning'>Cannot chew wires: Disabled by configuration.<br></span>")
 	else if(ai_inactive)
-		to_chat(usr, "<span class='warning'>Cannot chew wires: AI disabled.</span>")
+		to_chat(usr, "<span class='warning'>Cannot chew wires: AI disabled.<br></span>")
 	else if(stat == DEAD)
-		to_chat(usr, "<span class='warning'>Cannot chew wires: Mob deceased.</span>")
+		to_chat(usr, "<span class='warning'>Cannot chew wires: Mob deceased.<br></span>")
 	else if((config.mice_wire_cooldown_rs || last_mouse_wire) && (world.time <= last_mouse_wire + config.mice_wire_cooldown))
-		to_chat(usr, "<span class='warning'>Cannot chew wires: Cooldown active.</span>")
+		to_chat(usr, "<span class='warning'>Cannot chew wires: Cooldown active.<br></span>")
 	else
-		to_chat(usr, "<span class='notice'><b>Can chew wires.</b></span>")
+		to_chat(usr, "<span class='notice'><b>Can chew wires.</b><br></span>")
 	to_chat(usr, "<span class='notice'>\
-	<br>*--Cooldown--*<br>\
+	*--Cooldown--*<br>\
 	Last chewed wire: [last_mouse_wire]<br>\
 	Current tick: [world.time]<br>\
 	Cooldown duration (ticks): [config.mice_wire_cooldown]<br></span>")
