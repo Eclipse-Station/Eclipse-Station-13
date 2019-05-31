@@ -136,7 +136,8 @@
 /mob/living/simple_animal/mouse/cannot_use_vents()
 	return
 
-// // // BEGIN ECLIPSE EDITS // // //
+// // // BEGIN ECLIPSE EDIT // // //
+//Rationale: Mice can chew wires if enabled in config.
 /mob/living/simple_animal/mouse/handle_wander_movement()
 	..()
 	
@@ -152,12 +153,20 @@
 			var/chew_verb_start = pick("gnawing at","chewing up","biting into","eating at","nibbling at")
 			var/chew_verb_finish = pick("bites into","gnaws into","eats through","nibbles into", "chews through")
 			
-			//TODO TODO TODO: Add a global wire cooldown
-			
+			if(world.time <= last_mouse_wire + config.mice_wire_cooldown)		//If we're in cooldown, nope the fuck outta there.
+				return
 			visible_message("<span class='warning'>[src] begins [chew_verb_start] \the [C]...</span>")
 			sleep(2 SECONDS)		//sleep 2 seconds to allow it to chew through, and let players pick it up to disarm the impeding wire timebomb.
 			if(start_loc != src.loc)
 				return		//yayyyy you stiopped theh impeindign mouse timebiomb. The wiresy arte safe!		//I'm keeping this drunken comment. ^Spitz
+			
+			//HOLD ON THERE COWBOY! Before you hit copper, better make sure another mouse hasn't triggered the cooldown!
+			if(world.time <= last_mouse_wire + config.mice_wire_cooldown)		//If cooldown was triggered after the checks start, abort.
+				visible_message("<span class='warning'>[src] stops [chew_verb_start] \the [C] and looks around, as if some inkling of self-preservation suddenly kicked in.</span>")
+				return
+			
+			//Alright. Carry on then.
+			last_mouse_wire = world.time	//set cooldown
 			if(C.powernet.avail)
 				visible_message("<span class='warning'>[src] [chew_verb_finish] \the [C] and tenses up!</span>")
 				playsound(src, 'sound/effects/sparks2.ogg', 100, 1)
@@ -172,3 +181,6 @@
 				new/obj/item/stack/cable_coil(F, 1, C.color)
 			C.investigate_log("was eaten by [src]/[usr ? usr : "no user"]/[ckey ? ckey : "no ckey"]","wires")		//admin logging, theoretically
 			C.Destroy()
+
+var/last_mouse_wire = 0			//this feels dirty.
+// // // END ECLIPSE EDIT // // //

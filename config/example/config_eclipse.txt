@@ -51,6 +51,30 @@ WHITELIST_HEADS
 #WHITELIST_SILICONS
 
 #########
+# MOUSE WIRE CHEWING
+#########
+
+## MASTER ENABLE
+## Should mice be able to eat wires? This will give Engineering a bit more to do
+## each shift, than 'set up engine, go to sleep'.
+## Uncomment to enable.
+#MICE_EAT_WIRES
+
+## CHANCE TO EAT
+## If a mouse moves onto a wire tile, what're the odds it'll bite it?
+## Default is 5%
+## Units: Percentage
+MICE_WIRE_CHOMP_CHANCE 5
+
+## GLOBAL COOLDOWN
+## After a mouse eats a wire, how long should it wait before another mouse can
+## chew up a wire elsewhere? This is intended as a hard limiter to prevent mice
+## from obliterating the power grid too quickly.
+## Default is 300 seconds (5 minutes).
+## Units: Seconds
+MICE_WIRE_COOLDOWN 300
+
+#########
 # MISCELLANY
 #########
 
@@ -68,15 +92,3 @@ VOTE_EXTENSIONS 2
 ## Should tips of the round be shown?
 ## Comment to disable.
 ENABLE_TOTR
-
-## MOUSE WIRE EATING BEHAVIOURS
-## Should mice be able to eat wires? This will give Engineering a bit more to do
-## each shift, than 'set up engine, go to sleep'.
-## Uncomment to enable.
-#MICE_EAT_WIRES
-
-## MOUSE WIRE EATING CHANCE
-## If a mouse moves onto a wire tile, what're the odds it'll bite it?
-## Default is 5%
-## Units: Percentage
-MICE_WIRE_CHOMP_CHANCE 5
