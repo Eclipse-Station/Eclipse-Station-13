@@ -23,7 +23,8 @@
 	var/force_reginald = FALSE				//Force spawn Reginald.
 	var/mice_wires = FALSE					//Mice can eat wires
 	var/mice_wire_chance = 5				//Chance for a mouse to eat wires on the turf it's on.
-	var/mice_wire_cooldown = 3000			//Coioldown for mouse wire chewing
+	var/mice_wire_cooldown = 6000			//Cooldown for mouse wire chewing
+	var/mice_wire_cooldown_rs = FALSE		//Roundstart mouse wire cooldown.
 
 /hook/startup/proc/read_eclipse_config()
 	var/list/Lines = file2list("config/config_eclipse.txt")
@@ -78,6 +79,8 @@
 				config.mice_wire_chance = text2num(value)
 			if("mice_wire_cooldown")
 				config.mice_wire_cooldown = 10 * text2num(value)
+			if("roundstart_mouse_wire_cooldown")
+				config.mice_wire_cooldown_rs = TRUE
 	
 	config.eclipse_config_loaded = TRUE
 	return 1

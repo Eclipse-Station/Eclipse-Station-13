@@ -70,9 +70,16 @@ MICE_WIRE_CHOMP_CHANCE 5
 ## After a mouse eats a wire, how long should it wait before another mouse can
 ## chew up a wire elsewhere? This is intended as a hard limiter to prevent mice
 ## from obliterating the power grid too quickly.
-## Default is 300 seconds (5 minutes).
+## Default is 600 seconds (10 minutes).
 ## Units: Seconds
-MICE_WIRE_COOLDOWN 300
+MICE_WIRE_COOLDOWN 600
+
+## ROUNDSTART COOLDOWN
+## This will enable a roundstart cooldown so people can settle in before mice
+## become a problem. The cooldown is taken from the global cooldown, above.
+## WARNING: This does not account for the lobby timer!
+## Uncomment to enable.
+ROUNDSTART_MOUSE_WIRE_COOLDOWN
 
 #########
 # MISCELLANY
