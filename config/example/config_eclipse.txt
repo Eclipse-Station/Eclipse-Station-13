@@ -81,6 +81,11 @@ MICE_WIRE_COOLDOWN 600
 ## Uncomment to enable.
 ROUNDSTART_MOUSE_WIRE_COOLDOWN
 
+## REQUIRE ENGINEERING
+## If enabled, mice will require engineering staff to be present in order to eat
+## the wires.
+MICE_REQUIRE_ENGINEERS
+
 #########
 # MISCELLANY
 #########

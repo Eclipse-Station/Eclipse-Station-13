@@ -16,15 +16,19 @@
 	var/wl_security = FALSE					//Whitelist Security department?
 	var/wl_silicons = FALSE					//Whitelist silicons?
 	var/wl_admins_too = FALSE				//Admins go through the whitelist too?
+	
+	//Mice and wires
+	var/mice_wires = FALSE					//Mice can eat wires
+	var/mice_wire_chance = 5				//Chance for a mouse to eat wires on the turf it's on.
+	var/mice_wire_cooldown = 6000			//Cooldown for mouse wire chewing
+	var/mice_wire_cooldown_rs = FALSE		//Roundstart mouse wire cooldown.
+	var/mice_wire_eng_req = FALSE			//Require engineers to chew wires?
 
 	//Miscellaneous
 	var/vote_extensions = 2
 	var/tip_of_the_round = FALSE			//Tip of the Round
 	var/force_reginald = FALSE				//Force spawn Reginald.
-	var/mice_wires = FALSE					//Mice can eat wires
-	var/mice_wire_chance = 5				//Chance for a mouse to eat wires on the turf it's on.
-	var/mice_wire_cooldown = 6000			//Cooldown for mouse wire chewing
-	var/mice_wire_cooldown_rs = FALSE		//Roundstart mouse wire cooldown.
+
 
 /hook/startup/proc/read_eclipse_config()
 	var/list/Lines = file2list("config/config_eclipse.txt")
@@ -81,6 +85,8 @@
 				config.mice_wire_cooldown = 10 * text2num(value)
 			if("roundstart_mouse_wire_cooldown")
 				config.mice_wire_cooldown_rs = TRUE
+			if("mice_require_engineers")
+				config.mice_wire_eng_req = TRUE
 	
 	config.eclipse_config_loaded = TRUE
 	return 1

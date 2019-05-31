@@ -141,9 +141,19 @@
 /mob/living/simple_animal/mouse/handle_wander_movement()
 	..()
 	
+	//check for engineers.
+	var/active_engineers
+	for(var/mob/M in player_list)
+		if(!M)
+			return		//Nobody's home. Go back to sleep.
+		if(M.mind.assigned_role in engineering_positions)
+			active_engineers++
+	
 	if(!config.mice_wires)		//If disabled by config, don't even bother.
 		return
 	if(ai_inactive)		//AI inactive, so no wire chewing.
+		return
+	if(config.mice_wire_eng_req && !active_engineers)
 		return
 	var/turf/F = src.loc
 	if(istype(F) && F.is_plating())
@@ -185,6 +195,15 @@
 			C.Destroy()
 
 /mob/living/simple_animal/mouse/proc/debug_wire()		//DEBUGGING!
+
+	//check for engineers.
+	var/active_engineers
+	var/no_players = FALSE
+	for(var/mob/M in player_list)
+		if(!M)
+			no_players = TRUE
+		if(M && M.mind.assigned_role in engineering_positions)
+			active_engineers++
 	to_chat(usr, "<span class='notice'>\
 	*-------Mouse wire debugging-------*<br>\
 	Name: [src]<br>\
@@ -192,6 +211,10 @@
 	Wire chewing:</span>")
 	if(!config.mice_wires)
 		to_chat(usr, "<span class='warning'>Cannot chew wires: Disabled by configuration.<br></span>")
+	else if(no_players)
+		to_chat(usr, "<span class='warning'>Cannot chew wires: No players present.<br></span>")
+	else if(config.mice_wire_eng_req && !active_engineers)
+		to_chat(usr, "<span class='warning'>Cannot chew wires: No engineering staff present.<br></span>")
 	else if(ai_inactive)
 		to_chat(usr, "<span class='warning'>Cannot chew wires: AI disabled.<br></span>")
 	else if(stat == DEAD)
