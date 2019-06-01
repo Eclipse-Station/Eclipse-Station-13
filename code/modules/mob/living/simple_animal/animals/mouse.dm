@@ -143,9 +143,11 @@
 	
 	//check for engineers.
 	var/active_engineers
-	for(var/mob/M in player_list)
+	for(var/mob/living/M in player_list)
 		if(!M)
 			return		//Nobody's home. Go back to sleep.
+		if(!M.mind)
+			continue
 		if(M.mind.assigned_role in engineering_positions)
 			active_engineers++
 	
@@ -198,12 +200,12 @@
 
 	//check for engineers.
 	var/active_engineers
-	var/no_players = FALSE
-	for(var/mob/M in player_list)
-		if(!M)
-			no_players = TRUE
-		if(M && M.mind.assigned_role in engineering_positions)
+	for(var/mob/living/M in player_list)
+		if(!M.mind)
+			continue
+		if(M.mind.assigned_role in engineering_positions)
 			active_engineers++
+
 	to_chat(usr, "<span class='notice'>\
 	*-------Mouse wire debugging-------*<br>\
 	Name: [src]<br>\
@@ -211,8 +213,6 @@
 	Wire chewing:</span>")
 	if(!config.mice_wires)
 		to_chat(usr, "<span class='warning'>Cannot chew wires: Disabled by configuration.<br></span>")
-	else if(no_players)
-		to_chat(usr, "<span class='warning'>Cannot chew wires: No players present.<br></span>")
 	else if(config.mice_wire_eng_req && !active_engineers)
 		to_chat(usr, "<span class='warning'>Cannot chew wires: No engineering staff present.<br></span>")
 	else if(ai_inactive)
