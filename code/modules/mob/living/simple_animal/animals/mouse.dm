@@ -135,3 +135,103 @@
 
 /mob/living/simple_animal/mouse/cannot_use_vents()
 	return
+
+// // // BEGIN ECLIPSE EDIT // // //
+//Rationale: Mice can chew wires if enabled in config.
+/mob/living/simple_animal/mouse/handle_wander_movement()
+	..()
+	
+	//check for engineers.
+	var/active_engineers
+	for(var/mob/living/M in player_list)
+		if(!M)
+			return		//Nobody's home. Go back to sleep.
+		if(!M.mind)
+			continue
+		if(M.mind.assigned_role in engineering_positions)
+			active_engineers++
+	
+	if(!config.mice_wires)		//If disabled by config, don't even bother.
+		return
+	if(ai_inactive)		//AI inactive, so no wire chewing.
+		return
+	if(config.mice_wire_eng_req && !active_engineers)
+		return
+	var/turf/F = src.loc
+	if(istype(F) && F.is_plating())
+		var/obj/structure/cable/C = locate() in F
+		if(C && prob(config.mice_wire_chance))
+			var/start_loc = src.loc		//You can stop a mouse chewing through a wire by picking him up before he's done.
+		
+			//RANDOM WORDS! YAAAY.
+			var/chew_verb_start = pick("gnawing at","chewing up","biting into","eating at","nibbling at")
+			var/chew_verb_finish = pick("bites into","gnaws into","eats through","nibbles into", "chews through")
+			
+			if((config.mice_wire_cooldown_rs || last_mouse_wire) && (world.time <= last_mouse_wire + config.mice_wire_cooldown))		//If we're in cooldown, nope the fuck outta there.
+				return
+			visible_message("<span class='warning'>[src] begins [chew_verb_start] \the [C]...</span>")
+			sleep(5 SECONDS)		//sleep 2 seconds to allow it to chew through, and let players pick it up to disarm the impeding wire timebomb.
+			if(start_loc != src.loc)
+				return		//yayyyy you stiopped theh impeindign mouse timebiomb. The wiresy arte safe!		//I'm keeping this drunken comment. ^Spitzer
+			
+			//HOLD ON THERE COWBOY! Before you hit copper, better make sure another mouse hasn't triggered the cooldown!
+			if((config.mice_wire_cooldown_rs || last_mouse_wire) && (world.time <= last_mouse_wire + config.mice_wire_cooldown))		//If cooldown was triggered after the checks start, abort.
+				visible_message("<span class='warning'>[src] stops [chew_verb_start] \the [C] and looks around, as if some inkling of self-preservation suddenly kicked in.</span>")
+				return
+			
+			//Alright. Carry on then.
+			last_mouse_wire = world.time	//set cooldown
+			if(C.powernet.avail)
+				visible_message("<span class='warning'>[src] [chew_verb_finish] \the [C] and tenses up!</span>")
+				playsound(src, 'sound/effects/sparks2.ogg', 100, 1)
+				death()
+			else
+				visible_message("<span class='warning'>[src] [chew_verb_finish] \the [C].</span>")
+			
+			//spawn the cable where the mouse chewed through the other.
+			if(C.d1)	// 0-X cables are 1 unit, X-X cables are 2 units long
+				new/obj/item/stack/cable_coil(F, 2, C.color)
+			else
+				new/obj/item/stack/cable_coil(F, 1, C.color)
+			C.investigate_log("was eaten by [src]/[usr ? usr : "no user"]/[ckey ? ckey : "no ckey"]","wires")		//admin logging, theoretically
+			C.Destroy()
+
+/mob/living/simple_animal/mouse/proc/debug_wire()		//DEBUGGING!
+
+	//check for engineers.
+	var/active_engineers
+	for(var/mob/living/M in player_list)
+		if(!M.mind)
+			continue
+		if(M.mind.assigned_role in engineering_positions)
+			active_engineers++
+
+	to_chat(usr, "<span class='notice'>\
+	*-------Mouse wire debugging-------*<br>\
+	Name: [src]<br>\
+	Ref: \ref[src]<br><br>\
+	Wire chewing:</span>")
+	if(!config.mice_wires)
+		to_chat(usr, "<span class='warning'>Cannot chew wires: Disabled by configuration.<br></span>")
+	else if(config.mice_wire_eng_req && !active_engineers)
+		to_chat(usr, "<span class='warning'>Cannot chew wires: No engineering staff present.<br></span>")
+	else if(ai_inactive)
+		to_chat(usr, "<span class='warning'>Cannot chew wires: AI disabled.<br></span>")
+	else if(stat == DEAD)
+		to_chat(usr, "<span class='warning'>Cannot chew wires: Mob deceased.<br></span>")
+	else if((config.mice_wire_cooldown_rs || last_mouse_wire) && (world.time <= last_mouse_wire + config.mice_wire_cooldown))
+		to_chat(usr, "<span class='warning'>Cannot chew wires: Cooldown active.<br></span>")
+	else
+		to_chat(usr, "<span class='notice'><b>Can chew wires.</b><br></span>")
+	to_chat(usr, "<span class='notice'>\
+	*--Cooldown--*<br>\
+	Last chewed wire: [last_mouse_wire]<br>\
+	Current tick: [world.time]<br>\
+	Cooldown duration (ticks): [config.mice_wire_cooldown]<br></span>")
+	if((config.mice_wire_cooldown_rs || last_mouse_wire) && (world.time <= last_mouse_wire + config.mice_wire_cooldown))
+		var/cooldown_left = ((last_mouse_wire + config.mice_wire_cooldown) - world.time)
+		to_chat(usr, "<span class='warning'>Cooldown remaining: [cooldown_left] ticks ([cooldown_left / 10] sec.)</span>")
+	to_chat(usr,"<span class='notice'>*-------End of debugging information.-------*<br><br></span>")
+
+var/last_mouse_wire = 0			//this feels dirty.
+// // // END ECLIPSE EDIT // // //
