@@ -23,6 +23,23 @@
 	name = "station intercom (Interrogation)"
 	frequency  = 1449
 
+// // // BEGIN ECLIPSE ADDITIONS // // //
+// Special radio for ATC chatter.
+/obj/item/device/radio/intercom/air_traffic
+	name = "\improper ATC radio (Local)"
+	desc = "It relays local ATC chatter."
+	frequency  = ATC_LOC_FREQ
+	freqlock = TRUE
+	no_microphone = TRUE		//don't clutter up the ATC chatter, folks.
+	icon = 'icons/obj/radio.dmi' //Old intercom sprite, so people don't get confused
+	icon_state = "intercom"
+
+/obj/item/device/radio/intercom/air_traffic/regional
+	name = "\improper ATC radio (Regional)"
+	desc = "It relays regional ATC chatter."
+	frequency  = ATC_RGN_FREQ
+// // // END ECLIPSE ADDITIONS // // //
+
 /obj/item/device/radio/intercom/private
 	name = "station intercom (Private)"
 	frequency = AI_FREQ

@@ -1,7 +1,5 @@
 var/datum/controller/transfer_controller/transfer_controller
 
-#define NUMBER_OF_VOTE_EXTENSIONS 2
-
 datum/controller/transfer_controller
 	var/timerbuffer = 0 //buffer for time check
 	var/currenttick = 0
@@ -9,7 +7,7 @@ datum/controller/transfer_controller
 	var/shift_last_vote = 0 //Citadel Edit
 datum/controller/transfer_controller/New()
 	timerbuffer = config.vote_autotransfer_initial
-	shift_hard_end = config.vote_autotransfer_initial + (config.vote_autotransfer_interval * NUMBER_OF_VOTE_EXTENSIONS) //VOREStation Edit //Change this "1" to how many extend votes you want there to be.
+	shift_hard_end = config.vote_autotransfer_initial + (config.vote_autotransfer_interval * config.vote_extensions) //VOREStation Edit //Change this "1" to how many extend votes you want there to be.
 	shift_last_vote = shift_hard_end - config.vote_autotransfer_interval //VOREStation Edit
 	processing_objects += src
 
@@ -21,7 +19,7 @@ datum/controller/transfer_controller/proc/process()
 	//VOREStation Edit START
 	if (round_duration_in_ticks >= shift_last_vote - 2 MINUTES)
 		shift_last_vote = 999999999999 //Setting to a stupidly high number since it'll be not used again.
-		to_world("<b>Warning: This upcoming round-extend vote will be your [NUMBER_OF_VOTE_EXTENSIONS > 1 ? "FINAL" : "ONLY"] extend vote. Wrap up your scenes in the next 60 minutes if the round is extended.</b>") //VOREStation Edit //Eclipse Edit: "FINAL" or "ONLY" depending on final or only.
+		to_world("<b>Warning: This upcoming round-extend vote will be your [config.vote_extensions > 1 ? "FINAL" : "ONLY"] extend vote. Wrap up your scenes in the next 60 minutes if the round is extended.</b>") //VOREStation Edit //Eclipse Edit: "FINAL" or "ONLY" depending on final or only.
 	if (round_duration_in_ticks >= shift_hard_end - 1 MINUTE)
 		init_shift_change(null, 1)
 		shift_hard_end = timerbuffer + config.vote_autotransfer_interval //If shuttle somehow gets recalled, let's force it to call again next time a vote would occur.

@@ -7,7 +7,8 @@
 	products += list(/obj/item/weapon/gun/energy/taser = 8,/obj/item/weapon/gun/energy/stunrevolver = 4,
 					/obj/item/weapon/reagent_containers/spray/pepper = 6,/obj/item/taperoll/police = 6,
 					/obj/item/weapon/gun/projectile/sec/flash = 4, /obj/item/ammo_magazine/m45/flash = 8,
-					/obj/item/clothing/glasses/omnihud/sec = 6)
+					/obj/item/clothing/glasses/omnihud/sec = 6, /obj/item/weapon/gun/projectile/modular/cz97 = 2,
+					/obj/item/weapon/gun/projectile/modular/fnx = 2)		//Eclipse Addition: Adds two of either modular guns.
 	..()
 
 /obj/machinery/vending/tool/New()

@@ -14,6 +14,7 @@
 	economic_modifier = 20
 	whitelist_only = 1
 	latejoin_only = 1
+	wl_admin_only = TRUE			//Eclipse edit: admin only
 
 	minimum_character_age = 25
 	ideal_character_age = 40
@@ -56,6 +57,7 @@
 	economic_modifier = 20
 	whitelist_only = 1
 	latejoin_only = 1
+	wl_admin_only = TRUE			//Eclipse edit: admin only
 
 	minimum_character_age = 25
 	ideal_character_age = 40

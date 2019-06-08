@@ -1,5 +1,7 @@
 /mob/living/carbon/human/proc/handle_emote_vr(var/act,var/m_type=1,var/message = null)
 
+	var/muzzled = is_muzzled()		//Eclipse Edit: Can't awoo while muzzled.
+
 	switch(act)
 		if ("vwag")
 			if(toggle_tail_vr(message = 1))
@@ -14,24 +16,43 @@
 			else
 				return 1
 		if ("mlem")
-			message = "mlems [get_visible_gender() == MALE ? "his" : get_visible_gender() == FEMALE ? "her" : "their"] tongue up over [get_visible_gender() == MALE ? "his" : get_visible_gender() == FEMALE ? "her" : "their"] nose. Mlem."
-			m_type = 1
+			if(!muzzled)		//Eclipse Edit: can't mlem if your nose is blocked.
+				message = "mlems [get_visible_gender() == MALE ? "his" : get_visible_gender() == FEMALE ? "her" : "their"] tongue up over [get_visible_gender() == MALE ? "his" : get_visible_gender() == FEMALE ? "her" : "their"] nose. Mlem."
+				m_type = 1
+			else
+				return 1
 		if ("awoo")
-			message = "lets out an awoo."
-			m_type = 2
-			playsound(loc, 'modular_citadel/sound/voice/awoo.ogg', 50, 1, -1)
+			if(!muzzled)		//Eclipse Edit: can't awoo if you're gagged.
+				message = "lets out an awoo."
+				m_type = 2
+				playsound(loc, 'modular_citadel/sound/voice/awoo.ogg', 50, 1, -1)
+			else
+				message = "makes a strange noise."
+				m_type = 2
 		if ("nya")
-			message = "lets out a nya."
-			m_type = 2
-			playsound(loc, 'modular_citadel/sound/voice/nya.ogg', 50, 1, -1)
+			if(!muzzled)		//Eclipse Edit: can't make cat noises if you're gagged.
+				message = "lets out a nya."
+				m_type = 2
+				playsound(loc, 'modular_citadel/sound/voice/nya.ogg', 50, 1, -1)
+			else
+				message = "makes a noise."
+				m_type = 2
 		if ("peep")
-			message = "peeps like a bird."
-			m_type = 2
-			playsound(loc, 'modular_citadel/sound/voice/peep.ogg', 50, 1, -1)
+			if(!muzzled)		//Eclipse Edit: can't make bird noises if you're gagged.
+				message = "peeps like a bird."
+				m_type = 2
+				playsound(loc, 'modular_citadel/sound/voice/peep.ogg', 50, 1, -1)
+			else
+				message = "makes a noise."
+				m_type = 2
 		if ("weh")
-			message = "lets out a weh."
-			m_type = 2
-			playsound(loc, 'modular_citadel/sound/voice/weh.ogg', 50, 1, -1)
+			if(!muzzled)		//Eclipse Edit: Can't make weh noises if you're gagged (okay, you probably could, but for consistency's sake you can't here).
+				message = "lets out a weh."
+				m_type = 2
+				playsound(loc, 'modular_citadel/sound/voice/weh.ogg', 50, 1, -1)
+			else
+				message = "makes a weak noise."
+				m_type = 2
 		if ("nsay")
 			nsay()
 			return TRUE

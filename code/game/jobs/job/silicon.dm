@@ -11,6 +11,7 @@
 	minimal_player_age = 7
 	account_allowed = 0
 	economic_modifier = 0
+	wl_config_borgs = TRUE			//Eclipse edit: Config-based whitelisting.
 
 /datum/job/ai/equip(var/mob/living/carbon/human/H)
 	if(!H)	return 0
@@ -45,6 +46,7 @@
 	alt_titles = list("Robot", "Drone")
 	account_allowed = 0
 	economic_modifier = 0
+	wl_config_borgs = TRUE			//Eclipse edit: Config-based whitelisting.
 
 /datum/job/cyborg/equip(var/mob/living/carbon/human/H)
 	if(!H)	return 0
