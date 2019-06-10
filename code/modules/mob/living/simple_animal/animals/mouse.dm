@@ -161,7 +161,7 @@
 	if(config.mice_wire_eng_req && !active_engineers)
 		return
 	var/turf/F = src.loc
-	if(mouse_specific_chew_probability)
+	if(prob(mouse_specific_chew_probability))
 		if(istype(F) && F.is_plating())
 			var/obj/structure/cable/C = locate() in F
 			if(C && prob(config.mice_wire_chance))
