@@ -42,6 +42,8 @@
 	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
 
 	var/body_color //brown, gray and white, leave blank for random
+	
+	var/mouse_specific_chew_probability = 1		//Eclipse edit.
 
 /mob/living/simple_animal/mouse/Life()
 	. = ..()
@@ -127,6 +129,7 @@
 /mob/living/simple_animal/mouse/brown/Tom
 	name = "Tom"
 	desc = "Jerry the cat is not amused."
+	mouse_specific_chew_probability = 0		//Eclipse edit: Tom is smarter than that.
 
 /mob/living/simple_animal/mouse/brown/Tom/New()
 	..()
@@ -158,43 +161,44 @@
 	if(config.mice_wire_eng_req && !active_engineers)
 		return
 	var/turf/F = src.loc
-	if(istype(F) && F.is_plating())
-		var/obj/structure/cable/C = locate() in F
-		if(C && prob(config.mice_wire_chance))
-			var/start_loc = src.loc		//You can stop a mouse chewing through a wire by picking him up before he's done.
-		
-			//RANDOM WORDS! YAAAY.
-			var/chew_verb_start = pick("gnawing at","chewing up","biting into","eating at","nibbling at")
-			var/chew_verb_finish = pick("bites into","gnaws into","eats through","nibbles into", "chews through")
+	if(prob(mouse_specific_chew_probability))
+		if(istype(F) && F.is_plating())
+			var/obj/structure/cable/C = locate() in F
+			if(C && prob(config.mice_wire_chance))
+				var/start_loc = src.loc		//You can stop a mouse chewing through a wire by picking him up before he's done.
 			
-			if((config.mice_wire_cooldown_rs || last_mouse_wire) && (world.time <= last_mouse_wire + config.mice_wire_cooldown))		//If we're in cooldown, nope the fuck outta there.
-				return
-			visible_message("<span class='warning'>[src] begins [chew_verb_start] \the [C]...</span>")
-			sleep(5 SECONDS)		//sleep 2 seconds to allow it to chew through, and let players pick it up to disarm the impeding wire timebomb.
-			if(start_loc != src.loc)
-				return		//yayyyy you stiopped theh impeindign mouse timebiomb. The wiresy arte safe!		//I'm keeping this drunken comment. ^Spitzer
-			
-			//HOLD ON THERE COWBOY! Before you hit copper, better make sure another mouse hasn't triggered the cooldown!
-			if((config.mice_wire_cooldown_rs || last_mouse_wire) && (world.time <= last_mouse_wire + config.mice_wire_cooldown))		//If cooldown was triggered after the checks start, abort.
-				visible_message("<span class='warning'>[src] stops [chew_verb_start] \the [C] and looks around, as if some inkling of self-preservation suddenly kicked in.</span>")
-				return
-			
-			//Alright. Carry on then.
-			last_mouse_wire = world.time	//set cooldown
-			if(C.powernet.avail)
-				visible_message("<span class='warning'>[src] [chew_verb_finish] \the [C] and tenses up!</span>")
-				playsound(src, 'sound/effects/sparks2.ogg', 100, 1)
-				death()
-			else
-				visible_message("<span class='warning'>[src] [chew_verb_finish] \the [C].</span>")
-			
-			//spawn the cable where the mouse chewed through the other.
-			if(C.d1)	// 0-X cables are 1 unit, X-X cables are 2 units long
-				new/obj/item/stack/cable_coil(F, 2, C.color)
-			else
-				new/obj/item/stack/cable_coil(F, 1, C.color)
-			C.investigate_log("was eaten by [src]/[usr ? usr : "no user"]/[ckey ? ckey : "no ckey"]","wires")		//admin logging, theoretically
-			C.Destroy()
+				//RANDOM WORDS! YAAAY.
+				var/chew_verb_start = pick("gnawing at","chewing up","biting into","eating at","nibbling at")
+				var/chew_verb_finish = pick("bites into","gnaws into","eats through","nibbles into", "chews through")
+				
+				if((config.mice_wire_cooldown_rs || last_mouse_wire) && (world.time <= last_mouse_wire + config.mice_wire_cooldown))		//If we're in cooldown, nope the fuck outta there.
+					return
+				visible_message("<span class='warning'>[src] begins [chew_verb_start] \the [C]...</span>")
+				sleep(5 SECONDS)		//sleep 2 seconds to allow it to chew through, and let players pick it up to disarm the impeding wire timebomb.
+				if(start_loc != src.loc)
+					return		//yayyyy you stiopped theh impeindign mouse timebiomb. The wiresy arte safe!		//I'm keeping this drunken comment. ^Spitzer
+				
+				//HOLD ON THERE COWBOY! Before you hit copper, better make sure another mouse hasn't triggered the cooldown!
+				if((config.mice_wire_cooldown_rs || last_mouse_wire) && (world.time <= last_mouse_wire + config.mice_wire_cooldown))		//If cooldown was triggered after the checks start, abort.
+					visible_message("<span class='warning'>[src] stops [chew_verb_start] \the [C] and looks around, as if some inkling of self-preservation suddenly kicked in.</span>")
+					return
+				
+				//Alright. Carry on then.
+				last_mouse_wire = world.time	//set cooldown
+				if(C.powernet.avail)
+					visible_message("<span class='warning'>[src] [chew_verb_finish] \the [C] and tenses up!</span>")
+					playsound(src, 'sound/effects/sparks2.ogg', 100, 1)
+					death()
+				else
+					visible_message("<span class='warning'>[src] [chew_verb_finish] \the [C].</span>")
+				
+				//spawn the cable where the mouse chewed through the other.
+				if(C.d1)	// 0-X cables are 1 unit, X-X cables are 2 units long
+					new/obj/item/stack/cable_coil(F, 2, C.color)
+				else
+					new/obj/item/stack/cable_coil(F, 1, C.color)
+				C.investigate_log("was eaten by [src]/[usr ? usr : "no user"]/[ckey ? ckey : "no ckey"]","wires")		//admin logging, theoretically
+				C.Destroy()
 
 /mob/living/simple_animal/mouse/proc/debug_wire()		//DEBUGGING!
 
