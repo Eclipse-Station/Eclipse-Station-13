@@ -658,10 +658,6 @@
 					playsound(loc, 'sound/effects/snap.ogg', 50, 1)
 
 //Citadel changes starts here
-		if ("fguns")
-			message = "points some fingerguns."
-			m_type = 1
-
 		if("aslap", "aslaps")
 			m_type = 1
 			var/mob/living/carbon/human/H = src
@@ -700,7 +696,7 @@
 				var/obj/item/organ/external/E = get_organ(organ_name)
 				if(!E || E.is_stump() || E.splinted || (E.status & ORGAN_BROKEN))
 					involved_parts -= organ_name
-					danger += 7
+					danger += 5
 
 
 			if(prob(danger))
@@ -711,9 +707,7 @@
 						src.Weaken(5)
 						E.droplimb(1,DROPLIMB_EDGE)
 						message += " <span class='danger'>And loses a limb!</span>"
-						log_and_message_admins("lost their [breaking] with *aslap and were kicked.", src)
-						to_chat(usr, "<span class='danger'>You have been automatically logged out for spamming emotes.</span>")
-						Logout(src)
+						log_and_message_admins("lost their [breaking] with *aslap, ahahah.", src)
 					else
 						src.Weaken(5)
 						if(E.cannot_break) //Prometheans go splat
@@ -721,9 +715,7 @@
 						else
 							E.fracture()
 						message += " <span class='danger'>And breaks something!</span>"
-						log_and_message_admins("broke their [breaking] with *aslap and were kicked.", src)
-						to_chat(usr, "<span class='danger'>You have been automatically logged out for spamming emotes.</span>")
-						Logout(src)
+						log_and_message_admins("broke their [breaking] with *aslap, ahahah.", src)
 //Citadel changes ends here
 
 		if("scream", "screams")
@@ -782,9 +774,7 @@
 						src.Weaken(5)
 						E.droplimb(1,DROPLIMB_EDGE)
 						message += " <span class='danger'>And loses a limb!</span>"
-						log_and_message_admins("lost their [breaking] with *snap and were kicked.", src)
-						to_chat(usr, "<span class='danger'>You have been automatically logged out for spamming emotes.</span>")
-						Logout(src)
+						log_and_message_admins("lost their [breaking] with *snap, ahahah.", src)
 					else
 						src.Weaken(5)
 						if(E.cannot_break) //Prometheans go splat
@@ -792,9 +782,7 @@
 						else
 							E.fracture()
 						message += " <span class='danger'>And breaks something!</span>"
-						log_and_message_admins("broke their [breaking] with *snap and were kicked.", src)
-						to_chat(usr, "<span class='danger'>You have been automatically logged out for spamming emotes.</span>")
-						Logout(src)
+						log_and_message_admins("broke their [breaking] with *snap, ahahah.", src)
 			///////////////////////// CITADEL STATION ADDITIONS END
 		if("swish")
 			src.animate_tail_once()

@@ -145,7 +145,7 @@
 	icon_state = "pwindow";
 	dir = 1
 	},
-/obj/machinery/washing_machine,
+/obj/machinery/holoplant,
 /turf/simulated/floor/carpet/bcarpet,
 /area/survivalpod)
 "w" = (
@@ -162,7 +162,6 @@
 	dir = 4;
 	pixel_x = -13
 	},
-/obj/machinery/holoplant,
 /turf/simulated/floor/carpet/bcarpet,
 /area/survivalpod)
 "z" = (

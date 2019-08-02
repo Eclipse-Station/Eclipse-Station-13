@@ -10,42 +10,18 @@
 			/obj/item/clothing/suit/medievalfake/blue = 1,
 			/obj/item/clothing/suit/medievalfake/orange = 1
 			)
-	cost = 60
+	cost = 20
 	containertype = /obj/structure/closet/crate
 	containername = "knight cosplay crate"
 
-/datum/supply_pack/costumes/situlavult_templar
-	name = "Templar cosplay crate"
+/datum/supply_pack/costumes/situla_vult
+	name = "Crusader cosplay crate"
 	contains = list(
-			/obj/item/clothing/head/medievalfake/crusader/templar,
-			/obj/item/clothing/suit/medievalfake/crusader/cross/templar,
-			/obj/item/clothing/accessory/poncho/roles/cloak/custom/crusade/templar
+			/obj/random/great_helm_replica = 5,
+			/obj/random/crusader_armor_replica = 4,
+			/obj/random/crusader_cloak = 4,
+			/obj/item/clothing/suit/medievalfake/crusader/dark = 1
 			)
-	cost = 15
+	cost = 20
 	containertype = /obj/structure/closet/crate
-	containername = "templar cosplay crate"
-
-/datum/supply_pack/costumes/situlavult_hospitaller
-	name = "Hospitaller cosplay crate"
-	contains = list(
-			/obj/item/clothing/head/medievalfake/crusader,
-			/obj/item/clothing/suit/medievalfake/crusader/cross/hospitaller,
-			/obj/item/clothing/accessory/poncho/roles/cloak/custom/crusade/hospitaller
-			)
-	cost = 15
-	containertype = /obj/structure/closet/crate
-	containername = "hospitaller cosplay crate"
-
-/datum/supply_pack/costumes/situlavult_teutonic
-	name = "Teutonic cosplay crate"
-	contains = list(
-			/obj/item/clothing/head/medievalfake/crusader/horned,
-			/obj/item/clothing/head/medievalfake/crusader/winged,
-			/obj/item/clothing/suit/medievalfake/crusader/cross,
-			/obj/item/clothing/suit/medievalfake/crusader/cross/teutonic,
-			/obj/item/clothing/accessory/poncho/roles/cloak/custom/crusade,
-			/obj/item/clothing/accessory/poncho/roles/cloak/custom/crusade/teutonic
-			)
-	cost = 30
-	containertype = /obj/structure/closet/crate
-	containername = "teutonic cosplay crate"
+	containername = "crusader cosplay crate"

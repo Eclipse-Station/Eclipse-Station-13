@@ -19,7 +19,6 @@
 		/obj/item/weapon/gun/energy/gun,
 		/obj/item/weapon/melee/telebaton,
 		/obj/item/device/flash,
-		/obj/item/weapon/storage/belt/sheath,
 		/obj/item/weapon/storage/box/ids)
 
 
@@ -159,7 +158,6 @@
 		/obj/item/clothing/accessory/badge/holo/warden,
 		/obj/item/weapon/storage/box/flashbangs,
 		/obj/item/weapon/storage/belt/security,
-		/obj/item/weapon/storage/box/trackimp,
 		/obj/item/weapon/reagent_containers/spray/pepper,
 		/obj/item/weapon/melee/baton/loaded,
 		/obj/item/weapon/gun/energy/gun,

@@ -306,7 +306,6 @@
 	glove_level = 1
 	fingerprint_chance = 100
 	punch_force = 2
-	body_parts_covered = 0
 
 ///////////////////////////////////////////////////////////////////////
 //Head

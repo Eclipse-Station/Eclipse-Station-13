@@ -15,7 +15,6 @@
 	layer = ABOVE_WINDOW_LAYER
 	density = FALSE
 	circuit = /obj/item/weapon/circuitboard/timeclock
-	clicksound = null
 
 	var/obj/item/weapon/card/id/card // Inserted Id card
 

@@ -47,8 +47,7 @@
 		"Emergency Physician" = /decl/hierarchy/outfit/job/medical/doctor/emergency_physician,
 		"Nurse" = /decl/hierarchy/outfit/job/medical/doctor/nurse,
 		"Coroner" = /decl/hierarchy/outfit/job/medical/doctor/coroner,
-		"Virologist" = /decl/hierarchy/outfit/job/medical/doctor/virologist,
-		"Medical Resident")
+		"Virologist" = /decl/hierarchy/outfit/job/medical/doctor/virologist)
 
 //Chemist is a medical job damnit	//YEAH FUCK YOU SCIENCE	-Pete	//Guys, behave -Erro
 /datum/job/chemist
@@ -105,8 +104,7 @@
 	access = list(access_medical, access_medical_equip, access_morgue, access_psychiatrist)
 	minimal_access = list(access_medical, access_medical_equip, access_psychiatrist)
 	outfit_type = /decl/hierarchy/outfit/job/medical/psychiatrist
-	alt_titles = list("Psychologist" = /decl/hierarchy/outfit/job/medical/psychiatrist/psychologist,
-			  "Therapist" = /decl/hierarchy/outfit/job/medical/psychiatrist/psychologist)
+	alt_titles = list("Psychologist" = /decl/hierarchy/outfit/job/medical/psychiatrist/psychologist, "Therapist")
 
 /datum/job/paramedic
 	title = "Paramedic"

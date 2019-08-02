@@ -5,11 +5,3 @@
 	cost = 4
 	slot = "implant"
 	exploitable = 1
-
-// WHY DIDNT THEY READD THIS TOO
-/datum/gear/utility/implant/language/skrellian
-	display_name = "implant, language, skrellian"
-	path = /obj/item/weapon/implant/language/skrellian
-	cost = 4
-	slot = "implant"
-	exploitable = 1

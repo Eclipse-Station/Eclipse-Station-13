@@ -138,13 +138,6 @@ var/datum/planet/virgo3b/planet_virgo3b = null
 		WEATHER_CLEAR = 60,
 		WEATHER_OVERCAST = 40
 		)
-	transition_messages = list(
-		"The sky clears up.",
-		"The sky is visible.",
-		"The weather is calm."
-		)
-	sky_visible = TRUE
-	observed_message = "The sky is clear."
 
 /datum/weather/virgo3b/overcast
 	name = "overcast"
@@ -156,12 +149,6 @@ var/datum/planet/virgo3b/planet_virgo3b = null
 		WEATHER_SNOW = 5,
 		WEATHER_RAIN = 5,
 		WEATHER_HAIL = 5
-		)
-	observed_message = "It is overcast, all you can see are clouds."
-	transition_messages = list(
-		"All you can see above are clouds.",
-		"Clouds cut off your view of the sky.",
-		"It's very cloudy."
 		)
 
 /datum/weather/virgo3b/light_snow
@@ -175,11 +162,6 @@ var/datum/planet/virgo3b/planet_virgo3b = null
 		WEATHER_LIGHT_SNOW = 50,
 		WEATHER_SNOW = 25,
 		WEATHER_HAIL = 5
-		)
-	observed_message = "It is snowing lightly."
-	transition_messages = list(
-		"Small snowflakes begin to fall from above.",
-		"It begins to snow lightly.",
 		)
 
 /datum/weather/virgo3b/snow
@@ -196,11 +178,6 @@ var/datum/planet/virgo3b/planet_virgo3b = null
 		WEATHER_HAIL = 5,
 		WEATHER_OVERCAST = 5
 		)
-	observed_message = "It is snowing."
-	transition_messages = list(
-		"It's starting to snow.",
-		"The air feels much colder as snowflakes fall from above."
-	)
 
 /datum/weather/virgo3b/snow/process_effects()
 	..()
@@ -225,11 +202,6 @@ var/datum/planet/virgo3b/planet_virgo3b = null
 		WEATHER_HAIL = 10,
 		WEATHER_OVERCAST = 5
 		)
-	observed_message = "A blizzard blows snow everywhere."
-	transition_messages = list(
-		"Strong winds howl around you as a blizzard appears.",
-		"It starts snowing heavily, and it feels extremly cold now."
-	)
 
 /datum/weather/virgo3b/blizzard/process_effects()
 	..()
@@ -254,10 +226,6 @@ var/datum/planet/virgo3b/planet_virgo3b = null
 		WEATHER_STORM = 10,
 		WEATHER_HAIL = 5
 		)
-	observed_message = "It is raining."
-	transition_messages = list(
-		"The sky is dark, and rain falls down upon you."
-	)
 
 /datum/weather/virgo3b/rain/process_effects()
 	..()
@@ -272,13 +240,13 @@ var/datum/planet/virgo3b/planet_virgo3b = null
 				var/obj/item/weapon/melee/umbrella/U = L.get_active_hand()
 				if(U.open)
 					if(show_message)
-						to_chat(L, "<span class='notice'>Rain patters softly onto your umbrella.</span>")
+						to_chat(L, "<span class='notice'>Rain patters softly onto your umbrella</span>")
 					continue
 			else if(istype(L.get_inactive_hand(), /obj/item/weapon/melee/umbrella))
 				var/obj/item/weapon/melee/umbrella/U = L.get_inactive_hand()
 				if(U.open)
 					if(show_message)
-						to_chat(L, "<span class='notice'>Rain patters softly onto your umbrella.</span>")
+						to_chat(L, "<span class='notice'>Rain patters softly onto your umbrella</span>")
 					continue
 
 			L.water_act(1)
@@ -290,17 +258,6 @@ var/datum/planet/virgo3b/planet_virgo3b = null
 	icon_state = "storm"
 	light_modifier = 0.3
 	flight_failure_modifier = 10
-	effect_message = "<span class='warning'>Rain falls on you, drenching you in water.</span>"
-
-	var/next_lightning_strike = 0 // world.time when lightning will strike.
-	var/min_lightning_cooldown = 5 SECONDS
-	var/max_lightning_cooldown = 1 MINUTE
-	observed_message = "An intense storm pours down over the region."
-	transition_messages = list(
-		"You feel intense winds hit you as the weather takes a turn for the worst.",
-		"Loud thunder is heard in the distance.",
-		"A bright flash heralds the approach of a storm."
-	)
 
 
 	transition_chances = list(
@@ -318,52 +275,22 @@ var/datum/planet/virgo3b/planet_virgo3b = null
 			if(!T.outdoors)
 				continue // They're indoors, so no need to rain on them.
 
-			// Lazy wind code
-			if(prob(10))
-				if(istype(L.get_active_hand(), /obj/item/weapon/melee/umbrella))
-					var/obj/item/weapon/melee/umbrella/U = L.get_active_hand()
-					if(U.open)
-						to_chat(L, "<span class='danger'>You struggle to keep hold of your umbrella!</span>")
-						L.Stun(20)	// This is not nearly as long as it seems
-						playsound(L, 'sound/effects/rustle1.ogg', 100, 1)	// Closest sound I've got to "Umbrella in the wind"
-				else if(istype(L.get_inactive_hand(), /obj/item/weapon/melee/umbrella))
-					var/obj/item/weapon/melee/umbrella/U = L.get_inactive_hand()
-					if(U.open)
-						to_chat(L, "<span class='danger'>A gust of wind yanks the umbrella from your hand!</span>")
-						playsound(L, 'sound/effects/rustle1.ogg', 100, 1)
-						L.drop_from_inventory(U)
-						U.toggle_umbrella()
-						U.throw_at(get_edge_target_turf(U, pick(alldirs)), 8, 1, L)
-
-			// If they have an open umbrella, it'll guard from rain
+			// If they have an open umbrella, it'll get stolen by the wind
 			if(istype(L.get_active_hand(), /obj/item/weapon/melee/umbrella))
 				var/obj/item/weapon/melee/umbrella/U = L.get_active_hand()
 				if(U.open)
-					if(show_message)
-						to_chat(L, "<span class='notice'>Rain showers loudly onto your umbrella!</span>")
-					continue
+					to_chat(L, "<span class='warning'>A gust of wind yanks the umbrella from your hand!</span>")
+					L.drop_from_inventory(U)
+					U.throw_at(get_edge_target_turf(U, pick(alldirs)), 8, 1, L)
 			else if(istype(L.get_inactive_hand(), /obj/item/weapon/melee/umbrella))
 				var/obj/item/weapon/melee/umbrella/U = L.get_inactive_hand()
 				if(U.open)
-					if(show_message)
-						to_chat(L, "<span class='notice'>Rain showers loudly onto your umbrella!</span>")
-					continue
-
+					to_chat(L, "<span class='warning'>A gust of wind yanks the umbrella from your hand!</span>")
+					L.drop_from_inventory(U)
+					U.throw_at(get_edge_target_turf(U, pick(alldirs)), 8, 1, L)
 
 			L.water_act(2)
-			if(show_message)
-				to_chat(L, effect_message)
-
-	handle_lightning()
-
-// This gets called to do lightning periodically.
-// There is a seperate function to do the actual lightning strike, so that badmins can play with it.
-/datum/weather/virgo3b/storm/proc/handle_lightning()
-	if(world.time < next_lightning_strike)
-		return // It's too soon to strike again.
-	next_lightning_strike = world.time + rand(min_lightning_cooldown, max_lightning_cooldown)
-	var/turf/T = pick(holder.our_planet.planet_floors) // This has the chance to 'strike' the sky, but that might be a good thing, to scare reckless pilots.
-	lightning_strike(T)
+			to_chat(L, "<span class='warning'>Rain falls on you, drenching you in water.</span>")
 
 /datum/weather/virgo3b/hail
 	name = "hail"
@@ -380,47 +307,41 @@ var/datum/planet/virgo3b/planet_virgo3b = null
 		WEATHER_HAIL = 10,
 		WEATHER_OVERCAST = 5
 		)
-	observed_message = "Ice is falling from the sky."
-	transition_messages = list(
-		"Ice begins to fall from the sky.",
-		"It begins to hail.",
-		"An intense chill is felt, and chunks of ice start to fall from the sky, towards you."
-	)
 
 /datum/weather/virgo3b/hail/process_effects()
 	..()
-	for(var/humie in human_mob_list)
-		var/mob/living/carbon/human/H = humie
+	for(var/mob/living/carbon/human/H in living_mob_list)
 		if(H.z in holder.our_planet.expected_z_levels)
 			var/turf/T = get_turf(H)
 			if(!T.outdoors)
 				continue // They're indoors, so no need to pelt them with ice.
 
-			// If they have an open umbrella, it'll guard from hail
-			var/obj/item/weapon/melee/umbrella/U
+			// If they have an open umbrella, it'll guard from rain
+			// Message plays every time the umbrella gets stolen, just so they're especially aware of what's happening
 			if(istype(H.get_active_hand(), /obj/item/weapon/melee/umbrella))
-				U = H.get_active_hand()
+				var/obj/item/weapon/melee/umbrella/U = H.get_active_hand()
+				if(U.open)
+					if(show_message)
+						to_chat(H, "<span class='notice'>Hail patters gently onto your umbrella.</span>")
+					continue
 			else if(istype(H.get_inactive_hand(), /obj/item/weapon/melee/umbrella))
-				U = H.get_inactive_hand()
-			if(U && U.open)
-				if(show_message)
-					to_chat(H, "<span class='notice'>Hail patters onto your umbrella.</span>")
-				continue
-		
+				var/obj/item/weapon/melee/umbrella/U = H.get_inactive_hand()
+				if(U.open)
+					if(show_message)
+						to_chat(H, "<span class='notice'>Hail patters gently onto your umbrella.</span>")
+					continue
+
 			var/target_zone = pick(BP_ALL)
 			var/amount_blocked = H.run_armor_check(target_zone, "melee")
 			var/amount_soaked = H.get_armor_soak(target_zone, "melee")
 
-			var/damage = rand(1,3)
-
-			if(amount_blocked >= 30)
-				continue // No need to apply damage. Hardhats are 30. They should probably protect you from hail on your head.
-				//Voidsuits are likewise 40, and riot, 80. Clothes are all less than 30.
-
-			if(amount_soaked >= damage)
+			if(amount_blocked >= 100)
 				continue // No need to apply damage.
 
-			H.apply_damage(damage, BRUTE, target_zone, amount_blocked, amount_soaked, used_weapon = "hail")
+			if(amount_soaked >= 10)
+				continue // No need to apply damage.
+
+			H.apply_damage(rand(1, 3), BRUTE, target_zone, amount_blocked, amount_soaked, used_weapon = "hail")
 			if(show_message)
 				to_chat(H, effect_message)
 
@@ -432,7 +353,3 @@ var/datum/planet/virgo3b/planet_virgo3b = null
 	transition_chances = list(
 		WEATHER_BLOODMOON = 100
 		)
-	observed_message = "Everything is red. Something really ominous is going on."
-	transition_messages = list(
-		"The sky turns blood red!"
-	)

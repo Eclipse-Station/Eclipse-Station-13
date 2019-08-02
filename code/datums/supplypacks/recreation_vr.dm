@@ -1,4 +1,4 @@
-
+/*
 /datum/supply_pack/recreation/rover
 	name = "NT Humvee"
 	contains = list(
@@ -6,8 +6,8 @@
 			)
 	containertype = /obj/structure/largecrate
 	containername = "NT Humvee Crate"
-	cost = 500
-	
+	cost = 100
+*/
 /datum/supply_pack/recreation/restraints
 	name = "Recreational Restraints"
 	contains = list(

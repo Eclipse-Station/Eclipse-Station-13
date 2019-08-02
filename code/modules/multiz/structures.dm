@@ -48,7 +48,7 @@
 	var/obj/structure/ladder/target_ladder = getTargetLadder(M)
 	if(!target_ladder)
 		return
-	if(!(M.loc == loc) && !M.Move(get_turf(src)))
+	if(!M.Move(get_turf(src)))
 		to_chat(M, "<span class='notice'>You fail to reach \the [src].</span>")
 		return
 
@@ -130,7 +130,7 @@
 	density = 0
 	opacity = 0
 	anchored = 1
-	flags = ON_BORDER
+	layer = 2.4 // Above turf, but they're sort of the floor, so below objects.
 
 /obj/structure/stairs/initialize()
 	. = ..()

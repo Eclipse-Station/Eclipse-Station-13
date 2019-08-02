@@ -117,7 +117,7 @@
 
 	if(href_list["observe"])
 
-		if(alert(src,"Are you sure you wish to observe? You will have to wait three minutes before being able to respawn!","Player Setup","Yes","No") == "Yes") //Citadelstation edit
+		if(alert(src,"Are you sure you wish to observe? You will have to wait 5 minute before being able to respawn!","Player Setup","Yes","No") == "Yes") //Vorestation edit
 			if(!client)	return 1
 
 			//Make a new mannequin quickly, and allow the observer to take the appearance
@@ -172,13 +172,6 @@
 		ViewManifest()
 
 	if(href_list["SelectedJob"])
-	
-		//Prevents people rejoining as same character.
-		for (var/mob/living/carbon/human/C in mob_list)
-			var/char_name = client.prefs.real_name
-			if(char_name == C.real_name)
-				usr << "<span class='notice'>There is a character that already exists with the same name - <b>[C.real_name]</b>, please join with a different one, or use Quit the Round with the previous character.</span>" //VOREStation Edit
-				return
 
 		if(!config.enter_allowed)
 			usr << "<span class='notice'>There is an administrative lock on entering the game!</span>"

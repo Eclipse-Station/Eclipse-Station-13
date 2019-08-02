@@ -40,12 +40,8 @@ var/list/global/map_templates = list()
 /datum/map_template/proc/preload_size(path, orientation = SOUTH)
 	var/bounds = maploader.load_map(file(path), 1, 1, 1, cropMap=FALSE, measureOnly=TRUE, orientation=orientation)
 	if(bounds)
-		if(orientation & (90 | 270))
-			width = bounds[MAP_MAXY]
-			height = bounds[MAP_MAXX]
-		else
-			width = bounds[MAP_MAXX] // Assumes all templates are rectangular, have a single Z level, and begin at 1,1,1
-			height = bounds[MAP_MAXY]
+		width = bounds[MAP_MAXX] // Assumes all templates are rectangular, have a single Z level, and begin at 1,1,1
+		height = bounds[MAP_MAXY]
 	return bounds
 
 /datum/map_template/proc/initTemplateBounds(var/list/bounds)

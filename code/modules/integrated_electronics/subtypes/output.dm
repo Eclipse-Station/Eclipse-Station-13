@@ -300,7 +300,7 @@
 		text_output += "\an [name]"
 	else
 		text_output += "\an ["\improper[initial_name]"] labeled '[name]'"
-	text_output += " which is currently [get_pin_data(IC_INPUT, 1) ? "lit <font color=[led_color]>Â¤</font>" : "unlit."]"
+	text_output += " which is currently [get_pin_data(IC_INPUT, 1) ? "lit <font color=[led_color]>¤</font>" : "unlit."]"
 	to_chat(user,jointext(text_output,null))
 
 /obj/item/integrated_circuit/output/led/red
@@ -462,7 +462,8 @@
 
 
 /obj/item/integrated_circuit/output/holographic_projector/proc/destroy_hologram()
-	QDEL_NULL(hologram)
+	hologram.forceMove(src)
+	qdel(hologram)
 
 //	holo_beam.End()
 //	QDEL_NULL(holo_beam)

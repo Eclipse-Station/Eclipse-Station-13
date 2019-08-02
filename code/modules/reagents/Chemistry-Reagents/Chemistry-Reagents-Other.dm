@@ -426,6 +426,8 @@
 	if(istype(O, /obj/structure/window))
 		var/obj/structure/window/W = O
 		W.apply_silicate(volume)
+		remove_self(volume)
+	return
 
 /datum/reagent/glycerol
 	name = "Glycerol"

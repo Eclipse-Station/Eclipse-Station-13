@@ -71,13 +71,13 @@
 
 /obj/item/clothing/head/helmet/medieval/crusader/horned
 	name = "horned great helm"
-	desc = "Helfen, Wehren, Heilen!"
+	desc = "A classic metal great helm, effective at stopping melee attacks. This one have horns attached (and may or may not be endrosed by Unathi crew)."
 	icon_state = "crusader_horned"
 	item_state = "crusader_horned"
 
 /obj/item/clothing/head/helmet/medieval/crusader/winged
 	name = "winged great helm"
-	desc = "Helfen, Wehren, Heilen!"
+	desc = "A classic metal great helm, effective at stopping melee attacks. This one have winged horns attached (and may or may not be endrosed by Unathi AND Avian crew)."
 	icon_state = "crusader_winged"
 	item_state = "crusader_winged"
 
@@ -173,7 +173,7 @@
 //Helmets
 /obj/item/clothing/head/medievalfake/crusader
 	name = "great helm replica"
-	desc = "A plastic replica of classic great helm. Alas, divine protection is not included and you would be safer with an actual bucket."
+	desc = "A plastic replica of classic great helm."
 	icon_state = "crusader"
 	item_state = "crusader"
 
@@ -185,13 +185,13 @@
 
 /obj/item/clothing/head/medievalfake/crusader/horned
 	name = "horned great helm replica"
-	desc = "A plastic replica of classic great helm. This one have horns attached (and may or may not be endrosed by crew with horns)."
+	desc = "A plastic replica of classic great helm. This one have horns attached (and may or may not be endrosed by Unathi crew)."
 	icon_state = "crusader_horned"
 	item_state = "crusader_horned"
 
 /obj/item/clothing/head/medievalfake/crusader/winged
 	name = "winged great helm replica"
-	desc = "A plastic replica of classic great helm. This one have winged horns attached (and may or may not be endrosed by crew with horns, <i>and</i> wings)."
+	desc = "A plastic replica of classic great helm. This one have winged horns attached (and may or may not be endrosed by Unathi <i>and</i> Avian crew)."
 	icon_state = "crusader_winged"
 	item_state = "crusader_winged"
 
@@ -204,7 +204,7 @@
 
 /obj/item/clothing/suit/medievalfake/crusader/cross
 	name = "crusader armour replica"
-	desc = "A plastic replica of knight armor with crusader feeling to it. Alas, divine protection is not included."
+	desc = "A plastic replica of knight armor with crusader feeling to it."
 	icon_state = "crusader_cross"
 	item_state = "crusader_cross"
 

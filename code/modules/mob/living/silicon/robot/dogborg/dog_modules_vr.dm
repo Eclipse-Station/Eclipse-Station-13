@@ -152,15 +152,16 @@
 	charge_cost = 10
 	var/datum/matter_synth/water = null
 
-/obj/item/weapon/reagent_containers/borghypo/hound/process() // BEGIN CITADEL CHANGES - Removes water cost and make the reagent generation not nerfed.
+/obj/item/weapon/reagent_containers/borghypo/hound/process() //Recharges in smaller steps and uses the water reserves as well.
 	if(isrobot(loc))
 		var/mob/living/silicon/robot/R = loc
 		if(R && R.cell)
 			for(var/T in reagent_ids)
-				if(reagent_volumes[T] < volume)
+				if(reagent_volumes[T] < volume && water.energy >= charge_cost)
 					R.cell.use(charge_cost)
-					reagent_volumes[T] = min(reagent_volumes[T] + 5, volume)
-	return 1 // END CITADEL CHANGES
+					water.use_charge(charge_cost)
+					reagent_volumes[T] = min(reagent_volumes[T] + 1, volume)
+	return 1
 
 //Tongue stuff
 /obj/item/device/dogborg/tongue

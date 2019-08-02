@@ -10,9 +10,7 @@
 	name = "service-hound module"
 	sprites = list(
 					"Blackhound" = "k50",
-					"Pinkhound" = "k69",
-					"ServicehoundV2" = "serve2",
-					"ServicehoundV2 Darkmode" = "servedark",
+					"Pinkhound" = "k69"
 					)
 	channels = list("Service" = 1)
 	can_be_pushed = 0
@@ -73,5 +71,4 @@
 	R.dogborg = TRUE
 	R.wideborg = TRUE
 	R.verbs |= /mob/living/silicon/robot/proc/ex_reserve_refill
-	R.verbs |= /mob/living/silicon/robot/proc/robot_mount
 	..()

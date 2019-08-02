@@ -331,8 +331,7 @@ var/list/all_technomancer_assistance = typesof(/datum/technomancer/assistance) -
 
 
 		if(href_list["refund_functions"])
-			var/turf/T = get_turf(H)
-			if(T.z in using_map.player_levels)
+			if(H.z != 2)
 				H << "<span class='danger'>You can only refund at your base, it's too late now!</span>"
 				return
 			var/obj/item/weapon/technomancer_core/core = null
@@ -348,8 +347,7 @@ var/list/all_technomancer_assistance = typesof(/datum/technomancer/assistance) -
 		attack_self(H)
 
 /obj/item/weapon/technomancer_catalog/attackby(var/atom/movable/AM, var/mob/user)
-	var/turf/T = get_turf(user)
-	if(T.z in using_map.player_levels)
+	if(user.z != 2)
 		to_chat(user, "<span class='danger'>You can only refund at your base, it's too late now!</span>")
 		return
 	for(var/datum/technomancer/equipment/E in equipment_instances + assistance_instances)

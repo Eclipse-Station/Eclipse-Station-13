@@ -12,6 +12,7 @@
 			/obj/item/weapon/storage/pill_bottle/happy,
 			/obj/item/weapon/reagent_containers/food/drinks/bottle/pwine
 			)
+
 	name = "Contraband crate"
 	cost = 25
 	containertype = /obj/structure/closet/crate

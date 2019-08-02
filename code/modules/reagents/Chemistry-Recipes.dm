@@ -1848,7 +1848,7 @@
 	name = "Roy Rogers"
 	id = "roy_rogers"
 	result = "roy_rogers"
-	required_reagents = list("shirley_temple" = 5, "lemon_lime" = 2)
+	required_reagents = list("gingerale" = 4, "lemon_lime" = 2, "grenadine" = 1)
 	result_amount = 7
 
 /datum/chemical_reaction/drinks/collinsmix
@@ -2074,7 +2074,7 @@
 	name = "Screaming Viking"
 	id = "screamingviking"
 	result = "screamingviking"
-	required_reagents = list("martini" = 2, "vodkatonic" = 2, "limejuice" = 1, "rum" = 1)
+	required_reagents = list("vodka" = 1, "vermouth" = 1, "limejuice" = 1, "rum" = 1, "gin" = 1, "tonic" = 1)
 	result_amount = 6
 
 /datum/chemical_reaction/drinks/vilelemon
@@ -2267,13 +2267,6 @@
 	result = "oilslick"
 	required_reagents = list("cornoil" = 2, "honey" = 1)
 	result_amount = 3
-
-/datum/chemical_reaction/drinks/eggnog
-	name = "Eggnog"
-	id = "eggnog"
-	result = "eggnog"
-	required_reagents = list("milk" = 5, "cream" = 5, "sugar" = 5, "egg" = 3)
-	result_amount = 15
 
 /datum/chemical_reaction/drinks/nuclearwaste_radium
 	name = "Nuclear Waste"

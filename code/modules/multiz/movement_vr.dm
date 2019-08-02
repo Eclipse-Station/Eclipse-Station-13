@@ -7,10 +7,6 @@
 			if(!A.CanPass(src, src.loc, 1, 0))
 				return FALSE
 		Move(landing)
-		if(isliving(src))
-			var/mob/living/L = src
-			if(L.pulling)
-				L.pulling.forceMove(landing)
 		return 1
 
 	for(var/obj/O in loc)

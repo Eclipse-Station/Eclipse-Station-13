@@ -912,11 +912,7 @@ default behaviour is:
 
 /mob/living/proc/escape_buckle()
 	if(buckled)
-		if(istype(buckled, /obj/vehicle))
-			var/obj/vehicle/vehicle = buckled
-			vehicle.unload()
-		else
-			buckled.user_unbuckle_mob(src, src)
+		buckled.user_unbuckle_mob(src, src)
 
 /mob/living/proc/resist_grab()
 	var/resisting = 0

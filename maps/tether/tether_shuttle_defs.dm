@@ -86,6 +86,7 @@
 	//These seem backwards because they are written from the perspective of the merc and vox ships
 	departure_message = "Attention. The away mission vessel is approaching the colony."
 	arrival_message = "Attention. The away mission vessel is now leaving from the colony."
+*/
 
 /datum/shuttle/multi_shuttle/awaymission/New()
 	..()
@@ -93,11 +94,9 @@
 	if(awaym_dest && awaym_dest.contents.len) // Otherwise this is an empty imaginary area
 		destinations["Unknown Location [rand(1000,9999)]"] = awaym_dest
 
-*/
-
 //////////////////////////////////////////////////////////////
 // Tether Shuttle
-/datum/shuttle/ferry/tether_backup
+/datum/shuttle/ferry/tether_backup/goodluckmcgee
 	name = "Tether Backup"
 	location = 1 // At offsite
 	warmup_time = 5
@@ -173,19 +172,6 @@
 	arrival_message = "Attention. An unregistered vessel is approaching Virgo-3B."
 	departure_message = "Attention. A unregistered vessel is now leaving Virgo-3B."
 	..()
-
-/datum/shuttle/ferry/multidock/specops/ert
-	name = "Special Operations"
-	location = 0
-	warmup_time = 10
-	area_offsite = /area/shuttle/specops/station	//centcom is the home station, the Exodus is offsite
-	area_station = /area/shuttle/specops/centcom
-	docking_controller_tag = "specops_shuttle_port"
-	docking_controller_tag_station = "specops_shuttle_port"
-	docking_controller_tag_offsite = "specops_shuttle_fore"
-	dock_target_station = "specops_centcom_dock"
-	dock_target_offsite = "specops_dock_airlock"
-
 
 //////////////////////////////////////////////////////////////
 // RogueMiner "Belter: Shuttle

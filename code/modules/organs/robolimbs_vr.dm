@@ -191,34 +191,3 @@
 
 /obj/item/weapon/disk/limb/dsi_teshari
 	company = "DSI - Teshari"
-
-
-/datum/robolimb/braincase
-	company = "cortexCases - MMI"
-	desc = "A solid, transparent case to hold your important bits in with style."
-	icon = 'icons/mob/human_races/cyberlimbs/cortex/braincase.dmi'
-	unavailable_to_build = 1
-	parts = list(BP_HEAD)
-
-/obj/item/weapon/disk/limb/braincase
-	company = "cortexCases - MMI"
-
-/datum/robolimb/posicase
-	company = "cortexCases - Posi"
-	desc = "A solid, transparent case to hold your important bits in with style."
-	icon = 'icons/mob/human_races/cyberlimbs/cortex/posicase.dmi'
-	unavailable_to_build = 1
-	parts = list(BP_HEAD)
-
-/obj/item/weapon/disk/limb/posicase
-	company = "cortexCases - Posi"
-
-/datum/robolimb/antares
-	company = "Antares Robotics"
-	desc = "Mustard-yellow industrial limb. Heavyset and thick."
-	icon = 'icons/mob/human_races/cyberlimbs/antares/antares_main.dmi'
-	unavailable_to_build = 1
-	monitor_styles = standard_monitor_styles
-
-/obj/item/weapon/disk/limb/antares
-	company = "Antares Robotics"

@@ -154,7 +154,7 @@
 	set category = "Preferences"
 	set desc = "Toggles the playing of ambience."
 
-	var/pref_path = /datum/client_preference/play_ambience
+	var/pref_path = /datum/client_preference/play_ambiance
 
 	toggle_preference(pref_path)
 
