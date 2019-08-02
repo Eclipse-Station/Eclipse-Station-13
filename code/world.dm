@@ -527,7 +527,7 @@ var/world_topic_spam_protect_time = world.timeofday
 	if (config && config.server_name)
 		s += "<b>[config.server_name]</b> &#8212; "
 
-	s += "<b>Eclipse Station 13 - <b>"
+	s += "<b>Eclipse Station 13 - </b>"
 	s += "<b>[station_name()]</b>";
 	s += " ("
 	s += "<a href=\"http://www.eclipse-station.space/\">" //Change this to wherever you want the hub to link to.
