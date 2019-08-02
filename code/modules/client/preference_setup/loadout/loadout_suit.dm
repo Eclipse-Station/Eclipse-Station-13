@@ -67,7 +67,6 @@
 	path = /obj/item/clothing/suit/storage/toggle/brown_jacket/nanotrasen/sleeveless
 
 /datum/gear/suit/mil
-	display_name = "military jacket"
 	display_name = "military jacket selection"
 	path = /obj/item/clothing/suit/storage/miljacket
 
