@@ -40,7 +40,7 @@
 				deactivate()
 				return FALSE
 
-/datum/nifsoft/pressure
+/*/datum/nifsoft/pressure
 	name = "Pressure Seals"
 	desc = "Creates pressure seals around important synthetic components to protect them from vacuum. Almost impossible on organics."
 	list_pos = NIF_PRESSURE
@@ -48,7 +48,7 @@
 	a_drain = 0.5
 	wear = 3
 	applies_to = NIF_SYNTHETIC
-	other_flags = (NIF_O_PRESSURESEAL)
+	other_flags = (NIF_O_PRESSURESEAL)*/ // disables redundant NIF, synthetics no longer require this
 
 /datum/nifsoft/heatsinks
 	name = "Heat Sinks"
@@ -105,11 +105,16 @@
 
 	activate()
 		if((. = ..()))
-			to_chat(nif.human,"<span class='danger'>You are compelled to follow these rules: </span>\n<span class='notify'>[laws]</span>")
+			to_chat(nif.human,"<span class='danger'>You feel a strong compulsion towards these directives: </span><br><span class='notify'>[laws]</span>\
+			<br><span class='danger'>While the disk has a considerable hold on your mind, you feel like you would be able to resist the control if you were pushed to do something you would consider utterly unacceptable.\
+			<br>\[OOC NOTE: Compliance laws are only a scene tool, and not something that is effective in actual gameplay, hence the above. For example, if you are compelled to do something that would affect the round or other players (kill a crewmember, steal an item, give the disker elevated access), you should not do so.\]</span>")
 
 	install()
 		if((. = ..()))
-			to_chat(nif.human,"<span class='danger'>You feel suddenly compelled to follow these rules: </span>\n<span class='notify'>[laws]</span>")
+			log_game("[nif.human? nif.human : "ERROR: NO HUMAN ON NIF"] was compliance disked with [laws]")
+			to_chat(nif.human,"<span class='danger'>You feel a strong compulsion towards these directives: </span><br><span class='notify'>[laws]</span>\
+			<br><span class='danger'>While the disk has a considerable hold on your mind, you feel like you would be able to resist the control if you were pushed to do something you would consider utterly unacceptable.\
+			<br>\[OOC NOTE: Compliance laws are only a scene tool, and not something that is effective in actual gameplay, hence the above. For example, if you are compelled to do something that would affect the round or other players (kill a crewmember, steal an item, give the disker elevated access), you should not do so.\]</span>")
 
 	uninstall()
 		nif.notify("ERROR! Unable to comply!",TRUE)

@@ -13,6 +13,7 @@
 	req_admin_notify = 1
 	economic_modifier = 10
 	wl_config_heads = TRUE		//Eclipse edit: config-based whitelisting
+	alt_titles = list("Chief of Operations")
 
 	minimum_character_age = 25
 	ideal_character_age = 50
@@ -44,7 +45,7 @@
 	economic_modifier = 5
 	access = list(access_eva, access_engine, access_engine_equip, access_tech_storage, access_maint_tunnels, access_external_airlocks, access_construction, access_atmospherics)
 	minimal_access = list(access_eva, access_engine, access_engine_equip, access_tech_storage, access_maint_tunnels, access_external_airlocks, access_construction)
-	alt_titles = list("Maintenance Technician","Engine Technician","Electrician")
+	alt_titles = list("Maintenance Technician","Engine Technician","Electrician","Operational Support","Junior Engineer")
 
 	minimal_player_age = 3
 
@@ -64,6 +65,7 @@
 	economic_modifier = 5
 	access = list(access_eva, access_engine, access_engine_equip, access_tech_storage, access_maint_tunnels, access_external_airlocks, access_construction, access_atmospherics, access_external_airlocks)
 	minimal_access = list(access_eva, access_engine, access_atmospherics, access_maint_tunnels, access_emergency_storage, access_construction, access_external_airlocks)
+	alt_titles = list("Life Support Technician")
 
 	minimal_player_age = 3
 

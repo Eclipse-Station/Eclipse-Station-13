@@ -58,7 +58,7 @@
 
 		// For now as a safety measure we will only save if the name matches.
 		if(prefs.real_name != persister.real_name)
-			log_debug("Persist (P4P): Skipping [persister] becuase ORIG:[persister.real_name] != CURR:[prefs.real_name].")
+			log_debug("Persist (P4P): Skipping [persister] because ORIG:[persister.real_name] != CURR:[prefs.real_name].")
 			return
 
 		return prefs
@@ -250,7 +250,7 @@
 		prefs.nif_durability = null
 		prefs.nif_savedata = null
 
-	var/datum/category_group/player_setup_category/vore_cat = prefs.player_setup.categories_by_name["VORE"]
+	var/datum/category_group/player_setup_category/vore_cat = prefs.player_setup.categories_by_name["Species Customization"]
 	var/datum/category_item/player_setup_item/vore/nif/nif_prefs = vore_cat.items_by_name["NIF Data"]
 
 	var/savefile/S = new /savefile(prefs.path)
