@@ -288,8 +288,18 @@
 
 //General use
 /obj/item/weapon/melee/fluff/holochain/mass
-	desc = "A mass produced version of the original. It has faux leather and an aluminium base, but still stings like the original."
+	name = "holographic chain"
+	desc = "A mass produced holographic chain. It has faux leather and an aluminium base, but still stings like an original."
+	icon = 'icons/vore/custom_items_vr.dmi'
+	icon_state = "holochain"
+	icon_override = 'icons/vore/custom_items_vr.dmi'
+	item_state = "holochain_mob"
+	flags = CONDUCT | NOBLOODY
+	slot_flags = SLOT_BELT
 	force = 8
+	throwforce = 3
+	w_class = ITEMSIZE_NORMAL
+	damtype = HALLOSS
 	attack_verb = list("flogged", "whipped", "lashed", "flayed")
 
 
@@ -1548,7 +1558,7 @@
 		to_chat(user,"<span class='warning'>\The [src] is too far away from the beacon. Try getting closer first!</span>")
 		return FALSE
 	return ..()
-
+/* CITADEL CHANGE - Removes Virgo Fluff
 //InterroLouis: Ruda Lizden
 /obj/item/clothing/accessory/badge/holo/detective/ruda
 	name = "Hisstective's Badge"
@@ -1620,10 +1630,10 @@
 			qdel(src) //One time use.
 	else //If not, do nothing.
 		to_chat(user,"<span class='warning'>You are unable to inject other people.</span>")
-
+END OF CITADEL CHANGES */
 //For 2 handed fluff weapons.
 /obj/item/weapon/material/twohanded/fluff //Twohanded fluff items.
-	name = "fluff."
+	name = "fluff item"
 	desc = "This object is so fluffy. Just from the sight of it, you know that either something went wrong or someone spawned the incorrect item."
 	icon = 'icons/vore/custom_items_vr.dmi'
 	item_icons = list(

@@ -31,10 +31,10 @@
 	path = /obj/item/clothing/accessory/collar/holo
 
 /datum/gear/accessory/white_drop_pouches
-	allowed_roles = list("Paramedic","Chief Medical Officer","Medical Doctor","Chemist")
+	allowed_roles = list("Paramedic","Chief Medical Officer","Medical Doctor","Chemist","Search and Rescue")
 
 /datum/gear/accessory/white_vest
-	allowed_roles = list("Paramedic","Chief Medical Officer","Medical Doctor","Chemist")
+	allowed_roles = list("Paramedic","Chief Medical Officer","Medical Doctor","Chemist","Search and Rescue")
 /* CITADEL CHANGE - Removes Virgo Fluff
 /datum/gear/accessory/khcrystal
 	display_name = "KH Life Crystal"
@@ -54,3 +54,10 @@ END OF CITADEL CHANGE */
 /datum/gear/accessory/flops/New()
 	..()
 	gear_tweaks = list(gear_tweak_free_color_choice)
+/*
+/datum/gear/accessory/holotags
+	display_name = "USDF dogtags"
+	description = "A pair of USDF dogtags."
+	path = /obj/item/clothing/accessory/collar/donator/holotags
+	ckeywhitelist = list("certifiedhyena")
+*/

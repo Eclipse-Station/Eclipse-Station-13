@@ -166,7 +166,7 @@
 	vore_pounce_chance = 60 // Good boys don't do too much police brutality.
 
 	var/check_records = 0 // If true, arrests people without a record.
-	var/check_arrest = 1 // If true, arrests people who are set to arrest.
+	var/check_arrest = 0 // If true, arrests people who are set to arrest. CITADEL CHANGE - Let's not have mauling Beepskies
 
 /mob/living/simple_animal/otie/security/phoron
 	name = "mutated guard otie"
@@ -383,3 +383,4 @@
 	.=..()
 	resting = 0
 	icon_state = icon_dead
+	. = ..()
