@@ -1,7 +1,7 @@
 #pretending we're C because otherwise ruby will initialize, even with "language: dm".
 language: c
 sudo: false
-
+dist: trusty
 env:
   global:
     - BYOND_MAJOR="512"
