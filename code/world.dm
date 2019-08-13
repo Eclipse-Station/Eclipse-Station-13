@@ -537,7 +537,6 @@ var/world_topic_spam_protect_time = world.timeofday
 	s += "<a href=\"https://discord.gg/xuS4t9U\">" //Change this to wherever you want the hub to link to.
 	s += "Discord"  //Replace this with something else. Or ever better, delete it and uncomment the game version.
 	s += "</a>"
-	s += ")\]"
 	s += "<br><small><i>Heavy RolePlay, antags (w/ vote, no murderbone), diverse character creation menu.</i></small><br>"
 	s += ")"
 	var/list/features = list()

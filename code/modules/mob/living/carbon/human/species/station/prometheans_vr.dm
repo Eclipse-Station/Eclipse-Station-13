@@ -34,5 +34,5 @@
 		/mob/living/carbon/human/proc/succubus_drain_lethal,
 		/mob/living/carbon/human/proc/slime_feed,
 		/mob/living/proc/eat_trash,
-		/mob/living/proc/insidePanel //AEIOU add
+		/mob/living/proc/insidePanel //Eclipse add
 		)
