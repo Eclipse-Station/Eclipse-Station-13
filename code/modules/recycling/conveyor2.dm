@@ -120,7 +120,6 @@
 				forwards = dir
 				backwards = turn(dir, 180)
 			playsound(src.loc, I.usesound, 50, 1)
-			to_chat(user, "<span class='notice'>You adjust the gears and motors to spin in the conveyor's direction.</span>")
 			return
 
 	user.drop_item(get_turf(src))
