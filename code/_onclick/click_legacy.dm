@@ -3,8 +3,8 @@
 	~Sayu
 */
 
-#warning The legacy version of click.dm is in use. This file is not updated with the main system, and is intended to be a fallback option in the event click code breaks. ^Spitzer
-#warning Travis failures will probably be caused by the warnings in this file.
+#warn The legacy version of click.dm is in use. This file is not updated with the main system, and is intended to be a fallback option in the event click code breaks. ^Spitzer
+#warn Travis failures will probably be caused by the warnings in this file.
 
 // 1 decisecond click delay (above and beyond mob/next_move)
 /mob/var/next_click = 0
