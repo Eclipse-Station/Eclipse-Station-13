@@ -1,0 +1,48 @@
+# This list auto requests reviews from the specified org members
+# when a PR that modifies the file in question is opened
+# This list is alphabetized by User -> Filename KEEP IT THAT WAY
+# In the event that multiple org members are to be informed of changes
+# to the same file or dir, add them to the end under Multiple Owners
+
+# DrExample / Nestor
+
+/.github/ @DrExample
+/SQL/ @DrExample
+/code/controllers/ @DrExample
+/code/game/gamemodes/ @DrExample
+/code/unit_tests/ @DrExample
+/code/world.dm @DrExample
+/code/hub.dm @DrExample
+/modular_aeiou/ @DrExample
+/modular_eclipse/lore_override/ @DrExample
+/.gitattributes @DrExample
+/.gitconfig @DrExample
+/.gitignore @DrExample
+/.travis.yml @DrExample
+/libmariadb.dll @DrExample
+/libmariadb.so @DrExample
+/libmysql.dll @DrExample
+
+
+
+
+
+# EvilJackCarver / Andreas
+
+/code/ZAS/ @EvilJackCarver
+/code/controllers/configuration_eclipse.dm
+/code/controllers/emergency_shuttle_controller.dm
+/code/controllers/failsafe.dm
+/code/controllers/master.dm
+/code/modules/power/ @EvilJackCarver
+/modular_citadel/code/modules/projectiles/ @EvilJackCarver
+/modular_eclipse/code/modules/projectiles/ @EvilJackCarver
+/modular_eclipse/modular_handgun_sprite/ @EvilJackCarver
+/modular_eclipse/radio_sprites/ @EvilJackCarver
+/modular_eclipse/reginald/ @EvilJackCarver
+/modular_eclipse/secgun/ @EvilJackCarver
+/tools/ @EvilJackCarver
+
+
+# Multiple Owners
+/maps/southern_cross/ @DrExample @EvilJackCarver
