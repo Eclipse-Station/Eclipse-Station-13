@@ -11,6 +11,5 @@
 			"no" = list("nyo"),
 			"nu" = list("nyu"),
 			"l" = list("w", "ww"),
-			"r" = list("w", "ww"),
-			"ove" = list("uv")
+			"r" = list("w", "ww")
 		))
