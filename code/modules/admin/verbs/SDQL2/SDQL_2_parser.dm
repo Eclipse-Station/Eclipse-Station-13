@@ -382,7 +382,7 @@
 
 	var/path = text2path(token(i))
 	if (path == null)
-		return parse_error("Nonexistant type path: [token(i)]")
+		return parse_error("Non-existent type path: [token(i)]")
 
 	node += path
 

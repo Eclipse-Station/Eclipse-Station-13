@@ -202,7 +202,7 @@
 /datum/reagent/fuel
 	name = "Welding fuel"
 	id = "fuel"
-	description = "Required for welders. Flamable."
+	description = "Required for welders. Flammable."
 	taste_description = "gross metal"
 	reagent_state = LIQUID
 	color = "#660000"

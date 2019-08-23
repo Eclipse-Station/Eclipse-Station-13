@@ -928,7 +928,7 @@ End Citadel Change */
 	..()
 	//if(alien == IS_TAJARA) //VOREStation Edit Begin
 		//M.adjustToxLoss(0.5 * removed)
-		//M.make_jittery(4) //extra sensitive to caffine
+		//M.make_jittery(4) //extra sensitive to caffeine
 	if(adj_temp > 0)
 		holder.remove_reagent("frostoil", 10 * removed)
 
@@ -986,7 +986,7 @@ End Citadel Change */
 
 	glass_desc = "A nice and refreshing beverage while you are reading."
 	glass_name = "soy latte"
-	glass_desc = "A nice and refrshing beverage while you are reading."
+	glass_desc = "A nice and refreshing beverage while you are reading."
 
 	cup_icon_state = "cup_latte"
 	cup_name = "cup of soy latte"
@@ -1195,13 +1195,13 @@ End Citadel Change */
 /datum/reagent/drink/rewriter
 	name = "Rewriter"
 	id = "rewriter"
-	description = "The secret of the sanctuary of the Libarian..."
+	description = "The secret of the sanctuary of the Librarian..."
 	taste_description = "citrus and coffee"
 	color = "#485000"
 	adj_temp = -5
 
 	glass_name = "Rewriter"
-	glass_desc = "The secret of the sanctuary of the Libarian..."
+	glass_desc = "The secret of the sanctuary of the Librarian..."
 
 /datum/reagent/drink/rewriter/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
@@ -1318,13 +1318,13 @@ End Citadel Change */
 /datum/reagent/drink/shirley_temple
 	name = "Shirley Temple"
 	id =  "shirley_temple"
-	description = "A sweet concotion hated even by its namesake."
+	description = "A sweet concoction hated even by its namesake."
 	taste_description = "sweet ginger ale"
 	color = "#EF304F"
 	adj_temp = -8
 
 	glass_name = "shirley temple"
-	glass_desc = "A sweet concotion hated even by its namesake."
+	glass_desc = "A sweet concoction hated even by its namesake."
 	glass_special = list(DRINK_FIZZ)
 
 /datum/reagent/drink/roy_rogers
@@ -1425,13 +1425,13 @@ End Citadel Change */
 /datum/reagent/drink/sweetsundaeramen
 	name = "Dessert Ramen"
 	id = "dessertramen"
-	description = "How many things can you add to a cup of ramen before it begins to question its existance?"
+	description = "How many things can you add to a cup of ramen before it begins to question its existence?"
 	taste_description = "unbearable sweetness"
 	color = "#4444FF"
 	nutrition = 5
 
 	glass_name = "Sweet Sundae Ramen"
-	glass_desc = "How many things can you add to a cup of ramen before it begins to question its existance?"
+	glass_desc = "How many things can you add to a cup of ramen before it begins to question its existence?"
 
 /datum/reagent/drink/ice
 	name = "Ice"
@@ -1502,7 +1502,7 @@ End Citadel Change */
 	color = "#3a6617" // rgb(58, 102, 23)
 
 	glass_name = "Ent's Draught"
-	glass_desc = "You can almost smell the tranquility emanating from this."
+	glass_desc = "You can almost smell the tranquillity emanating from this."
 
 /datum/reagent/drink/lovepotion
 	name = "Love Potion"
@@ -1611,7 +1611,7 @@ End Citadel Change */
 /datum/reagent/ethanol/ale
 	name = "Ale"
 	id = "ale"
-	description = "A dark alchoholic beverage made by malted barley and yeast."
+	description = "A dark alcoholic beverage made by malted barley and yeast."
 	taste_description = "hearty barley ale"
 	color = "#4C3100"
 	strength = 50
@@ -1652,7 +1652,7 @@ End Citadel Change */
 /datum/reagent/ethanol/cognac
 	name = "Cognac"
 	id = "cognac"
-	description = "A sweet and strongly alchoholic drink, made after numerous distillations and years of maturing. Classy as fornication."
+	description = "A sweet and strongly alcoholic drink, made after numerous distillations and years of maturing. Classy as fornication."
 	taste_description = "rich and smooth alcohol"
 	taste_mult = 1.1
 	color = "#AB3C05"
@@ -1683,14 +1683,14 @@ End Citadel Change */
 	name = "Gin"
 	id = "gin"
 	description = "It's gin. In space. I say, good sir."
-	taste_description = "an alcoholic christmas tree"
+	taste_description = "an alcoholic Christmas tree"
 	color = "#0064C6"
 	strength = 50
 
 	glass_name = "gin"
 	glass_desc = "A crystal clear glass of Griffeater gin."
 
-//Base type for alchoholic drinks containing coffee
+//Base type for alcoholic drinks containing coffee
 /datum/reagent/ethanol/coffee
 	overdose = 45
 
@@ -1705,7 +1705,7 @@ End Citadel Change */
 		M.bodytemperature = max(310, M.bodytemperature - (5 * TEMPERATURE_DAMAGE_COEFFICIENT))
 	//if(alien == IS_TAJARA)
 		//M.adjustToxLoss(0.5 * removed)
-		//M.make_jittery(4) //extra sensitive to caffine
+		//M.make_jittery(4) //extra sensitive to caffeine
 
 /datum/reagent/ethanol/coffee/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	//if(alien == IS_TAJARA)
@@ -1842,7 +1842,7 @@ End Citadel Change */
 /datum/reagent/ethanol/wine
 	name = "Wine"
 	id = "wine"
-	description = "An premium alchoholic beverage made from distilled grape juice."
+	description = "A premium alcoholic beverage made from distilled grape juice."
 	taste_description = "bitter sweetness"
 	color = "#7E4043" // rgb: 126, 64, 67
 	strength = 15
@@ -2234,7 +2234,7 @@ End Citadel Change */
 /datum/reagent/ethanol/hooch
 	name = "Hooch"
 	id = "hooch"
-	description = "Either someone's failure at cocktail making or attempt in alchohol production. In any case, do you really want to drink that?"
+	description = "Either someone's failure at cocktail making or attempt in alcohol production. In any case, do you really want to drink that?"
 	taste_description = "pure alcohol"
 	color = "#4C3100"
 	strength = 25
@@ -2333,7 +2333,7 @@ End Citadel Change */
 	strength = 25
 
 	glass_name = "The Manly Dorf"
-	glass_desc = "A manly concotion made from Ale and Beer. Intended for true men only."
+	glass_desc = "A manly concoction made from Ale and Beer. Intended for true men only."
 
 /datum/reagent/ethanol/margarita
 	name = "Margarita"
@@ -3126,7 +3126,7 @@ End Citadel Change */
 /datum/reagent/ethanol/holywine
 	name = "Angel Ichor"
 	id = "holywine"
-	description = "A premium alchoholic beverage made from distilled angel blood."
+	description = "A premium alcoholic beverage made from distilled angel blood."
 	taste_description = "wings in a glass, and a hint of grape"
 	color = "#C4921E"
 	strength = 20

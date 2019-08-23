@@ -423,7 +423,7 @@
 		var/index = text2num(href_list["traverse"])
 		var/datum/shuttle_route/new_route = WS.web_master.current_destination.routes[index]
 		if(!istype(new_route))
-			message_admins("ERROR: Shuttle computer was asked to traverse a nonexistant route.")
+			message_admins("ERROR: Shuttle computer was asked to traverse a non-existent route.")
 			return
 
 		if(!check_docking(WS))
@@ -433,7 +433,7 @@
 
 		var/datum/shuttle_destination/target_destination = new_route.get_other_side(WS.web_master.current_destination)
 		if(!istype(target_destination))
-			message_admins("ERROR: Shuttle computer was asked to travel to a nonexistant destination.")
+			message_admins("ERROR: Shuttle computer was asked to travel to a non-existent destination.")
 			return
 
 		WS.web_master.future_destination = target_destination

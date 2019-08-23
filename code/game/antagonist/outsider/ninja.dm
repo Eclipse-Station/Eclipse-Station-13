@@ -142,7 +142,7 @@ var/datum/antagonist/ninja/ninjas
 		if(5)
 			directive += "We are currently negotiating with [using_map.company_name] [using_map.boss_name]. Prioritize saving human lives over ending them."
 		if(6)
-			directive += "We are engaged in a legal dispute over [station_name()]. If a laywer is present on board, force their cooperation in the matter."
+			directive += "We are engaged in a legal dispute over [station_name()]. If a lawyer is present on board, force their cooperation in the matter."
 		if(7)
 			directive += "A financial backer has made an offer we cannot refuse. Implicate criminal involvement in the operation."
 		if(8)

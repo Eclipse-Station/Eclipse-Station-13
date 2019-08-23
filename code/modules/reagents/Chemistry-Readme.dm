@@ -189,7 +189,7 @@ About Reagents:
 			Ditto for glass name.
 
 		glass_desc
-			Ditto for glass desciption.
+			Ditto for glass description.
 
 		glass_center_of_mass
 			Used for glass placement on tables.
@@ -236,7 +236,7 @@ About Reagents:
 			Called when [newamount] of reagent with [newdata] data is added to the current reagent. Used by paint.
 
 		get_data()
-			Returns data. Can be overriden.
+			Returns data. Can be overridden.
 
 About Recipes:
 

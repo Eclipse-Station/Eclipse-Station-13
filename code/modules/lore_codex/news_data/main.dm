@@ -1,7 +1,7 @@
 /datum/lore/codex/category/main_news // The top-level categories for the news thing
 	name = "Index"
 	data = "Below you'll find a list of articles relevant to the current (as of 2562) political climate, especially concerning the Almach Rim \
-	region. Each is labled by date of publication and title. This list is self-updating, and from time to time the publisher will push new \
+	region. Each is labelled by date of publication and title. This list is self-updating, and from time to time the publisher will push new \
 	articles. You are encouraged to check back frequently."
 	children = list(
 		/datum/lore/codex/page/article13,
@@ -55,7 +55,7 @@
 	<br><br>\
 	While neither Grayson Manufacturies nor Nanotrasen have made an official statement, Nanotrasen CEO Albary Moravec has called the \
 	incident \"shocking, if the allegations are to be believed\" and has assured shareholders that Nanotrasen will respond to the \
-	incident with as much force as it warrents.<br><br>Requests for a statement directed to the Board of Trustees or Dr. Harper were \
+	incident with as much force as it warrants.<br><br>Requests for a statement directed to the Board of Trustees or Dr. Harper were \
 	not responded to. Free Traders are recommended to stay clear of the region until the situation resolves itself."
 
 /datum/lore/codex/page/article3
@@ -143,7 +143,7 @@
 
 /datum/lore/codex/page/article15
 	name = "7/05/62 - The Fate of the SCG-R Song Shi"
-	data = "Lifepods confirmed to have originated from response ship lost during the Gray Hour were found last week in the Vir system, impacting the NLS Southern Cross at high velocity and severely injuring the only two survivors of the expedition. Unfortunately, because of the generally confused conditions of their re-emergence from months of cryosleep, the fate of the lost ship remains incompletely understood. The first pod to be discovered contained Lieutenant Eos Futura, telecommunications expert on the Song Shi, who alleged that elements of the Song Shi's crew, including herself, mutinied against commanding officer Captain Yi He in an attempt to prevent the bombing of civilians in the Angessian capital of Skylight. The surivor of the second pod, Private Demori Salvo, accused Futura's faction of conspiring with Association spies to destroy the ship as part of the Gray Hour revolt. Both agreed that the mutineers detonated the ship's Supermatter power core when it became clear they were to be defeated.\
+	data = "Lifepods confirmed to have originated from response ship lost during the Gray Hour were found last week in the Vir system, impacting the NLS Southern Cross at high velocity and severely injuring the only two survivors of the expedition. Unfortunately, because of the generally confused conditions of their re-emergence from months of cryosleep, the fate of the lost ship remains incompletely understood. The first pod to be discovered contained Lieutenant Eos Futura, telecommunications expert on the Song Shi, who alleged that elements of the Song Shi's crew, including herself, mutinied against commanding officer Captain Yi He in an attempt to prevent the bombing of civilians in the Angessian capital of Skylight. The survivor of the second pod, Private Demori Salvo, accused Futura's faction of conspiring with Association spies to destroy the ship as part of the Gray Hour revolt. Both agreed that the mutineers detonated the ship's Supermatter power core when it became clear they were to be defeated.\
 	<br><br>\
 	A third pod, promising a resolution to the stalemate, was shot down by the SCG-P Juno after being misidentified as a hostile missile. The gunner responsible, Sergeant Ricardo Esteban, was found guilty by a court marshal and dishonorably discharged. While other pods from the Song Shi may still be traveling through SolGov space, it is considered unlikely based on both Futura and Salvo's account of the number of pods launched before the Song Shi was destroyed. Both were detained by staff at the NLS Southern Cross, who managed to prevent a violent altercation from breaking out between the two armed and disturbed servicepersons. The Colonial High Court has stated that it intends to hear testimony from both parties after they complete a course of mental health evaluation, and after the conclusion of the present state of heightened security."
 /datum/lore/codex/page/article16

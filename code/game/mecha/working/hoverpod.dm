@@ -61,7 +61,7 @@
 
 	return ..()
 
-//these three procs overriden to play different sounds
+//these three procs overridden to play different sounds
 /obj/mecha/working/hoverpod/mechturn(direction)
 	set_dir(direction)
 	//playsound(src,'sound/machines/hiss.ogg',40,1)
