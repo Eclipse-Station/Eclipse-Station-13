@@ -113,7 +113,6 @@ SUBSYSTEM_DEF(dispatch)
 		log_debug("DISPATCHER: Added [M] to tracked players.")
 	return 1
 
-/* on hold until I can get a copy of the DM reference to check if a list contains an entry
 /datum/controller/subsystem/dispatch/proc/removeFromTracking(mob/living/M)
 	if(!M)
 		CRASH("no mob specified.")
@@ -122,29 +121,48 @@ SUBSYSTEM_DEF(dispatch)
 	if(!M.mind.assigned_role)
 		return 0	//No assigned role.
 
-
+	//...departments first...
 	if(tracked_players_sec & M)
 		tracked_players_sec -= M
-	if(M.mind.assigned_role in medical_positions)
+	if(tracked_players_med & M)
 		tracked_players_med -= M
-	if(M.mind.assigned_role in science_positions)
+	if(tracked_players_sci & M)
 		tracked_players_sci -= M
-	if(M.mind.assigned_role in command_positions)
-		if(M.mind.assigned_role != "Command Secretary")		//We don't count the secretary.
-			tracked_players_cmd -= M
-	if(M.mind.assigned_role in cargo_positions)
+	if(tracked_players_cmd & M)
+		tracked_players_cmd -= M
+	if(tracked_players_crg & M)
 		tracked_players_crg -= M
-	if(M.mind.assigned_role in engineering_positions)
+	if(tracked_players_eng & M)
 		tracked_players_eng -= M
-	if(M.mind.assigned_role in civilian_positions)
-		if(M.mind.assigned_role != (USELESS_JOB || "Intern"))		//visitors are not staff, and interns have no access.
-			tracked_players_svc -= M
+	if(tracked_players_svc & M)
+		tracked_players_svc -= M
+	
+	//...then the final list.
+	if(tracked_players_all & M)
+		tracked_players_all -= M
 
 	if(DEBUGLEVEL_VERBOSE <= debug_level)
-		log_debug("DISPATCHER: Added [M] to tracked players.")
+		log_debug("DISPATCHER: Removed [M] from tracked players.")
 	return 1
 
-*/
+/datum/controller/subsystem/dispatch/proc/handleRequest(department = "", priority = FALSE, message)
+//return statement should be whether or not the handler handled it.
+//0 if it is kicking it back to the RC due to players being on,
+//1 if it sent to Discord.
+	department = lowertext(department)
+	switch(department)
+		if("engineering")
+			if(!tracked_players_eng)
+				sendDiscordRequest("engineering",priority, message)
+				return 1
+			else
+				return 0
+		else
+			Error("Unimplemented department \"[department]\".")
+
+/datum/controller/subsystem/dispatch/proc/sendDiscordRequest(department = "", priority = FALSE, message)
+// "[priority ? "**HIGH PRIORITY** a" : "A"]ssistance request for [department_ping] from [sender] ([sender_role]): '[message]'"
+	CRASH("Unimplemented.")
 
 #undef DEBUGLEVEL_FATAL_ONLY
 #undef DEBUGLEVEL_SEVERE
