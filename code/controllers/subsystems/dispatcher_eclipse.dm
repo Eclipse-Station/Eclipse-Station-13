@@ -29,11 +29,11 @@ SUBSYSTEM_DEF(dispatcher)
 	var/list/tracked_players_eng = list()		//Engineering
 	var/list/tracked_players_svc = list()		//Service
 	
-/datum/controller/subsystem/dispatch/Recover()
+/datum/controller/subsystem/dispatcher/Recover()
 	flags |= SS_NO_INIT // We don't want to init twice.
 	flushTracking()
 
-/datum/controller/subsystem/dispatch/proc/flushTracking()
+/datum/controller/subsystem/dispatcher/proc/flushTracking()
 	//First, we reset all the lists.
 	if(DEBUGLEVEL_VERBOSE <= debug_level)		//Yoda programming here.
 		log_debug("DISPATCHER: Flushing lists.")
@@ -83,7 +83,7 @@ SUBSYSTEM_DEF(dispatcher)
 			addToTracking(M)
 			continue		//We're done adding here.
 
-/datum/controller/subsystem/dispatch/proc/addToTracking(mob/living/M)
+/datum/controller/subsystem/dispatcher/proc/addToTracking(mob/living/M)
 	if(!M)
 		CRASH("no mob specified.")
 	if(!M.mind)
@@ -113,7 +113,7 @@ SUBSYSTEM_DEF(dispatcher)
 		log_debug("DISPATCHER: Added [M] to tracked players.")
 	return 1
 
-/datum/controller/subsystem/dispatch/proc/removeFromTracking(mob/living/M)
+/datum/controller/subsystem/dispatcher/proc/removeFromTracking(mob/living/M)
 	if(!M)
 		CRASH("no mob specified.")
 	if(!M.mind)
@@ -145,7 +145,7 @@ SUBSYSTEM_DEF(dispatcher)
 		log_debug("DISPATCHER: Removed [M] from tracked players.")
 	return 1
 
-/datum/controller/subsystem/dispatch/proc/handleRequest(department = "", priority = FALSE, message, sender = "Unknown", sender_role = "Unassigned")
+/datum/controller/subsystem/dispatcher/proc/handleRequest(department = "", priority = FALSE, message, sender = "Unknown", sender_role = "Unassigned")
 //return statement should be whether or not the handler handled it.
 //0 if it is kicking it back to the RC due to players being on,
 //1 if it sent to Discord.
@@ -196,15 +196,15 @@ SUBSYSTEM_DEF(dispatcher)
 		else
 			world.Error("Unimplemented department \"[department]\".")
 
-/datum/controller/subsystem/dispatch/proc/sendDiscordRequest(department = "", priority = FALSE, message, sender, sender_role)
+/datum/controller/subsystem/dispatcher/proc/sendDiscordRequest(department = "", priority = FALSE, message, sender, sender_role)
 // "[priority ? "**HIGH PRIORITY** a" : "A"]ssistance request for [department_ping] from [sender] ([sender_role]): '[message]'"
 	CRASH("Unimplemented. Department [department], priority [priority], message [message], sender [sender], sender role [sender_role].")
 	
-/datum/controller/subsystem/dispatch/proc/sendDiscordTest()
+/datum/controller/subsystem/dispatcher/proc/sendDiscordTest()
 // "This is a test of the Nanotrasen Department Alarm Dispatcher. This is only a test."
 	CRASH("Unimplemented.")
 
-/datum/controller/subsystem/dispatch/Shutdown()
+/datum/controller/subsystem/dispatcher/Shutdown()
 	//clear all lists
 	tracked_players_all = list()		//All tracked players
 	tracked_players_sec = list()		//Security
@@ -217,7 +217,7 @@ SUBSYSTEM_DEF(dispatcher)
 
 	//I'm sure Nestor will want to do something here with the Discord bot he has planned, later
 	
-/datum/controller/subsystem/dispatch/stat_entry(msg_prefix)
+/datum/controller/subsystem/dispatcher/stat_entry(msg_prefix)
 	var/list/msg = list(msg_prefix)
 	msg += "T:[tracked_players_all.len]"		//Total
 	msg += "{"
