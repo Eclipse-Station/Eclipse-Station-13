@@ -13,9 +13,9 @@
 SUBSYSTEM_DEF(dispatch)
 	// Metadata; you should define these.
 	name = "Dispatch" //name of the subsystem
-	var/init_order = -2		//lower priority, really
-	var/flags = SS_BACKGROUND		//run in background. We only really need this for global stuff.
-	var/runlevels = RUNLEVELS_DEFAULT
+	init_order = -2		//lower priority, really
+	flags = SS_BACKGROUND		//run in background. We only really need this for global stuff.
+	runlevels = RUNLEVELS_DEFAULT
 	var/static/dispatcher_initialized = FALSE		//American spelling, for consistency.
 	var/debug_level = DEBUGLEVEL_FATAL_ONLY
 	
@@ -48,7 +48,7 @@ SUBSYSTEM_DEF(dispatch)
 	
 	//make sure they're clear
 	if(tracked_players_all || tracked_players_sec || tracked_players_med || tracked_players_sci || tracked_players_cmd || tracked_players_crg || tracked_players_eng || tracked_players_svc)
-		Error("DISPATCHER: Attempted to flush player lists, but lists still had data. Abnormalities may occur!")
+		world.Error("DISPATCHER: Attempted to flush player lists, but lists still had data. Abnormalities may occur!")
 		if(DEBUGLEVEL_SEVERE <= debug_level)		//Yoda programming here.
 			log_debug("DISPATCHER: Attempted to flush player lists, but lists still had data.")
 	else if(DEBUGLEVEL_VERBOSE <= debug_level)		//Yoda programming here.
@@ -158,7 +158,7 @@ SUBSYSTEM_DEF(dispatch)
 			else
 				return 0
 		else
-			Error("Unimplemented department \"[department]\".")
+			world.Error("Unimplemented department \"[department]\".")
 
 /datum/controller/subsystem/dispatch/proc/sendDiscordRequest(department = "", priority = FALSE, message)
 // "[priority ? "**HIGH PRIORITY** a" : "A"]ssistance request for [department_ping] from [sender] ([sender_role]): '[message]'"
