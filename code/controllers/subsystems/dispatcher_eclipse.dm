@@ -113,7 +113,7 @@ SUBSYSTEM_DEF(dispatcher)
 		log_debug("DISPATCHER: Added [M] to tracked players.")
 	return 1
 
-/datum/controller/subsystem/dispatcher/proc/removeFromTracking(mob/living/M)
+/datum/controller/subsystem/dispatcher/proc/removeFromTracking(mob/M)		//we don't need the precision here, since we may be removing dead players
 	if(!M)
 		CRASH("no mob specified.")
 	if(!M.mind)
