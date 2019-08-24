@@ -1,4 +1,5 @@
-var/global/datum/controller/dispatcher/dispatcher		//how bothersome.
+var/global/datum/controller/subsystem/dispatcher/dispatcher		//This must be defined here, else dispatcher.Proc() calls will fail
+
 /* 
  * Nanotrasen Department Alarm Dispatcher
  * This handles out-of-server calls for players, using the request console. We
@@ -28,7 +29,7 @@ SUBSYSTEM_DEF(dispatcher)
 	var/list/tracked_players_crg = list()		//Supply
 	var/list/tracked_players_eng = list()		//Engineering
 	var/list/tracked_players_svc = list()		//Service
-	
+
 /datum/controller/subsystem/dispatcher/Recover()
 	flags |= SS_NO_INIT // We don't want to init twice.
 	flushTracking()
