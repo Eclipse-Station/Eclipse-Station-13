@@ -65,7 +65,7 @@ SUBSYSTEM_DEF(dispatch)
 		if(!M.mind.assigned_role)
 			continue	//No assigned role.
 		
-	tracked_players_all += M
+		tracked_players_all += M
 		if(DEBUGLEVEL_VERBOSE <= debug_level)
 			log_debug("DISPATCHER: Master list population: [tracked_players_all.len] players.")
 		
