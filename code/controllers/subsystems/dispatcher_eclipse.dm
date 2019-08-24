@@ -1,3 +1,4 @@
+var/global/datum/controller/dispatcher/dispatcher		//how bothersome.
 /* 
  * Nanotrasen Department Alarm Dispatcher
  * This handles out-of-server calls for players, using the request console. We
@@ -10,8 +11,7 @@
 #define DEBUGLEVEL_VERBOSE 3
 
 
-SUBSYSTEM_DEF(dispatcher)
-	// Metadata; you should define these.
+SUBSYSTEM_DEF(dispatcher)		
 	name = "Dispatcher" //name of the subsystem
 	init_order = -2		//lower priority, really
 	flags = SS_BACKGROUND		//run in background. We only really need this for global stuff.
