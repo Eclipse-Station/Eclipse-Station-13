@@ -204,6 +204,35 @@ SUBSYSTEM_DEF(dispatch)
 // "This is a test of the Nanotrasen Department Alarm Dispatcher. This is only a test."
 	CRASH("Unimplemented.")
 
+/datum/controller/subsystem/dispatch/Shutdown()
+	//clear all lists
+	tracked_players_all = list()		//All tracked players
+	tracked_players_sec = list()		//Security
+	tracked_players_med = list()		//Medical
+	tracked_players_sci = list()		//Science
+	tracked_players_cmd = list()		//Command
+	tracked_players_crg = list()		//Supply
+	tracked_players_eng = list()		//Engineering
+	tracked_players_svc = list()		//Service
+
+	//I'm sure Nestor will want to do something here with the Discord bot he has planned, later
+	
+/datum/controller/subsystem/dispatch/stat_entry(msg_prefix)
+	var/list/msg = list(msg_prefix)
+	msg += "T:[tracked_players_all.len]"		//Total
+	msg += "{"
+	msg += "H [tracked_players_cmd.len] | "		//Heads
+	msg += "E [tracked_players_eng.len] | "		//Engi
+	msg += "S [tracked_players_sec.len] | "		//Sec
+	msg += "M [tracked_players_med.len] | "		//Med
+	msg += "R [tracked_players_sci.len] | "		//Research
+	msg += "C [tracked_players_crg.len] | "		//Cargo
+	msg += "O [tracked_players_svc.len]"		//Other
+	msg += "}"
+	..(msg.Join())
+	
+	//sample T:28{H 6|E 3|S 4|M 4|R 5|C 5|O 12}
+
 #undef DEBUGLEVEL_FATAL_ONLY
 #undef DEBUGLEVEL_SEVERE
 #undef DEBUGLEVEL_WARNING
