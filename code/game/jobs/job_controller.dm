@@ -80,6 +80,7 @@ var/global/datum/controller/occupations/job_master
 				player.mind.role_alt_title = GetPlayerAltTitle(player, rank)
 				unassigned -= player
 				job.current_positions++
+				dispatcher.addToTracking(player)		//Eclipse edit - NT DAD
 				return 1
 		Debug("AR has failed, Player: [player], Rank: [rank]")
 		return 0
@@ -163,6 +164,7 @@ var/global/datum/controller/occupations/job_master
 			if((player) && (player.mind))
 				player.mind.assigned_role = null
 				player.mind.special_role = null
+				dispatcher.removeFromTracking(player)		//Eclipse edit: NT DAD
 		SetupOccupations()
 		unassigned = list()
 		return

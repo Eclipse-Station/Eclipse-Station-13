@@ -10,9 +10,9 @@
 #define DEBUGLEVEL_VERBOSE 3
 
 
-SUBSYSTEM_DEF(dispatch)
+SUBSYSTEM_DEF(dispatcher)
 	// Metadata; you should define these.
-	name = "Dispatch" //name of the subsystem
+	name = "Dispatcher" //name of the subsystem
 	init_order = -2		//lower priority, really
 	flags = SS_BACKGROUND		//run in background. We only really need this for global stuff.
 	runlevels = RUNLEVELS_DEFAULT
