@@ -326,7 +326,7 @@
 			<p><b>//BEGIN//</b>
 			</p><p>Penned by Captain Honkington.&nbsp;
 			</p><p><b>2554-11-24</b>
-			</p><p>Base camp has been established at survey site A and construction of planetside shuttle dock has been completed. The dig team have been waiting for this moment for years, a chance to unearth a monument that has lain untouched for thousands of years. So many secrets, so many lost treasures, and we will be the ones to bring them to the fore once again, to show that our civilisation is not a joke. This will be a momentous occasion.
+			</p><p>Base camp has been established at survey site A and construction of planetside shuttle dock has been completed. The dig team have been waiting for this moment for years, a chance to unearth a monument that has lain untouched for thousands of years. So many secrets, so many lost treasures, and we will be the ones to bring them to the fore once again, to show that our civilization is not a joke. This will be a momentous occasion.
 			</p><p><b>2554-11-29</b>
 			</p><p>The dig team have located a small structure 2.3km SSW of the shuttle dock. Upon further investigation, the entire hill upon which it sits appears to have been artificially constructed! Further survey equipment is en-route, initial scans indicate some sort of vast complex beneath, and the team believe they may have found the entrance.
 			</p><p><b>2554-12-01</b>
@@ -338,7 +338,7 @@
 			</p><p><b>2554-12-07</b>
 			</p><p>Security was stepped up to condition blue today. Something about the joke, the crew are getting obsessed with it, graffiti on the walls, smashing windows and screaming over comms. Tooters and I didn't hear what they said, what little we did make out was.. just noise. Medical have been doing what they can, but so far haven't isolated any kind of virus.
 			</p><p><b>2554-12-08:1</b>
-			</p><p>Red alert authorised by Captain Honkington and First Officer Tooters. Things have progressed to a full-on riot. Contact with medical has been lost.
+			</p><p>Red alert authorized by Captain Honkington and First Officer Tooters. Things have progressed to a full-on riot. Contact with medical has been lost.
 			</p><p>It's the joke, they brought them there, passed it on, the doctors heard it. Warden Clankers managed to get the earmuffs from the firing range, we're going to try and make a break for the launch.
 			</p><p><b>2554-12-08:2</b>
 			</p><p>Dear god, they got Tooters. Pulled the earmuffs right off his head and screamed in his ears, the poor sod just started.. giggling. Clankers and I got away, we're holed up in the engine room.

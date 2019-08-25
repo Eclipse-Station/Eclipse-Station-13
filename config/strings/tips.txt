@@ -63,17 +63,17 @@ As a Security Officer, if you are wearing HUD glasses, you can see someone's cri
 As a Security Officer, remember that you answer to the Warden when you are inside the brig area. He can have you arrested for trespass if you become a nuisance.
 As a Security Officer, remember that many times, an arrest can be avoided by simply talking to the people involved and working out the problem between them.
 As a Security Officer, it's a good idea to be visible to the crew. Mingle with them a bit, talk with them. You might find a useful informant, or better yet, a friend.
-As a Warden, you are the protector of the Brig and handler of its prisoners when little is happening. If a situation arises, you are also in charge of distributing the armoury.
-As a Warden, keep track of what all is checked out of the armoury should a situation arise, and ensure it's all checked back in when the situation passes.
+As a Warden, you are the protector of the Brig and handler of its prisoners when little is happening. If a situation arises, you are also in charge of distributing the armory.
+As a Warden, keep track of what all is checked out of the armory should a situation arise, and ensure it's all checked back in when the situation passes.
 As a Warden, you are responsible for the brig area. It is very unwise to step outside the brig, unless there is absolutely no security on shift, or barring extenuating circumstances.
-As a Warden, you are authorised to carry any weapon available to you inside the Security wing, barring semi- or automatic rifle-calibre firearms, explosives, or pulse rifles - regardless of the security level. Outside of the brig, however, you are only permitted to carry less-than-lethal weaponry that can fit in your backpack on code green.
+As a Warden, you are authorized to carry any weapon available to you inside the Security wing, barring semi- or automatic rifle-caliber firearms, explosives, or pulse rifles - regardless of the security level. Outside of the brig, however, you are only permitted to carry less-than-lethal weaponry that can fit in your backpack on code green.
 As the Head of Security, you are expected to coordinate your security force to handle any threat.
-As the Head of Security, remember that executions cannot be authorised without a Head of Staff tribunal, with a full-badged Colony Director (not an Acting CD) present during the execution. You must also fax Central Command with further details regarding the crimes.
+As the Head of Security, remember that executions cannot be authorized without a Head of Staff tribunal, with a full-badged Colony Director (not an Acting CD) present during the execution. You must also fax Central Command with further details regarding the crimes.
 As the Head of Security, it's a good idea to be visible to your security forces and talk with them from time to time. People tend to question orders from those that they dislike or see as incompetent.
 As a Scientist, improved stock parts will make machines more efficient, or may unlock better features.
 As a Scientist, work with Robotics and coordinate who gets what materials.
 As a Scientist, it's a good idea to coordinate with Mining to let them know what sort of materials you need.
-As a Scientist, shoving the contents of a toolbox in the destructive analyser can help kickstart research. The toolbox itself will also get you started on combat technology.
+As a Scientist, shoving the contents of a toolbox in the destructive analyzer can help kickstart research. The toolbox itself will also get you started on combat technology.
 As a Scientist, while deconstructing syringe guns and other miscellaneous things laying around is an easy way to get high research levels, it's possible to get high levels without pilfering supplies.
 As a Scientist, you can order glass, metal, and plastic through Cargo fairly cheaply. They come in 50-sheet stacks.
 As a Scientist, sync your research to the database often.

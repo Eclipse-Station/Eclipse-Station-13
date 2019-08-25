@@ -1298,7 +1298,7 @@
 		DoPunch(M)
 		return M
 
-// This is the actual act of 'punching'.  Override for special behaviour.
+// This is the actual act of 'punching'.  Override for special behavior.
 /mob/living/simple_animal/proc/DoPunch(var/atom/A)
 	if(!Adjacent(A) && !istype(A, /obj/structure/window) && !istype(A, /obj/machinery/door/window)) // They could've moved in the meantime. But a Window probably wouldn't have. This allows player simple-mobs to attack windows.
 		return FALSE

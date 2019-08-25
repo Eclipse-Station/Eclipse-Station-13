@@ -100,9 +100,9 @@
 		dat+= text("<HR><BR><A href='?src=\ref[];mach_close=suit_storage_unit'>Close panel</A>", user)
 		//user << browse(dat, "window=ssu_m_panel;size=400x500")
 		//onclose(user, "ssu_m_panel")
-	else if(isUV) //The thing is running its cauterisation cycle. You have to wait.
+	else if(isUV) //The thing is running its cauterization cycle. You have to wait.
 		dat += "<HEAD><TITLE>Suit storage unit</TITLE></HEAD>"
-		dat+= "<font color ='red'><B>Unit is cauterising contents with selected UV ray intensity. Please wait.</font></B><BR>"
+		dat+= "<font color ='red'><B>Unit is cauterizing contents with selected UV ray intensity. Please wait.</font></B><BR>"
 		//dat+= "<font colr='black'><B>Cycle end in: [cycletimeleft()] seconds. </font></B>"
 		//user << browse(dat, "window=ssu_cycling_panel;size=400x500")
 		//onclose(user, "ssu_cycling_panel")
@@ -236,7 +236,7 @@
 		to_chat(user, "<font color='red'>You try to touch the controls but you get zapped. There must be a short circuit somewhere.</font>")
 		return*/
 	else
-		to_chat(user, "You push the button. The coloured LED next to it changes.")
+		to_chat(user, "You push the button. The colored LED next to it changes.")
 		safetieson = !safetieson
 
 
@@ -313,7 +313,7 @@
 	if(!HELMET && !MASK && !SUIT && !OCCUPANT) //shit's empty yo
 		to_chat(user, "<font color='red'>Unit storage bays empty. Nothing to disinfect -- Aborting.</font>")
 		return
-	to_chat(user, "You start the Unit's cauterisation cycle.")
+	to_chat(user, "You start the Unit's cauterization cycle.")
 	cycletime_left = 20
 	isUV = 1
 	if(OCCUPANT && !islocked)
@@ -580,7 +580,7 @@
 	var/safeties = 1        // The cycler won't start with a living thing inside it unless safeties are off.
 	var/irradiating = 0     // If this is > 0, the cycler is decontaminating whatever is inside it.
 	var/radiation_level = 2 // 1 is removing germs, 2 is removing blood, 3 is removing phoron.
-	var/model_text = ""     // Some flavour text for the topic box.
+	var/model_text = ""     // Some flavor text for the topic box.
 	var/locked = 1          // If locked, nothing can be taken from or added to the cycler.
 	var/can_repair          // If set, the cycler can repair voidsuits.
 	var/electrified = 0
@@ -822,9 +822,9 @@
 		dat += "Output level: [radiation_level]<br>"
 		dat += "<A href='?src=\ref[src];select_rad_level=1'>\[select power level\]</a> <A href='?src=\ref[src];begin_decontamination=1'>\[begin decontamination cycle\]</a><br><hr>"
 
-		dat += "<h2>Customisation</h2>"
+		dat += "<h2>Customization</h2>"
 		dat += "<b>Target product:</b> <A href='?src=\ref[src];select_department=1'>[target_department]</a>, <A href='?src=\ref[src];select_species=1'>[target_species]</a>."
-		dat += "<A href='?src=\ref[src];apply_paintjob=1'><br>\[apply customisation routine\]</a><br><hr>"
+		dat += "<A href='?src=\ref[src];apply_paintjob=1'><br>\[apply customization routine\]</a><br><hr>"
 
 	if(panel_open)
 		wires.Interact(user)

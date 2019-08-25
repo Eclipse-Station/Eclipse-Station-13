@@ -69,7 +69,7 @@
 	if(!damage) return
 
 	//20% chance that the grille provides a bit more cover than usual. Support structure for example might take up 20% of the grille's area.
-	//If they click on the grille itself then we assume they are aiming at the grille itself and the extra cover behaviour is always used.
+	//If they click on the grille itself then we assume they are aiming at the grille itself and the extra cover behavior is always used.
 	switch(Proj.damage_type)
 		if(BRUTE)
 			//bullets
@@ -134,7 +134,7 @@
 						dir_to_set = 4
 			else
 				user << "<span class='notice'>You can't reach.</span>"
-				return //Only works for cardinal direcitons, diagonals aren't supposed to work like this.
+				return //Only works for cardinal directions, diagonals aren't supposed to work like this.
 		for(var/obj/structure/window/WINDOW in loc)
 			if(WINDOW.dir == dir_to_set)
 				user << "<span class='notice'>There is already a window facing this way there.</span>"

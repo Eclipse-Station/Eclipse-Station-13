@@ -50,7 +50,7 @@ var/list/global/map_templates = list()
 
 /datum/map_template/proc/initTemplateBounds(var/list/bounds)
 	if (SSatoms.initialized == INITIALIZATION_INSSATOMS)
-		return // let proper initialisation handle it later
+		return // let proper initialization handle it later
 
 	var/list/atom/atoms = list()
 	var/list/area/areas = list()

@@ -27,7 +27,7 @@
 /obj/item/clothing/suit/space/skrell/black
 	icon_state = "skrell_suit_black"
 
-// Vox space gear (vaccuum suit, low pressure armour)
+// Vox space gear (vacuum suit, low pressure armor)
 // Can't be equipped by any other species due to bone structure and vox cybernetics.
 /obj/item/clothing/suit/space/vox
 	w_class = ITEMSIZE_NORMAL
@@ -56,7 +56,7 @@
 /obj/item/clothing/suit/space/vox/pressure
 	name = "alien pressure suit"
 	icon_state = "vox-pressure"
-	desc = "A huge, armoured, pressurized suit, designed for distinctly nonhuman proportions."
+	desc = "A huge, armored, pressurized suit, designed for distinctly nonhuman proportions."
 
 /obj/item/clothing/head/helmet/space/vox/carapace
 	name = "alien visor"

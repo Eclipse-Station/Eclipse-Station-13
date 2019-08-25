@@ -147,7 +147,7 @@
 	//user.visible_message("<span class='danger'>\The [user] starts pushing \the [victim] into \the [src]!</span>")
 
 
-	//Removed delay on this action in favour of a cooldown after it
+	//Removed delay on this action in favor of a cooldown after it
 	//If you can lure someone close to the fryer and grab them then you deserve success.
 	//And a delay on this kind of niche action just ensures it never happens
 	//Cooldown ensures it can't be spammed to instakill someone

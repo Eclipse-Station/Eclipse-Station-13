@@ -152,7 +152,7 @@ var/list/gamemode_cache = list()
 	var/no_click_cooldown = 0
 
 	//Used for modifying movement speed for mobs.
-	//Unversal modifiers
+	//Universal modifiers
 	var/run_speed = 0
 	var/walk_speed = 0
 

@@ -121,10 +121,10 @@
 	keywords += list("Virgo Central Command")
 	data = "<i>This page has been ripped out. Odd.</i>"
 	/*data = "The Virgo Central Command is a large facility on [quick_link("Virgo-3B")] which handles the loading and \
-	unloading, refuelling, and general maintenance of large spacecraft. The main structure is owned by \
+	unloading, refueling, and general maintenance of large spacecraft. The main structure is owned by \
 	[quick_link("NanoTrasen")], but individual offices, docking/loading bays, and warehouses are often leased to individuals \
-	or organisations.  The position of the spaceport allows it to function not only as a key node for transport inside the Virgo-Erigone \
-	system, especially to and from the planet Virgo 3, but also as a key stopping point for interstellar craft travelling via Virgo-Erigone which need refuelling. \
+	or organizations.  The position of the spaceport allows it to function not only as a key node for transport inside the Virgo-Erigone \
+	system, especially to and from the planet Virgo 3, but also as a key stopping point for interstellar craft traveling via Virgo-Erigone which need refueling. \
 	<br><br>\
 	The station itself is mostly designed around its logistical and commercial needs, and although other strategically-placed \
 	nearby facilities owned by a mixture of corporations and entities may possess habitation space, the port itself is not \

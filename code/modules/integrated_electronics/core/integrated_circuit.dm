@@ -39,7 +39,7 @@ a creative player the means to solve many problems.  Circuits are held inside an
 	setup_io(activators, /datum/integrated_io/activate)
 	..()
 
-/obj/item/integrated_circuit/proc/on_data_written() //Override this for special behaviour when new data gets pushed to the circuit.
+/obj/item/integrated_circuit/proc/on_data_written() //Override this for special behavior when new data gets pushed to the circuit.
 	return
 
 /obj/item/integrated_circuit/Destroy()
@@ -363,7 +363,7 @@ a creative player the means to solve many problems.  Circuits are held inside an
 	if(assembly)
 		return assembly.draw_power(power_draw_idle)
 
-// Override this for special behaviour when there's no power left.
+// Override this for special behavior when there's no power left.
 /obj/item/integrated_circuit/proc/power_fail()
 	return
 

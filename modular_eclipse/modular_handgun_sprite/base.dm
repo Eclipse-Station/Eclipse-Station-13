@@ -12,7 +12,7 @@
  *
  * All icon update procs are their own separate proc, each of which is called
  * by rebuild_gun(). This allows users to tweak the update proc for specific
- * parts if their gun needs something other than the default behaviour.
+ * parts if their gun needs something other than the default behavior.
  *
  * DO NOT ADD CODE TO THIS FILE. INSTEAD, MAKE A NEW FILE FOR THE GUN AND USE
  * THE TEMPLATE PROVIDED AT THE END OF THIS FILE.

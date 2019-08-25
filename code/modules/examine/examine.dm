@@ -12,7 +12,7 @@
 	var/description_fluff = null //Green text about the atom's fluff, if any exists.
 	var/description_antag = null //Malicious red text, for the antags.
 
-//Override these if you need special behaviour for a specific type.
+//Override these if you need special behavior for a specific type.
 /atom/proc/get_description_info()
 	if(description_info)
 		return description_info

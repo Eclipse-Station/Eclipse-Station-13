@@ -1096,7 +1096,7 @@
 					sleep(20)
 					to_chat(src, "<span class='danger'>SynBorg v1.7.1 loaded.</span>")
 					sleep(5)
-					to_chat(src, "<span class='danger'>LAW SYNCHRONISATION ERROR</span>")
+					to_chat(src, "<span class='danger'>LAW SYNCHRONIZATION ERROR</span>")
 					sleep(5)
 					to_chat(src, "<span class='danger'>Would you like to send a report to NanoTraSoft? Y/N</span>")
 					sleep(10)

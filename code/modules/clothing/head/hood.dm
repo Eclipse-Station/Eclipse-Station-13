@@ -49,7 +49,7 @@
 // Explorer gear
 /obj/item/clothing/head/hood/explorer
 	name = "explorer hood"
-	desc = "An armoured hood for exploring harsh environments."
+	desc = "An armored hood for exploring harsh environments."
 	icon_state = "explorer"
 	flags = THICKMATERIAL
 	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE

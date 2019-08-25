@@ -459,7 +459,7 @@ proc/admin_notice(var/message, var/rights)
 			dat+={"
 				<B>[using_map.company_name] D-Notice Handler</B><HR>
 				<FONT SIZE=1>A D-Notice is to be bestowed upon the channel if the handling Authority deems it as harmful for the station's
-				morale, integrity or disciplinary behaviour. A D-Notice will render a channel unable to be updated by anyone, without deleting any feed
+				morale, integrity or disciplinary behavior. A D-Notice will render a channel unable to be updated by anyone, without deleting any feed
 				stories it might contain at the time. You can lift a D-Notice if you have the required access at any time.</FONT><HR>
 			"}
 			if(isemptylist(news_network.network_channels))
