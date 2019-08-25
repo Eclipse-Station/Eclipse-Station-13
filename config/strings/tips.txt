@@ -95,13 +95,13 @@ As a Pathfinder, in the absence of a Pilot, you are permitted to fly the shuttle
 As a Pathfinder, your job is to ensure that all crew on the mission return safely, and that all valuable biological, archaeological and technological specimens are brought back and handed off to the appropriate science staff.
 As the Research Director, you have the AI system integrity restoration computer in your office. You can use this to repair a damaged or destroyed AI.
 As the Research Director, you have a circuit board in your office to construct an additional AI should it be needed.
-As a Search and Rescue team, most of your duties are going to be done off-station. Bring what you'll need to stabilise someone before you bring them back to the station.
+As a Search and Rescue team, most of your duties are going to be done off-station. Bring what you'll need to stabilize someone before you bring them back to the station.
 As a Search and Rescue team, remember to get someone to a safe location before triage. That spider chewing on your patient's leg is going to hinder your efforts to save them.
 As a Search and Rescue team, remember that stasis bags only slow down the progression rate of injuries; it does not stop injuries completely.
 As a Search and Rescue team, remember that stasis bags have a limited air supply.
 As a Psychiatrist, your job is more roleplay-oriented than mechanics-oriented. Your job will be very boring if you don't play it as such.
 As a Psychiatrist, you have the authority to declare someone mentally unfit for duty, and strip them of any title they may have once had.
-As a Paramedic, you're trained in triage, not cure. Unless there's not a medical doctor on board, you should only treat them enough to get them stabilised, so you can get them to Medbay without dying. This will also save your supplies.
+As a Paramedic, you're trained in triage, not cure. Unless there's not a medical doctor on board, you should only treat them enough to get them stabilized, so you can get them to Medbay without dying. This will also save your supplies.
 As a Paramedic, you have access to Maintenance. Use this to get to out-of-the-way areas quicker, or rescue suffocating crewmembers trapped in Maintenance.
 As a Paramedic, remember that syringes should not be used on multiple patients. Grab a fresh, sterile one after each use.
 As a Medical Doctor, corpses with the "...and their soul has departed" description no longer have a ghost attached to them and aren't revivable or clonable. It's a good idea to check back from time to time, though, and see if the soul comes back.
@@ -109,9 +109,9 @@ As a Medical Doctor, your PDA's cartridge will allow you to use your PDA as a me
 As a Medical Doctor, remember that Cryogenics only works when it's cold. However, setting the freezer too low will just make it run the whole shift, draining lots of power as it does so.
 As a Medical Doctor, doing the bare minimum to treat a patient just to shove them out the door so they can get back to work is a waste of roleplay opportunity. Speak with the patient, keep them informed!
 As a Medical Doctor, the standard health scanner won't always give you the complete story. Listen to what your patients tell you.
-As a Medical Doctor, you can use the stethescope and penlight to check for organ damage without using the full body scanner.
+As a Medical Doctor, you can use the stethoscope and penlight to check for organ damage without using the full body scanner.
 As a Medical Doctor, you can overdose someone with Bicaridine to temporarily suppress internal bleeding. This will not stop it, however.
-As a Chemist, you can fill autoinjectors with other chemicals using a syringe. You can inject Dexaline into one to stabilise a suffocating patient, or soporific to sedate a combatitive subject.
+As a Chemist, you can fill autoinjectors with other chemicals using a syringe. You can inject Dexaline into one to stabilize a suffocating patient, or soporific to sedate a combative subject.
 As a Chemist, you can refill the CMO's hypospray with a syringe.
 As a Chemist, there are dozens of chemicals that can heal, and even more that can cause harm. Experiment!
 As a Chemist, you can mix similar chemicals to 'stack' the results. For example, mixing Kelotaine and Dermaline will heal burn damage faster than either one alone. Watch out for chemicals that mix together!

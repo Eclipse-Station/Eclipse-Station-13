@@ -281,13 +281,13 @@
 		//So now we redistribute it among them
 		var/total = tempholder.reagents.total_volume
 		for (var/i in results)
-			var/atom/a = i //optimisation
+			var/atom/a = i //optimization
 			tempholder.reagents.trans_to(a, total / results.len)
 	return results
 
 //When exact is false, extraneous ingredients are ignored
 //When exact is true, extraneous ingredients will fail the recipe
-//In both cases, the full complement of required inredients is still needed
+//In both cases, the full complement of required ingredients is still needed
 /proc/select_recipe(var/list/datum/recipe/available_recipes, var/obj/obj as obj, var/exact = 0)
 	var/list/datum/recipe/possible_recipes = list()
 	for (var/datum/recipe/recipe in available_recipes)

@@ -39,7 +39,7 @@
 /datum/reagent/chlorine
 	name = "Chlorine"
 	id = "chlorine"
-	description = "A chemical element with a characteristic odour."
+	description = "A chemical element with a characteristic odor."
 	taste_description = "pool water"
 	reagent_state = GAS
 	color = "#808080"

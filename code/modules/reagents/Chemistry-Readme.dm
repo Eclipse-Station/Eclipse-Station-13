@@ -159,7 +159,7 @@ About Reagents:
 			Current volume.
 
 		metabolism
-			How quickly reagent is processed in mob's bloodstream; by default aslo affects ingest and touch metabolism.
+			How quickly reagent is processed in mob's bloodstream; by default also affects ingest and touch metabolism.
 
 		ingest_met
 			How quickly reagent is processed when ingested; [metabolism] is used if zero.

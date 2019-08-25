@@ -107,7 +107,7 @@
 
 /datum/language/bones
 	name = LANGUAGE_BONES
-	desc = "The language of skeletons, characterised by clunks and clatters. Native language of Phoronoids."
+	desc = "The language of skeletons, characterized by clunks and clatters. Native language of Phoronoids."
 	speech_verb = "rattles"
 	ask_verb = "clinks"
 	exclaim_verb = "clunks"

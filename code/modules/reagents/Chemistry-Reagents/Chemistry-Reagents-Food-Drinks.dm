@@ -1502,7 +1502,7 @@ End Citadel Change */
 	color = "#3a6617" // rgb(58, 102, 23)
 
 	glass_name = "Ent's Draught"
-	glass_desc = "You can almost smell the tranquillity emanating from this."
+	glass_desc = "You can almost smell the tranquility emanating from this."
 
 /datum/reagent/drink/lovepotion
 	name = "Love Potion"
@@ -2972,13 +2972,13 @@ End Citadel Change */
 /datum/reagent/ethanol/cloverclub
 	name = "Clover Club"
 	id = "cloverclub"
-	description = "A light and refreshing rasberry cocktail."
+	description = "A light and refreshing raspberry cocktail."
 	taste_description = "sweet raspberry"
 	color = "#dd00a6" // rgb(221, 0, 166)
 	strength = 30
 
 	glass_name = "Clover Club"
-	glass_desc = "A light and refreshing rasberry cocktail."
+	glass_desc = "A light and refreshing raspberry cocktail."
 
 /datum/reagent/ethanol/negroni
 	name = "Negroni"
@@ -3016,13 +3016,13 @@ End Citadel Change */
 /datum/reagent/ethanol/daiquiri
 	name = "Daiquiri"
 	id = "daiquiri"
-	description = "Refeshing rum and citrus. Time for a tropical get away."
+	description = "Refreshing rum and citrus. Time for a tropical get away."
 	taste_description = "refreshing citrus and rum"
 	color = "#d1ff49" // rgb(209, 255, 73
 	strength = 25
 
 	glass_name = "Daiquiri"
-	glass_desc = "Refeshing rum and citrus. Time for a tropical get away."
+	glass_desc = "Refreshing rum and citrus. Time for a tropical get away."
 
 /datum/reagent/ethanol/mojito
 	name = "Mojito"
@@ -3198,7 +3198,7 @@ End Citadel Change */
 
 /datum/reagent/nutriment/coating/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 
-	//We'll assume that the batter isnt going to be regurgitated and eaten by someone else. Only show this once
+	//We'll assume that the batter isn't going to be regurgitated and eaten by someone else. Only show this once
 	if (data["cooked"] != 1)
 		if (!messaged)
 			M << "Ugh, this raw [name] tastes disgusting."
@@ -3270,7 +3270,7 @@ End Citadel Change */
 	color = "#CCCCCC"
 
 /datum/reagent/nutriment/triglyceride/oil
-	//Having this base class incase we want to add more variants of oil
+	//Having this base class in case we want to add more variants of oil
 	name = "Oil"
 	id = "oil"
 	description = "Oils are liquid fats."

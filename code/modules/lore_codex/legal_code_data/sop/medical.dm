@@ -45,7 +45,7 @@
 	this is done, scan the deceased.  Up to three scans are to be made per attempt.  If the deceased suffers Mental Interface Failure, \
 	procede to Postmortem Storage.  Further attempts at resuscitation may be made at later times, at the medical teams' discretion. \
 	<br><br>\
-	If the deceased is sufficently scanned, remove their possessions and clothing off of the deceased body, for use by the future new clone.  \
+	If the deceased is sufficiently scanned, remove their possessions and clothing off of the deceased body, for use by the future new clone.  \
 	Move the cadaver into the morgue, as per Postmortem Storage.  Begin the cloning process.  Possessions are to be gathered in a manner that \
 	facilitates transporting them along with the clone.  Upon the cloning process being complete and the new clone being created, the \
 	clone is to be placed inside a croygenic tube as quickly as possible.  Cloning is not a painless experience, and it is best if \
@@ -60,7 +60,7 @@
 
 /datum/lore/codex/page/sop_postmortem
 	name = "Postmortem Storage"
-	data = "Deceased persons should be kept in the morgue, and should be contained inside black body bags.  The body bag is to be labelled with the deceased's name, along \
+	data = "Deceased persons should be kept in the morgue, and should be contained inside black body bags.  The body bag is to be labeled with the deceased's name, along \
 	with 'DNC', 'MIF', or 'Cloned' where applicable.  Bodies in the morgue are to be transferred to Central Command whenever possible.  Funerary \
 	services are to be handled off site.  A service may be held within the Chapel if it is desired, however the body must still be brought to \
 	Central."
