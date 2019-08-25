@@ -49,7 +49,7 @@
 			brightness_level = "low"
 			power_usage = brightness_levels["low"]
 		else		//sanity check failed
-			error("[src] held by [usr] at [loc.x],[loc.y],[loc.z]: Attempted to alt-click switch brightness levels, but somehow was in a nonexistant brightness level. user = [user], brightness_level = [brightness_level]. Attempting to correct...")
+			error("[src] held by [usr] at [loc.x],[loc.y],[loc.z]: Attempted to alt-click switch brightness levels, but somehow was in a non-existent brightness level. user = [user], brightness_level = [brightness_level]. Attempting to correct...")
 			brightness_level = "medium"
 			power_usage = brightness_levels["medium"]
 			ASSERT(brightness_level == "medium")		//brightness level should be on medium. If this fails, something isn't being set right.

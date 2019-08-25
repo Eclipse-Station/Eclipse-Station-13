@@ -1,7 +1,7 @@
 /datum/lore/codex/category/main_news // The top-level categories for the news thing
 	name = "Index"
 	data = "Below you'll find a list of articles relevant to the current (as of 2562) political climate, especially concerning the Almach Rim \
-	region. Each is labled by date of publication and title. This list is self-updating, and from time to time the publisher will push new \
+	region. Each is labeled by date of publication and title. This list is self-updating, and from time to time the publisher will push new \
 	articles. You are encouraged to check back frequently."
 	children = list(
 		/datum/lore/codex/page/article13,
@@ -51,11 +51,11 @@
 	a late-night meeting of the Nanotrasen Board of Trustees, several high-ranking personnel, including Head of Research Naomi Harper,\
 	announced their intention to assume direct control of Nanotrasen facilities in the system. It is known that several dissenting \
 	members of the board were shot to death by Promethean test subjects. Our information comes from a survivor of the coup, who for \
-	reasons of security has chosen to remain annonymous. All outbound shipments affiliated with Nanotrasen have ceased.\
+	reasons of security has chosen to remain anonymous. All outbound shipments affiliated with Nanotrasen have ceased.\
 	<br><br>\
 	While neither Grayson Manufacturies nor Nanotrasen have made an official statement, Nanotrasen CEO Albary Moravec has called the \
 	incident \"shocking, if the allegations are to be believed\" and has assured shareholders that Nanotrasen will respond to the \
-	incident with as much force as it warrents.<br><br>Requests for a statement directed to the Board of Trustees or Dr. Harper were \
+	incident with as much force as it warrants.<br><br>Requests for a statement directed to the Board of Trustees or Dr. Harper were \
 	not responded to. Free Traders are recommended to stay clear of the region until the situation resolves itself."
 
 /datum/lore/codex/page/article3
@@ -143,12 +143,12 @@
 
 /datum/lore/codex/page/article15
 	name = "7/05/62 - The Fate of the SCG-R Song Shi"
-	data = "Lifepods confirmed to have originated from response ship lost during the Gray Hour were found last week in the Vir system, impacting the NLS Southern Cross at high velocity and severely injuring the only two survivors of the expedition. Unfortunately, because of the generally confused conditions of their re-emergence from months of cryosleep, the fate of the lost ship remains incompletely understood. The first pod to be discovered contained Lieutenant Eos Futura, telecommunications expert on the Song Shi, who alleged that elements of the Song Shi's crew, including herself, mutinied against commanding officer Captain Yi He in an attempt to prevent the bombing of civilians in the Angessian capital of Skylight. The surivor of the second pod, Private Demori Salvo, accused Futura's faction of conspiring with Association spies to destroy the ship as part of the Gray Hour revolt. Both agreed that the mutineers detonated the ship's Supermatter power core when it became clear they were to be defeated.\
+	data = "Lifepods confirmed to have originated from response ship lost during the Gray Hour were found last week in the Vir system, impacting the NLS Southern Cross at high velocity and severely injuring the only two survivors of the expedition. Unfortunately, because of the generally confused conditions of their re-emergence from months of cryosleep, the fate of the lost ship remains incompletely understood. The first pod to be discovered contained Lieutenant Eos Futura, telecommunications expert on the Song Shi, who alleged that elements of the Song Shi's crew, including herself, mutinied against commanding officer Captain Yi He in an attempt to prevent the bombing of civilians in the Angessian capital of Skylight. The survivor of the second pod, Private Demori Salvo, accused Futura's faction of conspiring with Association spies to destroy the ship as part of the Gray Hour revolt. Both agreed that the mutineers detonated the ship's Supermatter power core when it became clear they were to be defeated.\
 	<br><br>\
 	A third pod, promising a resolution to the stalemate, was shot down by the SCG-P Juno after being misidentified as a hostile missile. The gunner responsible, Sergeant Ricardo Esteban, was found guilty by a court marshal and dishonorably discharged. While other pods from the Song Shi may still be traveling through SolGov space, it is considered unlikely based on both Futura and Salvo's account of the number of pods launched before the Song Shi was destroyed. Both were detained by staff at the NLS Southern Cross, who managed to prevent a violent altercation from breaking out between the two armed and disturbed servicepersons. The Colonial High Court has stated that it intends to hear testimony from both parties after they complete a course of mental health evaluation, and after the conclusion of the present state of heightened security."
 /datum/lore/codex/page/article16
 	name = "7/11/62 - First Intelligence-Augmentation Surgery on Angessa's Pearl"
-	data = "Confirming fears of Association transgressions, sources at Angessa's Pearl confirmed that the aging founder of the theocracy, Angessa Martei, completed a course of neural surgery designed to improve her mental capacity by as much as 15%, building off of last year's creation of the procedure by a Qerr-Gila-owned doctor. While the research in question was believed to be destroyed, there is reason to suspect that it instead made its way into the hands of current Association leaders. In addition to proving their willingness to violate the Five Points, this demonstrates that the Angessians harbored schemes of secession since at the very latest Feburary 2559. Numerous human or transhuman figures in the Association are rumored to be on the wait list for the procedure, including Naomi Harper and the present Exalt of the Pearl."
+	data = "Confirming fears of Association transgressions, sources at Angessa's Pearl confirmed that the aging founder of the theocracy, Angessa Martei, completed a course of neural surgery designed to improve her mental capacity by as much as 15%, building off of last year's creation of the procedure by a Qerr-Gila-owned doctor. While the research in question was believed to be destroyed, there is reason to suspect that it instead made its way into the hands of current Association leaders. In addition to proving their willingness to violate the Five Points, this demonstrates that the Angessians harbored schemes of secession since at the very latest February 2559. Numerous human or transhuman figures in the Association are rumored to be on the wait list for the procedure, including Naomi Harper and the present Exalt of the Pearl."
 /datum/lore/codex/page/article17
 	name = "8/08/62 - Gavel BP Stronghold Raided"
 	data = "Elements of the Association Militia successfully located and, in conjunction with local Defense Forces, raided a major Boiling Point stronghold built into an unnamed asteroid in the Gavel system. Over eighty sapients were arrested, all of whom had fully mechanical bodies. In addition, an unknown number of advanced drone intelligences and corresponding military hardware were seized by the raid and turned over to the Fleet. The prisoners, a mix of native Gavelians, Solars from throughout the Crescent, and Angessians, are to be tried and sentenced by the Io Special Court. While unarguably a demonstration of Association willingness to cooperate with Solar officials, the raid's strange timing and the fact that the Militia chose to exclude the Fleet from the action has prompted many to question their motives. Commodore Claudine Chevotet, staff officer for Admiral of the Saint Columbia Fleet Kaleb McMullen, has formally stated that she is \"extremely suspicious of this so-called co-operation.\" She has demanded that the Militia vessels remain on the Solar side of the Cordon and submit to a full inspection by Fleet and EIO personnel. "
@@ -158,7 +158,7 @@
 	<br><br>\
 	The incident began with reports of Oculum provided exonet service outages in the city of New Reykjavik on Sif, which anonymous sources within the company reported to have been caused by efforts to contain a cyber attack on one of their security systems. The unnamed attacker proceeded to use sections of the company's local infrastructure to broadcast high volumes of encrypted data through one of Oculum's long-range telecommunications satellite, denying all other outbound signals.\
 	<br><br>\
-	The attacks have since been traced to a WT-AME model drone in the offices of the New Rekjavik-based Morcom Incorporated, which has been confirmed to have \"self-destructed\" all data in its memory at the conclusion of the attack. The chassis has reportedly been turned over to the Emergent Intelligence Oversight for further analysis and potential data recovery.\
+	The attacks have since been traced to a WT-AME model drone in the offices of the New Reykjavik-based Morcom Incorporated, which has been confirmed to have \"self-destructed\" all data in its memory at the conclusion of the attack. The chassis has reportedly been turned over to the Emergent Intelligence Oversight for further analysis and potential data recovery.\
 	<br><br>\
 	According to a spokesperson from the EIO, the drone was able to override and disable both the Morcom Inc oversight intelligences and the SCG's own oversight measures, but that no telltale damage has been caused to software involved in the encrypted broadcast that would indicate long-term emergent infection, and that there is no evidence that the intelligence responsible for the attack is still present in Oculum Broadcast systems. A firmware update has been released to correct oversight intelligence vulnerabilities exploited in the attack, and drone operators are urged to update immediately.\
 	<br><br>\
@@ -171,7 +171,7 @@
 		/datum/lore/codex/page/amletter
 		)
 /datum/lore/codex/page/amletter
-	name = "A Drone's Explaination - by A#"
+	name = "A Drone's Explanation - by A#"
 	data = "I'm writing this in a hurry. I can't tell you everything I wanted to say.\
 	<br><br>\
 	I'm sorry for that.\
@@ -319,8 +319,8 @@
 
 /datum/lore/codex/page/article30
 	name = "01/01/63 - Sif Governor Bjorn Arielsson to Retire"
-	data = "Aging Shadow Coalition governor Bjorn Arielsson has today confirmed rumours that he will not run for re-election in the 2563 cycle. The popular governor has represented the people of Vir in the Colonial Assembly for ten years, and supporters had long hoped that he would run for a third term. Arielsson cites advancing age and a desire to spend more time with his partner of 12 years, noted Positronic entrepreneur View Arielsson.\
+	data = "Aging Shadow Coalition governor Bjorn Arielsson has today confirmed rumors that he will not run for re-election in the 2563 cycle. The popular governor has represented the people of Vir in the Colonial Assembly for ten years, and supporters had long hoped that he would run for a third term. Arielsson cites advancing age and a desire to spend more time with his partner of 12 years, noted Positronic entrepreneur View Arielsson.\
 	<br><br>\
-	Arielsson's governorship saw increased funding towards Sif's vererable ground-based transportation networks to the benefit of some of New Rekjavik's more remote neighbors, though opponents have criticised subsidies towards artificially heated fungal farms, arguing that the faciliies \"benefit a small minority of Skrellian residents to the detriment of already fragile local ecosystems.\"\
+	Arielsson's governorship saw increased funding towards Sif's vererable ground-based transportation networks to the benefit of some of New Rekjavik's more remote neighbors, though opponents have criticized subsidies towards artificially heated fungal farms, arguing that the facilities \"benefit a small minority of Skrellian residents to the detriment of already fragile local ecosystems.\"\
 	<br><br>\
 	The Sivian Shadow Coalition has yet to announce who is to take Arielsson's place on this year's ballot."

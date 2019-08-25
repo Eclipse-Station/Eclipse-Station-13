@@ -187,17 +187,17 @@
 				<li>Bolt and weld down the Field Generators, ensuring they form a complete rectangle.</li>
 				<li>Bolt and weld down the Emitters, ensuring their fire will strike the corner Field Generators</li>
 				<li>Bolt down the Tesla Generator inside the rectangle formed by the Field Generators in a spot where it will be struck by fire from the Particle Accelerator</li>
-				<li>Bolt down Telsa Coils and Grounding Rods</li>
+				<li>Bolt down Tesla Coils and Grounding Rods</li>
 				<li>Activate the Emitters</li>
 				<li>Activate each of the Field Generators, then wait until the containment field has completely formed.</li>
 				<li>Setup the Particle Accelerator (see our best seller <i>&quot;Particle Accelerator User&apos;s Guide&quot;</i>!) and activate it.</li>
-				<li>After a short time the Telsa Generator will create an energy ball, being consumed in the process.</li>
+				<li>After a short time the Tesla Generator will create an energy ball, being consumed in the process.</li>
 				</ol>
 				<br>
 				<h2>OPERATION AND MAINTENANCE</h2>
 				<ol>
 				<li>Ensure that electrical protection and meson goggles are worn at all times while working in the engine room.</li>
-				<li>Ensure that Telsa Coils and/or Grounding Rods are placed to safely collect or ground any and all shock.</li>
+				<li>Ensure that Tesla Coils and/or Grounding Rods are placed to safely collect or ground any and all shock.</li>
 				<li>Ensure that all Emitters remain activated and have unobstructed lines of fire to the Field Generators.</li>
 				<li>Do <b>not</b> let the Emitters run out of power.</li>
 				</ol>

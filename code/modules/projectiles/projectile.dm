@@ -300,7 +300,7 @@
 
 	spawn while(src && src.loc)
 		if(kill_count-- < 1)
-			on_impact(src.loc) //for any final impact behaviours
+			on_impact(src.loc) //for any final impact behaviors
 			qdel(src)
 			return
 		if((!( current ) || loc == current))

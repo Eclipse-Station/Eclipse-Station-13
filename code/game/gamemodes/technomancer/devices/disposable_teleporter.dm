@@ -64,7 +64,7 @@
 
 		if(!targets.len)
 			user << "\The [src] was unable to locate a suitable teleport destination, as all the possibilities \
-			were nonexistant or hazardous. Try a different area."
+			were non-existent or hazardous. Try a different area."
 			return
 		var/turf/simulated/destination = null
 

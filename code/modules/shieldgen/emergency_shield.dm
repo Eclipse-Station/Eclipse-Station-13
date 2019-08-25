@@ -15,7 +15,7 @@
 /obj/machinery/shield/malfai
 	name = "emergency forcefield"
 	desc = "A weak forcefield which seems to be projected by the station's emergency atmosphere containment field"
-	health = max_health/2 // Half health, it's not suposed to resist much.
+	health = max_health/2 // Half health, it's not supposed to resist much.
 
 /obj/machinery/shield/malfai/process()
 	health -= 0.5 // Slowly lose integrity over time

@@ -94,9 +94,9 @@
 /datum/lore/codex/page/nevrean/add_content()
 	name = "Nevrean"
 	keywords += list("Nevrean")
-	data = "An avian species hailing from the planet Eltus in the Vilous system, characterised by their long whiplike \
+	data = "An avian species hailing from the planet Eltus in the Vilous system, characterized by their long whiplike \
 	tail-feathers. The species is generally matriarchal, with females tending towards duller, brown coloration and \
-	bulkier bodies, while males are slight and brightly coloured. In both typical mannerisms, culture and physical \
+	bulkier bodies, while males are slight and brightly colored. In both typical mannerisms, culture and physical \
 	build, the sexes are directly reversed when compared to traditional human society.\
 	<br><br>\
 	Their build is somewhere between a bird and a feathered dinosaur. Females tend to have short feathers on their arms that are not capable \

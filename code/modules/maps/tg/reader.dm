@@ -3,12 +3,12 @@
 //////////////////////////////////////////////////////////////
 
 /*
-//global datum that will preload variables on atoms instanciation
+//global datum that will preload variables on atoms instantiation
 GLOBAL_VAR_INIT(use_preloader, FALSE)
 GLOBAL_DATUM_INIT(_preloader, /dmm_suite/preloader, new)
 */
 
-//global datum that will preload variables on atoms instanciation
+//global datum that will preload variables on atoms instantiation
 var/global/dmm_suite/preloader/_preloader = new()
 var/global/use_preloader = FALSE
 
@@ -376,7 +376,7 @@ var/global/use_preloader = FALSE
 
 	//turn off base new Initialization until the whole thing is loaded
 	SSatoms.map_loader_begin()
-	//instanciate the first /turf
+	//instantiate the first /turf
 	var/turf/T
 	if(members[first_turf_index] != /turf/template_noop)
 		T = instance_atom(members[first_turf_index],members_attributes[first_turf_index],crds,no_changeturf)
@@ -390,7 +390,7 @@ var/global/use_preloader = FALSE
 			T.underlays += underlay
 			index++
 
-	//finally instance all remainings objects/mobs
+	//finally instance all remaining objects/mobs
 	for(index in 1 to first_turf_index-1)
 		instance_atom(members[index],members_attributes[index],crds,no_changeturf)
 	//Restore initialization to the previous value

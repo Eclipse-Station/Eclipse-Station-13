@@ -41,7 +41,7 @@
 // This is run before committing to an action/event.
 /datum/game_master/proc/pre_action_checks()
 	if(!ticker || ticker.current_state != GAME_STATE_PLAYING)
-		log_debug("Game Master unable to start event: Ticker is nonexistant, or the game is not ongoing.")
+		log_debug("Game Master unable to start event: Ticker is non-existent, or the game is not ongoing.")
 		return FALSE
 	if(suspended)
 		return FALSE
@@ -71,7 +71,7 @@
 		var/list/weighted_actions = list()
 		for(var/datum/gm_action/action in best_actions)
 			if(action.chaotic > danger)
-				continue // We skip dangerous events when bad stuff is already occuring.
+				continue // We skip dangerous events when bad stuff is already occurring.
 			weighted_actions[action] = action.get_weight()
 
 		var/datum/gm_action/choice = pickweight(weighted_actions)

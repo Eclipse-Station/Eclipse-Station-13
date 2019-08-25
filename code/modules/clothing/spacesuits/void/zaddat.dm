@@ -29,7 +29,7 @@
 /obj/item/clothing/suit/space/void/zaddat/verb/custom_suit()
 	set name = "Customize Shroud"
 	set category = "Object"
-	set desc = "Pick an appearence for your Shroud."
+	set desc = "Pick an appearance for your Shroud."
 
 	var/mob/M = usr
 	var/suit_style = null

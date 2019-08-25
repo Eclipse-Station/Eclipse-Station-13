@@ -13,7 +13,7 @@
 	var/afk = M.client.is_afk(1 MINUTE)
 	if(afk) // Deduct points based on length of AFK-ness.
 		switch(afk) // One minute is equal to 600, for reference.
-			if(1 MINUTE to 10 MINUTES) // People gone for this emough of time hopefully will come back soon.
+			if(1 MINUTE to 10 MINUTES) // People gone for this enough of time hopefully will come back soon.
 				. -= round( (afk / 200), 1)
 			if(10 MINUTES to 30 MINUTES)
 				. -= round( (afk / 150), 1)

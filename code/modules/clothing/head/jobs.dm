@@ -109,7 +109,7 @@
 
 /obj/item/clothing/head/helmet/warden/hat
 	name = "warden's hat"
-	desc = "It's a special hat issued to the Warden of a securiy force."
+	desc = "It's a special hat issued to the Warden of a security force."
 	icon_state = "policehelm"
 	valid_accessory_slots = null
 

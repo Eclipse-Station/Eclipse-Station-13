@@ -1,4 +1,4 @@
-///////////////////////////////////////////////Alchohol bottles! -Agouri //////////////////////////
+///////////////////////////////////////////////Alcohol bottles! -Agouri //////////////////////////
 //Functionally identical to regular drinks. The only difference is that the default bottle size is 100. - Darem
 //Bottles now weaken and break when smashed on people's heads. - Giacom
 
@@ -309,7 +309,7 @@
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/cognac
 	name = "Chateau De Baton Premium Cognac"
-	desc = "A sweet and strongly alchoholic drink, made after numerous distillations and years of maturing."
+	desc = "A sweet and strongly alcoholic drink, made after numerous distillations and years of maturing."
 	icon_state = "cognacbottle"
 	center_of_mass = list("x"=16, "y"=6)
 

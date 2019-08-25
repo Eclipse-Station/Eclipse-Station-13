@@ -117,7 +117,7 @@
 
 /datum/design/item/medical/advanced_roller
 	name = "advanced roller bed"
-	desc = "A more advanced version of the regular roller bed, with inbuilt surgical stabilisers and an improved folding system."
+	desc = "A more advanced version of the regular roller bed, with inbuilt surgical stabilizers and an improved folding system."
 	id = "roller_bed"
 	req_tech = list(TECH_BIO = 3, TECH_MATERIAL = 3, TECH_MAGNET = 3)
 	materials = list(DEFAULT_WALL_MATERIAL = 4000, "glass" = 2000, "phoron" = 2000)

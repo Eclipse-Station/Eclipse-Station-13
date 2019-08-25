@@ -125,7 +125,7 @@
 	"The class field trip was completely ruined by _____.",
 	"The Five Stages of Grief: denial, anger, bargaining, _____ acceptance.",
 	"The healing process began when I joined a support group for victims of _____.",
-	"The socialist governments of Scandanavia have declared that access to _____ is a basic human right.",
+	"The socialist governments of Scandinavia have declared that access to _____ is a basic human right.",
 	"The votes are in, and the new high school mascot is _____.",
 	"This holiday season, Tim Allen must overcome his fear of _____ to save Christmas.",
 	"This is the way the world ends This is the way the world ends Not with a bang but with _____.",

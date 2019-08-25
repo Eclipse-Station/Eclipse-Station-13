@@ -94,7 +94,7 @@
 	Weaponry and specialized armor are allowed to be given out to security officers, with clearance from the Warden or Head of Security.\
 	<br>\
 	For Red, Security may have weapons drawn at all times, however properly handling of weapons should not be disregarded.  Body armor and \
-	helmets are mandatory.  Specialized armor may be distributed by the Warden and Head of Security, when appropiate."
+	helmets are mandatory.  Specialized armor may be distributed by the Warden and Head of Security, when appropriate."
 
 /datum/lore/codex/page/sop_escalation
 	name = "Escalation of Force"

@@ -705,7 +705,7 @@
 		return dpdir & (~turn(fromdir, 180))
 
 	// transfer the holder through this pipe segment
-	// overriden for special behaviour
+	// overridden for special behavior
 	//
 	proc/transfer(var/obj/structure/disposalholder/H)
 		var/nextdir = nextdir(H.dir)
@@ -1507,7 +1507,7 @@
 				return
 
 // called when movable is expelled from a disposal pipe or outlet
-// by default does nothing, override for special behaviour
+// by default does nothing, override for special behavior
 
 /atom/movable/proc/pipe_eject(var/direction)
 	return
