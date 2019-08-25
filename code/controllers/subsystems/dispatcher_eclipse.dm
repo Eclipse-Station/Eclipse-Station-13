@@ -15,10 +15,13 @@ var/global/datum/controller/subsystem/dispatcher/dispatcher		//This must be defi
 SUBSYSTEM_DEF(dispatcher)		
 	name = "Dispatcher" //name of the subsystem
 	init_order = -2		//lower priority, really
-	flags = SS_BACKGROUND		//run in background. We only really need this for global stuff.
+	flags = SS_NO_FIRE		//only used for global lists
 	runlevels = RUNLEVELS_DEFAULT
+	wait = 12 MINUTES		//only used for periodic housekeeping; we don't need the precision.
 	var/static/dispatcher_initialized = FALSE		//American spelling, for consistency.
-	var/debug_level = DEBUGLEVEL_FATAL_ONLY
+	var/debug_level = DEBUGLEVEL_VERBOSE
+	
+	var/do_regular_list_housekeeping = TRUE
 	
 	//used in player tracking system
 	var/list/tracked_players_all = list()		//All tracked players
@@ -30,13 +33,26 @@ SUBSYSTEM_DEF(dispatcher)
 	var/list/tracked_players_eng = list()		//Engineering
 	var/list/tracked_players_svc = list()		//Service
 
+/datum/controller/subsystem/dispatcher/Initialize()
+	dispatcher = src
+	if(DEBUGLEVEL_VERBOSE <= debug_level)		//Yoda programming here.
+		log_debug("DISPATCHER: Initializing.")
+	if(!do_regular_list_housekeeping)
+		flags |= SS_NO_FIRE
+		if(DEBUGLEVEL_WARNING <= debug_level)
+			log_debug("DISPATCHER: Regular housekeeping is disabled. To prevent unnecessary calls, this subsystem will stop firing now. This will NOT affect player tracking!")
+	dispatcher.flushTracking()		//test the dispatcher.Proc() call system; we shouldn't have any mobs to track
+	if(DEBUGLEVEL_VERBOSE <= debug_level)
+		log_debug("DISPATCHER: Initialized!")
+	..()
+	
 /datum/controller/subsystem/dispatcher/Recover()
 	flags |= SS_NO_INIT // We don't want to init twice.
 	flushTracking()
 
 /datum/controller/subsystem/dispatcher/proc/flushTracking()
 	//First, we reset all the lists.
-	if(DEBUGLEVEL_VERBOSE <= debug_level)		//Yoda programming here.
+	if(DEBUGLEVEL_VERBOSE <= debug_level)
 		log_debug("DISPATCHER: Flushing lists.")
 	tracked_players_all = list()		//All tracked players
 	tracked_players_sec = list()		//Security
@@ -48,15 +64,30 @@ SUBSYSTEM_DEF(dispatcher)
 	tracked_players_svc = list()		//Service
 	
 	//make sure they're clear
-	if(tracked_players_all || tracked_players_sec || tracked_players_med || tracked_players_sci || tracked_players_cmd || tracked_players_crg || tracked_players_eng || tracked_players_svc)
-		world.Error("DISPATCHER: Attempted to flush player lists, but lists still had data. Abnormalities may occur!")
-		if(DEBUGLEVEL_SEVERE <= debug_level)		//Yoda programming here.
-			log_debug("DISPATCHER: Attempted to flush player lists, but lists still had data.")
-	else if(DEBUGLEVEL_VERBOSE <= debug_level)		//Yoda programming here.
+	if(tracked_players_all.len || tracked_players_sec.len || tracked_players_med.len || tracked_players_sci.len || tracked_players_cmd.len || tracked_players_crg.len || tracked_players_eng.len || tracked_players_svc.len)
+		world.Error("DISPATCHER: Attempted to flush player lists, but lists still had data. Falling back to list.Cut()...")
+		if(DEBUGLEVEL_WARNING <= debug_level)
+			log_debug("DISPATCHER: Attempted to flush player lists, but lists still had data. Reverting to list.Cut() method...")
+		tracked_players_all.Cut()		//All tracked players
+		tracked_players_sec.Cut()		//Security
+		tracked_players_med.Cut()		//Medical
+		tracked_players_sci.Cut()		//Science
+		tracked_players_cmd.Cut()		//Command
+		tracked_players_crg.Cut()		//Supply
+		tracked_players_eng.Cut()		//Engineering
+		tracked_players_svc.Cut()		//Service
+		
+		if(tracked_players_all.len || tracked_players_sec.len || tracked_players_med.len || tracked_players_sci.len || tracked_players_cmd.len || tracked_players_crg.len || tracked_players_eng.len || tracked_players_svc.len)
+			throw EXCEPTION("DISPATCHER: Attempted to flush player lists twice, but lists still had data. Aborting - abnormalities may occur!")
+			if(DEBUGLEVEL_SEVERE <= debug_level)
+				log_debug("DISPATCHER: Attempted to flush player lists twice, but lists still had data. Aborting - abnormalities may occur!")
+
+
+	else if(DEBUGLEVEL_VERBOSE <= debug_level)
 		log_debug("DISPATCHER: Lists flushed.")
 	
 	//let's start by rebuilding the master list...
-	for(var/mob/living/M in player_list)
+	for(var/mob/M in player_list)
 		if(!M)
 			if(DEBUGLEVEL_VERBOSE <= debug_level)
 				log_debug("DISPATCHER: Master list population failure: No players on.")
@@ -71,7 +102,7 @@ SUBSYSTEM_DEF(dispatcher)
 			log_debug("DISPATCHER: Master list population: [tracked_players_all.len] players.")
 		
 	//...and now we rebuild the department lists.
-	for(var/mob/living/M in tracked_players_all)
+	for(var/mob/M in tracked_players_all)
 		if(!M)
 			if(DEBUGLEVEL_WARNING <= debug_level)
 				log_debug("DISPATCHER: Sub-list population failure: No players in master list. This indicates that a 'return' is failing to end the flush proc.")
@@ -84,7 +115,7 @@ SUBSYSTEM_DEF(dispatcher)
 			addToTracking(M)
 			continue		//We're done adding here.
 
-/datum/controller/subsystem/dispatcher/proc/addToTracking(mob/living/M)
+/datum/controller/subsystem/dispatcher/proc/addToTracking(mob/M)
 	if(!M)
 		CRASH("no mob specified.")
 	if(!M.mind)
@@ -109,7 +140,7 @@ SUBSYSTEM_DEF(dispatcher)
 	if(M.mind.assigned_role in civilian_positions)
 		if(M.mind.assigned_role != (USELESS_JOB || "Intern"))		//visitors are not staff, and interns have no access.
 			tracked_players_svc += M
-
+	
 	if(DEBUGLEVEL_VERBOSE <= debug_level)
 		log_debug("DISPATCHER: Added [M] to tracked players.")
 	return 1
@@ -124,28 +155,28 @@ SUBSYSTEM_DEF(dispatcher)
 
 	//...departments first...
 	if(tracked_players_sec & M)
-		tracked_players_sec -= M
+		tracked_players_sec.Remove(M)
 	if(tracked_players_med & M)
-		tracked_players_med -= M
+		tracked_players_med.Remove(M)
 	if(tracked_players_sci & M)
-		tracked_players_sci -= M
+		tracked_players_sci.Remove(M)
 	if(tracked_players_cmd & M)
-		tracked_players_cmd -= M
+		tracked_players_cmd.Remove(M)
 	if(tracked_players_crg & M)
-		tracked_players_crg -= M
+		tracked_players_crg.Remove(M)
 	if(tracked_players_eng & M)
-		tracked_players_eng -= M
+		tracked_players_eng.Remove(M)
 	if(tracked_players_svc & M)
-		tracked_players_svc -= M
+		tracked_players_svc.Remove(M)
 	
 	//...then the final list.
 	if(tracked_players_all & M)
-		tracked_players_all -= M
+		tracked_players_all.Remove(M)
 
 	if(DEBUGLEVEL_VERBOSE <= debug_level)
 		log_debug("DISPATCHER: Removed [M] from tracked players.")
 	return 1
-
+	
 /datum/controller/subsystem/dispatcher/proc/handleRequest(department = "", priority = FALSE, message, sender = "Unknown", sender_role = "Unassigned")
 //return statement should be whether or not the handler handled it.
 //0 if it is kicking it back to the RC due to players being on,

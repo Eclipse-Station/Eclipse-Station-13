@@ -381,7 +381,6 @@
 /obj/machinery/cryopod/proc/despawn_occupant(var/mob/to_despawn)
 	//Recursively despawn mobs
 	for(var/mob/M in to_despawn)
-		dispatcher.removeFromTracking(M)		//Eclipse edit - NT DAD
 		despawn_occupant(M)
 
 	// VOREStation
@@ -514,6 +513,8 @@
 	//visible_message("<span class='notice'>\The [initial(name)] hums and hisses as it moves [to_despawn.real_name] into storage.</span>", 3)
 	visible_message("<span class='notice'>\The [initial(name)] [on_store_visible_message_1] [to_despawn.real_name] [on_store_visible_message_2].</span>", 3)
 
+	//Remove from dispatcher.
+	dispatcher.removeFromTracking(to_despawn)		//Eclipse edit - NT DAD
 
 	//This should guarantee that ghosts don't spawn.
 	to_despawn.ckey = null

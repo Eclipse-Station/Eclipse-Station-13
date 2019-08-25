@@ -1016,6 +1016,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 		var/obj/machinery/cryopod/CP = human_cryopods[input(usr,"Select a cryopod to use","Cryopod Choice") as null|anything in human_cryopods]
 		if(!CP)
 			return
+		dispatcher.removeFromTracking(M)		//Eclipse edit: NT DAD
 		M.ghostize()
 		CP.despawn_occupant(M)
 		return
@@ -1036,5 +1037,6 @@ Traitors and the like can also be revived with the previous role mostly intact.
 			return
 
 	else if(isliving(M))
+		dispatcher.removeFromTracking(M)		//Eclipse edit: NT DAD
 		M.ghostize()
 		qdel(M) //Bye

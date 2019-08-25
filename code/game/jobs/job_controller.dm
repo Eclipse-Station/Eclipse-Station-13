@@ -164,7 +164,7 @@ var/global/datum/controller/occupations/job_master
 			if((player) && (player.mind))
 				player.mind.assigned_role = null
 				player.mind.special_role = null
-				dispatcher.removeFromTracking(player)
+		dispatcher.flushTracking()		//Eclipse edit: NT DAD
 		SetupOccupations()
 		unassigned = list()
 		return
