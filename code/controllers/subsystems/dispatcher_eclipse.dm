@@ -15,13 +15,11 @@ var/global/datum/controller/subsystem/dispatcher/dispatcher		//This must be defi
 SUBSYSTEM_DEF(dispatcher)		
 	name = "Dispatcher" //name of the subsystem
 	init_order = -2		//lower priority, really
-	flags = SS_NO_FIRE		//only used for global lists
+	flags = SS_BACKGROUND		//only used for global lists
 	runlevels = RUNLEVELS_DEFAULT
-	wait = 12 MINUTES		//only used for periodic housekeeping; we don't need the precision.
+	wait = 10 SECONDS		//only used in initial flush, not really necessary otherwise
 	var/static/dispatcher_initialized = FALSE		//American spelling, for consistency.
 	var/debug_level = DEBUGLEVEL_VERBOSE
-	
-	var/do_regular_list_housekeeping = TRUE
 	
 	//used in player tracking system
 	var/list/tracked_players_all = list()		//All tracked players
@@ -37,15 +35,25 @@ SUBSYSTEM_DEF(dispatcher)
 	dispatcher = src
 	if(DEBUGLEVEL_VERBOSE <= debug_level)		//Yoda programming here.
 		log_debug("DISPATCHER: Initializing.")
-	if(!do_regular_list_housekeeping)
-		flags |= SS_NO_FIRE
-		if(DEBUGLEVEL_WARNING <= debug_level)
-			log_debug("DISPATCHER: Regular housekeeping is disabled. To prevent unnecessary calls, this subsystem will stop firing now. This will NOT affect player tracking!")
 	dispatcher.flushTracking()		//test the dispatcher.Proc() call system; we shouldn't have any mobs to track
 	if(DEBUGLEVEL_VERBOSE <= debug_level)
 		log_debug("DISPATCHER: Initialized!")
 	..()
+
+/datum/controller/subsystem/dispatcher/fire(resumed = FALSE)
+	if(DEBUGLEVEL_VERBOSE <= debug_level)
+		log_debug("DISPATCHER: Standing by for initial flush...")
+	if(Master.current_runlevel < RUNLEVEL_SETUP)
+		log_debug("DISPATCHER: Holding off, runlevel: [Master.current_runlevel], waiting for [RUNLEVEL_GAME]...")
+		return		//eh, it'll fire again.
 	
+	if(DEBUGLEVEL_VERBOSE <= debug_level)
+		log_debug("DISPATCHER: Game is running (well, running enough for our standards). Beginning initial flush.")
+	flushTracking()		//roundstart shenanigans will prevent it from flushing properly.
+	flags |= SS_NO_FIRE
+	if(DEBUGLEVEL_VERBOSE <= debug_level)
+		log_debug("DISPATCHER: Initial flush completed. Subsystem will now go offline (this will not affect player tracking).")
+
 /datum/controller/subsystem/dispatcher/Recover()
 	flags |= SS_NO_INIT // We don't want to init twice.
 	flushTracking()
@@ -87,7 +95,7 @@ SUBSYSTEM_DEF(dispatcher)
 		log_debug("DISPATCHER: Lists flushed.")
 	
 	//let's start by rebuilding the master list...
-	for(var/mob/M in player_list)
+	for(var/mob/living/M in player_list)
 		if(!M)
 			if(DEBUGLEVEL_VERBOSE <= debug_level)
 				log_debug("DISPATCHER: Master list population failure: No players on.")
@@ -123,6 +131,8 @@ SUBSYSTEM_DEF(dispatcher)
 	if(!M.mind.assigned_role)
 		return 0	//No assigned role.
 
+	if(!(tracked_players_all & M))
+		tracked_players_all += M
 
 	if(M.mind.assigned_role in security_positions)
 		tracked_players_sec += M
@@ -177,57 +187,6 @@ SUBSYSTEM_DEF(dispatcher)
 		log_debug("DISPATCHER: Removed [M] from tracked players.")
 	return 1
 	
-/datum/controller/subsystem/dispatcher/proc/handleRequest(department = "", priority = FALSE, message, sender = "Unknown", sender_role = "Unassigned")
-//return statement should be whether or not the handler handled it.
-//0 if it is kicking it back to the RC due to players being on,
-//1 if it sent to Discord.
-	department = lowertext(department)
-	switch(department)
-		if("engineering")
-			if(!tracked_players_eng)
-				sendDiscordRequest("engineering",priority, message, sender, sender_role)
-				return 1
-			else
-				return 0
-		if("science")
-			if(!tracked_players_sci)
-				sendDiscordRequest("research",priority, message, sender, sender_role)
-				return 1
-			else
-				return 0
-		if("security")
-			if(!tracked_players_sec)
-				sendDiscordRequest("security",priority, message, sender, sender_role)
-				return 1
-			else
-				return 0
-		if("supply")
-			if(!tracked_players_crg)
-				sendDiscordRequest("supply",priority, message, sender, sender_role)
-				return 1
-			else
-				return 0
-		if("service")
-			if(!tracked_players_svc)
-				sendDiscordRequest("service",priority, message, sender, sender_role)
-				return 1
-			else
-				return 0
-		if("medical")
-			if(!tracked_players_med)
-				sendDiscordRequest("medical",priority, message, sender, sender_role)
-				return 1
-			else
-				return 0
-		if("command")
-			if(!tracked_players_cmd)
-				sendDiscordRequest("command",priority, message, sender, sender_role)
-				return 1
-			else
-				return 0
-		else
-			world.Error("Unimplemented department \"[department]\".")
-
 /datum/controller/subsystem/dispatcher/proc/sendDiscordRequest(department = "", priority = FALSE, message, sender, sender_role)
 // "[priority ? "**HIGH PRIORITY** a" : "A"]ssistance request for [department_ping] from [sender] ([sender_role]): '[message]'"
 	CRASH("Unimplemented. Department [department], priority [priority], message [message], sender [sender], sender role [sender_role].")
