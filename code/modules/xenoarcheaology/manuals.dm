@@ -201,9 +201,9 @@
 				</head>
 				<body>
 				<br>
-				It's perhaps one of the most exciting times to be alive, with the recent breakthroughs in understanding and categorisation of things we may one day no longer call
+				It's perhaps one of the most exciting times to be alive, with the recent breakthroughs in understanding and categorization of things we may one day no longer call
 				'anomalies,' but rather 'infrequent or rare occurrences of certain celestial weather or phenomena.' Perhaps a little more long winded, but no less eloquent all the
-				same! Why, look at the strides we're making in piercing the walls of bluespace or our steadily improving ability to clarify and stabilise subspace emissions; it's
+				same! Why, look at the strides we're making in piercing the walls of bluespace or our steadily improving ability to clarify and stabilize subspace emissions; it's
 				certainly an exciting time to be alive. For the moment, the Hydrolian hasn't seen two spatial anomalies alike but the day will come and it is soon, I can feel it.
 				</body>
 			</html>"}
@@ -257,7 +257,7 @@
 				<ol>
 					<li><a href="#Anomalies">Foreword: Modern attitude towards anomalies</a></li>
 					<li><a href="#Tri">Triangulating anomalous energy readings</a></li>
-					<li><a href="#Synthetic">Harvesting and utilising anomalous energy signatures</a></li>
+					<li><a href="#Synthetic">Harvesting and utilizing anomalous energy signatures</a></li>
 				</ol>
 				<br>
 				<h1><a name="Anomalies">Modern attitude towards anomalies</a></h1>

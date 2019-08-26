@@ -60,11 +60,11 @@ Guide to how make new sector
 0.Map
 Remember to define shuttle areas if you want sector be accessible via shuttles.
 Currently there are no other ways to reach sectors from ships.
-In examples, 4x6 shuttle area is used. In case of shuttle area being too big, it will apear in bottom left corner of it.
+In examples, 4x6 shuttle area is used. In case of shuttle area being too big, it will appear in bottom left corner of it.
 
 Remember to put a helm console and engine control console on ship maps.
 Ships need engines to move. Currently there are only thermal engines.
-Thermal engines are just a unary atmopheric machine, like a vent. They need high-pressure gas input to produce more thrust.
+Thermal engines are just a unary atmospheric machine, like a vent. They need high-pressure gas input to produce more thrust.
 
 
 1.Metaobject
@@ -72,7 +72,7 @@ All vars needed for it to work could be set directly in map editor, so in most c
 Remember to set landing_area var for sectors.
 
 2.Overmap object
-If you need custom behaviour on entering/leaving this sector, or restricting access to it, you can define your custom map object.
+If you need custom behavior on entering/leaving this sector, or restricting access to it, you can define your custom map object.
 Remember to put this new type into spawn_type var of metaobject.
 
 3.Shuttle console

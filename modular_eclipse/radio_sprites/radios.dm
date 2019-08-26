@@ -34,7 +34,7 @@
 	else
 		icon_state = initial(icon_state)
 
-//Now we define pre-coloured radios.
+//Now we define pre-colored radios.
 /obj/item/device/radio/color/red		//Security
 	icon_state = "xpr-sec"
 	desc = "A basic two-way radio. This one in particular is robust red."

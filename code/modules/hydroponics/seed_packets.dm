@@ -57,7 +57,7 @@ GLOBAL_LIST_BOILERPLATE(all_seed_packs, /obj/item/seeds)
 		src.desc = "It has a picture of [seed.display_name] on the front."
 	else
 		src.name = "sample of [seed.seed_name] [seed.seed_noun]"
-		src.desc = "It's labelled as coming from [seed.display_name]."
+		src.desc = "It's labeled as coming from [seed.display_name]."
 
 /obj/item/seeds/examine(mob/user)
 	..(user)

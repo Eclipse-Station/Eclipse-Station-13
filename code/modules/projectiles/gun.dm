@@ -590,7 +590,7 @@
 /obj/item/weapon/gun/proc/process_point_blank(obj/projectile, mob/user, atom/target)
 	var/obj/item/projectile/P = projectile
 	if(!istype(P))
-		return //default behaviour only applies to true projectiles
+		return //default behavior only applies to true projectiles
 
 	//default point blank multiplier
 	var/damage_mult = 1.3
@@ -611,7 +611,7 @@
 /obj/item/weapon/gun/proc/process_accuracy(obj/projectile, mob/living/user, atom/target, var/burst, var/held_twohanded)
 	var/obj/item/projectile/P = projectile
 	if(!istype(P))
-		return //default behaviour only applies to true projectiles
+		return //default behavior only applies to true projectiles
 
 	var/acc_mod = burst_accuracy[min(burst, burst_accuracy.len)]
 	var/disp_mod = dispersion[min(burst, dispersion.len)]
@@ -645,7 +645,7 @@
 /obj/item/weapon/gun/proc/process_projectile(obj/projectile, mob/user, atom/target, var/target_zone, var/params=null)
 	var/obj/item/projectile/P = projectile
 	if(!istype(P))
-		return 0 //default behaviour only applies to true projectiles
+		return 0 //default behavior only applies to true projectiles
 
 	if(params)
 		P.set_clickpoint(params)

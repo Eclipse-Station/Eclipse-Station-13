@@ -89,7 +89,7 @@
 		map[get_map_cell(x+isize,y)]        \
 		)/2)
 
-	// Centre value becomes the average of all other values + possible random variance.
+	// Center value becomes the average of all other values + possible random variance.
 	var/current_cell = get_map_cell(x+hsize,y+hsize)
 	map[current_cell] = round(( \
 		map[get_map_cell(x+hsize,y+isize)] + \

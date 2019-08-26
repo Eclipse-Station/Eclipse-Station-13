@@ -69,8 +69,8 @@
 				" due to [pick("heart failure","kidney failure","liver failure","brain hemorrhage")]")]"
 
 			if(BARGAINS)
-				body += "BARGAINS! BARGAINS! BARGAINS! Commerce Control on [affected_dest.name] wants you to know that everything must go! Across all retail centres, \
-				all goods are being slashed, and all retailors are onboard - so come on over for the \[shopping\] time of your life."
+				body += "BARGAINS! BARGAINS! BARGAINS! Commerce Control on [affected_dest.name] wants you to know that everything must go! Across all retail centers, \
+				all goods are being slashed, and all retailers are onboard - so come on over for the \[shopping\] time of your life."
 
 			if(SONG_DEBUT)
 				body += "[pick("Singer","Singer/songwriter","Saxophonist","Pianist","Guitarist","TV personality","Star")] [random_name(pick(MALE,FEMALE))] \

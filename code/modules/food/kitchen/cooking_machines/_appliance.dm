@@ -441,7 +441,7 @@
 
 
 //Combination cooking involves combining the names and reagents of ingredients into a predefined output object
-//The ingredients represent flavours or fillings. EG: donut pizza, cheese bread
+//The ingredients represent flavors or fillings. EG: donut pizza, cheese bread
 /obj/machinery/appliance/proc/combination_cook(var/datum/cooking_item/CI)
 	var/cook_path = output_options[CI.combine_target]
 

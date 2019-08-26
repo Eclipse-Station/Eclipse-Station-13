@@ -11,9 +11,9 @@
 	var/cash_locked = 1
 	var/cash_open = 0
 	var/machine_id = ""
-	var/transaction_amount = 0 // cumulatd amount of money to pay in a single purchase
+	var/transaction_amount = 0 // cumulated amount of money to pay in a single purchase
 	var/transaction_purpose = null // text that gets used in ATM transaction logs
-	var/list/transaction_logs = list() // list of strings using html code to visualise data
+	var/list/transaction_logs = list() // list of strings using html code to visualize data
 	var/list/item_list = list()  // entities and according
 	var/list/price_list = list() // prices for each purchase
 	var/manipulating = 0

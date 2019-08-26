@@ -610,7 +610,7 @@ End Citadel Change */
 	color = "#E2A55F"
 
 	glass_name = "apple juice"
-	glass_desc = "An earth favorite."
+	glass_desc = "An Earth favorite."
 
 /datum/reagent/drink/juice/lime
 	name = "Lime Juice"
@@ -2569,7 +2569,7 @@ End Citadel Change */
 /datum/reagent/ethanol/vodkatonic
 	name = "Vodka and Tonic"
 	id = "vodkatonic"
-	description = "For when a gin and tonic isn't russian enough."
+	description = "For when a gin and tonic isn't Russian enough."
 	taste_description = "tart bitterness"
 	color = "#0064C8" // rgb: 0, 100, 200
 	strength = 15
@@ -2708,13 +2708,13 @@ End Citadel Change */
 /datum/reagent/ethanol/coffee/elysiumfacepunch
 	name = "Elysium Facepunch"
 	id = "elysiumfacepunch"
-	description = "A lothesome cocktail favored by Heaven's skeleton shift workers."
+	description = "A loathsome cocktail favored by Heaven's skeleton shift workers."
 	taste_description = "sour coffee"
 	color = "#8f7729"
 	strength = 20
 
 	glass_name = "Elysium Facepunch"
-	glass_desc = "A lothesome cocktail favored by Heaven's skeleton shift workers."
+	glass_desc = "A loathsome cocktail favored by Heaven's skeleton shift workers."
 
 /datum/reagent/ethanol/erebusmoonrise
 	name = "Erebus Moonrise"
@@ -3099,7 +3099,7 @@ End Citadel Change */
 	name = "Godka"
 	id = "godka"
 	description = "Number one drink AND fueling choice for Russians multiverse-wide."
-	taste_description = "russian steel and a hint of grain"
+	taste_description = "Russian steel and a hint of grain"
 	color = "#0064C8"
 	strength = 50
 

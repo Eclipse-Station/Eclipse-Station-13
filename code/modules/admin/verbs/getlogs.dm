@@ -77,7 +77,7 @@
 	return
 
 
-//Other log stuff put here for the sake of organisation
+//Other log stuff put here for the sake of organization
 
 //Shows today's server log
 /datum/admins/proc/view_txt_log()

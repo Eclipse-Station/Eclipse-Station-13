@@ -69,7 +69,7 @@
 		powered = 0
 
 
-// ARMOUR
+// ARMOR
 // Protects the cyborg from damage. Usually first module to be hit
 // No power usage
 /datum/robot_component/armour

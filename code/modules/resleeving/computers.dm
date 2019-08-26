@@ -281,7 +281,7 @@
 						temp = "Initiating printing cycle..."
 						menu = 1
 					else
-						temp = "Initiating printing cycle...<br>Error: Post-initialisation failed. Printing cycle aborted."
+						temp = "Initiating printing cycle...<br>Error: Post-initialization failed. Printing cycle aborted."
 
 				//We're cloning an organic.
 				else
@@ -310,7 +310,7 @@
 						temp = "Initiating growing cycle..."
 						menu = 1
 					else
-						temp = "Initiating growing cycle...<br>Error: Post-initialisation failed. Growing cycle aborted."
+						temp = "Initiating growing cycle...<br>Error: Post-initialization failed. Growing cycle aborted."
 
 		//The body record is broken somehow.
 		else
@@ -358,7 +358,7 @@
 
 					//They declined to be moved.
 					if(answer == "No")
-						temp = "Initiating resleeving...<br>Error: Post-initialisation failed. Resleeving cycle aborted."
+						temp = "Initiating resleeving...<br>Error: Post-initialization failed. Resleeving cycle aborted."
 						menu = 1
 
 				//They were dead, or otherwise available.

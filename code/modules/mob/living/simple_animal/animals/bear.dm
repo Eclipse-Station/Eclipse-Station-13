@@ -51,7 +51,7 @@
 /mob/living/simple_animal/hostile/bear/handle_stance(var/new_stance)
 	// Below was a bunch of code that made this specific mob be 'alert' and will hurt you when it gets closer.
 	// It's commented out because it made infinite loops and the AI is going to be moved/rewritten sometime soon (famous last words)
-	// and it would be better if this 'alert before attacking' behaviour was on the parent instead of a specific type of mob anyways.
+	// and it would be better if this 'alert before attacking' behavior was on the parent instead of a specific type of mob anyways.
 
 	// Instead we're just gonna get angry if we're dying.
 	..(new_stance)

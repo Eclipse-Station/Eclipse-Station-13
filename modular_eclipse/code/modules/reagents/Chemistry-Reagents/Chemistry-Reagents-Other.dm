@@ -1,6 +1,6 @@
 //HOLY WATER EFFECTS OVERRIDE - a port of TG's holy water effects
 
-/datum/reagent/water/holywater/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)	//Overrides default 10% chance of deconversion on ingestion with default chem behaviour
+/datum/reagent/water/holywater/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)	//Overrides default 10% chance of deconversion on ingestion with default chem behavior
 	M.bloodstr.add_reagent(id, removed)
 	return
 

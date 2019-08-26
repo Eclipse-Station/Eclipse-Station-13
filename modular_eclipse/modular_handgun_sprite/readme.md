@@ -52,7 +52,7 @@ The skin number (defined above) is parsed by the switch statement, which sets th
 
 **Please note: Your final skin in the switch statement should be preceded by an `else` clause.** This allows a form of inherent error handling, where if you do not set it up right and have too many combinations in `reset_skin_combos()` and not enough entries in `reset_skin()`, it'll fall back to a usable sprite.
 
-## Conventions and Default Behaviours
+## Conventions and Default Behaviors
 
 The weapon sprite calculations are done as follows:
 
