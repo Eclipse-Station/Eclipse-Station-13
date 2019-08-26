@@ -452,6 +452,20 @@ Traitors and the like can also be revived with the previous role mostly intact.
 		else
 			equipment = 0
 
+	// // // BEGIN ECLIPSE EDIT // // //
+	//If they have a job, let's offer to add them to the player tracking system.
+	//There may be a reason for them to not be, so let's leave it to the admin's
+	//discretion whether or not to.
+	
+	var/ptrack
+	if(charjob)
+		ptrack = alert(src,"Add them to the player tracking subsystem? This may affect whether the NT Department Alarm Dispatcher will ping on Discord for someone for their role, if they're the only person in their department.", "Player Tracking", "Yes", "No")
+		if(ptrack == "Yes")
+			ptrack = 1
+		else
+			ptrack = 0
+	// // // END ECLIPSE EDIT (for now) // // //
+
 	//For logging later
 	var/admin = key_name_admin(src)
 	var/player_key = picked_client.key
@@ -516,6 +530,13 @@ Traitors and the like can also be revived with the previous role mostly intact.
 		if(charjob)
 			job_master.EquipRank(new_character, charjob, 1)
 		equip_custom_items(new_character)
+
+	// // // BEGIN ECLIPSE EDIT // // //
+	//If desired, add them to the PTrack system
+	if(ptrack)
+		dispatcher.addToTracking(new_character)
+	// // // END ECLIPSE EDIT // // //
+
 
 	//If desired, add records.
 	if(records)

@@ -21,6 +21,8 @@ SUBSYSTEM_DEF(dispatcher)
 	var/static/dispatcher_initialized = FALSE		//American spelling, for consistency.
 	var/debug_level = DEBUGLEVEL_VERBOSE
 	
+	var/cooldown = 0
+	
 	//used in player tracking system
 	var/list/tracked_players_all = list()		//All tracked players
 	var/list/tracked_players_sec = list()		//Security
@@ -131,8 +133,9 @@ SUBSYSTEM_DEF(dispatcher)
 	if(!M.mind.assigned_role)
 		return 0	//No assigned role.
 
-	if(!(tracked_players_all & M))
-		tracked_players_all += M
+	sleep(5)		//wait a sec
+
+	tracked_players_all |= M		//add 'em if you got 'em
 
 	if(M.mind.assigned_role in security_positions)
 		tracked_players_sec += M
@@ -152,7 +155,7 @@ SUBSYSTEM_DEF(dispatcher)
 			tracked_players_svc += M
 	
 	if(DEBUGLEVEL_VERBOSE <= debug_level)
-		log_debug("DISPATCHER: Added [M] to tracked players.")
+		log_debug("DISPATCHER: Added [M.name] to tracked players.")
 	return 1
 
 /datum/controller/subsystem/dispatcher/proc/removeFromTracking(mob/M)		//we don't need the precision here, since we may be removing dead players
@@ -165,14 +168,14 @@ SUBSYSTEM_DEF(dispatcher)
 
 	//...departments first...
 	if(tracked_players_sec & M)
-		tracked_players_sec.Remove(M)
-	if(tracked_players_med & M)
-		tracked_players_med.Remove(M)
-	if(tracked_players_sci & M)
-		tracked_players_sci.Remove(M)
-	if(tracked_players_cmd & M)
-		tracked_players_cmd.Remove(M)
-	if(tracked_players_crg & M)
+		tracked_players_sec.Remove(M)		//I'm not a coder without emotions
+	if(tracked_players_med & M)				//I'm not what you see
+		tracked_players_med.Remove(M)		//I've come to help you with your problems
+	if(tracked_players_sci & M)				//So we can be free
+		tracked_players_sci.Remove(M)		//I'm not a hero! I'm not some saviour!
+	if(tracked_players_cmd & M)				//Forget what you know
+		tracked_players_cmd.Remove(M)		//I'm just a man whose circumstances
+	if(tracked_players_crg & M)				//Went byond his control.
 		tracked_players_crg.Remove(M)
 	if(tracked_players_eng & M)
 		tracked_players_eng.Remove(M)
@@ -186,10 +189,127 @@ SUBSYSTEM_DEF(dispatcher)
 	if(DEBUGLEVEL_VERBOSE <= debug_level)
 		log_debug("DISPATCHER: Removed [M] from tracked players.")
 	return 1
+
+/datum/controller/subsystem/dispatcher/proc/handleRequest(department = "", priority = FALSE, message, sender = "Unknown", sender_role = "Unassigned", stamped)
+//return statement should be whether or not the handler handled it.
+//0 if it is kicking it back to the RC due to players being on,
+//1 if it sent to Discord.
+	if(DEBUGLEVEL_VERBOSE <= debug_level)
+		log_debug("DISPATCHER: Received request for department [department], priority of [priority], message '[message]', sender '[sender]', role '[sender_role]', stamp '[stamped]'.")
+	if((!(sender && sender_role)) && !stamped)
+		#error MANUAL ERROR: This code is not in a runnable state.
+	department = lowertext(department)
+	switch(department)
+		if("engineering" || "atmospherics")
+			if(DEBUGLEVEL_VERBOSE <= debug_level)
+				log_debug("DISPATCHER: Request sent to Engineering.")
+			if(!tracked_players_eng.len)
+				if(DEBUGLEVEL_VERBOSE <= debug_level)
+					log_debug("DISPATCHER: No players in [department], calling sendDiscordRequest...")
+				sendDiscordRequest("engineering",priority, message, sender, sender_role, stamped)
+				return 1
+			else
+				return 0
+		if("science" || "research")
+			if(DEBUGLEVEL_VERBOSE <= debug_level)
+				log_debug("DISPATCHER: Request sent to Science.")
+			if(!tracked_players_sci.len)
+				if(DEBUGLEVEL_VERBOSE <= debug_level)
+					log_debug("DISPATCHER: No players in [department], calling sendDiscordRequest...")
+				sendDiscordRequest("research",priority, message, sender, sender_role, stamped)
+				return 1
+			else
+				return 0
+		if("security")
+			if(DEBUGLEVEL_VERBOSE <= debug_level)
+				log_debug("DISPATCHER: Request sent to Security.")
+			if(!tracked_players_sec.len)
+				if(DEBUGLEVEL_VERBOSE <= debug_level)
+					log_debug("DISPATCHER: No players in [department], calling sendDiscordRequest...")
+				sendDiscordRequest("security",priority, message, sender, sender_role, stamped)
+				return 1
+			else
+				return 0
+		if("supply" || "cargo")
+			if(DEBUGLEVEL_VERBOSE <= debug_level)
+				log_debug("DISPATCHER: Request sent to Supply.")
+			if(!tracked_players_crg.len)
+				if(DEBUGLEVEL_VERBOSE <= debug_level)
+					log_debug("DISPATCHER: No players in [department], calling sendDiscordRequest...")
+				sendDiscordRequest("supply",priority, message, sender, sender_role, stamped)
+				return 1
+			else
+				return 0
+		if("service" || "janitorial")
+			if(DEBUGLEVEL_VERBOSE <= debug_level)
+				log_debug("DISPATCHER: Request sent to Service.")
+			if(!tracked_players_svc.len)
+				if(DEBUGLEVEL_VERBOSE <= debug_level)
+					log_debug("DISPATCHER: No players in [department], calling sendDiscordRequest...")
+				sendDiscordRequest("service",priority, message, sender, sender_role, stamped)
+				return 1
+			else
+				return 0
+		if("medical")
+			if(DEBUGLEVEL_VERBOSE <= debug_level)
+				log_debug("DISPATCHER: Request sent to Medical.")
+			if(!tracked_players_med.len)
+				if(DEBUGLEVEL_VERBOSE <= debug_level)
+					log_debug("DISPATCHER: No players in [department], calling sendDiscordRequest...")
+				sendDiscordRequest("medical",priority, message, sender, sender_role, stamped)
+				return 1
+			else
+				return 0
+		if("command" || "bridge")
+			if(DEBUGLEVEL_VERBOSE <= debug_level)
+				log_debug("DISPATCHER: Request sent to Command.")
+			if(!tracked_players_cmd.len)
+				if(DEBUGLEVEL_VERBOSE <= debug_level)
+					log_debug("DISPATCHER: No players in [department], calling sendDiscordRequest...")
+				sendDiscordRequest("command",priority, message, sender, sender_role, stamped)
+				return 1
+			else
+				return 0
+		else
+			world.Error("Unimplemented department \"[department]\".")
+
+/datum/controller/subsystem/dispatcher/proc/sendDiscordRequest(department = "", priority = FALSE, message, sender, sender_role, stamped)
+	if(world.time < cooldown)
+		if(DEBUGLEVEL_WARNING <= debug_level)
+			log_debug("DISPATCHER: Cancelling send: System in cooldown.")
+		return 0
+	var/department_ping = ""
+	switch(department)
+		if("command")
+			department_ping = ""	//Replace this with the relevant role ping IDs.
+		if("engineering")
+			department_ping = ""
+		if("research")
+			department_ping = ""
+		if("security")
+			department_ping = ""
+		if("supply")
+			department_ping = ""
+		if("service")
+			department_ping = ""
+		if("medical")
+			department_ping = ""
+		else
+			if(DEBUGLEVEL_WARNING <= debug_level)
+				log_debug("DISPATCHER: Undefined department '[department]'.")
+		
+	var/msg = ""		//This is the string intended to be sent to the bot.
+	msg = "[priority ? "**HIGH PRIORITY** a" : "A"]ssistance request for [department_ping], [stamped ? "stamped by [stamped], " : ""]from [sender] ([sender_role]): '[message]'"
 	
-/datum/controller/subsystem/dispatcher/proc/sendDiscordRequest(department = "", priority = FALSE, message, sender, sender_role)
-// "[priority ? "**HIGH PRIORITY** a" : "A"]ssistance request for [department_ping] from [sender] ([sender_role]): '[message]'"
-	CRASH("Unimplemented. Department [department], priority [priority], message [message], sender [sender], sender role [sender_role].")
+	cooldown = (world.time + 3 MINUTES)		//we aren't sending people to space, we don't need pinpoint accuracy
+											// ... wait a minute.
+	if(DEBUGLEVEL_VERBOSE <= debug_level)
+		log_debug("DISPATCHER: Message prints as follows:")
+		log_debug("DISPATCHER: [msg]")
+	
+
+	throw EXCEPTION("Unimplemented. Department '[department]', priority '[priority]', message '[message]', sender '[sender]', sender role '[sender_role]', stamped '[stamped]'.")
+	return
 	
 /datum/controller/subsystem/dispatcher/proc/sendDiscordTest()
 // "This is a test of the Nanotrasen Department Alarm Dispatcher. This is only a test."
@@ -197,14 +317,14 @@ SUBSYSTEM_DEF(dispatcher)
 
 /datum/controller/subsystem/dispatcher/Shutdown()
 	//clear all lists
-	tracked_players_all = list()		//All tracked players
-	tracked_players_sec = list()		//Security
-	tracked_players_med = list()		//Medical
-	tracked_players_sci = list()		//Science
-	tracked_players_cmd = list()		//Command
-	tracked_players_crg = list()		//Supply
-	tracked_players_eng = list()		//Engineering
-	tracked_players_svc = list()		//Service
+	tracked_players_all = list()		//The time has come at last
+	tracked_players_sec = list()		//To throw away this mask
+	tracked_players_med = list()		//Now everyone can see
+	tracked_players_sci = list()		//My true identity!
+	tracked_players_cmd = list()
+	tracked_players_crg = list()
+	tracked_players_eng = list()		//I'm SPITZER! Spitzer! Spitzer. Spitzer...
+	tracked_players_svc = list()
 
 	//I'm sure Nestor will want to do something here with the Discord bot he has planned, later
 	

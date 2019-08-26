@@ -80,7 +80,6 @@ var/global/datum/controller/occupations/job_master
 				player.mind.role_alt_title = GetPlayerAltTitle(player, rank)
 				unassigned -= player
 				job.current_positions++
-				dispatcher.addToTracking(player)		//Eclipse edit - NT DAD
 				return 1
 		Debug("AR has failed, Player: [player], Rank: [rank]")
 		return 0
@@ -546,6 +545,9 @@ var/global/datum/controller/occupations/job_master
 		BITSET(H.hud_updateflag, ID_HUD)
 		BITSET(H.hud_updateflag, IMPLOYAL_HUD)
 		BITSET(H.hud_updateflag, SPECIALROLE_HUD)
+		
+		//lastly, add them to the player tracking system
+		dispatcher.addToTracking(H)		//Eclipse edit
 		return H
 
 
