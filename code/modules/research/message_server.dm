@@ -114,7 +114,15 @@ var/global/list/obj/machinery/message_server/message_servers = list()
 	if (stamp)
 		authmsg += "[stamp]<br>"
 	
-	dispatcher.handleRequest(recipient, priority, message, id_name, id_rank, stamp_name)		//Eclipse Add: Department alarm dispatcher.
+	// // // BEGIN ECLIPSE EDIT // // //
+	// Department alarm dispatcher
+	if(world.time >= dispatcher.cooldown)	// if we're not in cooldown, pass it along
+		dispatcher.handleRequest(recipient, priority, message, id_name, id_rank, stamp_name)
+	else		//if we are, log it to debug
+		var/cooldown_left = (dispatcher.cooldown - world.time) / 10
+		if(dispatcher.debug_level > 2)		//if debugging is on
+			log_debug("DISPATCHER/message_server.dm: Messaging server still in dispatch cooldown for [cooldown_left] seconds.")
+	// // // END ECLIPSE EDIT // // //
 	
 	for (var/obj/machinery/requests_console/Console in allConsoles)
 		if (ckey(Console.department) == ckey(recipient))

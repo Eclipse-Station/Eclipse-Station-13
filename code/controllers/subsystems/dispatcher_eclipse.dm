@@ -19,8 +19,8 @@ SUBSYSTEM_DEF(dispatcher)
 	runlevels = RUNLEVELS_DEFAULT
 	wait = 10 SECONDS		//only used in initial flush, not really necessary otherwise
 	var/static/dispatcher_initialized = FALSE		//American spelling, for consistency.
-	var/debug_level = DEBUGLEVEL_VERBOSE
-	
+	var/debug_level = DEBUGLEVEL_SEVERE
+	var/bot_token = ""
 	var/cooldown = 0
 	
 	//used in player tracking system
@@ -34,10 +34,23 @@ SUBSYSTEM_DEF(dispatcher)
 	var/list/tracked_players_svc = list()		//Service
 
 /datum/controller/subsystem/dispatcher/Initialize()
+	log_debug("DISPATCHER: Initializing.")
 	dispatcher = src
-	if(DEBUGLEVEL_VERBOSE <= debug_level)		//Yoda programming here.
-		log_debug("DISPATCHER: Initializing.")
-	dispatcher.flushTracking()		//test the dispatcher.Proc() call system; we shouldn't have any mobs to track
+	debug_level = config.debug_dispatcher
+	log_debug("DISPATCHER: Debug level set: [debug_level]")
+	if(tracked_players_all.len || tracked_players_sec.len || tracked_players_med.len || tracked_players_sci.len || tracked_players_cmd.len || tracked_players_crg.len || tracked_players_eng.len || tracked_players_svc.len)
+		if(DEBUGLEVEL_WARNING <= debug_level)
+			log_debug("DISPATCHER: One or more lists still had data, flushing...")
+		flushTracking()
+	if(!config.enable_dispatcher)
+		log_debug("DISPATCHER/FATAL: System disabled by config. Only the tracking system will be in use.")
+	if(!config.dispatch_bot_token)
+		if(DEBUGLEVEL_WARNING <= debug_level)
+			log_debug("DISPATCHER: Bot token not found in config.")
+	else
+		bot_token = config.dispatch_bot_token
+		if(DEBUGLEVEL_VERBOSE <= debug_level)
+			log_debug("DISPATCHER: Copied bot token from config successfully.")
 	if(DEBUGLEVEL_VERBOSE <= debug_level)
 		log_debug("DISPATCHER: Initialized!")
 	..()
@@ -46,9 +59,11 @@ SUBSYSTEM_DEF(dispatcher)
 	if(DEBUGLEVEL_VERBOSE <= debug_level)
 		log_debug("DISPATCHER: Standing by for initial flush...")
 	if(Master.current_runlevel < RUNLEVEL_SETUP)
-		log_debug("DISPATCHER: Holding off, runlevel: [Master.current_runlevel], waiting for [RUNLEVEL_GAME]...")
+		if(DEBUGLEVEL_VERBOSE <= debug_level)
+			log_debug("DISPATCHER: Holding off, runlevel: [Master.current_runlevel], waiting for greater than [RUNLEVEL_SETUP]...")
 		return		//eh, it'll fire again.
 	
+	sleep(2 SECONDS)
 	if(DEBUGLEVEL_VERBOSE <= debug_level)
 		log_debug("DISPATCHER: Game is running (well, running enough for our standards). Beginning initial flush.")
 	flushTracking()		//roundstart shenanigans will prevent it from flushing properly.
@@ -194,13 +209,21 @@ SUBSYSTEM_DEF(dispatcher)
 //return statement should be whether or not the handler handled it.
 //0 if it is kicking it back to the RC due to players being on,
 //1 if it sent to Discord.
+	if(!config.enable_dispatcher)		//don't do shit if it's not enabled
+		if(DEBUGLEVEL_WARNING <= debug_level)
+			log_debug("DISPATCHER: Don't bother me, request console, I'm sleeping.")
+		return 0
+	
+
 	if(DEBUGLEVEL_VERBOSE <= debug_level)
 		log_debug("DISPATCHER: Received request for department [department], priority of [priority], message '[message]', sender '[sender]', role '[sender_role]', stamp '[stamped]'.")
-	if((!(sender && sender_role)) && !stamped)
-		#error MANUAL ERROR: This code is not in a runnable state.
+	if((!sender || !sender_role) && !stamped)
+		if(DEBUGLEVEL_WARNING <= debug_level)
+			log_debug("DISPATCHER: Sender data missing sender or sender role, and unstamped. Aborting.")
+			return 0
 	department = lowertext(department)
 	switch(department)
-		if("engineering" || "atmospherics")
+		if("engineering", "atmospherics")
 			if(DEBUGLEVEL_VERBOSE <= debug_level)
 				log_debug("DISPATCHER: Request sent to Engineering.")
 			if(!tracked_players_eng.len)
@@ -210,7 +233,7 @@ SUBSYSTEM_DEF(dispatcher)
 				return 1
 			else
 				return 0
-		if("science" || "research")
+		if("science", "research", "research department")
 			if(DEBUGLEVEL_VERBOSE <= debug_level)
 				log_debug("DISPATCHER: Request sent to Science.")
 			if(!tracked_players_sci.len)
@@ -230,7 +253,7 @@ SUBSYSTEM_DEF(dispatcher)
 				return 1
 			else
 				return 0
-		if("supply" || "cargo")
+		if("supply", "cargo", "cargo bay")
 			if(DEBUGLEVEL_VERBOSE <= debug_level)
 				log_debug("DISPATCHER: Request sent to Supply.")
 			if(!tracked_players_crg.len)
@@ -240,7 +263,7 @@ SUBSYSTEM_DEF(dispatcher)
 				return 1
 			else
 				return 0
-		if("service" || "janitorial")
+		if("service", "janitorial")
 			if(DEBUGLEVEL_VERBOSE <= debug_level)
 				log_debug("DISPATCHER: Request sent to Service.")
 			if(!tracked_players_svc.len)
@@ -250,7 +273,7 @@ SUBSYSTEM_DEF(dispatcher)
 				return 1
 			else
 				return 0
-		if("medical")
+		if("medical", "medical department")
 			if(DEBUGLEVEL_VERBOSE <= debug_level)
 				log_debug("DISPATCHER: Request sent to Medical.")
 			if(!tracked_players_med.len)
@@ -260,7 +283,7 @@ SUBSYSTEM_DEF(dispatcher)
 				return 1
 			else
 				return 0
-		if("command" || "bridge")
+		if("command", "bridge")
 			if(DEBUGLEVEL_VERBOSE <= debug_level)
 				log_debug("DISPATCHER: Request sent to Command.")
 			if(!tracked_players_cmd.len)
@@ -271,13 +294,14 @@ SUBSYSTEM_DEF(dispatcher)
 			else
 				return 0
 		else
-			world.Error("Unimplemented department \"[department]\".")
+			if(DEBUGLEVEL_VERBOSE <= debug_level)
+				log_debug("DISPATCHER: Unimplemented department [department].")
+			return 0
 
 /datum/controller/subsystem/dispatcher/proc/sendDiscordRequest(department = "", priority = FALSE, message, sender, sender_role, stamped)
-	if(world.time < cooldown)
-		if(DEBUGLEVEL_WARNING <= debug_level)
-			log_debug("DISPATCHER: Cancelling send: System in cooldown.")
+	if(!config.enable_dispatcher)		//don't do shit if it's not enabled
 		return 0
+
 	var/department_ping = ""
 	switch(department)
 		if("command")
@@ -299,10 +323,12 @@ SUBSYSTEM_DEF(dispatcher)
 				log_debug("DISPATCHER: Undefined department '[department]'.")
 		
 	var/msg = ""		//This is the string intended to be sent to the bot.
-	msg = "[priority ? "**HIGH PRIORITY** a" : "A"]ssistance request for [department_ping], [stamped ? "stamped by [stamped], " : ""]from [sender] ([sender_role]): '[message]'"
+	if(stamped)
+		msg = "[priority ? "**HIGH PRIORITY** a" : "A"]ssistance request for [department_ping],stamped by [stamped][sender ? ", from [sender] ([sender_role])" : "" ]: '[message]'"
+	else
+		msg = "[priority ? "**HIGH PRIORITY** a" : "A"]ssistance request for [department_ping], from [sender] ([sender_role]): '[message]'"
 	
-	cooldown = (world.time + 3 MINUTES)		//we aren't sending people to space, we don't need pinpoint accuracy
-											// ... wait a minute.
+	cooldown = (world.time + config.dispatcher_cooldown)
 	if(DEBUGLEVEL_VERBOSE <= debug_level)
 		log_debug("DISPATCHER: Message prints as follows:")
 		log_debug("DISPATCHER: [msg]")
@@ -312,7 +338,7 @@ SUBSYSTEM_DEF(dispatcher)
 	return
 	
 /datum/controller/subsystem/dispatcher/proc/sendDiscordTest()
-// "This is a test of the Nanotrasen Department Alarm Dispatcher. This is only a test."
+	var/msg = "This is a test of the Nanotrasen Department Alarm Dispatcher. This is only a test."
 	CRASH("Unimplemented.")
 
 /datum/controller/subsystem/dispatcher/Shutdown()

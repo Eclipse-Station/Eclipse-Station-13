@@ -24,6 +24,12 @@
 	var/mice_wire_cooldown_rs = FALSE		//Roundstart mouse wire cooldown.
 	var/mice_wire_eng_req = FALSE			//Require engineers to chew wires?
 
+	//Dispatcher
+	var/enable_dispatcher = FALSE			//should it be enabled?
+	var/debug_dispatcher = 1				//debug the dispatcher
+	var/dispatch_bot_token = ""				//bot token for dispatcher
+	var/dispatcher_cooldown
+
 	//Miscellaneous
 	var/vote_extensions = 2
 	var/tip_of_the_round = FALSE			//Tip of the Round
@@ -87,6 +93,14 @@
 				config.mice_wire_cooldown_rs = TRUE
 			if("mice_require_engineers")
 				config.mice_wire_eng_req = TRUE
+			if("enable_dispatcher")
+				config.enable_dispatcher = TRUE
+			if("debug_dispatcher")
+				config.debug_dispatcher = text2num(value)
+			if("dispatch_bot_token")
+				config.dispatch_bot_token = value
+			if("dispatcher_cooldown")
+				config.dispatcher_cooldown = 10 * text2num(value)
 	
 	config.eclipse_config_loaded = TRUE
 	return 1
