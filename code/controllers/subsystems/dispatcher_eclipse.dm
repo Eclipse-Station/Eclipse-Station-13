@@ -324,7 +324,7 @@ SUBSYSTEM_DEF(dispatcher)
 		
 	var/msg = ""		//This is the string intended to be sent to the bot.
 	if(stamped)
-		msg = "[priority ? "**HIGH PRIORITY** a" : "A"]ssistance request for [department_ping],stamped by [stamped][sender ? ", from [sender] ([sender_role])" : "" ]: '[message]'"
+		msg = "[priority ? "**HIGH PRIORITY** a" : "A"]ssistance request for [department_ping], stamped by [stamped][sender ? ", from [sender] ([sender_role])" : "" ]: '[message]'"
 	else
 		msg = "[priority ? "**HIGH PRIORITY** a" : "A"]ssistance request for [department_ping], from [sender] ([sender_role]): '[message]'"
 	
