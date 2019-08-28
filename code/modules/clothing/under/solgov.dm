@@ -119,7 +119,7 @@
 	icon_state = "navyutility"
 	worn_state = "navyutility"
 /*	armor = list(melee = 0, bullet = 0, laser = 0,energy = 10, bomb = 0, bio = 0, rad = 0)
-	siemens_coefficient = 0.7 */// cit edit, no more armour ffs
+	siemens_coefficient = 0.7 */// cit edit, no more armor ffs
 
 /obj/item/clothing/under/utility/fleet/medical
 	name = "medical coveralls"
@@ -160,7 +160,7 @@
 	desc = "Light grey fatigues vaguely based off of military design, for corporate use."
 	icon_state = "greyutility"
 	worn_state = "greyutility"
-//	armor = list(melee = 10, bullet = 0, laser = 10,energy = 0, bomb = 0, bio = 0, rad = 0) fuck outta here no more armour
+//	armor = list(melee = 10, bullet = 0, laser = 10,energy = 0, bomb = 0, bio = 0, rad = 0) fuck outta here no more armor
 
 /obj/item/clothing/under/utility/marine/green
 	name = "green fatigues"

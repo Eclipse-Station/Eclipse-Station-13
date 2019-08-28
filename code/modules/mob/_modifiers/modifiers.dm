@@ -85,7 +85,7 @@
 /datum/modifier/proc/on_expire()
 	return
 
-// Called every Life() tick.  Override for special behaviour.
+// Called every Life() tick.  Override for special behavior.
 /datum/modifier/proc/tick()
 	return
 

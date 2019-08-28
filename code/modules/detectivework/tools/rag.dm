@@ -160,7 +160,7 @@
 		new /obj/effect/decal/cleanable/ash(get_turf(src))
 		qdel(src)
 
-//rag must have a minimum of 2 units welder fuel or ehtanol based reagents and at least 80% of the reagents must so.
+//rag must have a minimum of 2 units welder fuel or ethanol based reagents and at least 80% of the reagents must so.
 /obj/item/weapon/reagent_containers/glass/rag/proc/can_ignite()
 	var/fuel
 	if(reagents.get_reagent_amount("fuel"))

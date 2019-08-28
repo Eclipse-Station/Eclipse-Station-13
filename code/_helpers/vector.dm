@@ -6,13 +6,13 @@ anything other than 32x32 turfs).
 
 setup()
 	This should be called after creating a new instance of a plot_vector datum.
-	This does the initial setup and calculations. Since we are travelling in a straight line we only need to calculate 
-	the	vector and x/y steps once. x/y steps are capped to 1 full turf, whichever is further. If we are travelling along
+	This does the initial setup and calculations. Since we are traveling in a straight line we only need to calculate 
+	the	vector and x/y steps once. x/y steps are capped to 1 full turf, whichever is further. If we are traveling along
 	the y axis each step will be +/- 1 y, and the x movement reduced based on the angle (tangent calculation). After
 	this every subsequent step will be incremented based on these calculations.
 	Inputs:
 		source - the turf the object is starting from
-		target - the target turf the object is travelling towards
+		target - the target turf the object is traveling towards
 		xo - starting pixel_x offset, typically won't be needed, but included in case someone has a need for it later
 		yo - same as xo, but for the y_pixel offset
 
@@ -20,7 +20,7 @@ increment()
 	Adds the offset to the current location - incrementing it by one step along the vector.
 
 return_angle()
-	Returns the direction (angle in degrees) the object is travelling in.
+	Returns the direction (angle in degrees) the object is traveling in.
 
              (N)
              90°
@@ -38,7 +38,7 @@ return_hypotenuse()
 
 return_location()
 	Returns a vector_loc datum containing the current location data of the object (see /datum/vector_loc). This includes 
-	the turf it currently should be at, as well as the pixel offset from the centre of that turf. Typically increment() 
+	the turf it currently should be at, as well as the pixel offset from the center of that turf. Typically increment() 
 	would be called before this if you are going to move an object based on it's vector data.
 */
 
@@ -80,7 +80,7 @@ return_location()
 	// calculate the angle
 	angle = Atan2(dx, dy) + angle_offset
 
-	// and some rounding to stop the increments jumping whole turfs - because byond favours certain angles
+	// and some rounding to stop the increments jumping whole turfs - because byond favors certain angles
 	if(angle > -135 && angle < 45)
 		angle = Ceiling(angle)
 	else

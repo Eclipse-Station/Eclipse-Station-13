@@ -282,7 +282,7 @@ log transactions
 								if(failed_account)
 									var/datum/transaction/T = new()
 									T.target_name = failed_account.owner_name
-									T.purpose = "Unauthorised login attempt"
+									T.purpose = "Unauthorized login attempt"
 									T.source_terminal = machine_id
 									T.date = current_date_string
 									T.time = stationtime2text()

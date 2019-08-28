@@ -158,7 +158,7 @@
 	materials = list(DEFAULT_WALL_MATERIAL = 26250)
 
 /datum/design/item/mechfab/gygax/armour
-	name = "Gygax Armour Plates"
+	name = "Gygax Armor Plates"
 	id = "gygax_armour"
 	build_path = /obj/item/mecha_parts/part/gygax_armour
 	time = 60

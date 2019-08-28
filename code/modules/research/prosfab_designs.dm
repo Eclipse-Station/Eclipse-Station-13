@@ -291,7 +291,7 @@
 	build_path = /obj/item/robot_parts/robot_component/camera
 
 /datum/design/item/prosfab/cyborg/component/armour
-	name = "Armour Plating"
+	name = "Armor Plating"
 	id = "armour"
 	build_path = /obj/item/robot_parts/robot_component/armour
 

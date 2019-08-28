@@ -484,7 +484,7 @@
 	else
 		return 0
 
-//Initialisation procs
+//Initialization procs
 /mob/living/proc/mind_initialize()
 	if(mind)
 		mind.key = key

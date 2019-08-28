@@ -26,7 +26,7 @@
 
 		paycuts_confirmation
 			round_time = 60*40
-			message = {"Earlier rumours about paycuts on Research Stations in the Tau Ceti system have
+			message = {"Earlier rumors about paycuts on Research Stations in the Tau Ceti system have
 						been confirmed. Shockingly, however, the cuts will only affect lower tier
 						personnel. Heads of Staff will, according to our sources, not be affected."}
 			author = "Unauthorized"
@@ -49,7 +49,7 @@
 			message = {"The new field of research trying to explain several interesting spacetime oddities,
 						also known as \"Bluespace Research\", has reached new heights. Of the several
 						hundred space stations now orbiting in Tau Ceti, fifteen are now specially equipped
-						to experiment with and research Bluespace effects. Rumours have it some of these
+						to experiment with and research Bluespace effects. Rumors have it some of these
 						stations even sport functional \"travel gates\" that can instantly move a whole research
 						team to an alternate reality."}
 

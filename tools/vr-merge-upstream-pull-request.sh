@@ -102,7 +102,7 @@ else
 fi
 
 # Commit these changes
-echo "Commiting changes"
+echo "Committing changes"
 git commit --allow-empty -m "$2"
 
 # Push them onto the branch

@@ -80,7 +80,7 @@
 	var/list/dat = list()
 	dat += "<TT><B>Automatic Security Unit</B></TT><BR><BR>"
 	dat += "Status: <A href='?src=\ref[src];power=1'>[on ? "On" : "Off"]</A><BR>"
-	dat += "Behaviour controls are [locked ? "locked" : "unlocked"]<BR>"
+	dat += "Behavior controls are [locked ? "locked" : "unlocked"]<BR>"
 	dat += "Maintenance panel is [open ? "opened" : "closed"]"
 	if(!locked || issilicon(user))
 		dat += "<BR>Check for Weapon Authorization: <A href='?src=\ref[src];operation=idcheck'>[idcheck ? "Yes" : "No"]</A><BR>"
