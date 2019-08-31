@@ -106,13 +106,24 @@ var/global/list/obj/machinery/message_server/message_servers = list()
 	pda_msgs += new/datum/data_pda_msg(recipient,sender,message)
 	return result
 
-/obj/machinery/message_server/proc/send_rc_message(var/recipient = "",var/sender = "",var/message = "",var/stamp = "", var/id_auth = "", var/priority = 1)
+/obj/machinery/message_server/proc/send_rc_message(var/recipient = "",var/sender = "",var/message = "",var/stamp = "", var/id_auth = "", var/priority = 1, var/id_name = "", var/id_rank = "", var/stamp_name = "")		//Eclipse Edit: Added ID name, rank, and stamp name for discord passthrough
 	rc_msgs += new/datum/data_rc_msg(recipient,sender,message,stamp,id_auth)
 	var/authmsg = "[message]<br>"
 	if (id_auth)
 		authmsg += "[id_auth]<br>"
 	if (stamp)
 		authmsg += "[stamp]<br>"
+	
+	// // // BEGIN ECLIPSE EDIT // // //
+	// Department alarm dispatcher
+	if(world.time >= dispatcher.cooldown)	// if we're not in cooldown, pass it along
+		dispatcher.handleRequest(recipient, priority, message, id_name, id_rank, stamp_name)
+	else		//if we are, log it to debug
+		var/cooldown_left = (dispatcher.cooldown - world.time) / 10
+		if(dispatcher.debug_level > 2)		//if debugging is on
+			log_debug("DISPATCHER/message_server.dm: Messaging server still in dispatch cooldown for [cooldown_left] seconds.")
+	// // // END ECLIPSE EDIT // // //
+	
 	for (var/obj/machinery/requests_console/Console in allConsoles)
 		if (ckey(Console.department) == ckey(recipient))
 			if(Console.inoperable())

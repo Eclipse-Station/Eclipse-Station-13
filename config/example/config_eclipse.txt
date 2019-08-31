@@ -87,6 +87,39 @@ ROUNDSTART_MOUSE_WIRE_COOLDOWN
 MICE_REQUIRE_ENGINEERS
 
 #########
+# DISPATCHER
+#########
+
+## MASTER ENABLE
+## Should the dispatcher be enabled? If disabled, only the player tracking system
+## will be functional.
+## Uncomment to enable.
+# ENABLE_DISPATCHER
+
+## DEBUG LEVEL
+## What level should we debug the dispatcher on?
+## 0 - Fatal and runtimes only
+## 1 - Severe
+## 2 - Warnings
+## 3 - Verbose
+# Default is 1.
+DEBUG_DISPATCHER 1
+
+## DISPATCHER BOT TOKEN
+## For anonymity, it is recommended that the discord bot token is set here rather
+## than hardcoded. Parses as a string.
+## Default is unset.
+## Example: DISPATCH_BOT_TOKEN 1a2b3c
+DISPATCH_BOT_TOKEN
+
+## DISPATCHER COOLDOWN
+## After a message is sent, how long should the global cooldown be before another
+## can be sent to the dispatcher? 
+## Default is 180 seconds (3 minutes)
+## Units: Seconds
+DISPATCHER_COOLDOWN 180
+
+#########
 # MISCELLANY
 #########
 
