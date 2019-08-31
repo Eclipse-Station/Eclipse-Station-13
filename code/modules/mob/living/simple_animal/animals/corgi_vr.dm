@@ -155,7 +155,7 @@
 	src.inventory_head = item_to_add
 	regenerate_icons()
 
-	//Various hats and items (worn on his head) change Ian's behaviour. His attributes are reset when a HAT is removed.
+	//Various hats and items (worn on his head) change Ian's behavior. His attributes are reset when a HAT is removed.
 	switch(inventory_head && inventory_head.type)
 		if(/obj/item/clothing/head/caphat, /obj/item/clothing/head/collectable/captain)
 			name = "Captain [real_name]"

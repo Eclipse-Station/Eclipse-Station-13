@@ -35,12 +35,12 @@
 	name = "\improper July 2558 Report"
 	info = {"The crew has at least tripled in size since NT got rid of the application-based
 			process of recruitment. We've managed to find a few people interested in aiding
-			our cause. From atmospherics sabotoge to straight up bombing the place, we've got
+			our cause. From atmospherics sabotage to straight up bombing the place, we've got
 			several people ready to go in posing as nothing but more grey tide. It's perfect."}
 
 /obj/item/weapon/paper/listneningpost/year2558/august
 	name = "\improper August 2558 Report"
-	info = {"Sounds like our agents have been successful in rattling things up. With their recuitment
+	info = {"Sounds like our agents have been successful in rattling things up. With their recruitment
 			policies laxed, we've been able to carry out several attacks on the VORE. It sounds like
 			we're the least of their problems, though. They've discovered a new technology. Something
 			they're calling Redspace."}
@@ -86,7 +86,7 @@
 
 /obj/item/weapon/paper/listneningpost/year2559/january
 	name = "\improper January 2559 Report"
-	info = {"So, this guy from 1945 is legit. His name is Chase Monroe and he's a former Seargent in
+	info = {"So, this guy from 1945 is legit. His name is Chase Monroe and he's a former Sergeant in
 			the USCM or something. Although I feel like the USCM didn't exist in 1945. Also a pirate
 			stole one of our ships this month. A week later, the VORE gets attacked by some asshole
 			pirate flying one of our ships. Probably the same guy. They managed to take a hostage,
@@ -136,7 +136,7 @@
 			keep helping. I know it's unorthodox but I have to side with Mike and Dave on this one. Respectfully
 			command, if we do not neutralize this so-called Fourth Reich, we'll have an enemy much worse than
 			NanoTrasen to deal with. Curiously, NanoTrasen refuses to officially support helping to remove this
-			threat. Possible collaberation?"}
+			threat. Possible collaboration?"}
 
 /obj/item/weapon/paper/listneningpost/year2559/july
 	name = "\improper July 2559 Report"
@@ -217,5 +217,5 @@
 	solution. How many nuclear teams have been dispatched with those nukes? I must try and prevent more from ever being sent.
 	If they will not listen to reason, I will detonate the warehouse myself. Maybe some day in the immediate future, space
 	will be peaceful, though I don't intend to live to see it. And that is why I write this down- it is my sacrifice that
-	stabilised your worlds, traveller. Spare a thought for me, and please attempt to prevent nuclear proliferation, should
+	stabilized your worlds, traveler. Spare a thought for me, and please attempt to prevent nuclear proliferation, should
 	it ever rear it's ugly head again. -Donk Co. Operative #451"}

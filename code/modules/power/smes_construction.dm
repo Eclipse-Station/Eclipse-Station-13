@@ -262,7 +262,7 @@
 				spawn(rand(300,600))
 					if(!failing) // Admin can manually set this var back to 0 to stop overload, for use when griffed.
 						update_icon()
-						ping("Magnetic containment stabilised.")
+						ping("Magnetic containment stabilized.")
 						return
 					ping("DANGER! Magnetic containment field failure in 3 ... 2 ... 1 ...")
 					explosion(get_turf(src),1,2,4,8)

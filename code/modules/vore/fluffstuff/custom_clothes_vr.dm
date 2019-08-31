@@ -644,7 +644,7 @@
 //natje:Pumila
 /obj/item/clothing/under/fluff/aluranevines
 	name = "Pumila's vines"
-	desc = "A wrap of green vines and colourful flowers."
+	desc = "A wrap of green vines and colorful flowers."
 
 	icon = 'icons/vore/custom_clothes_vr.dmi'
 	icon_state = "alurane-vines"
@@ -726,7 +726,7 @@
 
 /obj/item/weapon/storage/belt/utility/fluff/vulpine
 	name = "vulpine belt"
-	desc = "A tool-belt in Atmos colours."
+	desc = "A tool-belt in Atmos colors."
 
 	icon = 'icons/vore/custom_clothes_vr.dmi'
 	icon_state = "vulpine_belt"
@@ -1533,7 +1533,7 @@ Departamental Swimsuits, for general use
 
 //BeyondMyLife: Ne'tra Ky'ram
 /obj/item/clothing/suit/storage/hooded/wintercoat/kilanocoat
-	name = "black and gold armoured coat."
+	name = "black and gold armored coat."
 	desc = "A black and gold coat, with white fur lining, lined with some kind of heavier material inside, seemingly giving some sort of padding to it."
 	icon = 'icons/vore/custom_clothes_vr.dmi'
 	icon_state = "kilanocoat"
@@ -1582,7 +1582,7 @@ Departamental Swimsuits, for general use
 
 //BeyondMyLife: Ne'tra Ky'ram
 /obj/item/clothing/under/fluff/kilanosuit
-	name = "black and gold armourweave dress"
+	name = "black and gold armorweave dress"
 	desc = "A black and gold patterned silky dress, with some kind of inlined, heavier material lining the skirt and chest area."
 	icon = 'icons/vore/custom_clothes_vr.dmi'
 	icon_override = 'icons/vore/custom_clothes_vr.dmi'

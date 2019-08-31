@@ -629,7 +629,7 @@
 
 	//accuracy bonus from aiming
 	if (aim_targets && (target in aim_targets))
-		//If you aim at someone beforehead, it'll hit more often.
+		//If you aim at someone beforehand, it'll hit more often.
 		//Kinda balanced by fact you need like 2 seconds to aim
 		//As opposed to no-delay pew pew
 		P.accuracy += 30

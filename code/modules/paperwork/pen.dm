@@ -154,11 +154,11 @@
 	return signature ? signature : "Anonymous"
 
 /obj/item/weapon/pen/chameleon/verb/set_colour()
-	set name = "Change Pen Colour"
+	set name = "Change Pen Color"
 	set category = "Object"
 
 	var/list/possible_colours = list ("Yellow", "Green", "Pink", "Blue", "Orange", "Cyan", "Red", "Invisible", "Black")
-	var/selected_type = input("Pick new colour.", "Pen Colour", null, null) as null|anything in possible_colours
+	var/selected_type = input("Pick new color.", "Pen Color", null, null) as null|anything in possible_colours
 
 	if(selected_type)
 		switch(selected_type)
@@ -193,7 +193,7 @@
 	icon = 'icons/obj/crayons.dmi'
 	icon_state = "crayonred"
 	w_class = ITEMSIZE_TINY
-	attack_verb = list("attacked", "coloured")
+	attack_verb = list("attacked", "colored")
 	colour = "#FF0000" //RGB
 	var/shadeColour = "#220000" //RGB
 	var/uses = 30 //0 for unlimited uses

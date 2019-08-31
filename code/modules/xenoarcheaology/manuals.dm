@@ -59,7 +59,7 @@
 						could save your life.</li>
 					<li><b>Anomaly safety gear</b> - A biosealed and catalysis-resistant suit along with eye shielding, tinted hood, and non-reactive disposable gloves are
 					the best kind of protection you can hope for from the errors our forebears may have unleashed.</li>
-					<li><b>Personal defence weapon</b> - Never know what you'll find on the dig: pirates, natives, ancient guardians, carnivorous wildlife...
+					<li><b>Personal defense weapon</b> - Never know what you'll find on the dig: pirates, natives, ancient guardians, carnivorous wildlife...
 						it pays in blood to be prepared.</li>
 				</ul><br>
 				<a href="#Contents">Contents</a>

@@ -202,7 +202,7 @@ var/global/list/rnwords = list("ire","ego","nahlizet","certum","veri","jatkaa","
 				<body>
 				<h1>The scriptures of Nar-Sie, The One Who Sees, The Geometer of Blood.</h1>
 
-				<i>The book is written in an unknown dialect, there are lots of pictures of various complex geometric shapes. You find some notes in english that give you basic understanding of the many runes written in the book. The notes give you an understanding what the words for the runes should be. However, you do not know how to write all these words in this dialect.</i><br>
+				<i>The book is written in an unknown dialect, there are lots of pictures of various complex geometric shapes. You find some notes in English that give you basic understanding of the many runes written in the book. The notes give you an understanding what the words for the runes should be. However, you do not know how to write all these words in this dialect.</i><br>
 				<i>Below is the summary of the runes.</i> <br>
 
 				<h2>Contents</h2>

@@ -1,6 +1,6 @@
 /obj/machinery/suspension_gen
 	name = "suspension field generator"
-	desc = "It has stubby legs bolted up against it's body for stabilising."
+	desc = "It has stubby legs bolted up against it's body for stabilizing."
 	icon = 'icons/obj/xenoarchaeology.dmi'
 	icon_state = "suspension2"
 	density = 1
@@ -134,11 +134,11 @@
 			else
 				anchored = 1
 			playsound(loc, W.usesound, 50, 1)
-			to_chat(user, "<span class='info'>You wrench the stabilising legs [anchored ? "into place" : "up against the body"].</span>")
+			to_chat(user, "<span class='info'>You wrench the stabilizing legs [anchored ? "into place" : "up against the body"].</span>")
 			if(anchored)
 				desc = "It is resting securely on four stubby legs."
 			else
-				desc = "It has stubby legs bolted up against it's body for stabilising."
+				desc = "It has stubby legs bolted up against it's body for stabilizing."
 		else
 			to_chat(user, "<span class='warning'>You are unable to secure [src] while it is active!</span>")
 	else if (istype(W, /obj/item/weapon/cell))

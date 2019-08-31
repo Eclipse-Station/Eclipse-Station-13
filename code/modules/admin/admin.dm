@@ -879,11 +879,11 @@ var/datum/announcement/minor/admin_min_announcer = new
 		if(!Master.current_runlevel)
 			Master.pending_start = !(Master.pending_start)		//simple toggle.
 			if(Master.pending_start)		//if pending start
-				log_admin("[usr.key] tried to start the game, but initialisations were not finished. Start pending.")
-				message_admins("<font color='blue'>[usr.key] tried to start the game, but initialisations were not finished. The round will start as soon as possible.</font>")
-			else			//no pending start, so it was cancelled.
-				log_admin("[usr.key] has cancelled a pending start.")
-				message_admins("<font color='blue'>[usr.key] has cancelled a pending start. Game will start as normal.</font>")
+				log_admin("[usr.key] tried to start the game, but initializations were not finished. Start pending.")
+				message_admins("<font color='blue'>[usr.key] tried to start the game, but initializations were not finished. The round will start as soon as possible.</font>")
+			else			//no pending start, so it was canceled.
+				log_admin("[usr.key] has canceled a pending start.")
+				message_admins("<font color='blue'>[usr.key] has canceled a pending start. Game will start as normal.</font>")
 			return 1		//implied else
 		// // // END ECLIPSE EDIT // // //
 		ticker.current_state = GAME_STATE_SETTING_UP

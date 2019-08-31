@@ -343,8 +343,8 @@
 
 //Swat43:Fortune Bloise
 /obj/item/weapon/storage/backpack/satchel/fluff/swat43bag
-	name = "Coloured Satchel"
-	desc = "That's a coloured satchel with red stripes, with a heart and ripley logo on each side."
+	name = "Colored Satchel"
+	desc = "That's a colored satchel with red stripes, with a heart and ripley logo on each side."
 	icon = 'icons/vore/custom_items_vr.dmi'
 	icon_state = "swat43-bag"
 
@@ -353,7 +353,7 @@
 
 //Dhaeleena:Dhaeleena M'iar
 /obj/item/clothing/accessory/medal/silver/security/fluff/dhael
-	desc = "An award for distinguished combat and sacrifice in defence of corporate commercial interests. Often awarded to security staff. It's engraved with the letters S.W.A.T."
+	desc = "An award for distinguished combat and sacrifice in defense of corporate commercial interests. Often awarded to security staff. It's engraved with the letters S.W.A.T."
 
 //Vorrarkul:Lucina Dakarim
 /obj/item/clothing/accessory/medal/gold/fluff/lucina
@@ -495,9 +495,9 @@
 
 	As a reminder, the membership levels in HAVENS are:
 	<ul>
-		<li><b>HAVENS Star:</b> Upon reciving a signal from a transmitter indicating body demise, HAVENS will attempt to contact the owner for 48 hours, before starting the process of resleeving the owner into a new body they selected when registering their HAVENS membership.</li>
-		<li><b>HAVENS Nebula:</b> After the contact period from the Star service has expired, an agent will be alotted a HAVENS spacecraft, and will attempt to locate your remains, and any belongings you had, for up to one week. If possible, any more recent memory recordings or mindstates will be recovered before your resleeving. (Great for explorers! Don't miss out on anything you discovered!)</li>
-		<li><b>HAVENS Galaxy:</b> Upon reciving the signal from the Star service, a HAVENS High-Threat Response Team will be alotted a HAVENS FTL-capable Interdictor-class spacecraft and dispatched to your last known position to locate and recover your remains, plus any belongings. You will be resleeved on-site to continue where you left off.</li>
+		<li><b>HAVENS Star:</b> Upon receiving a signal from a transmitter indicating body demise, HAVENS will attempt to contact the owner for 48 hours, before starting the process of resleeving the owner into a new body they selected when registering their HAVENS membership.</li>
+		<li><b>HAVENS Nebula:</b> After the contact period from the Star service has expired, an agent will be allotted a HAVENS spacecraft, and will attempt to locate your remains, and any belongings you had, for up to one week. If possible, any more recent memory recordings or mindstates will be recovered before your resleeving. (Great for explorers! Don't miss out on anything you discovered!)</li>
+		<li><b>HAVENS Galaxy:</b> Upon receiving the signal from the Star service, a HAVENS High-Threat Response Team will be allotted a HAVENS FTL-capable Interdictor-class spacecraft and dispatched to your last known position to locate and recover your remains, plus any belongings. You will be resleeved on-site to continue where you left off.</li>
 	</ul>
 	<br />
 	<h5>Technical</h5>
@@ -514,7 +514,7 @@
 	<br />
 	<h5>Special Notes</h5>
 	<i>\[AM WARNING\]</i>
-	<p>This device contains antimatter. Please consult all local regulations when travelling to ensure compliance with local laws.</p>"}
+	<p>This device contains antimatter. Please consult all local regulations when traveling to ensure compliance with local laws.</p>"}
 
 /obj/item/weapon/storage/box/khcrystal
 	name = "life crystal case"
@@ -554,7 +554,7 @@
 //Stobarico - Alexis Bloise
 /obj/item/weapon/cane/wand
     name = "Ancient wand"
-    desc = "A really old looking wand with floating parts and cyan crystals, wich seem to radiate a cyan glow. The wand has a golden plaque on the side that would say Corncobble, but it is covered by a sticker saying Bloise."
+    desc = "A really old looking wand with floating parts and cyan crystals, which seem to radiate a cyan glow. The wand has a golden plaque on the side that would say Corncobble, but it is covered by a sticker saying Bloise."
     icon = 'icons/vore/custom_items_vr.dmi'
     icon_state = "alexiswand"
     item_icons = list (slot_r_hand_str = 'icons/vore/custom_items_vr.dmi', slot_l_hand_str = 'icons/vore/custom_items_vr.dmi')
@@ -673,7 +673,7 @@
 	full_message = list("Your breasts ache badly - they are swollen and feel fit to burst!", "You need to be milked! Your breasts feel bloated, eager for release.", "Your milky breasts are starting to leak...")
 	emote_descriptor = list("squeezes Eldi's nipples, milking them", "milks Eldi's breasts", "extracts milk")
 	self_emote_descriptor = list("squeeze out", "extract")
-	random_emote = list("surpresses a moan", "gasps sharply", "bites her lower lip")
+	random_emote = list("suppresses a moan", "gasps sharply", "bites her lower lip")
 	verb_name = "Milk"
 	verb_desc = "Grab Eldi's breasts and milk her, storing her fresh, warm milk in a container. This will undoubtedly turn her on."
 
@@ -729,7 +729,7 @@
     full_message = list("Your breasts ache badly - they are swollen and feel fit to burst!", "You need to be milked! Your breasts feel bloated, eager for release.", "Your milky breasts are starting to leak...")
     emote_descriptor = list("squeezes May's nipples, milking them", "milks May's breasts", "extracts milk")
     self_emote_descriptor = list("squeeze out", "extract")
-    random_emote = list("surpresses a moan", "gasps sharply", "fidget around", "bites her lower lip")
+    random_emote = list("suppresses a moan", "gasps sharply", "fidget around", "bites her lower lip")
     verb_name = "Milk"
     verb_desc = "Grab May's breasts and milk her, storing her fresh, warm milk in a container. This will undoubtedly turn her on."
 
@@ -904,7 +904,7 @@
 
 /mob/living/carbon/human/proc/use_reagent_implant_yonra()
 	set name = "Lay Egg"
-	set desc = "Force Yonra to lay an egg by squeezing into her lower body! This makes the Teshari stop whatever she is doing at the time, greatly embarassing her."
+	set desc = "Force Yonra to lay an egg by squeezing into her lower body! This makes the Teshari stop whatever she is doing at the time, greatly embarrassing her."
 	set category = "Object"
 	set src in view(1)
 

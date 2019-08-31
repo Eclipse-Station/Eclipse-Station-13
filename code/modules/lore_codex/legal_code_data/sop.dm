@@ -80,7 +80,7 @@
 	<h3>Demotion</h3>\
 	A member of the Command Crew may call for the demotion of any member of their department for disregarding safety protocol, disobeying orders with serious consequences, \
 	or other gross incompetence.  Certain infractions necessitate that a guilty crew member receive a demotion.  Demotion is to be performed by the Head of Personnel, or the \
-	Station Director, as soon as possible.  The demoted crewmember is to be present during the demotion, unless it is caused by a criminal sentence.  If said crewmemeber \
+	Station Director, as soon as possible.  The demoted crewmember is to be present during the demotion, unless it is caused by a criminal sentence.  If said crewmember \
 	refuses to comply with a demotion order, Security is to escort them to the Head of Personnel's office.\
 	<br>\
 	Any demoted crewmember must return all equipment and non-personal items to their previous department, including departmental jumpsuits and radios.  If a demoted \
@@ -102,7 +102,7 @@
 	<h3>Command Crew Demotions</h3>\
 	If a member of the Command crew is suspected to be incompetent, or in breach of SOP, the Station Director has discretion to demote the guilty Command crewmember.  \
 	If there is no Station Director, or the Station Director themselves is guilty, they may be demoted after a vote of no confidence by the remaining Command crew \
-	and relevant station crew.  For the Station Director, the vote is only to be among the remaining Command crew.  Misuse of this privilage may warrant an \
+	and relevant station crew.  For the Station Director, the vote is only to be among the remaining Command crew.  Misuse of this privilege may warrant an \
 	Internal Affairs investigation for wrongful dismissal.\
 	<br>\
 	<h3>Communications with Central Command</h3>\
@@ -125,7 +125,7 @@
 	<h3>Engine Safety</h3>\
 	Your facility's engine is what provides the majority of electricity to the rest of your facility.  As such, the engine is to have priority over \
 	all other engineering issues, including breaches, if an issue with the engine exists.  This book assumes your facility is using one or more thermoelectric engines \
-	(generally referred to as TEGs), driven by a Supermatter crystal.  If this is not the case, please consult the documentation for your specific engine for safety precauctions.\
+	(generally referred to as TEGs), driven by a Supermatter crystal.  If this is not the case, please consult the documentation for your specific engine for safety precautions.\
 	<br>\
 	The Supermatter crystal is what presents the most danger to a crewmember.  The Supermatter is to remain isolated inside the engine room, inside \
 	its own chamber, for several reasons.  First, Supermatter reacts poorly to oxygen, harming the crystal and causing heat.  Second, <b>the crystal \
@@ -160,7 +160,7 @@
 	was damaged.  As such, cosmetic details should be done last.  Breach repairs always have priority over construction projects.\
 	<br>\
 	<h3>Delamination</h3>\
-	The Supermatter is volatile, and can undergo the process of 'delamination' if sufficently damaged.  To help warn against this, all Supermatter crystals \
+	The Supermatter is volatile, and can undergo the process of 'delamination' if sufficiently damaged.  To help warn against this, all Supermatter crystals \
 	come with a small monitoring microcontroller, which will warn the Engineering department if the Supermatter is being damaged.  Damage can result from \
 	excessive heat, vacuum exposure, or physical impacts.  If the Supermatter achieves delamination, it will cause a massive explosion, deliver a \
 	massive dose of radiation to everyone in or near your facility, and may cause hallucinations.  Delamination prevention should be prioritized above \
@@ -203,7 +203,7 @@
 	<h3>Cloning Procedure</h3>\
 	Persons whom have committed suicide are not to be cloned.  Individuals are also to not be cloned if there is a Do Not Clone (generally referred \
 	to as DNC) order in their medical records, or if the individual has had a DNC order declared against them by the Station Director, Chief \
-	Medical Officer, or Head of Security.  If any of this occurs, procede to Portmortem Storage.\
+	Medical Officer, or Head of Security.  If any of this occurs, proceed to Portmortem Storage.\
 	<br>\
 	Some individuals may have special instructions in their Postmortem Instructions, generally found in their medical records.  \
 	Be sure to read them before committing to cloning someone.  In particular, some instructions may express a desire to be placed \
@@ -214,9 +214,9 @@
 	<br>\
 	Ensure that all cloning equipment, including the cryogenic tubes, are functional and ready before cloning begins.  Once \
 	this is done, scan the deceased.  Up to three scans are to be made per attempt.  If the deceased suffers Mental Interface Failure, \
-	procede to Postmortem Storage.  Further attempts at resuscitation may be made at later times, at the medical teams' discretion. \
+	proceed to Postmortem Storage.  Further attempts at resuscitation may be made at later times, at the medical teams' discretion. \
 	<br>\
-	If the deceased is sufficently scanned, remove their possessions and clothing off of the deceased body, for use by the future new clone.  \
+	If the deceased is sufficiently scanned, remove their possessions and clothing off of the deceased body, for use by the future new clone.  \
 	Move the cadaver into the morgue, as per Postmortem Storage.  Begin the cloning process.  Possessions are to be gathered in a manner that \
 	facilitates transporting them along with the clone.  Upon the cloning process being complete and the new clone being created, the \
 	clone is to be placed inside a croygenic tube as quickly as possible.  Cloning is not a painless experience, and it is best if \
@@ -229,7 +229,7 @@
 	individuals revived by a defibrillator do not experience this phenomenon.\
 	<br>\
 	<h3>Postmortem Storage</h3>\
-	Bodies placed in the morgue should be contained inside black body bags.  The body bag is to be labelled with the deceased's name, along \
+	Bodies placed in the morgue should be contained inside black body bags.  The body bag is to be labeled with the deceased's name, along \
 	with 'DNC', 'MIF', or 'Cloned' where applicable.  Bodies in the morgue are to be transferred to Central Command whenever possible.  Funerary \
 	services are to be handled off site.  A service may be held within the Chapel if it is desired, however the body must still be brought to \
 	Central.\

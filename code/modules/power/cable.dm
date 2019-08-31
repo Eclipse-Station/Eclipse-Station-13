@@ -782,10 +782,10 @@ obj/structure/cable/proc/cableColor(var/colorC)
 		C.mergeConnectedNetworks(C.d2) //...in the two new cable directions
 		C.mergeConnectedNetworksOnTurf()
 
-		if(C.d1 & (C.d1 - 1))// if the cable is layed diagonally, check the others 2 possible directions
+		if(C.d1 & (C.d1 - 1))// if the cable is laid diagonally, check the others 2 possible directions
 			C.mergeDiagonalsNetworks(C.d1)
 
-		if(C.d2 & (C.d2 - 1))// if the cable is layed diagonally, check the others 2 possible directions
+		if(C.d2 & (C.d2 - 1))// if the cable is laid diagonally, check the others 2 possible directions
 			C.mergeDiagonalsNetworks(C.d2)
 
 		use(1)

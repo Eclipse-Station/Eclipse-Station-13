@@ -7,7 +7,7 @@
 	item_icons = null
 	desc = "A Kawashima Material Technology Model 7 anti-particle projector, housed in a rugged casing."
 	description_info = "An unconventional weapon, APP guns generate attogram-scale quantities of antimatter which \
-	are then launched using an electromagnetic field. They are only suitable for use in depressurised environments, \
+	are then launched using an electromagnetic field. They are only suitable for use in depressurized environments, \
 	else the antimatter pellet is liable to strike the air before it reaches the target. This can result in catastrophic \
 	failure, making them unsuitable as military weapons in practical situations as they are prone to backfiring and \
 	jamming, though they perform as adequately as any laser weapon in vacuum. Nonetheless, they have found a niche among \
@@ -21,7 +21,7 @@
 	origin_tech = list(TECH_COMBAT = 3, TECH_MAGNET = 2, TECH_MATERIAL = 2)
 	fire_delay = 10
 	charge_cost = 200	//slightly more shots than lasers
-	var/safetycatch = 0 //if 1, won't let you fire in pressurised environment, rather than malfunctioning
+	var/safetycatch = 0 //if 1, won't let you fire in pressurized environment, rather than malfunctioning
 	var/obj/item/pressurelock/attached_safety
 
 
@@ -61,7 +61,7 @@
 	charge_delay = 15 //won't start charging until it's ready to fire again
 	recharge_time = 8 //40 ticks after that to refill the whole thing.
 
-//special behaviours for particle guns below
+//special behaviors for particle guns below
 
 /obj/item/weapon/gun/energy/particle/special_check(var/mob/user)
 	if (..())
@@ -161,7 +161,7 @@
 	name = "Pressure interlock"
 	icon = 'icons/obj/gun_vr.dmi'
 	icon_state = "pressurelock"
-	desc = "A safety interlock that can be installed in an antiparticle projector. It prevents the weapon from discharging in pressurised environments."
+	desc = "A safety interlock that can be installed in an antiparticle projector. It prevents the weapon from discharging in pressurized environments."
 	w_class = ITEMSIZE_TINY
 	origin_tech = list(TECH_COMBAT = 2, TECH_MATERIAL = 2, TECH_ENGINEERING = 2)
 
