@@ -133,7 +133,7 @@ For the other part of the code, check silicon say.dm. Particularly robot talk.*/
 	hologram.anchored = 1//So space wind cannot drag it.
 	hologram.name = "[A.name] (Hologram)"//If someone decides to right click.
 	hologram.set_light(2)	//hologram lighting
-	hologram.color = color //painted holopad gives coloured holograms
+	hologram.color = color //painted holopad gives colored holograms
 	masters[A] = hologram
 	set_light(2)			//pad lighting
 	icon_state = "holopad1"

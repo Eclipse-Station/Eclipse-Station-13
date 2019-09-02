@@ -356,7 +356,7 @@
 		"Rigel Prime, the center of the Rigel system, burns hot, basking its planetary bodies in warmth and radiation.",
 		"Tau Ceti Beta has recently become a waypoint for colonists headed towards Orion. There are many ships and makeshift stations in the vicinity.",
 		"Sensors indicate that a black hole's gravitational field is affecting the region of space we were headed through. We could stay of course, but risk of being overcome by its gravity, or we could change course to go around, which will take longer.",
-		"You have come into range of the first man-made structure in this region of space. It has been constructed not by travellers from Sol, but by colonists from Orion. It stands as a monument to the colonists' success.",
+		"You have come into range of the first man-made structure in this region of space. It has been constructed not by travelers from Sol, but by colonists from Orion. It stands as a monument to the colonists' success.",
 		"You have made it to Orion! Congratulations! Your crew is one of the few to start a new foothold for mankind!"
 		)
 
@@ -872,7 +872,7 @@
 				eventdat += "<P ALIGN=Right><a href='byond://?src=\ref[src];close=1'>Close</a></P>"
 			else
 				eventdat += "You pull the ship up to dock at a nearby Spaceport, lucky find!"
-				eventdat += "<br>This Spaceport is home to travellers who failed to reach Orion, but managed to find a different home..."
+				eventdat += "<br>This Spaceport is home to travelers who failed to reach Orion, but managed to find a different home..."
 				eventdat += "<br>Trading terms: FU = Fuel, FO = Food"
 				if(last_spaceport_action)
 					eventdat += "<br>Last Spaceport Action: [last_spaceport_action]"
@@ -1012,7 +1012,7 @@
 
 /obj/item/weapon/orion_ship
 	name = "model settler ship"
-	desc = "A model spaceship, it looks like those used back in the day when travelling to Orion! It even has a miniature FX-293 reactor, which was renowned for its instability and tendency to explode..."
+	desc = "A model spaceship, it looks like those used back in the day when traveling to Orion! It even has a miniature FX-293 reactor, which was renowned for its instability and tendency to explode..."
 	icon = 'icons/obj/toy.dmi'
 	icon_state = "ship"
 	w_class = ITEMSIZE_SMALL

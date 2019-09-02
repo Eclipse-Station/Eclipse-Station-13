@@ -3175,7 +3175,7 @@ End Citadel Change */
 	name = "Ichor Mead"
 	id = "ichor_mead"
 	description = "A trip to Valhalla."
-	taste_description = "valhalla"
+	taste_description = "Valhalla"
 	color = "#955B37"
 	strength = 30
 
@@ -3369,7 +3369,7 @@ End Citadel Change */
 	color = "#FFFFAA"
 	taste_description = "egg"
 
-/datum/reagent/nutriment/protein/cheese // Also bad for skrell.
+/datum/reagent/nutriment/protein/cheese // Also bad for Skrell.
 	name = "cheese"
 	id = "cheese"
 	color = "#EDB91F"

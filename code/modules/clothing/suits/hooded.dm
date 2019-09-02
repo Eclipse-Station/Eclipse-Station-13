@@ -160,7 +160,7 @@
 
 /obj/item/clothing/suit/storage/hooded/explorer
 	name = "explorer suit"
-	desc = "An armoured suit for exploring harsh environments."
+	desc = "An armored suit for exploring harsh environments."
 	icon_state = "explorer"
 	item_state = "explorer"
 	flags = THICKMATERIAL

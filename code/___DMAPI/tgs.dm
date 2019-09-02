@@ -50,7 +50,7 @@
 //REQUIRED HOOKS
 
 //Call this somewhere in /world/New() that is always run
-//event_handler: optional user defined event handler. The default behaviour is to broadcast the event in english to all connected admin channels
+//event_handler: optional user defined event handler. The default behavior is to broadcast the event in English to all connected admin channels
 /world/proc/TgsNew(datum/tgs_event_handler/event_handler)
 	return
 

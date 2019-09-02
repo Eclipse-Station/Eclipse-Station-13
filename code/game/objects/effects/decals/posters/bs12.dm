@@ -57,7 +57,7 @@
 /datum/poster/bay_12
 	icon_state="bsposter12"
 	name = "Rogue AI"
-	desc = "This particular one depicts the shell of the infamous AI that catastropically comandeered one of humanity's earliest space stations. Back then, the Company was just known as TriOptimum."
+	desc = "This particular one depicts the shell of the infamous AI that catastrophically commandeered one of humanity's earliest space stations. Back then, the Company was just known as TriOptimum."
 
 /datum/poster/bay_13
 	icon_state="bsposter13"
@@ -72,17 +72,17 @@
 /datum/poster/bay_15
 	icon_state="bsposter15"
 	name = "Augmented Legend"
-	desc = "This particular one is of an obviously augmented individual, gazing towards the sky. The cyber-city in the backround is rather punkish."
+	desc = "This particular one is of an obviously augmented individual, gazing towards the sky. The cyber-city in the background is rather punkish."
 
 /datum/poster/bay_16
 	icon_state="bsposter16"
 	name = "Dangerous Static"
-	desc = "This particular one depicts nothing remarkable other than a rather mesmerising pattern of monitor static. There's a tag on the sides of the poster, but it's ripped off."
+	desc = "This particular one depicts nothing remarkable other than a rather mesmerizing pattern of monitor static. There's a tag on the sides of the poster, but it's ripped off."
 
 /datum/poster/bay_17
 	icon_state="bsposter17"
 	name = "Pinup Girl Val"
-	desc = "Luscious Val McNeil, the vertically challenged Legal Extraordinaire, winner of Miss Space two years running and favoured pinup girl of Lawyers Weekly."
+	desc = "Luscious Val McNeil, the vertically challenged Legal Extraordinaire, winner of Miss Space two years running and favored pinup girl of Lawyers Weekly."
 
 /datum/poster/bay_18
 	icon_state="bsposter18"

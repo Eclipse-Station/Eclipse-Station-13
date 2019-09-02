@@ -764,7 +764,7 @@
 				</ol>
 
 				<h2><a name="Repairs">Cyborg Repairs</h2>
-				Occasionally a Cyborg may become damaged. This could be in the form of impact damage from a heavy or fast-travelling object, or it could be heat damage from high temperatures, or even lasers or Electromagnetic Pulses (EMPs).
+				Occasionally a Cyborg may become damaged. This could be in the form of impact damage from a heavy or fast-traveling object, or it could be heat damage from high temperatures, or even lasers or Electromagnetic Pulses (EMPs).
 
 				<h3>Dents</h3>
 				If a cyborg becomes damaged due to impact from heavy or fast-moving objects, it will become dented. Sure, a dent may not seem like much, but it can compromise the structural integrity of the cyborg, possibly causing a critical failure.
@@ -862,19 +862,19 @@
 				<br>
 				<h1>The Oath</h1>
 
-				<i>The Medical Oath sworn by recognised medical practitioners in the employ of [using_map.company_name]</i><br>
+				<i>The Medical Oath sworn by recognized medical practitioners in the employ of [using_map.company_name]</i><br>
 
 				<ol>
 					<li>Now, as a new doctor, I solemnly promise that I will, to the best of my ability, serve humanity-caring for the sick, promoting good health, and alleviating pain and suffering.</li>
-					<li>I recognise that the practice of medicine is a privilege with which comes considerable responsibility and I will not abuse my position.</li>
-					<li>I will practise medicine with integrity, humility, honesty, and compassion-working with my fellow doctors and other colleagues to meet the needs of my patients.</li>
+					<li>I recognize that the practice of medicine is a privilege with which comes considerable responsibility and I will not abuse my position.</li>
+					<li>I will practice medicine with integrity, humility, honesty, and compassion-working with my fellow doctors and other colleagues to meet the needs of my patients.</li>
 					<li>I shall never intentionally do or administer anything to the overall harm of my patients.</li>
 					<li>I will not permit considerations of gender, race, religion, political affiliation, sexual orientation, nationality, or social standing to influence my duty of care.</li>
 					<li>I will oppose policies in breach of human rights and will not participate in them. I will strive to change laws that are contrary to my profession's ethics and will work towards a fairer distribution of health resources.</li>
 					<li>I will assist my patients to make informed decisions that coincide with their own values and beliefs and will uphold patient confidentiality.</li>
-					<li>I will recognise the limits of my knowledge and seek to maintain and increase my understanding and skills throughout my professional life. I will acknowledge and try to remedy my own mistakes and honestly assess and respond to those of others.</li>
+					<li>I will recognize the limits of my knowledge and seek to maintain and increase my understanding and skills throughout my professional life. I will acknowledge and try to remedy my own mistakes and honestly assess and respond to those of others.</li>
 					<li>I will seek to promote the advancement of medical knowledge through teaching and research.</li>
-					<li>I make this declaration solemnly, freely, and upon my honour.</li>
+					<li>I make this declaration solemnly, freely, and upon my honor.</li>
 				</ol><br>
 
 				<HR COLOR="steelblue" WIDTH="60%" ALIGN="LEFT">
@@ -1052,7 +1052,7 @@
 					<li>Using your forensic scanning computer, scan your scanner to upload all of your evidence into the database.</li>
 					<li>Browse through the resulting dossiers, looking for the one that either has the most complete set of prints, or the most suspicious items handled. </li>
 					<li>If you have 80% or more of the print (The print is displayed), go to step 10, otherwise continue to step 8.</li>
-					<li>Look for clues from the suit fibres you found on your perpetrator, and go about looking for more evidence with this new information, scanning as you go. </li>
+					<li>Look for clues from the suit fibers you found on your perpetrator, and go about looking for more evidence with this new information, scanning as you go. </li>
 					<li>Try to get a fingerprint card of your perpetrator, as if used in the computer, the prints will be completed on their dossier.</li>
 					<li>Assuming you have enough of a print to see it, grab the biggest complete piece of the print and search the security records for it. </li>
 					<li>Since you now have both your dossier and the name of the person, print both out as evidence and get security to nab your baddie.</li>
@@ -1091,8 +1091,8 @@
 				<ul>
 					<li>Place the nuclear device in the designated detonation zone.</li>
 					<li>Extend and anchor the nuclear device from its interface.</li>
-					<li>Insert the nuclear authorisation disk into the slot.</li>
-					<li>Type the numeric authorisation code into the keypad. This should have been provided.<br>
+					<li>Insert the nuclear authorization disk into the slot.</li>
+					<li>Type the numeric authorization code into the keypad. This should have been provided.<br>
 					<b>Note</b>: If you make a mistake, press R to reset the device.
 					<li>Press the E button to log on to the device.</li>
 				</ul><br>
@@ -1148,7 +1148,7 @@
 
 				Alright. It has come to my attention that a variety of people are unsure of what a "pipe" is and what it does.
 				Apparently, there is an unnatural fear of these arcane devices and their "gases." Spooky, spooky. So,
-				this will tell you what every device constructable by an ordinary pipe dispenser within atmospherics actually does.
+				this will tell you what every device constructible by an ordinary pipe dispenser within atmospherics actually does.
 				You are not going to learn what to do with them to be the super best person ever, or how to play guitar with passive gates,
 				or something like that. Just what stuff does.<BR><BR>
 
@@ -1307,7 +1307,7 @@
 				After it covers the whole body, the suit can be started. The startup sequence takes some time. The suit will automatically fit itself to your body, sealing each section individually - boots, gloves, pants, torso, and helmet - then connecting them.<BR><BR>
 
 				Operating a hardsuit is a much more complicated proposal than operating other EVA equipment. While putting them on is relatively simple, and operating basic functions like oxygen and magboots is the same as other suits, the rest is far more complex.
-				Consult the operator's manual for invidual pieces of equipment that you plan to use. Use of these for heavy work is only reccomended for people who have specialized training and extensive EVA experience.
+				Consult the operator's manual for individual pieces of equipment that you plan to use. Use of these for heavy work is only recommended for people who have specialized training and extensive EVA experience.
 				The potential of a suit breach is always there, and the use of powered equipment raises it significantly.<BR><BR>
 
 				<h2><a name="Advice">Miscellaneous Advice</a></h2>
@@ -1330,7 +1330,7 @@
 				The largest uses of them are for their cleaning functions and their ability to tailor suits for a species. Do not enter them physically. You will die from any of the functions being activated, and it will hurt the whole time you're dying.
 				These machines can both tailor a suit between species, and between types. This means you can convert engineering hardsuits to atmospherics, or the other way. This is useful. Use it if you can.<BR><BR>
 
-				There's also modification kits that let you modify suits yourself. These are extremely difficult to use unless you understand the actual construction of the suit. I do not reccomend using them unless no other option is available.<BR><BR>
+				There's also modification kits that let you modify suits yourself. These are extremely difficult to use unless you understand the actual construction of the suit. I do not recommend using them unless no other option is available.<BR><BR>
 
 				<h2><a name="Final">Final Checks</a></h2>
 				<ul>

@@ -124,7 +124,7 @@
 	valid_accessory_slots = null
 
 /obj/item/clothing/head/helmet/dermal
-	name = "Dermal Armour Patch"
+	name = "Dermal Armor Patch"
 	desc = "You're not quite sure how you manage to take it on and off, but it implants nicely in your head."
 	icon_state = "dermal"
 	item_state_slots = list(slot_r_hand_str = "", slot_l_hand_str = "")

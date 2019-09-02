@@ -6,13 +6,13 @@
 	check_armour = "energy"
 	var/flash_strength = 10
 
-//releases a burst of light on impact or after travelling a distance
+//releases a burst of light on impact or after traveling a distance
 /obj/item/projectile/energy/flash
 	name = "chemical shell"
 	icon_state = "bullet"
 	fire_sound = 'sound/weapons/gunshot/gunshot_pistol.ogg'
 	damage = 5
-	kill_count = 15 //if the shell hasn't hit anything after travelling this far it just explodes.
+	kill_count = 15 //if the shell hasn't hit anything after traveling this far it just explodes.
 	var/flash_range = 0
 	var/brightness = 7
 	var/light_colour = "#ffffff"

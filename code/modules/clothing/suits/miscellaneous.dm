@@ -11,7 +11,7 @@
  * Lasertag
  */
 /obj/item/clothing/suit/bluetag
-	name = "blue laser tag armour"
+	name = "blue laser tag armor"
 	desc = "Blue Pride, Station Wide."
 	icon_state = "bluetag"
 	item_state_slots = list(slot_r_hand_str = "tdblue", slot_l_hand_str = "tdblue")
@@ -21,7 +21,7 @@
 	siemens_coefficient = 3.0
 
 /obj/item/clothing/suit/redtag
-	name = "red laser tag armour"
+	name = "red laser tag armor"
 	desc = "Reputed to go faster."
 	icon_state = "redtag"
 	item_state_slots = list(slot_r_hand_str = "tdred", slot_l_hand_str = "tdred")

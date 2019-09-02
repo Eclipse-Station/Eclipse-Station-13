@@ -2062,7 +2062,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/door/airlock/multi_tile/glass{
-	name = "Emergency Treatment Centre";
+	name = "Emergency Treatment Center";
 	req_access = list(5)
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals_central1{
@@ -4472,7 +4472,7 @@
 /area/tether/surfacebase/medical/lobby)
 "ih" = (
 /obj/machinery/door/airlock/multi_tile/glass{
-	name = "Emergency Treatment Centre lobby"
+	name = "Emergency Treatment Center lobby"
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/effect/floor_decal/steeldecal/steel_decals_central1{

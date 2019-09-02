@@ -250,7 +250,7 @@ var/datum/controller/supply/supply_controller = new()
 				if(slip)
 					slip.info += "<li>[B2.name]</li>" //add the item to the manifest
 
-		//manifest finalisation
+		//manifest finalization
 		if(slip)
 			slip.info += "</ul><br>"
 			slip.info += "CHECK CONTENTS AND STAMP BELOW THE LINE TO CONFIRM RECEIPT OF GOODS<hr>"

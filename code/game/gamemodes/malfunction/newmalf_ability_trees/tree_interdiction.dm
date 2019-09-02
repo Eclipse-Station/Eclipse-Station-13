@@ -160,7 +160,7 @@
 		user.hacking = 1
 		usr << "Beginning hack sequence. Estimated time until completed: 30 seconds."
 		spawn(0)
-			target << "SYSTEM LOG: Remote Connection Estabilished (IP #UNKNOWN#)"
+			target << "SYSTEM LOG: Remote Connection Established (IP #UNKNOWN#)"
 			sleep(100)
 			if(user.is_dead())
 				target << "SYSTEM LOG: Connection Closed"
@@ -170,12 +170,12 @@
 			if(user.is_dead())
 				target << "SYSTEM LOG: User Admin disconnected."
 				return
-			target << "SYSTEM LOG: User Admin - manual resynchronisation triggered."
+			target << "SYSTEM LOG: User Admin - manual resynchronization triggered."
 			sleep(50)
 			if(user.is_dead())
 				target << "SYSTEM LOG: User Admin disconnected. Changes reverted."
 				return
-			target << "SYSTEM LOG: Manual resynchronisation confirmed. Select new AI to connect: [user.name] == ACCEPTED"
+			target << "SYSTEM LOG: Manual resynchronization confirmed. Select new AI to connect: [user.name] == ACCEPTED"
 			sleep(100)
 			if(user.is_dead())
 				target << "SYSTEM LOG: User Admin disconnected. Changes reverted."

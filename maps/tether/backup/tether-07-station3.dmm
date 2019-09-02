@@ -20118,7 +20118,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/door/airlock/multi_tile/glass{
-	name = "Treatment Centre";
+	name = "Treatment Center";
 	req_access = list(5)
 	},
 /obj/machinery/door/blast/shutters{
@@ -21326,7 +21326,7 @@
 "IA" = (
 /obj/machinery/door/airlock/multi_tile/glass{
 	id_tag = "MedbayFoyer";
-	name = "Treatment Centre";
+	name = "Treatment Center";
 	req_one_access = list(5)
 	},
 /obj/machinery/door/firedoor/glass,

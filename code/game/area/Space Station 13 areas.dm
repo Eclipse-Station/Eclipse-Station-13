@@ -1817,7 +1817,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	icon_state = "cloning"
 
 /area/medical/sleeper
-	name = "\improper Emergency Treatment Centre"
+	name = "\improper Emergency Treatment Center"
 	icon_state = "exam_room"
 
 /area/medical/first_aid_station_starboard
@@ -2215,7 +2215,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	icon_state = "hallS"
 
 /area/derelict/arrival
-	name = "\improper Derelict Arrival Centre"
+	name = "\improper Derelict Arrival Center"
 	icon_state = "yellow"
 
 /area/derelict/storage/equipment

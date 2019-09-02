@@ -83,11 +83,11 @@
 	else
 		forceMove(get_turf(src))
 
-//default attackby behaviour
+//default attackby behavior
 /obj/item/clothing/accessory/attackby(obj/item/I, mob/user)
 	..()
 
-//default attack_hand behaviour
+//default attack_hand behavior
 /obj/item/clothing/accessory/attack_hand(mob/user as mob)
 	if(has_suit)
 		return	//we aren't an object on the ground so don't call parent
@@ -152,7 +152,7 @@
 /obj/item/clothing/accessory/stethoscope/do_surgery(mob/living/carbon/human/M, mob/living/user)
 	if(user.a_intent != I_HELP) //in case it is ever used as a surgery tool
 		return ..()
-	attack(M, user) //default surgery behaviour is just to scan as usual
+	attack(M, user) //default surgery behavior is just to scan as usual
 	return 1
 
 /obj/item/clothing/accessory/stethoscope/attack(mob/living/carbon/human/M, mob/living/user)

@@ -3,7 +3,7 @@
 
 /obj/item/weapon/rig/pmc
 	name = "PMC hardsuit control module"
-	desc = "A suit worn by private military contractors. Armoured and space ready."
+	desc = "A suit worn by private military contractors. Armored and space ready."
 	suit_type = "PMC"
 	icon_state = "pmc_commandergrey_rig"
 
@@ -19,7 +19,7 @@
 
 /obj/item/weapon/rig/pmc/commander
 	name = "PMC-C hardsuit control module"
-	desc = "A suit worn by private military contractors. Armoured and space ready."
+	desc = "A suit worn by private military contractors. Armored and space ready."
 	suit_type = "PMC commander"
 	icon_state = "pmc_commandergrey_rig"
 
@@ -44,7 +44,7 @@
 
 /obj/item/weapon/rig/pmc/engineer
 	name = "PMC-E suit control module"
-	desc = "A suit worn by private military contractors. This one is setup for engineering. Armoured and space ready."
+	desc = "A suit worn by private military contractors. This one is setup for engineering. Armored and space ready."
 	suit_type = "PMC engineer"
 	icon_state = "pmc_engineergrey_rig"
 	siemens_coefficient = 0
@@ -72,7 +72,7 @@
 
 /obj/item/weapon/rig/pmc/medical
 	name = "PMC-M suit control module"
-	desc = "A suit worn by private military contractors. This one is setup for medical. Armoured and space ready."
+	desc = "A suit worn by private military contractors. This one is setup for medical. Armored and space ready."
 	suit_type = "PMC medic"
 	icon_state = "pmc_medicalgrey_rig"
 
@@ -99,7 +99,7 @@
 
 /obj/item/weapon/rig/pmc/security
 	name = "PMC-S suit control module"
-	desc = "A suit worn by private military contractors. This one is setup for security. Armoured and space ready."
+	desc = "A suit worn by private military contractors. This one is setup for security. Armored and space ready."
 	suit_type = "PMC security"
 	icon_state = "pmc_securitygrey_rig"
 
