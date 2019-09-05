@@ -11,7 +11,7 @@
 	var/on = 0
 	var/brightness_on = 4 //luminosity when on
 	var/flashlight_power = 0.8	//lighting power when on
-	var/flashlight_colour = LIGHT_COLOR_INCANDESCENT_FLASHLIGHT	//lighting colour when on
+	var/flashlight_colour = LIGHT_COLOR_INCANDESCENT_FLASHLIGHT	//lighting color when on
 	var/obj/item/weapon/cell/cell
 	var/cell_type = /obj/item/weapon/cell/device
 	var/list/brightness_levels

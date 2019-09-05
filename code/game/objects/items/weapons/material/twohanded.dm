@@ -130,7 +130,7 @@
 	icon_state = "scythe0"
 	base_icon = "scythe"
 	name = "scythe"
-	desc = "A sharp and curved blade on a long fibremetal handle, this tool makes it easy to reap what you sow."
+	desc = "A sharp and curved blade on a long fibermetal handle, this tool makes it easy to reap what you sow."
 	force_divisor = 0.65
 	origin_tech = list(TECH_MATERIAL = 2, TECH_COMBAT = 2)
 	attack_verb = list("chopped", "sliced", "cut", "reaped")

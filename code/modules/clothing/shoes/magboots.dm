@@ -82,7 +82,7 @@
 
 /obj/item/clothing/shoes/magboots/vox
 
-	desc = "A pair of heavy, jagged armoured foot pieces, seemingly suitable for a velociraptor."
+	desc = "A pair of heavy, jagged armored foot pieces, seemingly suitable for a velociraptor."
 	name = "vox magclaws"
 	item_state = "boots-vox"
 	icon_state = "boots-vox"

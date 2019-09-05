@@ -303,7 +303,7 @@
 	and odds and ends like implanted wrist-watches. Their business model tends towards smaller, boutique operations, giving \
 	it a reputation for high price and luxury, with Bishop cyberware often rivalling Vey-Med's for cost. Bishop's reputation \
 	for catering towards the interests of human augmentation enthusiasts instead of positronics have earned it ire from the \
-	Positronic Rights Group and puts it in ideological (but not economic) comptetition with Morpheus Cyberkinetics."
+	Positronic Rights Group and puts it in ideological (but not economic) competition with Morpheus Cyberkinetics."
 	history = ""
 	work = "cybernetics and augmentation manufacturer"
 	headquarters = ""

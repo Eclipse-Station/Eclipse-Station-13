@@ -116,7 +116,7 @@
 
 	GLOB.ahelp_tickets.ClientLogin(src)
 
-	//Admin Authorisation
+	//Admin Authorization
 	holder = admin_datums[ckey]
 	if(holder)
 		admins += src

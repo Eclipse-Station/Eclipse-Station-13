@@ -142,7 +142,7 @@
 /obj/effect/meteor/Bump(atom/A)
 	if(attempt_vr(src,"Bump_vr",list(A))) return //VOREStation Edit - allows meteors to be deflected by baseball bats
 	if(A)
-		if(A.handle_meteor_impact(src)) // Used for special behaviour when getting hit specifically by a meteor, like a shield.
+		if(A.handle_meteor_impact(src)) // Used for special behavior when getting hit specifically by a meteor, like a shield.
 			ram_turf(get_turf(A))
 			get_hit()
 		else

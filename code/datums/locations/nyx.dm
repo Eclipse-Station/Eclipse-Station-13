@@ -83,7 +83,7 @@
 
 /datum/locations/brinkburn
 	name = "Brinkburn"
-	desc = "A martian planet, Brinkburn is small and dry yet is hot enough to be habitable. Possesses a dense ring system, theorised to be the fate of \
+	desc = "A martian planet, Brinkburn is small and dry yet is hot enough to be habitable. Possesses a dense ring system, theorized to be the fate of \
 	primordial moons, which makes it difficult to enter or exit orbit."
 
 /datum/locations/haulers_tragedy

@@ -64,9 +64,9 @@
 	desc = "A glowing visor, perhaps stolen from a depressed Cylon."
 
 /obj/item/clothing/suit/space/vox/carapace
-	name = "alien carapace armour"
+	name = "alien carapace armor"
 	icon_state = "vox-carapace"
-	desc = "An armoured, segmented carapace with glowing purple lights. It looks pretty run-down."
+	desc = "An armored, segmented carapace with glowing purple lights. It looks pretty run-down."
 
 /obj/item/clothing/head/helmet/space/vox/stealth
 	name = "alien stealth helmet"
@@ -84,6 +84,6 @@
 	desc = "An alien helmet with enormous goggled lenses."
 
 /obj/item/clothing/suit/space/vox/medic
-	name = "alien armour"
+	name = "alien armor"
 	icon_state = "vox-medic"
 	desc = "An almost organic looking nonhuman pressure suit."
