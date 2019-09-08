@@ -237,7 +237,8 @@ var/list/admin_verbs_debug = list(
 	/datum/admins/proc/change_weather,
 	/datum/admins/proc/change_time,
 	/client/proc/admin_give_modifier,
-	/client/proc/simple_DPS
+	/client/proc/simple_DPS,
+	/client/proc/dump_tracking		//Eclipse addition - player tracking system dump
 	)
 
 var/list/admin_verbs_paranoid_debug = list(
