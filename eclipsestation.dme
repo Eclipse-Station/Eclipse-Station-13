@@ -238,6 +238,7 @@
 #include "code\controllers\subsystems\atoms.dm"
 #include "code\controllers\subsystems\bellies_vr.dm"
 #include "code\controllers\subsystems\circuits.dm"
+#include "code\controllers\subsystems\dispatcher_debug.dm"
 #include "code\controllers\subsystems\dispatcher_eclipse.dm"
 #include "code\controllers\subsystems\garbage.dm"
 #include "code\controllers\subsystems\holomaps.dm"
