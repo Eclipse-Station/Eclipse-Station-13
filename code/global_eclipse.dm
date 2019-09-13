@@ -71,7 +71,7 @@ var/global/list/fluff_info = list(
     "About [number_people_walked_over] people were trodden upon, look both ways!",
     "[destroyed_research_items] objects were destroyed in the name of Science! Keep it up!",
     "The vending machines sold [items_sold_shift] items today.",
-    "The disposal system flushed a whole [disposals_flush_shift] times for this shift. We should really invest in waste treatement.",
+    "The disposal system flushed a whole [disposals_flush_shift] times for this shift. We should really invest in waste treatment.",
 )
 //cans_opened += 1
 //cans_opened++

@@ -31,7 +31,7 @@
 	// Restrict some styles to specific species
 	var/list/species_allowed = list("Human","Promethean","Vatborn")
 
-	// Whether or not the accessory can be affected by colouration
+	// Whether or not the accessory can be affected by coloration
 	var/do_colouration = 1
 
 

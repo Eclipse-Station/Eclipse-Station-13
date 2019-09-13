@@ -2,8 +2,8 @@
 
 
 /*
-	Telecomms monitor tracks the overall trafficing of a telecommunications network
-	and displays a heirarchy of linked machines.
+	Telecomms monitor tracks the overall trafficking of a telecommunications network
+	and displays a hierarchy of linked machines.
 */
 
 

@@ -307,7 +307,7 @@ var/list/ai_verbs_default = list(
 	if(!powered_ai.anchored)
 		loc = powered_ai.loc
 		use_power = 0
-		use_power(50000) // Less optimalised but only called if AI is unwrenched. This prevents usage of wrenching as method to keep AI operational without power. Intellicard is for that.
+		use_power(50000) // Less optimalized but only called if AI is unwrenched. This prevents usage of wrenching as method to keep AI operational without power. Intellicard is for that.
 	if(powered_ai.anchored)
 		use_power = 2
 

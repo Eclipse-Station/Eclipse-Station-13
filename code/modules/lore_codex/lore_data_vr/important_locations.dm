@@ -96,7 +96,7 @@
 	<br><br> \
 	One of the most interesting facts about this planet is that it is the native [quick_link("Zorren")] race, who until recently \
 	were a primitive and nomadic species.  Due to the arrival of various [quick_link("TSC", "TSCs")] over the last two decades, \
-	the Zorren have benefitted greatly from the introduction of advanced technology into their culture. It is not known how many \
+	the Zorren have benefited greatly from the introduction of advanced technology into their culture. It is not known how many \
 	Zorren occupy the planet, but it is believed that at least two million live scattered across the deserts and mountains, where \
 	they subsist off of underground water sources, and hunt for prey."
 

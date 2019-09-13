@@ -3,7 +3,7 @@
 #define IS_PLANT          0x2    // Is a treeperson.
 #define IS_SLIME          0x51   // Is a slimeperson.
 #define NO_SCAN           0x4    // Cannot be scanned in a DNA machine/genome-stolen.
-#define NO_PAIN           0x8    // Cannot suffer halloss/recieves deceptive health indicator.
+#define NO_PAIN           0x8    // Cannot suffer halloss/receives deceptive health indicator.
 #define NO_SLIP           0x10   // Cannot fall over.
 #define NO_POISON         0x20   // Cannot not suffer toxloss.
 #define NO_EMBED		  0x40	 // Can step on broken glass with no ill-effects and cannot have shrapnel embedded in it.
@@ -22,11 +22,11 @@
 
 // Species appearance flags
 #define HAS_SKIN_TONE     0x1    // Skin tone selectable in chargen. (0-255)
-#define HAS_SKIN_COLOR    0x2    // Skin colour selectable in chargen. (RGB)
+#define HAS_SKIN_COLOR    0x2    // Skin color selectable in chargen. (RGB)
 #define HAS_LIPS          0x4    // Lips are drawn onto the mob icon. (lipstick)
 #define HAS_UNDERWEAR     0x8    // Underwear is drawn onto the mob icon.
-#define HAS_EYE_COLOR     0x10   // Eye colour selectable in chargen. (RGB)
-#define HAS_HAIR_COLOR    0x20   // Hair colour selectable in chargen. (RGB)
+#define HAS_EYE_COLOR     0x10   // Eye color selectable in chargen. (RGB)
+#define HAS_HAIR_COLOR    0x20   // Hair color selectable in chargen. (RGB)
 #define RADIATION_GLOWS   0x40   // Radiation causes this character to glow.
 
 // Languages.

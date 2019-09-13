@@ -235,7 +235,7 @@
 /atom/proc/melt()
 	return
 
-// Previously this was defined both on /obj/ and /turf/ seperately.  And that's bad.
+// Previously this was defined both on /obj/ and /turf/ separately.  And that's bad.
 /atom/proc/update_icon()
 	return
 

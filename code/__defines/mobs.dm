@@ -275,7 +275,7 @@
 #define SPECIES_GOLEM			"Golem"
 #define SPECIES_EVENT1			"X Occursus"
 
-// Used to seperate simple animals by ""intelligence"".
+// Used to separate simple animals by ""intelligence"".
 #define SA_PLANT	1
 #define SA_ANIMAL	2
 #define SA_ROBOTIC	3
