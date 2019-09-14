@@ -25,14 +25,14 @@
 // 1000% Charge Capacity, 20% I/O Capacity
 /obj/item/weapon/smes_coil/super_capacity
 	name = "superconductive capacitance coil"
-	desc = "A specialised type of superconductive magnetic coil with a significantly stronger containment field, allowing for larger power storage. Its IO rating is much lower, however."
+	desc = "A specialized type of superconductive magnetic coil with a significantly stronger containment field, allowing for larger power storage. Its IO rating is much lower, however."
 	ChargeCapacity = 60000000			// 1000 kWh
 	IOCapacity = 50000					// 50 kW
 
 // 10% Charge Capacity, 400% I/O Capacity. Technically turns SMES into large super capacitor.Ideal for shields.
 /obj/item/weapon/smes_coil/super_io
 	name = "superconductive transmission coil"
-	desc = "A specialised type of superconductive magnetic coil with reduced storage capabilites but vastly improved power transmission capabilities, making it useful in systems which require large throughput."
+	desc = "A specialized type of superconductive magnetic coil with reduced storage capabilities but vastly improved power transmission capabilities, making it useful in systems which require large throughput."
 	ChargeCapacity = 600000				// 10 kWh
 	IOCapacity = 1000000				// 1000 kW
 

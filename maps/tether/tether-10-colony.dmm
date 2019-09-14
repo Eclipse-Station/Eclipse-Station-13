@@ -7539,7 +7539,7 @@
 /area/centcom/main_hall)
 "nB" = (
 /obj/machinery/button/remote/blast_door{
-	name = "Armoury Access";
+	name = "Armory Access";
 	pixel_x = 0;
 	pixel_y = -28;
 	req_access = list(3);
@@ -7556,7 +7556,7 @@
 "nC" = (
 /obj/machinery/door/blast/regular{
 	id = "ArmouryC";
-	name = "Armoury"
+	name = "Armory"
 	},
 /obj/effect/floor_decal/industrial/warning,
 /turf/unsimulated/floor{
@@ -7566,7 +7566,7 @@
 /area/centcom/security)
 "nD" = (
 /obj/machinery/button/remote/blast_door{
-	name = "Armoury Access";
+	name = "Armory Access";
 	pixel_x = 0;
 	pixel_y = -28;
 	req_access = list(3);

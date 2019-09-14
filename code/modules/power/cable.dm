@@ -609,10 +609,10 @@ obj/structure/cable/proc/cableColor(var/colorC)
 	..()
 
 /obj/item/stack/cable_coil/cyborg/verb/set_colour()
-	set name = "Change Colour"
+	set name = "Change Color"
 	set category = "Object"
 
-	var/selected_type = input("Pick new colour.", "Cable Colour", null, null) as null|anything in possible_cable_coil_colours
+	var/selected_type = input("Pick new color.", "Cable Color", null, null) as null|anything in possible_cable_coil_colours
 	set_cable_color(selected_type, usr)
 
 // Items usable on a cable coil :
