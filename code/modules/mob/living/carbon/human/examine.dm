@@ -154,7 +154,7 @@
 		else
 			msg += "[T.He] [T.is] wearing \icon[head] \a [head] on [T.his] head.<br>"
 
-	//suit/armour
+	//suit/armor
 	if(wear_suit)
 		var/tie_msg
 		if(istype(wear_suit,/obj/item/clothing/suit))
@@ -167,7 +167,7 @@
 		else
 			msg += "[T.He] [T.is] wearing \icon[wear_suit] \a [wear_suit].[tie_msg]<br>"
 
-		//suit/armour storage
+		//suit/armor storage
 		if(s_store && !(skip_gear & EXAMINE_SKIPSUITSTORAGE) && s_store.show_examine)
 			if(s_store.blood_DNA)
 				msg += "<span class='warning'>[T.He] [T.is] carrying \icon[s_store] [s_store.gender==PLURAL?"some":"a"] [(s_store.blood_color != SYNTH_BLOOD_COLOUR) ? "blood" : "oil"]-stained [s_store.name] on [T.his] [wear_suit.name]!</span><br>"

@@ -9,8 +9,8 @@
 	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/punch)
 	blurb = "Phoronoids are a race rarely seen by most, tending to keep to themselves throughout known space. \
 	These curious skeleton-folk react violently with oxygen, catching alight in the normal concentration needed for humans. \
-	Luckily, with the help of NT, they come equipped with specialised suits, keeping oxygen out and phoron in."
-	name_language = null // name randomisers are fucking weird
+	Luckily, with the help of NT, they come equipped with specialized suits, keeping oxygen out and phoron in."
+	name_language = null // name randomizers are fucking weird
 	min_age = 18
 	max_age = 180
 	health_hud_intensity = 1.5

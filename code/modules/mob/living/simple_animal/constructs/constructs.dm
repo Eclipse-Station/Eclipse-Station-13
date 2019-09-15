@@ -171,11 +171,11 @@
 
 
 
-/mob/living/simple_animal/construct/armoured
+/mob/living/simple_animal/construct/armored
 	name = "Juggernaut"
 	real_name = "Juggernaut"
 	construct_type = "juggernaut"
-	desc = "A possessed suit of armour driven by the will of the restless dead"
+	desc = "A possessed suit of armor driven by the will of the restless dead"
 	icon = 'icons/mob/mob.dmi'
 	icon_state = "behemoth"
 	icon_living = "behemoth"
@@ -186,7 +186,7 @@
 	melee_damage_lower = 30
 	melee_damage_upper = 40
 	attack_armor_pen = 60 //Being punched by a living, floating statue.
-	attacktext = list("smashed their armoured gauntlet into")
+	attacktext = list("smashed their armored gauntlet into")
 	friendly = list("pats")
 	mob_size = MOB_HUGE
 	speed = 2 //Not super fast, but it might catch up to someone in armor who got punched once or twice.

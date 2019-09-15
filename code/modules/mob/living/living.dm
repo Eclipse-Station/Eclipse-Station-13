@@ -100,7 +100,7 @@ default behavior is:
 					now_pushing = 0
 					return
 
-			//BubbleWrap: people in handcuffs are always switched around as if they were on 'help' intent to prevent a person being pulled from being seperated from their puller
+			//BubbleWrap: people in handcuffs are always switched around as if they were on 'help' intent to prevent a person being pulled from being separated from their puller
 			var/dense = 0
 			if(loc.density)
 				dense = 1
@@ -702,7 +702,7 @@ default behavior is:
 		tod = null
 		timeofdeath = 0
 
-	// restore us to conciousness
+	// restore us to consciousness
 	stat = CONSCIOUS
 
 	// make the icons look correct

@@ -1,5 +1,5 @@
 #if DM_VERSION < 510
-// Concatenates a list of strings into a single string.  A seperator may optionally be provided.
+// Concatenates a list of strings into a single string.  A separator may optionally be provided.
 /proc/jointext(list/ls, sep)
 	if (ls.len <= 1) // Early-out code for empty or singleton lists.
 		return ls.len ? ls[1] : ""
@@ -84,7 +84,7 @@
 		#undef S4
 		#undef S1
 
-// Converts a string into a list by splitting the string at each delimiter found. (discarding the seperator)
+// Converts a string into a list by splitting the string at each delimiter found. (discarding the separator)
 /proc/splittext(text, delimiter="\n")
 	var/delim_len = length(delimiter)
 	if (delim_len < 1)

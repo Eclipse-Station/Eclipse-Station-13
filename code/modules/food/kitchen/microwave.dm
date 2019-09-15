@@ -21,7 +21,7 @@
 // see code/modules/food/recipes_microwave.dm for recipes
 
 /*******************
-*   Initialising
+*   Initializing
 ********************/
 
 /obj/machinery/microwave/New()

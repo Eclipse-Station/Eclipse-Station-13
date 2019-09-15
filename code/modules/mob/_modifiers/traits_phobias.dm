@@ -580,7 +580,7 @@
 	closely, waiting to strike."
 
 	on_created_text = "<span class='warning'>You remain vigilant against the Alien.</span>"
-	on_expired_text = "<span class='notice'>Aliens aren't so bad afterall.</span>"
+	on_expired_text = "<span class='notice'>Aliens aren't so bad after all.</span>"
 
 /datum/modifier/trait/phobia/xenophobia/generic/get_xenos()
 	var/list/xenos = list()

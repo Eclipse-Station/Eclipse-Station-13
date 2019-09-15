@@ -247,7 +247,7 @@
 /datum/poster/bay_50
 	icon_state="bsposter50"
 	name = "Pinup Girl Cindy Kate"
-	desc = "This particular one is of Cindy Kate, a seductive performer well known among less savoury circles."
+	desc = "This particular one is of Cindy Kate, a seductive performer well known among less savory circles."
 
 /datum/poster/bay_51
 	icon_state="bsposter51"

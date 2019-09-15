@@ -32,7 +32,7 @@
 	ME.attach(src)
 	return
 
-/obj/mecha/combat/reticence/verb/silent_mode() //I'll be real this is jus defence mode copied over.
+/obj/mecha/combat/reticence/verb/silent_mode() //I'll be real this is just defense mode copied over.
 	set category = "Exosuit Interface"
 	set name = "Toggle silent mode"
 	set src = usr.loc
@@ -70,7 +70,7 @@
 		src.silent_mode()
 	return
 
-/obj/mecha/combat/reticence/verb/visibility() //I'll be real this is jus defence mode copied over.
+/obj/mecha/combat/reticence/verb/visibility() //I'll be real this is just defense mode copied over.
 	set category = "Exosuit Interface"
 	set name = "Toggle visibility"
 	set src = usr.loc
@@ -79,12 +79,12 @@
 		return
 	visibility = !visibility
 	if(visibility)
-		src.occupant_message("<font color='blue'>You enable [src] invisiblity.</font>")
+		src.occupant_message("<font color='blue'>You enable [src] invisibility.</font>")
 		alpha = 35
 	else
 		alpha = 255
-		src.occupant_message("<font color='red'>You disable [src] invisiblity.</font>")
-	src.log_message("Toggled invisiblity.")
+		src.occupant_message("<font color='red'>You disable [src] invisibility.</font>")
+	src.log_message("Toggled invisibility.")
 	src.occupant << sound('sound/effects/phasein.ogg',volume=50)
 	return
 

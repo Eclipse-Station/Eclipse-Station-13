@@ -1,6 +1,6 @@
 /mob/living/simple_animal/hostile/savik
 	name = "savik"
-	desc = "A fast, armoured predator accustomed to hiding and ambushing in cold terrain."
+	desc = "A fast, armored predator accustomed to hiding and ambushing in cold terrain."
 	tt_desc = "S Pistris tellus" //landshark
 	faction = "savik"
 	icon_state = "savik"

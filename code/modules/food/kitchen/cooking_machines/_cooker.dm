@@ -4,7 +4,7 @@
 	var/optimal_temp = 200 + T0C	//Temperature at which we have 100% efficiency. efficiency is lowered on either side of this
 	var/optimal_power = 0.1//cooking power at 100%
 
-	var/loss = 1	//Temp lost per proc when equalising
+	var/loss = 1	//Temp lost per proc when equalizing
 	var/resistance = 320000	//Resistance to heating. combines with active power usage to determine how long heating takes
 
 	var/light_x = 0

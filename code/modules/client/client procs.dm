@@ -82,7 +82,7 @@
 		src << "<font color='red'>Error: AllowUpload(): File Upload too large. Upload Limit: [UPLOAD_LIMIT/1024]KiB.</font>"
 		return 0
 /*	//Don't need this at the moment. But it's here if it's needed later.
-	//Helps prevent multiple files being uploaded at once. Or right after eachother.
+	//Helps prevent multiple files being uploaded at once. Or right after each other.
 	var/time_to_wait = fileaccess_timer - world.time
 	if(time_to_wait > 0)
 		src << "<font color='red'>Error: AllowUpload(): Spam prevention. Please wait [round(time_to_wait/10)] seconds.</font>"
@@ -127,7 +127,7 @@
 		holder = new /datum/admins("!localhost!", R_HOST, ckey)
 		holder.associate(src)
 
-	//preferences datum - also holds some persistant data for the client (because we may as well keep these datums to a minimum)
+	//preferences datum - also holds some persistent data for the client (because we may as well keep these datums to a minimum)
 	prefs = preferences_datums[ckey]
 	if(!prefs)
 		prefs = new /datum/preferences(src)

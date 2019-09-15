@@ -182,7 +182,7 @@ var/list/obj/machinery/newscaster/allCasters = list() //Global list that will co
 	update_icon() //for any custom ones on the map...
 	spawn(10) //Should be enough time for the node to spawn at tcomms.
 		node = get_exonet_node()
-	..()                                //I just realised the newscasters weren't in the global machines list. The superconstructor call will tend to that
+	..()                                //I just realized the newscasters weren't in the global machines list. The superconstructor call will tend to that
 
 /obj/machinery/newscaster/Destroy()
 	allCasters -= src

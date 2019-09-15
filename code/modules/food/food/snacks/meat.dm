@@ -36,7 +36,7 @@
 	name = "synthetic meat"
 	desc = "A synthetic slab of flesh."
 
-// Seperate definitions because some food likes to know if it's human.
+// Separate definitions because some food likes to know if it's human.
 // TODO: rewrite kitchen code to check a var on the meat item so we can remove
 // all these sybtypes.
 /obj/item/weapon/reagent_containers/food/snacks/meat/human

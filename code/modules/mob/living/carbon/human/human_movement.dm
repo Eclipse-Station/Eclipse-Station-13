@@ -112,7 +112,7 @@
 		item_tally += I.slowdown
 
 	// Hands are also included, to make the 'take off your armor instantly and carry it with you to go faster' trick no longer viable.
-	// This is done seperately to disallow negative numbers.
+	// This is done separately to disallow negative numbers.
 	for(var/obj/item/I in list(r_hand, l_hand) )
 		item_tally += max(I.slowdown, 0)
 

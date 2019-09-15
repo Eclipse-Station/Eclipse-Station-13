@@ -22,10 +22,10 @@
 	name = "Erebus"
 	desc = "Erebus was regarded for centuries as an uninteresting substellar companion to Nyx, itself a relatively uninteresting red dwarf. \
 	Massing at 44.7 times that of Jupiter, Erebus is a T-Class brown dwarf with a surface temperature of 963K, just above the melting point \
-	of aluminium. However, the presence of Phoron in and around Erebus has driven much of the activity of the first half of the 26th century \
+	of aluminum. However, the presence of Phoron in and around Erebus has driven much of the activity of the first half of the 26th century \
 	in the Nyx system. Orbiting 39.8 AU from Nyx with an eccentricity of 4%, it takes a bit more than 315 standard years for Erebus to orbit Nyx. \
 	With over 80 moons with diameters more than 5 kilometers and hundreds smaller than that, Erebus is a hub of mining and corporate warfare. \
-	The most notable moon, but not the largest, is Roanake, a dwarf planet in its own right, which orbits with a high enough eccentricity to \
+	The most notable moon, but not the largest, is Roanoke, a dwarf planet in its own right, which orbits with a high enough eccentricity to \
 	have significant volcanic activity due to tidal heating."
 
 /datum/locations/erebus/New(var/creator)

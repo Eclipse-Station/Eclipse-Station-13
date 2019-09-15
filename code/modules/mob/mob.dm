@@ -923,7 +923,7 @@ mob/proc/yank_out_object()
 	usr.setClickCooldown(20)
 
 	if(usr.stat == 1)
-		usr << "You are unconcious and cannot do that!"
+		usr << "You are unconscious and cannot do that!"
 		return
 
 	if(usr.restrained())

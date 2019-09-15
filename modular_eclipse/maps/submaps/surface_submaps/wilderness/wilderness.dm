@@ -34,7 +34,7 @@
 
 // The 'wilderness' is the endgame for Explorers. Extremely dangerous and far away from help, but with vast shinies.
 // POIs here spawn in two different sections, the top half and bottom half of the map.
-// The top half connects to the outpost z-level, and is seperated from the bottom half by a river. It should provide a challenge to a well equiped Explorer team.
+// The top half connects to the outpost z-level, and is separated from the bottom half by a river. It should provide a challenge to a well equipped Explorer team.
 // The bottom half should be even more dangerous, where only the robust, fortunate, or lucky can survive.
 
 ///datum/map_template/surface/wilderness

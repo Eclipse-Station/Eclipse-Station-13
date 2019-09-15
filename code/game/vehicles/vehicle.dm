@@ -75,7 +75,7 @@
 	add_iterators()
 	removeVerb(/obj/mecha/verb/disconnect_from_port)
 	removeVerb(/atom/movable/verb/pull)
-	log_message("[src.name]'s functions initialised. Work protocols active - Entering IDLE mode.")
+	log_message("[src.name]'s functions initialized. Work protocols active - Entering IDLE mode.")
 	loc.Entered(src)
 	return
 

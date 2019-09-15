@@ -35,6 +35,6 @@ delete-after: True
 changes: 
   - tweak: "Certain languages now require assistance for a species to speak, but not understand, much like EAL."
   - tweak: "Alai can only be `spoken` by Taj and Teshari."
-  - rscadd: "Adds a voicebox/larynx organ. Its only purpose at the moment is to assist in speaking certain langauges."
+  - rscadd: "Adds a voicebox/larynx organ. Its only purpose at the moment is to assist in speaking certain languages."
   - tweak: "Language implants, like the EAL implant, now affect the voicebox organ, instead of being a freefloating implant."
   - rscadd: "Adds a language implant for Common Skrellian."
