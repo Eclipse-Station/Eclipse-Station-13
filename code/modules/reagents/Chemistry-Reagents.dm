@@ -1,5 +1,5 @@
 
-//Chemical Reagents - Initialises all /datum/reagent into a list indexed by reagent id
+//Chemical Reagents - Initializes all /datum/reagent into a list indexed by reagent id
 /proc/initialize_chemical_reagents()
 	var/paths = typesof(/datum/reagent) - /datum/reagent
 	chemical_reagents_list = list()
@@ -15,7 +15,7 @@
 	var/id = "reagent"
 	var/description = "A non-descript chemical."
 	var/taste_description = "bitterness"
-	var/taste_mult = 1 //how this taste compares to others. Higher values means it is more noticable
+	var/taste_mult = 1 //how this taste compares to others. Higher values means it is more noticeable
 	var/datum/reagents/holder = null
 	var/reagent_state = SOLID
 	var/list/data = null

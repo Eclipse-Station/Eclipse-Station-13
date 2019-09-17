@@ -50,12 +50,12 @@ var/last_message = 0
 
 	//Apparently, the person who wrote this code designed it so that
 	//blinded get reset each cycle and then get activated later in the
-	//code. Very ugly. I dont care. Moving this stuff here so its easy
+	//code. Very ugly. I don't care. Moving this stuff here so its easy
 	//to find it.
 	blinded = 0
 	fire_alert = 0 //Reset this here, because both breathe() and handle_environment() have a chance to set it.
 
-	//TODO: seperate this out
+	//TODO: separate this out
 	// update the current life tick, can be used to e.g. only do something every 4 ticks
 	life_tick++
 
@@ -119,7 +119,7 @@ var/last_message = 0
 
 // Calculate how vulnerable the human is to under- and overpressure.
 // Returns 0 (equals 0 %) if sealed in an undamaged suit, 1 if unprotected (equals 100%).
-// Suitdamage can modifiy this in 10% steps.
+// Suitdamage can modify this in 10% steps.
 /mob/living/carbon/human/proc/get_pressure_weakness()
 
 	var/pressure_adjustment_coefficient = 1 // Assume no protection at first.
@@ -137,7 +137,7 @@ var/last_message = 0
 
 	return pressure_adjustment_coefficient
 
-// Calculate how much of the enviroment pressure-difference affects the human.
+// Calculate how much of the environment pressure-difference affects the human.
 /mob/living/carbon/human/calculate_affecting_pressure(var/pressure)
 	var/pressure_difference
 
@@ -149,7 +149,7 @@ var/last_message = 0
 		pressure_difference = pressure - ONE_ATMOSPHERE
 
 	if(isSynthetic())
-		pressure_difference = 0 //synthetics dont need pressure they're robutts
+		pressure_difference = 0 //synthetics don't need pressure they're robutts
 
 	if(pressure_difference < 5) // If the difference is small, don't bother calculating the fraction.
 		pressure_difference = 0
@@ -484,7 +484,7 @@ var/last_message = 0
 			//scale linearly from 0 to 1 between safe_exhaled_max and safe_exhaled_max*0.7
 			var/ratio = 1.0 - (safe_exhaled_max - exhaled_pp)/(safe_exhaled_max*0.3)
 
-			//give them some oxyloss, up to the limit - we don't want people falling unconcious due to CO2 alone until they're pretty close to safe_exhaled_max.
+			//give them some oxyloss, up to the limit - we don't want people falling unconscious due to CO2 alone until they're pretty close to safe_exhaled_max.
 			if (getOxyLoss() < 50*ratio)
 				adjustOxyLoss(HUMAN_MAX_OXYLOSS)
 			co2_alert = 1
@@ -512,7 +512,7 @@ var/last_message = 0
 	if(breath.gas["sleeping_agent"])
 		var/SA_pp = (breath.gas["sleeping_agent"] / breath.total_moles) * breath_pressure
 
-		// Enough to make us paralysed for a bit
+		// Enough to make us paralyzed for a bit
 		if(SA_pp > SA_para_min)
 
 			// 3 gives them one second to wake up and run away a bit!

@@ -2154,7 +2154,7 @@
 //Need to be granted by the mech type, Not default abilities.
 
 /datum/action/innate/mecha/mech_defence_mode
-	name = "Toggle Defence Mode"
+	name = "Toggle Defense Mode"
 	button_icon_state = "mech_defense_mode_off"
 
 /datum/action/innate/mecha/mech_defence_mode/Activate(forced_state = null)
@@ -2167,11 +2167,11 @@
 
 	if(chassis.defence_mode)
 		chassis.deflect_chance = chassis.defence_mode_deflect_chance
-		chassis.occupant_message("<span class='notice'>You enable [chassis] defence mode.</span>")
+		chassis.occupant_message("<span class='notice'>You enable [chassis] defense mode.</span>")
 	else
 		chassis.deflect_chance = initial(chassis.deflect_chance)
-		chassis.occupant_message("<span class='danger'>You disable [chassis] defence mode.</span>")
-	chassis.log_message("Toggled defence mode.")*/
+		chassis.occupant_message("<span class='danger'>You disable [chassis] defense mode.</span>")
+	chassis.log_message("Toggled defense mode.")*/
 	chassis.defence_mode()
 	if(chassis.defence_mode == 0)
 		button_icon_state = "mech_defense_mode_off"

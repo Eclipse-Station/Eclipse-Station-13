@@ -14,8 +14,8 @@
 				prob(2);/obj/item/clothing/head/helmet/medieval/crusader/winged)
 
 /obj/random/crusader_armor
-	name = "random crusader armour"
-	desc = "This is a random crusader armour."
+	name = "random crusader armor"
+	desc = "This is a random crusader armor."
 	icon = 'modular_citadel/icons/obj/clothing/medieval_armor.dmi'
 	icon_state = "crusader"
 
@@ -39,8 +39,8 @@
 				prob(2);/obj/item/clothing/head/medievalfake/crusader/winged)
 
 /obj/random/crusader_armor_replica
-	name = "random crusader armour replica"
-	desc = "This is a replica of random crusader armour."
+	name = "random crusader armor replica"
+	desc = "This is a replica of random crusader armor."
 	icon = 'modular_citadel/icons/obj/clothing/medieval_armor.dmi'
 	icon_state = "crusader"
 

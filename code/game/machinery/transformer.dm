@@ -1,6 +1,6 @@
 /obj/machinery/transformer
 	name = "Automatic Robotic Factory 5000"
-	desc = "A large metalic machine with an entrance and an exit. A sign on the side reads, 'human go in, robot come out', human must be lying down and alive."
+	desc = "A large metallic machine with an entrance and an exit. A sign on the side reads, 'human go in, robot come out', human must be lying down and alive."
 	icon = 'icons/obj/recycling.dmi'
 	icon_state = "separator-AO1"
 	layer = MOB_LAYER+1 // Overhead
@@ -43,7 +43,7 @@
 	..()
 	var/turf/T = loc
 	if(T)
-		// Spawn Conveyour Belts
+		// Spawn Conveyor Belts
 
 		//East
 		var/turf/east = locate(T.x + 1, T.y, T.z)
