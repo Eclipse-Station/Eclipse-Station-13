@@ -65,4 +65,4 @@ var/global/list/prevent_respawns = list()
 	src.mind.assigned_role = null
 
 	//Feedback
-	to_chat(src,"<span class='notice'>Your job has been free'd up, and you can rejoin as another character or quit. Thanks for using this verb, it helps the server!</span>")
+	to_chat(src,"<span class='notice'>Your job has been freed up, and you can rejoin as another character or quit. Thanks for using this verb, it helps the server!</span>")

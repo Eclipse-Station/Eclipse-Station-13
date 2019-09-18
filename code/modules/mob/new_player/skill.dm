@@ -32,7 +32,7 @@ var/global/list/SKILL_PRE = list("Engineer" = SKILL_ENGINEER, "Roboticist" = SKI
 /datum/skill/weapons
 	ID = "weapons"
 	name = "Weapons Expertise"
-	desc = "This skill describes your expertise with and knowledge of weapons. A low level in this skill implies knowledge of simple weapons, for example tasers and flashes. A high level in this skill implies knowledge of complex weapons, such as grenades, riot shields, pulse rifles or bombs. A low level in this skill is typical for security officers, a high level of this skill is typical for special agents and soldiers."
+	desc = "This skill describes your expertise with and knowledge of weapons. A low level in this skill implies knowledge of simple weapons, for example Tasers and flashes. A high level in this skill implies knowledge of complex weapons, such as grenades, riot shields, pulse rifles, or bombs. A low level in this skill is typical for security officers, a high level of this skill is typical for special agents and soldiers."
 	field = "Security"
 
 /datum/skill/EVA
