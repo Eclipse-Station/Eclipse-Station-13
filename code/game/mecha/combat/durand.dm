@@ -34,7 +34,7 @@
 /obj/mecha/combat/durand/relaymove(mob/user,direction)
 	if(defence)
 		if(world.time - last_message > 20)
-			src.occupant_message("<font color='red'>Unable to move while in defence mode</font>")
+			src.occupant_message("<font color='red'>Unable to move while in defense mode</font>")
 			last_message = world.time
 		return 0
 	. = ..()
@@ -43,7 +43,7 @@
 
 /obj/mecha/combat/durand/verb/engage_defence_mode()
 	set category = "Exosuit Interface"
-	set name = "Toggle defence mode"
+	set name = "Toggle defense mode"
 	set src = usr.loc
 	set popup_menu = 0
 	defence_mode()
@@ -55,13 +55,13 @@
 	playsound(src, 'sound/mecha/duranddefencemode.ogg', 50, 1)
 	if(defence)
 		deflect_chance = defence_deflect
-		src.occupant_message("<font color='blue'>You enable [src] defence mode.</font>")
+		src.occupant_message("<font color='blue'>You enable [src] defense mode.</font>")
 		defence_mode = 1
 	else
 		deflect_chance = initial(deflect_chance)
-		src.occupant_message("<font color='red'>You disable [src] defence mode.</font>")
+		src.occupant_message("<font color='red'>You disable [src] defense mode.</font>")
 		defence_mode = 0
-	src.log_message("Toggled defence mode.")
+	src.log_message("Toggled defense mode.")
 
 	return
 
@@ -75,7 +75,7 @@
 	var/output = {"<div class='wr'>
 						<div class='header'>Special</div>
 						<div class='links'>
-						<a href='?src=\ref[src];toggle_defence_mode=1'>Toggle defence mode</a>
+						<a href='?src=\ref[src];toggle_defence_mode=1'>Toggle defense mode</a>
 						</div>
 						</div>
 						"}

@@ -26,10 +26,10 @@
 	icon_state = "knight_orange"
 	item_state = "knight_orange"
 
-//Armours
+//Armors
 /obj/item/clothing/suit/armor/medieval
-	name = "plate armour"
-	desc = "A classic suit of plate armour, effective at stopping melee attacks."
+	name = "plate armor"
+	desc = "A classic suit of plate armor, effective at stopping melee attacks."
 	armor = list(melee = 50, bullet = 10, laser = 10, energy = 10, bomb = 0, bio = 0, rad = 0)
 	icon = 'modular_citadel/icons/obj/clothing/medieval_armor.dmi'
 	icon_override = 'modular_citadel/icons/mob/medieval_armor.dmi'
@@ -83,13 +83,13 @@
 
 //Armours
 /obj/item/clothing/suit/armor/medieval/crusader
-	name = "bland crusader armour"
-	desc = "A classic suit of plate armour, usually worn by crusaders. It doesn't have any insignia."
+	name = "bland crusader armor"
+	desc = "A classic suit of plate armor, usually worn by crusaders. It doesn't have any insignia."
 	icon_state = "crusader"
 	item_state = "crusader"
 
 /obj/item/clothing/suit/armor/medieval/crusader/cross
-	name = "crusader armour"
+	name = "crusader armor"
 	desc = "God wills it!"
 	icon_state = "crusader_cross"
 	item_state = "crusader_cross"
@@ -99,18 +99,18 @@
 	item_state = "crusader_teutonic"
 
 /obj/item/clothing/suit/armor/medieval/crusader/cross/templar
-	name = "templar crusader armour"
+	name = "templar crusader armor"
 	icon_state = "crusader_templar"
 	item_state = "crusader_templar"
 
 /obj/item/clothing/suit/armor/medieval/crusader/cross/hospitaller
-	name = "hospitaller crusader armour"
+	name = "hospitaller crusader armor"
 	icon_state = "crusader_hospitaller"
 	item_state = "crusader_hospitaller"
 
 /obj/item/clothing/suit/armor/medieval/crusader/dark
-	name = "dark crusader armour"
-	desc = "A classic suit of plate armour, usually worn by crusaders. This one is dark, with no insignia."
+	name = "dark crusader armor"
+	desc = "A classic suit of plate armor, usually worn by crusaders. This one is dark, with no insignia."
 	icon_state = "crusader_dark"
 	item_state = "crusader_dark"
 
@@ -142,9 +142,9 @@
 	icon_state = "knight_red"
 	item_state = "knight_red"
 
-//Armours
+//Armors
 /obj/item/clothing/suit/medievalfake
-	name = "plate armour replica"
+	name = "plate armor replica"
 	desc = "A plastic replica of knight armor. Great for tabletop and LARP sessions, not great at stopping melee attacks."
 	icon = 'modular_citadel/icons/obj/clothing/medieval_armor.dmi'
 	icon_override = 'modular_citadel/icons/mob/medieval_armor.dmi'
@@ -185,25 +185,25 @@
 
 /obj/item/clothing/head/medievalfake/crusader/horned
 	name = "horned great helm replica"
-	desc = "A plastic replica of classic great helm. This one have horns attached (and may or may not be endrosed by crew with horns)."
+	desc = "A plastic replica of classic great helm. This one have horns attached (and may or may not be endorsed by crew with horns)."
 	icon_state = "crusader_horned"
 	item_state = "crusader_horned"
 
 /obj/item/clothing/head/medievalfake/crusader/winged
 	name = "winged great helm replica"
-	desc = "A plastic replica of classic great helm. This one have winged horns attached (and may or may not be endrosed by crew with horns, <i>and</i> wings)."
+	desc = "A plastic replica of classic great helm. This one have winged horns attached (and may or may not be endorsed by crew with horns, <i>and</i> wings)."
 	icon_state = "crusader_winged"
 	item_state = "crusader_winged"
 
 //Armours
 /obj/item/clothing/suit/medievalfake/crusader
-	name = "bland crusader armour replica"
+	name = "bland crusader armor replica"
 	desc = "A plastic replica of knight armor with crusader feeling to it. It doesn't have any insignia."
 	icon_state = "crusader"
 	item_state = "crusader"
 
 /obj/item/clothing/suit/medievalfake/crusader/cross
-	name = "crusader armour replica"
+	name = "crusader armor replica"
 	desc = "A plastic replica of knight armor with crusader feeling to it. Alas, divine protection is not included."
 	icon_state = "crusader_cross"
 	item_state = "crusader_cross"
@@ -213,17 +213,17 @@
 	item_state = "crusader_teutonic"
 
 /obj/item/clothing/suit/medievalfake/crusader/cross/templar
-	name = "templar crusader armour replica"
+	name = "templar crusader armor replica"
 	icon_state = "crusader_templar"
 	item_state = "crusader_templar"
 
 /obj/item/clothing/suit/medievalfake/crusader/cross/hospitaller
-	name = "hospitaller crusader armour replica"
+	name = "hospitaller crusader armor replica"
 	icon_state = "crusader_hospitaller"
 	item_state = "crusader_hospitaller"
 
 /obj/item/clothing/suit/medievalfake/crusader/dark
-	name = "dark crusader armour replica"
+	name = "dark crusader armor replica"
 	desc = "A plastic replica of knight armor with crusader feeling to it. This one is painted dark."
 	icon_state = "crusader_dark"
 	item_state = "crusader_dark"

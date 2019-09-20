@@ -9,7 +9,7 @@
 	var/short_name = ""			// Organization's shortname (NanoTrasen for "NanoTrasen Incorporated")
 	var/acronym = ""			// Organization's acronym, e.g. 'NT' for NanoTrasen'.
 	var/desc = ""				// One or two paragraph description of the organization, but only current stuff.  Currently unused.
-	var/history = ""			// Historical discription of the organization's origins  Currently unused.
+	var/history = ""			// Historical description of the organization's origins  Currently unused.
 	var/work = ""				// Short description of their work, eg "an arms manufacturer"
 	var/headquarters = ""		// Location of the organization's HQ.  Currently unused.
 	var/motto = ""				// A motto/jingle/whatever, if they have one.  Currently unused.
@@ -26,7 +26,7 @@
 		"Harmony",
 		"Light",
 		"Discovery",
-		"Endeavour",
+		"Endeavor",
 		"Explorer",
 		"Swift",
 		"Dragonfly",
@@ -97,7 +97,7 @@
 		"Bell",
 		"Mendel",
 		"Kepler",
-		"Edision",
+		"Edison",
 		"Cavendish",
 		"Nye",
 		"Hawking",
@@ -112,7 +112,7 @@
 		"NCS Northern Star in Vir",
 		"NAB Smythside Central Headquarters in Sol",
 		"NAS Zeus orbiting Virgo-Prime",
-		"NIB Posideon in Alpha Centauri",
+		"NIB Poseidon in Alpha Centauri",
 		"NTB An-Nur on Virgo-Prime",
 		"the colony at Virgo-3B",
 		"the NanoTrasen phoron refinery in Vilous",
@@ -134,10 +134,10 @@
 	name = "Hephaestus Industries"
 	short_name = "Hephaestus"
 	acronym = "HI"
-	desc = "Hephaestus Industries is the largest supplier of arms, ammunition, and small millitary vehicles in Sol space. \
+	desc = "Hephaestus Industries is the largest supplier of arms, ammunition, and small military vehicles in Sol space. \
 	Hephaestus products have a reputation for reliability, and the corporation itself has a noted tendency to stay removed \
 	from corporate politics. They enforce their neutrality with the help of a fairly large asset-protection contingent which \
-	prevents any contracting polities from using their own materiel against them. SolGov itself is one of Hephastus’ largest \
+	prevents any contracting polities from using their own material against them. SolGov itself is one of Hephaestus' largest \
 	bulk contractors owing to the above factors."
 	history = ""
 	work = "arms manufacturer"
@@ -173,9 +173,9 @@
 	name = "Vey-Medical"
 	short_name = "Vey-Med"
 	acronym = "VM"
-	desc = "Vey-Med is one of the newer TSCs on the block and is notable for being largely owned and opperated by Skrell. \
+	desc = "Vey-Med is one of the newer TSCs on the block and is notable for being largely owned and operated by Skrell. \
 	Despite the suspicion and prejudice leveled at them for their alien origin, Vey-Med has obtained market dominance in \
-	the sale of medical equipment-- from surgical tools to large medical devices to the Oddyseus trauma response mecha \
+	the sale of medical equipment-- from surgical tools to large medical devices to the Odysseus trauma response mecha \
 	and everything in between. Their equipment tends to be top-of-the-line, most obviously shown by their incredibly \
 	human-like FBP designs. Vey’s rise to stardom came from their introduction of ressurective cloning, although in \
 	recent years they’ve been forced to diversify as their patents expired and NanoTrasen-made medications became \
@@ -213,9 +213,9 @@
 	short_name = "Zeng-Hu"
 	acronym = "ZH"
 	desc = "Zeng-Hu is an old TSC, based in the Sol system. Until the discovery of Phoron, Zeng-Hu maintained a stranglehold \
-	on the market for medications, and many household names are patentted by Zeng-Hu-- Bicaridyne, Dylovene, Tricordrizine, \
+	on the market for medications, and many household names are patented by Zeng-Hu-- Bicaridyne, Dylovene, Tricordrizine, \
 	and Dexalin all came from a Zeng-Hu medical laboratory. Zeng-Hu’s fortunes have been in decline as Nanotrasen’s near monopoly \
-	on phoron research cuts into their R&D and Vey-Med’s superior medical equipment effectively decimated their own equipment \
+	on phoron research cuts into their R&D and Vey-Med's superior medical equipment effectively decimated their own equipment \
 	interests. The three-way rivalry between these companies for dominance in the medical field is well-known and a matter of \
 	constant economic speculation."
 	history = ""
@@ -234,7 +234,7 @@
 	and even mid-class automobiles a fixture of many households. Less famously, Ward-Takahashi also supplies most \
 	of the AI cores on which vital control systems are mounted, and it is this branch of their industry that has \
 	led to their tertiary interest in the development and sale of high-grade AI systems. Ward-Takahashi’s economies \
-	of scale frequently steal market share from Nanotrasen’s high-price products, leading to a bitter rivalry in the \
+	of scale frequently steal market share from Nanotrasen's high-price products, leading to a bitter rivalry in the \
 	consumer electronics market."
 	history = ""
 	work = "electronics manufacturer"
@@ -264,7 +264,7 @@
 	desc = "Bishop’s focus is on high-class, stylish cybernetics. A favorite among transhumanists (and a bête noire for \
 	bioconservatives), Bishop manufactures not only prostheses but also brain augmentation, synthetic organ replacements, \
 	and odds and ends like implanted wrist-watches. Their business model tends towards smaller, boutique operations, giving \
-	it a reputation for high price and luxury, with Bishop cyberware often rivalling Vey-Med’s for cost. Bishop’s reputation \
+	it a reputation for high price and luxury, with Bishop cyberware often rivaling Vey-Med’s for cost. Bishop’s reputation \
 	for catering towards the interests of human augmentation enthusiasts instead of positronics have earned it ire from the \
 	Positronic Rights Group and puts it in ideological (but not economic) comptetition with Morpheus Cyberkinetics."
 	history = ""
@@ -296,7 +296,7 @@
 		"Prosthetic Conscience",
 		"Revisionist",
 		"Trade Surplus",
-		"Flexible Demeanour",
+		"Flexible Demeanor",
 		"Just Read The Instructions",
 		"Limiting Factor",
 		"Cargo Cult",
@@ -322,7 +322,7 @@
 		"Screw Loose",
 		"Of Course I Still Love You",
 		"Limiting Factor",
-		"So Much For Subtley",
+		"So Much For Subtlety",
 		"Unfortunate Conflict Of Evidence",
 		"Prime Mover",
 		"It's One Of Ours",
@@ -410,7 +410,7 @@
 	in the Colonial Assembly. The majority, but not all human territories are members of SolGov. As such, SolGov is a major power and \
 	generally represents humanity on the galactic stage."
 	history = "A Unified Earth Government was formed in the wake of the Sol Interplanetary War and other conflicts of the 2160s. \
-			With numerous Earth governments fighting independent battles against factions of both Facist and Communist forces, the UN became \
+			With numerous Earth governments fighting independent battles against factions of both Fascist and Communist forces, the UN became \
 			involved, eventually using the war to absorb most, if not all Earth governments into itself, forming a global government to combat \
 			the terrorists and stabilize the planet and its other world colonies. The UN won the war and the Unified Earth Government was formed, \
 			with its' primary defense, scientific and exploratory force being the newly formed USDF. Although the UEG seemed to have complete \
@@ -559,7 +559,7 @@
 			by this period, led to new threats of secession from the outer ring. In 2492, the colony of Far Isle was razed by nuclear \
 			weapons after a massive uprising, creating a new found reason to rebel. SolGov began to wage a bloody struggle against \
 			groups of terrorists (or freedom fighters) called the Insurrectionists, who wanted independence. The USDF continues to battle \
-			sepratists to this day. The USDF's operations meanwhile focus on curbing piracy operations, as well as providing a deterrent \
+			separatists to this day. The USDF's operations meanwhile focus on curbing piracy operations, as well as providing a deterrent \
 			against other major military powers such as the Moghes Hegemony."
 	work = "peacekeeping and piracy suppression"
 	headquarters = "Paris, Earth"
@@ -581,7 +581,7 @@
 					"Commonwealth",
 					"Corsair",
 					"DeGaulle",
-					"Devestator",
+					"Devastator",
 					"Dust of Snow",
 					"Euphrates",
 					"Fair Weather",
@@ -646,7 +646,7 @@
 	short_name = "" // This is blank on purpose. Otherwise they call the ships "ONI ONI Name"
 	desc = "The Office of Naval Intelligence is SolGov's eyes and ears in the galaxy's affairs. Despite its name, and despite its \
 			usual association with the USDF, the Office of Naval Intelligence does not fall under the command of the military. From espionage \
-			to archeological research, ONI's work provides SolGov with the knowledge and technology it requires to advance both military and \
+			to archaeological research, ONI's work provides SolGov with the knowledge and technology it requires to advance both military and \
 			civilian interests across the galaxy."
 	history = "ONI was originally created by the consolidation of several military intelligence agencies from Sol during the Sol-Hegemony war. \
 			The USDF's victory in that war was largely accredited to intelligence and technology advancements provided by ONI during that time, \
@@ -657,9 +657,9 @@
 	work = "espionage, piracy suppression, xeno research, and various other black projects"
 	headquarters = "Paris, Earth"
 	motto = "The truth will set you free."
-	ship_prefixes = list("ONI" = "classified", "ONI" = "archeological", "ONI" = "exploration", "ONI" = "logistic") // It's all ONI but let's mix up what missions they do.
+	ship_prefixes = list("ONI" = "classified", "ONI" = "archaeological", "ONI" = "exploration", "ONI" = "logistic") // It's all ONI but let's mix up what missions they do.
 	ship_names = list("Bastille",
-					"Fant�me",
+					"Fantôme",
 					"Harpocrates",
 					"Hoenir",
 					"Mata Hari",
@@ -701,7 +701,7 @@
 						"Prosthetic Conscience",
 						"Revisionist",
 						"Trade Surplus",
-						"Flexible Demeanour",
+						"Flexible Demeanor",
 						"Just Read The Instructions",
 						"Limiting Factor",
 						"Cargo Cult",

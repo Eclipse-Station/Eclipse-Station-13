@@ -5,7 +5,7 @@
 	description_fluff = "This is a generic, NanoTrasen branded bottle of water.  The company swears on the quality of the water, saying it comes from the Martian poles.  Most people disregard that and assume it's recycled from hydroponics trays."
 
 /obj/item/weapon/reagent_containers/food/drinks/cans/space_mountain_wind
-	description_fluff = "This cola was allegedly made after Vasily Federov, the son of Nikolas Federov and the second CEO of Federov Beverages Inc., went on a climbing expedition to an arctic planet.  He then created this citris flavored soft drink.  Scientists claim that it can eat through styrafoam in a matter of weeks, but people drink it anyway."
+	description_fluff = "This cola was allegedly made after Vasily Federov, the son of Nikolas Federov and the second CEO of Federov Beverages Inc., went on a climbing expedition to an arctic planet.  He then created this citrus flavored soft drink.  Scientists claim that it can eat through Styrofoam in a matter of weeks, but people drink it anyway."
 
 /obj/item/weapon/reagent_containers/food/drinks/cans/thirteenloko
 	description_fluff = "A beverage loved by college students.  The Thirteen Loko Company created this highly alcoholic beverage as an energy drink.  It is illegal in much of SolGov space and most of Skrell space.  This drink has been regulated more than any other in known space, and doctors strongly advise not to drink it."
@@ -38,10 +38,10 @@
 	description_fluff = "Somehow, NanoTrasen wound up taking this ginger ale formula from Centauri Provisions, some say as payback for the DONKpocket incident. It tastes like ginger ale."
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/gin
-	description_fluff = "Griffeater Gin was originally an independent disillery in Alpha Centauri, but financial troubles obligated them to sell out to Centauri Provisions. It's said that Centauri ruined the brew, but it's pretty much impossible to tell."
+	description_fluff = "Griffeater Gin was originally an independent distillery in Alpha Centauri, but financial troubles obligated them to sell out to Centauri Provisions. It's said that Centauri ruined the brew, but it's pretty much impossible to tell."
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/whiskey
-	description_fluff = "Uncle Git's is a product of Abel's Rest, supply shortages and ubiqtuous observation during the occupation giving Takeshi 'Uncle' Git a chance to perfect this refinement of the common bathtub whiskey."
+	description_fluff = "Uncle Git's is a product of Abel's Rest, supply shortages and ubiquitous observation during the occupation giving Takeshi 'Uncle' Git a chance to perfect this refinement of the common bathtub whiskey."
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/specialwhiskey
 	description_fluff = "Nobody knows what Special Blend Whiskey really is, how it's made, or where it comes from. It's an expensive Gilthari product, for only the most luxurious, but NanoTrasen managed to secure a supply deal."
@@ -50,19 +50,19 @@
 	description_fluff = "Centauri Provisions claims that their vodka wins in blind taste-tests against traditional mixes from Earth, but they're not fooling anyone."
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/tequila
-	description_fluff = "This tequila comes from the 'Cancer Craze' of the 20's, where consumer products would openly advertize their blatently carcinogenic nature to a burgeoning middle class with newfound access to cloned organs."
+	description_fluff = "This tequila comes from the 'Cancer Craze' of the 20's, where consumer products would openly advertise their blatantly carcinogenic nature to a burgeoning middle class with newfound access to cloned organs."
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/patron
 	description_fluff = "This emerged as a response to Caccavo, with Patron advertising claiming to be even more toxic and dangerous. Unfortunately, when the Cancer Craze ended, Patron's stocks nosedived and they now operate only a handful of distilleries."
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/rum
-	description_fluff = "Captain Pete's was involved in a long, expensive lawsuit against Gilthari concerning their claims to be from Cuba. They're actually owned and operated by none other than Centauri Provisions, with no distillaries on Earth to speak of."
+	description_fluff = "Captain Pete's was involved in a long, expensive lawsuit against Gilthari concerning their claims to be from Cuba. They're actually owned and operated by none other than Centauri Provisions, with no distilleries on Earth to speak of."
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/vermouth
 	description_fluff = "One of Gilthari's less expensive products, Goldeneye Vermouth still manages to sell itself as a drink for only the richest and most successful; giving any number of poseurs a swollen head in the process."
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/kahlua
-	description_fluff = "One of Centauri Provision's least successful products, this coffee liquour continues to be produced for the handful of mixed drinks requiring it. Surprisingly energizing!"
+	description_fluff = "One of Centauri Provision's least successful products, this coffee liquor continues to be produced for the handful of mixed drinks requiring it. Surprisingly energizing!"
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/goldschlager
 	description_fluff = "Drinks laced with gold and other precious metals are a common indulgence among those who live on planets where these metals are still somewhat rare and expensive. On asteroid colonies and better-developed regions, they're seen as a ridiculous waste of materials."
@@ -74,7 +74,7 @@
 	description_fluff = "NanoTrasen makes this wine, which is generally regarded as better used for cooking than actually drinking. Morpheus specifically names Doublebeard in their recipe for Twobread."
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/absinthe
-	description_fluff = "A product of the anarchists of Casini's Reach, Jailebreaker Verte is an open-source synthesized liquour that has actually managed to succeed over traditional absinthes. Gilthari is livid."
+	description_fluff = "A product of the anarchists of Casini's Reach, Jailebreaker Verte is an open-source synthesized liquor that has actually managed to succeed over traditional absinthes. Gilthari is livid."
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/melonliquor
 	description_fluff = "Melon liquor, formerly an obscure drink, took off when young Skrell started dabbling in alcohol. This brand is owned by Vey-Med, one of their few diversified holdings."

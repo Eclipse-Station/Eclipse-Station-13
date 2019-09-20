@@ -129,7 +129,7 @@
 
 /obj/item/weapon/card/id/silver
 	name = "command identification card"
-	desc = "A silver card which shows honour and dedication."
+	desc = "A silver card which shows honor and dedication."
 	icon_state = "silver-id"
 	item_state = "silver_id"
 

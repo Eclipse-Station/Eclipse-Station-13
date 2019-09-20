@@ -79,7 +79,7 @@ About the Holder:
 			Returns get_data() of the reagent.
 
 		get_reagents()
-			Returns a string containing all reagent ids and volumes, e.g. "carbon(4),nittrogen(5)".
+			Returns a string containing all reagent ids and volumes, e.g. "carbon(4),nitrogen(5)".
 
 		remove_any(var/amount = 1)
 			Removes up to [amount] of reagents from [src]. Returns actual amount removed.
@@ -132,7 +132,7 @@ About the Holder:
 
 About Reagents:
 
-	Reagents are all the things you can mix and fille in bottles etc. This can be anything from
+	Reagents are all the things you can mix and fill in bottles etc. This can be anything from
 	rejuvs over water to... iron.
 
 	Vars:
@@ -296,7 +296,7 @@ About the Tools:
 
 		atom/proc/is_open_container()
 			Checks atom/var/flags & OPENCONTAINER.
-			If this returns 1 , you can use syringes, beakers etc
+			If this returns 1 , you can use syringes, beakers etc.
 			to manipulate the contents of this object.
 			If it's 0, you'll need to write your own custom reagent
 			transfer code since you will not be able to use the standard

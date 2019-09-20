@@ -162,7 +162,7 @@
 				to_chat(recipient, replymsg)
 				to_chat(src, "<font color='blue'>PM to-<b>Admins</b>: [msg]</font>")
 
-			//play the recieving admin the adminhelp sound (if they have them enabled)
+			//play the receiving admin the adminhelp sound (if they have them enabled)
 			if(recipient.is_preference_enabled(/datum/client_preference/holder/play_adminhelp_ping))
 				recipient << 'sound/effects/adminhelp.ogg'
 

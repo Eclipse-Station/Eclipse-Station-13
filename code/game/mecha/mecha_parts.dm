@@ -110,7 +110,7 @@
 	origin_tech = list(TECH_DATA = 2, TECH_MATERIAL = 2, TECH_ENGINEERING = 3)
 
 /obj/item/mecha_parts/part/gygax_armour
-	name="Gygax Armour Plates"
+	name="Gygax Armor Plates"
 	icon_state = "gygax_armour"
 	origin_tech = list(TECH_MATERIAL = 6, TECH_COMBAT = 4, TECH_ENGINEERING = 5)
 
@@ -155,7 +155,7 @@
 	origin_tech = list(TECH_DATA = 2, TECH_MATERIAL = 3, TECH_ENGINEERING = 3)
 
 /obj/item/mecha_parts/part/durand_armour
-	name="Durand Armour Plates"
+	name="Durand Armor Plates"
 	icon_state = "durand_armour"
 	origin_tech = list(TECH_MATERIAL = 5, TECH_COMBAT = 4, TECH_ENGINEERING = 5)
 
