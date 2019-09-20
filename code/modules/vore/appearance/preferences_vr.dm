@@ -9,7 +9,7 @@
 // Additional vars
 /mob/living/carbon/human
 
-	// Horray Furries!
+	// Hooray Furries!
 	var/datum/sprite_accessory/ears/ear_style = null
 	var/r_ears = 30
 	var/g_ears = 30

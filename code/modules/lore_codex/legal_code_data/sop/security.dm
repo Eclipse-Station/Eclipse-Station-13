@@ -86,7 +86,7 @@
 
 /datum/lore/codex/page/sop_sec_alert_levels
 	name = "Alert Levels for Security"
-	data = "For Green, Lethal weaponry are to be hidden, except in emergencies.  Non-lethal weaponry such as tasers may be worn on the belt or suit.  \
+	data = "For Green, Lethal weaponry are to be hidden, except in emergencies.  Non-lethal weaponry such as Tasers may be worn on the belt or suit.  \
 	Officers may wear their armor vest if desired.  Helmets are permitted but not recommended.  Weaponry and specialized armor from the Armory should \
 	be returned if there is no pressing need for them to be deployed.\
 	<br>\
@@ -104,7 +104,7 @@
 	<li>\[0\] <b>Safety</b>: If a crewmember (including the Arresting Officer) is in clear and immediate danger, officers may disregard steps \[1\] and \[2\], \
 	and proceed to \[3\] Neutralize.</li>\
 	<li>\[1\] <b>Passive</b>: Suspects are to be detailed verbally, with zero or minimal injury, and under their own power, if possible.  At this level for \
-	force, an Officer is permitted to use tasers, pepperspray, flashes, and stunbatons.</li>\
+	force, an Officer is permitted to use Tasers, pepperspray, flashes, and stunbatons.</li>\
 	<li>\[2\] <b>Less-than-Lethal</b>: Suspect may be detained with minimal force, causing as little injury as possible.  The Arresting Officer must still \
 	attempt to engage the suspect verbally before discharging a weapon.  At this level for force, an officer is permitted to use rubber rounds.</li>\
 	<li>\[3\] <b>Neutralize</b>: Suspects may be detained through use of extreme force.  This is only valid for suspects which present a lethal risk to any persons, \

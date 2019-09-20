@@ -97,7 +97,7 @@
 				else//If they do not.
 					M.show_message(rendered_b, 2)
 		for(var/obj/O in listening_obj)
-			if(O == T) //Don't recieve your own speech
+			if(O == T) //Don't receive your own speech
 				continue
 			spawn(0)
 				if(O && src) //If we still exist, when the spawn processes

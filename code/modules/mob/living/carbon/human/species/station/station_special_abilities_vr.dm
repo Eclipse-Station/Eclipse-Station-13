@@ -301,7 +301,7 @@
 								src << 'sound/weapons/Gunshot.ogg'
 						if(10) src << 'sound/weapons/smash.ogg'
 						if(11)
-							//Same as above, but with tasers.
+							//Same as above, but with Tasers.
 							src << 'sound/weapons/Taser.ogg'
 							spawn(rand(10,30))
 								src << 'sound/weapons/Taser.ogg'
@@ -419,7 +419,7 @@
 	last_special = world.time + 600
 	src.visible_message("<font color='red'><b>[src] moves their head next to [B]'s neck, seemingly looking for something!</b></font>")
 
-	if(do_after(src, 300, B)) //Thrirty seconds.
+	if(do_after(src, 300, B)) //Thirty seconds.
 		if(!Adjacent(B)) return
 		src.visible_message("<font color='red'><b>[src] suddenly extends their fangs and plunges them down into [B]'s neck!</b></font>")
 		B.apply_damage(5, BRUTE, BP_HEAD) //You're getting fangs pushed into your neck. What do you expect????

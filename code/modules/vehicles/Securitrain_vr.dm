@@ -35,7 +35,7 @@
 
 /obj/vehicle/train/security/trolley
 	name = "Train trolley"
-	desc = "A trolly designed to transport security personnel or prisoners."
+	desc = "A trolley designed to transport security personnel or prisoners."
 	icon = 'icons/obj/vehicles_vr.dmi'
 	icon_state = "paddy_trailer"
 	anchored = 0

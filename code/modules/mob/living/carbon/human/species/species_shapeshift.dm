@@ -165,7 +165,7 @@ var/list/wrapped_species_by_ref = list()
 
 /mob/living/carbon/human/proc/shapeshifter_select_colour()
 
-	set name = "Select Body Colour"
+	set name = "Select Body Color"
 	set category = "Abilities"
 
 	if(stat || world.time < last_special)
@@ -173,7 +173,7 @@ var/list/wrapped_species_by_ref = list()
 
 	last_special = world.time + 50
 
-	var/new_skin = input("Please select a new body color.", "Shapeshifter Colour") as color
+	var/new_skin = input("Please select a new body color.", "Shapeshifter Color") as color
 	if(!new_skin)
 		return
 	shapeshifter_set_colour(new_skin)

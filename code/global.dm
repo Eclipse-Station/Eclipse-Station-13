@@ -126,7 +126,7 @@ var/forum_activated_group     = "2"
 var/forum_authenticated_group = "10"
 
 // For FTP requests. (i.e. downloading runtime logs.)
-// However it'd be ok to use for accessing attack logs and such too, which are even laggier.
+// However it'd be OK to use for accessing attack logs and such too, which are even laggier.
 var/fileaccess_timer = 0
 var/custom_event_msg = null
 

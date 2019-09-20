@@ -28,7 +28,7 @@
 	verbs.Cut()
 	total_lighting_overlays++
 
-	var/turf/T = loc //If this runtimes atleast we'll know what's creating overlays outside of turfs.
+	var/turf/T = loc //If this runtimes at least we'll know what's creating overlays outside of turfs.
 	T.lighting_overlay = src
 	T.luminosity = 0
 	if(no_update)
@@ -41,9 +41,9 @@
 
 	if(!istype(T))
 		if(loc)
-			log_debug("A lighting overlay realised its loc was NOT a turf (actual loc: [loc][loc ? ", " + loc.type : "null"]) in update_overlay() and got qdel'ed!")
+			log_debug("A lighting overlay realized its loc was NOT a turf (actual loc: [loc][loc ? ", " + loc.type : "null"]) in update_overlay() and got qdel'ed!")
 		else
-			log_debug("A lighting overlay realised it was in nullspace in update_overlay() and got pooled!")
+			log_debug("A lighting overlay realized it was in nullspace in update_overlay() and got pooled!")
 		qdel(src, force=TRUE)
 		return
 

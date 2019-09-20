@@ -35,7 +35,7 @@
 /datum/trait/endurance_very_low
 	name = "Extremely Low Endurance"
 	desc = "Reduces your maximum total hitpoints to 50."
-	cost = -3 //Teshari HP. This makes the person a lot more suseptable to getting stunned, killed, etc.
+	cost = -3 //Teshari HP. This makes the person a lot more susceptible to getting stunned, killed, etc.
 	var_changes = list("total_health" = 50)
 
 	apply(var/datum/species/S,var/mob/living/carbon/human/H)
@@ -82,13 +82,13 @@
 	name = "Conductive"
 	desc = "Increases your susceptibility to electric shocks by 50%"
 	cost = -1
-	var_changes = list("siemens_coefficient" = 1.5) //This makes you a lot weaker to tasers.
+	var_changes = list("siemens_coefficient" = 1.5) //This makes you a lot weaker to Tasers.
 
 /datum/trait/conductive_plus
 	name = "Major Conductive"
 	desc = "Increases your susceptibility to electric shocks by 100%"
 	cost = -2
-	var_changes = list("siemens_coefficient" = 2.0) //This makes you extremely weak to tasers.
+	var_changes = list("siemens_coefficient" = 2.0) //This makes you extremely weak to Tasers.
 
 /datum/trait/photosensitive
 	name = "Photosensitive"

@@ -37,7 +37,7 @@
 	var/paint_color = "#666666" //For vehicles with special paint overlays.
 
 	var/atom/movable/load		//all vehicles can take a load, since they should all be a least drivable
-	var/load_item_visible = 1	//set if the loaded item should be overlayed on the vehicle sprite
+	var/load_item_visible = 1	//set if the loaded item should be overlaid on the vehicle sprite
 	var/load_offset_x = 0		//pixel_x offset for item overlay
 	var/load_offset_y = 0		//pixel_y offset for item overlay
 	var/mob_offset_y = 0		//pixel_y offset for mob overlay

@@ -105,7 +105,7 @@ client/proc/display_admin_reports()
 				continue
 			output += "<b>Reported player:</b> [N.offender_key](CID: [N.offender_cid])<br>"
 			output += "<b>Offense:</b>[N.body]<br>"
-			output += "<small>Occured at [time2text(N.date,"MM/DD hh:mm:ss")]</small><br>"
+			output += "<small>Occurred at [time2text(N.date,"MM/DD hh:mm:ss")]</small><br>"
 			output += "<small>authored by <i>[N.author]</i></small><br>"
 			output += " <a href='?src=\ref[report_topic_handler];client=\ref[src];action=remove;ID=[N.ID]'>Flag as Handled</a>"
 			if(src.key == N.author)
@@ -149,7 +149,7 @@ client/proc/mark_report_done(ID as num)
 	for(var/datum/admin_report/N in reports)
 		if(N.ID == ID)
 			found = N
-	if(!found) src << "<b>* An error occured, sorry.</b>"
+	if(!found) src << "<b>* An error occurred, sorry.</b>"
 
 	found.done = 1
 
@@ -170,7 +170,7 @@ client/proc/edit_report(ID as num)
 	for(var/datum/admin_report/N in reports)
 		if(N.ID == ID)
 			found = N
-	if(!found) src << "<b>* An error occured, sorry.</b>"
+	if(!found) src << "<b>* An error occurred, sorry.</b>"
 
 	var/body = input(src.mob, "Enter a body for the news", "Body") as null|message
 	if(!body) return

@@ -554,7 +554,7 @@ proc/findNullRod(var/atom/target)
 				qdel(target_image)
 				if(owner)
 					return TRUE
-				return FALSE // We got dropped before the firing occured.
+				return FALSE // We got dropped before the firing occurred.
 			return TRUE // No delay, no need to check.
 	return FALSE
 

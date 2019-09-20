@@ -75,14 +75,14 @@
 
 /obj/item/clothing/under/utility/sifguard/engineering
 	name = "engineering crew uniform"
-	desc = "A black utility uniform, designed for prolonged use. This one has silver trim and organge blazes."
+	desc = "A black utility uniform, designed for prolonged use. This one has silver trim and orange blazes."
 	icon_state = "blackutility_eng"
 	worn_state = "blackutility_eng"
 	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 10)
 
 /obj/item/clothing/under/utility/sifguard/engineering/command
 	name = "engineering command uniform"
-	desc = "A black utility uniform, designed for prolonged use. This one has gold trim and organge blazes."
+	desc = "A black utility uniform, designed for prolonged use. This one has gold trim and orange blazes."
 	icon_state = "blackutility_engcom"
 	worn_state = "blackutility_engcom"
 

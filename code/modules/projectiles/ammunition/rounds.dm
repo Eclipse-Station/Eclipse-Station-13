@@ -219,7 +219,7 @@
 	matter = list(DEFAULT_WALL_MATERIAL = 180)
 
 //Can stun in one hit if aimed at the head, but
-//is blocked by clothing that stops tasers and is vulnerable to EMP
+//is blocked by clothing that stops Tasers and is vulnerable to EMP
 /obj/item/ammo_casing/a12g/stunshell
 	name = "stun shell"
 	desc = "A 12 gauge taser cartridge."

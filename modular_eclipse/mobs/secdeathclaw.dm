@@ -13,7 +13,7 @@
 	maxHealth = 200
 	health = 200
 	armor = list(melee = 40, bullet = 30, laser = 30, energy = 10, bomb = 10, bio = 0, rad = 0) //This deathclaw is wearing specially refitted standard security armor
-	taser_kill = 0		//This deathclaw has been conditioned against tasers and that's not necessarily a good thing
+	taser_kill = 0		//This deathclaw has been conditioned against Tasers and that's not necessarily a good thing
 
 	melee_damage_lower = 30
 	melee_damage_upper = 30

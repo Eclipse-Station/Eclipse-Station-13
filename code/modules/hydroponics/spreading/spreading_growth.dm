@@ -33,7 +33,7 @@
 		neighbors |= floor
 
 	if(neighbors.len)
-		plant_controller.add_plant(src)	//if we have neighbours again, start processing
+		plant_controller.add_plant(src)	//if we have neighbors again, start processing
 
 	// Update all of our friends.
 	var/turf/T = get_turf(src)
