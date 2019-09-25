@@ -3145,6 +3145,7 @@
 #include "modular_eclipse\code\modules\clothing\spacesuits\void\carnifex.dm"
 #include "modular_eclipse\code\modules\clothing\suits\miscellaneous_eclipse.dm"
 #include "modular_eclipse\code\modules\clothing\under\polychromic_uniforms.dm"
+#include "modular_eclipse\code\modules\examine\descriptions\machines.dm"
 #include "modular_eclipse\code\modules\mining\mine_items_eclipse.dm"
 #include "modular_eclipse\code\modules\mob\living\carbon\human\npcs.dm"
 #include "modular_eclipse\code\modules\mob\living\carbon\human\species\station\icon_override.dm"
