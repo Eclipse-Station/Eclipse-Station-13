@@ -58,7 +58,7 @@
 	"(Pick 2) If God didn't want us to enjoy _____, he wouldn't have given us _____.",
 	"(Pick 2) In a pinch, _____ can be a suitable substitute for _____.",
 	"(Pick 2) In a world ravaged by _____, our only solace is _____.",
-	"(Pick 2) In M. Night Shamalan's new movie, Bruce Willis discovers that _____ had really been _____ all along.",
+	"(Pick 2) In M. Night Shyamalan's new movie, Bruce Willis discovers that _____ had really been _____ all along.",
 	"(Pick 2) Lifetime presents _____, the story of _____.",
 	"(Pick 2) Michael Bay's new three-hour action epic pits _____ against _____.",
 	"(Pick 2) Rumor has it that Vladimir Putin's favorite dish is _____ stuffed with _____.",

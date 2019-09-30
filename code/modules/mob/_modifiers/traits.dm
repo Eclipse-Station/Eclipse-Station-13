@@ -22,7 +22,7 @@
 
 /datum/modifier/trait/weak
 	name = "weak"
-	desc = "A lack of physical strength causes a diminshed capability in close quarters combat"
+	desc = "A lack of physical strength causes a diminished capability in close quarters combat"
 
 	outgoing_melee_damage_percent = 0.8
 
@@ -47,7 +47,7 @@
 	accuracy_dispersion = 1
 
 /datum/modifier/trait/high_metabolism
-	name = "High Metabolsim"
+	name = "High Metabolism"
 	desc = "Your body's metabolism is faster than average."
 
 	metabolism_percent = 2.0

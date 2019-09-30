@@ -8,11 +8,11 @@ agree
 alert
 allow
 amuse
-analyse
+analyze
 announce
 annoy
 answer
-apologise
+apologize
 appear
 applaud
 appreciate
@@ -94,7 +94,7 @@ close
 coach
 coil
 collect
-colour
+color
 comb
 command
 communicate
@@ -318,7 +318,7 @@ matter
 measure
 meddle
 melt
-memorise
+memorize
 mend
 messup
 milk
@@ -385,7 +385,7 @@ pop
 possess
 post
 pour
-practise
+practice
 pray
 preach
 precede
@@ -416,9 +416,9 @@ radiate
 rain
 raise
 reach
-realise
+realize
 receive
-recognise
+recognize
 record
 reduce
 reflect

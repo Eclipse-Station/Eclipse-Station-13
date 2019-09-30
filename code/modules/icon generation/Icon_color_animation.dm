@@ -2,7 +2,7 @@
 //
 //   Return a copy of the provided icon,
 //  after calling MapColors on it. The
-//  color values are linearily interpolated
+//  color values are linearly interpolated
 //  between the pairs provided, based on
 //  the ratio argument.
 //

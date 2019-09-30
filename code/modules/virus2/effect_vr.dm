@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////
 /////////////////// Stage 1 ///////////////////
-/* can u dont
+/* can u don't
 /datum/disease2/effect/mlem
 	name = "Mlemington's Syndrome"
 	stage = 1
@@ -28,7 +28,7 @@
 /////////////////// Stage 2 ///////////////////
 
 /datum/disease2/effect/lang
-	name = "Lingual Dissocation"
+	name = "Lingual Dissociation"
 	stage = 2
 	chance_maxm = 2
 

@@ -111,7 +111,7 @@ var/list/restricted_camera_networks = list(NETWORK_ERT,NETWORK_MERCENARY,"Secret
 if (DATUM.is_processing) {\
 	if(DATUM.is_processing != #LIST)\
 	{\
-		crash_with("Failed to start processing. [log_info_line(DATUM)] is already being processed by [DATUM.is_processing] but queue attempt occured on [#LIST]."); \
+		crash_with("Failed to start processing. [log_info_line(DATUM)] is already being processed by [DATUM.is_processing] but queue attempt occurred on [#LIST]."); \
 	}\
 } else {\
 	DATUM.is_processing = #LIST;\

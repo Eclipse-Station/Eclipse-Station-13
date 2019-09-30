@@ -34,7 +34,7 @@
 /obj/item/clothing/suit/storage/hooded/proc/RemoveHood()
 	icon_state = toggleicon
 	hood_up = FALSE
-	hood.canremove = TRUE // This shouldn't matter anyways but just incase.
+	hood.canremove = TRUE // This shouldn't matter anyways but just in case.
 	if(ishuman(hood.loc))
 		var/mob/living/carbon/H = hood.loc
 		H.unEquip(hood, 1)

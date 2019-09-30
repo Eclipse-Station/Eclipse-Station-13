@@ -231,7 +231,7 @@
 	color = "#888888"
 
 
-/datum/chemical_reaction/binding/plasteel // Two parts 'steel', one part platnium matches the smelter alloy recipe.
+/datum/chemical_reaction/binding/plasteel // Two parts 'steel', one part platinum matches the smelter alloy recipe.
 	name = "Bind into Plasteel"
 	id = "bind_plasteel"
 	required_reagents = list("binding" = REAGENTS_PER_SHEET, "steel" = REAGENTS_PER_SHEET * 2, "platinum" = REAGENTS_PER_SHEET)
@@ -501,7 +501,7 @@
 				to_chat(S, "<span class='warning'>A chill is felt around you, however it cannot harm you.</span>")
 				continue
 			if(S.client) // Don't instantly kill player slimes.
-				to_chat(S, "<span class='danger'>You feel your body crystalize as an intense chill overwhelms you!</span>")
+				to_chat(S, "<span class='danger'>You feel your body crystallize as an intense chill overwhelms you!</span>")
 				S.adjustToxLoss(S.cold_damage_per_tick * 2)
 			else
 				S.adjustToxLoss(S.cold_damage_per_tick * 5) // Metal slimes can survive this 'slime nuke'.

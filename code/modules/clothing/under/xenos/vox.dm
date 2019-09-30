@@ -1,7 +1,7 @@
 /obj/item/clothing/under/vox
 	has_sensor = 0
 	species_restricted = list(SPECIES_VOX)
-	starting_accessories = list(/obj/item/clothing/accessory/storage/vox)	// Dont' start with a backback, so free webbing
+	starting_accessories = list(/obj/item/clothing/accessory/storage/vox)	// Don't start with a backback, so free webbing
 	flags = PHORONGUARD
 
 /obj/item/clothing/under/vox/vox_casual

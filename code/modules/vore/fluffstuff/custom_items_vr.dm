@@ -289,7 +289,7 @@
 //General use
 /obj/item/weapon/melee/fluff/holochain/mass
 	name = "holographic chain"
-	desc = "A mass produced holographic chain. It has faux leather and an aluminium base, but still stings like an original."
+	desc = "A mass produced holographic chain. It has faux leather and an aluminum base, but still stings like an original."
 	icon = 'icons/vore/custom_items_vr.dmi'
 	icon_state = "holochain"
 	icon_override = 'icons/vore/custom_items_vr.dmi'

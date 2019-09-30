@@ -93,7 +93,7 @@
 	else if(istype(M, /mob/living/simple_animal))
 		var/mob/living/simple_animal/SA = M
 		if(SA.intelligence_level > SA_ANIMAL) // So you can't use this on Russians/syndies/hivebots/etc.
-			to_chat(user, "<span class='warning'>\The [SA] is too intellient for this to affect them.</span>")
+			to_chat(user, "<span class='warning'>\The [SA] is too intelligent for this to affect them.</span>")
 			return ..()
 		if(!SA.hostile)
 			to_chat(user, "<span class='warning'>\The [SA] is already passive!</span>")
@@ -180,7 +180,7 @@
 		to_chat(user, "<span class='warning'>The agent only works on animals!</span>")
 		return ..()
 	if(M.intelligence_level > SA_ANIMAL) // So you can't use this on Russians/syndies/hivebots/etc.
-		to_chat(user, "<span class='warning'>\The [M] is too intellient for this to affect them.</span>")
+		to_chat(user, "<span class='warning'>\The [M] is too intelligent for this to affect them.</span>")
 		return ..()
 	if(M.stat == DEAD)
 		to_chat(user, "<span class='warning'>The animal is dead!</span>")
@@ -211,7 +211,7 @@
 		to_chat(user, "<span class='warning'>The agent only works on animals!</span>")
 		return ..()
 	if(M.intelligence_level > SA_ANIMAL) // So you can't use this on Russians/syndies/hivebots/etc.
-		to_chat(user, "<span class='warning'>\The [M] is too intellient for this to affect them.</span>")
+		to_chat(user, "<span class='warning'>\The [M] is too intelligent for this to affect them.</span>")
 		return ..()
 	if(M.stat == DEAD)
 		to_chat(user, "<span class='warning'>The animal is dead!</span>")
