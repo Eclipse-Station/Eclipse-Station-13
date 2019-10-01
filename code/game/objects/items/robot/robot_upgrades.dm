@@ -101,7 +101,7 @@
 
 /obj/item/borg/upgrade/tasercooler
 	name = "robotic Rapid Taser Cooling Module"
-	desc = "Used to cool a mounted taser, increasing the potential current in it and thus its recharge rate."
+	desc = "Used to cool a mounted Taser, increasing the potential current in it and thus its recharge rate."
 	icon_state = "cyborg_upgrade3"
 	item_state = "cyborg_upgrade"
 	require_module = 1
@@ -121,7 +121,7 @@
 	if(!T)
 		T = locate() in R.module.modules
 	if(!T)
-		to_chat(usr, "<span class='warning'>This robot has had its taser removed!</span>")
+		to_chat(usr, "<span class='warning'>This robot has had its Taser removed!</span>")
 		return 0
 
 	if(T.recharge_time <= 2)

@@ -563,7 +563,7 @@
 	shiny = TRUE
 	slime_color = "gold"
 	coretype = /obj/item/slime_extract/gold
-	description_info = "This slime is immune to the slimebaton and taser, and will actually charge the slime, however it will still discipline the slime."
+	description_info = "This slime is immune to the slimebaton and Taser, and will actually charge the slime, however it will still discipline the slime."
 
 	slime_mutation = list(
 			/mob/living/simple_animal/slime/metal,

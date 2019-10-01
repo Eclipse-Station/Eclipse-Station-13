@@ -1,5 +1,5 @@
 //
-// Super Duper Ender Cable - Luckily these are not constructable!
+// Super Duper Ender Cable - Luckily these are not constructible!
 //
 
 //if powernetless_only = 1, will only get connections without powernet

@@ -38,7 +38,7 @@
 
 /obj/item/device/multitool/cyborg
 	name = "multitool"
-	desc = "Optimised and stripped-down version of a regular multitool."
+	desc = "Optimized and stripped-down version of a regular multitool."
 	toolspeed = 0.5
 
 /obj/item/device/multitool/alien

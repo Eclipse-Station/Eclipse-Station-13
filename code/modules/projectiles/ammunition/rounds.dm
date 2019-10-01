@@ -222,7 +222,7 @@
 //is blocked by clothing that stops Tasers and is vulnerable to EMP
 /obj/item/ammo_casing/a12g/stunshell
 	name = "stun shell"
-	desc = "A 12 gauge taser cartridge."
+	desc = "A 12 gauge Taser cartridge."
 	icon_state = "stunshell"
 	projectile_type = /obj/item/projectile/energy/electrode/stunshot
 	matter = list(DEFAULT_WALL_MATERIAL = 360, "glass" = 720)

@@ -2,7 +2,7 @@
 
 /obj/item/clothing/suit/taur/cloak
 	name = "taur specific cloak"
-	desc = "A breezey cloak to distinguish your tauric body from the common beast. It has a sticker saying one size fits all taurs on it. Below the sticker, it states that it only fits Drakes."
+	desc = "A breezy cloak to distinguish your tauric body from the common beast. It has a sticker saying one size fits all taurs on it. Below the sticker, it states that it only fits Drakes."
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS|HANDS|FEET
 
 

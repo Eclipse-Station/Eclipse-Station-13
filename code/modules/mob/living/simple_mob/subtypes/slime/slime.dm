@@ -171,7 +171,7 @@
 		return
 	..()
 
-// Called when hit with an active slimebaton (or xeno taser).
+// Called when hit with an active slimebaton (or xeno Taser).
 // Subtypes react differently.
 /mob/living/simple_mob/slime/proc/slimebatoned(mob/living/user, amount)
 	return
