@@ -137,7 +137,7 @@
 		M.update_inv_r_hand()
 		M.update_inv_l_hand()
 
-//Constructable pneumatic cannon.
+//Constructible pneumatic cannon.
 
 /obj/item/weapon/cannonframe
 	name = "pneumatic cannon frame"

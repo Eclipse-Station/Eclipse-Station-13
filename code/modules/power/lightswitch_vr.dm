@@ -45,7 +45,7 @@
 
 //
 // Simple Construction Frame - Simpler than the full frame system for circuitless construction.
-// If this works out well for light switches we can use it for other lightweight constructables.
+// If this works out well for light switches we can use it for other lightweight constructibles.
 //
 
 /obj/structure/construction

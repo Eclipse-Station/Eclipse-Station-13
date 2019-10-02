@@ -516,7 +516,7 @@
 		user << "[fail_msg]"
 		return 0
 
-	// This is largely for cancelling stealth and whatever.
+	// This is largely for canceling stealth and whatever.
 	if(mod && mod.disruptive)
 		for(var/obj/item/rig_module/module in (installed_modules - mod))
 			if(module.active && module.disruptable)

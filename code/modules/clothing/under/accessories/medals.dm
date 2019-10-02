@@ -15,7 +15,7 @@
 	icon_state = "bronze_heart"
 
 /obj/item/clothing/accessory/medal/nobel_science
-	name = "nobel sciences award"
+	name = "\improper Nobel sciences award"
 	desc = "A bronze medal which represents significant contributions to the field of science or engineering."
 
 /obj/item/clothing/accessory/medal/silver

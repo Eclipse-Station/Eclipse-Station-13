@@ -76,10 +76,10 @@
 	item_state = "taser"
 	projectile_type = /obj/item/projectile/beam/stun/xeno/weak
 	charge_cost = 240
-	accuracy = 0 //Same accuracy as a normal Sec taser.
+	accuracy = 0 //Same accuracy as a normal Sec Taser.
 	description_fluff = "An NT Mk30 NL retrofitted after the events that occurred aboard the NRS Prometheus."
 
-/obj/item/weapon/gun/energy/taser/xeno/sec/robot //Cyborg variant of the security xeno-taser.
+/obj/item/weapon/gun/energy/taser/xeno/sec/robot //Cyborg variant of the security xeno-Taser.
 	self_recharge = 1
 	use_external_power = 1
 	recharge_time = 3
@@ -88,7 +88,7 @@
 	icon_state = "omni"
 	agony = 4
 	nodamage = TRUE
-	// For whatever reason the projectile qdels itself early if this is on, meaning on_hit() won't be called on prometheans.
+	// For whatever reason the projectile qdels itself early if this is on, meaning on_hit() won't be called on Prometheans.
 	// Probably for the best so that it doesn't harm the slime.
 	taser_effect = FALSE
 

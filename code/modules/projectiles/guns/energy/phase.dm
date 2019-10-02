@@ -15,7 +15,7 @@
 	name = "phase pistol"
 	desc = "The NT  EW15 Apollo is an energy handgun, specifically designed for self-defense against aggressive wildlife."
 	icon_state = "phase"
-	item_state = "taser"	//I don't have an in-hand sprite, taser will be fine
+	item_state = "taser"	//I don't have an in-hand sprite, Taser will be fine
 	w_class = ITEMSIZE_NORMAL
 	slot_flags = SLOT_BELT|SLOT_HOLSTER
 	charge_cost = 300

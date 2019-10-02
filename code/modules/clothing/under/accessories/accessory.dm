@@ -250,7 +250,7 @@
 	icon_state = "zebrascarf"
 
 /obj/item/clothing/accessory/scarf/christmas
-	name = "christmas scarf"
+	name = "Christmas scarf"
 	icon_state = "christmasscarf"
 
 /obj/item/clothing/accessory/scarf/stripedred
@@ -349,7 +349,7 @@
 
 /obj/item/clothing/accessory/drakecloak
 	name = "Red cloak"
-	desc = "A breezey cloak to distinguish your tauric body from the common beast."
+	desc = "A breezy cloak to distinguish your tauric body from the common beast."
 	icon = 'icons/mob/taurunder_vr.dmi'
 	icon_override = 'icons/mob/taurunder_vr.dmi'
 	icon_state = "cloakred-drake"

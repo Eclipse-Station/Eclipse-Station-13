@@ -416,7 +416,7 @@
 			return
 		if(!escapee || escapee.incapacitated() || escapee.loc != src)
 			breakout = 0
-			return //closet/user destroyed OR user dead/unconcious OR user no longer in closet OR closet opened
+			return //closet/user destroyed OR user dead/unconscious OR user no longer in closet OR closet opened
 		//Perform the same set of checks as above for weld and lock status to determine if there is even still a point in 'resisting'...
 		if(!req_breakout())
 			breakout = 0

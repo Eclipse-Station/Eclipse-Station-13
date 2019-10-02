@@ -73,7 +73,7 @@
 	var/max_coils = 6 			//30M capacity, 1.5MW input/output when fully upgraded /w default coils
 	var/cur_coils = 1 			// Current amount of installed coils
 	var/safeties_enabled = 1 	// If 0 modifications can be done without discharging the SMES, at risk of critical failure.
-	var/failing = 0 			// If 1 critical failure has occured and SMES explosion is imminent.
+	var/failing = 0 			// If 1 critical failure has occurred and SMES explosion is imminent.
 	var/datum/wires/smes/wires
 	var/grounding = 1			// Cut to quickly discharge, at cost of "minor" electrical issues in output powernet.
 	var/RCon = 1				// Cut to disable AI and remote control.

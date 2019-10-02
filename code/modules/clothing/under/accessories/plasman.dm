@@ -41,7 +41,7 @@
 /obj/item/clothing/accessory/plasman/tux
 	name = "large dress suit and pants"
 	icon_state = "accessory_suit"
-	desc = "A surprisingly well-ironed dress shirt and black slacks. Is the belt buckle just velcro?"
+	desc = "A surprisingly well-ironed dress shirt and black slacks. Is the belt buckle just Velcro?"
 
 /obj/item/clothing/accessory/plasman/overalls
 	name = "large overalls"

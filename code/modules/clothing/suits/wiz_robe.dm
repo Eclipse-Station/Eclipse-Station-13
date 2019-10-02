@@ -47,7 +47,7 @@
 
 /obj/item/clothing/suit/wizrobe
 	name = "wizard robe"
-	desc = "A magnificant, gem-lined robe that seems to radiate power."
+	desc = "A magnificent, gem-lined robe that seems to radiate power."
 	icon_state = "wizard"
 	gas_transfer_coefficient = 0.01 // IT'S MAGICAL OKAY JEEZ +1 TO NOT DIE
 	permeability_coefficient = 0.01
@@ -59,7 +59,7 @@
 
 /obj/item/clothing/suit/wizrobe/red
 	name = "red wizard robe"
-	desc = "A magnificant, red, gem-lined robe that seems to radiate power."
+	desc = "A magnificent, red, gem-lined robe that seems to radiate power."
 	icon_state = "redwizard"
 
 /obj/item/clothing/suit/wizrobe/marisa
@@ -69,13 +69,13 @@
 
 /obj/item/clothing/suit/wizrobe/magusblue
 	name = "Magus Robe"
-	desc = "A set of armoured robes that seem to radiate a dark power"
+	desc = "A set of armored robes that seem to radiate a dark power"
 	icon_state = "magusblue"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS|HANDS|LEGS|FEET
 
 /obj/item/clothing/suit/wizrobe/magusred
 	name = "Magus Robe"
-	desc = "A set of armoured robes that seem to radiate a dark power"
+	desc = "A set of armored robes that seem to radiate a dark power"
 	icon_state = "magusred"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS|HANDS|LEGS|FEET
 
@@ -86,7 +86,7 @@
 
 /obj/item/clothing/suit/wizrobe/gentlecoat
 	name = "Gentlemans Coat"
-	desc = "A heavy threaded twead gray jacket. For a different sort of Gentleman."
+	desc = "A heavy threaded tweed gray jacket. For a different sort of Gentleman."
 	icon_state = "gentlecoat"
 	item_state_slots = list(slot_r_hand_str = "greatcoat", slot_l_hand_str = "greatcoat")
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
@@ -94,7 +94,7 @@
 
 /obj/item/clothing/suit/wizrobe/fake
 	name = "wizard robe"
-	desc = "A rather dull, blue robe meant to mimick real wizard robes."
+	desc = "A rather dull, blue robe meant to mimic real wizard robes."
 	icon_state = "wizard-fake"
 	item_state_slots = list(slot_r_hand_str = "wizard", slot_l_hand_str = "wizard")
 	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0)

@@ -298,7 +298,7 @@ obj/item/clothing/suit/kimono
 
 /obj/item/clothing/suit/storage/greyjacket
 	name = "grey jacket"
-	desc = "A fancy twead grey jacket."
+	desc = "A fancy tweed grey jacket."
 	icon_state = "gentlecoat"
 	item_state_slots = list(slot_r_hand_str = "leather_jacket", slot_l_hand_str = "leather_jacket")
 	flags_inv = HIDEHOLSTER
@@ -592,32 +592,32 @@ obj/item/clothing/suit/storage/toggle/peacoat
 	item_state_slots = list(slot_r_hand_str = "suit_yellow", slot_l_hand_str = "suit_yellow")
 
 /obj/item/clothing/suit/storage/toggle/hoodie/cti
-	name = "CTI hoodie"
-	desc = "A warm, black sweatshirt.  It bears the letters CTI on the back, a lettering to the prestigious university in Tau Ceti, Ceti Technical Institute.  There is a blue supernova embroidered on the front, the emblem of CTI."
+	name = "\improper CTI hoodie"
+	desc = "A warm, black sweatshirt.  It bears the letters 'CTI' on the back, a lettering to the prestigious university in Tau Ceti, Ceti Technical Institute.  There is a blue supernova embroidered on the front, the emblem of CTI."
 	icon_state = "cti_hoodie"
 	item_state_slots = list(slot_r_hand_str = "suit_black", slot_l_hand_str = "suit_black")
 
 /obj/item/clothing/suit/storage/toggle/hoodie/mu
-	name = "mojave university hoodie"
-	desc = "A warm, gray sweatshirt.  It bears the letters MU on the front, a lettering to the well-known public college, Mojave University."
+	name = "\improper Mojave university hoodie"
+	desc = "A warm, gray sweatshirt.  It bears the letters 'MU' on the front, a lettering to the well-known public college, Mojave University."
 	icon_state = "mu_hoodie"
 	item_state_slots = list(slot_r_hand_str = "suit_grey", slot_l_hand_str = "suit_grey")
 
 /obj/item/clothing/suit/storage/toggle/hoodie/nt
-	name = "NT hoodie"
+	name = "\improper NT hoodie"
 	desc = "A warm, blue sweatshirt.  It proudly bears the silver NanoTrasen insignia lettering on the back.  The edges are trimmed with silver."
 	icon_state = "nt_hoodie"
 	item_state_slots = list(slot_r_hand_str = "suit_blue", slot_l_hand_str = "suit_blue")
 
 /obj/item/clothing/suit/storage/toggle/hoodie/smw
-	name = "Space Mountain Wind hoodie"
+	name = "\improper Space Mountain Wind hoodie"
 	desc = "A warm, black sweatshirt.  It has the logo for the popular softdrink Space Mountain Wind on both the front and the back."
 	icon_state = "smw_hoodie"
 	item_state_slots = list(slot_r_hand_str = "suit_black", slot_l_hand_str = "suit_black")
 
 /obj/item/clothing/suit/storage/toggle/hoodie/nrti
-	name = "New Reykjavik Technical Institute hoodie"
-	desc = "A warm, gray sweatshirt. It bears the letters NRT on the back, in reference to Sif's premiere technical institute."
+	name = "\improper New Reykjavik Technical Institute hoodie"
+	desc = "A warm, gray sweatshirt. It bears the letters 'NRT' on the back, in reference to Sif's premiere technical institute."
 	icon_state = "nrti_hoodie"
 	item_state_slots = list(slot_r_hand_str = "suit_grey", slot_l_hand_str = "suit_grey")
 
