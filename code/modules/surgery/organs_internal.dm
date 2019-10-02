@@ -15,7 +15,7 @@
 
 //////////////////////////////////////////////////////////////////
 //					ALIEN EMBRYO SURGERY						//
-////////////////////////////////////////////////////////////////// // Here for future reference incase it's needed. See: Alien_embryo.dm and Alien_facehugger.dm
+////////////////////////////////////////////////////////////////// // Here for future reference in case it's needed. See: Alien_embryo.dm and Alien_facehugger.dm
 /*
 /datum/surgery_step/internal/remove_embryo
 	allowed_tools = list(

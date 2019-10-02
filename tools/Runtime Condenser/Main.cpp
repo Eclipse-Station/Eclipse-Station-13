@@ -1,5 +1,5 @@
 /* Runtime Condenser by Nodrak
- * This will sum up identical runtimes into one, giving a total of how many times it occured. The first occurance
+ * This will sum up identical runtimes into one, giving a total of how many times it occurred. The first occurrence
  * of the runtime will log the proc, source, usr and src, the rest will just add to the total. Infinite loops will
  * also be caught and displayed (if any) above the list of runtimes.
  *
@@ -36,7 +36,7 @@ using namespace std;
 	unsigned int totalUniqueInfiniteLoops = 0;
 
 	//Misc
-	unsigned int numRuntime[maxStorage+1]; //Number of times a specific runtime has occured
+	unsigned int numRuntime[maxStorage+1]; //Number of times a specific runtime has occurred
 	bool checkNextLines = false; //Used in case byond has condensed a large number of similar runtimes
 	int storedIterator = 0; //Used to remember where we stored the runtime
 
@@ -178,7 +178,7 @@ bool writeToFile()
 			{
 				if(storedRuntime[i].find("Infinite loop suspected") != std::string::npos || storedRuntime[i].find("Maximum recursion level reached") != std::string::npos)
 				{
-					if(numRuntime[i] != 0) outputFile << endl << endl << "The following infinite loop has occured " << numRuntime[i] << " time(s).\n";
+					if(numRuntime[i] != 0) outputFile << endl << endl << "The following infinite loop has occurred " << numRuntime[i] << " time(s).\n";
 					if(storedRuntime[i] != "Blank") outputFile << storedRuntime[i] << endl;
 					if(storedProc[i] != "Blank") outputFile << storedProc[i] << endl;
 					if(storedSource[i] != "Blank") outputFile << storedSource[i] << endl;
@@ -196,7 +196,7 @@ bool writeToFile()
 		{
 			if(storedRuntime[i].find("Infinite loop suspected") != std::string::npos || storedRuntime[i].find("Maximum recursion level reached") != std::string::npos) continue;
 
-			if(numRuntime[i] != 0) outputFile << endl << endl << "The following runtime has occured " << numRuntime[i] << " time(s).\n";
+			if(numRuntime[i] != 0) outputFile << endl << endl << "The following runtime has occurred " << numRuntime[i] << " time(s).\n";
 			if(storedRuntime[i] != "Blank") outputFile << storedRuntime[i] << endl;
 			if(storedProc[i] != "Blank") outputFile << storedProc[i] << endl;
 			if(storedSource[i] != "Blank") outputFile << storedSource[i] << endl;
@@ -223,10 +223,10 @@ void sortRuntimes()
 	unsigned int highestCount = 0; //Used for descending order
 //	int keepLooping = 0;
 
-	//Move all of our data into temporary arrays. Also clear the stored data (not necessary but.. just incase)
+	//Move all of our data into temporary arrays. Also clear the stored data (not necessary but.. just in case)
 	for(int i=0; i <= maxStorage; i++)
 	{
-		//Get the largest occurance of a single runtime
+		//Get the largest occurrence of a single runtime
 		if(highestCount < numRuntime[i])
 		{
 			highestCount = numRuntime[i];
@@ -244,7 +244,7 @@ void sortRuntimes()
 	{
 		for(int i=0; i <= maxStorage; i++) //For every runtime
 		{
-			if(tempNumRuntime[i] == highestCount) //If the number of occurances of that runtime is equal to our current highest
+			if(tempNumRuntime[i] == highestCount) //If the number of occurrences of that runtime is equal to our current highest
 			{
 				for(int j=0; j <= maxStorage; j++) //Find the next available slot and store the info
 				{

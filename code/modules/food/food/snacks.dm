@@ -15,7 +15,7 @@
 	var/list/nutriment_desc = list("food" = 1)
 	var/datum/reagent/nutriment/coating/coating = null
 	var/icon/flat_icon = null //Used to cache a flat icon generated from dipping in batter. This is used again to make the cooked-batter-overlay
-	var/do_coating_prefix = 1 //If 0, we wont do "battered thing" or similar prefixes. Mainly for recipes that include batter but have a special name
+	var/do_coating_prefix = 1 //If 0, we won't do "battered thing" or similar prefixes. Mainly for recipes that include batter but have a special name
 	var/cooked_icon = null //Used for foods that are "cooked" without being made into a specific recipe or combination.
 	//Generally applied during modification cooking with oven/fryer
 	//Used to stop deepfried meat from looking like slightly tanned raw meat, and make it actually look cooked
@@ -3725,7 +3725,7 @@ END CITADEL CHANGE */
 	if (!flat_icon)
 		flat_icon = getFlatIcon(src)
 	var/icon/I = flat_icon
-	color = "#FFFFFF" //Some fruits use the color var. Reset this so it doesnt tint the batter
+	color = "#FFFFFF" //Some fruits use the color var. Reset this so it doesn't tint the batter
 	I.Blend(new /icon('icons/obj/food_custom.dmi', rgb(255,255,255)),ICON_ADD)
 	I.Blend(new /icon('icons/obj/food_custom.dmi', coating.icon_raw),ICON_MULTIPLY)
 	var/image/J = image(I)

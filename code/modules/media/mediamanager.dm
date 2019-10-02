@@ -69,7 +69,7 @@
 //
 // ### Media procs on mobs ###
 // These are all convenience functions, simple delegations to the media datum on mob.
-// But their presense and null checks make other coder's life much easier.
+// But their presence and null checks make other coder's life much easier.
 //
 
 /mob/proc/update_music()

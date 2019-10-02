@@ -67,7 +67,7 @@
 
 /datum/event/supply_demand/tick()
 	if(required_items.len == 0)
-		endWhen = activeFor  // End early becuase we're done already!
+		endWhen = activeFor  // End early because we're done already!
 
 /datum/event/supply_demand/end()
 	running_demand_events -= src

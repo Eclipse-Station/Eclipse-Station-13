@@ -90,7 +90,7 @@
 
 
 //If an oven's door is open it will lose heat every proc, even if it also gained it
-//But dont call equalize twice in one stack. A return value of -1 from the parent indicates equalize was already called
+//But don't call equalize twice in one stack. A return value of -1 from the parent indicates equalize was already called
 /obj/machinery/appliance/cooker/oven/heat_up()
 	.=..()
 	if (open && . != -1)

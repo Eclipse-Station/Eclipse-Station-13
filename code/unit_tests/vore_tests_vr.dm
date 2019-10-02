@@ -18,7 +18,7 @@
 	return 1
 
 /datum/unit_test/belly_nonsuffocation/check_result()
-	// Unfortuantely we need to wait for the pred's belly to initialize. (Currently after a spawn())
+	// Unfortunately we need to wait for the pred's belly to initialize. (Currently after a spawn())
 	if(!pred.vore_organs || !pred.vore_organs.len)
 		return 0
 
@@ -74,7 +74,7 @@
 	return 1
 
 /datum/unit_test/belly_spacesafe/check_result()
-	// Unfortuantely we need to wait for the pred's belly to initialize. (Currently after a spawn())
+	// Unfortunately we need to wait for the pred's belly to initialize. (Currently after a spawn())
 	if(!pred.vore_organs || !pred.vore_organs.len)
 		return 0
 
@@ -137,7 +137,7 @@
 	return 1
 
 /datum/unit_test/belly_damage/check_result()
-	// Unfortuantely we need to wait for the pred's belly to initialize. (Currently after a spawn())
+	// Unfortunately we need to wait for the pred's belly to initialize. (Currently after a spawn())
 	if(!pred.vore_organs || !pred.vore_organs.len)
 		return 0
 

@@ -181,7 +181,7 @@
 /obj/item/mecha_parts/mecha_equipment/weapon/energy/ion/rigged
 	equip_cooldown = 30
 	name = "jury-rigged ion cannon"
-	desc = "A tesla coil modified to amplify an ionic wave, and use it as a projectile."
+	desc = "A Tesla coil modified to amplify an ionic wave, and use it as a projectile."
 	icon_state = "mecha_ion-rig"
 	energy_drain = 100
 	projectile = /obj/item/projectile/ion/pistol

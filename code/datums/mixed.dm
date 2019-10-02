@@ -23,7 +23,7 @@
 	size = 5.0
 	var/list/fields = list(  )
 
-// Mostly used for data_core records, but unfortuantely used some other places too.  But mostly here, so lets make a good effort.
+// Mostly used for data_core records, but unfortunately used some other places too.  But mostly here, so lets make a good effort.
 // TODO - Some machines/computers might be holding references to us.  Lets look into that, but at least for now lets make sure that the manifest is cleaned up.
 /datum/data/record/Destroy(var/force)
 	if(data_core.locked.Find(src))

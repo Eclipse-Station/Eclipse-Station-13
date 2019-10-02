@@ -6708,7 +6708,7 @@ jQuery.extend({
 				value += "px";
 			}
 
-			// Fixes #8908, it can be done more correctly by specifing setters in cssHooks,
+			// Fixes #8908, it can be done more correctly by specifying setters in cssHooks,
 			// but it would mean to define eight (for every problematic property) identical functions
 			if ( !support.clearCloneStyle && value === "" && name.indexOf("background") === 0 ) {
 				style[ name ] = "inherit";
@@ -7303,7 +7303,7 @@ function propFilter( props, specialEasing ) {
 			value = hooks.expand( value );
 			delete props[ name ];
 
-			// not quite $.extend, this wont overwrite keys already present.
+			// not quite $.extend, this won't overwrite keys already present.
 			// also - reusing 'index' from above because we have the correct "name"
 			for ( index in value ) {
 				if ( !( index in props ) ) {

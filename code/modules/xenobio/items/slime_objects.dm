@@ -70,8 +70,8 @@
 
 // More or less functionally identical to the telecrystal tele.
 /obj/item/slime_crystal
-	name = "lesser slime cystal"
-	desc = "A small, gooy crystal."
+	name = "lesser slime crystal"
+	desc = "A small, gooey crystal."
 	description_info = "This will teleport you to a mostly 'safe' tile when used in-hand, consuming the slime crystal.  \
 	It can also teleport someone else, by throwing it at them or attacking them with it."
 	icon = 'icons/obj/objects.dmi'

@@ -217,7 +217,7 @@
 	materials = list(DEFAULT_WALL_MATERIAL = 30000, "silver" = 2250)
 
 /datum/design/item/mechfab/durand/armour
-	name = "Durand Armour Plates"
+	name = "Durand Armor Plates"
 	id = "durand_armour"
 	build_path = /obj/item/mecha_parts/part/durand_armour
 	time = 60

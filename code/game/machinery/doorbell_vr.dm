@@ -61,7 +61,7 @@
 	..()
 
 ////////////////////DOORBELL CHIME CONSTRUCTION///////////////////////////////////////
-// We want these to be constructable so more chimes can be added in departments.
+// We want these to be constructible so more chimes can be added in departments.
 /datum/frame/frame_types/doorbell_chime
 	name = "Doorbell Chime"
 	frame_class = "alarm"  // It isn't an alarm, but thats the construction flow we want.
@@ -75,7 +75,7 @@
 // Annoyingly we need to provide a circuit board even if never seen by players.
 // Makes some sense, its how the frame code knows what to actually build. Alternative
 // is to make building it a single-step process which is too quick I say.
-// This links up the frame_type to the acutal machine to build. Never seen by players.
+// This links up the frame_type to the actual machine to build. Never seen by players.
 /obj/item/weapon/circuitboard/doorbell_chime
 	build_path = /obj/machinery/doorbell_chime
 	board_type = new /datum/frame/frame_types/doorbell_chime

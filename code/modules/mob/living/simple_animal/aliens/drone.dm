@@ -96,13 +96,13 @@
 		s.set_up(3, 1, src)
 		s.start()
 
-	//sometimes our targetting sensors malfunction, and we attack anyone nearby
+	//sometimes our targeting sensors malfunction, and we attack anyone nearby
 	if(prob(disabled ? 0 : 1))
 		if(hostile)
-			src.visible_message("<font color='blue'>\icon[src] [src] retracts several targetting vanes, and dulls it's running lights.</font>")
+			src.visible_message("<font color='blue'>\icon[src] [src] retracts several targeting vanes, and dulls it's running lights.</font>")
 			hostile = 0
 		else
-			src.visible_message("<font color='red'>\icon[src] [src] suddenly lights up, and additional targetting vanes slide into place.</font>")
+			src.visible_message("<font color='red'>\icon[src] [src] suddenly lights up, and additional targeting vanes slide into place.</font>")
 			hostile = 1
 
 	if(health / getMaxHealth() > 0.9)
@@ -262,7 +262,7 @@
 
 		if(spawnees & 256)
 			C = new(src.loc)
-			C.name = "Drone targetting circuitboard"
+			C.name = "Drone targeting circuitboard"
 			C.origin_tech = list(TECH_COMBAT = rand(3,6))
 
 		if(spawnees & 512)

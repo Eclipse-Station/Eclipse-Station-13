@@ -232,7 +232,7 @@
 	if(breath.gas["sleeping_agent"])
 		var/SA_pp = (breath.gas["sleeping_agent"] / breath.total_moles) * breath_pressure
 
-		// Enough to make us paralysed for a bit
+		// Enough to make us paralyzed for a bit
 		if(SA_pp > SA_para_min)
 
 			// 3 gives them one second to wake up and run away a bit!
@@ -264,7 +264,7 @@
 				to_chat(H, "<span class='danger'>You feel icicles forming on your skin!</span>")
 		else if(breath.temperature >= breath_heat_level_1)
 			if(prob(20))
-				to_chat(H, "<span class='danger'>You feel yourself smouldering in the heat!</span>")
+				to_chat(H, "<span class='danger'>You feel yourself smoldering in the heat!</span>")
 
 		var/bodypart = pick(BP_L_FOOT,BP_R_FOOT,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_L_HAND,BP_R_HAND,BP_TORSO,BP_GROIN,BP_HEAD)
 		if(breath.temperature >= breath_heat_level_1)

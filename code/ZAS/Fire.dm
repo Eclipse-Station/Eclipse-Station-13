@@ -264,7 +264,7 @@ turf/proc/hotspot_expose(exposed_temperature, exposed_volume, soh = 0)
 		//determine how far the reaction can progress
 		var/reaction_limit = min(total_oxidizers*(FIRE_REACTION_FUEL_AMOUNT/FIRE_REACTION_OXIDIZER_AMOUNT), total_fuel) //stoichiometric limit
 
-		//vapour fuels are extremely volatile! The reaction progress is a percentage of the total fuel (similar to old zburn).)
+		//vapor fuels are extremely volatile! The reaction progress is a percentage of the total fuel (similar to old zburn).)
 		var/gas_firelevel = calculate_firelevel(gas_fuel, total_oxidizers, reaction_limit, volume*group_multiplier) / vsc.fire_firelevel_multiplier
 		var/min_burn = 0.30*volume*group_multiplier/CELL_VOLUME //in moles - so that fires with very small gas concentrations burn out fast
 		var/gas_reaction_progress = min(max(min_burn, gas_firelevel*gas_fuel)*FIRE_GAS_BURNRATE_MULT, gas_fuel)
@@ -420,7 +420,7 @@ datum/gas_mixture/proc/check_recombustability(list/fuel_objs)
 				legs_exposure = 0
 			if(C.body_parts_covered & ARMS)
 				arms_exposure = 0
-	//minimize this for low-pressure enviroments
+	//minimize this for low-pressure environments
 	var/mx = 5 * firelevel/vsc.fire_firelevel_multiplier * min(pressure / ONE_ATMOSPHERE, 1)
 
 	//Always check these damage procs first if fire damage isn't working. They're probably what's wrong.

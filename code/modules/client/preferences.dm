@@ -293,7 +293,7 @@ datum/preferences
 	// Sanitizing rather than saving as someone might still be editing when copy_to occurs.
 	player_setup.sanitize_setup()
 
-	// This needs to happen before anything else becuase it sets some variables.
+	// This needs to happen before anything else because it sets some variables.
 	character.set_species(species)
 	// Special Case: This references variables owned by two different datums, so do it here.
 	if(be_random_name)

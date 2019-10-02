@@ -114,7 +114,7 @@
 //joanrisu:Katarina Eine
 /obj/item/weapon/storage/backpack/dufflebag/sec/fluff/katarina
 	name = "Katarina's Workbag"
-	desc = "A duffle bag Katarina uses to carry her tools."
+	desc = "A duffel bag Katarina uses to carry her tools."
 	slowdown = 0
 
 	New()

@@ -344,7 +344,7 @@
 //Swat43:Fortune Bloise
 /obj/item/weapon/storage/backpack/satchel/fluff/swat43bag
 	name = "Colored Satchel"
-	desc = "That's a colored satchel with red stripes, with a heart and ripley logo on each side."
+	desc = "That's a colored satchel with red stripes, with a heart and Ripley logo on each side."
 	icon = 'icons/vore/custom_items_vr.dmi'
 	icon_state = "swat43-bag"
 

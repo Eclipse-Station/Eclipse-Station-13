@@ -289,14 +289,14 @@
 		return //Lets not force players or dead/incap parrots to move
 
 	if(!isturf(src.loc) || !canmove || buckled)
-		return //If it can't move, dont let it move. (The buckled check probably isn't necessary thanks to canmove)
+		return //If it can't move, don't let it move. (The buckled check probably isn't necessary thanks to canmove)
 
 
 //-----SPEECH
 	/* Parrot speech mimicry!
 	   Phrases that the parrot hears in mob/living/say() get added to speach_buffer.
 	   Every once in a while, the parrot picks one of the lines from the buffer and replaces an element of the 'speech' list.
-	   Then it clears the buffer to make sure they dont magically remember something from hours ago. */
+	   Then it clears the buffer to make sure they don't magically remember something from hours ago. */
 	if(speech_buffer.len && prob(10))
 		if(speak.len)
 			speak.Remove(pick(speak))
@@ -343,7 +343,7 @@
 
 						newspeak.Add(possible_phrase)
 
-				else //If we have no headset or channels to use, dont try to use any!
+				else //If we have no headset or channels to use, don't try to use any!
 					for(var/possible_phrase in speak)
 						if(copytext(possible_phrase,1,3) in department_radio_keys)
 							possible_phrase = "[copytext(possible_phrase,3,length(possible_phrase)+1)]" //crop out the channel prefix

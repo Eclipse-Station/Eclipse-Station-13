@@ -8,7 +8,7 @@ function noErrorMessages () { return true; }
 window.onerror = noErrorMessages;
 function SetMusic(url, time, volume) {
 	var player = document.getElementById('player');
-	// IE can't handle us setting the time before it loads, so we must wait for asychronous load
+	// IE can't handle us setting the time before it loads, so we must wait for asynchronous load
 	var setTime = function () {
 		player.removeEventListener("canplay", setTime);  // One time only!
 		player.volume = volume;

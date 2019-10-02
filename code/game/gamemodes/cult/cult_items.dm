@@ -108,9 +108,9 @@
 	return
 
 /obj/item/clothing/suit/space/cult
-	name = "cult armour"
+	name = "cult armor"
 	icon_state = "cult_armour"
-	desc = "A bulky suit of armour, bristling with spikes. It looks space-worthy."
+	desc = "A bulky suit of armor, bristling with spikes. It looks space-worthy."
 	w_class = ITEMSIZE_NORMAL
 	allowed = list(/obj/item/weapon/book/tome,/obj/item/weapon/melee/cultblade,/obj/item/weapon/tank/emergency/oxygen,/obj/item/device/suit_cooling_unit)
 	slowdown = 1
