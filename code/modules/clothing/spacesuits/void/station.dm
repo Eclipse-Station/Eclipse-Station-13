@@ -304,7 +304,7 @@
 	icon_state = "rig-pilot2"
 	item_state = "rig-pilot2"
 
-//Captain (cit addition, the idea is to replace the "colony director armor" which doesnt function like a voidsuit
+//Captain (cit addition, the idea is to replace the "colony director armor" which doesn't function like a voidsuit
 /obj/item/clothing/head/helmet/space/void/captain
 	desc = "Shiny blue helmet, complete with far-too-big golden visor. It probably doesn't protects from bright flashes."
 	name = "colony director voidsuit helmet"
@@ -323,4 +323,4 @@
 /obj/item/clothing/suit/space/void/medical/alt/lanius
 	species_restricted = list("Human", "Skrell", "Promethean", "Carnifex")
 	name = "repurposed medical voidsuit"
-	desc = "A hasty solution from VeyMed to confine Carnifex in a sealed enviroment. Doesn't offer much protection, but allows the user to move more freely."
+	desc = "A hasty solution from VeyMed to confine Carnifex in a sealed environment. Doesn't offer much protection, but allows the user to move more freely."
