@@ -19,7 +19,7 @@
 //Clearing-area submaps
 /datum/map_template/surface/wilderness/normal/spider1
 	allow_duplicates = TRUE
-	cost = 5		//Increase cost +4; spiders are fun and all but this is light woods and we're going to get spammed with spiders otherwise
+	cost = 5		//Increase cost +4; spiders are fun and all, but this is light woods and we're going to get spammed with spiders otherwise
 
 //deep woods
 /datum/map_template/surface/wilderness/deep/Boombase
@@ -27,7 +27,7 @@
 	allow_duplicates = TRUE		//Explosive craters on the surface hardly seem ill-fitting given Nanotrasen's reason for being here.
 
 /datum/map_template/surface/wilderness/deep/BSD
-	cost = 12		//Increase cost +2
+	cost = 10		//No change. Might go back and do more later, so leaving it in.
 
 /datum/map_template/surface/wilderness/deep/Rockybase
 	cost = 15		//Increase cost +3
@@ -40,6 +40,6 @@
 	cost = 20	//Increase cost +10
 
 /datum/map_template/surface/wilderness/deep/Cave
-	cost = 12		//Increase cost +6
+	cost = 10		//Increase cost +4
 	allow_duplicates = TRUE		//More spiders? Sure why the hell not
 

@@ -207,6 +207,23 @@ var/list/global/map_templates = list()
 				chosen_template = pick(priority_submaps)
 			else
 				chosen_template = pick(potential_submaps)
+			
+			// // // BEGIN ECLIPSE EDIT // // //
+			//Speed up the submap generation system, by giving up if we start running low on sanity.
+			switch(overall_sanity)			//can probably put this to an equation, but also can't really be arsed.
+				if(0 to 15)
+					if(budget < 25)
+						admin_notice("Submap loader giving up at sanity [overall_sanity] with [budget] left to spend.", R_DEBUG)
+						break
+				if(16 to 30)
+					if(budget < 15)
+						admin_notice("Submap loader giving up at sanity [overall_sanity] with [budget] left to spend.", R_DEBUG)
+						break
+				if(31 to 45)
+					if(budget < 5)
+						admin_notice("Submap loader giving up at sanity [overall_sanity] with [budget] left to spend.", R_DEBUG)
+						break
+			// // // END ECLIPSE EDIT // // //
 
 		else // We're out of submaps.
 			admin_notice("Submap loader had no submaps to pick from with [budget] left to spend.", R_DEBUG)
