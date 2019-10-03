@@ -339,8 +339,8 @@ Guard Family
 	icon_dead = "spark_dead"
 	var/max_charge = 100	//Eclipse edit: Total Taser charge.
 	var/charge = 0			//Eclipse edit: Initial Taser charge.
-	var/shot_charge = 5		//Eclipse edit: Charge per shot.
-	var/recharge_rate = 2	//Eclipse edit: Recharge per life() cycle
+	var/shot_charge = 8		//Eclipse edit: Charge per shot.
+	var/recharge_rate = 1.25	//Eclipse edit: Recharge per life() cycle
 
 	maxHealth = 210
 	health = 210
