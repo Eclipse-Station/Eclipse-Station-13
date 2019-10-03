@@ -337,6 +337,10 @@ Guard Family
 	icon_state = "spark"
 	icon_living = "spark"
 	icon_dead = "spark_dead"
+	var/max_charge = 100	//Eclipse edit: Total Taser charge.
+	var/charge = 0			//Eclipse edit: Initial Taser charge.
+	var/shot_charge = 5		//Eclipse edit: Charge per shot.
+	var/recharge_rate = 2	//Eclipse edit: Recharge per life() cycle
 
 	maxHealth = 210
 	health = 210
@@ -355,6 +359,38 @@ Guard Family
 	poison_per_bite = 3
 	poison_type = "stimm"
 
+// // // BEGIN ECLIPSE EDITS // // //
+// Spiders will now have a finite charge on their Taser tails.
+/mob/living/simple_animal/hostile/giant_spider/electric/Life()
+	..()
+	
+	if(charge < 100)		//if we're not at full charge, recharge one unit per life cycle
+		if((charge + recharge_rate) > max_charge)	//if one charge cycle puts us over the charge limit, just set us to the limit.
+			charge == max_charge
+		else
+			charge += recharge_rate
+		
+	if(charge > shot_charge)		//If our charge is less than that needed to shoot, fall back to beating the shit out of the target.
+		ranged = TRUE
+	else
+		ranged = FALSE
+	
+/mob/living/simple_animal/hostile/giant_spider/electric/ShootTarget()
+	if(charge > shot_charge)		//add that check here too, because we bloody well can
+		ranged = TRUE
+	else
+		ranged = FALSE
+	
+	if(!ranged) 
+		return FALSE
+	else
+		charge -= shot_charge
+		return ..()
+	
+	
+	CRASH("Return statement failed to end proc, crashing")
+	
+// // // END ECLIPSE EDITS // // //
 /mob/living/simple_animal/hostile/giant_spider/phorogenic
 	desc = "Crystalline and purple, it makes you shudder to look at it. This one has haunting purple eyes."
 	tt_desc = "X Brachypelma phorus phorus"
