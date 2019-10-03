@@ -55,4 +55,6 @@
 # Mapping related
 
 maps/southern_cross/ @DrExample @EvilJackCarver
+maps/submaps/ @DrExample @EvilJackCarver
+maps/RandomZLevels/ @DrExample @EvilJackCarver
 *.dmm @DrExample @EvilJackCarver
