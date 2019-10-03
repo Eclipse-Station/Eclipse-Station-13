@@ -438,17 +438,18 @@
 	if(print_flavor_text())
 		msg += "[print_flavor_text()]<br>"
 
-	// VOREStation Start
-	if(ooc_notes)
-		var/mob/living/carbon/human/F = user
-		if(F.ooc_notes)
-			msg += "<span class = 'deptradio'>OOC Notes:</span> <a href='?src=\ref[src];ooc_notes=1'>\[View\]</a>\n"
-
+	// VOREStation Start		
+	// // // BEGIN ECLIPSE EDITS // // //
+	// Combine OOC note checking and all that into one check. Should help us with the 'ghost examine runtime' issue. Neater, if nothing else. ^Spitzer
 	if(ishuman(user))
 		var/mob/living/carbon/human/F = user
+	
+		if(F.ooc_notes)
+			msg += "<span class = 'deptradio'>OOC Notes:</span> <a href='?src=\ref[src];ooc_notes=1'>\[View\]</a>\n"
 		if(F.species.voracious)
 			msg += "<span class='deptradio'><a href='?src=\ref[src];vore_prefs=1'>\[Mechanical Vore Preferences\]</a></span>\n"
 
+	// // // END ECLIPSE EDITS // // //
 	// VOREStation End
 	msg += "*---------*</span><br>"
 	msg += applying_pressure

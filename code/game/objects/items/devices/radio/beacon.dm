@@ -5,6 +5,8 @@
 	item_state = "signaler"
 	var/code = "electronic"
 	origin_tech = list(TECH_BLUESPACE = 1)
+	description_info = ""
+	icon = 'icons/obj/radio_vr.dmi'
 
 GLOBAL_LIST_BOILERPLATE(all_beacons, /obj/item/device/radio/beacon)
 
