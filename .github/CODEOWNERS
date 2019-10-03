@@ -5,6 +5,7 @@
 # to the same file or dir, add them to the end under Multiple Owners
 
 # DrExample / Nestor
+###############
 
 /.github/ @DrExample
 /SQL/ @DrExample
@@ -28,6 +29,7 @@
 
 
 # EvilJackCarver / Gaz
+###############
 
 /code/ZAS/ @EvilJackCarver
 /code/controllers/configuration_eclipse.dm @EvilJackCarver
@@ -48,4 +50,9 @@
 
 
 # Multiple Owners
-/maps/southern_cross/ @DrExample @EvilJackCarver
+###############
+
+# Mapping related
+
+maps/southern_cross/ @DrExample @EvilJackCarver
+*.dmm @DrExample @EvilJackCarver
