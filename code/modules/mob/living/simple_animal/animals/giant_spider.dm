@@ -390,6 +390,15 @@ Guard Family
 	
 	CRASH("Return statement failed to end proc, crashing")
 	
+
+/mob/living/simple_animal/hostile/giant_spider/electric/charged
+	charge = 100		//starts charged and ready to go.
+	//the reason we don't want the Taser spiders to start charged is if a 'ling
+	//grows up to be a Taser spider, we don't want players to immediately get
+	//screwed over by RNGesus. However, there may be a reason to spawn in one
+	//that's already charged (events, testing, etc), so we have a subtype here
+	//just for such an occasion. ^Spitzer
+
 // // // END ECLIPSE EDITS // // //
 /mob/living/simple_animal/hostile/giant_spider/phorogenic
 	desc = "Crystalline and purple, it makes you shudder to look at it. This one has haunting purple eyes."
