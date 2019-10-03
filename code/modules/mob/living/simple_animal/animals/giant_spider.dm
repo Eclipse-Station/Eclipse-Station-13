@@ -366,7 +366,7 @@ Guard Family
 	
 	if(charge < 100)		//if we're not at full charge, recharge one unit per life cycle
 		if((charge + recharge_rate) > max_charge)	//if one charge cycle puts us over the charge limit, just set us to the limit.
-			charge == max_charge
+			charge = max_charge
 		else
 			charge += recharge_rate
 		
