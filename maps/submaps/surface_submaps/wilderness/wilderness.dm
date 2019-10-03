@@ -153,6 +153,7 @@
 	desc = "What happens when you don't follow SOP."
 	mappath = 'maps/submaps/surface_submaps/wilderness/Boombase.dmm'
 	cost = 2
+	allow_duplicates = TRUE		//Eclipse edit: Set some deep wilderness PoIs to allow multiple spawns, to give the submap loader a break.
 
 /datum/map_template/surface/wilderness/deep/BSD
 	name = "Black Shuttle Down"
@@ -177,6 +178,7 @@
 	desc = "A long lost SifGuard ground survey patrol. Now they have you guys!"
 	mappath = 'maps/submaps/surface_submaps/wilderness/GovPatrol.dmm'
 	cost = 1
+	allow_duplicates = TRUE		//Eclipse edit: no people, just a gun and some supplies.
 
 /datum/map_template/surface/wilderness/normal/DecoupledEngine
 	name = "Decoupled Engine"
@@ -195,12 +197,14 @@
 	desc = "Chitter chitter!"
 	mappath = 'maps/submaps/surface_submaps/wilderness/CaveS.dmm'
 	cost = 6
+	allow_duplicates = TRUE		//Eclipse edit: More spiders? Sure why the hell not
 
 /datum/map_template/surface/wilderness/normal/Drugden
 	name = "Drugden"
 	desc = "The remains of ill thought out whims."
 	mappath = 'maps/submaps/surface_submaps/wilderness/Drugden.dmm'
 	cost = 6
+	allow_duplicates = TRUE		//Eclipse edit: ALL the drugs!
 
 /datum/map_template/surface/wilderness/normal/Musk
 	name = "Musk"
