@@ -152,27 +152,25 @@
 	name = "Boombase"
 	desc = "What happens when you don't follow SOP."
 	mappath = 'maps/submaps/surface_submaps/wilderness/Boombase.dmm'
-	cost = 12		//Eclipse Edit: Increase cost +10
-	allow_duplicates = TRUE		//Eclipse edit: Explosive craters on the surface hardly seem ill-fitting given Nanotrasen's reason for being here.
+	cost = 2
 
 /datum/map_template/surface/wilderness/deep/BSD
 	name = "Black Shuttle Down"
 	desc = "You REALLY shouldn't be near this."
 	mappath = 'maps/submaps/surface_submaps/wilderness/Blackshuttledown.dmm'
-	cost = 15		//Eclipse edit: Increase cost +5
+	cost = 10
 
 /datum/map_template/surface/wilderness/deep/Rockybase
 	name = "Rocky Base"
 	desc = "A guide to upsetting Icarus and the EIO"
 	mappath = 'maps/submaps/surface_submaps/wilderness/Rockybase.dmm'
-	cost = 18		//Eclipse edit: Increase cost +6
+	cost = 12
 
 /datum/map_template/surface/wilderness/deep/MHR
 	name = "Manhack Rock"
 	desc = "A rock filled with nasty Synthetics."
 	mappath = 'maps/submaps/surface_submaps/wilderness/MHR.dmm'
-	cost = 10		//Eclipse edit: Increase cost +8
-	allow_duplicates = TRUE		//Eclipse edit: THEY'RE FILLING THE TUNNELS WITH MANHACKS
+	cost = 2
 
 /datum/map_template/surface/wilderness/normal/GovPatrol
 	name = "Government Patrol"
@@ -190,14 +188,13 @@
 	name = "DoomP"
 	desc = "Witty description here."
 	mappath = 'maps/submaps/surface_submaps/wilderness/DoomP.dmm'
-	cost = 20	//Eclipse edit: Increase cost +10
+	cost = 10
 
 /datum/map_template/surface/wilderness/deep/Cave
 	name = "CaveS"
 	desc = "Chitter chitter!"
 	mappath = 'maps/submaps/surface_submaps/wilderness/CaveS.dmm'
-	cost = 12		//Eclipse edit: Increase cost +6
-	allow_duplicates = TRUE		//Eclipse edit: More spiders? Sure why the hell not
+	cost = 6
 
 /datum/map_template/surface/wilderness/normal/Drugden
 	name = "Drugden"
