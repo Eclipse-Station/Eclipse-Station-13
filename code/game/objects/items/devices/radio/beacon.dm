@@ -5,8 +5,8 @@
 	item_state = "signaler"
 	var/code = "electronic"
 	origin_tech = list(TECH_BLUESPACE = 1)
-	description_info = ""
-	icon = 'icons/obj/radio_vr.dmi'
+	description_info = ""		//Eclipse edit: Icon fixes from radio sprite update
+	icon = 'icons/obj/radio_vr.dmi'			//Eclipse edit: Icon fixes from radio sprite update
 
 GLOBAL_LIST_BOILERPLATE(all_beacons, /obj/item/device/radio/beacon)
 
