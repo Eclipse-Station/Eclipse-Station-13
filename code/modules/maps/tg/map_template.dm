@@ -210,19 +210,24 @@ var/list/global/map_templates = list()
 			
 			// // // BEGIN ECLIPSE EDIT // // //
 			//Speed up the submap generation system, by giving up if we start running low on sanity.
-			switch(overall_sanity)			//can probably put this to an equation, but also can't really be arsed.
-				if(0 to 15)
-					if(budget < 25)
-						admin_notice("Submap loader giving up at sanity [overall_sanity] with [budget] left to spend.", R_DEBUG)
-						break
-				if(16 to 30)
-					if(budget < 15)
-						admin_notice("Submap loader giving up at sanity [overall_sanity] with [budget] left to spend.", R_DEBUG)
-						break
-				if(31 to 45)
-					if(budget < 5)
-						admin_notice("Submap loader giving up at sanity [overall_sanity] with [budget] left to spend.", R_DEBUG)
-						break
+/*
+ * SUBMAP GENERATOR YIELDING
+ * The submap loader will yield if the budget is below a certain value, based on
+ * the current sanity. This graphs as y <= -4/9x + 25, where Y is budget and X
+ * is sanity. Yielding begins at 56.25 sanity if budget below 0, and ends at 
+ * 0 sanity if budget is below 25 (if it hits zero it'll abort anyway).
+ */
+			if(budget <= ((-(4/9) * overall_sanity) + 25))
+				admin_notice("Submap loader yielding at sanity [overall_sanity] with [budget] left to spend.", R_DEBUG)
+				break
+				
+/*
+ * MORE QUICK NUMBERS:
+ * If sanity is 5, will yield if budget below 22.777...(REPEATED)
+ * If sanity is 10, will yield if budget below 20.555...(REPEATED)
+ * If sanity is 25, will yield if budget below 13.888...(REPEATED)
+ * If sanity is 50, will yield if budget below 2.777...(REPEATED)
+ */
 			// // // END ECLIPSE EDIT // // //
 
 		else // We're out of submaps.
