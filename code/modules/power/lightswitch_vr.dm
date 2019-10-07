@@ -1,6 +1,6 @@
 //
 // Lightswitch Construction
-// Note: This does not use the normal frame.dm approach becuase:
+// Note: This does not use the normal frame.dm approach because:
 // 1) That requires circuits, and I don't want a circuit board instance in every lightswitch.
 // 2) This is an experiment in modernizing construction steps and examine tabs.
 

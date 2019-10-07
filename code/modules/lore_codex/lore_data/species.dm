@@ -134,8 +134,8 @@
 	data = "Prometheans are an artificial species created by the Humans sometime in the 2540s, aboard the NRS Prometheus, while experimenting with \
 	the Aetolian giant slime, or ‘Macrolimus vulgaris’. They themselves are considered sapient beings and given protection under prior Human legislation, \
 	though often only appear to serve as aides or inferior positions when kept as staff. Aetolus, the official ‘Home world’ of the Prometheans and giant slime, \
-	is an obnoxiously warm, humid planet requiring structures to be built within large, atmospherically-filtered ‘tent-like’ domes. \
-	Prometheans take on vague visual and vocal features of the species they cohabitate with, sharing their predecessors’ tendency to mimic nearby entities, \
+	is an obnoxiously warm, humid planet requiring structures to be built within large, atmospherically-filtered 'tent-like' domes. \
+	Prometheans take on vague visual and vocal features of the species they cohabitate with, sharing their predecessors' tendency to mimic nearby entities, \
 	though in physical form additionally; this is seemingly more important in their own development, as well. Despite their taken appearances, \
 	there is no known existence of a divergence between a biologically ‘male’ or ‘female’ form of the species, leading most to believe they are in fact asexual, \
 	as their predecessors are."
@@ -293,7 +293,7 @@
 	name = "A Class"
 	keywords += list("AGI")
 	data = "A-class drones are also referred to as AGI. A-class drones are capable of performing in many contexts and can learn to solve problems from \
-	first principles, with an incredible potential for growth and emergent behavior. However, some abilities fall short of humans’, usually those relating \
+	first principles, with an incredible potential for growth and emergent behavior. However, some abilities fall short of humans', usually those relating \
 	to socialization, and they often act in ways that are strange or distressing. There is a small but growing lobby of support for the personhood of A-class \
 	drones. The cost of initializing an A-class drone is absolutely massive, as they will be monitored by [quick_link("EIO")] forever. The auditing cost of an A-class drone \
 	codeline is even more staggering, making development and deployment of AGI limited to research, highly difficult and high-throughput operations like habitat \

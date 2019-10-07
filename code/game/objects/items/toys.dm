@@ -234,7 +234,7 @@
 
 /obj/item/toy/ammo/crossbow
 	name = "foam dart"
-	desc = "It's nerf or nothing! Ages 8 and up."
+	desc = "It's Nerf or nothing! Ages 8 and up."
 	icon = 'icons/obj/toy.dmi'
 	icon_state = "foamdart"
 	w_class = ITEMSIZE_TINY

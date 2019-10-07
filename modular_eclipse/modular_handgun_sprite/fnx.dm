@@ -21,7 +21,7 @@
 	mod_reskin_options["black grips, blued slide"] = 1
 	mod_reskin_options["black grips, nickel slide"] = 2
 	mod_reskin_options["tan grips, blued slide"] = 3
-	mod_reskin_options["tan grips, parkerised tan slide"] = 4
+	mod_reskin_options["tan grips, parkerized tan slide"] = 4
 
 	mod_total_skin_combinations = mod_reskin_options.len
 
@@ -44,7 +44,7 @@
 		if(3)		//blued steel slide, tan grips
 			mod_slide_style = "blued"
 			mod_grip_style = "tan"
-		else		//parkerised tan slide, tan grips. Unknown numbers default to this.
+		else		//parkerized tan slide, tan grips. Unknown numbers default to this.
 			mod_slide_style = "tan"
 			mod_grip_style = "tan"
 	update_icon()

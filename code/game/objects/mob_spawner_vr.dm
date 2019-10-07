@@ -107,8 +107,8 @@
 
 
 /*
-This code is based on the mob spawner and the proximity sensor, the idea is to lazy load mobs to avoid having the server use mobs when they arent needed.
-It also makes it so a ghost wont know where all the goodies/mobs are.
+This code is based on the mob spawner and the proximity sensor, the idea is to lazy load mobs to avoid having the server use mobs when they aren't needed.
+It also makes it so a ghost won't know where all the goodies/mobs are.
 */
 
 /obj/structure/mob_spawner/scanner

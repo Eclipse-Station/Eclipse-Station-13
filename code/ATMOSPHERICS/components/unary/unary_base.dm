@@ -100,7 +100,7 @@
 	return null
 
 // Check if there are any other atmos machines in the same turf that will block this machine from initializing.
-// Intended for use when a frame-constructable machine (i.e. not made from pipe fittings) wants to wrench down and connect.
+// Intended for use when a frame-constructible machine (i.e. not made from pipe fittings) wants to wrench down and connect.
 // Returns TRUE if something is blocking, FALSE if its okay to continue.
 /obj/machinery/atmospherics/unary/proc/check_for_obstacles()
 	for(var/obj/machinery/atmospherics/M in loc)

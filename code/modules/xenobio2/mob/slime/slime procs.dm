@@ -13,7 +13,7 @@ Slime specific procs go here.
 	traitdat.traits[TRAIT_XENO_HUNGER] = rand(1, 20)
 	traitdat.traits[TRAIT_XENO_STARVEDAMAGE] = rand(1, 4)
 	traitdat.traits[TRAIT_XENO_EATS] = prob(95)	//Odds are, that thing'll need to eat.
-	traitdat.traits[TRAIT_XENO_HOSTILE] = prob(60)	//Let's increase this probabilty.
+	traitdat.traits[TRAIT_XENO_HOSTILE] = prob(60)	//Let's increase this probability.
 	if(prob(10))
 		traitdat.traits[TRAIT_XENO_CHROMATIC] = 1
 		traitdat.traits[TRAIT_XENO_HOSTILE] = 0

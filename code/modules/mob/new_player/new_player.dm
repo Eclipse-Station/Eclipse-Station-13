@@ -129,7 +129,7 @@
 
 			spawning = 1
 			if(client.media)
-				client.media.stop_music() // MAD JAMS cant last forever yo
+				client.media.stop_music() // MAD JAMS can't last forever yo
 
 			observer.started_as_observer = 1
 			close_spawn_windows()
@@ -491,7 +491,7 @@
 		client.prefs.copy_to(new_character, icon_updates = TRUE)
 
 	if(client && client.media)
-		client.media.stop_music() // MAD JAMS cant last forever yo
+		client.media.stop_music() // MAD JAMS can't last forever yo
 
 	if(mind)
 		mind.active = 0					//we wish to transfer the key manually

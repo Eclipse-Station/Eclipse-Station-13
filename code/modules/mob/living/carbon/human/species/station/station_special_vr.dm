@@ -88,7 +88,7 @@
 		if(adjusted_pressure2 <= 20)
 			H.take_overall_damage(brute=LOW_PRESSURE_DAMAGE, used_weapon = "Low Pressure")
 
-		//Cold hurts and gives them pain messages, eventually weakening and paralysing, but doesn't damage or trigger feral.
+		//Cold hurts and gives them pain messages, eventually weakening and paralyzing, but doesn't damage or trigger feral.
 		//NB: 'body_temperature' used here is the 'setpoint' species var
 		var/temp_diff = body_temperature - H.bodytemperature
 		if(temp_diff >= 50)
@@ -370,5 +370,5 @@
 		if(H.bodytemperature <= 99) //Insanely cold.
 			coldshock = 16
 			H.eye_blurry = 5
-		H.shock_stage = min(H.shock_stage + coldshock, 160) //cold hurts and gives them pain messages, eventually weakening and paralysing, but doesn't damage.
+		H.shock_stage = min(H.shock_stage + coldshock, 160) //cold hurts and gives them pain messages, eventually weakening and paralyzing, but doesn't damage.
 		return

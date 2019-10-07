@@ -28,7 +28,7 @@
 	var/mob/living/carbon/T = changeling_sting(20,/mob/proc/changeling_delayed_toxic_sting)
 	if(!T)
 		return 0
-	add_attack_logs(src,T,"Delayed toxic sting (chagneling)")
+	add_attack_logs(src,T,"Delayed toxic sting (changeling)")
 	var/type_to_give = /datum/modifier/delayed_toxin_sting
 	if(src.mind.changeling.recursive_enhancement)
 		type_to_give = /datum/modifier/delayed_toxin_sting/strong

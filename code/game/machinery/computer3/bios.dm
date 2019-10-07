@@ -113,13 +113,13 @@
 		if(MISSING_PERIPHERAL)
 			Reset()
 			if(usr)
-				usr << browse("<h2>ERROR: Missing or disabled component</h2><b>A hardware failure has occured.  Please insert or replace the missing or damaged component and restart the computer.</b>","window=\ref[src]")
+				usr << browse("<h2>ERROR: Missing or disabled component</h2><b>A hardware failure has occurred.  Please insert or replace the missing or damaged component and restart the computer.</b>","window=\ref[src]")
 
 		if(BUSTED_ASS_COMPUTER)
 			Reset()
 			os.error = BUSTED_ASS_COMPUTER
 			if(usr)
-				usr << browse("<h2>ERROR: Missing or disabled component</h2><b>A hardware failure has occured.  Please insert or replace the missing or damaged component and restart the computer.</b>","window=\ref[src]")
+				usr << browse("<h2>ERROR: Missing or disabled component</h2><b>A hardware failure has occurred.  Please insert or replace the missing or damaged component and restart the computer.</b>","window=\ref[src]")
 
 		if(MISSING_PROGRAM)
 			Reset()

@@ -36,7 +36,7 @@
 
 // The 'mountains' is the mining z-level, and has a lot of caves.
 // POIs here spawn in two different sections, the top half and bottom half of the map.
-// The bottom half should be fairly tame, with perhaps a few enviromental hazards.
+// The bottom half should be fairly tame, with perhaps a few environmental hazards.
 // The top half is when things start getting dangerous, but the loot gets better.
 
 /datum/map_template/surface/mountains

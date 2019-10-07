@@ -156,7 +156,7 @@
 		if(ismob(loc))
 			to_chat(M, "<span class='notice'>[src] is empty!</span>")
 		return
-	//open flame removed because vapes are a closed system, they wont light anything on fire
+	//open flame removed because vapes are a closed system, they won't light anything on fire
 
 	if(super && vapetime > 3)//Time to start puffing those fat vapes, yo.
 		var/datum/effect_system/smoke_spread/chem/s = new

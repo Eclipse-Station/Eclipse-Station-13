@@ -48,7 +48,7 @@
 			M.ghostize()
 			qdel(M)
 
-		for(var/obj/O in contents) //obj instead of obj/item so that bodybags and ashes get destroyed. We dont want tons and tons of ash piling up
+		for(var/obj/O in contents) //obj instead of obj/item so that bodybags and ashes get destroyed. We don't want tons and tons of ash piling up
 			qdel(O)
 
 		new /obj/effect/decal/cleanable/ash(src)

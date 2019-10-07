@@ -154,7 +154,7 @@
 
 //Unknown. Please check records from the forums.
 /obj/item/clothing/under/suit_jacket/female/fluff/miqote
-	name = "Miqo'te Seperates"
+	name = "Miqo'te Separates"
 	desc = "This two-part set of clothing is very popular on the planet Hydaelyn. While made of very robust materials, its usefulness as armor is negated by the exposed midriff."
 
 	icon = 'icons/vore/custom_clothes_vr.dmi'
@@ -963,7 +963,7 @@
 //jacobdragon:Earthen Breath
 /obj/item/clothing/under/fluff/earthenbreath
 	name = "Earth Swimsuit"
-	desc = "The suit of Subject 688,509,403. Made of an enviromentally safe elastic. Dry-clean not required."
+	desc = "The suit of Subject 688,509,403. Made of an environmentally safe elastic. Dry-clean not required."
 	icon_state = "fluffearthenbreath"
 	item_state = "fluffearthenbreath"
 
@@ -1138,13 +1138,13 @@
 //KiwiDaNinja: Chakat Taiga
 /obj/item/clothing/under/fluff/taiga
 	name = "Taiga's F.D Uniform"
-	desc = "This uniform - consisting of only the uniform shirt, and built out of a soft fleece - dons the badge of Amistad Fire and Rescuse on both shoulders. The badges denote the wearer as a FF/Paramedic, and their name is embroidered in a gold thread on their right breast; Chakat Taiga! An 'official' badge is pinned to their left breast." //A walking advertisement?
+	desc = "This uniform - consisting of only the uniform shirt, and built out of a soft fleece - dons the badge of Amistad Fire and Rescue on both shoulders. The badges denote the wearer as a FF/Paramedic, and their name is embroidered in a gold thread on their right breast; Chakat Taiga! An 'official' badge is pinned to their left breast." //A walking advertisement?
 	icon = 'icons/vore/custom_clothes_vr.dmi'
 	icon_override = 'icons/vore/custom_clothes_vr.dmi'
 	item_state = "taigaff_on"
 	icon_state = "taigaff" //Went ahead and made the det_corporate sprite fit.
 /*
-Departamental Swimsuits, for general use
+Departmental Swimsuits, for general use
 */
 
 /obj/item/clothing/under/swimsuit/fluff/
@@ -1288,7 +1288,7 @@ Departamental Swimsuits, for general use
 
 /obj/item/clothing/suit/storage/trek/ds9/admiral // Only for adminuz
 	name = "Admiral Overcoat"
-	desc = "Admirality specialty coat to keep flag officers fashionable and protected."
+	desc = "Admiralty specialty coat to keep flag officers fashionable and protected."
 	icon_state = "trek_ds9_coat_adm"
 	item_state = "trek_ds9_coat_adm_mob"
 	armor = list(melee = 45, bullet = 35, laser = 35, energy = 20, bomb = 0, bio = 40, rad = 55)

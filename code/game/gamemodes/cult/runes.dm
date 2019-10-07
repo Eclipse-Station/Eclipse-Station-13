@@ -1069,7 +1069,7 @@ var/list/sacrificed = list()
 							qdel(B)
 				qdel(src)
 
-//////////             Rune 24 (counting burningblood, which kinda doesnt work yet.)
+//////////             Rune 24 (counting burningblood, which kinda doesn't work yet.)
 
 		runestun(var/mob/living/T as mob)
 			if(istype(src,/obj/effect/rune))   ///When invoked as rune, flash and stun everyone around.
