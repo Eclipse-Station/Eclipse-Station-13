@@ -207,6 +207,28 @@ var/list/global/map_templates = list()
 				chosen_template = pick(priority_submaps)
 			else
 				chosen_template = pick(potential_submaps)
+			
+			// // // BEGIN ECLIPSE EDIT // // //
+			//Speed up the submap generation system, by giving up if we start running low on sanity.
+/*
+ * SUBMAP GENERATOR YIELDING
+ * The submap loader will yield if the budget is below a certain value, based on
+ * the current sanity. This graphs as y <= -4/9x + 25, where Y is budget and X
+ * is sanity. Yielding begins at 56.25 sanity if budget below 0, and ends at 
+ * 0 sanity if budget is below 25 (if it hits zero it'll abort anyway).
+ */
+			if(budget <= ((-(4/9) * overall_sanity) + 25))
+				admin_notice("Submap loader yielding at sanity [overall_sanity] with [budget] left to spend.", R_DEBUG)
+				break
+				
+/*
+ * MORE QUICK NUMBERS:
+ * If sanity is 5, will yield if budget below 22.777...(REPEATED)
+ * If sanity is 10, will yield if budget below 20.555...(REPEATED)
+ * If sanity is 25, will yield if budget below 13.888...(REPEATED)
+ * If sanity is 50, will yield if budget below 2.777...(REPEATED)
+ */
+			// // // END ECLIPSE EDIT // // //
 
 		else // We're out of submaps.
 			admin_notice("Submap loader had no submaps to pick from with [budget] left to spend.", R_DEBUG)
