@@ -4,7 +4,7 @@
 	var/short_name = ""			// Organization's shortname (NanoTrasen for "NanoTrasen Incorporated")
 	var/acronym = ""			// Organization's acronym, e.g. 'NT' for NanoTrasen'.
 	var/desc = ""				// One or two paragraph description of the organization, but only current stuff.  Currently unused.
-	var/history = ""			// Historical discription of the organization's origins  Currently unused.
+	var/history = ""			// Historical description of the organization's origins  Currently unused.
 	var/work = ""				// Short description of their work, eg "an arms manufacturer"
 	var/headquarters = ""		// Location of the organization's HQ.  Currently unused.
 	var/motto = ""				// A motto/jingle/whatever, if they have one.  Currently unused.
@@ -140,10 +140,10 @@
 	name = "Hephaestus Industries"
 	short_name = "Hephaestus"
 	acronym = "HI"
-	desc = "Hephaestus Industries is the largest supplier of arms, ammunition, and small millitary vehicles in Sol space. \
+	desc = "Hephaestus Industries is the largest supplier of arms, ammunition, and small military vehicles in Sol space. \
 	Hephaestus products have a reputation for reliability, and the corporation itself has a noted tendency to stay removed \
 	from corporate politics. They enforce their neutrality with the help of a fairly large asset-protection contingent which \
-	prevents any contracting polities from using their own materiel against them. SolGov itself is one of Hephaestus' largest \
+	prevents any contracting polities from using their own material against them. SolGov itself is one of Hephaestus' largest \
 	bulk contractors owing to the above factors."
 	history = ""
 	work = "arms manufacturer"
@@ -195,9 +195,9 @@
 	name = "Vey-Medical" //The Wiki displays them as Vey-Medical.
 	short_name = "Vey-Med"
 	acronym = "VM"
-	desc = "Vey-Med is one of the newer TSCs on the block and is notable for being largely owned and opperated by Skrell. \
+	desc = "Vey-Med is one of the newer TSCs on the block and is notable for being largely owned and operated by Skrell. \
 	Despite the suspicion and prejudice leveled at them for their alien origin, Vey-Med has obtained market dominance in \
-	the sale of medical equipment-- from surgical tools to large medical devices to the Oddyseus trauma response mecha \
+	the sale of medical equipment-- from surgical tools to large medical devices to the Odysseus trauma response mecha \
 	and everything in between. Their equipment tends to be top-of-the-line, most obviously shown by their incredibly \
 	human-like FBP designs. Vey's rise to stardom came from their introduction of ressurective cloning, although in \
 	recent years they've been forced to diversify as their patents expired and NanoTrasen-made medications became \
@@ -241,7 +241,7 @@
 	short_name = "Zeng-Hu"
 	acronym = "ZH"
 	desc = "Zeng-Hu is an old TSC, based in the Sol system. Until the discovery of Phoron, Zeng-Hu maintained a stranglehold \
-	on the market for medications, and many household names are patentted by Zeng-Hu-- Bicaridyne, Dylovene, Tricordrizine, \
+	on the market for medications, and many household names are patented by Zeng-Hu-- Bicaridyne, Dylovene, Tricordrizine, \
 	and Dexalin all came from a Zeng-Hu medical laboratory. Zeng-Hu's fortunes have been in decline as Nanotrasen's near monopoly \
 	on phoron research cuts into their R&D and Vey-Med's superior medical equipment effectively decimated their own equipment \
 	interests. The three-way rivalry between these companies for dominance in the medical field is well-known and a matter of \
@@ -301,7 +301,7 @@
 	desc = "Bishop's focus is on high-class, stylish cybernetics. A favorite among transhumanists (and a bête noire for \
 	bioconservatives), Bishop manufactures not only prostheses but also brain augmentation, synthetic organ replacements, \
 	and odds and ends like implanted wrist-watches. Their business model tends towards smaller, boutique operations, giving \
-	it a reputation for high price and luxury, with Bishop cyberware often rivalling Vey-Med's for cost. Bishop's reputation \
+	it a reputation for high price and luxury, with Bishop cyberware often rivaling Vey-Med's for cost. Bishop's reputation \
 	for catering towards the interests of human augmentation enthusiasts instead of positronics have earned it ire from the \
 	Positronic Rights Group and puts it in ideological (but not economic) competition with Morpheus Cyberkinetics."
 	history = ""
@@ -465,7 +465,7 @@
 /datum/lore/organization/tsc/independent
 	name = "Free Traders"
 	short_name = "Free Trader"
-	desc = "Though less common now than they were in the decades before the Sol Economic Organization took power, independent traders remain an important part of the galactic economy, owing in no small part to protective tarrifs established by the Free Trade Union in the late twenty-forth century."
+	desc = "Though less common now than they were in the decades before the Sol Economic Organization took power, independent traders remain an important part of the galactic economy, owing in no small part to protective tariffs established by the Free Trade Union in the late twenty-forth century."
 	history = ""
 	work = "trade and transit"
 	headquarters = "N/A"

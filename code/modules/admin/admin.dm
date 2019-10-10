@@ -733,7 +733,7 @@ var/datum/announcement/minor/admin_min_announcer = new
 	
 	//Time to find how they screwed up.
 	//Wasn't the right length
-	if((decomposed.len) % 3) //+1 to accomidate the lack of a wait time for the last message
+	if((decomposed.len) % 3) //+1 to accommodate the lack of a wait time for the last message
 		to_chat(usr,"<span class='warning'>You passed [decomposed.len] segments (senders+messages+pauses). You must pass a multiple of 3, minus 1 (no pause after the last message). That means a sender and message on every other line (starting on the first), separated by a pipe character (|), and a number every other line that is a pause in seconds.</span>")
 		return
 	
@@ -1450,7 +1450,7 @@ var/datum/announcement/minor/admin_min_announcer = new
 /datum/admins/proc/paralyze_mob(mob/living/H as mob)
 	set category = "Admin"
 	set name = "Toggle Paralyze"
-	set desc = "Paralyzes a player. Or unparalyses them."
+	set desc = "Paralyzes a player. Or unparalyzes them."
 
 	var/msg
 

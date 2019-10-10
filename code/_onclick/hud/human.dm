@@ -288,7 +288,7 @@
 	if(hud_data.has_nutrition)
 		if(target.isSynthetic()) //are we a synth?
 			mymob.synthbattery_icon = new /obj/screen()
-			mymob.synthbattery_icon.icon = 'icons/mob/screen1_robot.dmi' //dont define a new ui_style when we are only changing a single entry
+			mymob.synthbattery_icon.icon = 'icons/mob/screen1_robot.dmi' //don't define a new ui_style when we are only changing a single entry
 			mymob.synthbattery_icon.icon_state = "charge0" //use the power cell icons for robots; burger icons OUT
 			mymob.synthbattery_icon.name = "cell"
 			mymob.synthbattery_icon.screen_loc = ui_nutrition

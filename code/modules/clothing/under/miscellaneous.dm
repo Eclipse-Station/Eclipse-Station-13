@@ -27,8 +27,8 @@
 	item_state_slots = list(slot_r_hand_str = "scratch", slot_l_hand_str = "scratch")
 
 /obj/item/clothing/under/sl_suit
-	desc = "It's a very amish looking suit."
-	name = "amish suit"
+	desc = "It's a very Amish looking suit."
+	name = "Amish suit"
 	icon_state = "sl_suit"
 	rolled_sleeves = 0
 
@@ -721,17 +721,17 @@
 	icon_state = "mankini"
 
 /*
- * pyjamas
+ * pajamas
  */
 /obj/item/clothing/under/bluepyjamas
-	name = "blue pyjamas"
+	name = "blue pajamas"
 	desc = "Slightly old-fashioned sleepwear."
 	icon_state = "blue_pyjamas"
 	item_state_slots = list(slot_r_hand_str = "blue", slot_l_hand_str = "blue")
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS|LEGS
 
 /obj/item/clothing/under/redpyjamas
-	name = "red pyjamas"
+	name = "red pajamas"
 	desc = "Slightly old-fashioned sleepwear."
 	icon_state = "red_pyjamas"
 	item_state_slots = list(slot_r_hand_str = "red", slot_l_hand_str = "red")

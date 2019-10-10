@@ -8,7 +8,7 @@
 	obj_path = /obj/item/clothing/suit/armor/tesla
 
 /obj/item/clothing/suit/armor/tesla
-	name = "tesla armor"
+	name = "Tesla armor"
 	desc = "This rather dangerous looking armor will hopefully shock your enemies, and not you in the process."
 	icon_state = "tesla_armor_1" //wip
 	blood_overlay_type = "armor"

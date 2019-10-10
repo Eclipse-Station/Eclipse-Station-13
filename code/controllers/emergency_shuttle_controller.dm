@@ -190,7 +190,7 @@ var/global/datum/emergency_shuttle_controller/emergency_shuttle
 //so we don't have emergency_shuttle.shuttle.location everywhere
 /datum/emergency_shuttle_controller/proc/location()
 	if (!shuttle)
-		return 1 	//if we dont have a shuttle datum, just act like it's at centcom
+		return 1 	//if we don't have a shuttle datum, just act like it's at centcom
 	return shuttle.location
 
 //returns the time left until the shuttle arrives at it's destination, in seconds
