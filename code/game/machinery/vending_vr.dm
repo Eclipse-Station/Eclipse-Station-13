@@ -1,6 +1,7 @@
 //Tweaked existing vendors
 /obj/machinery/vending/hydroseeds/New()
-	contraband += list(/obj/item/seeds/shrinkshroom = 3,/obj/item/seeds/megashroom = 3) //Eclipse edit - makes nerfed size shrooms available only via hacking
+	contraband += list(/obj/item/seeds/shrinkshroom = 3,/obj/item/seeds/megashroom = 3, /obj/item/seeds/ambrosiavulgarisseed = 3) //Eclipse edit - makes nerfed size shrooms available only via hacking
+	//Eclipse edit 2019-10-09: Add ambrosia vulgaris seed back in. It's a contraband item, so contraband charges apply.
 	..()
 
 /obj/machinery/vending/security/New()
