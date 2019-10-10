@@ -99,7 +99,7 @@
 
 /obj/machinery/station_map/proc/startWatching(var/mob/user)
 	// Okay, does this belong on a screen thing or what?
-	// One argument is that this is an "in game" object becuase its in the world.
+	// One argument is that this is an "in game" object because its in the world.
 	// But I think it actually isn't.  The map isn't holo projected into the whole room, (maybe strat one is!)
 	// But for this, the on screen object just represents you leaning in and looking at it closely.
 	// So it SHOULD be a screen object.
@@ -119,7 +119,7 @@
 			animate(holomap_datum.station_map, alpha = 255, time = 5, easing = LINEAR_EASING)
 			flick("station_map_activate", src)
 			// Wait, if wea re not modifying the holomap_obj... can't it be part of the global hud?
-			user.client.screen |= global_hud.holomap // TODO - HACK! This should be there permenently really.
+			user.client.screen |= global_hud.holomap // TODO - HACK! This should be there permanently really.
 			user.client.images |= holomap_datum.station_map
 
 			watching_mob = user

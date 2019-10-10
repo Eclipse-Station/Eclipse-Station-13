@@ -22,7 +22,7 @@
 
 //
 // "Tram" Emergency Shuttler
-// Becuase the tram only has its own doors and no corresponding station doors, a docking controller is overkill.
+// Because the tram only has its own doors and no corresponding station doors, a docking controller is overkill.
 // Just open the gosh darn doors!  Also we avoid having a physical docking controller obj for gameplay reasons.
 /datum/shuttle/ferry/emergency
 	var/tag_door_station = "escape_shuttle_hatch_station"
@@ -65,7 +65,7 @@
 //
 /datum/shuttle/ferry/tether_backup
 	crash_message = "Tether shuttle distress signal received. Shuttle location is approximately 200 meters from tether base."
-	category = /datum/shuttle/ferry/tether_backup // So shuttle_controller.dm doesn't try and instantiate this type as an acutal mapped in shuttle.
+	category = /datum/shuttle/ferry/tether_backup // So shuttle_controller.dm doesn't try and instantiate this type as an actual mapped in shuttle.
 	var/list/engines = list()
 	var/obj/machinery/computer/shuttle_control/tether_backup/computer
 
@@ -198,7 +198,7 @@
 		var/list/occupants = list()
 		for(var/mob/living/L in departing)
 			occupants += key_name(L)
-		log_and_message_admins("Shuttle abduction occuring with (only mobs on turfs): [english_list(occupants)]")
+		log_and_message_admins("Shuttle abduction occurring with (only mobs on turfs): [english_list(occupants)]")
 		//Build the route to the alien ship
 		var/obj/shuttle_connector/alienship/ASC = new /obj/shuttle_connector/alienship(null)
 		ASC.setup_routes()

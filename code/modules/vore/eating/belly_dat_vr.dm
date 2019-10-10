@@ -35,7 +35,7 @@
 	var/tmp/mob/living/owner					// The mob whose belly this is.
 	var/tmp/list/internal_contents = list()		// People/Things you've eaten into this belly!
 	var/tmp/emotePend = FALSE					// If there's already a spawned thing counting for the next emote
-	var/tmp/list/items_preserved = list()		// Stuff that wont digest.
+	var/tmp/list/items_preserved = list()		// Stuff that won't digest.
 	var/list/slots = list(slot_back,slot_handcuffed,slot_l_store,slot_r_store,slot_wear_mask,slot_l_hand,slot_r_hand,slot_wear_id,slot_glasses,slot_gloves,slot_head,slot_shoes,slot_belt,slot_wear_suit,slot_w_uniform,slot_s_store,slot_l_ear,slot_r_ear)
 
 

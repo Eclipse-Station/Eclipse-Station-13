@@ -6,7 +6,7 @@
 
 /obj/item/weapon/gun/projectile/zippo_gun
 	name = "\improper Zippo gun"
-	desc = "The zippo, but it's a gun. Fires 9mm rounds."		//We Are Number One, but it's a shitty desc comment
+	desc = "The Zippo, but it's a gun. Fires 9mm rounds."		//We Are Number One, but it's a shitty desc comment
 	var/concealed_name = "\improper Zippo lighter"
 	var/concealed_desc = "The zippo. Something feels off about this one, though..."
 	var/name_override = FALSE		//prevents the name from changing when concealed/revealed.
@@ -125,7 +125,7 @@
 					to_chat(user, "<span class='notice'>You fold the [src], making it look like an ordinary lighter.</span>")
 					update_icon()
 					return TRUE
-				else		//user moved or cancelled
+				else		//user moved or canceled
 					to_chat(user, "<span class='notice'>The pieces of [src] fall back into their original place.</span>")
 
 		else	//gun is concealed, so unfold it.

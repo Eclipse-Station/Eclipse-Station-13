@@ -77,14 +77,14 @@
 /obj/effect/directional_shield/proc/adjust_health(amount)
 	if(projector)
 		projector.adjust_health(amount) // Projector will kill the shield if needed.
-	// If the shield lacks a projector, then it was probably spawned in by an admin for bus, so it's indestructable.
+	// If the shield lacks a projector, then it was probably spawned in by an admin for bus, so it's indestructible.
 
 
 // This actually creates the shields.  It's an item so that it can be carried, but it could also be placed inside a stationary object if desired.
 // It should work inside the contents of any mob.
 /obj/item/shield_projector
 	name = "combat shield projector"
-	desc = "A miniturized and compact shield projector.  This type has been optimized to diffuse lasers or block high velocity projectiles from the outside, \
+	desc = "A miniaturized and compact shield projector.  This type has been optimized to diffuse lasers or block high velocity projectiles from the outside, \
 	but allow those projectiles to leave the shield from the inside.  Blocking too many damaging projectiles will cause the shield to fail."
 	icon = 'icons/obj/device.dmi'
 	icon_state = "signmaker_sec"

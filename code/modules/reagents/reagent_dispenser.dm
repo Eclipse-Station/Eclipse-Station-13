@@ -389,7 +389,7 @@
 //Cooking oil refill tank
 /obj/structure/reagent_dispensers/cookingoil
 	name = "cooking oil tank"
-	desc = "A fifty-litre tank of commercial-grade corn oil, intended for use in large scale deep fryers. Store in a cool, dark place"
+	desc = "A fifty-liter tank of commercial-grade corn oil, intended for use in large scale deep fryers. Store in a cool, dark place"
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "oiltank"
 	amount_per_transfer_from_this = 120

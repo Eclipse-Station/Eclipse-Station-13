@@ -306,16 +306,16 @@
 		enabled = FALSE
 		icon_state = "scrub0"
 
-/obj/item/weapon/gun/energy/taser/mounted/cyborg/ertgun //Not a taser, but it's being used as a base so it takes energy and actually works.
+/obj/item/weapon/gun/energy/taser/mounted/cyborg/ertgun //Not a Taser, but it's being used as a base so it takes energy and actually works.
 	name = "disabler"
 	desc = "A small and nonlethal gun produced by NT.."
 	icon = 'icons/mob/dogborg_vr.dmi'
 	icon_state = "projgun"
 	fire_sound = 'sound/weapons/eLuger.ogg'
 	projectile_type = /obj/item/projectile/beam/disable
-	charge_cost = 240 //Normal cost of a taser. It used to be 1000, but after some testing it was found that it would sap a borg's battery to quick
+	charge_cost = 240 //Normal cost of a Taser. It used to be 1000, but after some testing it was found that it would sap a borg's battery to quick
 	recharge_time = 10 //Takes ten ticks to recharge a shot, so don't waste them all!
-	//cell_type = null //Same cell as a taser until edits are made.
+	//cell_type = null //Same cell as a Taser until edits are made.
 
 /obj/item/weapon/dogborg/swordtail
 	name = "sword tail"

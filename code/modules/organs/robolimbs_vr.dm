@@ -108,7 +108,7 @@
 
 /datum/robolimb/dsi_sergal
 	company = "DSI - Sergal"
-	desc = "This limb feels soft and fluffy, realistic design and toned muscle. By Darkside Incorperated."
+	desc = "This limb feels soft and fluffy, realistic design and toned muscle. By Darkside Incorporated."
 	icon = 'icons/mob/human_races/cyberlimbs/DSISergal/dsi_sergal.dmi'
 	blood_color = "#ffe2ff"
 	lifelike = 1

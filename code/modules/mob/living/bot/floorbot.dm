@@ -307,7 +307,7 @@
 		..()
 		return
 	if(contents.len >= 1)
-		user << "<span class='notice'>They wont fit in as there is already stuff inside.</span>"
+		user << "<span class='notice'>They won't fit in as there is already stuff inside.</span>"
 		return
 	if(user.s_active)
 		user.s_active.close(user)

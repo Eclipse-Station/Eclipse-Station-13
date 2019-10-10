@@ -50,7 +50,7 @@
 	if (istype(user, /obj/machinery/computer/shuttle_control/emergency))
 		var/obj/machinery/computer/shuttle_control/emergency/C = user
 
-		//Initiating or cancelling a launch ALWAYS requires authorization, but if we are already set to launch anyways than forcing does not.
+		//Initiating or canceling a launch ALWAYS requires authorization, but if we are already set to launch anyways than forcing does not.
 		//This is so that people can force launch if the docking controller cannot safely undock without needing X heads to swipe.
 		if (!(process_state == WAIT_LAUNCH || C.has_authorization()))
 			return 0
@@ -100,8 +100,8 @@
 			to_chat(world, "<span class='notice'><b>Alert: The shuttle autopilot has been overridden. Launch sequence aborted!</b></span>")
 
 	if(usr)
-		log_admin("[key_name(usr)] has overridden the departure shuttle's autopilot and cancelled the launch sequence.")
-		message_admins("[key_name_admin(usr)] has overridden the departure shuttle's autopilot and cancelled the launch sequence.")
+		log_admin("[key_name(usr)] has overridden the departure shuttle's autopilot and canceled the launch sequence.")
+		message_admins("[key_name_admin(usr)] has overridden the departure shuttle's autopilot and canceled the launch sequence.")
 
 	..(user)
 
