@@ -131,7 +131,7 @@
 
 // Invisible object that blocks z transfer to/from its turf and the turf above.
 /obj/effect/ceiling
-	invisibility = 101 // nope cant see this
+	invisibility = 101 // nope can't see this
 	anchored = 1
 
 /obj/effect/ceiling/CheckExit(atom/movable/O as mob|obj, turf/target as turf)
@@ -218,7 +218,7 @@
 	on_store_message = "has departed on the tram."
 	on_store_name = "Travel Oversight"
 	on_enter_occupant_message = "The tram arrives at the platform; you step inside and take a seat."
-	on_store_visible_message_1 = "'s speakers chime, anouncing a tram has arrived to take"
+	on_store_visible_message_1 = "'s speakers chime, announcing a tram has arrived to take"
 	on_store_visible_message_2 = "to the colony"
 	time_till_despawn = 10 SECONDS
 	spawnpoint_type = /datum/spawnpoint/tram

@@ -25,7 +25,7 @@
 /obj/machinery/nuclearbomb/tesla_act(power, explosive)
 	..()
 	if(explosive)
-		qdel(src)//like the singulo, tesla deletes it. stops it from exploding over and over
+		qdel(src)//like the singulo, Tesla deletes it. stops it from exploding over and over
 
 /obj/machinery/tesla_act(power, explosive = FALSE)
 	..()
@@ -36,7 +36,7 @@
 	else
 		ex_act(2)
 
-/obj/machinery/camera/tesla_act(var/power)//EMP proof upgrade also makes it tesla immune
+/obj/machinery/camera/tesla_act(var/power)//EMP proof upgrade also makes it Tesla immune
 	if(isEmpProof())
 		return
 	..()

@@ -4,7 +4,7 @@
 	var/message = ""
 	var/weight_examine = round(weight)
 //	var/tone_examine = round(tone)
-	var/t_He 	= "It" //capitalised for use at the start of each line.
+	var/t_He 	= "It" //capitalized for use at the start of each line.
 	var/t_he	= "it"
 	var/t_his 	= "its"
 	var/t_His 	= "Its"
@@ -74,7 +74,7 @@
 		return ""
 	var/message = ""
 	var/tone_examine = round(tone)
-	var/t_He 	= "It" //capitalised for use at the start of each line.
+	var/t_He 	= "It" //capitalized for use at the start of each line.
 	var/t_he	= "it"
 	var/t_his 	= "its"
 	var/t_His 	= "Its"
@@ -131,7 +131,7 @@
 	return message
 /* ECLIPSE EDIT - Yeah let's fucking not.
 	var/nutrition_examine = round(nutrition)
-	var/t_He 	= "It" //capitalised for use at the start of each line.
+	var/t_He 	= "It" //capitalized for use at the start of each line.
 	var/t_His 	= "Its"
 	var/t_his 	= "its"
 	var/t_is 	= "is"
@@ -188,7 +188,7 @@
 	var/message = ""
 	var/weight_examine = round(weight)
 	var/tone_examine = round(tone)
-	var/t_He 	= "It" //capitalised for use at the start of each line.
+	var/t_He 	= "It" //capitalized for use at the start of each line.
 	var/t_he	= "it"
 	var/t_his 	= "its"
 	var/t_His 	= "Its"
@@ -223,7 +223,7 @@
 
 appearance_boxes[first_list][second_list]
 
-	if(weight_examine && tone_examine) //First list selects dependant on the fatness. The one within selects on the tone aka muscle level.
+	if(weight_examine && tone_examine) //First list selects dependent on the fatness. The one within selects on the tone aka muscle level.
 	var/list/appearance_boxes[10][10] = list(
 		1 = list(
 			1000 = message = "<span class='warning'>[t_He] [t_is] terribly lithe and frail!</span>\n",

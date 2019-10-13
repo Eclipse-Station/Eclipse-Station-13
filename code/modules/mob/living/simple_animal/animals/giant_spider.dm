@@ -344,7 +344,7 @@ Guard Family
 
 	maxHealth = 210
 	health = 210
-	taser_kill = 0 //It -is- the taser.
+	taser_kill = 0 //It -is- the Taser.
 
 	melee_damage_lower = 10
 	melee_damage_upper = 25

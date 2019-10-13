@@ -120,9 +120,9 @@
 				user << "Cyborg unlocked."
 				target << "You have been unlocked."
 		else if(target)
-			user << "Unlock cancelled - cyborg is already unlocked."
+			user << "Unlock canceled - cyborg is already unlocked."
 		else
-			user << "Unlock cancelled - lost connection to cyborg."
+			user << "Unlock canceled - lost connection to cyborg."
 		user.hacking = 0
 
 

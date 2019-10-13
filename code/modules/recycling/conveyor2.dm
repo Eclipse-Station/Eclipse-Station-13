@@ -192,7 +192,7 @@
 
 	var/id = "" 				// must match conveyor IDs to control them
 
-	var/list/conveyors		// the list of converyors that are controlled by this switch
+	var/list/conveyors		// the list of conveyors that are controlled by this switch
 	anchored = 1
 
 
@@ -289,7 +289,7 @@
 			return
 
 /obj/machinery/conveyor_switch/oneway
-	var/convdir = 1 //Set to 1 or -1 depending on which way you want the convayor to go. (In other words keep at 1 and set the proper dir on the belts.)
+	var/convdir = 1 //Set to 1 or -1 depending on which way you want the conveyor to go. (In other words keep at 1 and set the proper dir on the belts.)
 	desc = "A conveyor control switch. It appears to only go in one direction."
 
 // attack with hand, switch position

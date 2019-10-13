@@ -2,7 +2,7 @@
 /obj/machinery/power/smes/batteryrack
 	name = "power cell rack PSU"
 	desc = "A rack of power cells working as a PSU."
-	charge = 0 //you dont really want to make a potato PSU which already is overloaded
+	charge = 0 //you don't really want to make a potato PSU which already is overloaded
 	output_attempt = 0
 	input_level = 0
 	output_level = 0

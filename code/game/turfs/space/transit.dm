@@ -3,7 +3,7 @@
 	can_build_into_floor = FALSE
 	var/pushdirection // push things that get caught in the transit tile this direction
 
-//Overwrite because we dont want people building rods in space.
+//Overwrite because we don't want people building rods in space.
 /turf/space/transit/attackby(obj/O as obj, mob/user as mob)
 	return
 

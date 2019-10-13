@@ -7,7 +7,7 @@
 //This is used by guns shooting in automatic mode
 /obj/screen/auto_target
 	name = "targeter"
-	icon = null//We dont want people to see this guy
+	icon = null//We don't want people to see this guy
 	density = 0
 	anchored = 1
 	var/obj/item/weapon/gun/gun
@@ -26,7 +26,7 @@
 /obj/screen/auto_target/CanPass()//Everything should ignore this guy and just pass by
 		return 1
 
-	//Used to get rid of this if they target but dont actually shoot or stop shooting (no ammo) yet are still dragging us around
+	//Used to get rid of this if they target but don't actually shoot or stop shooting (no ammo) yet are still dragging us around
 /obj/screen/auto_target/proc/autodel()
 	set waitfor=0
 	if(active == 1)
