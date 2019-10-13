@@ -47,7 +47,7 @@
 					input = P
 				if(ATM_OUTPUT)
 					output = P
-				if(ATM_O2 to ATM_N2O)
+				if(ATM_O2 to ATM_HIGHEST)		//Eclipse edit: Future additions refactor
 					atmos_filters += P
 
 /obj/machinery/atmospherics/omni/atmos_filter/error_check()
@@ -123,7 +123,7 @@
 			if(ATM_OUTPUT)
 				output = 1
 				atmo_filter = 0
-			if(ATM_O2 to ATM_N2O)
+			if(ATM_O2 to ATM_HIGHEST)		//Eclipse edit - Future additions refactor
 				f_type = mode_send_switch(P.mode)
 
 		portData[++portData.len] = list("dir" = dir_name(P.dir, capitalize = 1), \
@@ -152,6 +152,8 @@
 			return "Phoron" //*cough* Plasma *cough*
 		if(ATM_N2O)
 			return "Nitrous Oxide"
+		if(ATM_CHLOR)		//Eclipse addition.
+			return "Trichloramine"
 		else
 			return null
 
@@ -177,7 +179,7 @@
 			if("switch_mode")
 				switch_mode(dir_flag(href_list["dir"]), mode_return_switch(href_list["mode"]))
 			if("switch_filter")
-				var/new_filter = input(usr,"Select filter mode:","Change filter",href_list["mode"]) in list("None", "Oxygen", "Nitrogen", "Carbon Dioxide", "Phoron", "Nitrous Oxide")
+				var/new_filter = input(usr,"Select filter mode:","Change filter",href_list["mode"]) in list("None", "Oxygen", "Nitrogen", "Carbon Dioxide", "Phoron", "Nitrous Oxide","Trichloramine")
 				switch_filter(dir_flag(href_list["dir"]), mode_return_switch(new_filter))
 
 	update_icon()
@@ -196,6 +198,8 @@
 			return ATM_P
 		if("Nitrous Oxide")
 			return ATM_N2O
+		if("Trichloramine")		//Eclipse edit: Trichloramine
+			return ATM_CHLOR
 		if("in")
 			return ATM_INPUT
 		if("out")

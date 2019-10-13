@@ -539,28 +539,31 @@ var/last_message = 0
 		var/ratio = (america/NCl3_toxic_min) * 10
 		var/NCl3_pp = (breath.gas["trichloramine"] / breath.total_moles) * breath_pressure
 		//let's get this party started.
-		if(NCl3_pp > 0.25)		//If less than or equal to the minimum we care about, forget it. 
-			var/notif = pick("You smell chlorine.")		//if there's trace amounts, the only adverse effect is we smell chlorine.
-			var/spanclass = "warning"
-			var/disp_probability = 10
-			if(NCl3_pp > NCl3_warn_min)			//Again, no real adverse effect, except for a message
+		
+		if(NCl3_pp >= 0.25)		//If less than or equal to the minimum we care about, forget it. 
+		//Define the notif variable, while we're here
+			var/notif = "Alan, write some dialogue here!"		//Okay, calm down, Gage. If the player sees this, it's not set for some reason.
+			
+			//Alright, let's rock and roll.
+			if(NCl3_pp >= NCl3_toxic_min)		// Start with lethality and go down from there.
+				notif = pick("Your eyes sting!","Your throat burns!","You feel very dizzy!","You feel like you're choking!","The smell of chlorine is overwhelming!")
+				if(prob(80))
+					src << "<span class='critical'>[notif]</span>"
+				if(reagents)
+					reagents.add_reagent("toxin", Clamp(ratio, MIN_TOXIN_DAMAGE, MAX_TOXIN_DAMAGE))
+
+			//Not lethal, but makes loud messages.
+			else if(NCl3_pp >= NCl3_warn_min)
 				notif = pick("Your eyes water.","Your throat itches.","You feel a little dizzy.","You feel short of breath.","There's a strong smell of chlorine.")
-				spanclass = "danger"
-				disp_probability = 20
-				if(NCl3_pp > NCl3_toxic_min)	//ROCK AND ROLL
-					notif = pick("Your eyes sting!","Your throat burns!","You feel very dizzy!","You feel like you're choking!","The smell of chlorine is overwhelming!")
-					spanclass = "critical"
-					disp_probability = 40
-					if(reagents)
-						reagents.add_reagent("toxin", Clamp(ratio, MIN_TOXIN_DAMAGE, MAX_TOXIN_DAMAGE))
-			if(prob(disp_probability))
-				switch(spanclass)
-					if("warning")
-						usr << "<span class='warning'>[notif]</span>"
-					if("danger")
-						usr << "<span class='danger'>[notif]</span>"
-					else
-						usr << "<span class='critical'>[notif]</span>"
+				if(prob(40))
+					src << "<span class='danger'>[notif]</span>"
+
+			//Even more dangerously un-lethal!
+			else
+				notif = "You smell chlorine."
+				if(prob(20 ))
+					src << "<span class='warning'>[notif]</span>"
+
 		breath.adjust_gas("trichloramine", -america/6, update = 0) //update after
 	// // // END ECLIPSE EDITS // // //
 	
