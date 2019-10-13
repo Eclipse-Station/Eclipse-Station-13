@@ -1,6 +1,6 @@
 /************************************************************************/
 /*
-#    An explaination of the naming format for guns and ammo:
+#    An explanation of the naming format for guns and ammo:
 #
 #    a = Ammo, as in individual rounds of ammunition.
 #    b = Box, intended to have ammo taken out one at a time by hand.
