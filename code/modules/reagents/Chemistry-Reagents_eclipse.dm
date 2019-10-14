@@ -18,6 +18,7 @@
 
 /datum/reagent/toxin/trichloramine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_VOX)		//shitbirds heal from this crap. Somehow. Don't ask me I'm not a chemist.
+		metabolism = REM		//gotta metabolise fast!
 		//Bad effects: Drowsiness.
 		var/effective_dose = dose
 	
@@ -36,8 +37,8 @@
 			M.drowsyness = max(M.drowsyness, 60)
 
 		//Beneficial effects: Heals brute and toxins. 6 units/tick each.
-		M.adjustOxyLoss(-6 * removed)
-		M.heal_organ_damage(3 * removed, 3 * removed)
-		M.adjustToxLoss(-3 * removed)
+		M.adjustOxyLoss(-12 * removed)
+		M.heal_organ_damage(6 * removed, 6 * removed)
+		M.adjustToxLoss(-6 * removed)
 	else
 		..()
