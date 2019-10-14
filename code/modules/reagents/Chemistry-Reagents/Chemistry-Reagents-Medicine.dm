@@ -470,8 +470,7 @@
 		return
 // // // BEGIN ECLIPSE EDITS // // //
 // Pills ain't gonna fix a sledgehammer to the back of the leg
-/* // // //---BEGIN REMOVAL---// // //
-
+/*		//Eclipse Removal
 	M.heal_organ_damage(3 * removed, 0)	//Gives the bones a chance to set properly even without other meds
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
@@ -480,13 +479,11 @@
 				O.mend_fracture()		//Only works if the bone won't rebreak, as usual
 				H.custom_pain("You feel a terrible agony tear through your bones!",60)
 				H.AdjustWeakened(1)		//Bones being regrown will knock you over
-*/ // // //---END REMOVAL---// // //
-// // //---BEGIN REPLACEMENT---// // //
+*/
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 		for(var/obj/item/organ/external/O in H.bad_external_organs)
-			O.heal_organ_damage(3 * removed, 0)		//No fancy shit here. Just healing.
-// // //---END REPLACEMENT---// // //
+			O.heal_damage(3 * removed, 0)		//No fancy shit here. Just healing.
 // // // END ECLIPSE EDITS // // //
 
 /datum/reagent/myelamine
