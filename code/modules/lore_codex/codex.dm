@@ -1,3 +1,11 @@
+/* Eclipse Note:
+ * If you change this, you are also going to have to disable some things from
+ * the lore_data_vr folder. I haven't thumbed through everything yet, so I can't
+ * really tell you exactly what you'll need to disable with 100% certainty.
+ * Hopefully you won't find it too difficult.			^Spitzer
+ */
+
+
 // Inherits from /book/ so it can fit on bookshelves.
 /obj/item/weapon/book/codex // Vorestation Edits throughout this object.
 	name = "The Traveler's Guide to Human Space: Virgo-Erigone Edition"
