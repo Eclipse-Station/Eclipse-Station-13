@@ -468,8 +468,10 @@
 /datum/reagent/osteodaxon/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_DIONA)
 		return
-//Eclipse replacement: Let's not Thanos-snap this shit away.
-/*			//Begin Eclipse removal
+// // // BEGIN ECLIPSE EDITS // // //
+// Pills ain't gonna fix a sledgehammer to the back of the leg
+/* // // //---BEGIN REMOVAL---// // //
+
 	M.heal_organ_damage(3 * removed, 0)	//Gives the bones a chance to set properly even without other meds
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
@@ -478,14 +480,14 @@
 				O.mend_fracture()		//Only works if the bone won't rebreak, as usual
 				H.custom_pain("You feel a terrible agony tear through your bones!",60)
 				H.AdjustWeakened(1)		//Bones being regrown will knock you over
-*/		//End Eclipse removal.
-			//Begin Eclipse replacement code.
+*/ // // //---END REMOVAL---// // //
+// // //---BEGIN REPLACEMENT---// // //
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 		for(var/obj/item/organ/external/O in H.bad_external_organs)
 			O.heal_organ_damage(3 * removed, 0)		//No fancy shit here. Just healing.
-			//End Eclipse replacement code.
-
+// // //---END REPLACEMENT---// // //
+// // // END ECLIPSE EDITS // // //
 
 /datum/reagent/myelamine
 	name = "Myelamine"
