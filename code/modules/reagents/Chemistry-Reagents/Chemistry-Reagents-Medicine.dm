@@ -478,7 +478,7 @@
 				O.mend_fracture()		//Only works if the bone won't rebreak, as usual
 				H.custom_pain("You feel a terrible agony tear through your bones!",60)
 				H.AdjustWeakened(1)		//Bones being regrown will knock you over
-//End Eclipse removal. */
+*/		//End Eclipse removal.
 			//Begin Eclipse replacement code.
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
