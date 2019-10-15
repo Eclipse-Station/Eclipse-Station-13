@@ -27,7 +27,7 @@
 	if(severity >= EVENT_LEVEL_MAJOR)
 		gas_choices -= "carbon_dioxide"		//remove the annoying ones, nothing but danger here
 		gas_choices -= "sleeping_agent"
-	// 	gas_choices += "volatile_fuel" // Dangerous and no default atmos setup!
+		gas_choices += "volatile_fuel" // Dangerous and no default atmos setup!
 // // // END ECLIPSE EDITS // // //
 	gas_type = pick(gas_choices)
 
