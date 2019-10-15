@@ -1,15 +1,15 @@
 /* Eclipse Note:
  * If you change this, you are also going to have to disable some things from
- * the lore_data_vr folder. I haven't thumbed through everything yet, so I can't
- * really tell you exactly what you'll need to disable with 100% certainty.
- * Hopefully you won't find it too difficult.			^Spitzer
+ * the lore_data_vr folder. I've thumbed through it and flagged everything that
+ * will need to be disabled with a #warn flag, so the compiler should grumble at
+ * you if you accidentally leave it in.			^Spitzer
  */
 
 
 // Inherits from /book/ so it can fit on bookshelves.
-/obj/item/weapon/book/codex // Vorestation Edits throughout this object.
-	name = "The Traveler's Guide to Human Space: Virgo-Erigone Edition"
-	desc = "Contains useful information about the world around you.  It seems to have been written for travelers to Virgo-Erigone, human or not. It also \
+/obj/item/weapon/book/codex // Vorestation Edits throughout this object.		//Eclipse Edit: same
+	name = "The Traveler's Guide to Human Space: Vir Edition"
+	desc = "Contains useful information about the world around you.  It seems to have been written for travelers to Vir, human or not. It also \
 	has the words 'Don't Panic' in small, friendly letters on the cover."
 	icon_state = "codex"
 	unique = TRUE
@@ -26,9 +26,9 @@
 	icon_state = "[initial(icon_state)]-open"
 	tree.display(user)
 
-/obj/item/weapon/book/codex/lore/vir // Vorestation Edits throughout this object.
-	name = "The Traveler's Guide to Human Space: Virgo-Erigone Edition"
-	desc = "Contains useful information about the world around you.  It seems to have been written for travelers to Virgo-Erigone, human or not. It also \
+/obj/item/weapon/book/codex/lore/vir // Vorestation Edits throughout this object.		//Eclipse Edit: same
+	name = "The Traveler's Guide to Human Space: Vir Edition"
+	desc = "Contains useful information about the world around you.  It seems to have been written for travelers to Vir, human or not. It also \
 	has the words 'Don't Panic' in small, friendly letters on the cover."
 	icon_state = "codex"
 	root_type = /datum/lore/codex/category/main_virgo_lore
