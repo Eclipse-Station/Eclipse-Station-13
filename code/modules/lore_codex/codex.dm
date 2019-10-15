@@ -14,7 +14,7 @@
 	icon_state = "codex"
 	unique = TRUE
 	var/datum/codex_tree/tree = null
-	var/root_type = /datum/lore/codex/category/main_virgo_lore	//Runtimes on codex_tree.dm, line 18 with a null here
+	var/root_type = /datum/lore/codex/category/main_vir_lore	//Runtimes on codex_tree.dm, line 18 with a null here
 
 /obj/item/weapon/book/codex/initialize()
 	tree = new(src, root_type)
@@ -31,7 +31,7 @@
 	desc = "Contains useful information about the world around you.  It seems to have been written for travelers to Vir, human or not. It also \
 	has the words 'Don't Panic' in small, friendly letters on the cover."
 	icon_state = "codex"
-	root_type = /datum/lore/codex/category/main_virgo_lore
+	root_type = /datum/lore/codex/category/main_vir_lore
 
 /obj/item/weapon/book/codex/lore/robutt
 	name = "A Buyer's Guide to Artificial Bodies"
