@@ -1,3 +1,6 @@
+//This file should be disabled by the compiler.
+#warn This file uses lore for the Virgo-Erigone system.
+
 /datum/lore/codex/category/main_virgo_lore // The top-level categories for the Virgo book
 	name = "Index"
 	data = "Don't panic!\
