@@ -9,6 +9,7 @@ Sometimes you won't be able to assist in a situation, no matter how good you are
 As an Engineer, build Teleporters to help your team reach the frontlines faster.
 As a Pathfinder, the wiki with the information you're probably looking for is the BayStation wiki.
 As a Pathfinder, you will never have all your personnel come back safely.
+As the Research Director, you are essentially an assistant with access to a bunch of fun toys. Try not to go overboard.
 The quartermaster is not a head of staff and will never be one.
 Sometimes you need more than just a tip.
 Clowns are whitelist-only because, contrary to popular belief, not everyone is funny. This probably includes you.
