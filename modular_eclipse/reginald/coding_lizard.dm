@@ -40,7 +40,7 @@
 			description_fluff = "He seems hungry."
 		if("sleepy")
 			emote_see = list("twitches in his sleep","suddenly snaps awake, then curls back up in the chair","bats at something in his sleep","kicks at something in his sleep")
-			speak_emote = "yawns","snores softly","chuffs softly")
+			speak_emote = list("yawns","snores softly","chuffs softly")
 			description_fluff = "Someone's had a long day."
 		if("debugging")		//also annoyed
 			emote_see = list("slaps the side of the console","presses a few keys","glares at the console","stares thoughtfully at the console screen","tilts his head at the console screen and hits a couple of keys")
