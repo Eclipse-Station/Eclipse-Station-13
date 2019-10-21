@@ -8,6 +8,7 @@
 	var/list/possible_moods = list("happy"=25,"tired"=20,"sad"=20,"thoughtful"=20,"hungry"=5,"sleepy"=5,"debugging"=5)		//100 total weight
 	var/mood = "unset"
 	ai_inactive = TRUE		//lizzer don't move
+	speak_chance = 5		//we're not going to be very visible.
 
 /mob/living/simple_animal/lizard/spitzer/New()
 	var/turf/K = src.loc
