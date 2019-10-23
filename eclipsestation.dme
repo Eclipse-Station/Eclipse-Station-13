@@ -3196,4 +3196,5 @@
 #include "modular_eclipse\reginald\coding_lizard.dm"
 #include "modular_eclipse\reginald\reginald.dm"
 #include "modular_eclipse\secgun\secgun.dm"
+#include "modular_eclipse\unsorted\random_air_rifle.dm"
 // END_INCLUDE

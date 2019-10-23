@@ -3,11 +3,11 @@
 	desc = "He's the one responsible for coding."
 	gender = MALE
 	tt_desc = "Iguana borealis"
-	speak_emote = list()
+	speak_emote = list("chuffs")
 	emote_see = list("slaps the console indiscriminately","stares thoughtfully at the console screen","presses a few keys")
 	var/list/possible_moods = list("happy"=25,"tired"=20,"sad"=20,"thoughtful"=20,"hungry"=5,"sleepy"=5,"debugging"=5)		//100 total weight
 	var/mood = "unset"
-	ai_inactive = TRUE		//lizzer don't move
+//	ai_inactive = TRUE		//lizzer don't move
 	speak_chance = 5		//we're not going to be very visible.
 
 /mob/living/simple_animal/lizard/spitzer/New()
