@@ -6,6 +6,10 @@
 // #define RC_SUPPLY 2		//Request Supplies
 // #define RC_INFO   4		//Relay Info
 
+// // // BEGIN ECLIPSE EDITS // // //
+// Adjustments for our codebase needs.
+// // // ECLIPSE EDITS CONTINUE TO #EOF!
+
 /obj/machinery/requests_console/preset
 	name = ""
 	department = ""
@@ -17,11 +21,16 @@
 	name = "Cargo RC"
 	department = "Cargo Bay"
 	departmentType = RC_SUPPLY
+	
+/obj/machinery/requests_console/preset/cargo/mining
+	name = "Mining RC"
+	department = "Mining"
+	departmentType = RC_SUPPLY		//redundancy
 
 /obj/machinery/requests_console/preset/security
 	name = "Security RC"
 	department = "Security"
-	departmentType = RC_ASSIST
+	departmentType = RC_ASSIST|RC_INFO
 
 /obj/machinery/requests_console/preset/engineering
 	name = "Engineering RC"
@@ -54,39 +63,38 @@
 	departmentType = RC_ASSIST|RC_INFO
 	announcementConsole = 1
 
-// Heads
+//Base Head-of-staff define
+/obj/machinery/requests_console/preset/heads
+	departmentType = RC_INFO
+	announcementConsole = 1
 
-/obj/machinery/requests_console/preset/ce
+//Heads of staff
+
+/obj/machinery/requests_console/preset/heads/ce
 	name = "Chief Engineer RC"
 	department = "Chief Engineer's Desk"
-	departmentType = RC_ASSIST|RC_INFO
-	announcementConsole = 1
 
-/obj/machinery/requests_console/preset/cmo
+/obj/machinery/requests_console/preset/heads/cmo
 	name = "Chief Medical Officer RC"
 	department = "Chief Medical Officer's Desk"
-	departmentType = RC_ASSIST|RC_INFO
-	announcementConsole = 1
 
-/obj/machinery/requests_console/preset/hos
+/obj/machinery/requests_console/preset/heads/hos
 	name = "Head of Security RC"
 	department = "Head of Security's Desk"
-	departmentType = RC_ASSIST|RC_INFO
-	announcementConsole = 1
 
-/obj/machinery/requests_console/preset/rd
+/obj/machinery/requests_console/preset/heads/rd
 	name = "Research Director RC"
 	department = "Research Director's Desk"
-	departmentType = RC_ASSIST|RC_INFO
-	announcementConsole = 1
 
-/obj/machinery/requests_console/preset/captain
-	name = "Captain RC"
-	department = "Captain's Desk"
-	departmentType = RC_ASSIST|RC_INFO
-	announcementConsole = 1
+/obj/machinery/requests_console/preset/heads/hop
+	name = "Head of Personnel RC"
+	department = "Head of Personnel's Desk"
+
+/obj/machinery/requests_console/preset/heads/captain
+	name = "Station Director RC"
+	department = "Station Director's Desk"
 
 /obj/machinery/requests_console/preset/ai
 	name = "AI RC"
 	department = "AI"
-	departmentType = RC_ASSIST|RC_INFO
+	departmentType = RC_INFO

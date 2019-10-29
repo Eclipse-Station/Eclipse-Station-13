@@ -3199,6 +3199,8 @@
 #include "modular_eclipse\multiphase\locker.dm"
 #include "modular_eclipse\multiphase\projectile.dm"
 #include "modular_eclipse\radio_sprites\radios.dm"
+#include "modular_eclipse\reginald\coding_lizard.dm"
 #include "modular_eclipse\reginald\reginald.dm"
 #include "modular_eclipse\secgun\secgun.dm"
+#include "modular_eclipse\unsorted\random_air_rifle.dm"
 // END_INCLUDE
