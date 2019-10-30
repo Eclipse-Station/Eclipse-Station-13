@@ -8,9 +8,11 @@
 	icon_dead = "grey baby slime dead"
 	pass_flags = PASSTABLE
 	faction = "slime"
+	speed = 1
 	no_vore = 1
-	maxHealth = 100
-	health = 100
+	maxHealth = 75
+	health = 60
+	speed = 1
 
 	ai_inactive = TRUE //Always off
 	show_stat_health = FALSE //We will do it ourselves
@@ -21,8 +23,8 @@
 
 	harm_intent_damage = 2
 	melee_damage_lower = 5
-	melee_damage_upper = 15
-	attacktext = list("slashed")
+	melee_damage_upper = 12
+	attacktext = list("bonked", "chomped", "thunked", "angrily glomped", "pounced")
 
 	var/obj/item/clothing/head/hat = null // The hat the slime may be wearing.
 
@@ -43,6 +45,7 @@
 	emote_hear = list("squishes softly","spluts quietly","makes wet noises")
 	emote_see = list("jiggles", "bounces in place")
 	var/target_nutrition = 9999
+	var/list/moods = list(":33", "pout", "angry", "sad", ":3", "mischevous")
 
 	var/mood = ":33"
 
@@ -50,7 +53,7 @@
 	var/mob/living/victim
 	var/power_charge
 
-	player_msg = "You are a small soft jelly thing. Smoothly rounded, with no limbs, with pulsing core your head used to be. "
+	player_msg = "You are a small soft jelly thing. Smoothly rounded, with no limbs, with pulsing core your torso used to be. "
 
 
 //Constructor allows passing the human to sync damages
@@ -58,8 +61,8 @@
 	..()
 	overlays.Cut()
 	if(H)
-		nutrition = H.health/1.25
-		target_nutrition = H.maxHealth/1.25
+		nutrition = H.health/1.2
+		target_nutrition = H.maxHealth * 1.5
 		humanform = H
 		updatehealth()
 		verbs |= /mob/living/proc/ventcrawl
@@ -92,7 +95,7 @@
 /mob/living/simple_animal/promethean_blob/updatehealth()
 	if(humanform)
 		//Set the max
-		maxHealth = humanform.getMaxHealth()*2 //HUMANS, and their 'double health', bleh.
+		maxHealth = humanform.getMaxHealth()/1.75 //HUMANS, and their 'double health', bleh.
 		//Set us to their health, but, human health ignores robolimbs so we do it 'the hard way'
 		health = maxHealth - humanform.getOxyLoss() - humanform.getToxLoss() - humanform.getCloneLoss() - humanform.getActualFireLoss() - humanform.getActualBruteLoss()
 
@@ -265,19 +268,52 @@
 
 /mob/living/simple_animal/promethean_blob/verb/evolve()
 	set category = "Slime"
+	set name = "Evolve"
 	set desc = "This will let you evolve from a slime into a promethean."
 
 	if(stat)
-		to_chat(src, "<span class='notice'>I must be conscious to do this...</span>")
+		to_chat(src, "<span class='notice'>You must be conscious to do this.</span>")
 		return
 
 
 	if(nutrition >= target_nutrition)
-		humanform.unblobify(src)
+		to_chat(src, "<span class='notice'>You begin to reform...</span>")
+		if(do_after(src, 50))
+			for(var/obj/item/organ/I in humanform.internal_organs)
+				if(I.damage > 0)
+					I.damage = max(I.damage - 30, 0) //Repair functionally half of a dead internal organ.
+			// Replace completely missing limbs.
+			for(var/limb_type in humanform.species.has_limbs)
+				var/obj/item/organ/external/E = humanform.organs_by_name[limb_type]
+				if(E && E.disfigured)
+					E.disfigured = 0
+				if(E && (E.is_stump() || (E.status & (ORGAN_DESTROYED|ORGAN_DEAD|ORGAN_MUTATED))))
+					E.removed()
+					qdel(E)
+					E = null
+				if(!E)
+					var/list/organ_data = humanform.species.has_limbs[limb_type]
+					var/limb_path = organ_data["path"]
+					var/obj/item/organ/O = new limb_path(humanform)
+					organ_data["descriptor"] = O.name
+			humanform.regenerate_icons()
+			humanform.unblobify(src)
+		else
+			to_chat(src, "<span class='notice'>Your evolution is interrupted!</span>")
 	else
-		to_chat(src, "<span class='notice'>I am not ready to evolve yet...</span>")
+		to_chat(src, "<span class='notice'>You're too hungry to evolve!</span>")
 
+/mob/living/simple_animal/promethean_blob/verb/set_mood()
+	set category = "Slime"
+	set name = "Set Mood"
+	set desc = "the mood will be big."
 
+	var/chosen_mood = input(usr, "Choose a mood (to be displayed as your face)","Big Mood") as null|anything in moods
+	if(!chosen_mood)
+		return
+	else
+		mood = chosen_mood
+		update_icon()
 
 /mob/living/simple_animal/promethean_blob/proc/can_consume(var/mob/living/L)
 	if(!L || !istype(L))
@@ -286,7 +322,7 @@
 	if(L.isSynthetic())
 		to_chat(src, "This subject is not biological...")
 		return FALSE
-	if(L.getarmor(null, "bio") >= 75)
+	if((L.getarmor(null, "bio") >= 75))
 		to_chat(src, "I cannot reach this subject's biological matter...")
 		return FALSE
 	if(istype(L, /mob/living/simple_animal/slime))
@@ -354,13 +390,11 @@
 
 		var/armor_modifier = abs((victim.getarmor(null, "bio") / 100) - 1)
 		if(istype(victim, /mob/living/carbon))
-			victim.adjustCloneLoss(rand(5,6) * armor_modifier)
+			victim.adjustCloneLoss(rand(2,4) * armor_modifier)
 			victim.adjustToxLoss(rand(1,2) * armor_modifier)
 			if(victim.health <= 0)
-				victim.adjustToxLoss(rand(2,4) * armor_modifier)
-
-		else if(istype(victim, /mob/living/simple_animal))
-			victim.adjustBruteLoss(rand(4, 12))
+				victim.adjustToxLoss(rand(1,3) * armor_modifier)
+			adjust_nutrition(2 * armor_modifier)
 
 		else
 			to_chat(src, "<span class='warning'>[pick("This subject is incompatable", \
@@ -368,12 +402,11 @@
 			"I can not feed from this subject", "I do not feel nourished", "This subject is not food")]...</span>")
 			stop_consumption()
 
-		adjust_nutrition(50 * armor_modifier)
 
-		adjustOxyLoss(-2 * armor_modifier) //Heal yourself
-		adjustBruteLoss(-2 * armor_modifier)
-		adjustFireLoss(-2 * armor_modifier)
-		adjustCloneLoss(-2 * armor_modifier)
+		adjustOxyLoss(-2)
+		adjustBruteLoss(-2)
+		adjustFireLoss(-2)
+		adjustCloneLoss(-2)
 		updatehealth()
 		if(victim)
 			victim.updatehealth()
@@ -388,6 +421,7 @@
 			power_charge = min(power_charge++, 10)
 			if(power_charge == 10)
 				adjustToxLoss(-10)
+				power_charge--
 
 
 /mob/living/simple_animal/promethean_blob/proc/get_max_nutrition() // Can't go above it
@@ -436,8 +470,8 @@
 					power_charge = max(0, power_charge - 3)
 					L.visible_message("<span class='danger'>[src] has shocked [L]!</span>", "<span class='danger'>[src] has shocked you!</span>")
 					playsound(src, 'sound/weapons/Egloves.ogg', 75, 1)
-					L.Weaken(4)
-					L.Stun(4)
+					L.Weaken(3)
+					L.Stun(3)
 					do_attack_animation(L)
 					if(L.buckled)
 						L.buckled.unbuckle_mob() // To prevent an exploit where being buckled prevents slimes from jumping on you.
@@ -448,7 +482,7 @@
 					s.start()
 
 					if(prob(stun_power * 10) && stun_power >= 8)
-						L.adjustFireLoss(power_charge * rand(1, 2))
+						L.adjustFireLoss(power_charge / rand(1, 1.5))
 
 				else if(prob(40))
 					L.visible_message("<span class='danger'>[src] has pounced at [L]!</span>", "<span class='danger'>[src] has pounced at you!</span>")
@@ -508,7 +542,7 @@
 /mob/living/simple_animal/promethean_blob/handle_regular_status_updates()
 	if(stat != DEAD)
 
-		if(prob(10))
+		if(prob(5))
 			adjustOxyLoss(-1)
 			adjustToxLoss(-1)
 			adjustFireLoss(-1)
@@ -533,7 +567,7 @@
 		user.drop_item(new_hat)
 		hat = new_hat
 		new_hat.forceMove(src)
-		to_chat(user, "<span class='notice'>You place \a [new_hat] on \the [src].  How adorable!</span>")
+		to_chat(user, "<span class='notice'>You place \a [new_hat] on \the [src]. How adorable!</span>")
 		update_icon()
 		return
 
@@ -543,7 +577,7 @@
 	else
 		hat.forceMove(get_turf(src))
 		user.put_in_hands(hat)
-		to_chat(user, "<span class='warning'>You take away \the [src]'s [hat.name].  How mean.</span>")
+		to_chat(user, "<span class='warning'>You take away \the [src]'s [hat.name]. How mean.</span>")
 		hat = null
 		update_icon()
 

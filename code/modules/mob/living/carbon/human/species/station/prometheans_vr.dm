@@ -34,6 +34,6 @@
 		/mob/living/carbon/human/proc/succubus_drain_lethal,
 		/mob/living/carbon/human/proc/slime_feed,
 		/mob/living/proc/eat_trash,
-		/mob/living/carbon/human/proc/turn_to_blob
+		/mob/living/carbon/human/proc/turn_to_blob,
 		/mob/living/proc/insidePanel
 		)
