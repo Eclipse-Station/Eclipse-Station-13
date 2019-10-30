@@ -104,6 +104,7 @@ var/datum/species/shapeshifter/promethean/prometheans
 		/mob/living/carbon/human/proc/shapeshifter_select_tail, //VOREStation Add,
 		/mob/living/carbon/human/proc/shapeshifter_select_ears, //VOREStation Add,
 		/mob/living/carbon/human/proc/regenerate,
+		/mob/living/carbon/human/proc/turn_to_blob,
 		/mob/living/proc/insidePanel //Eclipse add
 		)
 
@@ -150,12 +151,13 @@ var/datum/species/shapeshifter/promethean/prometheans
 	H.apply_stored_shock_to(target)
 
 /datum/species/shapeshifter/promethean/handle_death(var/mob/living/carbon/human/H)
-	spawn(1)
-		if(H)
-			H.gib()
+	if(H.isSynthetic())
+		H.visible_message("<span class='danger'>\The [H] collapses into parts, revealing a solitary slime at the core.</span>")
+		return
+	if(H.nutrition > 50)
+		H.blobify()
 
 /datum/species/shapeshifter/promethean/handle_environment_special(var/mob/living/carbon/human/H)
-/* VOREStation Removal - Too crazy with our uncapped hunger and slowdown stuff.
 	var/turf/T = H.loc
 	if(istype(T))
 		var/obj/effect/decal/cleanable/C = locate() in T
@@ -165,8 +167,8 @@ var/datum/species/shapeshifter/promethean/prometheans
 				var/turf/simulated/S = T
 				S.dirt = 0
 
-			H.nutrition = min(500, max(0, H.nutrition + rand(15, 30)))
-VOREStation Removal End */
+			H.nutrition = min(500, max(0, H.nutrition + rand(10, 20)))
+
 	// Heal remaining damage.
 	if(H.fire_stacks >= 0)
 		if(H.getBruteLoss() || H.getFireLoss() || H.getOxyLoss() || H.getToxLoss())
@@ -191,8 +193,8 @@ VOREStation Removal End */
 			nutrition_cost += nutrition_debt - H.getToxLoss()
 			H.nutrition -= (2 * nutrition_cost) //Costs Nutrition when damage is being repaired, corresponding to the amount of damage being repaired.
 			H.nutrition = max(0, H.nutrition) //Ensure it's not below 0.
-	//else//VOREStation Removal
-		//H.adjustToxLoss(2*heal_rate)	// Doubled because 0.5 is miniscule, and fire_stacks are capped in both directions
+	else
+		H.adjustToxLoss(2*heal_rate)	// Doubled because 0.5 is miniscule, and fire_stacks are capped in both directions
 
 /datum/species/shapeshifter/promethean/get_blood_colour(var/mob/living/carbon/human/H)
 	return (H ? rgb(H.r_skin, H.g_skin, H.b_skin) : ..())

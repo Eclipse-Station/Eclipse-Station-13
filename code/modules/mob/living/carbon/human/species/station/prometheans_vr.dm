@@ -1,6 +1,6 @@
 /datum/species/shapeshifter/promethean
-	min_age = 18 //Required for server rules
-	max_age = 80
+	min_age = 1
+	max_age = 10
 	valid_transform_species = list(
 		"Human", "Unathi", "Tajara", "Skrell",
 		"Diona", "Teshari", "Monkey","Sergal",
@@ -33,5 +33,6 @@
 		/mob/living/carbon/human/proc/succubus_drain_finalize,
 		/mob/living/carbon/human/proc/succubus_drain_lethal,
 		/mob/living/carbon/human/proc/slime_feed,
-		/mob/living/proc/eat_trash
+		/mob/living/proc/eat_trash,
+		/mob/living/carbon/human/proc/turn_to_blob
 		)
