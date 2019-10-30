@@ -1,4 +1,4 @@
-//I still dont think this should be a closet but whatever
+//I still don't think this should be a closet but whatever
 /obj/structure/closet/fireaxecabinet
 	name = "fire axe cabinet"
 	desc = "There is small label that reads \"For Emergency use only\" along with details for safe use of the axe. As if."
@@ -8,7 +8,7 @@
 	icon_opened = "fireaxe1100"
 	anchored = 1
 	density = 0
-	var/localopened = 0 //Setting this to keep it from behaviouring like a normal closet and obstructing movement in the map. -Agouri
+	var/localopened = 0 //Setting this to keep it from behavioring like a normal closet and obstructing movement in the map. -Agouri
 	opened = 1
 	var/hitstaken = 0
 	var/locked = 1

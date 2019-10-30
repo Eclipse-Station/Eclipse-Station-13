@@ -6,7 +6,7 @@
 // Items that ask to be called every cycle.
 var/global/datum/datacore/data_core = null
 var/global/list/all_areas                = list()
-var/global/list/machines                 = list()	// ALL Machines, wether processing or not.
+var/global/list/machines                 = list()	// ALL Machines, whether processing or not.
 var/global/list/processing_machines      = list()	// TODO - Move into SSmachines
 var/global/list/processing_objects       = list()
 var/global/list/processing_power_items   = list()	// TODO - Move into SSmachines
@@ -126,7 +126,7 @@ var/forum_activated_group     = "2"
 var/forum_authenticated_group = "10"
 
 // For FTP requests. (i.e. downloading runtime logs.)
-// However it'd be ok to use for accessing attack logs and such too, which are even laggier.
+// However it'd be OK to use for accessing attack logs and such too, which are even laggier.
 var/fileaccess_timer = 0
 var/custom_event_msg = null
 

@@ -62,7 +62,7 @@ var/global/datum/controller/gameticker/ticker
 						sleep(1)
 
 			// // // ECLIPSE EDIT: Tip of the Round // // //
-			if((pregame_timeleft <= send_tip_at) && !tip_sent)		//it's time to send a tip
+			if(config.tip_of_the_round && (pregame_timeleft <= send_tip_at) && !tip_sent)		//it's time to send a tip
 				send_tip_of_the_round()
 			// // // END ECLIPSE EDIT: Tip of the Round // // //
 
@@ -137,7 +137,7 @@ var/global/datum/controller/gameticker/ticker
 	callHook("roundstart")
 
 	// TODO - Leshana - Dear God Fix This.  Fix all of this. Not just this line, this entire proc. This entire file!
-	spawn(0)//Forking here so we dont have to wait for this to finish
+	spawn(0)//Forking here so we don't have to wait for this to finish
 		mode.post_setup()
 		//Cleanup some stuff
 		for(var/obj/effect/landmark/start/S in landmarks_list)
@@ -387,6 +387,7 @@ var/global/datum/controller/gameticker/ticker
 /datum/controller/gameticker/proc/declare_completion()
 	world.log <<  "Round ended. Mode: [mode.name]."		//Eclipse edit: log to console that the round is over
 	world << "<br><br><br><H1>A round of [mode.name] has ended!</H1>"
+	lobby_message(message = "Transfer shuttle has arrived at CC! New round begins after server restart! <@&439778970599292938>", color = "#FE9500") //AEIOUstation add
 	for(var/mob/Player in player_list)
 		if(Player.mind && !isnewplayer(Player))
 			if(Player.stat != DEAD)
@@ -458,7 +459,7 @@ var/global/datum/controller/gameticker/ticker
 			if(temprole in total_antagonists)	//If the role exists already, add the name to it
 				total_antagonists[temprole] += ", [Mind.name]([Mind.key])"
 			else
-				total_antagonists.Add(temprole) //If the role doesnt exist in the list, create it and add the mob
+				total_antagonists.Add(temprole) //If the role doesn't exist in the list, create it and add the mob
 				total_antagonists[temprole] += ": [Mind.name]([Mind.key])"
 
 	//Now print them all into the log!

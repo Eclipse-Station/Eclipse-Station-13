@@ -88,7 +88,7 @@
 	src.go_out()
 	for(var/obj/O in src)
 		if((!istype(O,/obj/item/weapon/reagent_containers)) && (!istype(O,/obj/item/weapon/circuitboard/clonescanner)) && (!istype(O,/obj/item/weapon/stock_parts)) && (!istype(O,/obj/item/stack/cable_coil)))
-			O.loc = get_turf(src)//Ejects items that manage to get in there (exluding the components)
+			O.loc = get_turf(src)//Ejects items that manage to get in there (excluding the components)
 	if(!occupant)
 		for(var/mob/M in src)//Failsafe so you can get mobs out
 			M.loc = get_turf(src)

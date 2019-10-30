@@ -79,7 +79,7 @@ About the Holder:
 			Returns get_data() of the reagent.
 
 		get_reagents()
-			Returns a string containing all reagent ids and volumes, e.g. "carbon(4),nittrogen(5)".
+			Returns a string containing all reagent ids and volumes, e.g. "carbon(4),nitrogen(5)".
 
 		remove_any(var/amount = 1)
 			Removes up to [amount] of reagents from [src]. Returns actual amount removed.
@@ -132,7 +132,7 @@ About the Holder:
 
 About Reagents:
 
-	Reagents are all the things you can mix and fille in bottles etc. This can be anything from
+	Reagents are all the things you can mix and fill in bottles etc. This can be anything from
 	rejuvs over water to... iron.
 
 	Vars:
@@ -159,7 +159,7 @@ About Reagents:
 			Current volume.
 
 		metabolism
-			How quickly reagent is processed in mob's bloodstream; by default aslo affects ingest and touch metabolism.
+			How quickly reagent is processed in mob's bloodstream; by default also affects ingest and touch metabolism.
 
 		ingest_met
 			How quickly reagent is processed when ingested; [metabolism] is used if zero.
@@ -189,7 +189,7 @@ About Reagents:
 			Ditto for glass name.
 
 		glass_desc
-			Ditto for glass desciption.
+			Ditto for glass description.
 
 		glass_center_of_mass
 			Used for glass placement on tables.
@@ -236,7 +236,7 @@ About Reagents:
 			Called when [newamount] of reagent with [newdata] data is added to the current reagent. Used by paint.
 
 		get_data()
-			Returns data. Can be overriden.
+			Returns data. Can be overridden.
 
 About Recipes:
 
@@ -296,7 +296,7 @@ About the Tools:
 
 		atom/proc/is_open_container()
 			Checks atom/var/flags & OPENCONTAINER.
-			If this returns 1 , you can use syringes, beakers etc
+			If this returns 1 , you can use syringes, beakers etc.
 			to manipulate the contents of this object.
 			If it's 0, you'll need to write your own custom reagent
 			transfer code since you will not be able to use the standard

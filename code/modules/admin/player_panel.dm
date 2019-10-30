@@ -81,8 +81,8 @@
 					body += "<a href='?src=\ref[src];traitor="+ref+"'>TP</a> - "
 					body += "<a href='?src=\ref[usr];priv_msg=\ref"+ref+"'>PM</a> - "
 					body += "<a href='?src=\ref[src];subtlemessage="+ref+"'>SM</a> - "
-					body += "<a href='?src=\ref[src];adminplayerobservejump="+ref+"'>JMP</a><br> - " //Eclipse Edit
-					body += "<a href='?src=\ref[src];adminplayerobservefollow="+ref+"'>FLW</a><br>"  //Eclipse Edit: Added FLW as an option.
+					body += "<a href='?src=\ref[src];adminplayerobservejump="+ref+"'>JMP</a> - "    //Eclipse Edit
+					body += "<a href='?src=\ref[src];adminplayerobservefollow="+ref+"'>FLW</a><br>" //Eclipse Edit: Added FLW as an option.
 					if(antagonist > 0)
 						body += "<font size='2'><a href='?src=\ref[src];check_antagonist=1'><font color='red'><b>Antagonist</b></font></a></font>";
 
@@ -291,13 +291,13 @@
 						<a id='link[i]'
 						onmouseover='expand("item[i]","[M_job]","[M_name]","[M_rname]","--unused--","[M_key]","[M.lastKnownIP]",[is_antagonist],"\ref[M]")'
 						>
-						<span id='search[i]'><b>[M_name] - [M_rname] - [M_key] ([M_job])[M.client ? "" : " - (DC)"]</b></span> //Eclipse Edit: Added DC indicator.
+						<span id='search[i]'><b>[M_name] - [M_rname] - [M_key] ([M_job])[M.client ? "" : " (DC'd)"]</b></span>
 						</a>
 						<br><span id='item[i]'></span>
 					</td>
 				</tr>
 
-			"}
+			"} //Eclipse Edit: Added DC indicator.
 
 			i++
 

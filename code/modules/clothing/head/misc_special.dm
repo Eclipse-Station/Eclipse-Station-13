@@ -93,7 +93,7 @@
 
 /obj/item/clothing/head/welding/engie
 	name = "engineering welding helmet"
-	desc = "A painted welding helmet, this one has been painted the engineering colours."
+	desc = "A painted welding helmet, this one has been painted the engineering colors."
 	icon_state = "engiewelding"
 	item_state_slots = list(
 		slot_l_hand_str = "engiewelding",
@@ -269,6 +269,7 @@
 	flavor_unequip = "<span class='notice'>You feel calmer after removing the crown.</span>"
 	flavor_drop = "<span class='notice'>You feel much calmer after letting go of the crown.</span>"
 	flavor_activate = "<span class='danger'>An otherworldly feeling seems to enter your mind, and it ignites your mind in fury!</span>"
+	origin_tech = list(TECH_ARCANE = 4)
 
 /obj/item/clothing/head/psy_crown/wrath/activate_ability(var/mob/living/wearer)
 	..()

@@ -1,6 +1,6 @@
 //
 // Lightswitch Construction
-// Note: This does not use the normal frame.dm approach becuase:
+// Note: This does not use the normal frame.dm approach because:
 // 1) That requires circuits, and I don't want a circuit board instance in every lightswitch.
 // 2) This is an experiment in modernizing construction steps and examine tabs.
 
@@ -45,7 +45,7 @@
 
 //
 // Simple Construction Frame - Simpler than the full frame system for circuitless construction.
-// If this works out well for light switches we can use it for other lightweight constructables.
+// If this works out well for light switches we can use it for other lightweight constructibles.
 //
 
 /obj/structure/construction
@@ -83,7 +83,7 @@
 
 /obj/structure/construction/attackby(obj/item/weapon/W as obj, mob/user as mob)
 	add_fingerprint(user)
-	if(W.is_welder())
+	if(istype(W, /obj/item/weapon/weldingtool))
 		if(stage == FRAME_UNFASTENED)
 			var/obj/item/weapon/weldingtool/WT = W
 			if(!WT.remove_fuel(0, user))
@@ -117,7 +117,7 @@
 			update_icon()
 		return
 
-	else if(W.is_cable_coil())
+	else if(istype(W, /obj/item/stack/cable_coil))
 		if (stage == FRAME_FASTENED)
 			var/obj/item/stack/cable_coil/coil = W
 			if (coil.use(1))

@@ -60,7 +60,7 @@
 	var/list/item_state_slots = list() //overrides the default item_state for particular slots.
 
 	// Used to specify the icon file to be used when the item is worn. If not set the default icon for that slot will be used.
-	// If icon_override or sprite_sheets are set they will take precendence over this, assuming they apply to the slot in question.
+	// If icon_override or sprite_sheets are set they will take precedence over this, assuming they apply to the slot in question.
 	// Only slot_l_hand/slot_r_hand are implemented at the moment. Others to be implemented as needed.
 	var/list/item_icons = list()
 
@@ -79,7 +79,7 @@
 	// Works similarly to worn sprite_sheets, except the alternate sprites are used when the clothing/refit_for_species() proc is called.
 	var/list/sprite_sheets_obj = list()
 
-	var/toolspeed = 1.0 // This is a multipler on how 'fast' a tool works.  e.g. setting this to 0.5 will make the tool work twice as fast.
+	var/toolspeed = 1.0 // This is a multiplier on how 'fast' a tool works.  e.g. setting this to 0.5 will make the tool work twice as fast.
 	var/attackspeed = DEFAULT_ATTACK_COOLDOWN // How long click delay will be when using this, in 1/10ths of a second. Checked in the user's get_attack_speed().
 	var/reach = 1 // Length of tiles it can reach, 1 is adjacent.
 	var/addblends // Icon overlay for ADD highlights when applicable.

@@ -87,7 +87,7 @@ GLOBAL_LIST_BOILERPLATE(all_brain_organs, /obj/item/organ/internal/brain)
 			if(M.flags & MODIFIER_GENETIC)
 				brainmob.add_modifier(M.type)
 
-	if(H.mind)
+	if(H.mind && H.mind.active)			//Eclipse edit: Require mind to be active (ghost can rejoin) before transferring mob.
 		H.mind.transfer_to(brainmob)
 
 	brainmob.languages = H.languages
@@ -152,6 +152,7 @@ GLOBAL_LIST_BOILERPLATE(all_brain_organs, /obj/item/organ/internal/brain)
 	name = "slime core"
 	desc = "A complex, organic knot of jelly and crystalline particles."
 	icon_state = "core"
+	decays = FALSE
 	parent_organ = BP_TORSO
 	clone_source = TRUE
 	flags = OPENCONTAINER

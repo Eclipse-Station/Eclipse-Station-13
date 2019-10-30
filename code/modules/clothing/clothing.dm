@@ -192,7 +192,7 @@
 		slot_l_hand_str = 'icons/mob/items/lefthand_gloves.dmi',
 		slot_r_hand_str = 'icons/mob/items/righthand_gloves.dmi',
 		)
-	gender = PLURAL //Carn: for grammarically correct text-parsing
+	gender = PLURAL //Carn: for grammatically correct text-parsing
 	w_class = ITEMSIZE_SMALL
 	icon = 'icons/obj/clothing/gloves.dmi'
 	siemens_coefficient = 0.9
@@ -306,6 +306,7 @@
 	glove_level = 1
 	fingerprint_chance = 100
 	punch_force = 2
+	body_parts_covered = 0
 
 ///////////////////////////////////////////////////////////////////////
 //Head
@@ -460,7 +461,7 @@
 		slot_r_hand_str = 'icons/mob/items/righthand_shoes.dmi',
 		)
 	desc = "Comfortable-looking shoes."
-	gender = PLURAL //Carn: for grammarically correct text-parsing
+	gender = PLURAL //Carn: for grammatically correct text-parsing
 	siemens_coefficient = 0.9
 	body_parts_covered = FEET
 	slot_flags = SLOT_FEET

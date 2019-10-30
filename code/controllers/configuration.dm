@@ -6,7 +6,7 @@ var/list/gamemode_cache = list()
 
 	var/nudge_script_path = "nudge.py"  // where the nudge.py script is located
 
-	var/hub_visibility = FALSE				//CITADEL CHANGE - HUB CONFIG
+	var/hub_visibility = TRUE				//CITADEL CHANGE - HUB CONFIG
 
 	var/log_ooc = 0						// log OOC channel
 	var/log_access = 0					// log login/logout
@@ -25,7 +25,7 @@ var/list/gamemode_cache = list()
 	var/log_runtime = 0					// logs world.log to a file
 	var/log_world_output = 0			// log world.log << messages
 	var/sql_enabled = 0					// for sql switching
-	var/allow_admin_ooccolor = 0		// Allows admins with relevant permissions to have their own ooc colour
+	var/allow_admin_ooccolor = 0		// Allows admins with relevant permissions to have their own ooc color
 	var/allow_vote_restart = 0 			// allow votes to restart
 	var/ert_admin_call_only = 0
 	var/allow_vote_mode = 0				// allow votes to change mode
@@ -100,6 +100,7 @@ var/list/gamemode_cache = list()
 	var/guests_allowed = 1
 	var/debugparanoid = 0
 	var/panic_bunker = 0
+	var/panic_bunker_message = "Sorry, this server is not accepting connections from never seen before players."
 	var/paranoia_logging = 0
 
 	var/serverurl
@@ -151,7 +152,7 @@ var/list/gamemode_cache = list()
 	var/no_click_cooldown = 0
 
 	//Used for modifying movement speed for mobs.
-	//Unversal modifiers
+	//Universal modifiers
 	var/run_speed = 0
 	var/walk_speed = 0
 
@@ -222,7 +223,7 @@ var/list/gamemode_cache = list()
 
 	var/aggressive_changelog = 0
 
-	var/list/language_prefixes = list(",","#","-")//Default language prefixes
+	var/list/language_prefixes = list(",","#")//Default language prefixes
 
 	var/show_human_death_message = 1
 
@@ -749,6 +750,9 @@ var/list/gamemode_cache = list()
 
 				if ("panic_bunker")
 					config.panic_bunker = 1
+				
+				if ("panic_bunker_message")
+					config.panic_bunker_message = value
 
 				if ("paranoia_logging")
 					config.paranoia_logging = 1

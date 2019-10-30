@@ -64,9 +64,9 @@
 	var/turf/home_turf				// Set when they spawned, they try to come back here sometimes.
 
 	//Mob interaction
-	var/response_help   = "tries to help"	// If clicked on help intent
-	var/response_disarm = "tries to disarm" // If clicked on disarm intent
-	var/response_harm   = "tries to hurt"	// If clicked on harm intent
+	var/response_help   = "gently pats"	// If clicked on help intent
+	var/response_disarm = "tries to shove" // If clicked on disarm intent
+	var/response_harm   = "violently attacks"	// If clicked on harm intent
 	var/harm_intent_damage = 3		// How much an unarmed harm click does to this mob.
 	var/meat_amount = 0				// How much meat to drop from this mob when butchered
 	var/obj/meat_type				// The meat object to drop
@@ -103,7 +103,7 @@
 	var/assist_distance = 25		// Radius in which I'll ask my comrades for help.
 	var/supernatural = 0			// If the mob is supernatural (used in null-rod stuff for banishing?)
 	var/grab_resist = 75			// Chance of me resisting a grab attempt.
-	var/taser_kill = 1				// Is the mob weak to tasers
+	var/taser_kill = 1				// Is the mob weak to Tasers
 
 	//Attack ranged settings
 	var/ranged = 0					// Do I attack at range?
@@ -161,7 +161,7 @@
 
 	////// These are used for inter-proc communications so don't edit them manually //////
 	var/stance = STANCE_IDLE		// Used to determine behavior
-	var/stop_automated_movement = 0 // Use this to temporarely stop random movement or to if you write special movement code for animals.
+	var/stop_automated_movement = 0 // Use this to temporarily stop random movement or to if you write special movement code for animals.
 	var/lifes_since_move = 0 		// A counter for how many life() cycles since move
 	var/shuttletarget = null		// Shuttle's here, time to get to it
 	var/enroute = 0					// If the shuttle is en-route
@@ -232,7 +232,7 @@
 	LoseTarget()
 	to_chat(src,"<span class='notice'>Mob AI disabled while you are controlling the mob.</span><br><b>You are \the [src]. [player_msg]</b>")
 
-//Client detatched
+//Client detached
 /mob/living/simple_animal/Logout()
 	spawn(15 SECONDS) //15 seconds to get back into the mob before it goes wild
 		if(src && !src.client)
@@ -405,7 +405,7 @@
 /mob/living/simple_animal/proc/handle_resist()
 	resist()
 
-// Peforms the random walk wandering
+// Performs the random walk wandering
 /mob/living/simple_animal/proc/handle_wander_movement()
 	if(isturf(src.loc) && !resting && !buckled && canmove) //Physically capable of moving?
 		lifes_since_move++ //Increment turns since move (turns are life() cycles)
@@ -658,7 +658,7 @@
 
 	return
 
-// When somoene clicks us with an item in hand
+// When someone clicks us with an item in hand
 /mob/living/simple_animal/attackby(var/obj/item/O, var/mob/user)
 	if(istype(O, /obj/item/stack/medical))
 		if(stat != DEAD)
@@ -715,7 +715,7 @@
 		react_to_attack(attacker)
 
 /mob/living/simple_animal/movement_delay()
-	var/tally = 0 //Incase I need to add stuff other than "speed" later
+	var/tally = 0 //In case I need to add stuff other than "speed" later
 
 	tally = speed
 
@@ -1298,7 +1298,7 @@
 		DoPunch(M)
 		return M
 
-// This is the actual act of 'punching'.  Override for special behaviour.
+// This is the actual act of 'punching'.  Override for special behavior.
 /mob/living/simple_animal/proc/DoPunch(var/atom/A)
 	if(!Adjacent(A) && !istype(A, /obj/structure/window) && !istype(A, /obj/machinery/door/window)) // They could've moved in the meantime. But a Window probably wouldn't have. This allows player simple-mobs to attack windows.
 		return FALSE

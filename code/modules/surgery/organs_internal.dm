@@ -15,7 +15,7 @@
 
 //////////////////////////////////////////////////////////////////
 //					ALIEN EMBRYO SURGERY						//
-////////////////////////////////////////////////////////////////// // Here for future reference incase it's needed. See: Alien_embryo.dm and Alien_facehugger.dm
+////////////////////////////////////////////////////////////////// // Here for future reference in case it's needed. See: Alien_embryo.dm and Alien_facehugger.dm
 /*
 /datum/surgery_step/internal/remove_embryo
 	allowed_tools = list(
@@ -128,8 +128,8 @@
 		return
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 
-	user.visible_message("<span class='warning'>[user]'s hand slips, getting mess and tearing the inside of [target]'s [affected.name] with \the [tool]!</span>", \
-	"<span class='warning'>Your hand slips, getting mess and tearing the inside of [target]'s [affected.name] with \the [tool]!</span>")
+	user.visible_message("<span class='warning'>[user]'s hand slips, tearing the inside of [target]'s [affected.name] with \the [tool]!</span>", \
+	"<span class='warning'>Your hand slips, tearing the inside of [target]'s [affected.name] with \the [tool]!</span>")
 	var/dam_amt = 2
 
 	if (istype(tool, /obj/item/stack/medical/advanced/bruise_pack))

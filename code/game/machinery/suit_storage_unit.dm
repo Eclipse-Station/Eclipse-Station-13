@@ -4,7 +4,7 @@
 
 /obj/machinery/suit_storage_unit
 	name = "Suit Storage Unit"
-	desc = "An industrial U-Stor-It Storage unit designed to accomodate all kinds of space suits. Its on-board equipment also allows the user to decontaminate the contents through a UV-ray purging cycle. There's a warning label dangling from the control pad, reading \"STRICTLY NO BIOLOGICALS IN THE CONFINES OF THE UNIT\"."
+	desc = "An industrial U-Stor-It Storage unit designed to accommodate all kinds of space suits. Its on-board equipment also allows the user to decontaminate the contents through a UV-ray purging cycle. There's a warning label dangling from the control pad, reading \"STRICTLY NO BIOLOGICALS IN THE CONFINES OF THE UNIT\"."
 	icon = 'icons/obj/suitstorage.dmi'
 	icon_state = "suitstorage000000100" //order is: [has helmet][has suit][has human][is open][is locked][is UV cycling][is powered][is dirty/broken] [is superUVcycling]
 	anchored = 1
@@ -15,7 +15,7 @@
 	var/obj/item/clothing/head/helmet/space/HELMET = null
 	var/HELMET_TYPE = null
 	var/obj/item/clothing/mask/MASK = null  //All the stuff that's gonna be stored insiiiiiiiiiiiiiiiiiiide, nyoro~n
-	var/MASK_TYPE = null //Erro's idea on standarising SSUs whle keeping creation of other SSU types easy: Make a child SSU, name it something then set the TYPE vars to your desired suit output. New() should take it from there by itself.
+	var/MASK_TYPE = null //Erro's idea on standardizing SSUs whle keeping creation of other SSU types easy: Make a child SSU, name it something then set the TYPE vars to your desired suit output. New() should take it from there by itself.
 	var/isopen = 0
 	var/islocked = 0
 	var/isUV = 0
@@ -94,15 +94,15 @@
 	if(panelopen) //The maintenance panel is open. Time for some shady stuff
 		dat+= "<HEAD><TITLE>Suit storage unit: Maintenance panel</TITLE></HEAD>"
 		dat+= "<Font color ='black'><B>Maintenance panel controls</B></font><HR>"
-		dat+= "<font color ='grey'>The panel is ridden with controls, button and meters, labeled in strange signs and symbols that <BR>you cannot understand. Probably the manufactoring world's language.<BR> Among other things, a few controls catch your eye.</font><BR><BR>"
+		dat+= "<font color ='grey'>The panel is ridden with controls, button and meters, labeled in strange signs and symbols that <BR>you cannot understand. Probably the manufacturing world's language.<BR> Among other things, a few controls catch your eye.</font><BR><BR>"
 		dat+= text("<font color ='black'>A small dial with a small lambda symbol on it. It's pointing towards a gauge that reads []</font>.<BR> <font color='blue'><A href='?src=\ref[];toggleUV=1'> Turn towards []</A></font><BR>",(issuperUV ? "15nm" : "185nm"),src,(issuperUV ? "185nm" : "15nm"))
 		dat+= text("<font color ='black'>A thick old-style button, with 2 grimy LED lights next to it. The [] LED is on.</font><BR><font color ='blue'><A href='?src=\ref[];togglesafeties=1'>Press button</a></font>",(safetieson? "<font color='green'><B>GREEN</B></font>" : "<font color='red'><B>RED</B></font>"),src)
 		dat+= text("<HR><BR><A href='?src=\ref[];mach_close=suit_storage_unit'>Close panel</A>", user)
 		//user << browse(dat, "window=ssu_m_panel;size=400x500")
 		//onclose(user, "ssu_m_panel")
-	else if(isUV) //The thing is running its cauterisation cycle. You have to wait.
+	else if(isUV) //The thing is running its cauterization cycle. You have to wait.
 		dat += "<HEAD><TITLE>Suit storage unit</TITLE></HEAD>"
-		dat+= "<font color ='red'><B>Unit is cauterising contents with selected UV ray intensity. Please wait.</font></B><BR>"
+		dat+= "<font color ='red'><B>Unit is cauterizing contents with selected UV ray intensity. Please wait.</font></B><BR>"
 		//dat+= "<font colr='black'><B>Cycle end in: [cycletimeleft()] seconds. </font></B>"
 		//user << browse(dat, "window=ssu_cycling_panel;size=400x500")
 		//onclose(user, "ssu_cycling_panel")
@@ -236,7 +236,7 @@
 		to_chat(user, "<font color='red'>You try to touch the controls but you get zapped. There must be a short circuit somewhere.</font>")
 		return*/
 	else
-		to_chat(user, "You push the button. The coloured LED next to it changes.")
+		to_chat(user, "You push the button. The colored LED next to it changes.")
 		safetieson = !safetieson
 
 
@@ -313,7 +313,7 @@
 	if(!HELMET && !MASK && !SUIT && !OCCUPANT) //shit's empty yo
 		to_chat(user, "<font color='red'>Unit storage bays empty. Nothing to disinfect -- Aborting.</font>")
 		return
-	to_chat(user, "You start the Unit's cauterisation cycle.")
+	to_chat(user, "You start the Unit's cauterization cycle.")
 	cycletime_left = 20
 	isUV = 1
 	if(OCCUPANT && !islocked)
@@ -580,7 +580,7 @@
 	var/safeties = 1        // The cycler won't start with a living thing inside it unless safeties are off.
 	var/irradiating = 0     // If this is > 0, the cycler is decontaminating whatever is inside it.
 	var/radiation_level = 2 // 1 is removing germs, 2 is removing blood, 3 is removing phoron.
-	var/model_text = ""     // Some flavour text for the topic box.
+	var/model_text = ""     // Some flavor text for the topic box.
 	var/locked = 1          // If locked, nothing can be taken from or added to the cycler.
 	var/can_repair          // If set, the cycler can repair voidsuits.
 	var/electrified = 0
@@ -657,6 +657,13 @@
 	model_text = "Pilot"
 	departments = list("Pilot Blue","Pilot")
 
+/obj/machinery/suit_cycler/director
+	name = "Director suit cycler"
+	model_text = "Director"
+	departments = list("Director")
+	req_access = list(access_captain)
+	species = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_UNATHI,SPECIES_TAJ, "Vulpkanin")
+
 /obj/machinery/suit_cycler/attack_ai(mob/user as mob)
 	return attack_hand(user)
 
@@ -722,7 +729,7 @@
 			return
 
 		if(I.icon_override == CUSTOM_ITEM_MOB)
-			to_chat(user, "You cannot refit a customised voidsuit.")
+			to_chat(user, "You cannot refit a customized voidsuit.")
 			return
 
 		to_chat(user, "You fit \the [I] into the suit cycler.")
@@ -745,7 +752,7 @@
 			return
 
 		if(I.icon_override == CUSTOM_ITEM_MOB)
-			to_chat(user, "You cannot refit a customised voidsuit.")
+			to_chat(user, "You cannot refit a customized voidsuit.")
 			return
 
 		to_chat(user, "You fit \the [I] into the suit cycler.")
@@ -815,9 +822,9 @@
 		dat += "Output level: [radiation_level]<br>"
 		dat += "<A href='?src=\ref[src];select_rad_level=1'>\[select power level\]</a> <A href='?src=\ref[src];begin_decontamination=1'>\[begin decontamination cycle\]</a><br><hr>"
 
-		dat += "<h2>Customisation</h2>"
+		dat += "<h2>Customization</h2>"
 		dat += "<b>Target product:</b> <A href='?src=\ref[src];select_department=1'>[target_department]</a>, <A href='?src=\ref[src];select_species=1'>[target_species]</a>."
-		dat += "<A href='?src=\ref[src];apply_paintjob=1'><br>\[apply customisation routine\]</a><br><hr>"
+		dat += "<A href='?src=\ref[src];apply_paintjob=1'><br>\[apply customization routine\]</a><br><hr>"
 
 	if(panel_open)
 		wires.Interact(user)

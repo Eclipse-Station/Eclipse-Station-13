@@ -36,6 +36,9 @@
 /mob/living/silicon/isSynthetic()
 	return 1
 
+/mob/living/carbon/human/isPromethean()
+	return 1
+
 /mob/proc/isMonkey()
 	return 0
 
@@ -126,7 +129,7 @@ proc/getsensorlevel(A)
 
 	return ran_zone
 
-// Emulates targetting a specific body part, and miss chances
+// Emulates targeting a specific body part, and miss chances
 // May return null if missed
 // miss_chance_mod may be negative.
 /proc/get_zone_with_miss_chance(zone, var/mob/target, var/miss_chance_mod = 0, var/ranged_attack=0)
@@ -573,9 +576,9 @@ proc/is_blind(A)
 #undef SAFE_PERP
 
 
-//TODO: Integrate defence zones and targeting body parts with the actual organ system, move these into organ definitions.
+//TODO: Integrate defense zones and targeting body parts with the actual organ system, move these into organ definitions.
 
-//The base miss chance for the different defence zones
+//The base miss chance for the different defense zones
 var/list/global/base_miss_chance = list(
 	"head" = 40,
 	"chest" = 10,
@@ -591,7 +594,7 @@ var/list/global/base_miss_chance = list(
 )
 
 //Used to weight organs when an organ is hit randomly (i.e. not a directed, aimed attack).
-//Also used to weight the protection value that armour provides for covering that body part when calculating protection from full-body effects.
+//Also used to weight the protection value that armor provides for covering that body part when calculating protection from full-body effects.
 var/list/global/organ_rel_size = list(
 	"head" = 25,
 	"chest" = 70,

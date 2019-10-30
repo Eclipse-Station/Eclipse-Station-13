@@ -1,3 +1,6 @@
+//This file should be disabled by the compiler.
+#warn This file uses lore for the Virgo-Erigone system. 
+
 /datum/lore/codex/category/political_factions
 	name = "Political Factions"
 	data = "<i>For some weird reason, this section is blank. This looks like a publishing error.</i>"

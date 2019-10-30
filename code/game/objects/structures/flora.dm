@@ -164,7 +164,7 @@
 
 /obj/structure/flora/pottedplant/overgrown
 	name = "overgrown potted plants"
-	desc = "This is an assortment of colourful plants. Some parts are overgrown."
+	desc = "This is an assortment of colorful plants. Some parts are overgrown."
 	icon_state = "plant-03"
 
 /obj/structure/flora/pottedplant/bamboo

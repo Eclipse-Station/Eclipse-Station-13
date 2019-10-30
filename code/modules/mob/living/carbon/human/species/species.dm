@@ -61,7 +61,7 @@
 
 	// The languages the species can't speak without an assisted organ.
 	// This list is a guess at things that no one other than the parent species should be able to speak
-	var/list/assisted_langs = list(LANGUAGE_EAL, LANGUAGE_TERMINUS, LANGUAGE_SKRELLIAN, LANGUAGE_SKRELLIANFAR, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX)
+	var/list/assisted_langs = list(LANGUAGE_EAL, LANGUAGE_SKRELLIAN, LANGUAGE_SKRELLIANFAR, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX)
 
 	//Soundy emotey things.
 	var/scream_verb = "screams"
@@ -427,7 +427,7 @@
 /datum/species/proc/can_breathe_water()
 	return FALSE
 
-// Impliments different trails for species depending on if they're wearing shoes.
+// Implements different trails for species depending on if they're wearing shoes.
 /datum/species/proc/get_move_trail(var/mob/living/carbon/human/H)
 	if( H.shoes || ( H.wear_suit && (H.wear_suit.body_parts_covered & FEET) ) )
 		return /obj/effect/decal/cleanable/blood/tracks/footprints
@@ -443,7 +443,7 @@
 /datum/species/proc/can_overcome_gravity(var/mob/living/carbon/human/H)
 	return FALSE
 
-// Used for any extra behaviour when falling and to see if a species will fall at all.
+// Used for any extra behavior when falling and to see if a species will fall at all.
 /datum/species/proc/can_fall(var/mob/living/carbon/human/H)
 	return TRUE
 
@@ -451,7 +451,7 @@
 /datum/species/proc/find_fall_target_special(src, landing)
 	return FALSE
 
-// Used to override normal fall behaviour. Use only when the species does fall down a level.
+// Used to override normal fall behavior. Use only when the species does fall down a level.
 /datum/species/proc/fall_impact_special(var/mob/living/carbon/human/H, var/atom/A)
 	return FALSE
 

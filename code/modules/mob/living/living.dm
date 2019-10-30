@@ -55,7 +55,7 @@
 
 /*one proc, four uses
 swapping: if it's 1, the mobs are trying to switch, if 0, non-passive is pushing passive
-default behaviour is:
+default behavior is:
  - non-passive mob passes the passive version
  - passive mob checks to see if its mob_bump_flag is in the non-passive's mob_bump_flags
  - if si, the proc returns
@@ -100,7 +100,7 @@ default behaviour is:
 					now_pushing = 0
 					return
 
-			//BubbleWrap: people in handcuffs are always switched around as if they were on 'help' intent to prevent a person being pulled from being seperated from their puller
+			//BubbleWrap: people in handcuffs are always switched around as if they were on 'help' intent to prevent a person being pulled from being separated from their puller
 			var/dense = 0
 			if(loc.density)
 				dense = 1
@@ -702,7 +702,7 @@ default behaviour is:
 		tod = null
 		timeofdeath = 0
 
-	// restore us to conciousness
+	// restore us to consciousness
 	stat = CONSCIOUS
 
 	// make the icons look correct
@@ -912,7 +912,11 @@ default behaviour is:
 
 /mob/living/proc/escape_buckle()
 	if(buckled)
-		buckled.user_unbuckle_mob(src, src)
+		if(istype(buckled, /obj/vehicle))
+			var/obj/vehicle/vehicle = buckled
+			vehicle.unload()
+		else
+			buckled.user_unbuckle_mob(src, src)
 
 /mob/living/proc/resist_grab()
 	var/resisting = 0

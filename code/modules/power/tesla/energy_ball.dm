@@ -48,7 +48,7 @@
 
 /obj/singularity/energy_ball/admin_investigate_setup()
 	if(miniball)
-		return //don't annnounce miniballs
+		return //don't announce miniballs
 	..()
 
 
@@ -68,7 +68,7 @@
 			var/range = rand(1, Clamp(orbiting_balls.len, 3, 7))
 			tesla_zap(ball, range, TESLA_MINI_POWER/7*range, TRUE)
 	else
-		energy = 0 // ensure we dont have miniballs of miniballs
+		energy = 0 // ensure we don't have miniballs of miniballs
 
 /obj/singularity/energy_ball/examine(mob/user)
 	..()
@@ -80,7 +80,7 @@
 	//we face the last thing we zapped, so this lets us favor that direction a bit
 	var/move_bias = dir
 	for(var/i in 0 to move_amount)
-		var/move_dir = pick(global.alldirs + move_bias) //ensures large-ball teslas don't just sit around
+		var/move_dir = pick(global.alldirs + move_bias) //ensures large-ball Teslas don't just sit around
 		if(target && prob(10))
 			move_dir = get_dir(src,target)
 		var/turf/T = get_step(src, move_dir)
@@ -248,7 +248,7 @@
 				closest_atom = A
 				closest_dist = dist
 
-		else if(closest_mob)
+		else if(closest_machine)
 			continue
 
 		else if(istype(A, /obj/structure/blob))

@@ -30,7 +30,7 @@ var/datum/lore/atc_controller/atc = new/datum/lore/atc_controller
 
 /datum/lore/atc_controller/proc/msg(var/message,var/sender)
 	ASSERT(message)
-	global_announcer.autosay("[message]", sender ? sender : "[using_map.station_short] Space Control")
+	global_announcer.autosay("[message]", sender ? sender : "[using_map.station_short] Space Control", "ATC (Regional)")		//Eclipse Edit: ATC chatter has its own channel now
 
 /datum/lore/atc_controller/proc/reroute_traffic(var/yes = 1)
 	if(yes)
@@ -43,9 +43,18 @@ var/datum/lore/atc_controller/atc = new/datum/lore/atc_controller
 		squelched = 0
 
 /datum/lore/atc_controller/proc/shift_ending(var/evac = 0)
+	// // // BEGIN ECLIPSE EDIT // // //
+	// This was optimized for Tether, which uses a tram. SCross does not feature a tram.
+	/*
 	msg("Automated Tram departing [using_map.station_name] for [using_map.dock_name] on routine transfer route.","NT Automated Tram") //VOREStation Edit - Tram, tho.
 	sleep(5 SECONDS)
 	msg("Automated Tram, cleared to complete routine transfer from [using_map.station_name] to [using_map.dock_name].") //VOREStation Edit - Tram, tho.
+	*/
+	msg("Automated Crew Transfer Shuttle departing [using_map.dock_name], en route to [using_map.station_name], on routine transfer route.","Automated Crew Transfer Shuttle")
+	sleep(5 SECONDS)
+	msg("Automated Crew Transfer Shuttle, cleared to complete routine transfer of [using_map.station_name] via [using_map.dock_name].")		//somehow this feels messy, after looking at how polaris does it
+	// // // END ECLIPSE EDIT // // //
+
 
 /datum/lore/atc_controller/proc/random_convo()
 	var/one = pick(loremaster.organizations) //These will pick an index, not an instance

@@ -366,7 +366,7 @@
 				src.hacking = 1
 				src.screen = 2
 				update_icon()
-				//Time it takes to bruteforce is dependant on the password length.
+				//Time it takes to bruteforce is dependent on the password length.
 				spawn(100*length(src.linkedServer.decryptkey))
 					if(src && src.linkedServer && usr)
 						BruteForce(usr)

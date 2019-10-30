@@ -16,6 +16,8 @@
 
 	var/list/logs = list() // Gets written to by exonet's send_message() function.
 
+	circuit = /obj/item/weapon/circuitboard/telecomms/exonet_node
+
 // Proc: New()
 // Parameters: None
 // Description: Adds components to the machine for deconstruction.
@@ -23,7 +25,7 @@
 	..()
 
 	component_parts = list()
-	component_parts += new /obj/item/weapon/circuitboard/telecomms/exonet_node(src)
+//	component_parts += new /obj/item/weapon/circuitboard/telecomms/exonet_node(src)
 	component_parts += new /obj/item/weapon/stock_parts/subspace/ansible(src)
 	component_parts += new /obj/item/weapon/stock_parts/subspace/sub_filter(src)
 	component_parts += new /obj/item/weapon/stock_parts/manipulator(src)
@@ -179,10 +181,10 @@
 			return E
 
 // Proc: write_log()
-// Parameters: 4 (origin_address - Where the message is from, target_address - Where the message is going, data_type - Instructions on how to interpet content,
+// Parameters: 4 (origin_address - Where the message is from, target_address - Where the message is going, data_type - Instructions on how to interpret content,
 // 		content - The actual message.
 // Description: This writes to the logs list, so that people can see what people are doing on the Exonet ingame.  Note that this is not an admin logging function.
-// 		Communicators are already logged seperately.
+// 		Communicators are already logged separately.
 /obj/machinery/exonet_node/proc/write_log(var/origin_address, var/target_address, var/data_type, var/content)
 	//var/timestamp = time2text(station_time_in_ticks, "hh:mm:ss")
 	var/timestamp = "[stationdate2text()] [stationtime2text()]"

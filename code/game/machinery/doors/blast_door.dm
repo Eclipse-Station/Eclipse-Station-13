@@ -2,7 +2,7 @@
 //
 // Refactored 27.12.2014 by Atlantis
 //
-// Blast doors are suposed to be reinforced versions of regular doors. Instead of being manually
+// Blast doors are supposed to be reinforced versions of regular doors. Instead of being manually
 // controlled they use buttons or other means of remote control. This is why they cannot be emagged
 // as they lack any ID scanning system, they just handle remote control signals. Subtypes have
 // different icons, which are defined by set of variables. Subtypes are on bottom of this file.
@@ -172,7 +172,7 @@
 		user.setClickCooldown(user.get_attack_speed(W))
 		if(W.damtype == BRUTE || W.damtype == BURN)
 			user.do_attack_animation(src)
-			if(W.force < min_force) //No actual non-weapon item shouls have a force greater than the min_force, but let's include this just in case.
+			if(W.force < min_force) //No actual non-weapon item should have a force greater than the min_force, but let's include this just in case.
 				user.visible_message("<span class='danger'>\The [user] hits \the [src] with \the [W] with no visible effect.</span>")
 			else
 				user.visible_message("<span class='danger'>\The [user] forcefully strikes \the [src] with \the [W]!</span>")

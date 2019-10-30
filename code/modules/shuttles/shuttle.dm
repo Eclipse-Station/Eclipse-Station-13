@@ -88,7 +88,7 @@
 
 		if (moving_status == SHUTTLE_IDLE)
 			make_sounds(origin, HYPERSPACE_END)
-			return	//someone cancelled the launch
+			return	//someone canceled the launch
 
 		on_shuttle_departure(origin)
 
@@ -121,7 +121,7 @@
 
 		if (moving_status == SHUTTLE_IDLE)
 			make_sounds(departing, HYPERSPACE_END)
-			return	//someone cancelled the launch
+			return	//someone canceled the launch
 
 		arrive_time = world.time + travel_time*10
 
@@ -192,7 +192,7 @@
 	//world << "destination: [destination]"
 
 	if(origin == destination)
-		//world << "cancelling move, shuttle will overlap."
+		//world << "canceling move, shuttle will overlap."
 		return
 
 	if (docking_controller && !docking_controller.undocked())

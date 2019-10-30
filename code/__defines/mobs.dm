@@ -13,7 +13,7 @@
 #define PASSEMOTES  0x40    // Mob has a cortical borer or holders inside of it that need to see emotes.
 #define GODMODE     0x1000
 #define FAKEDEATH   0x2000  // Replaces stuff like changeling.changeling_fakedeath.
-#define DISFIGURED  0x4000  // Set but never checked. Remove this sometime and replace occurences with the appropriate organ code
+#define DISFIGURED  0x4000  // Set but never checked. Remove this sometime and replace occurrences with the appropriate organ code
 #define XENO_HOST   0x8000  //this is a test. Hopefully it works.
 
 // Grab levels.
@@ -275,7 +275,7 @@
 #define SPECIES_GOLEM			"Golem"
 #define SPECIES_EVENT1			"X Occursus"
 
-// Used to seperate simple animals by ""intelligence"".
+// Used to separate simple animals by ""intelligence"".
 #define SA_PLANT	1
 #define SA_ANIMAL	2
 #define SA_ROBOTIC	3

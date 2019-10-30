@@ -1,13 +1,15 @@
 //Tweaked existing vendors
 /obj/machinery/vending/hydroseeds/New()
-	contraband += list(/obj/item/seeds/shrinkshroom = 3,/obj/item/seeds/megashroom = 3) //Eclipse edit - makes nerfed size shrooms available only via hacking
+	contraband += list(/obj/item/seeds/shrinkshroom = 3,/obj/item/seeds/megashroom = 3, /obj/item/seeds/ambrosiavulgarisseed = 3) //Eclipse edit - makes nerfed size shrooms available only via hacking
+	//Eclipse edit 2019-10-09: Add ambrosia vulgaris seed back in. It's a contraband item, so contraband charges apply.
 	..()
 
 /obj/machinery/vending/security/New()
 	products += list(/obj/item/weapon/gun/energy/taser = 8,/obj/item/weapon/gun/energy/stunrevolver = 4,
 					/obj/item/weapon/reagent_containers/spray/pepper = 6,/obj/item/taperoll/police = 6,
 					/obj/item/weapon/gun/projectile/sec/flash = 4, /obj/item/ammo_magazine/m45/flash = 8,
-					/obj/item/clothing/glasses/omnihud/sec = 6)
+					/obj/item/clothing/glasses/omnihud/sec = 6, /obj/item/weapon/gun/projectile/modular/cz97 = 2,
+					/obj/item/weapon/gun/projectile/modular/fnx = 2)		//Eclipse Addition: Adds two of either modular guns.
 	..()
 
 /obj/machinery/vending/tool/New()

@@ -67,6 +67,8 @@ Radiochat range: 1441 to 1489 (most devices refuse to be tune to other frequency
 
 Radio:
 1459 - standard radio chat
+1465 - ATC Local			//Eclipse Edit
+1467 - ATC Regional			//Eclipse Edit
 1351 - Science
 1353 - Command
 1355 - Medical
@@ -121,6 +123,10 @@ var/const/SRV_FREQ = 1349
 var/const/SUP_FREQ = 1347
 var/const/EXP_FREQ = 1361
 
+//Eclipse Edit - ATC
+var/const/ATC_LOC_FREQ = 1465
+var/const/ATC_RGN_FREQ = 1467
+
 // internal department channels
 var/const/MED_I_FREQ = 1485
 var/const/SEC_I_FREQ = 1475
@@ -142,8 +148,10 @@ var/list/radiochannels = list(
 	"AI Private"	= AI_FREQ,
 	"Entertainment" = ENT_FREQ,
 	"Medical(I)"	= MED_I_FREQ,
-	"Security(I)"	= SEC_I_FREQ
-)
+	"Security(I)"	= SEC_I_FREQ,
+	"ATC (Local)"			= ATC_LOC_FREQ,
+	"ATC (Regional)"			= ATC_RGN_FREQ
+)		//Eclipse Edit: Added ATC frequencies
 
 // central command channels, i.e deathsquid & response teams
 var/list/CENT_FREQS = list(ERT_FREQ, DTH_FREQ)
@@ -197,11 +205,11 @@ var/list/DEPT_FREQS = list(AI_FREQ, COMM_FREQ, ENG_FREQ, ENT_FREQ, MED_FREQ, SEC
 //Other devices can then choose to send signals to only those devices that belong to a particular filter.
 //This is done for performance, so we don't send signals to lots of machines unnecessarily.
 
-//This filter is special because devices belonging to default also recieve signals sent to any other filter.
+//This filter is special because devices belonging to default also receive signals sent to any other filter.
 var/const/RADIO_DEFAULT = "radio_default"
 
 var/const/RADIO_TO_AIRALARM = "radio_airalarm" //air alarms
-var/const/RADIO_FROM_AIRALARM = "radio_airalarm_rcvr" //devices interested in recieving signals from air alarms
+var/const/RADIO_FROM_AIRALARM = "radio_airalarm_rcvr" //devices interested in receiving signals from air alarms
 var/const/RADIO_CHAT = "radio_telecoms"
 var/const/RADIO_ATMOSIA = "radio_atmos"
 var/const/RADIO_NAVBEACONS = "radio_navbeacon"

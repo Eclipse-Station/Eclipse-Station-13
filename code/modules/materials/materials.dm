@@ -89,7 +89,7 @@ var/list/name_to_material
 	var/destruction_desc = "breaks apart" // Fancy string for barricades/tables/objects exploding.
 
 	// Icons
-	var/icon_colour                                      // Colour applied to products of this material.
+	var/icon_colour                                      // Color applied to products of this material.
 	var/icon_base = "metal"                              // Wall and table base icon tag. See header.
 	var/door_icon_base = "metal"                         // Door base icon tag. See header.
 	var/icon_reinf = "reinf_metal"                       // Overlay used

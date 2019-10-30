@@ -14,6 +14,7 @@
 	//0: Normal, 1: Might be dead, 2: Definitely dead, show on console
 	var/dead_state = 0
 	var/last_update = 0
+	var/last_notification
 
 	//Backend
 	var/ckey = ""
@@ -188,9 +189,9 @@
 
 
 /**
- * Make a deep copy of this record so it can be saved on a disk without mofidications
+ * Make a deep copy of this record so it can be saved on a disk without modifications
  * to the original affecting the copy.
- * Just to be clear, this has nothing to do do with acutal biological cloning, body printing, resleeving,
+ * Just to be clear, this has nothing to do do with actual biological cloning, body printing, resleeving,
  * or anything like that! This is the computer science concept of "cloning" a data structure!
  */
 /datum/transhuman/body_record/proc/init_from_br(var/datum/transhuman/body_record/orig)

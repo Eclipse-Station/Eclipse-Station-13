@@ -34,7 +34,7 @@
 /obj/item/clothing/suit/storage/hooded/proc/RemoveHood()
 	icon_state = toggleicon
 	hood_up = FALSE
-	hood.canremove = TRUE // This shouldn't matter anyways but just incase.
+	hood.canremove = TRUE // This shouldn't matter anyways but just in case.
 	if(ishuman(hood.loc))
 		var/mob/living/carbon/H = hood.loc
 		H.unEquip(hood, 1)
@@ -96,7 +96,7 @@
 	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
 	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 10, rad = 0)
 	hoodtype = /obj/item/clothing/head/hood/winter
-	allowed = list (/obj/item/weapon/pen, /obj/item/weapon/paper, /obj/item/device/flashlight,/obj/item/weapon/tank/emergency/oxygen, /obj/item/weapon/storage/fancy/cigarettes, /obj/item/weapon/storage/box/matches, /obj/item/weapon/reagent_containers/food/drinks/flask)
+	allowed = list (/obj/item/weapon/gun/projectile/sec/flash, /obj/item/weapon/pen, /obj/item/weapon/paper, /obj/item/device/flashlight,/obj/item/weapon/tank/emergency/oxygen, /obj/item/weapon/storage/fancy/cigarettes, /obj/item/weapon/storage/box/matches, /obj/item/weapon/reagent_containers/food/drinks/flask)
 
 /obj/item/clothing/suit/storage/hooded/wintercoat/captain
 	name = "colony director's winter coat"
@@ -160,7 +160,7 @@
 
 /obj/item/clothing/suit/storage/hooded/explorer
 	name = "explorer suit"
-	desc = "An armoured suit for exploring harsh environments."
+	desc = "An armored suit for exploring harsh environments."
 	icon_state = "explorer"
 	item_state = "explorer"
 	flags = THICKMATERIAL
@@ -178,5 +178,6 @@
 		/obj/item/weapon/material/knife,
 		/obj/item/weapon/tank,
 		/obj/item/device/radio,
-		/obj/item/weapon/pickaxe
+		/obj/item/weapon/pickaxe,
+		/obj/item/weapon/gun/projectile/sec/flash
 		)

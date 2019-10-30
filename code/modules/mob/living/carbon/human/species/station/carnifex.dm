@@ -128,8 +128,8 @@
 		H.adjustBrainLoss(-0.5)
 		H.adjustToxLoss(-1)
 		H.nutrition -= 1
-	var/exposure = calculate_exposure(H) //Level of char's body exposed to enviroment
-	if(exposure)//if calculate_exposure retuns 0 don't run this at all
+	var/exposure = calculate_exposure(H) //Level of char's body exposed to environment
+	if(exposure)//if calculate_exposure returns 0 don't run this at all
 		var/turf/T = get_turf(H.loc)
 		var/datum/gas_mixture/environment //air magic. Pure fucking magic.
 		environment =  T.remove_air(T:air:total_moles)

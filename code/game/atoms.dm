@@ -91,7 +91,7 @@
 		return null
 
 //return flags that should be added to the viewer's sight var.
-//Otherwise return a negative number to indicate that the view should be cancelled.
+//Otherwise return a negative number to indicate that the view should be canceled.
 /atom/proc/check_eye(user as mob)
 	if (istype(user, /mob/living/silicon/ai)) // WHYYYY
 		return 0
@@ -161,7 +161,7 @@
 
 /*
  *	atom/proc/search_contents_for(path,list/filter_path=null)
- * Recursevly searches all atom contens (including contents contents and so on).
+ * Recursively searches all atom contents (including contents contents and so on).
  *
  * ARGS: path - search atom contents for atoms of this type
  *	   list/filter_path - if set, contents of atoms not of types in this list are excluded from search.
@@ -208,7 +208,7 @@
 /atom/proc/relaymove()
 	return
 
-//called to set the atom's dir and used to add behaviour to dir-changes
+//called to set the atom's dir and used to add behavior to dir-changes
 /atom/proc/set_dir(new_dir)
 	. = new_dir != dir
 	dir = new_dir
@@ -235,7 +235,7 @@
 /atom/proc/melt()
 	return
 
-// Previously this was defined both on /obj/ and /turf/ seperately.  And that's bad.
+// Previously this was defined both on /obj/ and /turf/ separately.  And that's bad.
 /atom/proc/update_icon()
 	return
 
@@ -399,7 +399,7 @@
 	if(flags & NOBLOODY)
 		return 0
 
-	if(!blood_DNA || !istype(blood_DNA, /list))	//if our list of DNA doesn't exist yet (or isn't a list) initialise it.
+	if(!blood_DNA || !istype(blood_DNA, /list))	//if our list of DNA doesn't exist yet (or isn't a list) initialize it.
 		blood_DNA = list()
 
 	was_bloodied = 1

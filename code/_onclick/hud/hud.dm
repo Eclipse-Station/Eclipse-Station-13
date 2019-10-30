@@ -55,7 +55,7 @@ var/list/global_huds = list(
 	mouse_opacity = 0
 
 /datum/global_hud/New()
-	//420erryday psychedellic colours screen overlay for when you are high
+	//420erryday psychedelic colors screen overlay for when you are high
 	druggy = new /obj/screen/global_screen()
 	druggy.icon_state = "druggy"
 

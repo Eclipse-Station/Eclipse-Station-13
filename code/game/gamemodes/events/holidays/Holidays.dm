@@ -37,18 +37,18 @@ var/global/list/Holiday = list() //Holidays are lists now, so we can have more t
 				if(12)
 					Holiday["Vertalliq-Qerr"] = "Vertalliq-Qerr, translated to mean 'Festival of the Royals', is a \
 					Skrell holiday that celebrates the Qerr-Katish and all they have provided for the rest of Skrell society, \
-					it often features colourful displays and skilled performers take this time to show off some of their more \
+					it often features colorful displays and skilled performers take this time to show off some of their more \
 					fancy displays."
 
 		if(2)	//Feb
 			switch(DD)
 				if(2)
-					Holiday["Groundhog Day"] = "An unoffical holiday based on ancient folklore that originated on Earth, \
+					Holiday["Groundhog Day"] = "An unofficial holiday based on ancient folklore that originated on Earth, \
 					that involves the worship of an almighty groundhog, that could control the weather based on if it casted a shadow."
 				if(14)
 					Holiday["Valentine's Day"] = "An old holiday that revolves around romance and love."
 				if(17)
-					Holiday["Random Acts of Kindness Day"] = "An unoffical holiday that challenges everyone to perform \
+					Holiday["Random Acts of Kindness Day"] = "An unofficial holiday that challenges everyone to perform \
 					acts of kindness to their friends, co-workers, and strangers, for no reason."
 
 		if(3)	//Mar
@@ -57,7 +57,7 @@ var/global/list/Holiday = list() //Holidays are lists now, so we can have more t
 					Holiday["Qixm-tes"] = "Qixm-tes, or 'Day of mourning', is a Skrell holiday where Skrell gather at places \
 					of worship and sing a song of mourning for all those who have died in service to their empire."
 				if(14)
-					Holiday["Pi Day"] = "An unoffical holiday celebrating the mathematical constant Pi.  It is celebrated on \
+					Holiday["Pi Day"] = "An unofficial holiday celebrating the mathematical constant Pi.  It is celebrated on \
 					March 14th, as the digits form 3 14, the first three significant digits of Pi.  Observance of Pi Day generally \
 					involve eating (or throwing) pie, due to a pun.  Pies also tend to be round, and thus relatable to Pi."
 				if(17)
@@ -73,7 +73,7 @@ var/global/list/Holiday = list() //Holidays are lists now, so we can have more t
 		if(4)	//Apr
 			switch(DD)
 				if(1)
-					Holiday["April Fool's Day"] = "An old holiday that endevours one to pull pranks and spread hoaxes on their friends."
+					Holiday["April Fool's Day"] = "An old holiday that endeavors one to pull pranks and spread hoaxes on their friends."
 					if(YY == 18)
 						Holiday["Easter"] = ""
 				if(8)
@@ -87,7 +87,7 @@ var/global/list/Holiday = list() //Holidays are lists now, so we can have more t
 					if(YY == 14)
 						Holiday["Easter"] = ""
 				if(22)
-					Holiday["Earth Day"] = "A holiday of enviromentalism, that originated on it's namesake, Earth."
+					Holiday["Earth Day"] = "A holiday of environmentalism, that originated on it's namesake, Earth."
 
 		if(5)	//May
 			switch(DD)
@@ -121,7 +121,7 @@ var/global/list/Holiday = list() //Holidays are lists now, so we can have more t
 					Holiday["Doctors' Day"] = "A holiday that recognizes the services of physicians, commonly celebrated \
 					in healthcare organizations and facilities."
 				if(30)
-					Holiday["Friendship Day"] = "An unoffical holiday that recognizes the value of friends and companionship.  Indeed, not having someone watch \
+					Holiday["Friendship Day"] = "An unofficial holiday that recognizes the value of friends and companionship.  Indeed, not having someone watch \
 					your back while in space can be dangerous, and the cold, isolating nature of space makes friends all the more important."
 
 		if(8)	//Aug
@@ -145,10 +145,10 @@ var/global/list/Holiday = list() //Holidays are lists now, so we can have more t
 					communities hold parties in order to remember loved ones who passed, unlike Qixm-tes, this applies to everyone \
 					and is a joyful celebration."
 				if(19)
-					Holiday["Talk-Like-a-Pirate Day"] = "Ahoy, matey!  Tis unoffical holiday be celebratin' the jolly \
+					Holiday["Talk-Like-a-Pirate Day"] = "Ahoy, matey!  Tis unofficial holiday be celebratin' the jolly \
 					good humor of speakin' like the pirates of old."
 				if(28)
-					Holiday["Stupid-Questions Day"] = "Known as Ask A Stupid Question Day, it is an unoffical holiday \
+					Holiday["Stupid-Questions Day"] = "Known as Ask A Stupid Question Day, it is an unofficial holiday \
 					created by teachers in Sol, very long ago, to encourage students to ask more questions in the classroom."
 
 		if(10)	//Oct
@@ -191,7 +191,7 @@ var/global/list/Holiday = list() //Holidays are lists now, so we can have more t
 					giving, decorating, family reunions, and a fat red human breaking into people's homes to steal milk and cookies."
 				if(25)
 					Holiday["Christmas"] = "Christmas is a very old holiday that originated in Earth, Sol.  It was a \
-					religious holiday for the Christian religion, which would later form Unitarianism.  Nowdays, the holiday is celebrated \
+					religious holiday for the Christian religion, which would later form Unitarianism.  Nowadays, the holiday is celebrated \
 					generally by giving gifts, symbolic decoration, and reuniting with one's family.  It also features a mythical fat \
 					red human, known as Santa, who broke into people's homes to loot cookies and milk."
 				if(31)

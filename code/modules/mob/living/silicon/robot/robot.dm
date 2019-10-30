@@ -51,7 +51,7 @@
 	var/obj/item/device/radio/borg/radio = null
 	var/obj/item/device/communicator/integrated/communicator = null
 	var/mob/living/silicon/ai/connected_ai = null
-	var/obj/item/weapon/cell/cell = null
+	var/obj/item/weapon/cell/high/cell = null
 	var/obj/machinery/camera/camera = null
 
 	var/cell_emp_mult = 2
@@ -86,7 +86,7 @@
 	var/lawupdate = 1 //Cyborgs will sync their laws with their AI by default
 	var/lockcharge //Used when looking to see if a borg is locked down.
 	var/lockdown = 0 //Controls whether or not the borg is actually locked down.
-	var/speed = 0 //Cause sec borgs gotta go fast //No they dont!
+	var/speed = 0 //Cause sec borgs gotta go fast //No they don't!
 	var/scrambledcodes = 0 // Used to determine if a borg shows up on the robotics console.  Setting to one hides them.
 	var/tracking_entities = 0 //The number of known entities currently accessing the internal camera
 	var/braintype = "Cyborg"
@@ -137,9 +137,9 @@
 		C.wrapped = new C.external_type
 
 	if(!cell)
-		cell = new /obj/item/weapon/cell(src)
-		cell.maxcharge = 7500
-		cell.charge = 7500
+		cell = new /obj/item/weapon/cell/high(src)
+		cell.maxcharge = 15000
+		cell.charge = 15000
 
 	..()
 
@@ -310,7 +310,7 @@
 	if(!custom_sprite) //Check for custom sprite
 		set_custom_sprite()
 
-	//Flavour text.
+	//Flavor text.
 	if(client)
 		var/module_flavour = client.prefs.flavour_texts_robot[modtype]
 		if(module_flavour)
@@ -922,7 +922,7 @@
 /mob/living/silicon/robot/proc/ResetSecurityCodes()
 	set category = "Robot Commands"
 	set name = "Reset Identity Codes"
-	set desc = "Scrambles your security and identification codes and resets your current buffers.  Unlocks you and but permenantly severs you from your AI and the robotics console and will deactivate your camera system."
+	set desc = "Scrambles your security and identification codes and resets your current buffers.  Unlocks you and but permanently severs you from your AI and the robotics console and will deactivate your camera system."
 
 	var/mob/living/silicon/robot/R = src
 
@@ -1068,7 +1068,7 @@
 		return
 
 	if(opened)//Cover is open
-		if(emagged)	return//Prevents the X has hit Y with Z message also you cant emag them twice
+		if(emagged)	return//Prevents the X has hit Y with Z message also you can't emag them twice
 		if(wiresexposed)
 			to_chat(user, "You must close the panel first")
 			return
@@ -1096,7 +1096,7 @@
 					sleep(20)
 					to_chat(src, "<span class='danger'>SynBorg v1.7.1 loaded.</span>")
 					sleep(5)
-					to_chat(src, "<span class='danger'>LAW SYNCHRONISATION ERROR</span>")
+					to_chat(src, "<span class='danger'>LAW SYNCHRONIZATION ERROR</span>")
 					sleep(5)
 					to_chat(src, "<span class='danger'>Would you like to send a report to NanoTraSoft? Y/N</span>")
 					sleep(10)

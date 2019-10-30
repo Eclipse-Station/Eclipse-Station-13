@@ -29,13 +29,13 @@
 /datum/trait/nonconductive
 	name = "Non-Conductive"
 	desc = "Decreases your susceptibility to electric shocks by a 25% amount."
-	cost = 2 //This effects tasers!
+	cost = 2 //This affects Tasers!
 	var_changes = list("siemens_coefficient" = 0.75)
 
 /datum/trait/nonconductive_plus
 	name = "Major Non-Conductive"
 	desc = "Decreases your susceptibility to electric shocks by a 50% amount."
-	cost = 3 //Let us not forget this effects tasers!
+	cost = 3 //Let us not forget this affects Tasers!
 	var_changes = list("siemens_coefficient" = 0.5)
 
 /datum/trait/darksight

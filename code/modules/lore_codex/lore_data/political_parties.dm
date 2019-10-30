@@ -50,7 +50,7 @@
 	name = "Mercurials"
 	keywords += list("Mercurial")
 	data = "[quick_link("Positronics")] and the rare augmented human who want to follow a different cultural path from the rest of humanity, viewing themselves as fundamentally \
-	separate from unaugmented biological humans. Previously an illegal movement, proscribed due to the preceived dangers of unfettered self-modification and the threat \
+	separate from unaugmented biological humans. Previously an illegal movement, proscribed due to the perceived dangers of unfettered self-modification and the threat \
 	posed by positronics without human values in mind, self-described Mercurials still often find themselves persecuted or used by bioconservatives as scapegoats \
 	and 'boogiemen'. As a technoprogressive group, they tend to vote along with the [quick_link("Shadow Coalition")]."
 

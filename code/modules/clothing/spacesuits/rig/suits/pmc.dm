@@ -3,7 +3,7 @@
 
 /obj/item/weapon/rig/pmc
 	name = "PMC hardsuit control module"
-	desc = "A suit worn by private military contractors. Armoured and space ready."
+	desc = "A suit worn by private military contractors. Armored and space ready."
 	suit_type = "PMC"
 	icon_state = "pmc_commandergrey_rig"
 
@@ -11,15 +11,15 @@
 
 	req_access = list(access_cent_specops)
 
-	armor = list(melee = 60, bullet = 50, laser = 35,energy = 15, bomb = 30, bio = 100, rad = 95)
+	armor = list(melee = 60, bullet = 50, laser = 35,energy = 15, bomb = 30, bio = 100, rad = 100)
 	allowed = list(/obj/item/device/flashlight, /obj/item/weapon/tank, /obj/item/device/t_scanner, /obj/item/weapon/rcd, /obj/item/weapon/tool/crowbar, \
 	/obj/item/weapon/tool/screwdriver, /obj/item/weapon/weldingtool, /obj/item/weapon/tool/wirecutters, /obj/item/weapon/tool/wrench, /obj/item/device/multitool, \
 	/obj/item/device/radio, /obj/item/device/analyzer,/obj/item/weapon/storage/briefcase/inflatable, /obj/item/weapon/melee/baton, /obj/item/weapon/gun, \
-	/obj/item/weapon/storage/firstaid, /obj/item/weapon/reagent_containers/hypospray, /obj/item/roller)
+	/obj/item/weapon/storage/firstaid, /obj/item/weapon/reagent_containers/hypospray, /obj/item/roller, /obj/item/weapon/storage/backpack)
 
 /obj/item/weapon/rig/pmc/commander
 	name = "PMC-C hardsuit control module"
-	desc = "A suit worn by private military contractors. Armoured and space ready."
+	desc = "A suit worn by private military contractors. Armored and space ready."
 	suit_type = "PMC commander"
 	icon_state = "pmc_commandergrey_rig"
 
@@ -44,10 +44,9 @@
 
 /obj/item/weapon/rig/pmc/engineer
 	name = "PMC-E suit control module"
-	desc = "A suit worn by private military contractors. This one is setup for engineering. Armoured and space ready."
+	desc = "A suit worn by private military contractors. This one is setup for engineering. Armored and space ready."
 	suit_type = "PMC engineer"
 	icon_state = "pmc_engineergrey_rig"
-	armor = list(melee = 60, bullet = 50, laser = 35,energy = 15, bomb = 30, bio = 100, rad = 100)
 	siemens_coefficient = 0
 
 /obj/item/weapon/rig/pmc/engineer/grey/equipped
@@ -73,7 +72,7 @@
 
 /obj/item/weapon/rig/pmc/medical
 	name = "PMC-M suit control module"
-	desc = "A suit worn by private military contractors. This one is setup for medical. Armoured and space ready."
+	desc = "A suit worn by private military contractors. This one is setup for medical. Armored and space ready."
 	suit_type = "PMC medic"
 	icon_state = "pmc_medicalgrey_rig"
 
@@ -99,8 +98,8 @@
 		)
 
 /obj/item/weapon/rig/pmc/security
-	name = "ERT-S suit control module"
-	desc = "A suit worn by private military contractors. This one is setup for security. Armoured and space ready."
+	name = "PMC-S suit control module"
+	desc = "A suit worn by private military contractors. This one is setup for security. Armored and space ready."
 	suit_type = "PMC security"
 	icon_state = "pmc_securitygrey_rig"
 

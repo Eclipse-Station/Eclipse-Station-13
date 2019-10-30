@@ -13,7 +13,7 @@
 /obj/item/ammo_magazine/s177bb
 	name = "tube of BBs"
 	icon = 'modular_eclipse/icons/obj/ammo_eclipse.dmi'
-	desc = "A tube of zinc-plated steel airgun shot, for .177-calibre (4.5mm) airguns."
+	desc = "A tube of zinc-plated steel airgun shot, for .177-caliber (4.5mm) airguns."
 	icon_state = "bb-tube"
 	caliber = "177pellet"
 	ammo_type = /obj/item/ammo_casing/caseless/a177bb

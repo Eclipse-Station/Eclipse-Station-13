@@ -129,7 +129,7 @@ mob/living/carbon/proc/handle_hallucinations()
 							src << 'sound/weapons/Gunshot.ogg'
 					if(10) src << 'sound/weapons/smash.ogg'
 					if(11)
-						//Same as above, but with tasers.
+						//Same as above, but with Tasers.
 						src << 'sound/weapons/Taser.ogg'
 						spawn(rand(10,30))
 							src << 'sound/weapons/Taser.ogg'

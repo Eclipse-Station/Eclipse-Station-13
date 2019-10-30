@@ -550,7 +550,7 @@
 /obj/item/weapon/shockpaddles/robot/combat
 	name = "combat defibrillator paddles"
 	desc = "A pair of advanced shockpaddles powered by a robot's internal power cell, able to penetrate thick clothing.  This version \
-	appears to be optimized for combat situations, foregoing the safety inhabitors in favor of a faster charging time."
+	appears to be optimized for combat situations, foregoing the safety inhibitors in favor of a faster charging time."
 	safety = 0
 	chargetime = (1 SECONDS)
 

@@ -20,8 +20,8 @@
 # ckey: zuhayr
 # character_name: Jane Doe
 # item_path: /obj/item/device/kit/paint
-# item_name: APLU customisation kit
-# item_desc: A customisation kit with all the parts needed to turn an APLU into a "Titan's Fist" model.
+# item_name: APLU customization kit
+# item_desc: A customization kit with all the parts needed to turn an APLU into a "Titan's Fist" model.
 # kit_name: APLU "Titan's Fist"
 # kit_desc: Looks like an overworked, under-maintained Ripley with some horrific damage.
 # kit_icon: titan
@@ -32,8 +32,8 @@
 # ckey: zuhayr
 # character_name: Jane Doe
 # item_path: /obj/item/device/kit/suit
-# item_name: salvage suit customisation kit
-# item_desc: A customisation kit with all the parts needed to convert a suit.
+# item_name: salvage suit customization kit
+# item_desc: A customization kit with all the parts needed to convert a suit.
 # kit_name: salvage
 # kit_desc: An orange voidsuit. Reinforced!
 # kit_icon: salvage

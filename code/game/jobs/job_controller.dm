@@ -24,6 +24,15 @@ var/global/datum/controller/occupations/job_master
 			var/datum/job/job = new J()
 			if(!job)	continue
 			if(job.faction != faction)	continue
+			// // // BEGIN ECLIPSE EDITS // // //
+			//Whitelist job based on configuration files.
+			if(job.wl_config_heads && config.wl_heads)		//Heads of Staff
+				job.whitelist_only = TRUE
+			if(job.wl_config_sec && config.wl_security)		//Security
+				job.whitelist_only = TRUE
+			if(job.wl_config_borgs && config.wl_silicons)		//Silicons
+				job.whitelist_only = TRUE
+			// // // END ECLIPSE EDITS // // //
 			occupations += job
 		sortTim(occupations, /proc/cmp_job_datums)
 
@@ -569,7 +578,7 @@ var/global/datum/controller/occupations/job_master
 			H.equip_to_slot_or_del(C, slot_wear_id)
 
 //		H.equip_to_slot_or_del(new /obj/item/device/pda(H), slot_belt)
-		if(locate(/obj/item/device/pda,H))
+		if(locate(/obj/item/device/pda,H)) // NOTE: Modify /decl/hierarchy/outfit/proc/equip_pda(mob/living/carbon/human/H, rank, assignment) instead
 			var/obj/item/device/pda/pda = locate(/obj/item/device/pda,H)
 			pda.owner = H.real_name
 			pda.ownjob = C.assignment
@@ -608,7 +617,7 @@ var/global/datum/controller/occupations/job_master
 				if(!J)	continue
 				J.total_positions = text2num(value)
 				J.spawn_positions = text2num(value)
-				if(name == "AI" || name == "Cyborg")//I dont like this here but it will do for now
+				if(name == "AI" || name == "Cyborg")//I don't like this here but it will do for now
 					J.total_positions = 0
 
 		return 1

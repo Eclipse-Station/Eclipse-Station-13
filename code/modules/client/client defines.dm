@@ -11,7 +11,7 @@
 	var/buildmode		= 0
 
 	var/last_message	= "" //Contains the last message sent by this client - used to protect against copy-paste spamming.
-	var/last_message_count = 0 //contins a number of how many times a message identical to last_message was sent.
+	var/last_message_count = 0 //contains a number of how many times a message identical to last_message was sent.
 	var/ircreplyamount = 0
 
 		/////////
@@ -51,7 +51,7 @@
 	var/related_accounts_cid = "(Requires database)"	//So admins know why it isn't working - Used to determine what other accounts previously logged in from this computer id
 	var/account_join_date = "(Requires database)"
 	var/account_age = "(Requires database)"
-	var/list/department_hours	// VOREStation Edit - Track hours of leave accured for each department.
+	var/list/department_hours	// VOREStation Edit - Track hours of leave accrued for each department.
 
 	preload_rsc = PRELOAD_RSC
 

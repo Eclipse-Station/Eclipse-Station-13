@@ -122,7 +122,7 @@
 	var/i = 20 // Infinite loop safety.
 	var/pattern = "(?<!<)\\" + char
 	var/regex/re = regex(pattern,"i") // This matches results which do not have a < next to them, to avoid stripping slashes from closing html tags.
-	var/first = re.Find(message) // Find first occurance.
+	var/first = re.Find(message) // Find first occurrence.
 	var/second = re.Find(message, first + 1) // Then the second.
 	while(first && second && i)
 		// Calculate how far foward the second char is, as the first replacetext() will displace it.
@@ -137,7 +137,7 @@
 		second = re.Find(message, first + 1)
 		i--
 	if(!i)
-		CRASH("Possible infinite loop occured in encode_html_emphasis().")
+		CRASH("Possible infinite loop occurred in encode_html_emphasis().")
 	return message
 
 /mob/proc/hear_radio(var/message, var/verb="says", var/datum/language/language=null, var/part_a, var/part_b, var/part_c, var/mob/speaker = null, var/hard_to_hear = 0, var/vname ="")

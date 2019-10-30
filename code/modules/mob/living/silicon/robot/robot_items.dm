@@ -215,7 +215,7 @@
 
 
 
-// A special pen for service droids. Can be toggled to switch between normal writting mode, and paper rename mode
+// A special pen for service droids. Can be toggled to switch between normal writing mode, and paper rename mode
 // Allows service droids to rename paper items.
 
 /obj/item/weapon/pen/robopen

@@ -23,7 +23,7 @@
 
 /obj/item/weapon/extinguisher/mini
 	name = "fire extinguisher"
-	desc = "A light and compact fibreglass-framed model fire extinguisher."
+	desc = "A light and compact fiberglass-framed model fire extinguisher."
 	icon_state = "miniFE0"
 	item_state = "miniFE"
 	hitsound = null	//it is much lighter, after all.
@@ -33,6 +33,11 @@
 	max_water = 150
 	spray_particles = 3
 	sprite_name = "miniFE"
+
+/obj/item/weapon/extinguisher/mini/plasman
+	name = "emergency phoronoid extinguisher"
+	desc = "A mini fire extinguisher for use by burning phoronoids. Let's just hope it works."
+	max_water = 300
 
 /obj/item/weapon/extinguisher/New()
 	create_reagents(max_water)

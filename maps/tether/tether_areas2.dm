@@ -189,9 +189,9 @@
 /area/engineering/atmos/hallway
 	name = "\improper Atmospherics Main Hallway"
 /area/engineering/lower/lobby
-	name = "\improper Enginering Surface Lobby"
+	name = "\improper Engineering Surface Lobby"
 /area/engineering/lower/breakroom
-	name = "\improper Enginering Surface Break Room"
+	name = "\improper Engineering Surface Break Room"
 /area/engineering/lower/corridor
 	name = "\improper Tether Lower Service Corridor"
 /area/engineering/lower/atmos_lockers
@@ -230,11 +230,11 @@
 /area/maintenance/lower/trash_pit
 	name = "\improper Trash Pit"
 /area/maintenance/lower/solars
-	name = "\improper Solars maintenanceance"
+	name = "\improper Solars Maintenance"
 /area/maintenance/lower/mining_eva
 	name = "\improper Mining EVA Maintenance"
 /area/maintenance/lower/public_garden_maintenence
-	name = "\improper Public Garden Maintenence"
+	name = "\improper Public Garden Maintenance"
 
 // Research
 /area/rnd/xenobiology/xenoflora/lab_atmos
@@ -398,7 +398,7 @@
 /area/engineering/engine_balcony
 	name = "\improper Engine Room Balcony"
 /area/engineering/foyer_mezzenine
-	name = "\improper Engineering Mezzenine"
+	name = "\improper Engineering Mezzanine"
 
 /area/hallway/station
 	icon_state = "hallC1"

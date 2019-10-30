@@ -14,7 +14,7 @@
 
 /obj/item/ammo_casing/caseless/a177bb		//.177/4.5mm air rifle
 	name = "\improper BB"
-	desc = "A zinc-coated, steel .177-calibre (4.5mm) BB. Perfect for shooting someone's eye out."
+	desc = "A zinc-coated, steel .177-caliber (4.5mm) BB. Perfect for shooting someone's eye out."
 	caliber = "177pellet"
 	icon = 'modular_eclipse/icons/obj/projectile_eclipse.dmi'
 	icon_state = "bb-steel"

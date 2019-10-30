@@ -13,7 +13,7 @@
 	var/driveletter	= null		// drive letter according to the computer
 
 	var/list/files	= list()	// a list of files in the memory (ALL files)
-	var/removeable	= 0			// determinse if the storage device is a removable hard drive (ie floppy)
+	var/removeable	= 0			// determines if the storage device is a removable hard drive (ie floppy)
 
 
 	var/writeprotect = 0		// determines if the drive forbids writing.

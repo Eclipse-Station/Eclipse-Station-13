@@ -25,7 +25,7 @@
 	stat = POWEROFF//Starts turned off
 
 	var/datum/reagents/oil
-	var/optimal_oil = 9000//90 litres of cooking oil
+	var/optimal_oil = 9000//90 liters of cooking oil
 
 
 /obj/machinery/appliance/cooker/fryer/examine(var/mob/user)
@@ -60,7 +60,7 @@
 
 /obj/machinery/appliance/cooker/fryer/update_cooking_power()
 	..()//In addition to parent temperature calculation
-	//Fryer efficiency also drops when oil levels arent optimal
+	//Fryer efficiency also drops when oil levels aren't optimal
 	var/oil_level = 0
 	var/datum/reagent/nutriment/triglyceride/oil/OL = oil.get_master_reagent()
 	if (OL && istype(OL))
@@ -147,7 +147,7 @@
 	//user.visible_message("<span class='danger'>\The [user] starts pushing \the [victim] into \the [src]!</span>")
 
 
-	//Removed delay on this action in favour of a cooldown after it
+	//Removed delay on this action in favor of a cooldown after it
 	//If you can lure someone close to the fryer and grab them then you deserve success.
 	//And a delay on this kind of niche action just ensures it never happens
 	//Cooldown ensures it can't be spammed to instakill someone

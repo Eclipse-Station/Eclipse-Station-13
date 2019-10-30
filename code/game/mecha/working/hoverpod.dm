@@ -61,7 +61,7 @@
 
 	return ..()
 
-//these three procs overriden to play different sounds
+//these three procs overridden to play different sounds
 /obj/mecha/working/hoverpod/mechturn(direction)
 	set_dir(direction)
 	//playsound(src,'sound/machines/hiss.ogg',40,1)
@@ -83,7 +83,7 @@
 
 //Hoverpod variants
 /obj/mecha/working/hoverpod/combatpod
-	desc = "An ancient, run-down combat spacecraft." // Ideally would have a seperate icon.
+	desc = "An ancient, run-down combat spacecraft." // Ideally would have a separate icon.
 	name = "Combat Hoverpod"
 	health = 200
 	maxhealth = 200

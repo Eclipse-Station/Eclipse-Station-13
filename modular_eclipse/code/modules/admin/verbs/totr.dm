@@ -46,8 +46,8 @@
 
 	ticker.chosen_tip = input
 
-	// If we've already tipped, then send it straight away.
-	if(ticker.tip_sent)
+	// If we've already tipped, or if tips are disabled, then send it straight away.
+	if(ticker.tip_sent || !config.tip_of_the_round)
 		ticker.send_tip_of_the_round()
 
 

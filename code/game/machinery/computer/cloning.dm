@@ -274,7 +274,7 @@
 						qdel(C)
 						menu = 1
 					else
-						temp = "Initiating cloning cycle...<br>Error: Post-initialisation failed. Cloning cycle aborted."
+						temp = "Initiating cloning cycle...<br>Error: Post-initialization failed. Cloning cycle aborted."
 
 		else
 			temp = "Error: Data corruption."

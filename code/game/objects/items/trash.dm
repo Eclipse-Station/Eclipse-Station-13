@@ -5,7 +5,7 @@
 /obj/item/trash
 	icon = 'icons/obj/trash.dmi'
 	w_class = ITEMSIZE_SMALL
-	desc = "This is rubbish."
+	desc = "General waste material, refuse or litter. Dispose responsibly."
 
 /obj/item/trash/raisins
 	name = "\improper 4no raisins"
@@ -84,5 +84,17 @@
 	name = "crushed can"
 	icon_state = "cola"
 	matter = list(DEFAULT_WALL_MATERIAL = 130)
+	
+/obj/item/trash/skrellsnacks
+	name = "\improper SkrellSnax"
+	icon_state = "skrellsnacks"
+
+/obj/item/trash/attack(mob/M as mob, mob/living/user as mob)
+
+/obj/item/trash/skrellsnacks
+	name = "\improper SkrellSnax"
+	icon = 'icons/obj/candle.dmi'
+	icon_state = "candle4"
+
 /obj/item/trash/attack(mob/M as mob, mob/living/user as mob)
 	return

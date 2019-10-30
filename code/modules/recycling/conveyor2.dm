@@ -108,6 +108,20 @@
 					C.conveyors |= src
 			return
 
+	if(istype(I, /obj/item/weapon/tool/wrench))
+		if(panel_open)
+			if(operating != 0)
+				to_chat(user, "<span class='notice'>Turn the conveyor off first!</span>")
+				return
+			else if(dir & (dir-1)) // Diagonal. Forwards is *away* from dir, curving to the right.
+				forwards = turn(dir, 135)
+				backwards = turn(dir, 45)
+			else
+				forwards = dir
+				backwards = turn(dir, 180)
+			playsound(src.loc, I.usesound, 50, 1)
+			return
+
 	user.drop_item(get_turf(src))
 	return
 
@@ -178,7 +192,7 @@
 
 	var/id = "" 				// must match conveyor IDs to control them
 
-	var/list/conveyors		// the list of converyors that are controlled by this switch
+	var/list/conveyors		// the list of conveyors that are controlled by this switch
 	anchored = 1
 
 
@@ -275,7 +289,7 @@
 			return
 
 /obj/machinery/conveyor_switch/oneway
-	var/convdir = 1 //Set to 1 or -1 depending on which way you want the convayor to go. (In other words keep at 1 and set the proper dir on the belts.)
+	var/convdir = 1 //Set to 1 or -1 depending on which way you want the conveyor to go. (In other words keep at 1 and set the proper dir on the belts.)
 	desc = "A conveyor control switch. It appears to only go in one direction."
 
 // attack with hand, switch position

@@ -144,7 +144,7 @@
 
 /obj/item/weapon/reagent_containers/food/drinks/smallchocmilk
 	name = "small chocolate milk carton"
-	desc = "It's milk! This one is in delicious chocolate flavour."
+	desc = "It's milk! This one is in delicious chocolate flavor."
 	volume = 30
 	icon_state = "mini-milk_choco"
 	item_state = "carton"

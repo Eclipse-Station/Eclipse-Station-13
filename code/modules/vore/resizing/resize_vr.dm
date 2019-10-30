@@ -105,7 +105,7 @@ var/const/RESIZE_A_SMALLTINY = (RESIZE_SMALL + RESIZE_TINY) / 2
 
 /mob/living/proc/set_size()
 	set name = "Adjust Mass"
-	set category = "Abilities" //Seeing as prometheans have an IC reason to be changing mass.
+	set category = "Abilities" //Seeing as Prometheans have an IC reason to be changing mass.
 
 	var/nagmessage = "Adjust your mass to be a size between 50 to 150% (DO NOT ABUSE)"
 	var/new_size = input(nagmessage, "Pick a Size") as num|null
@@ -255,7 +255,7 @@ var/const/RESIZE_A_SMALLTINY = (RESIZE_SMALL + RESIZE_TINY) / 2
 				else
 					//Perform some HALLOSS damage to the smaller.
 					var/size_damage_multiplier = (src.size_multiplier - tmob.size_multiplier)
-					var/damage = (rand(15,30)* size_damage_multiplier) //Since stunned is broken, let's do this. Rand 15-30 multiplied by 1 min or 1.75 max. 15 holo to 52.5 holo, depending on RNG and size differnece.
+					var/damage = (rand(15,30)* size_damage_multiplier) //Since stunned is broken, let's do this. Rand 15-30 multiplied by 1 min or 1.75 max. 15 holo to 52.5 holo, depending on RNG and size difference.
 					tmob.apply_damage(damage, HALLOSS)
 					tmob.resting = 1
 

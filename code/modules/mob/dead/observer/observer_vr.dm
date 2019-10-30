@@ -3,7 +3,7 @@
 	set name = "Join Into Soulcatcher"
 	set desc = "Select a player with a working NIF + Soulcatcher NIFSoft to join into it."
 
-	var/picked = input("Pick a friend with NIF and Soulcatcher to join into. Harrass strangers, get banned. Not everyone has a NIF w/ Soulcatcher.","Select a player") as null|anything in player_list
+	var/picked = input("Pick a friend with NIF and Soulcatcher to join into. Harass strangers, get banned. Not everyone has a NIF w/ Soulcatcher.","Select a player") as null|anything in player_list
 
 	//Didn't pick anyone or picked a null
 	if(!picked)
@@ -56,3 +56,24 @@
 		mind.active = TRUE
 
 		SC.catch_mob(src) //This will result in us being deleted so...
+
+/mob/observer/dead/verb/backup_ping()
+	set category = "Ghost"
+	set name = "Notify Transcore"
+	set desc = "If your past-due backup notification was missed or ignored, you can use this to send a new one."
+
+	var/record_found = FALSE
+	for(var/datum/transhuman/mind_record/record in SStranscore.backed_up)
+		if(record.ckey == ckey)
+			record_found = TRUE
+			if(!(record.dead_state == MR_DEAD))
+				to_chat(src, "<span class='warning'>Your backup is not past-due yet.</span>")
+			else if((world.time - record.last_notification) < 10 MINUTES)
+				to_chat(src, "<span class='warning'>Too little time has passed since your last notification.</span>")
+			else
+				SStranscore.notify(record.mindname, TRUE)
+				record.last_notification = world.time
+				to_chat(src, "<span class='notice'>New notification has been sent.</span>")
+
+	if(!record_found)
+		to_chat(src, "<span class='warning'>No mind record found!</span>")

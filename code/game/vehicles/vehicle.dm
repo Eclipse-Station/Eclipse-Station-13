@@ -45,7 +45,7 @@
 	var/list/internals_req_access = list(access_engine,access_robotics)//required access level to open cell compartment
 
 	//var/datum/global_iterator/pr_int_temp_processor //normalizes internal air mixture temperature     //In airtight.dm you go -Agouri
-	var/datum/global_iterator/pr_inertial_movement //controls intertial movement in spesss
+	var/datum/global_iterator/pr_inertial_movement //controls inertial movement in spesss
 
 	//var/datum/global_iterator/pr_give_air //moves air from tank to cabin   //Y-you too -Agouri
 
@@ -75,7 +75,7 @@
 	add_iterators()
 	removeVerb(/obj/mecha/verb/disconnect_from_port)
 	removeVerb(/atom/movable/verb/pull)
-	log_message("[src.name]'s functions initialised. Work protocols active - Entering IDLE mode.")
+	log_message("[src.name]'s functions initialized. Work protocols active - Entering IDLE mode.")
 	loc.Entered(src)
 	return
 

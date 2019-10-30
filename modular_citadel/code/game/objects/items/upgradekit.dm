@@ -1,6 +1,6 @@
 /obj/item/kevlarupgrade
 	name = "kevlar upgrade kit"
-	desc = "A kit for reinforcing standard jumpsuits with kevlar weave, upgrading their armour slightly."
+	desc = "A kit for reinforcing standard jumpsuits with kevlar weave, upgrading their armor slightly."
 	icon = 'icons/obj/robot_component.dmi'	//PLACEHOLDER
 	icon_state = "armor"	//PLACEHOLDER
 

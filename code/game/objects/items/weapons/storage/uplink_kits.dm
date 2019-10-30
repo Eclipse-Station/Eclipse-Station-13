@@ -104,7 +104,7 @@
 
 /obj/item/weapon/storage/box/syndie_kit/chameleon
 	name = "chameleon kit"
-	desc = "Comes with all the clothes you need to impersonate most people.  Acting lessons sold seperately."
+	desc = "Comes with all the clothes you need to impersonate most people.  Acting lessons sold separately."
 	starts_with = list(
 		/obj/item/clothing/under/chameleon,
 		/obj/item/clothing/head/chameleon,
@@ -191,7 +191,7 @@
 
 	new /obj/item/weapon/flame/lighter/zippo(src)
 
-	calibrate_size()
+	//calibrate_size()
 
 /proc/fill_cigarre_package(var/obj/item/weapon/storage/fancy/cigarettes/C, var/list/reagents)
 	for(var/reagent in reagents)

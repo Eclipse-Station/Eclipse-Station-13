@@ -35,7 +35,7 @@ HALOGEN COUNTER	- Radcount on mobs
 /obj/item/device/healthanalyzer/do_surgery(mob/living/M, mob/living/user)
 	if(user.a_intent != I_HELP) //in case it is ever used as a surgery tool
 		return ..()
-	scan_mob(M, user) //default surgery behaviour is just to scan as usual
+	scan_mob(M, user) //default surgery behavior is just to scan as usual
 	return 1
 
 /obj/item/device/healthanalyzer/attack(mob/living/M, mob/living/user)
@@ -288,7 +288,7 @@ HALOGEN COUNTER	- Radcount on mobs
 
 /obj/item/device/healthanalyzer/phasic //reports all of the above, as well as name and quantity of nonmed reagents in stomach
 	name = "phasic health analyzer"
-	desc = "Possibly the most advanced health analyzer to ever have existed, utilising bluespace technology to determine almost everything worth knowing about a patient."
+	desc = "Possibly the most advanced health analyzer to ever have existed, utilizing bluespace technology to determine almost everything worth knowing about a patient."
 	advscan = 3
 	origin_tech = list(TECH_MAGNET = 7, TECH_BIO = 8)
 	icon_state = "health3"

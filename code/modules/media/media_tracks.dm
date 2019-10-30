@@ -50,7 +50,7 @@ var/global/list/all_lobby_tracks = list()
 			warning("[jukebox_track_file] entry [entry]: bad or missing 'url'")
 			continue
 		if(!istext(entry["title"]))
-			warning("[jukebox_track_file] entry [entry]: bad or missingg 'title'")
+			warning("[jukebox_track_file] entry [entry]: bad or missing 'title'")
 			continue
 		if(!isnum(entry["duration"]))
 			warning("[jukebox_track_file] entry [entry]: bad or missing 'duration'")

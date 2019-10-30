@@ -259,15 +259,15 @@
 // Second argument is the path the list is expected to contain. Note that children will also get added to the global list.
 // If the GLOB system is ever ported, you can change this macro in one place and have less work to do than you otherwise would.
 #define GLOBAL_LIST_BOILERPLATE(LIST_NAME, PATH)\
-var/global/list/##LIST_NAME = list();\
+GLOBAL_LIST_EMPTY(##LIST_NAME);\
 ##PATH/initialize(mapload, ...)\
 	{\
-	##LIST_NAME += src;\
+	GLOB.##LIST_NAME += src;\
 	return ..();\
 	}\
 ##PATH/Destroy(force, ...)\
 	{\
-	##LIST_NAME -= src;\
+	GLOB.##LIST_NAME -= src;\
 	return ..();\
 	}\
 
@@ -305,3 +305,6 @@ var/global/list/##LIST_NAME = list();\
 
 #define RCD_SHEETS_PER_MATTER_UNIT	4	// Each physical material sheet is worth four matter units.
 #define RCD_MAX_CAPACITY			30 * RCD_SHEETS_PER_MATTER_UNIT
+
+//Preference save/load cooldown. This is in deciseconds.
+#define PREF_SAVELOAD_COOLDOWN 2 //Should be sufficiently hard to achieve without a broken mouse or autoclicker while still fulfilling its intended goal.

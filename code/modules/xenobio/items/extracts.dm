@@ -231,7 +231,7 @@
 	color = "#888888"
 
 
-/datum/chemical_reaction/binding/plasteel // Two parts 'steel', one part platnium matches the smelter alloy recipe.
+/datum/chemical_reaction/binding/plasteel // Two parts 'steel', one part platinum matches the smelter alloy recipe.
 	name = "Bind into Plasteel"
 	id = "bind_plasteel"
 	required_reagents = list("binding" = REAGENTS_PER_SHEET, "steel" = REAGENTS_PER_SHEET * 2, "platinum" = REAGENTS_PER_SHEET)
@@ -469,7 +469,7 @@
 	result_amount = 1
 	required = /obj/item/slime_extract/dark_blue
 
-// This iterates over a ZAS zone's contents, so that things seperated in other zones aren't subjected to the temperature drop.
+// This iterates over a ZAS zone's contents, so that things separated in other zones aren't subjected to the temperature drop.
 /datum/chemical_reaction/slime/dark_blue_cold_snap/on_reaction(var/datum/reagents/holder)
 	var/turf/simulated/T = get_turf(holder.my_atom)
 	if(!T) // Nullspace lacks zones.
@@ -501,7 +501,7 @@
 				to_chat(S, "<span class='warning'>A chill is felt around you, however it cannot harm you.</span>")
 				continue
 			if(S.client) // Don't instantly kill player slimes.
-				to_chat(S, "<span class='danger'>You feel your body crystalize as an intense chill overwhelms you!</span>")
+				to_chat(S, "<span class='danger'>You feel your body crystallize as an intense chill overwhelms you!</span>")
 				S.adjustToxLoss(S.cold_damage_per_tick * 2)
 			else
 				S.adjustToxLoss(S.cold_damage_per_tick * 5) // Metal slimes can survive this 'slime nuke'.
@@ -712,7 +712,7 @@
 	icon_state = "bluespace slime extract"
 	description_info = "This extract creates slime crystals.  When injected with water, it creates five 'lesser' slime crystals, which allow for limited \
 	short ranged, random teleporting.  When injected with phoron, it creates one 'greater' slime crystal, which allows for a one time precise teleport to \
-	a specific area."
+	a specific area. But when injected with blood will make a single bluespace crystal."
 
 /datum/chemical_reaction/slime/bluespace_lesser
 	name = "Slime Lesser Tele"
@@ -735,6 +735,17 @@
 
 /datum/chemical_reaction/slime/bluespace_greater/on_reaction(var/datum/reagents/holder)
 	new /obj/item/weapon/disposable_teleporter/slime(get_turf(holder.my_atom))
+	..()
+
+/datum/chemical_reaction/slime/bloodcrystal
+	name = "Soild Bluespace"
+	id = "bloodcrystal"
+	required_reagents = list("blood" = 5)
+	result_amount = 1
+	required = /obj/item/slime_extract/bluespace
+
+/datum/chemical_reaction/slime/bloodcrystal/on_reaction(var/datum/reagents/holder)
+	new /obj/item/weapon/ore/bluespace_crystal(get_turf(holder.my_atom))
 	..()
 
 // *******************

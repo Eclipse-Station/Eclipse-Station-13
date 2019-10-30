@@ -23,9 +23,9 @@ var/global/datum/emergency_shuttle_controller/emergency_shuttle
 	var/datum/announcement/priority/emergency_shuttle_recalled = new(0, new_sound = sound('sound/AI/shuttlerecalled.ogg'))
 
 	// Eclipse added vars
-	var/shift_change_horn = TRUE		//Should we have a shift-change horn when the shuttle gets called?
 	var/shift_change_horn_file = 'sound/items/AirHorn.ogg'
 	var/shift_change_horn_volume = 10
+	var/horn_has_fired = FALSE
 
 /datum/emergency_shuttle_controller/New()
 	escape_pods = list()
@@ -113,13 +113,19 @@ var/global/datum/emergency_shuttle_controller/emergency_shuttle
 
 	// // // BEGIN ECLIPSE EDIT // // //
 	world.log << "Scheduled crew transfer has begun."		//let the guy in the console see it
-	if(shift_change_horn)
-		spawn(48)		//1 mile at speed of sound in air at 0C, 1 bar pressure = 4.8574... seconds. This assumes the colony is at 1 mile away, and the horn is originating from there.
+	if(config.shift_end_horn && !horn_has_fired)
+		spawn(config.shift_end_horn_delay)
 			blow_horn()
 
 /datum/emergency_shuttle_controller/proc/blow_horn()
-	world << sound(shift_change_horn_file, repeat = 0, wait = 0, volume = shift_change_horn_volume, channel = 3)
-	shift_change_horn = FALSE
+	if(config.shift_end_horn_global)
+		world << sound(shift_change_horn_file, repeat = 0, wait = 0, volume = shift_change_horn_volume, channel = 3)
+	else
+		for(var/mob/M in player_list)
+			if(!istype(M,/mob/new_player) && !isdeaf(M))
+				M << sound(shift_change_horn_file, repeat = 0, wait = 0, volume = shift_change_horn_volume, channel = 3)
+
+	horn_has_fired = TRUE
 	// // // END ECLIPSE EDIT // // //
 
 
@@ -184,7 +190,7 @@ var/global/datum/emergency_shuttle_controller/emergency_shuttle
 //so we don't have emergency_shuttle.shuttle.location everywhere
 /datum/emergency_shuttle_controller/proc/location()
 	if (!shuttle)
-		return 1 	//if we dont have a shuttle datum, just act like it's at centcom
+		return 1 	//if we don't have a shuttle datum, just act like it's at centcom
 	return shuttle.location
 
 //returns the time left until the shuttle arrives at it's destination, in seconds

@@ -3,7 +3,7 @@
 #define BOOK_VERSION_MIN	1
 #define BOOK_VERSION_MAX	2
 #define BOOK_PATH			"data/books/"
-#define BOOKS_USE_SQL		0				// no guarentee for this branch to work right with sql
+#define BOOKS_USE_SQL		0				// no guarantee for this branch to work right with sql
 
 var/global/datum/book_manager/book_mgr = new()
 

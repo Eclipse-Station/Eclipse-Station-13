@@ -157,12 +157,12 @@ var/global/list/narsie_list = list()
 	set_light(1)
 
 /obj/singularity/narsie/large/consume(const/atom/A) //Has its own consume proc because it doesn't need energy and I don't want BoHs to explode it. --NEO
-//NEW BEHAVIOUR
+//NEW BEHAVIOR
 	if(narsie_behaviour == "CultStation13")
 	//MOB PROCESSING
 		new_narsie(A)
 
-//OLD BEHAVIOUR
+//OLD BEHAVIOR
 	else if(narsie_behaviour == "Nar-Singulo")
 		old_narsie(A)
 

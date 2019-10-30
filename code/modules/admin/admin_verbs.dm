@@ -11,9 +11,11 @@ var/list/admin_verbs_default = list(
 //	/client/proc/cmd_mod_say,
 //	/client/proc/deadchat				//toggles deadchat on/off,
 //	/client/proc/toggle_ahelp_sound,
-	)
+	/client/proc/add_to_whitelist,
+	/client/proc/reload_whitelist)
 
 var/list/admin_verbs_admin = list(
+	/client/proc/discord_msg,
 	/client/proc/player_panel_new, //shows an interface for all players, with links to various panels,
 	/datum/admins/proc/set_tcrystals,
 	/datum/admins/proc/add_tcrystals,
@@ -27,7 +29,7 @@ var/list/admin_verbs_admin = list(
 	/datum/admins/proc/announce,		//priority announce something to all clients.,
 	/datum/admins/proc/intercom,		//send a fake intercom message, like an arrivals announcement,
 	/datum/admins/proc/intercom_convo,	//send a fake intercom conversation, like an ATC exchange,
-	/client/proc/colorooc,				//allows us to set a custom colour for everythign we say in ooc,
+	/client/proc/colorooc,				//allows us to set a custom color for everything we say in ooc,
 	/client/proc/admin_ghost,			//allows us to ghost/reenter body at will,
 	/client/proc/toggle_view_range,		//changes how far we can see,
 	/datum/admins/proc/view_txt_log,	//shows the server log (diary) for today,
@@ -35,7 +37,8 @@ var/list/admin_verbs_admin = list(
 	/client/proc/cmd_admin_pm_context,	//right-click adminPM interface,
 	/client/proc/cmd_admin_pm_panel,	//admin-pm list,
 	/client/proc/cmd_admin_subtle_message,	//send an message to somebody as a 'voice in their head',
-	/client/proc/cmd_admin_delete,		//delete an instance/object/mob/etc,
+	/client/proc/cmd_admin_icsubtle_message, //send a message to someone as a voice from centcom,
+	/client/proc/cmd_admin_delete, //delete an instance/object/mob/etc,
 	/client/proc/cmd_admin_check_contents,	//displays the contents of an instance,
 	/datum/admins/proc/access_news_network,	//allows access of newscasters,
 	/client/proc/giveruntimelog,		//allows us to give access to runtime logs to somebody,
@@ -104,7 +107,9 @@ var/list/admin_verbs_admin = list(
 	/client/proc/fixatmos,
 	/datum/admins/proc/quick_nif, //VOREStation Add,
 	/datum/admins/proc/sendFax,
-	/client/proc/despawn_player
+	/client/proc/despawn_player,
+	/client/proc/addbunkerbypass,
+	/client/proc/revokebunkerbypass
 	)
 
 var/list/admin_verbs_ban = list(
@@ -170,7 +175,7 @@ var/list/admin_verbs_server = list(
 	/datum/admins/proc/immreboot,
 	/client/proc/everyone_random,
 	/datum/admins/proc/toggleAI,
-	/client/proc/cmd_admin_delete,		//delete an instance/object/mob/etc,
+	/client/proc/cmd_admin_delete,
 	/client/proc/cmd_debug_del_all,
 	/datum/admins/proc/adrev,
 	/datum/admins/proc/adspawn,
@@ -267,6 +272,7 @@ var/list/admin_verbs_hideable = list(
 	/datum/admins/proc/view_txt_log,
 	/datum/admins/proc/view_atk_log,
 	/client/proc/cmd_admin_subtle_message,
+	/client/proc/cmd_admin_icsubtle_message,
 	/client/proc/cmd_admin_check_contents,
 	/datum/admins/proc/access_news_network,
 	/client/proc/admin_call_shuttle,
@@ -348,13 +354,16 @@ var/list/admin_verbs_mod = list(
 	/client/proc/jobbans,
 	/client/proc/toggle_attack_logs,
 	/client/proc/cmd_admin_subtle_message, 	//send an message to somebody as a 'voice in their head',
+	/client/proc/cmd_admin_icsubtle_message,
 	/datum/admins/proc/paralyze_mob,
 	/client/proc/cmd_admin_direct_narrate,
 	/client/proc/allow_character_respawn,   // Allows a ghost to respawn ,
 	/datum/admins/proc/sendFax,
 	/client/proc/getserverlog,			//allows us to fetch server logs (diary) for other days,
 	/datum/admins/proc/view_txt_log,	//shows the server log (diary) for today,
-	/datum/admins/proc/view_atk_log		//shows the server combat-log, doesn't do anything presently,
+	/datum/admins/proc/view_atk_log,		//shows the server combat-log, doesn't do anything presently,
+	/client/proc/addbunkerbypass,
+	/client/proc/revokebunkerbypass
 )
 
 var/list/admin_verbs_event_manager = list(
@@ -366,6 +375,7 @@ var/list/admin_verbs_event_manager = list(
 	/datum/admins/proc/show_player_info,
 	/client/proc/dsay,
 	/client/proc/cmd_admin_subtle_message,
+	/client/proc/cmd_admin_icsubtle_message,
 	/client/proc/debug_variables,
 	/client/proc/check_antagonists,
 	/client/proc/aooc,
@@ -588,7 +598,7 @@ var/list/admin_verbs_event_manager = list(
 	if(!holder)	return
 	var/response = alert(src, "Please choose a distinct color that is easy to read and doesn't mix with all the other chat and radio frequency colors.", "Change own OOC color", "Pick new color", "Reset to default", "Cancel")
 	if(response == "Pick new color")
-		prefs.ooccolor = input(src, "Please select your OOC colour.", "OOC colour") as color
+		prefs.ooccolor = input(src, "Please select your OOC color.", "OOC color") as color
 	else if(response == "Reset to default")
 		prefs.ooccolor = initial(prefs.ooccolor)
 	prefs.save_preferences()

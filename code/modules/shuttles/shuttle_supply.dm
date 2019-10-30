@@ -25,7 +25,7 @@
 
 		if (moving_status == SHUTTLE_IDLE)
 			make_sounds(origin, HYPERSPACE_END)
-			return	//someone cancelled the launch
+			return	//someone canceled the launch
 
 		if (at_station() && forbidden_atoms_check())
 			//cancel the launch because of forbidden atoms. announce over supply channel?

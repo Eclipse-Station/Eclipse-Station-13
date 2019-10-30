@@ -1,4 +1,4 @@
-// This file actually has four seperate datums.
+// This file actually has four separate datums.
 
 /**********
  * Routes *
@@ -121,7 +121,7 @@
 	if(!radio_announce)
 		command_announcement.Announce(get_departure_message(),(announcer ? announcer : "[using_map.boss_name]"))
 	else
-		global_announcer.autosay(get_departure_message(),(announcer ? announcer : "[using_map.boss_name]"))
+		global_announcer.autosay(get_departure_message(),(announcer ? announcer : "[using_map.boss_name]"),"ATC (Local)")		//Eclipse Edit: Shuttles have a separate ATC channel from the others.
 
 /datum/shuttle_destination/proc/get_arrival_message()
 	return null
@@ -133,7 +133,7 @@
 	if(!radio_announce)
 		command_announcement.Announce(get_arrival_message(),(announcer ? announcer : "[using_map.boss_name]"))
 	else
-		global_announcer.autosay(get_arrival_message(),(announcer ? announcer : "[using_map.boss_name]"))
+		global_announcer.autosay(get_arrival_message(),(announcer ? announcer : "[using_map.boss_name]"),"ATC (Local)")		//Eclipse Edit: Shuttles have a separate ATC channel from the others.
 
 /datum/shuttle_destination/proc/link_destinations(var/datum/shuttle_destination/other_place, var/area/interim_area, var/travel_time = 0)
 	// First, check to make sure this doesn't cause a duplicate route.

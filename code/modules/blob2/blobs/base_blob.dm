@@ -260,7 +260,7 @@ var/list/blobs = list()
 	if(P.firer && P.firer.faction == "blob")
 		return
 
-	var/damage = P.get_structure_damage() // So tasers don't hurt the blob.
+	var/damage = P.get_structure_damage() // So Tasers don't hurt the blob.
 	if(!damage)
 		return
 

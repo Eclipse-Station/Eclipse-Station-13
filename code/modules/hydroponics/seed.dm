@@ -43,8 +43,8 @@
 	set_trait(TRAIT_ALTER_TEMP,           0)            // If set, the plant will periodically alter local temp by this amount.
 	set_trait(TRAIT_PRODUCT_ICON,         0)            // Icon to use for fruit coming from this plant.
 	set_trait(TRAIT_PLANT_ICON,           0)            // Icon to use for the plant growing in the tray.
-	set_trait(TRAIT_PRODUCT_COLOUR,       0)            // Colour to apply to product icon.
-	set_trait(TRAIT_BIOLUM_COLOUR,        0)            // The colour of the plant's radiance.
+	set_trait(TRAIT_PRODUCT_COLOUR,       0)            // Color to apply to product icon.
+	set_trait(TRAIT_BIOLUM_COLOUR,        0)            // The color of the plant's radiance.
 	set_trait(TRAIT_POTENCY,              1)            // General purpose plant strength value.
 	set_trait(TRAIT_REQUIRES_NUTRIENTS,   1)            // The plant can starve.
 	set_trait(TRAIT_REQUIRES_WATER,       1)            // The plant can become dehydrated.
@@ -60,7 +60,7 @@
 	set_trait(TRAIT_HIGHKPA_TOLERANCE,    200)          // High pressure capacity.
 	set_trait(TRAIT_IDEAL_HEAT,           293)          // Preferred temperature in Kelvin.
 	set_trait(TRAIT_NUTRIENT_CONSUMPTION, 0.25)         // Plant eats this much per tick.
-	set_trait(TRAIT_PLANT_COLOUR,         "#46B543")    // Colour of the plant icon.
+	set_trait(TRAIT_PLANT_COLOUR,         "#46B543")    // Color of the plant icon.
 
 	spawn(5)
 		sleep(-1)

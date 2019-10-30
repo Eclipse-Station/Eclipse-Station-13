@@ -49,7 +49,7 @@
 //////////////// General VS-only ones /////////////////
 /datum/robolimb/talon //They're buildable by default due to being extremely basic.
 	company = "Talon LLC"
-	desc = "This metallic limb is sleek and featuresless apart from some exposed motors"
+	desc = "This metallic limb is sleek and featureless apart from some exposed motors"
 	icon = 'icons/mob/human_races/cyberlimbs/talon/talon_main.dmi' //Sprited by: Viveret
 
 /obj/item/weapon/disk/limb/talon
@@ -76,11 +76,11 @@
 	icon_state = "verkdisk"
 
 
-//Darkside Incorperated synthetic augmentation list! Many current most used fuzzy and notsofuzzy races made into synths here.
+//Darkside Incorporated synthetic augmentation list! Many current most used fuzzy and notsofuzzy races made into synths here.
 
 /datum/robolimb/dsi_tajaran
 	company = "DSI - Tajaran"
-	desc = "This limb feels soft and fluffy, realistic design and squish. By Darkside Incorperated."
+	desc = "This limb feels soft and fluffy, realistic design and squish. By Darkside Incorporated."
 	icon = 'icons/mob/human_races/cyberlimbs/DSITajaran/dsi_tajaran.dmi'
 	blood_color = "#ffe2ff"
 	lifelike = 1
@@ -94,7 +94,7 @@
 
 /datum/robolimb/dsi_lizard
 	company = "DSI - Lizard"
-	desc = "This limb feels smooth and scalie, realistic design and squish. By Darkside Incorperated."
+	desc = "This limb feels smooth and scalie, realistic design and squish. By Darkside Incorporated."
 	icon = 'icons/mob/human_races/cyberlimbs/DSILizard/dsi_lizard.dmi'
 	blood_color = "#ffe2ff"
 	lifelike = 1
@@ -108,7 +108,7 @@
 
 /datum/robolimb/dsi_sergal
 	company = "DSI - Sergal"
-	desc = "This limb feels soft and fluffy, realistic design and toned muscle. By Darkside Incorperated."
+	desc = "This limb feels soft and fluffy, realistic design and toned muscle. By Darkside Incorporated."
 	icon = 'icons/mob/human_races/cyberlimbs/DSISergal/dsi_sergal.dmi'
 	blood_color = "#ffe2ff"
 	lifelike = 1
@@ -122,7 +122,7 @@
 
 /datum/robolimb/dsi_nevrean
 	company = "DSI - Nevrean"
-	desc = "This limb feels soft and feathery, lightweight, realistic design and squish. By Darkside Incorperated."
+	desc = "This limb feels soft and feathery, lightweight, realistic design and squish. By Darkside Incorporated."
 	icon = 'icons/mob/human_races/cyberlimbs/DSINevrean/dsi_nevrean.dmi'
 	blood_color = "#ffe2ff"
 	lifelike = 1
@@ -136,7 +136,7 @@
 
 /datum/robolimb/dsi_vulpkanin
 	company = "DSI - Vulpkanin"
-	desc = "This limb feels soft and fluffy, realistic design and squish. Seems a little mischievous. By Darkside Incorperated."
+	desc = "This limb feels soft and fluffy, realistic design and squish. Seems a little mischievous. By Darkside Incorporated."
 	icon = 'icons/mob/human_races/cyberlimbs/DSIVulpkanin/dsi_vulpkanin.dmi'
 	blood_color = "#ffe2ff"
 	lifelike = 1
@@ -150,7 +150,7 @@
 
 /datum/robolimb/dsi_akula
 	company = "DSI - Akula"
-	desc = "This limb feels soft and fleshy, realistic design and squish. Seems a little mischievous. By Darkside Incorperated."
+	desc = "This limb feels soft and fleshy, realistic design and squish. Seems a little mischievous. By Darkside Incorporated."
 	icon = 'icons/mob/human_races/cyberlimbs/DSIAkula/dsi_akula.dmi'
 	blood_color = "#ffe2ff"
 	lifelike = 1
@@ -164,7 +164,7 @@
 
 /datum/robolimb/dsi_spider
 	company = "DSI - Vasilissan"
-	desc = "This limb feels hard and chitinous, realistic design. Seems a little mischievous. By Darkside Incorperated."
+	desc = "This limb feels hard and chitinous, realistic design. Seems a little mischievous. By Darkside Incorporated."
 	icon = 'icons/mob/human_races/cyberlimbs/DSISpider/dsi_spider.dmi'
 	blood_color = "#ffe2ff"
 	lifelike = 1
@@ -191,3 +191,34 @@
 
 /obj/item/weapon/disk/limb/dsi_teshari
 	company = "DSI - Teshari"
+
+
+/datum/robolimb/braincase
+	company = "cortexCases - MMI"
+	desc = "A solid, transparent case to hold your important bits in with style."
+	icon = 'icons/mob/human_races/cyberlimbs/cortex/braincase.dmi'
+	unavailable_to_build = 1
+	parts = list(BP_HEAD)
+
+/obj/item/weapon/disk/limb/braincase
+	company = "cortexCases - MMI"
+
+/datum/robolimb/posicase
+	company = "cortexCases - Posi"
+	desc = "A solid, transparent case to hold your important bits in with style."
+	icon = 'icons/mob/human_races/cyberlimbs/cortex/posicase.dmi'
+	unavailable_to_build = 1
+	parts = list(BP_HEAD)
+
+/obj/item/weapon/disk/limb/posicase
+	company = "cortexCases - Posi"
+
+/datum/robolimb/antares
+	company = "Antares Robotics"
+	desc = "Mustard-yellow industrial limb. Heavyset and thick."
+	icon = 'icons/mob/human_races/cyberlimbs/antares/antares_main.dmi'
+	unavailable_to_build = 1
+	monitor_styles = standard_monitor_styles
+
+/obj/item/weapon/disk/limb/antares
+	company = "Antares Robotics"

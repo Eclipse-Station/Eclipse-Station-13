@@ -182,7 +182,7 @@ var/list/obj/machinery/newscaster/allCasters = list() //Global list that will co
 	update_icon() //for any custom ones on the map...
 	spawn(10) //Should be enough time for the node to spawn at tcomms.
 		node = get_exonet_node()
-	..()                                //I just realised the newscasters weren't in the global machines list. The superconstructor call will tend to that
+	..()                                //I just realized the newscasters weren't in the global machines list. The superconstructor call will tend to that
 
 /obj/machinery/newscaster/Destroy()
 	allCasters -= src
@@ -358,7 +358,7 @@ var/list/obj/machinery/newscaster/allCasters = list() //Global list that will co
 				var/message_num=0
 				for(var/datum/feed_channel/FC in news_network.network_channels)
 					if(!FC.censored)
-						message_num += length(FC.messages)    //Dont forget, datum/feed_channel's var messages is a list of datum/feed_message
+						message_num += length(FC.messages)    //Don't forget, datum/feed_channel's var messages is a list of datum/feed_message
 					else
 						active_num--
 				dat+="Network currently serves a total of [total_num] Feed channels, [active_num] of which are active, and a total of [message_num] Feed Stories." //TODO: CONTINUE
@@ -401,7 +401,7 @@ var/list/obj/machinery/newscaster/allCasters = list() //Global list that will co
 			if(11)
 				dat+="<B>[using_map.company_name] D-Notice Handler</B><HR>"
 				dat+="<FONT SIZE=1>A D-Notice is to be bestowed upon the channel if the handling Authority deems it as harmful for the station's"
-				dat+="morale, integrity or disciplinary behaviour. A D-Notice will render a channel unable to be updated by anyone, without deleting any feed"
+				dat+="morale, integrity or disciplinary behavior. A D-Notice will render a channel unable to be updated by anyone, without deleting any feed"
 				dat+="stories it might contain at the time. You can lift a D-Notice if you have the required access at any time.</FONT><HR>"
 				if(isemptylist(news_network.network_channels))
 					dat+="<I>No feed channels found active...</I><BR>"

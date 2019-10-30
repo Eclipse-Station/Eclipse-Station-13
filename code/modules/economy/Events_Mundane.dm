@@ -20,12 +20,12 @@
 		body = ""
 		switch(event_type)
 			if(RESEARCH_BREAKTHROUGH)
-				body = "A major breakthough in the field of [pick("phoron research","super-compressed materials","nano-augmentation","bluespace research","volatile power manipulation")] \
+				body = "A major breakthrough in the field of [pick("phoron research","super-compressed materials","nano-augmentation","bluespace research","volatile power manipulation")] \
 				was announced [pick("yesterday","a few days ago","last week","earlier this month")] by a private firm on [affected_dest.name]. \
 				[using_map.company_name] declined to comment as to whether this could impinge on profits."
 
 			if(ELECTION)
-				body = "The pre-selection of an additional candidates was announced for the upcoming [pick("supervisors council","advisory board","governership","board of inquisitors")] \
+				body = "The pre-selection of an additional candidates was announced for the upcoming [pick("supervisors council","advisory board","governorship","board of inquisitors")] \
 				election on [affected_dest.name] was announced earlier today, \
 				[pick("media mogul","web celebrity", "industry titan", "superstar", "famed chef", "popular gardener", "ex-army officer", "multi-billionaire")] \
 				[random_name(pick(MALE,FEMALE))]. In a statement to the media they said '[pick("My only goal is to help the [pick("sick","poor","children")]",\
@@ -69,15 +69,15 @@
 				" due to [pick("heart failure","kidney failure","liver failure","brain hemorrhage")]")]"
 
 			if(BARGAINS)
-				body += "BARGAINS! BARGAINS! BARGAINS! Commerce Control on [affected_dest.name] wants you to know that everything must go! Across all retail centres, \
-				all goods are being slashed, and all retailors are onboard - so come on over for the \[shopping\] time of your life."
+				body += "BARGAINS! BARGAINS! BARGAINS! Commerce Control on [affected_dest.name] wants you to know that everything must go! Across all retail centers, \
+				all goods are being slashed, and all retailers are onboard - so come on over for the \[shopping\] time of your life."
 
 			if(SONG_DEBUT)
 				body += "[pick("Singer","Singer/songwriter","Saxophonist","Pianist","Guitarist","TV personality","Star")] [random_name(pick(MALE,FEMALE))] \
 				announced the debut of their new [pick("single","album","EP","label")] '[pick("Everyone's","Look at the","Baby don't eye those","All of those","Dirty nasty")] \
 				[pick("roses","three stars","starships","nanobots","cyborgs","Skrell","Sren'darr")] \
 				[pick("on Venus","on Reade","on Moghes","in my hand","slip through my fingers","die for you","sing your heart out","fly away")]' \
-				with [pick("pre-puchases available","a release tour","cover signings","a launch concert")] on [affected_dest.name]."
+				with [pick("pre-purchases available","a release tour","cover signings","a launch concert")] on [affected_dest.name]."
 
 			if(MOVIE_RELEASE)
 				body += "From the [pick("desk","home town","homeworld","mind")] of [pick("acclaimed","award-winning","popular","stellar")] \
@@ -115,8 +115,8 @@
 					[random_name(pick(MALE,FEMALE))] at [pick("a society ball","a new opening","a launch","a club")] on [affected_dest.name] yesterday, pundits are shocked."
 				else
 					body += "is recovering from plastic surgery in a clinic on [affected_dest.name] for the [pick("second","third","fourth")] time, reportedly having made the decision in response to "
-					body += "[pick("unkind comments by an ex","rumours started by jealous friends",\
-					"the decision to be dropped by a major sponsor","a disasterous interview on [using_map.starsys_name] Tonight")]."
+					body += "[pick("unkind comments by an ex","rumors started by jealous friends",\
+					"the decision to be dropped by a major sponsor","a disastrous interview on [using_map.starsys_name] Tonight")]."
 			if(TOURISM)
 				body += "Tourists are flocking to [affected_dest.name] after the surprise announcement of [pick("major shopping bargains by a wily retailer",\
 				"a huge new ARG by a popular entertainment company","a secret tour by popular artiste [random_name(pick(MALE,FEMALE))]")]. \
@@ -146,18 +146,18 @@
 	"[affected_dest.name] weather deemed 'boring'; meteors and rad storms to be imported.",\
 	"Most [affected_dest.name] security officers prefer cream over sugar.",\
 	"Palindrome speakers conference in [affected_dest.name]; 'Wow!' says Otto.",\
-	"Question mark worshipped as deity by ancient [affected_dest.name] dwellers.",\
+	"Question mark worshiped as deity by ancient [affected_dest.name] dwellers.",\
 	"Spilled milk causes whole [affected_dest.name] populace to cry.",\
 	"World largest carp patty at display on [affected_dest.name].",\
 	"'Here kitty kitty' no longer preferred tajaran retrieval technique.",\
-	"Man travels 7000 light years to retrieve lost hankie, 'It was my favourite'.",\
+	"Man travels 7000 light years to retrieve lost hankie, 'It was my favorite'.",\
 	"New bowling lane that shoots mini-meteors at bowlers very popular.",\
 	"[pick("Unathi","Spacer")] gets tattoo of "+using_map.starsys_name+" on chest '[pick("[using_map.boss_short]","star","starship","asteroid")] tickles most'.",\
 	"Skrell marries computer; wedding attended by 100 modems.",\
 	"Chef reports successfully using harmonica as cheese grater.",\
 	"[using_map.company_name] invents handkerchief that says 'Bless you' after sneeze.",\
-	"Clone accused of posing for other clones’s school photo.",\
-	"Clone accused of stealing other clones’s employee of the month award.",\
+	"Clone accused of posing for other clone's school photo.",\
+	"Clone accused of stealing other clone's employee of the month award.",\
 	"Woman robs station with hair dryer; crewmen love new style.",\
 	"This space for rent.",\
 	"[affected_dest.name] Baker Wins Pickled Crumpet Toss Three Years Running",\
@@ -211,7 +211,7 @@
 	"Tommy B. Saif Sez: Try To Keep Six Month's Expenses In Reserve",\
 	"Tommy B. Saif Sez: Change Not Given Without Purchase",\
 	"Tommy B. Saif Sez: If You Break It, You Buy It",\
-	"Tommy B. Saif Sez: Reservations Must Be Cancelled 48 Hours Prior To Event To Obtain Refund",\
+	"Tommy B. Saif Sez: Reservations Must Be Canceled 48 Hours Prior To Event To Obtain Refund",\
 	"Doughnuts: Is There Anything They Can't Do",\
 	"If Tin Whistles Are Made Of Tin, What Do They Make Foghorns Out Of?",\
 	"Broccoli discovered to be colonies of tiny aliens with murder on their minds"\

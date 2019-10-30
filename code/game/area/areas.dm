@@ -19,7 +19,7 @@
 
 	var/debug = 0
 	var/requires_power = 1
-	var/always_unpowered = 0	//this gets overriden to 1 for space in area/New()
+	var/always_unpowered = 0	//this gets overridden to 1 for space in area/New()
 
 	var/power_equip = 1
 	var/power_light = 1
@@ -61,7 +61,7 @@
 
 /area/initialize()
 	. = ..()
-	return INITIALIZE_HINT_LATELOAD // Areas tradiationally are initialized AFTER other atoms.
+	return INITIALIZE_HINT_LATELOAD // Areas traditionally are initialized AFTER other atoms.
 
 /area/LateInitialize()
 	if(!requires_power || !apc)
@@ -206,7 +206,7 @@
 		else
 			icon_state = "blue-red"
 	else
-	//	new lighting behaviour with obj lights
+	//	new lighting behavior with obj lights
 		icon_state = null
 
 
@@ -267,7 +267,7 @@
 			used_environ += amount
 
 
-var/list/mob/living/forced_ambiance_list = new
+var/list/mob/living/forced_ambience_list = new
 
 /area/Entered(A)
 	if(!istype(A,/mob/living))	return
@@ -287,21 +287,21 @@ var/list/mob/living/forced_ambiance_list = new
 	play_ambience(L)
 
 /area/proc/play_ambience(var/mob/living/L)
-	// Ambience goes down here -- make sure to list each area seperately for ease of adding things in later, thanks! Note: areas adjacent to each other should have the same sounds to prevent cutoff when possible.- LastyScratch
-	if(!(L && L.is_preference_enabled(/datum/client_preference/play_ambiance)))	return
+	// Ambience goes down here -- make sure to list each area separately for ease of adding things in later, thanks! Note: areas adjacent to each other should have the same sounds to prevent cutoff when possible.- LastyScratch
+	if(!(L && L.is_preference_enabled(/datum/client_preference/play_ambience)))	return
 
-	// If we previously were in an area with force-played ambiance, stop it.
-	if(L in forced_ambiance_list)
+	// If we previously were in an area with force-played ambience, stop it.
+	if(L in forced_ambience_list)
 		L << sound(null, channel = CHANNEL_AMBIENCE_FORCED)
-		forced_ambiance_list -= L
+		forced_ambience_list -= L
 
 	if(forced_ambience)
 		if(forced_ambience.len)
-			forced_ambiance_list |= L
-			var/sound/chosen_ambiance = pick(forced_ambience)
-			if(!istype(chosen_ambiance))
-				chosen_ambiance = sound(chosen_ambiance, repeat = 1, wait = 0, volume = 25, channel = CHANNEL_AMBIENCE_FORCED)
-			L << chosen_ambiance
+			forced_ambience_list |= L
+			var/sound/chosen_ambience = pick(forced_ambience)
+			if(!istype(chosen_ambience))
+				chosen_ambience = sound(chosen_ambience, repeat = 1, wait = 0, volume = 25, channel = CHANNEL_AMBIENCE_FORCED)
+			L << chosen_ambience
 		else
 			L << sound(null, channel = CHANNEL_AMBIENCE_FORCED)
 	else if(src.ambience.len && prob(35))
@@ -375,7 +375,7 @@ var/list/mob/living/forced_ambiance_list = new
 	CRASH("Bad op: area/drop_location() called")
 
 /*Adding a wizard area teleport list because motherfucking lag -- Urist*/
-/*I am far too lazy to make it a proper list of areas so I'll just make it run the usual telepot routine at the start of the game*/
+/*I am far too lazy to make it a proper list of areas so I'll just make it run the usual teleport routine at the start of the game*/
 var/list/teleportlocs = list()
 
 /hook/startup/proc/setupTeleportLocs()

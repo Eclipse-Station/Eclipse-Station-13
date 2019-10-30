@@ -4,6 +4,7 @@
 #define HUMAN_MAX_OXYLOSS 1 //Defines how much oxyloss humans can get per tick. A tile with no air at all (such as space) applies this value, otherwise it's a percentage of it.
 #define HUMAN_CRIT_MAX_OXYLOSS ( 2.0 / 6) //The amount of damage you'll get when in critical condition. We want this to be a 5 minute deal = 300s. There are 50HP to get through, so (1/6)*last_tick_duration per second. Breaths however only happen every 4 ticks. last_tick_duration = ~2.0 on average
 
+#define HEAT_DAMAGE_SYNTH 1.5 //Amount of damage applied for synths experiencing heat just above 360.15k such as space walking
 #define HEAT_DAMAGE_LEVEL_1 5 //Amount of damage applied when your body temperature just passes the 360.15k safety point
 #define HEAT_DAMAGE_LEVEL_2 10 //Amount of damage applied when your body temperature passes the 400K point
 #define HEAT_DAMAGE_LEVEL_3 20 //Amount of damage applied when your body temperature passes the 1000K point
@@ -22,6 +23,8 @@
 #define COLD_GAS_DAMAGE_LEVEL_3 3 //Amount of damage applied when the current breath's temperature passes the 120K point
 
 #define RADIATION_SPEED_COEFFICIENT 0.1
+
+var/last_message = 0
 
 /mob/living/carbon/human
 	var/oxygen_alert = 0
@@ -47,12 +50,12 @@
 
 	//Apparently, the person who wrote this code designed it so that
 	//blinded get reset each cycle and then get activated later in the
-	//code. Very ugly. I dont care. Moving this stuff here so its easy
+	//code. Very ugly. I don't care. Moving this stuff here so its easy
 	//to find it.
 	blinded = 0
 	fire_alert = 0 //Reset this here, because both breathe() and handle_environment() have a chance to set it.
 
-	//TODO: seperate this out
+	//TODO: separate this out
 	// update the current life tick, can be used to e.g. only do something every 4 ticks
 	life_tick++
 
@@ -116,7 +119,7 @@
 
 // Calculate how vulnerable the human is to under- and overpressure.
 // Returns 0 (equals 0 %) if sealed in an undamaged suit, 1 if unprotected (equals 100%).
-// Suitdamage can modifiy this in 10% steps.
+// Suitdamage can modify this in 10% steps.
 /mob/living/carbon/human/proc/get_pressure_weakness()
 
 	var/pressure_adjustment_coefficient = 1 // Assume no protection at first.
@@ -134,7 +137,7 @@
 
 	return pressure_adjustment_coefficient
 
-// Calculate how much of the enviroment pressure-difference affects the human.
+// Calculate how much of the environment pressure-difference affects the human.
 /mob/living/carbon/human/calculate_affecting_pressure(var/pressure)
 	var/pressure_difference
 
@@ -144,6 +147,9 @@
 
 	else //We are in an overpressure or standard atmosphere.
 		pressure_difference = pressure - ONE_ATMOSPHERE
+
+	if(isSynthetic())
+		pressure_difference = 0 //synthetics don't need pressure they're robutts
 
 	if(pressure_difference < 5) // If the difference is small, don't bother calculating the fraction.
 		pressure_difference = 0
@@ -402,6 +408,10 @@
 	var/SA_para_min = 1
 	var/SA_sleep_min = 5
 	var/inhaled_gas_used = 0
+	
+	//Eclipse added vars
+	var/NCl3_warn_min = 1		//temporarily the same as N2O for testing.
+	var/NCl3_toxic_min = 5
 
 	var/breath_pressure = (breath.total_moles*R_IDEAL_GAS_EQUATION*breath.temperature)/BREATH_VOLUME
 
@@ -478,7 +488,7 @@
 			//scale linearly from 0 to 1 between safe_exhaled_max and safe_exhaled_max*0.7
 			var/ratio = 1.0 - (safe_exhaled_max - exhaled_pp)/(safe_exhaled_max*0.3)
 
-			//give them some oxyloss, up to the limit - we don't want people falling unconcious due to CO2 alone until they're pretty close to safe_exhaled_max.
+			//give them some oxyloss, up to the limit - we don't want people falling unconscious due to CO2 alone until they're pretty close to safe_exhaled_max.
 			if (getOxyLoss() < 50*ratio)
 				adjustOxyLoss(HUMAN_MAX_OXYLOSS)
 			co2_alert = 1
@@ -506,7 +516,7 @@
 	if(breath.gas["sleeping_agent"])
 		var/SA_pp = (breath.gas["sleeping_agent"] / breath.total_moles) * breath_pressure
 
-		// Enough to make us paralysed for a bit
+		// Enough to make us paralyzed for a bit
 		if(SA_pp > SA_para_min)
 
 			// 3 gives them one second to wake up and run away a bit!
@@ -521,7 +531,42 @@
 			if(prob(20))
 				spawn(0) emote(pick("giggle", "laugh"))
 		breath.adjust_gas("sleeping_agent", -breath.gas["sleeping_agent"]/6, update = 0) //update after
+		
+	// // // BEGIN ECLIPSE EDITS // // //
+	// Trichloramine addition. Lachrymator agent, surprisingly only mildly toxic.
+	if(breath.gas["trichloramine"])
+		var/america = breath.gas["trichloramine"]		//I can't think of a better variable name that isn't already in use. Sue me. ^Spitzer
+		var/ratio = (america/NCl3_toxic_min) * 10
+		var/NCl3_pp = (breath.gas["trichloramine"] / breath.total_moles) * breath_pressure
+		//let's get this party started.
+		
+		if(NCl3_pp >= 0.25)		//If less than or equal to the minimum we care about, forget it. 
+		//Define the notif variable, while we're here
+			var/notif = "Alan, write some dialogue here!"		//Okay, calm down, Gage. If the player sees this, it's not set for some reason.
+			
+			//Alright, let's rock and roll.
+			if(NCl3_pp >= NCl3_toxic_min)		// Start with lethality and go down from there.
+				notif = pick("Your eyes sting!","Your throat burns!","You feel very dizzy!","You feel like you're choking!","The smell of chlorine is overwhelming!")
+				if(prob(80))
+					src << "<span class='critical'>[notif]</span>"
+				if(reagents)
+					reagents.add_reagent("toxin", Clamp(ratio, MIN_TOXIN_DAMAGE, MAX_TOXIN_DAMAGE))
 
+			//Not lethal, but makes loud messages.
+			else if(NCl3_pp >= NCl3_warn_min)
+				notif = pick("Your eyes water.","Your throat itches.","You feel a little dizzy.","You feel short of breath.","There's a strong smell of chlorine.")
+				if(prob(40))
+					src << "<span class='danger'>[notif]</span>"
+
+			//Even more dangerously un-lethal!
+			else
+				notif = "You smell chlorine."
+				if(prob(20 ))
+					src << "<span class='warning'>[notif]</span>"
+
+		breath.adjust_gas("trichloramine", -america/6, update = 0) //update after
+	// // // END ECLIPSE EDITS // // //
+	
 	// Were we able to breathe?
 	if (failed_inhale || failed_exhale)
 		failed_last_breath = 1
@@ -655,7 +700,10 @@
 				else
 					burn_dam = HEAT_DAMAGE_LEVEL_2
 			else
-				burn_dam = HEAT_DAMAGE_LEVEL_1
+				if(isSynthetic())
+					burn_dam = HEAT_DAMAGE_SYNTH
+				else
+					burn_dam = HEAT_DAMAGE_LEVEL_1
 
 		take_overall_damage(burn=burn_dam, used_weapon = "High Body Temperature")
 		fire_alert = max(fire_alert, 2)
@@ -698,7 +746,7 @@
 		pressure_alert = -1
 	else
 		if( !(COLD_RESISTANCE in mutations))
-			if(!isSynthetic() || !nif || !nif.flag_check(NIF_O_PRESSURESEAL,NIF_FLAGS_OTHER)) //VOREStation Edit - NIF pressure seals
+			if(!isSynthetic() || !nif || !nif.flag_check(NIF_FLAGS_OTHER)) //VOREStation Edit - NIF pressure seals
 				take_overall_damage(brute=LOW_PRESSURE_DAMAGE, used_weapon = "Low Pressure")
 			if(getOxyLoss() < 55) // 11 OxyLoss per 4 ticks when wearing internals;    unconsciousness in 16 ticks, roughly half a minute
 				adjustOxyLoss(4)  // 16 OxyLoss per 4 ticks when no internals present; unconsciousness in 13 ticks, roughly twenty seconds
@@ -1186,6 +1234,15 @@
 				if(150 to 250)					nutrition_icon.icon_state = "nutrition3"
 				else							nutrition_icon.icon_state = "nutrition4"
 
+		if(synthbattery_icon)
+			switch(nutrition)
+				if(450 to INFINITY)				synthbattery_icon.icon_state = "charge4"
+				if(300 to 450)					synthbattery_icon.icon_state = "blank"
+				if(200 to 300)					synthbattery_icon.icon_state = "charge4"
+				if(150 to 200)					synthbattery_icon.icon_state = "charge3"
+				if(100 to 150)					synthbattery_icon.icon_state = "charge2"
+				else							synthbattery_icon.icon_state = "charge1"
+
 		if(pressure)
 			pressure.icon_state = "pressure[pressure_alert]"
 
@@ -1215,6 +1272,13 @@
 					if(260 to 280)			bodytemp.icon_state = "temp-3"
 					else					bodytemp.icon_state = "temp-4"
 			else
+
+		if(bodytemperature >= 361)
+			if(isSynthetic())
+				if(world.time >= last_message || last_message == 0)
+					src << "<font color='red' face='fixedsys'>Warning: Temperature at critically high levels.</font>"
+						last_message = world.time + 600
+
 				//TODO: precalculate all of this stuff when the species datum is created
 				var/base_temperature = species.body_temperature
 				if(base_temperature == null) //some species don't have a set metabolic temperature
@@ -1326,13 +1390,13 @@
 
 		var/tmp/glasses_processed = 0
 		var/obj/item/weapon/rig/rig = back
-		if(istype(rig) && rig.visor && !looking_elsewhere)
+		if(istype(rig) && rig.visor) //&& !looking_elsewhere)
 			if(!rig.helmet || (head && rig.helmet == head))
 				if(rig.visor && rig.visor.vision && rig.visor.active && rig.visor.vision.glasses)
 					glasses_processed = 1
 					process_glasses(rig.visor.vision.glasses)
 
-		if(glasses && !glasses_processed && !looking_elsewhere)
+		if(glasses && !glasses_processed) // && !looking_elsewhere)
 			glasses_processed = 1
 			process_glasses(glasses)
 		if(XRAY in mutations)
@@ -1349,7 +1413,7 @@
 			var/viewflags = machine.check_eye(src)
 			if(viewflags < 0)
 				reset_view(null, 0)
-			else if(viewflags && !looking_elsewhere)
+			else if(viewflags) //&& !looking_elsewhere)
 				sight |= viewflags
 		else if(eyeobj)
 			if(eyeobj.owner != src)

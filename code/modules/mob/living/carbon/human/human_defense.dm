@@ -86,7 +86,7 @@ emp_act
 		var/obj/item/organ/external/affecting = get_organ(def_zone)
 		if(affecting)
 			return getarmor_organ(affecting, type)
-		//If a specific bodypart is targetted, check how that bodypart is protected and return the value.
+		//If a specific bodypart is targeted, check how that bodypart is protected and return the value.
 
 	//If you don't specify a bodypart, it checks ALL your bodyparts for protection, and averages out the values
 	for(var/organ_name in organs_by_name)
@@ -109,7 +109,7 @@ emp_act
 		var/obj/item/organ/external/affecting = get_organ(def_zone)
 		if(affecting)
 			return getsoak_organ(affecting, type)
-		//If a specific bodypart is targetted, check how that bodypart is protected and return the value.
+		//If a specific bodypart is targeted, check how that bodypart is protected and return the value.
 
 	//If you don't specify a bodypart, it checks ALL your bodyparts for protection, and averages out the values
 	for(var/organ_name in organs_by_name)
@@ -144,7 +144,7 @@ emp_act
 			results.Add(C)
 	return results
 
-//this proc returns the armour value for a particular external organ.
+//this proc returns the armor value for a particular external organ.
 /mob/living/carbon/human/proc/getarmor_organ(var/obj/item/organ/external/def_zone, var/type)
 	if(!type || !def_zone)
 		return 0
@@ -314,6 +314,7 @@ emp_act
 	if(prob(dislocate_chance * (100 - blocked)/100))
 		visible_message("<span class='danger'>[src]'s [organ.joint] [pick("gives way","caves in","crumbles","collapses")]!</span>")
 		organ.dislocate(1)
+		log_and_message_admins("has dislocated [src]'s [organ.joint]!")
 		return 1
 	return 0
 

@@ -1,4 +1,3 @@
-
 /obj/machinery/microwave
 	name = "Microwave"
 	icon = 'icons/obj/kitchen.dmi'
@@ -22,7 +21,7 @@
 // see code/modules/food/recipes_microwave.dm for recipes
 
 /*******************
-*   Initialising
+*   Initializing
 ********************/
 
 /obj/machinery/microwave/New()
@@ -236,6 +235,8 @@
 ************************************/
 
 /obj/machinery/microwave/proc/cook()
+	if(src.operating)
+		return // no food duplication!
 	if(stat & (NOPOWER|BROKEN))
 		return
 	start()

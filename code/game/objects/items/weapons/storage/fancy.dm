@@ -1,6 +1,6 @@
 /*
  * The 'fancy' path is for objects like donut boxes that show how many items are in the storage item on the sprite itself
- * .. Sorry for the shitty path name, I couldnt think of a better one.
+ * .. Sorry for the shitty path name, I couldn't think of a better one.
  *
  * WARNING: var/icon_type is used for both examine text and sprite name. Please look at the procs below and adjust your sprite names accordingly
  *
@@ -48,6 +48,7 @@
 	icon_type = "egg"
 	name = "egg box"
 	storage_slots = 12
+	max_storage_space = 12 * ITEMSIZE_COST_SMALL
 	can_hold = list(
 		/obj/item/weapon/reagent_containers/food/snacks/egg,
 		/obj/item/weapon/reagent_containers/food/snacks/boiledegg
@@ -162,12 +163,12 @@
 /obj/item/weapon/storage/fancy/cigarettes
 	name = "\improper pack of Trans-Stellar Duty-frees"
 	desc = "A ubiquitous brand of cigarettes, found in every major spacefaring corporation in the universe. As mild and flavorless as it gets."
-	icon = 'icons/obj/cigarettes.dmi'
+	icon = 'modular_citadel/icons/obj/cigarettes.dmi'
 	icon_state = "cigpacket"
 	item_state_slots = list(slot_r_hand_str = "cigpacket", slot_l_hand_str = "cigpacket")
 	w_class = ITEMSIZE_TINY
 	throwforce = 2
-	slot_flags = SLOT_BELT
+	slot_flags = SLOT_BELT | SLOT_EARS
 	storage_slots = 6
 	can_hold = list(/obj/item/clothing/mask/smokable/cigarette, /obj/item/weapon/flame/lighter)
 	icon_type = "cigarette"

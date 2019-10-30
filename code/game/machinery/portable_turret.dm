@@ -24,7 +24,7 @@
 	var/health = 80			//the turret's health
 	var/maxhealth = 80		//turrets maximal health.
 	var/auto_repair = 0		//if 1 the turret slowly repairs itself.
-	var/locked = 1			//if the turret's behaviour control access is locked
+	var/locked = 1			//if the turret's behavior control access is locked
 	var/controllock = 0		//if the turret responds to control panels
 
 	var/installation = /obj/item/weapon/gun/energy/gun		//the type of weapon installed
@@ -120,7 +120,8 @@
 
 /obj/machinery/porta_turret/New()
 	..()
-	req_access.Cut()
+	if(LAZYLEN(req_access))
+		req_access.Cut()
 	req_one_access = list(access_security, access_heads)
 
 	//Sets up a spark system
@@ -132,12 +133,14 @@
 
 /obj/machinery/porta_turret/crescent/New()
 	..()
-	req_one_access.Cut()
+	if(LAZYLEN(req_one_access))
+		req_one_access.Cut()
 	req_access = list(access_cent_specops)
 
 /obj/machinery/porta_turret/alien/New()
 	..()
-	req_one_access.Cut()
+	if(LAZYLEN(req_one_access))
+		req_one_access.Cut()
 	req_access = list(access_alien)
 
 /obj/machinery/porta_turret/Destroy()

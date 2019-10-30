@@ -1,6 +1,6 @@
 /obj/item/clothing/suit/storage/seromi/cloak
 	name = "broken cloak"
-	desc = "It drapes over a Teshari's shoulders and closes at the neck with pockets convienently placed inside."
+	desc = "It drapes over a Teshari's shoulders and closes at the neck with pockets conveniently placed inside."
 	icon = 'icons/mob/species/seromi/teshari_cloak.dmi'
 	icon_override = 'icons/mob/species/seromi/teshari_cloak.dmi'
 	icon_state = "tesh_cloak_bo"
@@ -155,7 +155,7 @@
 	item_state = "tesh_cloak_comm"
 
 /obj/item/clothing/suit/storage/seromi/cloak/jobs/ce
-	name = "Cheif Engineer's cloak"
+	name = "Chief Engineer's cloak"
 	desc =  "A soft Teshari cloak made the Chief Engineer"
 	icon_state = "tesh_cloak_ce"
 	item_state = "tesh_cloak_ce"
@@ -174,7 +174,7 @@
 
 /obj/item/clothing/suit/storage/seromi/cloak/jobs/cmo
 	name = "Chief Medical Officer cloak"
-	desc =  "A soft Teshari cloak made the Cheif Medical Officer"
+	desc =  "A soft Teshari cloak made the Chief Medical Officer"
 	icon_state = "tesh_cloak_cmo"
 	item_state = "tesh_cloak_cmo"
 

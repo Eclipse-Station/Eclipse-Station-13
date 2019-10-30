@@ -31,7 +31,7 @@
 
 /datum/shuttle/ferry/escape_pod/can_force()
 	if (arming_controller.eject_time && world.time < arming_controller.eject_time + 50)
-		return 0	//dont allow force launching until 5 seconds after the arming controller has reached it's countdown
+		return 0	//don't allow force launching until 5 seconds after the arming controller has reached it's countdown
 	return ..()
 
 /datum/shuttle/ferry/escape_pod/can_cancel()

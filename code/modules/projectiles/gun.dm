@@ -80,7 +80,7 @@
 
 	//aiming system stuff
 	var/keep_aim = 1 	//1 for keep shooting until aim is lowered
-						//0 for one bullet after tarrget moves and aim is lowered
+						//0 for one bullet after target moves and aim is lowered
 	var/multi_aim = 0 //Used to determine if you can target multiple people.
 	var/tmp/list/mob/living/aim_targets //List of who yer targeting.
 	var/tmp/mob/living/last_moved_mob //Used to fire faster at more than one person.
@@ -181,11 +181,11 @@
 	if(dna_lock && attached_lock.stored_dna)
 		if(!authorized_user(user))
 			if(attached_lock.safety_level == 0)
-				to_chat(M, "<span class='danger'>\The [src] buzzes in dissapoint and displays an invalid DNA symbol.</span>")
+				to_chat(M, "<span class='danger'>\The [src] buzzes in disappointment and displays an invalid DNA symbol.</span>")
 				return 0
 			if(!attached_lock.exploding)
 				if(attached_lock.safety_level == 1)
-					to_chat(M, "<span class='danger'>\The [src] hisses in dissapointment.</span>")
+					to_chat(M, "<span class='danger'>\The [src] hisses in disappointment.</span>")
 					visible_message("<span class='game say'><span class='name'>\The [src]</span> announces, \"Self-destruct occurring in ten seconds.\"</span>", "<span class='game say'><span class='name'>\The [src]</span> announces, \"Self-destruct occurring in ten seconds.\"</span>")
 					spawn(100)
 						explosion(src, 0, 0, 3, 4)
@@ -241,7 +241,7 @@
 			return
 		if(auto_target)//If they already have one then update it
 			auto_target.loc = get_turf(A)
-			auto_target.delay_del = 1//And reset the del so its like they got a new one and doesnt instantly vanish
+			auto_target.delay_del = 1//And reset the del so its like they got a new one and doesn't instantly vanish
 			to_chat(user, "<span class='notice'>You ready \the [src]!  Click and drag the target around to shoot.</span>")
 		else//Otherwise just make a new one
 			auto_target = new/obj/screen/auto_target(get_turf(A), src)
@@ -353,7 +353,7 @@
 
 	var/shoot_time = (burst - 1)* burst_delay
 
-	//These should apparently be disabled to allow for the automatic system to function without causing near-permanant paralysis. Re-enabling them while we sort that out.
+	//These should apparently be disabled to allow for the automatic system to function without causing near-permanent paralysis. Re-enabling them while we sort that out.
 	user.setClickCooldown(shoot_time) //no clicking on things while shooting
 	user.setMoveCooldown(shoot_time) //no moving while shooting either
 
@@ -371,7 +371,7 @@
 */
 	for(var/i in 1 to burst)
 		/*	// Commented out for quality control and testing.
-		if(!reflex && automatic)//If we are shooting automatic then check our target, however if we are shooting reflex we dont use automatic
+		if(!reflex && automatic)//If we are shooting automatic then check our target, however if we are shooting reflex we don't use automatic
 			//extra sanity checking.
 			if(user.incapacitated())
 				return
@@ -590,7 +590,7 @@
 /obj/item/weapon/gun/proc/process_point_blank(obj/projectile, mob/user, atom/target)
 	var/obj/item/projectile/P = projectile
 	if(!istype(P))
-		return //default behaviour only applies to true projectiles
+		return //default behavior only applies to true projectiles
 
 	//default point blank multiplier
 	var/damage_mult = 1.3
@@ -611,7 +611,7 @@
 /obj/item/weapon/gun/proc/process_accuracy(obj/projectile, mob/living/user, atom/target, var/burst, var/held_twohanded)
 	var/obj/item/projectile/P = projectile
 	if(!istype(P))
-		return //default behaviour only applies to true projectiles
+		return //default behavior only applies to true projectiles
 
 	var/acc_mod = burst_accuracy[min(burst, burst_accuracy.len)]
 	var/disp_mod = dispersion[min(burst, dispersion.len)]
@@ -629,7 +629,7 @@
 
 	//accuracy bonus from aiming
 	if (aim_targets && (target in aim_targets))
-		//If you aim at someone beforehead, it'll hit more often.
+		//If you aim at someone beforehand, it'll hit more often.
 		//Kinda balanced by fact you need like 2 seconds to aim
 		//As opposed to no-delay pew pew
 		P.accuracy += 30
@@ -645,7 +645,7 @@
 /obj/item/weapon/gun/proc/process_projectile(obj/projectile, mob/user, atom/target, var/target_zone, var/params=null)
 	var/obj/item/projectile/P = projectile
 	if(!istype(P))
-		return 0 //default behaviour only applies to true projectiles
+		return 0 //default behavior only applies to true projectiles
 
 	if(params)
 		P.set_clickpoint(params)
@@ -705,7 +705,7 @@
 
 		in_chamber.on_hit(M)
 		if (in_chamber.damage_type != HALLOSS)
-			log_and_message_admins("[key_name(user)] commited suicide using \a [src]")
+			log_and_message_admins("[key_name(user)] committed suicide using \a [src]")
 			user.apply_damage(in_chamber.damage*2.5, in_chamber.damage_type, "head", used_weapon = "Point blank shot in the mouth with \a [in_chamber]", sharp=1)
 			user.death()
 		else
@@ -720,7 +720,7 @@
 		return
 
 /obj/item/weapon/gun/proc/toggle_scope(var/zoom_amount=2.0)
-	//looking through a scope limits your periphereal vision
+	//looking through a scope limits your peripheral vision
 	//still, increase the view size by a tiny amount so that sniping isn't too restricted to NSEW
 	var/zoom_offset = round(world.view * zoom_amount)
 	var/view_size = round(world.view + zoom_amount)

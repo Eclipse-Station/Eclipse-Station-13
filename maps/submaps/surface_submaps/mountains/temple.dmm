@@ -169,7 +169,7 @@
 /obj/item/weapon/paper/alien{
 	desc = "";
 	icon_state = "alienpaper_words";
-	info = "(On the screen of the tablet are several lines of characters written in a language you don't seem to recognize. At the end of each line is a set of numbers seperated by a colon. The screen flickers occasionally, as if damaged. Nothing about the tablet seems particularly interesting, but it does seem very, very old.)"
+	info = "(On the screen of the tablet are several lines of characters written in a language you don't seem to recognize. At the end of each line is a set of numbers separated by a colon. The screen flickers occasionally, as if damaged. Nothing about the tablet seems particularly interesting, but it does seem very, very old.)"
 	},
 /turf/simulated/floor/carpet/turcarpet,
 /area/submap/AbandonedTemple)

@@ -308,6 +308,9 @@
 	if (sane)
 		msg = sanitize(msg)
 
+	if((length(memory) + length(msg)) > MAX_MESSAGE_LEN)
+		return
+
 	if (length(memory) == 0)
 		memory += msg
 	else
@@ -376,8 +379,8 @@
 		var/deathtimeseconds = round((deathtime - deathtimeminutes * 600) / 10,1)
 		to_chat(usr, "You have been dead for[pluralcheck] [deathtimeseconds] seconds.")
 
-		if ((deathtime < (1 * 600)) && (ticker && ticker.current_state > GAME_STATE_PREGAME))
-			to_chat(usr, "You must wait 1 minute to respawn!")
+		if ((deathtime < (3 * 600)) && (ticker && ticker.current_state > GAME_STATE_PREGAME))
+			to_chat(usr, "You must wait 3 minutes to respawn!")
 			return
 		else
 			to_chat(usr, "You can respawn now, enjoy your new life!")
@@ -455,7 +458,7 @@
 	var/list/namecounts = list()
 	var/list/creatures = list()
 
-	for(var/obj/O in world)				//EWWWWWWWWWWWWWWWWWWWWWWWW ~needs to be optimised
+	for(var/obj/O in world)				//EWWWWWWWWWWWWWWWWWWWWWWWW ~needs to be optimized
 		if(!O.loc)
 			continue
 		if(istype(O, /obj/item/weapon/disk/nuclear))
@@ -920,7 +923,7 @@ mob/proc/yank_out_object()
 	usr.setClickCooldown(20)
 
 	if(usr.stat == 1)
-		usr << "You are unconcious and cannot do that!"
+		usr << "You are unconscious and cannot do that!"
 		return
 
 	if(usr.restrained())
@@ -1088,6 +1091,9 @@ mob/proc/yank_out_object()
 		src.throw_icon.icon_state = "act_throw_on"
 
 /mob/proc/isSynthetic()
+	return 0
+
+/mob/proc/isPromethean()
 	return 0
 
 /mob/proc/is_muzzled()

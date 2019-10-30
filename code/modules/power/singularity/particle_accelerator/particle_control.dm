@@ -79,7 +79,7 @@
 
 /obj/machinery/particle_accelerator/control_box/Topic(href, href_list)
 	..()
-	//Ignore input if we are broken, !silicon guy cant touch us, or nonai controlling from super far away
+	//Ignore input if we are broken, !silicon guy can't touch us, or nonai controlling from super far away
 	if(stat & (BROKEN|NOPOWER) || (get_dist(src, usr) > 1 && !istype(usr, /mob/living/silicon)) || (get_dist(src, usr) > 8 && !istype(usr, /mob/living/silicon/ai)))
 		usr.unset_machine()
 		usr << browse(null, "window=pacontrol")
@@ -127,7 +127,7 @@
 	if(assembled)
 		strength--
 		if(strength < 0)
-			strength = 0
+			strength = -1
 		else
 			message_admins("PA Control Computer decreased to [strength] by [key_name(usr, usr.client)](<A HREF='?_src_=holder;adminmoreinfo=\ref[usr]'>?</A>) in ([x],[y],[z] - <A HREF='?_src_=holder;adminplayerobservecoodjump=1;X=[x];Y=[y];Z=[z]'>JMP</a>)",0,1)
 			log_game("PACCEL([x],[y],[z]) [key_name(usr)] decreased to [strength]")

@@ -152,16 +152,15 @@
 	charge_cost = 10
 	var/datum/matter_synth/water = null
 
-/obj/item/weapon/reagent_containers/borghypo/hound/process() //Recharges in smaller steps and uses the water reserves as well.
+/obj/item/weapon/reagent_containers/borghypo/hound/process() // BEGIN CITADEL CHANGES - Removes water cost and make the reagent generation not nerfed.
 	if(isrobot(loc))
 		var/mob/living/silicon/robot/R = loc
 		if(R && R.cell)
 			for(var/T in reagent_ids)
-				if(reagent_volumes[T] < volume && water.energy >= charge_cost)
+				if(reagent_volumes[T] < volume)
 					R.cell.use(charge_cost)
-					water.use_charge(charge_cost)
-					reagent_volumes[T] = min(reagent_volumes[T] + 1, volume)
-	return 1
+					reagent_volumes[T] = min(reagent_volumes[T] + 5, volume)
+	return 1 // END CITADEL CHANGES
 
 //Tongue stuff
 /obj/item/device/dogborg/tongue
@@ -307,16 +306,16 @@
 		enabled = FALSE
 		icon_state = "scrub0"
 
-/obj/item/weapon/gun/energy/taser/mounted/cyborg/ertgun //Not a taser, but it's being used as a base so it takes energy and actually works.
+/obj/item/weapon/gun/energy/taser/mounted/cyborg/ertgun //Not a Taser, but it's being used as a base so it takes energy and actually works.
 	name = "disabler"
 	desc = "A small and nonlethal gun produced by NT.."
 	icon = 'icons/mob/dogborg_vr.dmi'
 	icon_state = "projgun"
 	fire_sound = 'sound/weapons/eLuger.ogg'
 	projectile_type = /obj/item/projectile/beam/disable
-	charge_cost = 240 //Normal cost of a taser. It used to be 1000, but after some testing it was found that it would sap a borg's battery to quick
+	charge_cost = 240 //Normal cost of a Taser. It used to be 1000, but after some testing it was found that it would sap a borg's battery to quick
 	recharge_time = 10 //Takes ten ticks to recharge a shot, so don't waste them all!
-	//cell_type = null //Same cell as a taser until edits are made.
+	//cell_type = null //Same cell as a Taser until edits are made.
 
 /obj/item/weapon/dogborg/swordtail
 	name = "sword tail"

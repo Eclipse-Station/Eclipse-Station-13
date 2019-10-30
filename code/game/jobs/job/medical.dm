@@ -12,7 +12,7 @@
 	idtype = /obj/item/weapon/card/id/medical/head
 	req_admin_notify = 1
 	economic_modifier = 10
-	whitelist_only = 1
+	wl_config_heads = TRUE			//Eclipse edit: Config-based whitelisting.
 
 	access = list(access_medical, access_medical_equip, access_morgue, access_genetics, access_heads,
 			access_chemistry, access_virology, access_cmo, access_surgery, access_RC_announce,
@@ -47,7 +47,8 @@
 		"Emergency Physician" = /decl/hierarchy/outfit/job/medical/doctor/emergency_physician,
 		"Nurse" = /decl/hierarchy/outfit/job/medical/doctor/nurse,
 		"Coroner" = /decl/hierarchy/outfit/job/medical/doctor/coroner,
-		"Virologist" = /decl/hierarchy/outfit/job/medical/doctor/virologist)
+		"Virologist" = /decl/hierarchy/outfit/job/medical/doctor/virologist,
+		"Medical Resident")
 
 //Chemist is a medical job damnit	//YEAH FUCK YOU SCIENCE	-Pete	//Guys, behave -Erro
 /datum/job/chemist
@@ -104,7 +105,8 @@
 	access = list(access_medical, access_medical_equip, access_morgue, access_psychiatrist)
 	minimal_access = list(access_medical, access_medical_equip, access_psychiatrist)
 	outfit_type = /decl/hierarchy/outfit/job/medical/psychiatrist
-	alt_titles = list("Psychologist" = /decl/hierarchy/outfit/job/medical/psychiatrist/psychologist, "Therapist")
+	alt_titles = list("Psychologist" = /decl/hierarchy/outfit/job/medical/psychiatrist/psychologist,
+			  "Therapist" = /decl/hierarchy/outfit/job/medical/psychiatrist/psychologist)
 
 /datum/job/paramedic
 	title = "Paramedic"

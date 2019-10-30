@@ -85,7 +85,7 @@
 		M.GetDrilled()
 		qdel(src)
 		return
-	// Otherwise we damage mobs!  Boost damage if low tempreature
+	// Otherwise we damage mobs!  Boost damage if low temperature
 	var/datum/gas_mixture/environment = T.return_air()
 	if(environment.temperature < 250)
 		name = "strong resonance field"

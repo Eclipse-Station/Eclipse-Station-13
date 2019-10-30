@@ -131,7 +131,7 @@
 
 // Invisible object that blocks z transfer to/from its turf and the turf above.
 /obj/effect/ceiling
-	invisibility = 101 // nope cant see this
+	invisibility = 101 // nope can't see this
 	anchored = 1
 
 /obj/effect/ceiling/CheckExit(atom/movable/O as mob|obj, turf/target as turf)
@@ -210,7 +210,7 @@
 // Tram departure cryo doors that turn into ordinary airlock doors at round end
 /obj/machinery/cryopod/robot/door/tram
 	name = "\improper Tram Station"
-	icon = 'icons/obj/doors/Doorext.dmi'
+	icon = 'icons/obj/doors/Doorextglass.dmi'
 	icon_state = "door_closed"
 	base_icon_state = "door_closed"
 	occupied_icon_state = "door_locked"
@@ -218,7 +218,7 @@
 	on_store_message = "has departed on the tram."
 	on_store_name = "Travel Oversight"
 	on_enter_occupant_message = "The tram arrives at the platform; you step inside and take a seat."
-	on_store_visible_message_1 = "'s speakers chime, anouncing a tram has arrived to take"
+	on_store_visible_message_1 = "'s speakers chime, announcing a tram has arrived to take"
 	on_store_visible_message_2 = "to the colony"
 	time_till_despawn = 10 SECONDS
 	spawnpoint_type = /datum/spawnpoint/tram
@@ -229,7 +229,7 @@
 		time_till_despawn = 0
 		..()
 		var/turf/T = get_turf(src)
-		var/obj/machinery/door/airlock/external/door = new(T)
+		var/obj/machinery/door/airlock/glass_external/door = new(T)
 		door.req_access = null
 		door.req_one_access = null
 		qdel(src)
@@ -244,7 +244,8 @@
 
 	var/choice = alert("Do you want to depart via the tram? Your character will leave the round.","Departure","Yes","No")
 	if(user && Adjacent(user) && choice == "Yes")
-		user.ghostize()
+		var/mob/observer/dead/newghost = user.ghostize()
+		newghost.timeofdeath = world.time
 		despawn_occupant(user)
 
 // Tram arrival point landmarks and datum

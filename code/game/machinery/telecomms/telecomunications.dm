@@ -31,7 +31,7 @@ var/global/list/obj/machinery/telecomms/telecomms_list = list()
 	var/integrity = 100 // basically HP, loses integrity by heat
 	var/produces_heat = 1	//whether the machine will produce heat when on.
 	var/delay = 10 // how many process() ticks to delay per heat
-	var/long_range_link = 0	// Can you link it across Z levels or on the otherside of the map? (Relay & Hub)
+	var/long_range_link = 0	// Can you link it across Z levels or on the other side of the map? (Relay & Hub)
 	var/circuitboard = null // string pointing to a circuitboard type
 	var/hide = 0				// Is it a hidden machine?
 	var/listening_level = 0	// 0 = auto set in New() - this is the z level that the machine is listening to.
@@ -637,7 +637,7 @@ var/global/list/obj/machinery/telecomms/telecomms_list = list()
 /obj/machinery/telecomms/server/proc/update_logs()
 	// start deleting the very first log entry
 	if(logs >= 400)
-		for(var/i = 1, i <= logs, i++) // locate the first garbage collectable log entry and remove it
+		for(var/i = 1, i <= logs, i++) // locate the first garbage collectible log entry and remove it
 			var/datum/comm_log_entry/L = log_entries[i]
 			if(L.garbage_collector)
 				log_entries.Remove(L)

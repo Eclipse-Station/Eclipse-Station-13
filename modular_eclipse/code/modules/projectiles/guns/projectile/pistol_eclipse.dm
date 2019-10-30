@@ -16,7 +16,7 @@
 	flight_y_offset = 12
 	recoil = 0 //no screenshake
 	w_class = 2 //Small
-	sound_override = 1 //This variable allows for sounds independant of the round.
+	sound_override = 1 //This variable allows for sounds independent of the round.
 	fire_sound = 'sound/weapons/pistol_glock17_1.ogg'
 //	magazine_type = /obj/item/ammo_magazine/m45
 //	allowed_magazines = list(/obj/item/ammo_magazine/m45)

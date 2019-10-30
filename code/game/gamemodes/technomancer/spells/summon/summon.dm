@@ -38,6 +38,6 @@
 		if(choice)
 			summoned_mob_type = summon_options[choice]
 
-// Called when a new mob is summoned, override for special behaviour.
+// Called when a new mob is summoned, override for special behavior.
 /obj/item/weapon/spell/summon/proc/on_summon(var/mob/living/summoned)
 	return

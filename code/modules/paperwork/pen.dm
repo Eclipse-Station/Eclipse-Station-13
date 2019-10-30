@@ -21,7 +21,7 @@
 	throw_speed = 7
 	throw_range = 15
 	matter = list(DEFAULT_WALL_MATERIAL = 10)
-	var/colour = "black"	//what colour the ink is!
+	var/colour = "black"	//what color the ink is!
 	pressure_resistance = 2
 
 
@@ -61,6 +61,22 @@
 	desc = "It's an invisble pen marker."
 	icon_state = "pen"
 	colour = "white"
+
+/obj/item/weapon/pen/click
+	desc = "It's a black ink pen. It urges you to click it."
+
+/obj/item/weapon/pen/click/attack_self(mob/user as mob)
+	if(user.a_intent == I_HELP)
+		user.visible_message("<span class='notice'><b>\The [user]</b> clicks [src] idly.</span>","<span class='notice'>You click [src] idly.</span>")
+		playsound(user, 'sound/weapons/flipblade.ogg', 20, 1)
+	else if (user.a_intent == I_HURT)
+		user.visible_message("<span class='warning'><b>\The [user]</b> clicks [src] angrily!</span>","<span class='warning'>You click [src] angrily!</span>")
+		playsound(user, 'sound/weapons/flipblade.ogg', 20, 1)
+	else if (user.a_intent == I_GRAB)
+		user.visible_message("<span class='warning'><b>\The [user]</b> spins [src] in their fingers!</span>","<span class='warning'>You spin [src] in your fingers!</span>")
+	else
+		user.visible_message("<span class='notice'><b>\The [user]</b> clicks [src] rhythmically.</span>","<span class='notice'>You click [src] rhythmically.</span>")
+		playsound(user, 'sound/weapons/flipblade.ogg', 20, 1)
 
 /*
  * Reagent pens
@@ -138,11 +154,11 @@
 	return signature ? signature : "Anonymous"
 
 /obj/item/weapon/pen/chameleon/verb/set_colour()
-	set name = "Change Pen Colour"
+	set name = "Change Pen Color"
 	set category = "Object"
 
 	var/list/possible_colours = list ("Yellow", "Green", "Pink", "Blue", "Orange", "Cyan", "Red", "Invisible", "Black")
-	var/selected_type = input("Pick new colour.", "Pen Colour", null, null) as null|anything in possible_colours
+	var/selected_type = input("Pick new color.", "Pen Color", null, null) as null|anything in possible_colours
 
 	if(selected_type)
 		switch(selected_type)
@@ -173,11 +189,11 @@
 
 /obj/item/weapon/pen/crayon
 	name = "crayon"
-	desc = "A colourful crayon. Please refrain from eating it or putting it in your nose."
+	desc = "A colorful crayon. Please refrain from eating it or putting it in your nose."
 	icon = 'icons/obj/crayons.dmi'
 	icon_state = "crayonred"
 	w_class = ITEMSIZE_TINY
-	attack_verb = list("attacked", "coloured")
+	attack_verb = list("attacked", "colored")
 	colour = "#FF0000" //RGB
 	var/shadeColour = "#220000" //RGB
 	var/uses = 30 //0 for unlimited uses

@@ -23,7 +23,7 @@
 
 /obj/item/clothing/head/helmet/combat/imperial/centurion
 	name = "imperial centurion helmet"
-	desc = "Vendi, vidi, visa; I came, I saw, I realised this hat was too expensive."
+	desc = "Vendi, vidi, visa; I came, I saw, I realized this hat was too expensive."
 	icon_state = "ge_helmcent"
 	icon = 'icons/obj/clothing/hats_vr.dmi'
 	icon_override = 'icons/mob/head_vr.dmi'

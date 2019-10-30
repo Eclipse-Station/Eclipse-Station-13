@@ -3,6 +3,13 @@
 	~Sayu
 */
 
+// // // ECLIPSE NOTE // // //
+/* This file is a partial revert of the Citadel patch. If any issues arise, use 
+ * click_legacy.dm located in the same folder as a backup solution.
+ *
+ * Travis will not like it if you use the backup solution. Fair warning.
+ */
+
 // 1 decisecond click delay (above and beyond mob/next_move)
 /mob/var/next_click = 0
 
@@ -30,7 +37,7 @@
 
 	After that, mostly just check your state, check whether you're holding an item,
 	check whether you're adjacent to the target, then pass off the click to whoever
-	is recieving it.
+	is receiving it.
 	The most common are:
 	* mob/UnarmedAttack(atom,adjacent) - used here only when adjacent, with no item in hand; in the case of humans, checks gloves
 	* atom/attackby(item,user) - used only when adjacent
@@ -38,7 +45,7 @@
 	* mob/RangedAttack(atom,params) - used only ranged, only used for tk and laser eyes but could be changed
 */
 /mob/proc/ClickOn(var/atom/A, var/params)
-	if(world.time <= next_click) // Hard check, before anything else, to avoid crashing
+	if(world.time < next_click) // Hard check, before anything else, to avoid crashing
 		return
 
 	next_click = world.time + 1
@@ -106,7 +113,7 @@
 	//Atoms on your person
 	// A is your location but is not a turf; or is on you (backpack); or is on something on you (box in backpack); sdepth is needed here because contents depth does not equate inventory storage depth.
 	var/sdepth = A.storage_depth(src)
-	if((!isturf(A) && A == loc) || (sdepth != -1 && sdepth <= 1))
+	if((!isturf(A) && A == loc) || (sdepth != -1 && sdepth <= MAX_STORAGE_REACH))		//Eclipse edit - This line and the line similar to it about 20 lines down were the cause of the telekinesis bug on 2019-08-14. I've made tweaks to their fix, but I'm not going to fully apply their fix because of what exactly happened. ^Spitzer
 		if(W)
 			var/resolved = W.resolve_attackby(A, src)
 			if(!resolved && A && W)
@@ -125,7 +132,7 @@
 	//Atoms on turfs (not on your person)
 	// A is a turf or is on a turf, or in something on a turf (pen in a box); but not something in something on a turf (pen in a box in a backpack)
 	sdepth = A.storage_depth_turf()
-	if(isturf(A) || isturf(A.loc) || (sdepth != -1 && sdepth <= 1))
+	if(isturf(A) || isturf(A.loc) || (sdepth != -1 && sdepth <= MAX_STORAGE_REACH))		//Eclipse edit - see above.
 		if(A.Adjacent(src) || (W && W.attack_can_reach(src, A, W.reach)) ) // see adjacent.dm
 			if(W)
 				// Return 1 in attackby() to prevent afterattack() effects (when safely moving items for example)
@@ -174,6 +181,7 @@
 
 /mob/living/UnarmedAttack(var/atom/A, var/proximity_flag)
 
+	//Eclipse Note: Removed on Cit's server, but for now I'm re-adding it. ^Spitzer
 	if(!ticker)
 		src << "You cannot attack people before the game has started."
 		return 0

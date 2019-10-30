@@ -3,7 +3,7 @@
 /datum/reagent/crayon_dust
 	name = "Crayon dust"
 	id = "crayon_dust"
-	description = "Intensely coloured powder obtained by grinding crayons."
+	description = "Intensely colored powder obtained by grinding crayons."
 	taste_description = "powdered wax"
 	reagent_state = LIQUID
 	color = "#888888"
@@ -52,7 +52,7 @@
 /datum/reagent/marker_ink
 	name = "Marker ink"
 	id = "marker_ink"
-	description = "Intensely coloured ink used in markers."
+	description = "Intensely colored ink used in markers."
 	taste_description = "extremely bitter"
 	reagent_state = LIQUID
 	color = "#888888"
@@ -426,8 +426,6 @@
 	if(istype(O, /obj/structure/window))
 		var/obj/structure/window/W = O
 		W.apply_silicate(volume)
-		remove_self(volume)
-	return
 
 /datum/reagent/glycerol
 	name = "Glycerol"

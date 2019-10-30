@@ -459,7 +459,7 @@ proc/admin_notice(var/message, var/rights)
 			dat+={"
 				<B>[using_map.company_name] D-Notice Handler</B><HR>
 				<FONT SIZE=1>A D-Notice is to be bestowed upon the channel if the handling Authority deems it as harmful for the station's
-				morale, integrity or disciplinary behaviour. A D-Notice will render a channel unable to be updated by anyone, without deleting any feed
+				morale, integrity or disciplinary behavior. A D-Notice will render a channel unable to be updated by anyone, without deleting any feed
 				stories it might contain at the time. You can lift a D-Notice if you have the required access at any time.</FONT><HR>
 			"}
 			if(isemptylist(news_network.network_channels))
@@ -733,7 +733,7 @@ var/datum/announcement/minor/admin_min_announcer = new
 	
 	//Time to find how they screwed up.
 	//Wasn't the right length
-	if((decomposed.len) % 3) //+1 to accomidate the lack of a wait time for the last message
+	if((decomposed.len) % 3) //+1 to accommodate the lack of a wait time for the last message
 		to_chat(usr,"<span class='warning'>You passed [decomposed.len] segments (senders+messages+pauses). You must pass a multiple of 3, minus 1 (no pause after the last message). That means a sender and message on every other line (starting on the first), separated by a pipe character (|), and a number every other line that is a pause in seconds.</span>")
 		return
 	
@@ -874,6 +874,18 @@ var/datum/announcement/minor/admin_min_announcer = new
 		alert("Unable to start the game as it is not set up.")
 		return
 	if(ticker.current_state == GAME_STATE_PREGAME)
+		// // // BEGIN ECLIPSE EDIT // // //
+		//"Start Now" should only start if we are safe to
+		if(!Master.current_runlevel)
+			Master.pending_start = !(Master.pending_start)		//simple toggle.
+			if(Master.pending_start)		//if pending start
+				log_admin("[usr.key] tried to start the game, but initializations were not finished. Start pending.")
+				message_admins("<font color='blue'>[usr.key] tried to start the game, but initializations were not finished. The round will start as soon as possible.</font>")
+			else			//no pending start, so it was canceled.
+				log_admin("[usr.key] has canceled a pending start.")
+				message_admins("<font color='blue'>[usr.key] has canceled a pending start. Game will start as normal.</font>")
+			return 1		//implied else
+		// // // END ECLIPSE EDIT // // //
 		ticker.current_state = GAME_STATE_SETTING_UP
 		Master.SetRunLevel(RUNLEVEL_SETUP)
 		log_admin("[usr.key] has started the game.")
@@ -1438,7 +1450,7 @@ var/datum/announcement/minor/admin_min_announcer = new
 /datum/admins/proc/paralyze_mob(mob/living/H as mob)
 	set category = "Admin"
 	set name = "Toggle Paralyze"
-	set desc = "Paralyzes a player. Or unparalyses them."
+	set desc = "Paralyzes a player. Or unparalyzes them."
 
 	var/msg
 

@@ -17,7 +17,7 @@
 	(<A HREF='?_src_=holder;adminplayerobservecoodjump=1;X=[src.mob.x];Y=[src.mob.y];Z=[src.mob.z]'>JMP</a>)")
 
 #define LIGHTNING_REDIRECT_RANGE 28 // How far in tiles certain things draw lightning from.
-#define LIGHTNING_ZAP_RANGE 3 // How far the tesla effect zaps, as well as the bad effects from a direct strike.
+#define LIGHTNING_ZAP_RANGE 3 // How far the Tesla effect zaps, as well as the bad effects from a direct strike.
 #define LIGHTNING_POWER 20000 // How much 'zap' is in a strike, used for tesla_zap().
 
 // The real lightning proc.
@@ -35,7 +35,7 @@
 
 	// Before we do the other visuals, we need to see if something is going to hijack our intended target.
 	var/obj/machinery/power/grounding_rod/ground = null // Most of the bad effects of lightning will get negated if a grounding rod is nearby.
-	var/obj/machinery/power/tesla_coil/coil = null // However a tesla coil has higher priority and the strike will bounce.
+	var/obj/machinery/power/tesla_coil/coil = null // However a Tesla coil has higher priority and the strike will bounce.
 
 	for(var/obj/machinery/power/thing in range(LIGHTNING_REDIRECT_RANGE, T))
 		if(istype(thing, /obj/machinery/power/tesla_coil))
@@ -65,7 +65,9 @@
 	var/sound = get_sfx("thunder")
 	for(var/mob/M in player_list)
 		if((P && M.z in P.expected_z_levels) || M.z == T.z)
-			M.playsound_local(get_turf(M), soundin = sound, vol = 70, vary = FALSE, is_global = TRUE)
+			if(!(M && M.is_preference_enabled(/datum/client_preference/play_ambience)))	return
+			else
+				M.playsound_local(get_turf(M), soundin = sound, vol = 70, vary = FALSE, is_global = TRUE, channel = CHANNEL_AMBIENCE)
 
 	if(cosmetic) // Everything beyond here involves potentially damaging things. If we don't want to do that, stop now.
 		return
@@ -74,7 +76,7 @@
 		ground.tesla_act(LIGHTNING_POWER, FALSE)
 		return
 
-	else if(coil) // Otherwise lets bounce off the tesla coil.
+	else if(coil) // Otherwise lets bounce off the Tesla coil.
 		coil.tesla_act(LIGHTNING_POWER, TRUE)
 
 	else // Striking the turf directly.
@@ -82,7 +84,7 @@
 
 	// Some extra effects.
 	// Some apply to those within zap range, others if they were a bit farther away.
-	for(var/mob/living/L in view(5, T))
+	for(var/mob/living/L in view(2, T))
 		if(get_dist(L, T) <= LIGHTNING_ZAP_RANGE) // They probably got zapped.
 			// The actual damage/electrocution is handled by tesla_zap().
 			L.Paralyse(5)
@@ -100,7 +102,7 @@
 				if(SA.health <= 0) // Might be best to check/give simple_mobs siemens when this gets ported to new mobs.
 					SA.visible_message(span("critical", "\The [SA] disintegrates into ash!"))
 					SA.ash()
-					continue // No point deafening something that wont exist.
+					continue // No point deafening something that won't exist.
 
 		// Deafen them.
 		if(L.get_ear_protection() < 2)

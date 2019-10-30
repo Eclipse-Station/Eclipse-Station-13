@@ -71,7 +71,7 @@
 
 	var/mob/living/prey = input(src,"Select a mob to eat","Holonoms") as mob in oview(0,eyeobj)|null
 	if(!prey)
-		return //Probably cancelled
+		return //Probably canceled
 
 	if(!istype(prey))
 		usr << "<span class='warning'>Invalid mob choice!</span>"

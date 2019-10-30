@@ -1,6 +1,6 @@
 /************************************************************************/
 /*
-#    An explaination of the naming format for guns and ammo:
+#    An explanation of the naming format for guns and ammo:
 #
 #    a = Ammo, as in individual rounds of ammunition.
 #    b = Box, intended to have ammo taken out one at a time by hand.
@@ -102,6 +102,11 @@
 	icon_state = "r-casing"
 	projectile_type = /obj/item/projectile/bullet/pistol/rubber
 
+/obj/item/ammo_casing/a9mm/pepperball
+	desc = "A 9mm pepperball casing."
+	icon_state = "r-casing"
+	projectile_type = /obj/item/projectile/bullet/pistol/pepperball
+
 /obj/item/ammo_casing/a9mm/practice
 	desc = "A 9mm practice bullet casing."
 	icon_state = "r-casing"
@@ -138,6 +143,12 @@
 	desc = "A .45 flash shell casing."
 	icon_state = "r-casing"
 	projectile_type = /obj/item/projectile/energy/flash
+	matter = list(DEFAULT_WALL_MATERIAL = 60)
+
+/obj/item/ammo_casing/a45/pepperball
+	desc = "A .45 pepperball shell casing."
+	icon_state = "r-casing"
+	projectile_type = /obj/item/projectile/bullet/pistol/pepperball
 	matter = list(DEFAULT_WALL_MATERIAL = 60)
 
 /obj/item/ammo_casing/a45/emp
@@ -208,10 +219,10 @@
 	matter = list(DEFAULT_WALL_MATERIAL = 180)
 
 //Can stun in one hit if aimed at the head, but
-//is blocked by clothing that stops tasers and is vulnerable to EMP
+//is blocked by clothing that stops Tasers and is vulnerable to EMP
 /obj/item/ammo_casing/a12g/stunshell
 	name = "stun shell"
-	desc = "A 12 gauge taser cartridge."
+	desc = "A 12 gauge Taser cartridge."
 	icon_state = "stunshell"
 	projectile_type = /obj/item/projectile/energy/electrode/stunshot
 	matter = list(DEFAULT_WALL_MATERIAL = 360, "glass" = 720)

@@ -1,3 +1,6 @@
+//This file should be disabled by the compiler.
+#warn This file uses lore for the Virgo-Erigone system.
+
 // Pulls data from organizations data
 /datum/lore/codex/category/auto_org
 	var/desired_type = null

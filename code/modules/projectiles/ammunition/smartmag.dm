@@ -66,7 +66,7 @@
 // Emagging lets you remove bullets from your bullet-making magazine
 /obj/item/ammo_magazine/smart/emag_act(var/remaining_charges, var/mob/user)
 	if(!emagged)
-		to_chat(user, "<span class='notice'>You overload \the [src]'s security measures causing widespread destabilisation. It is likely you could empty \the [src] now.</span>")
+		to_chat(user, "<span class='notice'>You overload \the [src]'s security measures causing widespread destabilization. It is likely you could empty \the [src] now.</span>")
 		emagged = TRUE
 		can_remove_ammo = TRUE
 		return TRUE

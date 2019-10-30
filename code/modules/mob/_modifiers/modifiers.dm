@@ -22,7 +22,7 @@
 	var/client_color = null				// If set, the client will have the world be shown in this color, from their perspective.
 
 	// Now for all the different effects.
-	// Percentage modifiers are expressed as a multipler. (e.g. +25% damage should be written as 1.25)
+	// Percentage modifiers are expressed as a multiplier. (e.g. +25% damage should be written as 1.25)
 	var/max_health_flat					// Adjusts max health by a flat (e.g. +20) amount.  Note this is added to base health.
 	var/max_health_percent				// Adjusts max health by a percentage (e.g. -30%).
 	var/disable_duration_percent		// Adjusts duration of 'disables' (stun, weaken, paralyze, confusion, sleep, halloss, etc)  Setting to 0 will grant immunity.
@@ -85,7 +85,7 @@
 /datum/modifier/proc/on_expire()
 	return
 
-// Called every Life() tick.  Override for special behaviour.
+// Called every Life() tick.  Override for special behavior.
 /datum/modifier/proc/tick()
 	return
 
@@ -233,7 +233,7 @@
 
 
 
-// Helper to format multiplers (e.g. 1.4) to percentages (like '40%')
+// Helper to format multipliers (e.g. 1.4) to percentages (like '40%')
 /proc/multipler_to_percentage(var/multi, var/abs = FALSE)
 	if(abs)
 		return "[abs( ((multi - 1) * 100) )]%"

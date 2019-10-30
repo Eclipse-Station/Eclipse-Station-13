@@ -54,7 +54,9 @@ var/datum/controller/supply/supply_controller = new()
 
 	for(var/typepath in subtypesof(/datum/supply_pack))
 		var/datum/supply_pack/P = new typepath()
-		supply_pack[P.name] = P
+		if(!isnull(P) && !isnull(P.name))		//Eclipse edit: if reference is not null and name is not null, go ahead
+			if(P.cost)							//Eclipse edit: No freebies!
+				supply_pack[P.name] = P
 
 /datum/controller/process/supply/setup()
 	name = "supply controller"
@@ -78,6 +80,8 @@ var/datum/controller/supply/supply_controller = new()
 		return 1
 	if(istype(A,/obj/item/device/radio/beacon))
 		return 1
+	if(istype(A,/obj/item/device/perfect_tele_beacon))	//VOREStation Addition: Translocator beacons
+		return 1										//VOREStation Addition: Translocator beacons
 
 	for(var/atom/B in A.contents)
 		if(.(B))
@@ -99,6 +103,7 @@ var/datum/controller/supply/supply_controller = new()
 		EC.name = "\proper[MA.name]"
 		EC.value = 0
 		EC.contents = list()
+		var/base_value = 0
 
 		// Must be in a crate!
 		if(istype(MA,/obj/structure/closet/crate))
@@ -106,6 +111,8 @@ var/datum/controller/supply/supply_controller = new()
 			callHook("sell_crate", list(CR, area_shuttle))
 
 			points += CR.points_per_crate
+			if(CR.points_per_crate)
+				base_value = CR.points_per_crate
 			var/find_slip = 1
 
 			for(var/atom/A in CR)
@@ -149,6 +156,7 @@ var/datum/controller/supply/supply_controller = new()
 
 		exported_crates += EC
 		points += EC.value
+		EC.value += base_value
 
 		// Duplicate the receipt for the admin-side log
 		var/datum/exported_crate/adm = new()
@@ -244,7 +252,7 @@ var/datum/controller/supply/supply_controller = new()
 				if(slip)
 					slip.info += "<li>[B2.name]</li>" //add the item to the manifest
 
-		//manifest finalisation
+		//manifest finalization
 		if(slip)
 			slip.info += "</ul><br>"
 			slip.info += "CHECK CONTENTS AND STAMP BELOW THE LINE TO CONFIRM RECEIPT OF GOODS<hr>"

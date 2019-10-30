@@ -52,8 +52,8 @@
 
 	var/mob/M = usr
 	var/list/options = list()
-	options["NT Mk. 58"] = "secguncomp"
-	options["NT Mk. 58 Custom"] = "secgundark"
+//	options["NT Mk. 58"] = "secguncomp"					//Eclipse removal: Done in the secgun itself, plus modular sprite weapons
+//	options["NT Mk. 58 Custom"] = "secgundark"			//Eclipse removal: See above
 	options["Colt M1911"] = "colt"
 	options["FiveSeven"] = "fnseven"
 	options["USP"] = "usp"
@@ -65,7 +65,7 @@
 	if(src && choice && !M.stat && in_range(M,src))
 		icon_state = options[choice]
 		unique_reskin = options[choice]
-		M << "Your gun is now sprited as [choice]. Say hello to your new friend."
+		M << "Your gun is now a(n) [choice]. Say hello to your new friend."
 		return 1
 
 /*//apart of reskins that have two sprites, touching may result in frustration and breaks

@@ -14,6 +14,12 @@ datum/preferences
 	var/last_ip
 	var/last_id
 
+	//Cooldowns for saving/loading. These are four are all separate due to loading code calling these one after another
+	var/saveprefcooldown
+	var/loadprefcooldown
+	var/savecharcooldown
+	var/loadcharcooldown
+
 	//game-preferences
 	var/lastchangelog = ""				//Saved changlog filesize to detect if there was a change
 	var/ooccolor = "#010000"			//Whatever this is set to acts as 'reset' color and is thus unusable as an actual custom color
@@ -51,13 +57,13 @@ datum/preferences
 	var/species = SPECIES_HUMAN         //Species datum to use.
 	var/species_preview                 //Used for the species selection window.
 	var/list/alternate_languages = list() //Secondary language(s)
-	var/list/language_prefixes = list() //Kanguage prefix keys
+	var/list/language_prefixes = list() //Language prefix keys
 	var/list/gear						//Left in for Legacy reasons, will no longer save.
 	var/list/gear_list = list()			//Custom/fluff item loadouts.
 	var/gear_slot = 1					//The current gear save slot
 	var/list/traits						//Traits which modifier characters for better or worse (mostly worse).
 	var/synth_color	= 0					//Lets normally uncolorable synth parts be colorable.
-	var/r_synth							//Used with synth_color to color synth parts that normaly can't be colored.
+	var/r_synth							//Used with synth_color to color synth parts that normally can't be colored.
 	var/g_synth							//Same as above
 	var/b_synth							//Same as above
 	var/synth_markings = 1				//Enable/disable markings on synth parts. //VOREStation Edit - 1 by default
@@ -86,7 +92,7 @@ datum/preferences
 	var/job_engsec_med = 0
 	var/job_engsec_low = 0
 
-	//Keeps track of preferrence for not getting any wanted jobs
+	//Keeps track of preference for not getting any wanted jobs
 	var/alternate_option = 1
 
 	var/used_skillpoints = 0
@@ -125,6 +131,9 @@ datum/preferences
 
 	// Communicator identity data
 	var/communicator_visibility = 0
+	
+	// Default ringtone for character; if blank, use job default
+	var/ringtone = null
 
 	var/datum/category_collection/player_setup_collection/player_setup
 	var/datum/browser/panel
@@ -284,7 +293,7 @@ datum/preferences
 	// Sanitizing rather than saving as someone might still be editing when copy_to occurs.
 	player_setup.sanitize_setup()
 
-	// This needs to happen before anything else becuase it sets some variables.
+	// This needs to happen before anything else because it sets some variables.
 	character.set_species(species)
 	// Special Case: This references variables owned by two different datums, so do it here.
 	if(be_random_name)

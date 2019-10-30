@@ -36,7 +36,7 @@ GLOBAL_LIST_BOILERPLATE(all_seed_packs, /obj/item/seeds)
 		seed_mask = plant_seed_sprites[seed_base_key]
 	else
 		seed_mask = image('icons/obj/seeds.dmi',"[is_seeds ? "seed" : "spore"]-mask")
-		if(is_seeds) // Spore glass bits aren't coloured.
+		if(is_seeds) // Spore glass bits aren't colored.
 			seed_mask.color = seed.get_trait(TRAIT_PLANT_COLOUR)
 		plant_seed_sprites[seed_base_key] = seed_mask
 
@@ -57,7 +57,7 @@ GLOBAL_LIST_BOILERPLATE(all_seed_packs, /obj/item/seeds)
 		src.desc = "It has a picture of [seed.display_name] on the front."
 	else
 		src.name = "sample of [seed.seed_name] [seed.seed_noun]"
-		src.desc = "It's labelled as coming from [seed.display_name]."
+		src.desc = "It's labeled as coming from [seed.display_name]."
 
 /obj/item/seeds/examine(mob/user)
 	..(user)

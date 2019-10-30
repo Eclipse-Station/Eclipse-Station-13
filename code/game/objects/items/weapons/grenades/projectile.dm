@@ -45,7 +45,7 @@
 	projectile_types = list(/obj/item/projectile/energy/flash)
 
 /obj/item/weapon/grenade/shooter/energy/tesla
-	name = "tesla grenade"
+	name = "Tesla grenade"
 	projectile_types = list(/obj/item/projectile/beam/chain_lightning/lesser)
 
 

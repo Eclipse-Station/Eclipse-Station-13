@@ -39,7 +39,7 @@
 /datum/reagent/chlorine
 	name = "Chlorine"
 	id = "chlorine"
-	description = "A chemical element with a characteristic odour."
+	description = "A chemical element with a characteristic odor."
 	taste_description = "pool water"
 	reagent_state = GAS
 	color = "#808080"
@@ -108,7 +108,7 @@
 		M.Confuse(60)
 	if(effective_dose >= strength * 4) // Blurry vision
 		M.eye_blurry = max(M.eye_blurry, 30)
-	if(effective_dose >= strength * 5) // Drowsyness - periodically falling asleep
+	if(effective_dose >= strength * 5) // Drowsiness - periodically falling asleep
 		M.drowsyness = max(M.drowsyness, 60)
 	if(effective_dose >= strength * 6) // Toxic dose
 		M.add_chemical_effect(CE_ALCOHOL_TOXIC, toxicity*3)
@@ -470,7 +470,7 @@
 /datum/reagent/tungsten
 	name = "Tungsten"
 	id = "tungsten"
-	description = "A chemical element, and a strong oxidising agent."
+	description = "A chemical element, and a strong oxidizing agent."
 	taste_description = "metal"
 	taste_mult = 0 //no taste
 	reagent_state = SOLID

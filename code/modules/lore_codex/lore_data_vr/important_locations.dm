@@ -1,3 +1,6 @@
+//This file should be disabled by the compiler.
+#warn This file uses lore for the Virgo-Erigone system.
+
 /datum/lore/codex/category/important_locations
 	name = "Important Locations"
 	data = "There are several locations of interest that you may come across when visiting the system Virgo-Erigone."
@@ -96,7 +99,7 @@
 	<br><br> \
 	One of the most interesting facts about this planet is that it is the native [quick_link("Zorren")] race, who until recently \
 	were a primitive and nomadic species.  Due to the arrival of various [quick_link("TSC", "TSCs")] over the last two decades, \
-	the Zorren have benefitted greatly from the introduction of advanced technology into their culture. It is not known how many \
+	the Zorren have benefited greatly from the introduction of advanced technology into their culture. It is not known how many \
 	Zorren occupy the planet, but it is believed that at least two million live scattered across the deserts and mountains, where \
 	they subsist off of underground water sources, and hunt for prey."
 
@@ -121,10 +124,10 @@
 	keywords += list("Virgo Central Command")
 	data = "<i>This page has been ripped out. Odd.</i>"
 	/*data = "The Virgo Central Command is a large facility on [quick_link("Virgo-3B")] which handles the loading and \
-	unloading, refuelling, and general maintenance of large spacecraft. The main structure is owned by \
+	unloading, refueling, and general maintenance of large spacecraft. The main structure is owned by \
 	[quick_link("NanoTrasen")], but individual offices, docking/loading bays, and warehouses are often leased to individuals \
-	or organisations.  The position of the spaceport allows it to function not only as a key node for transport inside the Virgo-Erigone \
-	system, especially to and from the planet Virgo 3, but also as a key stopping point for interstellar craft travelling via Virgo-Erigone which need refuelling. \
+	or organizations.  The position of the spaceport allows it to function not only as a key node for transport inside the Virgo-Erigone \
+	system, especially to and from the planet Virgo 3, but also as a key stopping point for interstellar craft traveling via Virgo-Erigone which need refueling. \
 	<br><br>\
 	The station itself is mostly designed around its logistical and commercial needs, and although other strategically-placed \
 	nearby facilities owned by a mixture of corporations and entities may possess habitation space, the port itself is not \

@@ -12,8 +12,10 @@ var/global/list/default_internal_channels = list(
 	num2text(SEC_I_FREQ)=list(access_security),
 	num2text(SCI_FREQ) = list(access_tox,access_robotics,access_xenobiology),
 	num2text(SUP_FREQ) = list(access_cargo),
-	num2text(SRV_FREQ) = list(access_janitor, access_hydroponics)
-)
+	num2text(SRV_FREQ) = list(access_janitor, access_hydroponics),
+	num2text(ATC_LOC_FREQ) = list(),
+	num2text(ATC_RGN_FREQ) = list(),
+)		//Eclipse Edit: Add ATC channel as internal
 
 var/global/list/default_medbay_channels = list(
 	num2text(PUB_FREQ) = list(),
@@ -42,6 +44,8 @@ var/global/list/default_medbay_channels = list(
 	var/adhoc_fallback = FALSE //Falls back to 'radio' mode if subspace not available
 	var/syndie = 0//Holder to see if it's a syndicate encrypted radio
 	var/centComm = 0//Holder to see if it's a CentCom encrypted radio
+	var/freqlock = FALSE		//Eclipse Edit: Should we lock the frequency to prevent people from changing the channel?
+	var/no_microphone = FALSE	//Eclipse Edit: Should we disable transmit by default?
 	flags = CONDUCT
 	slot_flags = SLOT_BELT
 	throw_speed = 2
@@ -177,7 +181,7 @@ var/global/list/default_medbay_channels = list(
 			"}
 
 /obj/item/device/radio/proc/ToggleBroadcast()
-	broadcasting = !broadcasting && !(wires.IsIndexCut(WIRE_TRANSMIT) || wires.IsIndexCut(WIRE_SIGNAL))
+	broadcasting = !broadcasting && !(wires.IsIndexCut(WIRE_TRANSMIT) || wires.IsIndexCut(WIRE_SIGNAL) || no_microphone)
 
 /obj/item/device/radio/proc/ToggleReception()
 	listening = !listening && !(wires.IsIndexCut(WIRE_RECEIVE) || wires.IsIndexCut(WIRE_SIGNAL))
@@ -200,6 +204,12 @@ var/global/list/default_medbay_channels = list(
 		. = 1
 
 	else if (href_list["freq"])
+		// // // BEGIN ECLIPSE EDITS // // //
+		// Frequency lockout, to prevent people from turning the channel.
+		// We want this on the intercoms in certain areas, such as the shuttle hangars, so
+		// people can't turn the channel and silence the ATC chatter. ^Spitzer
+		if(freqlock)
+			return 0
 		var/new_frequency = (frequency + text2num(href_list["freq"]))
 		if ((new_frequency < PUBLIC_LOW_FREQ || new_frequency > PUBLIC_HIGH_FREQ))
 			new_frequency = sanitize_frequency(new_frequency)
@@ -222,6 +232,9 @@ var/global/list/default_medbay_channels = list(
 				channels[chan_name] |= FREQ_LISTENING
 		. = 1
 	else if(href_list["spec_freq"])
+		if(freqlock)
+			return 0
+	// // // END ECLIPSE EDIT // // //
 		var freq = href_list["spec_freq"]
 		if(has_channel_access(usr, freq))
 			set_frequency(text2num(freq))
@@ -274,6 +287,8 @@ var/global/list/default_medbay_channels = list(
 /obj/item/device/radio/talk_into(mob/living/M as mob, message, channel, var/verb = "says", var/datum/language/speaking = null)
 	if(!on) return 0 // the device has to be on
 	//  Fix for permacell radios, but kinda eh about actually fixing them.
+	
+	if(no_microphone) return 0		//Eclipse edit: If you can't transmit, don't.
 	if(!M || !message) return 0
 
 	if(speaking && (speaking.flags & (SIGNLANG|NONVERBAL))) return 0
@@ -294,7 +309,7 @@ var/global/list/default_medbay_channels = list(
 		actually transmit large mass. Headsets are the only radio devices capable
 		of sending subspace transmissions to the Communications Satellite.
 
-		A headset sends a signal to a subspace listener/reciever elsewhere in space,
+		A headset sends a signal to a subspace listener/receiver elsewhere in space,
 		the signal gets processed and logged, and an audible transmission gets sent
 		to each individual headset.
 	*/
@@ -527,7 +542,7 @@ var/global/list/default_medbay_channels = list(
 			return -1
 	if (!on)
 		return -1
-	if (!freq) //recieved on main frequency
+	if (!freq) //received on main frequency
 		if (!listening)
 			return -1
 	else

@@ -135,7 +135,7 @@
 
 /obj/item/rig_module/mounted/taser
 
-	name = "mounted taser"
+	name = "mounted Taser"
 	desc = "A palm-mounted nonlethal energy projector."
 	icon_state = "taser"
 
@@ -144,8 +144,8 @@
 	suit_overlay_active = "mounted-taser"
 	suit_overlay_inactive = "mounted-taser"
 
-	interface_name = "mounted taser"
-	interface_desc = "A shoulder-mounted cell-powered taser."
+	interface_name = "mounted Taser"
+	interface_desc = "A shoulder-mounted cell-powered Taser."
 
 	gun_type = /obj/item/weapon/gun/energy/taser/mounted
 

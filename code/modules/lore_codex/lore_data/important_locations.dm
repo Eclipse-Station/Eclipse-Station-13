@@ -15,7 +15,7 @@
 		/datum/lore/codex/page/rota
 		)
 
-/datum/lore/codex/page/virgo_erigone/add_content()
+/datum/lore/codex/page/vir/add_content()
 	name = "Vir (Star)"
 	keywords += list("Vir")
 	data = "Vir is an A-type main sequence star with 81% more mass than Sol (the humans' home star), and almost nine times as bright.  It \
@@ -71,7 +71,7 @@
 	<br><br>\
 	Sif has many desirable traits which made it the first planet to be colonized in Vir, however it also has various quirks which \
 	may disorient humans used to conditions on planet Earth.  Atmospheric pressure is lower than 'normal', which may cause difficulty \
-	breathing if you are used to climate controlled artifical habitats or higher pressure planets.  The gravity is also slightly lower, at \
+	breathing if you are used to climate controlled artificial habitats or higher pressure planets.  The gravity is also slightly lower, at \
 	only 90% the strength of planet Earth's gravity. You may need to keep two clocks if you plan to visit \
 	or live on Sif, as the planet takes over 32 hours to complete one day.  A Sif year also takes just under five Earth years."
 
@@ -79,10 +79,10 @@
 	name = "Vir Interstellar Spaceport (Artificial Satellite)"
 	keywords += list("Vir Interstellar Spaceport")
 	data = "The Vir Interstellar Spaceport is a large facility in orbit of the planet [quick_link("Sif")] which handles the loading and \
-	unloading, refuelling, and general maintenance of large spacecraft. The main structure is owned by the \
+	unloading, refueling, and general maintenance of large spacecraft. The main structure is owned by the \
 	[quick_link("Sif Governmental Authority")], but individual offices, docking/loading bays, and warehouses are often leased to individuals \
-	or organisations.  The position of the spaceport allows it to function not only as a key node for transport inside the Vir \
-	system, especially to and from the planet Sif, but also as a key stopping point interstellar craft travelling via Vir which need refuelling. \
+	or organizations.  The position of the spaceport allows it to function not only as a key node for transport inside the Vir \
+	system, especially to and from the planet Sif, but also as a key stopping point interstellar craft traveling via Vir which need refueling. \
 	<br><br>\
 	The station itself is mostly designed around its logistical and commercial needs, and although other strategically-placed \
 	nearby facilities owned by a mixture of corporations and entities may possess habitation space, the port itself is not \
@@ -104,7 +104,7 @@
 	name = "Kara (Gas Giant)"
 	keywords += list("Kara")
 	data = "A gas giant, with a large number of moons. Captured asteroids, to be specific. Many of the asteroids are theorized \
-	to be the remnants of a much larger moon that was ripped apart by Kara, long ago. Curerntly, a large number of these \
+	to be the remnants of a much larger moon that was ripped apart by Kara, long ago. Currently, a large number of these \
 	asteroids are being used by many different businesses, and some governmental infrastructure has been built. The most prominent \
 	asteroid installation is the [quick_link("Northern Star", "NCS Northern Star")], a general purpose colony owned and operated by \
 	[quick_link("NanoTrasen")]. The mid-atmospheric temperature of the gas giant averages to around 150 kelvin (-108°C)."

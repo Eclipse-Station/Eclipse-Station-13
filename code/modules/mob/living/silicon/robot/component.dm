@@ -69,11 +69,11 @@
 		powered = 0
 
 
-// ARMOUR
+// ARMOR
 // Protects the cyborg from damage. Usually first module to be hit
 // No power usage
 /datum/robot_component/armour
-	name = "armour plating"
+	name = "armor plating"
 	external_type = /obj/item/robot_parts/robot_component/armour
 	max_damage = 90
 
@@ -232,7 +232,7 @@
 	icon_state_broken = "motor_broken"
 
 /obj/item/robot_parts/robot_component/armour
-	name = "armour plating"
+	name = "armor plating"
 	icon_state = "armor"
 	icon_state_broken = "armor_broken"
 

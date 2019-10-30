@@ -194,7 +194,7 @@
 
 /obj/item/weapon/gun/projectile/automatic/l6_saw
 	name = "light machine gun"
-	desc = "A rather traditionally made L6 SAW with a pleasantly lacquered wooden pistol grip. 'Aussec Armoury-2531' is engraved on the reciever. Uses 5.45mm rounds. It's also compatible with magazines from STS-35 assault rifles."
+	desc = "A rather traditionally made L6 SAW with a pleasantly lacquered wooden pistol grip. 'Aussec Armory-2531' is engraved on the receiver. Uses 5.45mm rounds. It's also compatible with magazines from STS-35 assault rifles."
 	icon_state = "l6closed100"
 	item_state = "l6closed"
 	w_class = ITEMSIZE_LARGE
@@ -276,7 +276,7 @@
 
 /obj/item/weapon/gun/projectile/automatic/as24
 	name = "automatic shotgun"
-	desc = "The AS-24 is a rugged looking automatic shotgun produced for the military by Gurov Projectile Weapons LLC. For very obvious reasons, it's illegal to own in many juristictions. Uses 12g rounds."
+	desc = "The AS-24 is a rugged looking automatic shotgun produced for the military by Gurov Projectile Weapons LLC. For very obvious reasons, it's illegal to own in many jurisdictions. Uses 12g rounds."
 	icon_state = "ashot"
 	item_state = null
 	w_class = ITEMSIZE_LARGE

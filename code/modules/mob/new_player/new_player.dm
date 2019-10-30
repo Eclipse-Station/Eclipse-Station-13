@@ -102,6 +102,9 @@
 		return 1
 
 	if(href_list["ready"])
+		if(!is_player_whitelisted(src))
+			discord_redirect(usr)//AEIOU addition
+			return 0
 		if(!ticker || ticker.current_state <= GAME_STATE_PREGAME) // Make sure we don't ready up after the round has started
 			ready = text2num(href_list["ready"])
 		else
@@ -114,7 +117,7 @@
 
 	if(href_list["observe"])
 
-		if(alert(src,"Are you sure you wish to observe? You will have to wait 5 minute before being able to respawn!","Player Setup","Yes","No") == "Yes") //Vorestation edit
+		if(alert(src,"Are you sure you wish to observe? You will have to wait three minutes before being able to respawn!","Player Setup","Yes","No") == "Yes") //Citadelstation edit
 			if(!client)	return 1
 
 			//Make a new mannequin quickly, and allow the observer to take the appearance
@@ -126,7 +129,7 @@
 
 			spawning = 1
 			if(client.media)
-				client.media.stop_music() // MAD JAMS cant last forever yo
+				client.media.stop_music() // MAD JAMS can't last forever yo
 
 			observer.started_as_observer = 1
 			close_spawn_windows()
@@ -152,7 +155,7 @@
 			return 1
 
 	if(href_list["late_join"])
-
+//		load_aeiouwhitelist()
 		if(!ticker || ticker.current_state != GAME_STATE_PLAYING)
 			usr << "<font color='red'>The round is either not ready, or has already finished...</font>"
 			return
@@ -169,6 +172,13 @@
 		ViewManifest()
 
 	if(href_list["SelectedJob"])
+	
+		//Prevents people rejoining as same character.
+		for (var/mob/living/carbon/human/C in mob_list)
+			var/char_name = client.prefs.real_name
+			if(char_name == C.real_name)
+				usr << "<span class='notice'>There is a character that already exists with the same name - <b>[C.real_name]</b>, please join with a different one, or use Quit the Round with the previous character.</span>" //VOREStation Edit
+				return
 
 		if(!config.enter_allowed)
 			usr << "<span class='notice'>There is an administrative lock on entering the game!</span>"
@@ -332,6 +342,9 @@
 	if(!ticker || ticker.current_state != GAME_STATE_PLAYING)
 		usr << "<font color='red'>The round is either not ready, or has already finished...</font>"
 		return 0
+	if(!is_player_whitelisted(src))
+		discord_redirect(src)//Aeiou addition
+		return 0
 	if(!config.enter_allowed)
 		usr << "<span class='notice'>There is an administrative lock on entering the game!</span>"
 		return 0
@@ -448,7 +461,7 @@
 
 
 /mob/new_player/proc/create_character(var/turf/T)
-	if (!attempt_vr(src,"spawn_checks_vr",list())) return 0 // VOREStation Insert
+	if(!attempt_vr(src,"spawn_checks_vr",list())) return 0 // VOREStation Insert
 	spawning = 1
 	close_spawn_windows()
 
@@ -478,7 +491,7 @@
 		client.prefs.copy_to(new_character, icon_updates = TRUE)
 
 	if(client && client.media)
-		client.media.stop_music() // MAD JAMS cant last forever yo
+		client.media.stop_music() // MAD JAMS can't last forever yo
 
 	if(mind)
 		mind.active = 0					//we wish to transfer the key manually

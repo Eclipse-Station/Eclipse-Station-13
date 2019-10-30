@@ -88,7 +88,7 @@
 
 	var/data[0]
 	if(!telepad)
-		in_use = 0     //Yeah so if you deconstruct teleporter while its in the process of shooting it wont disable the console
+		in_use = 0     //Yeah so if you deconstruct teleporter while its in the process of shooting it won't disable the console
 		data["noTelepad"] = 1
 	else
 		data["insertedGps"] = inserted_gps

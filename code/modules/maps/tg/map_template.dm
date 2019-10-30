@@ -4,7 +4,7 @@ var/list/global/map_templates = list()
 /proc/load_map_templates()
 	for(var/T in subtypesof(/datum/map_template))
 		var/datum/map_template/template = T
-		if(!(initial(template.mappath))) // If it's missing the actual path its probably a base type or being used for inheritence.
+		if(!(initial(template.mappath))) // If it's missing the actual path its probably a base type or being used for inheritance.
 			continue
 		template = new T()
 		map_templates[template.name] = template
@@ -21,7 +21,7 @@ var/list/global/map_templates = list()
 	var/annihilate = FALSE // If true, all (movable) atoms at the location where the map is loaded will be deleted before the map is loaded in.
 
 	var/cost = null // The map generator has a set 'budget' it spends to place down different submaps. It will pick available submaps randomly until \
-	it runs out. The cost of a submap should roughly corrispond with several factors such as size, loot, difficulty, desired scarcity, etc. \
+	it runs out. The cost of a submap should roughly correspond with several factors such as size, loot, difficulty, desired scarcity, etc. \
 	Set to -1 to force the submap to always be made.
 	var/allow_duplicates = FALSE // If false, only one map template will be spawned by the game. Doesn't affect admins spawning then manually.
 	var/discard_prob = 0 // If non-zero, there is a chance that the map seeding algorithm will skip this template when selecting potential templates to use.
@@ -40,13 +40,17 @@ var/list/global/map_templates = list()
 /datum/map_template/proc/preload_size(path, orientation = SOUTH)
 	var/bounds = maploader.load_map(file(path), 1, 1, 1, cropMap=FALSE, measureOnly=TRUE, orientation=orientation)
 	if(bounds)
-		width = bounds[MAP_MAXX] // Assumes all templates are rectangular, have a single Z level, and begin at 1,1,1
-		height = bounds[MAP_MAXY]
+		if(orientation & (90 | 270))
+			width = bounds[MAP_MAXY]
+			height = bounds[MAP_MAXX]
+		else
+			width = bounds[MAP_MAXX] // Assumes all templates are rectangular, have a single Z level, and begin at 1,1,1
+			height = bounds[MAP_MAXY]
 	return bounds
 
 /datum/map_template/proc/initTemplateBounds(var/list/bounds)
 	if (SSatoms.initialized == INITIALIZATION_INSSATOMS)
-		return // let proper initialisation handle it later
+		return // let proper initialization handle it later
 
 	var/list/atom/atoms = list()
 	var/list/area/areas = list()
@@ -191,7 +195,7 @@ var/list/global/map_templates = list()
 	CHECK_TICK
 
 	var/list/loaded_submap_names = list()
-	var/list/template_groups_used = list() // Used to avoid spawning three seperate versions of the same PoI.
+	var/list/template_groups_used = list() // Used to avoid spawning three separate versions of the same PoI.
 
 	// Now lets start choosing some.
 	while(budget > 0 && overall_sanity > 0)
@@ -203,6 +207,28 @@ var/list/global/map_templates = list()
 				chosen_template = pick(priority_submaps)
 			else
 				chosen_template = pick(potential_submaps)
+			
+			// // // BEGIN ECLIPSE EDIT // // //
+			//Speed up the submap generation system, by giving up if we start running low on sanity.
+/*
+ * SUBMAP GENERATOR YIELDING
+ * The submap loader will yield if the budget is below a certain value, based on
+ * the current sanity. This graphs as y <= -4/9x + 25, where Y is budget and X
+ * is sanity. Yielding begins at 56.25 sanity if budget below 0, and ends at 
+ * 0 sanity if budget is below 25 (if it hits zero it'll abort anyway).
+ */
+			if(budget <= ((-(4/9) * overall_sanity) + 25))
+				admin_notice("Submap loader yielding at sanity [overall_sanity] with [budget] left to spend.", R_DEBUG)
+				break
+				
+/*
+ * MORE QUICK NUMBERS:
+ * If sanity is 5, will yield if budget below 22.777...(REPEATED)
+ * If sanity is 10, will yield if budget below 20.555...(REPEATED)
+ * If sanity is 25, will yield if budget below 13.888...(REPEATED)
+ * If sanity is 50, will yield if budget below 2.777...(REPEATED)
+ */
+			// // // END ECLIPSE EDIT // // //
 
 		else // We're out of submaps.
 			admin_notice("Submap loader had no submaps to pick from with [budget] left to spend.", R_DEBUG)
@@ -250,7 +276,7 @@ var/list/global/map_templates = list()
 			admin_notice("Submap \"[chosen_template.name]\" placed at ([T.x], [T.y], [T.z])\n", R_DEBUG)
 
 			// Do loading here.
-			chosen_template.load(T, centered = TRUE, orientation=orientation) // This is run before the main map's initialization routine, so that can initilize our submaps for us instead.
+			chosen_template.load(T, centered = TRUE, orientation=orientation) // This is run before the main map's initialization routine, so that can initialize our submaps for us instead.
 
 			CHECK_TICK
 

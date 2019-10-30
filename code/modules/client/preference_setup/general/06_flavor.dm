@@ -13,7 +13,7 @@
 	S["flavor_texts_legs"]		>> pref.flavor_texts["legs"]
 	S["flavor_texts_feet"]		>> pref.flavor_texts["feet"]
 
-	//Flavour text for robots.
+	//Flavor text for robots.
 	S["flavour_texts_robot_Default"] >> pref.flavour_texts_robot["Default"]
 	for(var/module in robot_module_types)
 		S["flavour_texts_robot_[module]"] >> pref.flavour_texts_robot[module]

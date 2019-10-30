@@ -25,14 +25,14 @@
 // 1000% Charge Capacity, 20% I/O Capacity
 /obj/item/weapon/smes_coil/super_capacity
 	name = "superconductive capacitance coil"
-	desc = "A specialised type of superconductive magnetic coil with a significantly stronger containment field, allowing for larger power storage. Its IO rating is much lower, however."
+	desc = "A specialized type of superconductive magnetic coil with a significantly stronger containment field, allowing for larger power storage. Its IO rating is much lower, however."
 	ChargeCapacity = 60000000			// 1000 kWh
 	IOCapacity = 50000					// 50 kW
 
 // 10% Charge Capacity, 400% I/O Capacity. Technically turns SMES into large super capacitor.Ideal for shields.
 /obj/item/weapon/smes_coil/super_io
 	name = "superconductive transmission coil"
-	desc = "A specialised type of superconductive magnetic coil with reduced storage capabilites but vastly improved power transmission capabilities, making it useful in systems which require large throughput."
+	desc = "A specialized type of superconductive magnetic coil with reduced storage capabilities but vastly improved power transmission capabilities, making it useful in systems which require large throughput."
 	ChargeCapacity = 600000				// 10 kWh
 	IOCapacity = 1000000				// 1000 kW
 
@@ -73,13 +73,21 @@
 	var/max_coils = 6 			//30M capacity, 1.5MW input/output when fully upgraded /w default coils
 	var/cur_coils = 1 			// Current amount of installed coils
 	var/safeties_enabled = 1 	// If 0 modifications can be done without discharging the SMES, at risk of critical failure.
-	var/failing = 0 			// If 1 critical failure has occured and SMES explosion is imminent.
+	var/failing = 0 			// If 1 critical failure has occurred and SMES explosion is imminent.
 	var/datum/wires/smes/wires
 	var/grounding = 1			// Cut to quickly discharge, at cost of "minor" electrical issues in output powernet.
 	var/RCon = 1				// Cut to disable AI and remote control.
 	var/RCon_tag = "NO_TAG"		// RCON tag, change to show it on SMES Remote control console.
 	charge = 0
 	should_be_mapped = 1
+
+/obj/machinery/power/smes/buildable/main
+	cur_coils = 4
+	RCon_tag = "Power - Main"
+	
+/obj/machinery/power/smes/buildable/engine
+	RCon_tag = "Power - Engine"
+	input_attempt = 1
 
 /obj/machinery/power/smes/buildable/Destroy()
 	qdel(wires)
@@ -254,7 +262,7 @@
 				spawn(rand(300,600))
 					if(!failing) // Admin can manually set this var back to 0 to stop overload, for use when griffed.
 						update_icon()
-						ping("Magnetic containment stabilised.")
+						ping("Magnetic containment stabilized.")
 						return
 					ping("DANGER! Magnetic containment field failure in 3 ... 2 ... 1 ...")
 					explosion(get_turf(src),1,2,4,8)

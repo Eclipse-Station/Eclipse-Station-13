@@ -8,9 +8,9 @@
 	var/ignore_time_restrictions = FALSE// Useful for debugging without needing to wait 20 minutes each time.
 	var/list/available_actions = list()	// A list of 'actions' that the GM has access to, to spice up a round, such as events.
 	var/danger = 0						// The GM's best guess at how chaotic the round is.  High danger makes it hold back.
-	var/staleness = -20					// Determines liklihood of the GM doing something, increases over time.
+	var/staleness = -20					// Determines likelihood of the GM doing something, increases over time.
 	var/danger_modifier = 1				// Multiplier for how much 'danger' is accumulated.
-	var/staleness_modifier = 1			// Ditto.  Higher numbers generally result in more events occuring in a round.
+	var/staleness_modifier = 1			// Ditto.  Higher numbers generally result in more events occurring in a round.
 	var/ticks_completed = 0				// Counts amount of ticks completed.  Note that this ticks once a minute.
 	var/next_action = 0					// Minimum amount of time of nothingness until the GM can pick something again.
 	var/last_department_used = null		// If an event was done for a specific department, it is written here, so it doesn't do it again.
@@ -41,7 +41,7 @@
 // This is run before committing to an action/event.
 /datum/game_master/proc/pre_action_checks()
 	if(!ticker || ticker.current_state != GAME_STATE_PLAYING)
-		log_debug("Game Master unable to start event: Ticker is nonexistant, or the game is not ongoing.")
+		log_debug("Game Master unable to start event: Ticker is non-existent, or the game is not ongoing.")
 		return FALSE
 	if(suspended)
 		return FALSE
@@ -71,7 +71,7 @@
 		var/list/weighted_actions = list()
 		for(var/datum/gm_action/action in best_actions)
 			if(action.chaotic > danger)
-				continue // We skip dangerous events when bad stuff is already occuring.
+				continue // We skip dangerous events when bad stuff is already occurring.
 			weighted_actions[action] = action.get_weight()
 
 		var/datum/gm_action/choice = pickweight(weighted_actions)

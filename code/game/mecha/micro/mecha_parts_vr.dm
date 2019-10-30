@@ -93,7 +93,7 @@
 	origin_tech = list(TECH_DATA = 2, TECH_MATERIAL = 3, TECH_ENGINEERING = 3)
 
 /obj/item/mecha_parts/micro/part/polecat_armour
-	name="Polecat Armour Plates"
+	name="Polecat Armor Plates"
 	icon_state = "polecat-armor"
 	origin_tech = list(TECH_MATERIAL = 5, TECH_COMBAT = 4, TECH_ENGINEERING = 5)
 

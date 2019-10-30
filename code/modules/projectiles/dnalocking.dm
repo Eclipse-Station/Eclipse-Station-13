@@ -6,10 +6,10 @@
 	w_class = ITEMSIZE_TINY
 	origin_tech = list(TECH_COMBAT = 4, TECH_DATA = 4, TECH_BIO = 4)
 
-	var/list/stored_dna = list()	//list of the dna stored in the gun, used to allow users to use it or not
+	var/list/stored_dna = list()	//list of the DNA stored in the gun, used to allow users to use it or not
 	var/safety_level = 0			//either 0 or 1, at 0 the game buzzes and tells the user they can't use it, at 1 it self destructs after 10 seconds
-	var/controller_dna = null		//The dna of the person who is the primary controller of the gun
-	var/controller_lock = 0			//whether or not the gun is locked by the primar controller, 0 or 1, at 1 it is locked and does not allow
+	var/controller_dna = null		//The DNA of the person who is the primary controller of the gun
+	var/controller_lock = 0			//whether or not the gun is locked by the primary controller, 0 or 1, at 1 it is locked and does not allow
 	var/exploding = 0
 
 
@@ -25,7 +25,7 @@
 			M << "<span class='notice'>\The [src] pings and a needle flicks out from the grip, taking a DNA sample from you.</span>"
 			if(!attached_lock.controller_dna)
 				attached_lock.controller_dna = M.dna
-				M << "<span class='notice'>\The [src] processes the dna sample and pings, acknowledging you as the primary controller.</span>"
+				M << "<span class='notice'>\The [src] processes the DNA sample and pings, acknowledging you as the primary controller.</span>"
 			return 1
 	else
 		M << "<span class='warning'>\The [src] buzzes and displays a locked symbol. It is not allowing DNA samples at this time.</span>"
@@ -53,7 +53,7 @@
 					attached_lock.controller_lock = 0
 			return 1
 	else
-		M << "<span class='warning'>\The [src] buzzes and displays a locked symbol. It is not allowing DNA modifcation at this time.</span>"
+		M << "<span class='warning'>\The [src] buzzes and displays a locked symbol. It is not allowing DNA modification at this time.</span>"
 		return 0
 
 /obj/item/weapon/gun/verb/remove_dna()

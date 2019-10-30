@@ -52,7 +52,7 @@ var/list/ai_verbs_default = list(
 	var/list/connected_robots = list()
 	var/aiRestorePowerRoutine = 0
 	var/viewalerts = 0
-	var/icon/holo_icon//Default is assigned when AI is created.
+	var/icon/holo_icon			//Default is assigned when AI is created.		//Eclipse edit: Whitspace - let's not put comments directly against defines. ^Spitzer
 	var/obj/item/device/pda/ai/aiPDA = null
 	var/obj/item/device/communicator/aiCommunicator = null
 	var/obj/item/device/multitool/aiMulti = null
@@ -282,7 +282,10 @@ var/list/ai_verbs_default = list(
 /obj/machinery/ai_powersupply/New(var/mob/living/silicon/ai/ai=null)
 	powered_ai = ai
 	powered_ai.psupply = src
-	forceMove(powered_ai.loc)
+	if(istype(powered_ai,/mob/living/silicon/ai/announcer))	//Don't try to get a loc for a nullspace announcer mob, just put it into it
+		forceMove(powered_ai)
+	else
+		forceMove(powered_ai.loc)
 
 	..()
 	use_power(1) // Just incase we need to wake up the power system.
@@ -304,7 +307,7 @@ var/list/ai_verbs_default = list(
 	if(!powered_ai.anchored)
 		loc = powered_ai.loc
 		use_power = 0
-		use_power(50000) // Less optimalised but only called if AI is unwrenched. This prevents usage of wrenching as method to keep AI operational without power. Intellicard is for that.
+		use_power(50000) // Less optimalized but only called if AI is unwrenched. This prevents usage of wrenching as method to keep AI operational without power. Intellicard is for that.
 	if(powered_ai.anchored)
 		use_power = 2
 
@@ -419,7 +422,7 @@ var/list/ai_verbs_default = list(
 		return
 	if(usr != src)
 		return
-	/*if(..()) // <------ MOVED FROM HERE 
+	/*if(..()) // <------ MOVED FROM HERE
 		return*/
 	if (href_list["mach_close"])
 		if (href_list["mach_close"] == "aialerts")

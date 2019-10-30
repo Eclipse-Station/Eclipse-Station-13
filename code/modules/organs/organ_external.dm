@@ -36,9 +36,9 @@
 	var/icon/mob_icon                  // Cached icon for use in mob overlays.
 	var/gendered_icon = 0              // Whether or not the icon state appends a gender.
 	var/s_tone                         // Skin tone.
-	var/list/s_col                     // skin colour
-	var/s_col_blend = ICON_ADD         // How the skin colour is applied.
-	var/list/h_col                     // hair colour
+	var/list/s_col                     // skin color
+	var/s_col_blend = ICON_ADD         // How the skin color is applied.
+	var/list/h_col                     // hair color
 	var/body_hair                      // Icon blend for body hair if any.
 	var/mob/living/applied_pressure
 	var/list/markings = list()         // Markings (body_markings) to apply to the icon
@@ -78,6 +78,12 @@
 	// HUD element variable, see organ_icon.dm get_damage_hud_image()
 	var/image/hud_damage_image
 
+/obj/item/organ/external/torso
+	gendered_icon = 1
+	update_icon()
+/obj/item/organ/external/head
+	gendered_icon = 1
+	update_icon()
 /obj/item/organ/external/Destroy()
 
 	if(parent && parent.children)
@@ -620,7 +626,7 @@ Note that amputating the affected organ does in fact remove the infection from t
 */
 /obj/item/organ/external/proc/update_germs()
 
-	if(robotic >= ORGAN_ROBOT || (owner.species && (owner.species.flags & IS_PLANT || (owner.species.flags & NO_INFECT)))) //Robotic limbs shouldn't be infected, nor should nonexistant limbs.
+	if(robotic >= ORGAN_ROBOT || (owner.species && (owner.species.flags & IS_PLANT || (owner.species.flags & NO_INFECT)))) //Robotic limbs shouldn't be infected, nor should non-existent limbs.
 		germ_level = 0
 		return
 
@@ -1173,6 +1179,11 @@ Note that amputating the affected organ does in fact remove the infection from t
 /obj/item/organ/external/proc/embed(var/obj/item/weapon/W, var/silent = 0)
 	if(!owner || loc != owner)
 		return
+	if(owner.species.flags & IS_SLIME)
+		createwound( CUT, 15 )  //fixes proms being bugged into paincrit;instead whatever would embed now just takes a chunk out
+		src.visible_message("<font color='red'>[owner] has been seriously wounded by [W]!</font>")
+		W.add_blood(owner)
+		return 0
 	if(!silent)
 		owner.visible_message("<span class='danger'>\The [W] sticks in the wound!</span>")
 	implants += W

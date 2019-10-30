@@ -24,13 +24,13 @@
 //Library, medbay, storage room
 /area/awaymission/southblock
 
-//Arrivals, security, hydroponics, shuttles (since they dont move, they dont need specific areas)
+//Arrivals, security, hydroponics, shuttles (since they don't move, they don't need specific areas)
 /area/awaymission/arrivalblock
 
 //Crew quarters, cafeteria, chapel
 /area/awaymission/midblock
 
-//engineering, bridge (not really north but it doesnt really need its own APC)
+//engineering, bridge (not really north but it doesn't really need its own APC)
 /area/awaymission/northblock
 
 //That massive research room
@@ -57,7 +57,7 @@
 	qdel(src)
 
 /*
- * Guns - I'm making these specifically so that I dont spawn a pile of fully loaded weapons on the map.
+ * Guns - I'm making these specifically so that I don't spawn a pile of fully loaded weapons on the map.
  */
 //Captain's retro laser - Fires practice laser shots instead.
 obj/item/weapon/gun/energy/laser/retro/sc_retro
@@ -137,9 +137,9 @@ var/sc_safecode5 = "[rand(0,9)]"
 	info = {"<b>Target:</b> Research-station Epsilon<br>
 			<b>Objective:</b> Prototype weaponry. The captain likely keeps them locked in her safe.<br>
 			<br>
-			Our on-board spy has learned the code and has hidden away a few copies of the code around the station. Unfortunatly he has been captured by security
+			Our on-board spy has learned the code and has hidden away a few copies of the code around the station. Unfortunately he has been captured by security
 			Your objective is to split up, locate any of the papers containing the captain's safe code, open the safe and
-			secure anything found inside. If possible, recover the imprisioned syndicate operative and recieve the code from him.<br>
+			secure anything found inside. If possible, recover the imprisoned syndicate operative and receive the code from him.<br>
 			<br>
 			<u>As always, eliminate anyone who gets in the way.</u><br>
 			<br>
@@ -168,7 +168,7 @@ var/sc_safecode5 = "[rand(0,9)]"
  */
 /obj/machinery/singularity/narsie/sc_Narsie
 	desc = "Your body becomes weak and your feel your mind slipping away as you try to comprehend what you know can't be possible."
-	move_self = 0 //Contianed narsie does not move!
+	move_self = 0 //Contained narsie does not move!
 	grav_pull = 0 //Contained narsie does not pull stuff in!
 
 //Override this to prevent no adminlog runtimes and admin warnings about a singularity without containment

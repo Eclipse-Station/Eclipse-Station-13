@@ -1,8 +1,11 @@
+//This file should be disabled by the compiler.
+#warn This file uses lore for the Virgo-Erigone system.
+
 /datum/lore/codex/category/main_virgo_lore // The top-level categories for the Virgo book
 	name = "Index"
 	data = "Don't panic!\
 	<br><br>\
-	The many star systems inhabitied by humanity and friends can seem bewildering to the uninitiated. \
+	The many star systems inhabited by humanity and friends can seem bewildering to the uninitiated. \
 	This guide seeks to provide valuable information to anyone new in the system. This edition is tailored for visitors to the Virgo-Erigone system, \
 	however it also contains useful general information about human space, such as locations you may hear about, the current (as of 2562) political climate, various aliens you \
 	may meet in your travels, the big Trans-Stellars, and more."

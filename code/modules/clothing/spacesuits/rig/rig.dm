@@ -3,7 +3,7 @@
 #define SEAL_DELAY 30
 
 /*
- * Defines the behavior of hardsuits/rigs/power armour.
+ * Defines the behavior of hardsuits/rigs/power armor.
  */
 
 /obj/item/weapon/rig
@@ -78,7 +78,7 @@
 	var/locked_down = 0
 
 	var/seal_delay = SEAL_DELAY
-	var/sealing                                               // Keeps track of seal status independantly of canremove.
+	var/sealing                                               // Keeps track of seal status independently of canremove.
 	var/offline = 1                                           // Should we be applying suit maluses?
 	var/offline_slowdown = 3                                  // If the suit is deployed and unpowered, it sets slowdown to this.
 	var/vision_restriction
@@ -419,7 +419,7 @@
 	var/mob/living/carbon/human/H = loc
 
 	var/efficiency = 1 - H.get_pressure_weakness()		//you need to have a good seal for effective cooling
-	var/env_temp = get_environment_temperature()		//wont save you from a fire
+	var/env_temp = get_environment_temperature()		//won't save you from a fire
 	var/temp_adj = min(H.bodytemperature - max(thermostat, env_temp), max_cooling)
 
 	if (temp_adj < 0.5)	//only cools, doesn't heat, also we don't need extreme precision
@@ -516,7 +516,7 @@
 		user << "[fail_msg]"
 		return 0
 
-	// This is largely for cancelling stealth and whatever.
+	// This is largely for canceling stealth and whatever.
 	if(mod && mod.disruptive)
 		for(var/obj/item/rig_module/module in (installed_modules - mod))
 			if(module.active && module.disruptable)
@@ -855,8 +855,8 @@
 	if(!is_emp)
 		chance = 2*max(0, damage - (chest? chest.breach_threshold : 0))
 	else
-		//Want this to be roughly independant of the number of modules, meaning that X emp hits will disable Y% of the suit's modules on average.
-		//that way people designing hardsuits don't have to worry (as much) about how adding that extra module will affect emp resiliance by 'soaking' hits for other modules
+		//Want this to be roughly independent of the number of modules, meaning that X emp hits will disable Y% of the suit's modules on average.
+		//that way people designing hardsuits don't have to worry (as much) about how adding that extra module will affect emp resilience by 'soaking' hits for other modules
 		chance = 2*max(0, damage - emp_protection)*min(installed_modules.len/15, 1)
 
 	if(!prob(chance))

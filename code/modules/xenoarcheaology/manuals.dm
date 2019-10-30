@@ -59,7 +59,7 @@
 						could save your life.</li>
 					<li><b>Anomaly safety gear</b> - A biosealed and catalysis-resistant suit along with eye shielding, tinted hood, and non-reactive disposable gloves are
 					the best kind of protection you can hope for from the errors our forebears may have unleashed.</li>
-					<li><b>Personal defence weapon</b> - Never know what you'll find on the dig: pirates, natives, ancient guardians, carnivorous wildlife...
+					<li><b>Personal defense weapon</b> - Never know what you'll find on the dig: pirates, natives, ancient guardians, carnivorous wildlife...
 						it pays in blood to be prepared.</li>
 				</ul><br>
 				<a href="#Contents">Contents</a>
@@ -201,9 +201,9 @@
 				</head>
 				<body>
 				<br>
-				It's perhaps one of the most exciting times to be alive, with the recent breakthroughs in understanding and categorisation of things we may one day no longer call
+				It's perhaps one of the most exciting times to be alive, with the recent breakthroughs in understanding and categorization of things we may one day no longer call
 				'anomalies,' but rather 'infrequent or rare occurrences of certain celestial weather or phenomena.' Perhaps a little more long winded, but no less eloquent all the
-				same! Why, look at the strides we're making in piercing the walls of bluespace or our steadily improving ability to clarify and stabilise subspace emissions; it's
+				same! Why, look at the strides we're making in piercing the walls of bluespace or our steadily improving ability to clarify and stabilize subspace emissions; it's
 				certainly an exciting time to be alive. For the moment, the Hydrolian hasn't seen two spatial anomalies alike but the day will come and it is soon, I can feel it.
 				</body>
 			</html>"}
@@ -257,7 +257,7 @@
 				<ol>
 					<li><a href="#Anomalies">Foreword: Modern attitude towards anomalies</a></li>
 					<li><a href="#Tri">Triangulating anomalous energy readings</a></li>
-					<li><a href="#Synthetic">Harvesting and utilising anomalous energy signatures</a></li>
+					<li><a href="#Synthetic">Harvesting and utilizing anomalous energy signatures</a></li>
 				</ol>
 				<br>
 				<h1><a name="Anomalies">Modern attitude towards anomalies</a></h1>
@@ -275,10 +275,10 @@
 				Indeed, a great source of knowledge and technology has always been those who come before us, in the form of the multitudinous ancient alien precursors that
 				have left scattered remnants of their great past all over settled (and unexplored) space.<br>
 				<br>
-				It is from xenoarchaeologists, high energy materials researchers, and technology reconstruction authorities that we are able to theorise on the gifts these
+				It is from xenoarchaeologists, high energy materials researchers, and technology reconstruction authorities that we are able to theorize on the gifts these
 				species have left behind, and in some cases even reverse engineer or rebuild the technology in question. My colleague, Doctor Raymond Ward of the
 				Tyrolian Institute on Titan, has made great breakthroughs in a related field through his pioneering development of universally reflective materials capable
-				of harvesting and 'bottling' up virtually any energy emissions yet encountered by spacefaring civilisations.<br>
+				of harvesting and 'bottling' up virtually any energy emissions yet encountered by spacefaring civilizations.<br>
 				<br>
 				And yet, there are some amongst us who do not see the benefits of those who have come before us - indeed, some among them profess the opinion that there
 				is no species that could possibly match humanity in it's achievements and knowledge, or simply that employing non-human technology is dangerous and unethical.
@@ -294,11 +294,11 @@
 				energy, and determine the approximate distance and direction that the energy source is, relative to the sample's point in space. Modern portable devices can do
 				all this purely by taking readings of local radiation.<br>
 				<br>
-				A canny researcher can thusly analyse radiation at pre-chosen points strategically scattered around an area, and if there are any anomalous energy
+				A canny researcher can thusly analyze radiation at pre-chosen points strategically scattered around an area, and if there are any anomalous energy
 				emissions in range of those points, combined the researcher can triangulate the source.<br>
 				<a href="#Contents">Contents</a>
 
-				<h1><a name="Synthetic">Harvesting and utilising anomalous energy signatures</a></h1>
+				<h1><a name="Synthetic">Harvesting and utilizing anomalous energy signatures</a></h1>
 				As mentioned in the foreword, my colleague from the Tyrolian Institute on Saturn's moon of Titan, in the Sol System, Doctor Raymond Ward has made great strides
 				in the area of harvesting and application of the energy emitted by anomalous phenomena from around the galaxy (although I profess I have not yet seen him
 				venture further from his birthplace on Earth than the comfortable distance of the Sol Cis-Oort Satellite Sphere).<br>
@@ -339,7 +339,7 @@
 				</ol>
 				<br>
 				<h1><a name="Foreword">Foreword: A replacement for cryosleep?</a></h1>
-				The development of rudimentary cryofreezing in the 20th and 21st centuries was hailed as a crank science by some, but many early visionaries recognised the
+				The development of rudimentary cryofreezing in the 20th and 21st centuries was hailed as a crank science by some, but many early visionaries recognized the
 				potential it had to change the way we approach so many fields, such as medicine, therapeutics, and space travel. It was breakthroughs in the field in the 22nd and
 				later centuries that turned the procedure from science fiction to science fact, however. Since then, cryogenics has become a hallmark of modern science, and
 				regarded as one of the great achievements of our era. As with all sciences however, they have their time and are superseded by newer technological miracles when
@@ -349,15 +349,15 @@
 				<h1><a name="Development">The breakthrough</a></h1>
 				It was in examining the effects of decelerated, bluespace, high energy particles when transphased through bluespace that the effects where primarily noticed.
 				Due to exigent properties of that dimension, transphasing those particles capable of existing in bluespace with high stability levels has the effect of bringing
-				some of those effects into realspace. Examining the Hoffman emissions in particular, it was discovered that they exhibited a-entropic behaviour, and in what is
-				now termed the 'Effete Hoffman Principle,' it was found that metastabilising the Hoffman radiation resulted in the effect being applied across other physical
+				some of those effects into realspace. Examining the Hoffman emissions in particular, it was discovered that they exhibited a-entropic behavior, and in what is
+				now termed the 'Effete Hoffman Principle,' it was found that metastabilizing the Hoffman radiation resulted in the effect being applied across other physical
 				interactions, in particular forces and reactions.<br>
 				<a href="#Contents">Contents</a>
 
 				<h1><a name="Application">Applying this new principle</a></h1>
-				When combined with an appropriate energy-effect replicate for cryogenics (slowing down biological activity, thus stabilising the organics), the effect is
+				When combined with an appropriate energy-effect replicate for cryogenics (slowing down biological activity, thus stabilizing the organics), the effect is
 				effectively identical to cryogenics, and while it consumes vastly more power and requires extremely complex equipment, it's (for all intents and purposes) superior
-				to cryogenics, all that remains is to 'commercialise' the process by enabling cheaper development and mass production.<br>
+				to cryogenics, all that remains is to 'commercialize' the process by enabling cheaper development and mass production.<br>
 				The Effete Hoffman Principle can be tweak-combined with other effects however, for different purposes. A division of PMC Research initially developed the application
 				in prisons as a literal 'suspension field' where convicts are held immobile in the air, and the use quickly spread to numerous other areas.<br>
 				<br>

@@ -421,13 +421,13 @@ obj/structure/cable/proc/cableColor(var/colorC)
 			if(C.powernet)
 				. -= C
 
-//should be called after placing a cable which extends another cable, creating a "smooth" cable that no longer terminates in the centre of a turf.
+//should be called after placing a cable which extends another cable, creating a "smooth" cable that no longer terminates in the center of a turf.
 //needed as this can, unlike other placements, disconnect cables
 /obj/structure/cable/proc/denode()
 	var/turf/T1 = loc
 	if(!T1) return
 
-	var/list/powerlist = power_list(T1,src,0,0) //find the other cables that ended in the centre of the turf, with or without a powernet
+	var/list/powerlist = power_list(T1,src,0,0) //find the other cables that ended in the center of the turf, with or without a powernet
 	if(powerlist.len>0)
 		var/datum/powernet/PN = new()
 		propagate_network(powerlist[1],PN) //propagates the new powernet beginning at the source cable
@@ -609,10 +609,10 @@ obj/structure/cable/proc/cableColor(var/colorC)
 	..()
 
 /obj/item/stack/cable_coil/cyborg/verb/set_colour()
-	set name = "Change Colour"
+	set name = "Change Color"
 	set category = "Object"
 
-	var/selected_type = input("Pick new colour.", "Cable Colour", null, null) as null|anything in possible_cable_coil_colours
+	var/selected_type = input("Pick new color.", "Cable Color", null, null) as null|anything in possible_cable_coil_colours
 	set_cable_color(selected_type, usr)
 
 // Items usable on a cable coil :
@@ -782,10 +782,10 @@ obj/structure/cable/proc/cableColor(var/colorC)
 		C.mergeConnectedNetworks(C.d2) //...in the two new cable directions
 		C.mergeConnectedNetworksOnTurf()
 
-		if(C.d1 & (C.d1 - 1))// if the cable is layed diagonally, check the others 2 possible directions
+		if(C.d1 & (C.d1 - 1))// if the cable is laid diagonally, check the others 2 possible directions
 			C.mergeDiagonalsNetworks(C.d1)
 
-		if(C.d2 & (C.d2 - 1))// if the cable is layed diagonally, check the others 2 possible directions
+		if(C.d2 & (C.d2 - 1))// if the cable is laid diagonally, check the others 2 possible directions
 			C.mergeDiagonalsNetworks(C.d2)
 
 		use(1)
@@ -796,7 +796,7 @@ obj/structure/cable/proc/cableColor(var/colorC)
 				qdel(C)
 				return
 
-		C.denode()// this call may have disconnected some cables that terminated on the centre of the turf, if so split the powernets.
+		C.denode()// this call may have disconnected some cables that terminated on the center of the turf, if so split the powernets.
 		return
 
 //////////////////////////////

@@ -72,7 +72,7 @@
 			src.take_organ_damage(0,5,emp=1)
 			Confuse(2)
 	flash_eyes(affect_silicon = 1)
-	src << "<span class='danger'><B>*BZZZT*</B></span>"
+	src << "<span class='danger'><B>#4nd%;f4y6,>£%-BZZZZZZZT</B></span>"
 	src << "<span class='danger'>Warning: Electromagnetic pulse detected.</span>"
 	..()
 
@@ -186,7 +186,7 @@
 //can't inject synths
 /mob/living/silicon/can_inject(var/mob/user, var/error_msg)
 	if(error_msg)
-		user << "<span class='alert'>The armoured plating is too tough.</span>"
+		user << "<span class='alert'>The armored plating is too tough.</span>"
 	return 0
 
 
@@ -292,11 +292,11 @@
 	pose =  sanitize(input(usr, "This is [src]. It is...", "Pose", null)  as text)
 
 /mob/living/silicon/verb/set_flavor()
-	set name = "Set Flavour Text"
+	set name = "Set Flavor Text"
 	set desc = "Sets an extended description of your character's features."
 	set category = "IC"
 
-	flavor_text =  sanitize(input(usr, "Please enter your new flavour text.", "Flavour text", null)  as text)
+	flavor_text =  sanitize(input(usr, "Please enter your new flavor text.", "Flavor text", null)  as text)
 
 /mob/living/silicon/binarycheck()
 	return 1

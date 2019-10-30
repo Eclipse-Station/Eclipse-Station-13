@@ -1,6 +1,6 @@
 /obj/item/weapon/gun/magnetic/railgun
 	name = "railgun"
-	desc = "The Mars Military Industries MI-76 Thunderclap. A man-portable mass driver for squad support anti-armour and destruction of fortifications and emplacements."
+	desc = "The Mars Military Industries MI-76 Thunderclap. A man-portable mass driver for squad support anti-armor and destruction of fortifications and emplacements."
 	gun_unreliable = 0
 	icon_state = "railgun"
 	removable_components = FALSE
@@ -83,7 +83,7 @@
 
 /obj/item/weapon/gun/magnetic/railgun/flechette
 	name = "flechette gun"
-	desc = "The MI-12 Skadi is a burst fire capable railgun that fires flechette rounds at high velocity. Deadly against armour, but much less effective against soft targets."
+	desc = "The MI-12 Skadi is a burst fire capable railgun that fires flechette rounds at high velocity. Deadly against armor, but much less effective against soft targets."
 	icon_state = "flechette_gun"
 	item_state = "z8carbine"
 

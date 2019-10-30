@@ -11,7 +11,7 @@
 	var/on = 0
 	var/brightness_on = 4 //luminosity when on
 	var/flashlight_power = 0.8	//lighting power when on
-	var/flashlight_colour = LIGHT_COLOR_INCANDESCENT_FLASHLIGHT	//lighting colour when on
+	var/flashlight_colour = LIGHT_COLOR_INCANDESCENT_FLASHLIGHT	//lighting color when on
 	var/obj/item/weapon/cell/cell
 	var/cell_type = /obj/item/weapon/cell/device
 	var/list/brightness_levels
@@ -49,7 +49,7 @@
 			brightness_level = "low"
 			power_usage = brightness_levels["low"]
 		else		//sanity check failed
-			error("[src] held by [usr] at [loc.x],[loc.y],[loc.z]: Attempted to alt-click switch brightness levels, but somehow was in a nonexistant brightness level. user = [user], brightness_level = [brightness_level]. Attempting to correct...")
+			error("[src] held by [usr] at [loc.x],[loc.y],[loc.z]: Attempted to alt-click switch brightness levels, but somehow was in a non-existent brightness level. user = [user], brightness_level = [brightness_level]. Attempting to correct...")
 			brightness_level = "medium"
 			power_usage = brightness_levels["medium"]
 			ASSERT(brightness_level == "medium")		//brightness level should be on medium. If this fails, something isn't being set right.

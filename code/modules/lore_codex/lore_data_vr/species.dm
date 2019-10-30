@@ -89,14 +89,14 @@
 	<br><br>\
 	With the help of Skrellean technology, the Akula had their genome modified to be capable of surviving in open air for long periods of time. \
 	However, Akula even today still require a high humidity environment to avoid drying out after a few days, which would make life on an arid world like \
-	[quick_link("Virgo-Prime")] nearly impossible if it were not for Skrellean technology to aid them."
+	Virgo-Prime or Moghes nearly impossible if it were not for Skrellean technology to aid them."
 
 /datum/lore/codex/page/nevrean/add_content()
 	name = "Nevrean"
 	keywords += list("Nevrean")
-	data = "An avian species hailing from the planet Eltus in the Vilous system, characterised by their long whiplike \
+	data = "An avian species hailing from the planet Eltus in the Vilous system, characterized by their long whiplike \
 	tail-feathers. The species is generally matriarchal, with females tending towards duller, brown coloration and \
-	bulkier bodies, while males are slight and brightly coloured. In both typical mannerisms, culture and physical \
+	bulkier bodies, while males are slight and brightly colored. In both typical mannerisms, culture and physical \
 	build, the sexes are directly reversed when compared to traditional human society.\
 	<br><br>\
 	Their build is somewhere between a bird and a feathered dinosaur. Females tend to have short feathers on their arms that are not capable \
@@ -127,10 +127,10 @@
 	authorities. They speak a guttural language known as 'Canilunzt' which has a heavy emphasis on utilizing tail \
 	positioning and ear twitches to communicate intent."
 
-/datum/lore/codex/page/zorren/add_content()
+/datum/lore/codex/page/zorren/add_content()		//Eclipse note: Do we even have Zorren in our lore? ^Spitzer
 	name = "Zorren"
 	keywords += list("Zorren")
-	data = "The fox-like Zorren are native to [quick_link("Virgo-Prime")], however there are two distinct varieties of \
+	data = "The fox-like Zorren are native to Virgo-Prime however there are two distinct varieties of \
 	Zorren one with large ears and shorter fur, and the other with longer fur that is a bit more vibrant. The \
 	long-eared, short-furred Zorren have come to be known as \"Flatland\" Zorren as that is where most of their \
 	settlements are located. The Flatland Zorren are somewhat tribal and shamanistic as they have only recently \

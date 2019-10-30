@@ -527,7 +527,7 @@ var/world_topic_spam_protect_time = world.timeofday
 	if (config && config.server_name)
 		s += "<b>[config.server_name]</b> &#8212; "
 
-	s += "<b>Eclipse Station 13</b>"
+	s += "<b>Eclipse Station 13 - </b>"
 	s += "<b>[station_name()]</b>";
 	s += " ("
 	s += "<a href=\"http://www.eclipse-station.space/\">" //Change this to wherever you want the hub to link to.
@@ -537,9 +537,8 @@ var/world_topic_spam_protect_time = world.timeofday
 	s += "<a href=\"https://discord.gg/xuS4t9U\">" //Change this to wherever you want the hub to link to.
 	s += "Discord"  //Replace this with something else. Or ever better, delete it and uncomment the game version.
 	s += "</a>"
+	s += "<br><small><i>Heavy RolePlay, antags (w/ vote, no murderbone), diverse character creation menu.</i></small><br>"
 	s += ")"
-	s += "<br><small><i>Heavy RolePlay, antagonists (w/ vote, no murderbone), diverse character creation menu.</i></small><br>"
-
 	var/list/features = list()
 
 	if(ticker)
@@ -595,7 +594,7 @@ var/failed_old_db_connections = 0
 
 proc/setup_database_connection()
 
-	if(failed_db_connections > FAILED_DB_CONNECTION_CUTOFF)	//If it failed to establish a connection more than 5 times in a row, don't bother attempting to conenct anymore.
+	if(failed_db_connections > FAILED_DB_CONNECTION_CUTOFF)	//If it failed to establish a connection more than 5 times in a row, don't bother attempting to connect anymore.
 		return 0
 
 	if(!dbcon)
@@ -640,7 +639,7 @@ proc/establish_db_connection()
 //These two procs are for the old database, while it's being phased out. See the tgstation.sql file in the SQL folder for more information.
 proc/setup_old_database_connection()
 
-	if(failed_old_db_connections > FAILED_DB_CONNECTION_CUTOFF)	//If it failed to establish a connection more than 5 times in a row, don't bother attempting to conenct anymore.
+	if(failed_old_db_connections > FAILED_DB_CONNECTION_CUTOFF)	//If it failed to establish a connection more than 5 times in a row, don't bother attempting to connect anymore.
 		return 0
 
 	if(!dbcon_old)

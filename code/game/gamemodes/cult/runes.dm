@@ -1069,7 +1069,7 @@ var/list/sacrificed = list()
 							qdel(B)
 				qdel(src)
 
-//////////             Rune 24 (counting burningblood, which kinda doesnt work yet.)
+//////////             Rune 24 (counting burningblood, which kinda doesn't work yet.)
 
 		runestun(var/mob/living/T as mob)
 			if(istype(src,/obj/effect/rune))   ///When invoked as rune, flash and stun everyone around.
@@ -1088,7 +1088,7 @@ var/list/sacrificed = list()
 					else if(issilicon(L))
 						var/mob/living/silicon/S = L
 						S.Weaken(5)
-						S.show_message("<span class='danger'>BZZZT... The rune has exploded in a bright flash.</span>", 3)
+						S.show_message("<span class='danger'>#4nd%;f4y6,>£%-BZZZZZZZT... The rune has exploded in a bright flash.</span>", 3)
 						add_attack_logs(usr,S,"Stun rune")
 				qdel(src)
 			else                        ///When invoked as talisman, stun and mute the target mob.

@@ -49,7 +49,7 @@
 			flags_inv = HIDEHOLSTER
 			usr << "You unbutton the coat."
 		else //in case some goofy admin switches icon states around without switching the icon_open or icon_closed
-			usr << "You attempt to button-up the velcro on your [src], before promptly realising how silly you are."
+			usr << "You attempt to button-up the Velcro on your [src], before promptly realizing how silly you are."
 			return
 		update_clothing_icon()	//so our overlays update
 
@@ -77,7 +77,7 @@
 			flags_inv = HIDEHOLSTER
 			usr << "You unbutton the coat."
 		else //in case some goofy admin switches icon states around without switching the icon_open or icon_closed
-			usr << "You attempt to button-up the velcro on your [src], before promptly realising how silly you are."
+			usr << "You attempt to button-up the Velcro on your [src], before promptly realizing how silly you are."
 			return
 		update_clothing_icon()	//so our overlays update
 

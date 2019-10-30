@@ -1,20 +1,20 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //	Polychromic Uniforms:																							 					  //
 //																													 					  //
-//		Polychromic clothes simply consist of 4 sprites: A base, unrecoloured sprite, and up to 3 greyscaled sprites. 					  //
-//	In order to add more polychromic clothes, simply create a base sprite, and up to 3 recolourable overlays for it,  					  //
+//		Polychromic clothes simply consist of 4 sprites: A base, unrecolored sprite, and up to 3 greyscaled sprites. 					  //
+//	In order to add more polychromic clothes, simply create a base sprite, and up to 3 recolorable overlays for it,  					  //
 //	and then name them as follows: [name], [name]-primary, [name]-secondary, [name]-tertiary. The sprites should	  					  //
 //	ideally be in 'modular_citadel/icons/polyclothes/item/uniform.dmi' and 'modular_citadel/icons/polyclothes/mob/uniform.dmi' for the	  //
 //	worn sprites. After that, copy paste the code from any of the example clothes and 													  //
 //	change the names around. [name] should go in BOTH icon_state and item_color. You can preset colors and disable	  					  //
-//	any overlays using the self-explainatory vars.																	  					  //
+//	any overlays using the self-explanatory vars.																	  					  //
 //																													  					  //
 //																								-Tori				  					  //
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /obj/item/clothing/under/polychromic	//enables all three overlays to reduce copypasta and defines basic stuff
 	name = "polychromic suit"
-	desc = "For when you want to show off your horrible colour coordination skills."
+	desc = "For when you want to show off your horrible color coordination skills."
 	icon = 'modular_eclipse/icons/obj/clothing/polychromic_uniforms.dmi'
 	icon_override = 'modular_eclipse/icons/mob/clothing/onmob/polychromic_uniforms.dmi'
 	icon_state = "polysuit"

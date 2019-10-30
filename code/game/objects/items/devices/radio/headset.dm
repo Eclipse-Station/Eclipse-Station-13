@@ -160,6 +160,12 @@
 	icon_state = "com_headset"
 	ks2type = /obj/item/device/encryptionkey/headset_com
 
+/obj/item/device/radio/headset/headset_adj //Citadel Add: Secretary headset with service and command.
+	name = "secretary radio headset"
+	desc = "A headset for those who serve command."
+	icon_state = "com_headset"
+	ks2type = /obj/item/device/encryptionkey/headset_adj
+
 /obj/item/device/radio/headset/headset_com/alt
 	name = "command bowman headset"
 	desc = "A headset with a commanding channel."
@@ -197,7 +203,7 @@
 
 /obj/item/device/radio/headset/heads/ai_integrated/receive_range(freq, level)
 	if (disabledAi)
-		return -1 //Transciever Disabled.
+		return -1 //Transceiver Disabled.
 	return ..(freq, level, 1)
 
 /obj/item/device/radio/headset/heads/rd
@@ -320,7 +326,7 @@
 
 /obj/item/device/radio/headset/mmi_radio/receive_range(freq, level)
 	if (!radio_enabled || istype(src.loc.loc, /mob/living/silicon) || istype(src.loc.loc, /obj/item/organ/internal))
-		return -1 //Transciever Disabled.
+		return -1 //Transceiver Disabled.
 	return ..(freq, level, 1)
 
 /obj/item/device/radio/headset/attackby(obj/item/weapon/W as obj, mob/user as mob)
@@ -381,7 +387,7 @@
 
 
 /obj/item/device/radio/headset/proc/recalculateChannels(var/setDescription = 0)
-	src.channels = list()
+	src.channels = list("ATC (Local)" = 1, "ATC (Regional)" = 1)		//Eclipse Edit: You can hear ATC by default
 	src.translate_binary = 0
 	src.translate_hive = 0
 	src.syndie = 0

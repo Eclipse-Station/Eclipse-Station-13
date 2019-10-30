@@ -56,13 +56,13 @@
 			src.see_invisible = SEE_INVISIBLE_LIVING
 
 			if (aiRestorePowerRoutine==2)
-				src << "Alert cancelled. Power has been restored without our assistance."
+				src << "Alert canceled. Power has been restored without our assistance."
 				aiRestorePowerRoutine = 0
 				clear_fullscreen("blind")
 				updateicon()
 				return
 			else if (aiRestorePowerRoutine==3)
-				src << "Alert cancelled. Power has been restored."
+				src << "Alert canceled. Power has been restored."
 				aiRestorePowerRoutine = 0
 				clear_fullscreen("blind")
 				updateicon()
@@ -97,7 +97,7 @@
 						sleep(50)
 						if (loc.power_equip)
 							if (!istype(T, /turf/space))
-								src << "Alert cancelled. Power has been restored without our assistance."
+								src << "Alert canceled. Power has been restored without our assistance."
 								aiRestorePowerRoutine = 0
 								clear_fullscreen("blind")
 								return
@@ -127,7 +127,7 @@
 								return
 							if (loc.power_equip)
 								if (!istype(T, /turf/space))
-									src << "Alert cancelled. Power has been restored without our assistance."
+									src << "Alert canceled. Power has been restored without our assistance."
 									aiRestorePowerRoutine = 0
 									clear_fullscreen("blind") //This, too, is a fix to issue 603
 									return

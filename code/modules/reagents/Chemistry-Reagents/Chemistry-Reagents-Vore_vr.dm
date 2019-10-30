@@ -1,4 +1,3 @@
-
 ////////////////////////////
 /// NW's shrinking serum ///
 ////////////////////////////
@@ -15,7 +14,7 @@
 /datum/reagent/macrocillin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(M.size_multiplier < RESIZE_HUGE)
 		if(prob(50)) //Eclipse edit - lowers potency of the drug, courtesy of SCP13
-			M.resize(M.size_multiplier+0.01)//Incrrease 1% per tick.
+			M.resize(M.size_multiplier+0.01)//Increase 1% per tick.
 	return
 
 /datum/reagent/microcillin
@@ -94,7 +93,7 @@
 /datum/reagent/unsorbitol
 	name = "Unsorbitol"
 	id = "unsorbitol"
-	description = "A frothy pink liquid, for causing cellular-level hetrogenous structure separation."
+	description = "A frothy pink liquid, for causing cellular-level heterogeneous structure separation."
 	reagent_state = LIQUID
 	color = "#EF77E5"
 	overdose = REAGENTS_OVERDOSE
@@ -126,7 +125,7 @@
 /datum/reagent/grubshock
 	name = "200 V" //in other words a painful shock
 	id = "shockchem"
-	description = "A liquid that quickly dissapates to deliver a painful shock."
+	description = "A liquid that quickly dissipates to deliver a painful shock."
 	reagent_state = LIQUID
 	color = "#E4EC2F"
 	metabolism = 2.50

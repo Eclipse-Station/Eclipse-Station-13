@@ -10,13 +10,13 @@ What are planes?
 	Planes also have the added bonus of having planesmasters.
 
 What are Planesmasters?
-	Planesmasters, when in the sight of a player, will have its appearance properties (for example, colour matrices, alpha, transform, etc)
+	Planesmasters, when in the sight of a player, will have its appearance properties (for example, color matrices, alpha, transform, etc)
 	applied to all the other objects in the plane. This is all client sided.
 	Usually you would want to add the planesmaster as an invisible image in the client's screen.
 
 What can I do with Planesmasters?
 	You can: Make certain players not see an entire plane,
-	Make an entire plane have a certain colour matrices,
+	Make an entire plane have a certain color matrices,
 	Make an entire plane transform in a certain way,
 	Make players see a plane which is hidden to normal players - I intend to implement this with the antag HUDs for example.
 	Planesmasters can be used as a neater way to deal with client images or potentially to do some neat things
@@ -114,7 +114,7 @@ What is the naming convention for planes or layers?
 #define PLANE_GHOSTS			10 //Spooooooooky ghooooooosts
 #define PLANE_AI_EYE			11 //The AI eye lives here
 
-// "Character HUDs", aka HUDs, but not the game's UI. Things like medhuds. I know Planes say they must be intergers, but it's lies.
+// "Character HUDs", aka HUDs, but not the game's UI. Things like medhuds. I know Planes say they must be integers, but it's lies.
 #define PLANE_CH_STATUS			15 //Status icon
 #define PLANE_CH_HEALTH			16 //Health icon
 #define PLANE_CH_LIFE			17 //Health bar

@@ -1,6 +1,6 @@
 /************************************************************************/
 /*
-#    An explaination of the naming format for guns and ammo:
+#    An explanation of the naming format for guns and ammo:
 #
 #    a = Ammo, as in individual rounds of ammunition.
 #    b = Box, intended to have ammo taken out one at a time by hand.
@@ -83,6 +83,10 @@
 /obj/item/ammo_magazine/m45/flash
 	name = "magazine (.45 flash)"
 	ammo_type = /obj/item/ammo_casing/a45/flash
+
+/obj/item/ammo_magazine/m45/pepperball
+	name = "magazine (.45 pepperball)"
+	ammo_type = /obj/item/ammo_casing/a45/pepperball
 
 /obj/item/ammo_magazine/m45/ap
 	name = "magazine (.45 AP)"
@@ -220,6 +224,10 @@
 /obj/item/ammo_magazine/m9mm/rubber
 	name = "magazine (9mm rubber)"
 	ammo_type = /obj/item/ammo_casing/a9mm/rubber
+
+/obj/item/ammo_magazine/m9mm/pepperball
+	name = "magazine (9mm pepperball)"
+	ammo_type = /obj/item/ammo_casing/a9mm/pepperball
 
 /obj/item/ammo_magazine/m9mm/practice
 	name = "magazine (9mm practice)"

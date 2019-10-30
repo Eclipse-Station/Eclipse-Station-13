@@ -31,7 +31,7 @@
 	// Restrict some styles to specific species
 	var/list/species_allowed = list("Human","Promethean","Vatborn")
 
-	// Whether or not the accessory can be affected by colouration
+	// Whether or not the accessory can be affected by coloration
 	var/do_colouration = 1
 
 
@@ -756,6 +756,29 @@
 	belenkotied
 		name = "Supernova"
 		icon_state = "hair_supernova"
+		flags = HAIR_TIEABLE
+
+	keanu
+		name = "Keanu"
+		icon_state = "hair_keanu"
+		flags = HAIR_TIEABLE			//or any other flags you want, this isn't required.
+
+	hedgehog
+		name = "Hedgehog Hair"
+		icon_state = "hair_hedgehog"
+
+	pixie_cut
+		name = "Pixie Cut"
+		icon_state = "hair_pixie"
+
+	business_2
+		name = "Business Hair 2"
+		icon_state = "hair_business2"
+		flags = HAIR_TIEABLE
+
+	long_hair_3
+		name = "Long Hair 3"
+		icon_state = "hair_long3"
 		flags = HAIR_TIEABLE
 
 /*

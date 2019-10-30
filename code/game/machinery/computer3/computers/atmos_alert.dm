@@ -5,7 +5,7 @@
 
 /datum/file/program/atmos_alert
 	name = "atmospheric alert monitor"
-	desc = "Recieves alerts over the radio."
+	desc = "Receives alerts over the radio."
 	active_state = "alert:2"
 	refresh = 1
 

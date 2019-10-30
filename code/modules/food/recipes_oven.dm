@@ -208,7 +208,7 @@
 	fruit = list("pumpkin" = 1)
 	reagents = list("milk" = 5, "sugar" = 5, "egg" = 3, "flour" = 10)
 	result = /obj/item/weapon/reagent_containers/food/snacks/sliceable/pumpkinpie
-	reagent_mix = RECIPE_REAGENT_REPLACE //We dont want raw egg in the result
+	reagent_mix = RECIPE_REAGENT_REPLACE //We don't want raw egg in the result
 
 /datum/recipe/appletart
 	appliance = OVEN
@@ -268,12 +268,12 @@
 			if (I)
 				qdel(I)
 
-		//Then store and null out the items list so it wont delete any paper
+		//Then store and null out the items list so it won't delete any paper
 		var/list/L = items.Copy()
 		items = null
 		. = ..(container)
 
-		//Restore items list, so that making fortune cookies once doesnt break the oven
+		//Restore items list, so that making fortune cookies once doesn't break the oven
 		items = L
 
 

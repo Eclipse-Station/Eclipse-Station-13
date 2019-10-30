@@ -1,7 +1,7 @@
 
 //---------- actual energy field
 
-// Each field object has a strength var (mensured in "Renwicks").
+// Each field object has a strength var (measured in "Renwicks").
 // Melee weapons do 5% of their normal (force var) damage, so a harmbaton would do 0.75 Renwick.
 // Projectiles do 5% of their structural damage, so a normal laser would do 2 Renwick damage.
 // For meteors, one Renwick is about equal to one layer of r-wall.

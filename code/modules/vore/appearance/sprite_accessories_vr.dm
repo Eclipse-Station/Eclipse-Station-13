@@ -25,7 +25,7 @@
 	icon = 'icons/mob/vore/ears_vr.dmi'
 	do_colouration = 0 // Set to 1 to blend (ICON_ADD) hair color
 
-	var/color_blend_mode = ICON_ADD // Only appliciable if do_coloration = 1
+	var/color_blend_mode = ICON_ADD // Only applicable if do_coloration = 1
 	var/extra_overlay // Icon state of an additional overlay to blend in.
 	var/desc = "You should not see this..."
 
@@ -522,6 +522,12 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
+/datum/sprite_accessory/wing/dragonfly
+	name = "dragonfly"
+	desc = ""
+	icon_state = "dragonfly"
+	color_blend_mode = ICON_MULTIPLY
+	
 /datum/sprite_accessory/wing/citheroniamoth
 	name = "citheronia wings"
 	desc = ""
@@ -735,6 +741,13 @@
 	desc = ""
 	icon_state = "bunny"
 	do_colouration = 1
+
+/datum/sprite_accessory/tail/chameleon
+	name = "Chameleon, colorable"
+	desc = ""
+	icon_state = "chameleon"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/bear_brown
 	name = "bear, brown"

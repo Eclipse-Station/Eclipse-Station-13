@@ -17,7 +17,7 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 	minimal_access = list() 	//See get_access()
 	minimal_player_age = 14
 	economic_modifier = 20
-	whitelist_only = 1
+	wl_config_heads = TRUE			//Eclipse edit: Config-based whitelisting.
 	
 	minimum_character_age = 25
 	ideal_character_age = 70 // Old geezer captains ftw
@@ -49,7 +49,7 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 	req_admin_notify = 1
 	minimal_player_age = 10
 	economic_modifier = 10
-	whitelist_only = 1
+	wl_config_heads = TRUE			//Eclipse edit: Config-based whitelisting.
 	
 	minimum_character_age = 25
 	ideal_character_age = 50
@@ -87,5 +87,6 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 
 	access = list(access_heads, access_keycard_auth)
 	minimal_access = list(access_heads, access_keycard_auth)
+	alt_titles = list("Bridge Officer")
 
 	outfit_type = /decl/hierarchy/outfit/job/secretary

@@ -30,10 +30,10 @@ JOBS_HAVE_MINIMAL_ACCESS
 #USE_AGE_RESTRICTION_FOR_ANTAGS
 
 
-## Unhash this to use recursive explosions, keep it hashed to use circle explosions. Recursive explosions react to walls, airlocks and blast doors, making them look a lot cooler than the boring old circular explosions. They require more CPU and are (as of january 2013) experimental
+## Unhash this to use recursive explosions, keep it hashed to use circle explosions. Recursive explosions react to walls, airlocks and blast doors, making them look a lot cooler than the boring old circular explosions. They require more CPU and are (as of January 2013) experimental
 #USE_RECURSIVE_EXPLOSIONS
 
-Configure how fast explosion strength diminishes when travelling up/down z levels. All explosion distances are multiplied by this each time they go up/down z-levels.
+Configure how fast explosion strength diminishes when traveling up/down z levels. All explosion distances are multiplied by this each time they go up/down z-levels.
 #MULTI_Z_EXPLOSION_SCALAR 0.5
 
 # Radiation weakens with distance from the source; stop calculating when the strength falls below this value.   Lower values mean radiation reaches smaller (with increasingly trivial damage) at the cost of more CPU usage.  Max range =  DISTANCE^2 * POWER / RADIATION_LOWER_LIMIT
@@ -94,6 +94,7 @@ SHOW_MODS
 
 ##Show mentors on staffwho
 SHOW_EVENT
+
 ## Chooses whether mods have the ability to tempban or not
 MODS_CAN_TEMPBAN
 
@@ -233,11 +234,11 @@ WIKISEARCHURL http://example.com/index.php?title=Special%3ASearch&search=%s
 ##Toggle for having jobs load up from the .txt
 # LOAD_JOBS_FROM_TXT
 
-##Remove the # mark infront of this to forbid admins from posssessing the singularity.
+##Remove the # mark infront of this to forbid admins from possessing the singularity.
 #FORBID_SINGULO_POSSESSION
 
-## Remove the # to show a popup 'reply to' window to every non-admin that recieves an adminPM. 
-## The intention is to make adminPMs more visible. (although I fnd popups annoying so this defaults to off)
+## Remove the # to show a popup 'reply to' window to every non-admin that receives an adminPM. 
+## The intention is to make adminPMs more visible. (although I find popups annoying so this defaults to off)
 #POPUP_ADMIN_PM
 
 ## Remove the # to allow special 'Easter-egg' events on special holidays such as seasonal holidays and stuff like 'Talk Like a Pirate Day' :3 YAARRR
@@ -397,8 +398,8 @@ STARLIGHT 0
 ## Uncomment to override default brain health.
 #DEFAULT_BRAIN_HEALTH 400
 
-## Default language prefix keys, separated with spaces. Only single character keys are supported. If unset, defaults to , # and - 
-# DEFAULT_LANGUAGE_PREFIXES , # -
+## Default language prefix keys, separated with spaces. Only single character keys are supported. If unset, defaults to , and # 
+# DEFAULT_LANGUAGE_PREFIXES , #
 
 # Control which submaps are loaded for the Dynamic Engine system
 ENGINE_MAP Supermatter Engine,Edison's Bane
@@ -413,6 +414,13 @@ ENGINE_MAP Supermatter Engine,Edison's Bane
 ## Uncomment to enable the Panic Bunker by default. This will prevent all unseen-before players from connecting. Requires SQL.
 # PANIC_BUNKER
 
+## Custom message for when someone is kicked off by the panic bunker.
+# PANIC_BUNKER_MESSAGE Sorry, this server is currently not accepting connections from never seen before players.
+
 ## Uncomment to enable Paranoia Logging. This will notify admins and write to a file any time a new player (byond or your server) connects.
 # PARANOIA_LOGGING
 
+## Uncomment to enable submaps to have their orientation rotated randomly during map generation.
+## Submap rotation is an experimental feature and can cause bugs and weirdness if certain objects inside the submap are coded poorly.
+## Submaps can still be rotated when loading manually with the admin verbs, if desired.
+# RANDOM_SUBMAP_ORIENTATION

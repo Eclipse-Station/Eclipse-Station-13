@@ -1,4 +1,4 @@
-//This shuttle traverses a "web" of route_datums to have a wider range of places to go and make flying feel like movement is actually occuring.
+//This shuttle traverses a "web" of route_datums to have a wider range of places to go and make flying feel like movement is actually occurring.
 /datum/shuttle/web_shuttle
 	flags = SHUTTLE_FLAGS_NONE
 	var/visible_name = null // The pretty name shown to people in announcements, since the regular name var is used internally for other things.
@@ -423,7 +423,7 @@
 		var/index = text2num(href_list["traverse"])
 		var/datum/shuttle_route/new_route = WS.web_master.current_destination.routes[index]
 		if(!istype(new_route))
-			message_admins("ERROR: Shuttle computer was asked to traverse a nonexistant route.")
+			message_admins("ERROR: Shuttle computer was asked to traverse a non-existent route.")
 			return
 
 		if(!check_docking(WS))
@@ -433,7 +433,7 @@
 
 		var/datum/shuttle_destination/target_destination = new_route.get_other_side(WS.web_master.current_destination)
 		if(!istype(target_destination))
-			message_admins("ERROR: Shuttle computer was asked to travel to a nonexistant destination.")
+			message_admins("ERROR: Shuttle computer was asked to travel to a non-existent destination.")
 			return
 
 		WS.web_master.future_destination = target_destination
