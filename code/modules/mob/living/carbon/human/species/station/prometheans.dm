@@ -50,7 +50,7 @@ var/datum/species/shapeshifter/promethean/prometheans
 	blood_volume =	560
 	slowdown = -0.2 // citadel change
 	brute_mod =		0.5 // citadel change, used to be 0.75
-	burn_mod =		2
+	burn_mod =		1.75//Eclipse change - Prometheans die from literally anything and everything
 	oxy_mod =		0
 	flash_mod =		0.5 //No centralized, lensed eyes.
 	item_slowdown_mod = 0.66 // citadel change, used to be 1.33
@@ -104,8 +104,9 @@ var/datum/species/shapeshifter/promethean/prometheans
 		/mob/living/carbon/human/proc/shapeshifter_select_tail, //VOREStation Add,
 		/mob/living/carbon/human/proc/shapeshifter_select_ears, //VOREStation Add,
 		/mob/living/carbon/human/proc/regenerate,
-		/mob/living/proc/insidePanel //Eclipse add
-		)
+		/mob/living/carbon/human/proc/turn_to_blob,
+		/mob/living/proc/insidePanel
+		)//Eclipse add
 
 	valid_transform_species = list(SPECIES_HUMAN, SPECIES_HUMAN_VATBORN, SPECIES_UNATHI, SPECIES_TAJ, SPECIES_SKRELL, SPECIES_DIONA, SPECIES_TESHARI, SPECIES_MONKEY)
 
@@ -157,13 +158,15 @@ var/datum/species/shapeshifter/promethean/prometheans
 					"<span class='notice'>You glomp [target] to make [t_him] feel better!</span>")
 	H.apply_stored_shock_to(target)
 
-/datum/species/shapeshifter/promethean/handle_death(var/mob/living/carbon/human/H)
-	spawn(1)
-		if(H)
-			H.gib()
+/datum/species/shapeshifter/promethean/handle_death(var/mob/living/carbon/human/H)//Eclipse edit start
+	if(H.isSynthetic())
+		H.visible_message("<span class='danger'>\The [H] collapses into parts, revealing a solitary slime at the core.</span>")
+		return
+	if(H.nutrition > 50)
+		H.blobify()
+	//Eclipse edit end
 
 /datum/species/shapeshifter/promethean/handle_environment_special(var/mob/living/carbon/human/H)
-/* VOREStation Removal - Too crazy with our uncapped hunger and slowdown stuff.
 	var/turf/T = H.loc
 	if(istype(T))
 		var/obj/effect/decal/cleanable/C = locate() in T
@@ -173,8 +176,8 @@ var/datum/species/shapeshifter/promethean/prometheans
 				var/turf/simulated/S = T
 				S.dirt = 0
 
-			H.nutrition = min(500, max(0, H.nutrition + rand(15, 30)))
-VOREStation Removal End */
+			H.nutrition = min(500, max(0, H.nutrition + rand(15, 22)))
+
 	// Heal remaining damage.
 	if(H.fire_stacks >= 0)
 		if(H.getBruteLoss() || H.getFireLoss() || H.getOxyLoss() || H.getToxLoss())
@@ -199,8 +202,8 @@ VOREStation Removal End */
 			nutrition_cost += nutrition_debt - H.getToxLoss()
 			H.nutrition -= (2 * nutrition_cost) //Costs Nutrition when damage is being repaired, corresponding to the amount of damage being repaired.
 			H.nutrition = max(0, H.nutrition) //Ensure it's not below 0.
-	//else//VOREStation Removal
-		//H.adjustToxLoss(2*heal_rate)	// Doubled because 0.5 is miniscule, and fire_stacks are capped in both directions
+	else
+		H.adjustToxLoss(2*heal_rate)	// Doubled because 0.5 is miniscule, and fire_stacks are capped in both directions
 
 /datum/species/shapeshifter/promethean/get_blood_colour(var/mob/living/carbon/human/H)
 	return (H ? rgb(H.r_skin, H.g_skin, H.b_skin) : ..())
