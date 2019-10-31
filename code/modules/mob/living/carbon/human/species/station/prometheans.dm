@@ -158,12 +158,13 @@ var/datum/species/shapeshifter/promethean/prometheans
 					"<span class='notice'>You glomp [target] to make [t_him] feel better!</span>")
 	H.apply_stored_shock_to(target)
 
-/datum/species/shapeshifter/promethean/handle_death(var/mob/living/carbon/human/H)
+/datum/species/shapeshifter/promethean/handle_death(var/mob/living/carbon/human/H)//Eclipse edit start
 	if(H.isSynthetic())
 		H.visible_message("<span class='danger'>\The [H] collapses into parts, revealing a solitary slime at the core.</span>")
 		return
 	if(H.nutrition > 50)
 		H.blobify()
+	//Eclipse edit end
 
 /datum/species/shapeshifter/promethean/handle_environment_special(var/mob/living/carbon/human/H)
 	var/turf/T = H.loc

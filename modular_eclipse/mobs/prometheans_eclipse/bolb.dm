@@ -257,7 +257,7 @@
 		B.owner = src
 
 
-	Life(1) //Fix my blindness right meow //Has to be moved up here, there exists a circumstance where blob could be deleted without vore organs moving right.
+	Life(1) //Has to be moved up here, there exists a circumstance where blob could be deleted without vore organs moving right.
 
 	//Get rid of friend blob
 	qdel(blob)
@@ -317,28 +317,28 @@
 
 /mob/living/simple_animal/promethean_blob/proc/can_consume(var/mob/living/L)
 	if(!L || !istype(L))
-		to_chat(src, "This subject is incomparable...")
+		to_chat(src, "This subject is incomparable.")
 		return FALSE
 	if(L.isSynthetic())
-		to_chat(src, "This subject is not biological...")
+		to_chat(src, "This subject is not biological.")
 		return FALSE
 	if((L.getarmor(null, "bio") >= 75))
-		to_chat(src, "I cannot reach this subject's biological matter...")
+		to_chat(src, "You can't reach this subject's biological matter.")
 		return FALSE
 	if(istype(L, /mob/living/simple_animal/slime))
-		to_chat(src, "I cannot feed on other slimes...")
+		to_chat(src, "You cannot feed on other slimes.")
 		return FALSE
 	if(!Adjacent(L))
-		to_chat(src, "This subject is too far away...")
+		to_chat(src, "This subject is too far away.")
 		return FALSE
 	if(istype(L, /mob/living/carbon) && L.getCloneLoss() >= L.getMaxHealth() * 1.2 || istype(L, /mob/living/simple_animal) && L.stat == DEAD)
-		to_chat(src, "This subject does not have an edible life energy...")
+		to_chat(src, "This subject does not have an edible life energy.")
 		return FALSE
 	if(L.has_buckled_mobs())
 		for(var/A in L.buckled_mobs)
 			if(istype(A, /mob/living/simple_animal/slime))
 				if(A != src)
-					to_chat(src, "\The [A] is already feeding on this subject...")
+					to_chat(src, "\The [A] is already feeding on this subject.")
 					return FALSE
 	return TRUE
 
@@ -398,8 +398,8 @@
 
 		else
 			to_chat(src, "<span class='warning'>[pick("This subject is incompatable", \
-			"This subject does not have a life energy", "This subject is empty", "I am not satisified", \
-			"I can not feed from this subject", "I do not feel nourished", "This subject is not food")]...</span>")
+			"This subject does not have a life energy", "This subject is empty", \
+			"I can not feed from this subject", "This subject is not food")]...</span>")
 			stop_consumption()
 
 

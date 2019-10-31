@@ -1,6 +1,6 @@
 /datum/species/shapeshifter/promethean
-	min_age = 1
-	max_age = 10
+	min_age = 18
+	max_age = 18
 	valid_transform_species = list(
 		"Human", "Unathi", "Tajara", "Skrell",
 		"Diona", "Teshari", "Monkey","Sergal",
