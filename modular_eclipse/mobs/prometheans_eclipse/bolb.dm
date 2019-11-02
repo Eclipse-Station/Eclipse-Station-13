@@ -61,6 +61,7 @@
 	..()
 	overlays.Cut()
 	if(H)
+		maxHealth = H.getMaxHealth()
 		nutrition = H.health/1.2
 		target_nutrition = H.maxHealth * 1.5
 		humanform = H
@@ -75,6 +76,10 @@
 			mood = "pout"
 	else
 		overlays += "aslime-:33"
+	if(name == initial(name))
+		name = "[name] ([rand(1, 1000)])"
+	real_name = name
+
 
 
 /mob/living/simple_animal/promethean_blob/Destroy()
@@ -95,7 +100,6 @@
 /mob/living/simple_animal/promethean_blob/updatehealth()
 	if(humanform)
 		//Set the max
-		maxHealth = humanform.getMaxHealth()/1.75 //HUMANS, and their 'double health', bleh.
 		//Set us to their health, but, human health ignores robolimbs so we do it 'the hard way'
 		health = maxHealth - humanform.getOxyLoss() - humanform.getToxLoss() - humanform.getCloneLoss() - humanform.getActualFireLoss() - humanform.getActualBruteLoss()
 
@@ -113,32 +117,30 @@
 /mob/living/simple_animal/promethean_blob/adjustBruteLoss(var/amount)
 	if(humanform)
 		humanform.adjustBruteLoss(amount)
+		updatehealth()
 	else
 		..()
 
 /mob/living/simple_animal/promethean_blob/adjustFireLoss(var/amount)
 	if(humanform)
 		humanform.adjustFireLoss(amount)
+		updatehealth()
 	else
 		..()
 
 /mob/living/simple_animal/promethean_blob/death(gibbed, deathmessage = "splatters, leaving only its core!")
 	if(humanform)
-		humanform.death(gibbed = gibbed)
-		for(var/organ in humanform.internal_organs)
-			var/obj/item/organ/internal/O = organ
-			O.removed()
-			O.forceMove(drop_location())
-		var/list/items = humanform.get_equipped_items()
-		for(var/obj/object in items)
-			object.forceMove(drop_location())
-		QDEL_NULL(humanform) //Don't leave it just sitting in nullspace
-
-	animate(src,alpha = 0,time = 2 SECONDS)
+		sleep(2)
+		humanform.ckey = ckey
+		for(var/obj/item/organ/internal/brain/slime/core in humanform.internal_organs)
+			core.transfer_identity(humanform)
+			core.removed()
+			core.forceMove(drop_location())
 	sleep(2 SECONDS)
 	qdel(src)
 
-	..()
+	..(gibbed, deathmessage)
+
 
 /mob/living/simple_animal/promethean_blob/Life()
 	. = ..()
@@ -239,8 +241,7 @@
 	var/atom/reform_spot = blob.drop_location()
 
 	//Size update
-	transform = matrix()*blob.size_multiplier
-	size_multiplier = blob.size_multiplier
+	resize(blob.size_multiplier, FALSE)
 
 	//Move them back where the blob was
 	forceMove(reform_spot)
@@ -266,7 +267,7 @@
 	return src
 
 
-/mob/living/simple_animal/promethean_blob/verb/evolve()
+/mob/living/simple_animal/promethean_blob/verb/Evolve()
 	set category = "Slime"
 	set name = "Evolve"
 	set desc = "This will let you evolve from a slime into a promethean."
@@ -527,6 +528,8 @@
 		var/obj/mecha/M = L
 		M.attack_generic(src, rand(melee_damage_lower, melee_damage_upper), pick(attacktext))
 
+	update_icon()
+
 
 /mob/living/simple_animal/promethean_blob/PunchTarget()
 	if(victim)
@@ -538,6 +541,7 @@
 			a_intent = I_HURT // Otherwise robust them.
 	ai_log("PunchTarget() will [a_intent] [target_mob]",2)
 	..()
+	update_icon()
 
 /mob/living/simple_animal/promethean_blob/handle_regular_status_updates()
 	if(stat != DEAD)
@@ -588,6 +592,12 @@
 	hat = null
 	update_icon()
 
+/mob/living/simple_animal/promethean_blob/proc/wear_hat(var/obj/item/new_hat)
+	if(hat)
+		return
+	hat = new_hat
+	new_hat.loc = src
+	updateicon()
 
 /mob/living/simple_animal/promethean_blob/attackby(obj/item/W, mob/user)
 	if(istype(W, /obj/item/clothing/head)) // Handle hat simulator.

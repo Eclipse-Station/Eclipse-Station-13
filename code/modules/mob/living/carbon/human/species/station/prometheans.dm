@@ -159,14 +159,15 @@ var/datum/species/shapeshifter/promethean/prometheans
 	H.apply_stored_shock_to(target)
 
 /datum/species/shapeshifter/promethean/handle_death(var/mob/living/carbon/human/H)//Eclipse edit start
-	if(H.isSynthetic())
-		H.visible_message("<span class='danger'>\The [H] collapses into parts, revealing a solitary slime at the core.</span>")
-		return
-	if(H.nutrition > 50)
-		H.blobify()
-	//Eclipse edit end
+	spawn(1)
+		if(H)
+			H.gib()//Eclipse edit
 
 /datum/species/shapeshifter/promethean/handle_environment_special(var/mob/living/carbon/human/H)
+	if((H.getActualBruteLoss() + H.getActualFireLoss()) > H.maxHealth*0.5 && isturf(H.loc)) //So, only if we're not a blob (we're in nullspace)
+		H.blobify()
+		return ..() //Any instakill shot runtimes since there are no organs after this. No point to not skip these checks, going to nullspace anyway.
+
 	var/turf/T = H.loc
 	if(istype(T))
 		var/obj/effect/decal/cleanable/C = locate() in T
