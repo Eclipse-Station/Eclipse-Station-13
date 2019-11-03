@@ -155,6 +155,7 @@
 		to_chat(user, "<span class='warning'>The name you supplied was invalid. Try another name.</span>")
 
 /obj/machinery/computer/shuttle_control/web
+	icon = 'icons/obj/computer.dmi'
 	name = "flight computer"
 	icon_state = "flightcomp_center"
 	icon_keyboard = "flight_center_key"

@@ -7167,9 +7167,8 @@
 /area/hallway/secondary/escape/firstdeck/ep_port)
 "aoz" = (
 /obj/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/glass_mining{
-	id_tag = "hangar_1_door";
-	name = "Hangar Bay"
+/obj/machinery/door/airlock/glass{
+	name = "Dock"
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/hangar/one)
@@ -7183,9 +7182,8 @@
 	icon_state = "1-2";
 	pixel_y = 0
 	},
-/obj/machinery/door/airlock/glass_mining{
-	id_tag = "hangar_1_door";
-	name = "Hangar Bay"
+/obj/machinery/door/airlock/glass{
+	name = "Dock"
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/hangar/one)
@@ -7562,14 +7560,18 @@
 	pixel_y = 0
 	},
 /obj/machinery/door/airlock/glass_mining{
-	name = "Hangar Bay"
+	id_tag = "hangar_1_door";
+	name = "Hangar Bay";
+	req_one_access = null
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/hangar/three)
 "apg" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/glass_mining{
-	name = "Hangar Bay"
+	id_tag = "hangar_1_door";
+	name = "Hangar Bay";
+	req_one_access = null
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/hangar/three)
@@ -8504,7 +8506,8 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock{
-	name = "Hangar Control Room"
+	name = "Hangar Control Room";
+	req_one_access = list(43,48,65,67)
 	},
 /turf/simulated/floor/tiled,
 /area/hangar/onecontrol)
@@ -8881,7 +8884,7 @@
 /obj/machinery/door/airlock/maintenance{
 	name = "Hangar Control Room Access";
 	req_access = null;
-	req_one_access = list(12,67)
+	req_one_access = list(12,43,48,65,67)
 	},
 /turf/simulated/floor/plating,
 /area/hangar/threecontrol)
@@ -8932,7 +8935,8 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock{
-	name = "Hangar Control Room"
+	name = "Hangar Control Room";
+	req_one_access = list(43,48,65,67)
 	},
 /turf/simulated/floor/tiled,
 /area/hangar/threecontrol)
@@ -12040,10 +12044,6 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/first_aid_station/firstdeck)
 "axg" = (
-/obj/machinery/computer/shuttle_control/web/shuttle1{
-	my_doors = list("expshuttle1_door_L" = "Port Cargo", "shuttle1_outer" = "Airlock Outer", "shuttle1_inner" = "Airlock Inner", "expshuttle1_door_cargo" = "Cargo Hatch");
-	my_sensors = list("shuttle1sens_exp" = "Exterior Environment", "shuttle1sens_exp_int" = "Cargo Area", "shuttle1sens_exp_psg" = "Passenger Area")
-	},
 /turf/simulated/floor/tiled,
 /area/hangar/onecontrol)
 "axh" = (
@@ -13826,7 +13826,7 @@
 /obj/machinery/door/airlock/maintenance{
 	name = "Hangar Control Room Access";
 	req_access = null;
-	req_one_access = list(12,67)
+	req_one_access = list(12,43,48,65,67)
 	},
 /turf/simulated/floor/plating,
 /area/hangar/twocontrol)
@@ -13874,7 +13874,8 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock{
-	name = "Hangar Control Room"
+	name = "Hangar Control Room";
+	req_one_access = list(43,48,65,67)
 	},
 /turf/simulated/floor/tiled,
 /area/hangar/twocontrol)
@@ -15130,17 +15131,15 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/door/airlock/glass_mining{
-	id_tag = "shuttle_2_door";
-	name = "Hangar Bay"
+/obj/machinery/door/airlock/glass{
+	name = "Dock"
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/hangar/two)
 "aDn" = (
 /obj/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/glass_mining{
-	id_tag = "shuttle_2_door";
-	name = "Hangar Bay"
+/obj/machinery/door/airlock/glass{
+	name = "Dock"
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/hangar/two)
@@ -19711,11 +19710,6 @@
 /area/tcomm/tcomfoyer)
 "aMl" = (
 /obj/effect/floor_decal/steeldecal/steel_decals_central6,
-/obj/machinery/computer/shuttle_control/web/shuttle2{
-	dir = 1;
-	my_doors = list("expshuttle2_door_L" = "Port Cargo", "shuttle2_outer" = "Airlock Outer", "shuttle2_inner" = "Airlock Inner", "expshuttle2_door_cargo" = "Cargo Hatch");
-	my_sensors = list("shuttle2sens_exp" = "Exterior Environment", "shuttle2sens_exp_int" = "Cargo Area", "shuttle2sens_exp_psg" = "Passenger Area")
-	},
 /turf/simulated/floor/tiled/monotile,
 /area/hangar/twocontrol)
 "aMm" = (
@@ -90546,6 +90540,7 @@
 	pixel_x = 36;
 	pixel_y = 6
 	},
+/obj/machinery/appliance/mixer/candy,
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/kitchen)
 "ddM" = (
@@ -96649,6 +96644,10 @@
 	pixel_x = -24
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/ai_status_display{
+	pixel_x = -32;
+	pixel_y = 0
+	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/kitchen)
 "doy" = (
@@ -96715,11 +96714,8 @@
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
 	},
-/obj/machinery/ai_status_display{
-	pixel_x = -32;
-	pixel_y = 0
-	},
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/appliance/mixer/cereal,
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/kitchen)
 "doC" = (
@@ -98426,6 +98422,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/appliance/cooker/fryer,
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/kitchen)
 "drF" = (
@@ -98434,6 +98431,7 @@
 	},
 /obj/machinery/light,
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/appliance/grill,
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/kitchen)
 "drG" = (
@@ -121058,6 +121056,14 @@
 	},
 /turf/simulated/floor/tiled/airless,
 /area/space)
+"sBJ" = (
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/appliance/cooker/oven,
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/kitchen)
 "vSv" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -215072,7 +215078,7 @@ cZK
 dbV
 ddJ
 cZK
-drE
+sBJ
 deU
 dsa
 dfC
