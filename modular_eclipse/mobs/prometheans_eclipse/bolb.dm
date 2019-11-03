@@ -68,6 +68,8 @@
 		updatehealth()
 		verbs |= /mob/living/proc/ventcrawl
 		verbs |= /mob/living/proc/hide
+		verbs |= /mob/living/simple_animal/promethean_blob/proc/evolve
+		verbs |= /mob/living/simple_animal/promethean_blob/proc/set_mood
 		color = rgb(min(H.r_skin + 40, 255), min(H.g_skin + 40, 255), min(H.b_skin + 40, 255))
 		if(H.health > (H.maxHealth - H.maxHealth/1.25))
 			overlays += "aslime-:33"
@@ -267,15 +269,14 @@
 	return src
 
 
-/mob/living/simple_animal/promethean_blob/verb/Evolve()
-	set category = "Slime"
-	set name = "Evolve"
+/mob/living/simple_animal/promethean_blob/proc/evolve()
+	set name = "evolve"
 	set desc = "This will let you evolve from a slime into a promethean."
+	set category = "Abilities"
 
 	if(stat)
-		to_chat(src, "<span class='notice'>You must be conscious to do this.</span>")
+		to_chat(usr, "<span class='notice'>You must be conscious to do this.</span>")
 		return
-
 
 	if(nutrition >= target_nutrition)
 		to_chat(src, "<span class='notice'>You begin to reform...</span>")
@@ -303,9 +304,10 @@
 			to_chat(src, "<span class='notice'>Your evolution is interrupted!</span>")
 	else
 		to_chat(src, "<span class='notice'>You're too hungry to evolve!</span>")
+	return
 
-/mob/living/simple_animal/promethean_blob/verb/set_mood()
-	set category = "Slime"
+/mob/living/simple_animal/promethean_blob/proc/set_mood()
+	set category = "Abilities"
 	set name = "Set Mood"
 	set desc = "the mood will be big."
 
@@ -315,6 +317,7 @@
 	else
 		mood = chosen_mood
 		update_icon()
+		return
 
 /mob/living/simple_animal/promethean_blob/proc/can_consume(var/mob/living/L)
 	if(!L || !istype(L))
