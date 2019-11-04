@@ -32,10 +32,6 @@
 ###############
 
 /code/ZAS/ @EvilJackCarver
-/code/controllers/configuration_eclipse.dm @EvilJackCarver
-/code/controllers/emergency_shuttle_controller.dm @EvilJackCarver
-/code/controllers/failsafe.dm @EvilJackCarver
-/code/controllers/master.dm @EvilJackCarver
 /code/modules/power/ @EvilJackCarver
 /modular_citadel/code/modules/projectiles/ @EvilJackCarver
 /modular_eclipse/code/modules/projectiles/ @EvilJackCarver
@@ -58,3 +54,10 @@ maps/southern_cross/ @DrExample @EvilJackCarver
 maps/submaps/ @DrExample @EvilJackCarver
 maps/RandomZLevels/ @DrExample @EvilJackCarver
 *.dmm @DrExample @EvilJackCarver
+
+# Controllers
+
+/code/controllers/configuration_eclipse.dm @DrExample @EvilJackCarver
+/code/controllers/emergency_shuttle_controller.dm @DrExample @EvilJackCarver
+/code/controllers/failsafe.dm @DrExample @EvilJackCarver
+/code/controllers/master.dm @DrExample @EvilJackCarver
