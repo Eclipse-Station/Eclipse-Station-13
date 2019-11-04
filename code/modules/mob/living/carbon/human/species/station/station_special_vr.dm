@@ -48,7 +48,7 @@
 
 	//primitive_form = "Farwa"
 
-	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED //Whitelisted as restricted is broken.
+	spawn_flags = SPECIES_IS_RESTRICTED  //Eclipse edit - they don't exist :V
 	flags = NO_SCAN | NO_INFECT //Dying as a chimera is, quite literally, a death sentence. Well, if it wasn't for their revive, that is.
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
 

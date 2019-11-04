@@ -93,10 +93,10 @@
 /datum/category_item/autolathe/engineering/rcd_ammo
 	name = "matter cartridge"
 	path =/obj/item/weapon/rcd_ammo
-
+/*
 /datum/category_item/autolathe/engineering/rcd
 	name = "rapid construction device"
-	path =/obj/item/weapon/rcd
+	path =/obj/item/weapon/rcd*/ //Eclipse edit - RCD is too powerful of a device to be able to be printed from a lathe
 
 /datum/category_item/autolathe/engineering/camera_assembly
 	name = "camera assembly"

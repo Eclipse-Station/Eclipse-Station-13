@@ -25,7 +25,7 @@ var/datum/antagonist/cultist/cult
 	flags = ANTAG_SUSPICIOUS | ANTAG_RANDSPAWN | ANTAG_VOTABLE
 	hard_cap = 5
 	hard_cap_round = 6
-	initial_spawn_req = 4
+	initial_spawn_req = 17 //hoo boy are those bloody lads broken
 	initial_spawn_target = 6
 	antaghud_indicator = "hudcultist"
 

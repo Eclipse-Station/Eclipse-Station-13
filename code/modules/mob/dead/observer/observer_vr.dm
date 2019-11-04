@@ -1,4 +1,4 @@
-/mob/observer/dead/verb/nifjoin()
+/*/mob/observer/dead/verb/nifjoin()
 	set category = "Ghost"
 	set name = "Join Into Soulcatcher"
 	set desc = "Select a player with a working NIF + Soulcatcher NIFSoft to join into it."
@@ -56,7 +56,7 @@
 		mind.active = TRUE
 
 		SC.catch_mob(src) //This will result in us being deleted so...
-
+*/ //Eclipse Edit - No.
 /mob/observer/dead/verb/backup_ping()
 	set category = "Ghost"
 	set name = "Notify Transcore"

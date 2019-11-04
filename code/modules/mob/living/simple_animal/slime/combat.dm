@@ -212,10 +212,17 @@
 		return
 
 	// Otherwise they're probably fighting the slime.
-	if(prob(25))
+	if(prob(25) && !istype(W, /obj/item/weapon/melee/baton/slime))
 		visible_message("<span class='danger'>\The [user]'s [W] passes right through [src]!</span>")
 		user.setClickCooldown(user.get_attack_speed(W))
 		return
+
+	//Slimebaton has 5x chance to hit tho
+	if(istype(W, /obj/item/weapon/melee/baton/slime))
+		if(prob(5))
+			visible_message("<span class='danger'>\The [user]'s [W] fizzles and passes right through [src]!</span>")
+			user.setClickCooldown(user.get_attack_speed(W))
+			return
 	..()
 
 /mob/living/simple_animal/slime/hit_with_weapon(obj/item/O, mob/living/user, var/effective_force, var/hit_zone)
