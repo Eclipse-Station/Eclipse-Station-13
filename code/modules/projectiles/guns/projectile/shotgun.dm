@@ -41,14 +41,14 @@
 		loaded -= AC //Remove casing from loaded list.
 		chambered = AC
 
-	if(animated_pump)//This affects all bolt action and shotguns. 
+	if(animated_pump)//This affects all bolt action and shotguns.
 		flick("[icon_state]-cycling", src)//This plays any pumping
 
 	update_icon()
 
 /obj/item/weapon/gun/projectile/shotgun/pump/update_icon()//This adds empty sprite capability for shotguns.
 	..()
-	if(!empty_sprite)//Just a dirty check 
+	if(!empty_sprite)//Just a dirty check
 		return
 	if((loaded.len) || (chambered))
 		icon_state = "[icon_state]"
@@ -70,7 +70,7 @@
 
 /obj/item/weapon/gun/projectile/shotgun/doublebarrel
 	name = "double-barreled shotgun"
-	desc = "A truely classic weapon. No need to change what works. Uses 12g rounds."
+	desc = "A truly classic weapon. No need to change what works. Uses 12g rounds."
 	icon_state = "dshotgun"
 	item_state = "dshotgun"
 	//SPEEDLOADER because rapid unloading.

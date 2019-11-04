@@ -118,6 +118,7 @@
 	pda_slot = slot_belt
 	pda_type = /obj/item/device/pda/clown
 	backpack = /obj/item/weapon/storage/backpack/clown
+	l_pocket = /obj/item/weapon/reagent_containers/food/snacks/grown/banana
 	r_pocket = /obj/item/weapon/bikehorn
 	id_pda_assignment = "Clown"
 

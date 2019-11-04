@@ -393,7 +393,6 @@
 		I = image(icon, src, "aslime-[mood]")
 		overlays += I
 
-
 	if(hat)
 		var/hat_state = hat.item_state ? hat.item_state : hat.icon_state
 		var/image/I = image('icons/mob/head.dmi', src, hat_state)
@@ -537,7 +536,8 @@
 						if(!isslime(L))
 							var/mob/living/simple_animal/SA = L
 							if(!SA.stat)
-								adjust_nutrition(damage_to_do)
+								if(SA.health > 0)
+									adjust_nutrition(damage_to_do)
 
 
 	if(istype(L,/obj/mecha))

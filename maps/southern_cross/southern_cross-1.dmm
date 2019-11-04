@@ -41080,6 +41080,7 @@
 /obj/effect/floor_decal/corner/purple/bordercorner{
 	dir = 1
 	},
+/mob/living/simple_animal/opossum/janitor,
 /turf/simulated/floor/tiled,
 /area/janitor)
 "bwc" = (
@@ -86722,7 +86723,7 @@
 "cXo" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/mob/living/simple_animal/fluffy,
+/mob/living/simple_animal/opossum/cargo,
 /turf/simulated/floor/tiled,
 /area/quartermaster/qm)
 "cXp" = (
