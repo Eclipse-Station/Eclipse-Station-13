@@ -191,6 +191,8 @@ var/global/list/additional_antag_types = list()
 		//antag roles that replace jobs need to be assigned before the job controller hands out jobs.
 		if(antag.flags & ANTAG_OVERRIDE_JOB)
 			antag.attempt_spawn() //select antags to be spawned
+		
+		//antag.attempt_spawn()	//Eclipse edit - weh. Attempting this only causes it to claim not enough players were readied for the round.
 
 ///post_setup()
 /datum/game_mode/proc/post_setup()
