@@ -31,12 +31,12 @@
 	universal_understand = TRUE
 	mob_size = MOB_SMALL
 	can_pull_mobs = MOB_PULL_SMALLER
-	var/is_angry = FALSE
+	var/is_angry = FALSE //Is it going AAAAAAAAAAAAAAAAAAAA at the moment?
 	var/life_since_foodscan = 0
 	investigates = 1
 	specific_targets = 1 //Only targets with Found()
 	run_at_them = 0 //DOMESTICATED
-	var/list/frens = list(USELESS_JOB)
+	var/list/frens = list(USELESS_JOB) //Accepts both player names and job names. Required for opossum to be picked up.
 	var/turns_since_scan = 0
 	var/mob/flee_target
 
@@ -47,8 +47,8 @@
 
 /mob/living/simple_animal/opossum/Life()
 	. = ..()
-	life_since_foodscan++
-	if(. && !ckey && stat != DEAD && prob(2))
+	life_since_foodscan++ //Code taken from giant rat mob
+	if(. && !ckey && stat != DEAD && prob(2)) //Handle random screaming and playing dead
 		resting = (stat == UNCONSCIOUS)
 		if(!resting)
 			wander = initial(wander)
@@ -63,14 +63,14 @@
 			is_angry = FALSE
 		update_icon()
 
-	if(life_since_foodscan > 5)
+	if(life_since_foodscan > 5) //Code taken from giant rat mob
 		life_since_foodscan = 0
 		for(var/obj/item/trash/S in oview(src, 4)) //Look for trash
 			if(get_dist(src,S) <=1)
 				visible_emote("eats \the [S].")
 				playsound(src.loc,'sound/items/eatfood.ogg', rand(10,50), 1)
 				qdel(S)
-				for(var/mob/living/carbon/human/fren in oview(src, 4))
+				for(var/mob/living/carbon/human/fren in oview(src, 4)) //Possum taming - if it sees a human nearby, while eating trash, it might consider that person a friend
 					if(prob(40))
 						frens += fren.name
 			else
@@ -299,3 +299,30 @@
 	give_hat(poss_hat, src)
 	updateicon()
 	..()
+
+/mob/living/simple_animal/opossum/powell
+	name = "Gregory"
+	desc = "It's an opossum, a small scavenging marsupial. This one seems particularly calm and reasonable."
+	speak_chance = 2
+	frens = list("Roboticist")
+	can_remove_hat = FALSE
+
+/mob/living/simple_animal/opossum/powell/New()
+	var/obj/item/clothing/head/poss_hat = new /obj/item/clothing/head/soft/black(loc)
+	give_hat(poss_hat, src)
+	updateicon()
+	..()
+
+/mob/living/simple_animal/opossum/donovan
+	name = "Mike"
+	desc = "It's an opossum, a small scavenging marsupial. This one seems particularly fiery and active."
+	speak_chance = 5
+	frens = list("Roboticist")
+	can_remove_hat = FALSE
+
+/mob/living/simple_animal/opossum/donovan/New()
+	var/obj/item/clothing/head/poss_hat = new /obj/item/clothing/head/soft/black(loc)
+	give_hat(poss_hat, src)
+	updateicon()
+	..()
+

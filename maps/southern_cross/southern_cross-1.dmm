@@ -53888,6 +53888,8 @@
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 1
 	},
+/obj/item/device/defib_kit/jumper_kit/loaded,
+/obj/item/device/defib_kit/jumper_kit/loaded,
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics)
 "bRs" = (
@@ -55046,12 +55048,10 @@
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics)
 "bTj" = (
-/obj/machinery/optable{
-	name = "Robotics Operating Table"
-	},
 /obj/structure/extinguisher_cabinet{
 	pixel_y = 30
 	},
+/obj/machinery/transhuman/synthprinter,
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics)
 "bTk" = (
@@ -56046,18 +56046,9 @@
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics)
 "bVe" = (
-/obj/structure/table/standard,
-/obj/structure/window/reinforced,
-/obj/item/weapon/tool/screwdriver,
-/obj/item/weapon/tool/crowbar,
-/obj/item/weapon/surgical/circular_saw,
-/obj/item/weapon/surgical/hemostat,
-/obj/item/stack/cable_coil,
-/obj/item/weapon/weldingtool/hugetank,
-/obj/effect/floor_decal/industrial/warning,
-/obj/machinery/light{
-	dir = 4;
-	icon_state = "tube1"
+/obj/machinery/computer/transhuman/resleeving{
+	icon_state = "computer";
+	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics)
@@ -57032,13 +57023,26 @@
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics)
 "bWU" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 8
+/obj/structure/table/standard,
+/obj/structure/window/reinforced,
+/obj/item/weapon/tool/screwdriver,
+/obj/item/weapon/tool/crowbar,
+/obj/item/weapon/surgical/circular_saw,
+/obj/item/weapon/surgical/hemostat,
+/obj/item/stack/cable_coil,
+/obj/item/weapon/weldingtool/hugetank,
+/obj/machinery/light{
+	dir = 4;
+	icon_state = "tube1"
 	},
 /obj/machinery/firealarm{
 	dir = 1;
 	pixel_x = 0;
 	pixel_y = -24
+	},
+/obj/effect/floor_decal/industrial/warning{
+	icon_state = "warning";
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/assembly/robotics)
@@ -57053,21 +57057,14 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/assembly/robotics)
 "bWW" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/assembly/robotics)
 "bWX" = (
-/obj/structure/table/steel_reinforced,
-/obj/item/weapon/storage/box/bodybags{
-	pixel_x = -1;
-	pixel_y = -2
-	},
-/obj/item/weapon/book/manual/robotics_cyborgs{
-	pixel_x = 2;
-	pixel_y = 5
-	},
-/obj/item/device/defib_kit/jumper_kit/loaded,
-/obj/item/device/defib_kit/jumper_kit/loaded,
-/turf/simulated/floor/tiled/techfloor,
+/obj/machinery/transhuman/resleever,
+/turf/simulated/floor/tiled/white,
 /area/assembly/robotics)
 "bWY" = (
 /obj/machinery/atmospherics/portables_connector{
@@ -60465,6 +60462,14 @@
 /obj/machinery/requests_console/preset/research{
 	pixel_y = 26
 	},
+/obj/item/weapon/book/manual/robotics_cyborgs{
+	pixel_x = 2;
+	pixel_y = 5
+	},
+/obj/item/weapon/storage/box/bodybags{
+	pixel_x = -1;
+	pixel_y = -2
+	},
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics)
 "cdA" = (
@@ -61325,6 +61330,7 @@
 /turf/simulated/wall,
 /area/maintenance/robotics)
 "cfa" = (
+/obj/effect/decal/remains/robot,
 /turf/simulated/floor/plating,
 /area/maintenance/robotics)
 "cfb" = (
@@ -62226,14 +62232,17 @@
 	icon_state = "alarm0";
 	pixel_y = -22
 	},
+/obj/effect/decal/remains/robot,
 /turf/simulated/floor/plating,
 /area/maintenance/robotics)
 "cgG" = (
 /obj/machinery/light/small,
+/mob/living/simple_animal/opossum/powell,
 /turf/simulated/floor/plating,
 /area/maintenance/robotics)
 "cgH" = (
 /obj/structure/catwalk,
+/obj/effect/decal/remains/robot,
 /turf/simulated/floor/plating,
 /area/maintenance/robotics)
 "cgI" = (
@@ -62247,6 +62256,7 @@
 	pixel_y = -24
 	},
 /obj/structure/catwalk,
+/obj/effect/decal/remains/robot,
 /turf/simulated/floor/plating,
 /area/maintenance/robotics)
 "cgJ" = (
@@ -84928,13 +84938,13 @@
 /turf/simulated/floor,
 /area/engineering/engine_room)
 "cUh" = (
-/obj/machinery/dna_scannernew,
 /obj/effect/floor_decal/borderfloorwhite/corner{
 	dir = 8
 	},
 /obj/effect/floor_decal/corner/purple/bordercorner{
 	dir = 8
 	},
+/obj/machinery/transhuman/resleever,
 /turf/simulated/floor/tiled/white,
 /area/medical/genetics_cloning)
 "cUi" = (
@@ -94727,17 +94737,18 @@
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 10
 	},
-/obj/machinery/clonepod/full,
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/clonepod/transhuman/full,
 /turf/simulated/floor/tiled/white,
 /area/medical/genetics_cloning)
 "dlg" = (
-/obj/machinery/computer/cloning{
-	dir = 1
-	},
 /obj/machinery/light,
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/purple/border,
+/obj/machinery/computer/transhuman/resleeving{
+	icon_state = "computer";
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/genetics_cloning)
 "dlh" = (
@@ -115970,6 +115981,7 @@
 /obj/effect/landmark{
 	name = "blobstart"
 	},
+/obj/item/slime_extract/grey,
 /turf/simulated/floor/reinforced,
 /area/rnd/xenobiology)
 "dYd" = (
@@ -121010,6 +121022,10 @@
 	},
 /turf/simulated/floor/tiled/airless,
 /area/space)
+"gth" = (
+/obj/machinery/atmospherics/pipe/simple/visible,
+/turf/simulated/floor/plating,
+/area/maintenance/apmaint)
 "hpo" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -121018,6 +121034,14 @@
 	},
 /turf/simulated/floor/tiled/airless,
 /area/space)
+"hOe" = (
+/mob/living/simple_animal/opossum/donovan,
+/turf/simulated/floor/plating,
+/area/maintenance/robotics)
+"kfV" = (
+/obj/item/slime_extract/grey,
+/turf/simulated/floor/reinforced,
+/area/rnd/xenobiology)
 "oxa" = (
 /obj/structure/cable{
 	d1 = 2;
@@ -171347,7 +171371,7 @@ dWD
 dWV
 dXo
 dXK
-dXK
+kfV
 dXK
 dYA
 aSh
@@ -171361,7 +171385,7 @@ eaC
 eaP
 eba
 dXK
-dXK
+kfV
 dXK
 dXo
 aaa
@@ -173408,11 +173432,11 @@ aaa
 dYG
 dXo
 dZn
-dXK
+kfV
 dXK
 dYy
 dXK
-dXK
+kfV
 eaI
 dXo
 aaa
@@ -206828,7 +206852,7 @@ cfR
 crT
 ctH
 ecV
-cmL
+gth
 ecH
 ecI
 cCm
@@ -228406,7 +228430,7 @@ caf
 ccc
 bPC
 cfa
-cfa
+hOe
 ceZ
 cjW
 clH

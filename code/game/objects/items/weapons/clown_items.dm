@@ -75,6 +75,6 @@
 	return
 
 
-//Actual banana
+//Actual banana - Eclipse addition
 /obj/item/weapon/reagent_containers/food/snacks/grown/banana
 	plantname = "banana"

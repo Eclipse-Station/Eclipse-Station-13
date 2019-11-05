@@ -410,7 +410,7 @@
 			victim.adjustToxLoss(rand(1,2) * armor_modifier)
 			if(victim.health <= 0)
 				victim.adjustToxLoss(rand(1,3) * armor_modifier)
-			adjust_nutrition(2.5 * armor_modifier)
+			adjust_nutrition(2.3 * armor_modifier)
 
 		else
 			to_chat(src, "<span class='warning'>[pick("This subject is incompatable", \

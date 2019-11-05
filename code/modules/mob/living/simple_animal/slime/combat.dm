@@ -212,7 +212,7 @@
 		return
 
 	// Otherwise they're probably fighting the slime.
-	if(prob(25) && !istype(W, /obj/item/weapon/melee/baton/slime))
+	if(prob(25) && !istype(W, /obj/item/weapon/melee/baton/slime))//Eclipse edit
 		visible_message("<span class='danger'>\The [user]'s [W] passes right through [src]!</span>")
 		user.setClickCooldown(user.get_attack_speed(W))
 		return

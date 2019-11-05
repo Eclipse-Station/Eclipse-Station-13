@@ -43,7 +43,7 @@
 		"boxfort",
 		"trashbag",
 		"brokecomp")
-	if(prob(20))
+	if(prob(20))//Eclipse addition
 		mouse_nest = new /obj/structure/mob_spawner/mouse_nest/opossum(src)
 	else
 		mouse_nest = new(src)
@@ -301,6 +301,6 @@
 	..()
 	last_spawn = rand(world.time - spawn_delay, world.time)
 
-/obj/structure/mob_spawner/mouse_nest/opossum
+/obj/structure/mob_spawner/mouse_nest/opossum //Eclipse addition
 	desc = "A small heap of trash, perfect for small marsupials to nest in."
 	spawn_types = (/mob/living/simple_animal/opossum)
