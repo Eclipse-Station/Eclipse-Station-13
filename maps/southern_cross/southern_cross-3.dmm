@@ -14747,6 +14747,10 @@
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled/hydro,
 /area/surface/outpost/research/xenoresearch/xenoflora)
+"Hk" = (
+/obj/item/slime_extract/grey,
+/turf/simulated/floor/reinforced,
+/area/surface/outpost/research/xenoresearch/xenobiology)
 
 (1,1,1) = {"
 aa
@@ -48249,11 +48253,11 @@ xe
 xe
 xe
 ze
-zz
+Hk
 zz
 Am
 zz
-zz
+Hk
 Bv
 xe
 xe
@@ -49801,7 +49805,7 @@ ys
 Ca
 Cz
 zz
-zz
+Hk
 zz
 Dj
 al
@@ -50829,7 +50833,7 @@ ys
 Ca
 CC
 zz
-zz
+Hk
 zz
 xe
 al

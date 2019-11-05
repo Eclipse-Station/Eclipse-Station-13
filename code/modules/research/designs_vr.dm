@@ -190,6 +190,7 @@
 	sort_string = "HABAH"
 
 //////Micro mech stuff
+/*
 /datum/design/circuit/mecha/gopher_main
 	name = "'Gopher' central control"
 	id = "gopher_main"
@@ -243,7 +244,7 @@
 	req_tech = list(TECH_DATA = 4, TECH_COMBAT = 2)
 	build_path = /obj/item/weapon/circuitboard/mecha/weasel/targeting
 	sort_string = "NAAGC"
-
+*/ //Micro mechs removed for BEING FUCKING STUPID REEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE - Eclipse edit
 ////// RIGSuit Stuff
 /*
 /datum/design/item/rig

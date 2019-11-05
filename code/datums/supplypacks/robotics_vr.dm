@@ -1,4 +1,4 @@
-/datum/supply_pack/robotics/mecha_gopher
+/*/datum/supply_pack/robotics/mecha_gopher
 	name = "Circuit Crate (\"Gopher\" APLU)"
 	contains = list(
 			/obj/item/weapon/circuitboard/mecha/gopher/main,
@@ -32,7 +32,7 @@
 	containertype = /obj/structure/closet/crate/secure/science
 	containername = "APLU \"Weasel\" Circuit Crate"
 	access = access_robotics
-
+*/ //Eclipse edit
 /datum/supply_pack/robotics/some_robolimbs
 	name = "Basic Robolimb Blueprints"
 	contains = list(

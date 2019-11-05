@@ -145,7 +145,17 @@
 
 
 /mob/living/simple_animal/promethean_blob/Life()
-	. = ..()
+	var/turf/T = src.loc
+	if(istype(T))
+		var/obj/effect/decal/cleanable/C = locate() in T
+		if(C)
+			qdel(C)
+			if (istype(T, /turf/simulated))
+				var/turf/simulated/S = T
+				S.dirt = 0
+			adjust_nutrition(10)
+	..()
+
 
 
 /mob/living/simple_animal/promethean_blob/MouseEntered(location,control,params)
@@ -332,6 +342,9 @@
 	if(istype(L, /mob/living/simple_animal/slime))
 		to_chat(src, "You cannot feed on other slimes.")
 		return FALSE
+	if(istype(L, /mob/living/simple_animal/promethean_blob))
+		to_chat(src, "You cannot feed on other slimes.")
+		return FALSE
 	if(!Adjacent(L))
 		to_chat(src, "This subject is too far away.")
 		return FALSE
@@ -380,7 +393,6 @@
 		I = image(icon, src, "aslime-[mood]")
 		overlays += I
 
-
 	if(hat)
 		var/hat_state = hat.item_state ? hat.item_state : hat.icon_state
 		var/image/I = image('icons/mob/head.dmi', src, hat_state)
@@ -398,7 +410,7 @@
 			victim.adjustToxLoss(rand(1,2) * armor_modifier)
 			if(victim.health <= 0)
 				victim.adjustToxLoss(rand(1,3) * armor_modifier)
-			adjust_nutrition(2 * armor_modifier)
+			adjust_nutrition(2.3 * armor_modifier)
 
 		else
 			to_chat(src, "<span class='warning'>[pick("This subject is incompatable", \
@@ -524,7 +536,8 @@
 						if(!isslime(L))
 							var/mob/living/simple_animal/SA = L
 							if(!SA.stat)
-								adjust_nutrition(damage_to_do)
+								if(SA.health > 0)
+									adjust_nutrition(damage_to_do)
 
 
 	if(istype(L,/obj/mecha))

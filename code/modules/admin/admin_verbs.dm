@@ -56,6 +56,8 @@ var/list/admin_verbs_admin = list(
 	/client/proc/admin_cancel_shuttle,	//allows us to cancel the emergency shuttle, sending it back to CentCom,
 	/client/proc/cmd_admin_direct_narrate,	//send text directly to a player with no padding. Useful for narratives and fluff-text,
 	/client/proc/cmd_admin_world_narrate,	//sends text to all players with no padding,
+	/client/proc/cmd_admin_direct_narrate_unsafe,	//send text directly to a player with no padding. Useful for narratives and fluff-text UNSAFE,
+	/client/proc/cmd_admin_world_narrate_unsafe,	//sends text to all players with no padding UNSAFE - Eclipse additions,
 	/client/proc/cmd_admin_create_centcom_report,
 	/client/proc/check_words,			//displays cult-words,
 	/client/proc/check_ai_laws,			//shows AI and borg laws,
