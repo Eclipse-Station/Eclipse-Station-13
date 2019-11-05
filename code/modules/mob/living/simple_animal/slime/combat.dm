@@ -217,7 +217,7 @@
 		user.setClickCooldown(user.get_attack_speed(W))
 		return
 
-	//Slimebaton has 5x chance to hit tho
+	//Eclipse edit - Slimebaton has 5x chance to hit tho
 	if(istype(W, /obj/item/weapon/melee/baton/slime))
 		if(prob(5))
 			visible_message("<span class='danger'>\The [user]'s [W] fizzles and passes right through [src]!</span>")
