@@ -1,3 +1,5 @@
+/obj/item/weapon/holder/opossum
+
 /mob/living/simple_animal/opossum
 	name = "opossum"
 	desc = "It's an opossum, a small scavenging marsupial."
@@ -17,6 +19,7 @@
 	turns_per_move = 3
 	see_in_dark = 6
 	maxHealth = 50
+	no_vore = 1 //the boys are pure
 	health = 50
 	response_help = "pets"
 	response_disarm = "gently pushes aside"
@@ -29,13 +32,23 @@
 	mob_size = MOB_SMALL
 	can_pull_mobs = MOB_PULL_SMALLER
 	var/is_angry = FALSE
+	var/life_since_foodscan = 0
+	investigates = 1
+	specific_targets = 1 //Only targets with Found()
+	run_at_them = 0 //DOMESTICATED
+	var/list/frens = list(USELESS_JOB)
+	var/turns_since_scan = 0
+	var/mob/flee_target
+
+	holder_type = /obj/item/weapon/holder/opossum
 
 	var/obj/item/clothing/head/hat = null //Yes, I'm giving them hats. They deserve them.
 	var/can_remove_hat = TRUE //Some possums are stingier of their hats than others
 
 /mob/living/simple_animal/opossum/Life()
 	. = ..()
-	if(. && !ckey && stat != DEAD && prob(1))
+	life_since_foodscan++
+	if(. && !ckey && stat != DEAD && prob(2))
 		resting = (stat == UNCONSCIOUS)
 		if(!resting)
 			wander = initial(wander)
@@ -49,6 +62,79 @@
 			stat = UNCONSCIOUS
 			is_angry = FALSE
 		update_icon()
+
+	if(life_since_foodscan > 5)
+		life_since_foodscan = 0
+		for(var/obj/item/trash/S in oview(src, 4)) //Look for trash
+			if(get_dist(src,S) <=1)
+				visible_emote("eats \the [S].")
+				playsound(src.loc,'sound/items/eatfood.ogg', rand(10,50), 1)
+				qdel(S)
+				for(var/mob/living/carbon/human/fren in oview(src, 4))
+					if(prob(40))
+						frens += fren.name
+			else
+				WanderTowards(S.loc)
+			break
+
+	handle_flee_target()
+
+/mob/living/simple_animal/opossum/proc/isfriend(var/atom/A)
+	if(ishuman(A))
+		var/mob/living/carbon/human/fren = A
+		if (fren.mind.assigned_role in frens)
+			return 1
+		if (fren.name in frens)
+			return 1
+	return 0
+
+/mob/living/simple_animal/opossum/get_scooped(var/mob/living/carbon/grabber, var/self_grab)
+	if(isfriend(grabber))
+		return ..(grabber, self_grab)
+	else
+		react_to_attack(grabber)
+
+/mob/living/simple_animal/opossum/react_to_attack(var/atom/A)
+	if(A == src) return
+	if(isfriend(A))
+		return
+	else if(isliving(A) && Adjacent(A))
+		var/mob/living/M = A
+		visible_message("<span class='warning'>\The [src][is_dead()?"'s corpse":""] flails at [M]!</span>")
+		SpinAnimation(7,1)
+		if(prob(75))
+			to_chat(M, "<span class='warning'>[src] hisses and bites you!</span>")
+			M.adjustBruteLoss(rand(2, 5))
+		if(is_dead())
+			return
+		for(var/i = 1 to 3)
+			var/turf/T = get_step_away(src, M)
+			if(T)
+				Move(T)
+			else
+				break
+			sleep(3)
+		is_angry = TRUE
+		flee_target = A
+		turns_since_scan = 5
+
+
+/mob/living/simple_animal/opossum/proc/handle_flee_target()
+	//see if we should stop fleeing
+	if (flee_target && !(flee_target in ListTargets(view_range)))
+		flee_target = null
+		GiveUpMoving()
+		is_angry = FALSE
+
+	if (flee_target && !stat && !buckled)
+		if (resting)
+			lay_down()
+		if (prob(10))
+			say("HSSSSS!")
+		else if(prob(10))
+			say("AAAAAAAAAAAAAAA!")
+		stop_automated_movement = 1
+		walk_away(src, flee_target, 7, 2)
 
 /mob/living/simple_animal/opossum/death()
 	. = ..()
@@ -172,7 +258,7 @@
 
 /mob/living/simple_animal/opossum/attack_hand(mob/living/carbon/human/M as mob)
 	if(M.a_intent == I_HELP)
-		if(hat)
+		if(hat && can_remove_hat)
 			remove_hat(M)
 		else
 			..()
@@ -190,6 +276,9 @@
 	desc = "It's an opossum, a small scavenging marsupial. He's a trashman. He eats trash."
 	speak_chance = 3
 	can_remove_hat = FALSE
+	frens = list("Quartermaster",
+	"Cargo Technician",
+	"Shaft Miner")
 
 /mob/living/simple_animal/opossum/cargo/New()
 	var/obj/item/clothing/head/poss_hat = new /obj/item/clothing/head/soft/yellow(loc)
@@ -197,10 +286,12 @@
 	updateicon()
 	..()
 
+
 /mob/living/simple_animal/opossum/janitor
 	name = "Glenn"
 	desc = "It's an opossum, a small scavenging marsupial. This one seems particularly independent, he did it all himself."
 	speak_chance = 3
+	frens = list("Janitor")
 	can_remove_hat = FALSE
 
 /mob/living/simple_animal/opossum/janitor/New()

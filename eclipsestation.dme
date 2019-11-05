@@ -3198,4 +3198,5 @@
 #include "modular_eclipse\reginald\reginald.dm"
 #include "modular_eclipse\secgun\secgun.dm"
 #include "modular_eclipse\unsorted\random_air_rifle.dm"
+#include "modular_eclipse\unsorted\randomverbs.dm"
 // END_INCLUDE
