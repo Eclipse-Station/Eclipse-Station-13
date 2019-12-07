@@ -10,7 +10,7 @@
 	siemens_coefficient = 0.6
 
 /obj/item/clothing/suit/mob_can_equip(var/mob/living/carbon/human/H, slot, disable_warning = 0)
-	if(..()) //This will only run if no other problems occured when equiping.
+	if(..()) //This will only run if no other problems occurred when equipping.
 		for(var/obj/item/clothing/I in list(H.gloves, H.shoes))
 			if(I && (src.body_parts_covered & ARMS && I.body_parts_covered & ARMS) )
 				H << "<span class='warning'>You can't wear \the [src] with \the [I], it's in the way.</span>"

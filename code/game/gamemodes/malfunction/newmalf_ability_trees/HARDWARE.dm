@@ -66,7 +66,7 @@
 /datum/game_mode/malfunction/verb/ai_destroy_station()
 	set category = "Hardware"
 	set name = "Destroy Station"
-	set desc = "Activates or deactivates self destruct sequence of this station. Sequence takes two minutes, and if you are shut down before timer reaches zero it will be cancelled."
+	set desc = "Activates or deactivates self destruct sequence of this station. Sequence takes two minutes, and if you are shut down before timer reaches zero it will be canceled."
 	var/mob/living/silicon/ai/user = usr
 	var/obj/item/device/radio/radio = new/obj/item/device/radio()
 
@@ -97,7 +97,7 @@
 	while(timer)
 		sleep(10)
 		if(!user || !user.bombing_station || user.stat == DEAD)
-			radio.autosay("Self destruct sequence has been cancelled.", "Self-Destruct Control")
+			radio.autosay("Self destruct sequence has been canceled.", "Self-Destruct Control")
 			return
 		if(timer in list(2, 3, 4, 5, 10, 30, 60, 90)) // Announcement times. "1" is not intentionally included!
 			radio.autosay("Self destruct in [timer] seconds.", "Self-Destruct Control")

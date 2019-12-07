@@ -44,7 +44,7 @@
 	var/can_create_areas_into = AREA_SPACE	// New areas will only overwrite space area turfs.
 	var/can_expand_areas_in = AREA_STATION	// Must be standing in station to expand
 	var/can_expand_areas_into = AREA_SPACE	// Can expand station areas only into space.
-	var/can_rename_areas_in = AREA_STATION	// Only station areas can be reanamed
+	var/can_rename_areas_in = AREA_STATION	// Only station areas can be renamed
 
 /obj/item/blueprints/attack_self(mob/M as mob)
 	if (!istype(M,/mob/living/carbon/human))
@@ -95,7 +95,7 @@
 			text += "<p>This place isn't noted on the blueprint.</p>"
 		else
 			text += "<p class='danger'>There is a coffee stain over this part of the blueprint.</p>"
-			return // Shouldn ever get here, just sanity check
+			return // Shouldn't ever get here, just sanity check
 
 	// Offer links for what user is allowed to do based on current area
 	if(curAreaType & can_create_areas_in)
@@ -125,7 +125,7 @@
 	return AREA_STATION
 
 /**
- * Create a new area encompasing the current room.
+ * Create a new area encompassing the current room.
  */
 /obj/item/blueprints/proc/create_area()
 	var/res = detect_room_ex(get_turf(usr), can_create_areas_into)
@@ -250,7 +250,7 @@
 	while(pending.len)
 		if (found.len+pending.len > 300)
 			return ROOM_ERR_TOOLARGE
-		var/turf/T = pending[1] //why byond havent list::pop()?
+		var/turf/T = pending[1] //why byond haven't list::pop()?
 		pending -= T
 		for (var/dir in cardinal)
 			var/turf/NT = get_step(T,dir)

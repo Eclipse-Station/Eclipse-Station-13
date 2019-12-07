@@ -314,7 +314,7 @@
 	<br>\
 	<h3>Locations</h3>\
 	Secure areas are recommended to be left unbolted, which includes the AI Upload, Secure Technical Storage, and the Teleporter(s).  The Vault should remain sealed.  \
-	Heads of Staff may enter the AI Upload alone, although they must have sufficent justification. \
+	Heads of Staff may enter the AI Upload alone, although they must have sufficient justification. \
 	<br>\
 	<h3>Crew</h3>\
 	Crew members and visitors may freely walk in the hallways and other public areas.  Suit sensors are recommended, but not mandatory.  \

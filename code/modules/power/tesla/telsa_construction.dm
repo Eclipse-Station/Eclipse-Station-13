@@ -12,7 +12,7 @@
 
 /datum/design/circuit/tesla_coil
 	name = "Machine Design (Tesla Coil Board)"
-	desc = "The circuit board for a tesla coil."
+	desc = "The circuit board for a Tesla coil."
 	id = "tesla_coil"
 	build_path = /obj/item/weapon/circuitboard/tesla_coil
 	req_tech = list(TECH_MAGNET = 2, TECH_POWER = 4)

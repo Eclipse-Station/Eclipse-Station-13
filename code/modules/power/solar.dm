@@ -338,7 +338,7 @@ var/list/solars_list = list()
 	switch(track)
 		if(1)
 			if(trackrate) //we're manual tracking. If we set a rotation speed...
-				cdir = targetdir //...the current direction is the targetted one (and rotates panels to it)
+				cdir = targetdir //...the current direction is the targeted one (and rotates panels to it)
 		if(2) // auto-tracking
 			if(connected_tracker)
 				connected_tracker.set_angle(sun.angle)

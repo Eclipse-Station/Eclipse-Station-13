@@ -1,6 +1,6 @@
 /mob/living/carbon/human/gib()
-	
-	//Drop the NIF, they're expensive, why not recover them? Also important for prometheans.
+
+	//Drop the NIF, they're expensive, why not recover them? Also important for Prometheans.
 	if(nif)
 		var/obj/item/device/nif/deadnif = nif //Unimplant removes the reference on the mob
 		deadnif.unimplant(src)

@@ -25,7 +25,7 @@
 	if(held_item == null)
 		if(src.mind.changeling.recursive_enhancement)
 			if(changeling_generic_weapon(/obj/item/weapon/electric_hand/efficent,0))
-				src << "<span class='notice'>We will shock others more efficently.</span>"
+				src << "<span class='notice'>We will shock others more efficiently.</span>"
 				return 1
 		else
 			if(changeling_generic_weapon(/obj/item/weapon/electric_hand,0))  //Chemical cost is handled in the equip proc.

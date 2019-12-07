@@ -253,7 +253,7 @@
 		return FALSE
 	future_destination = R.get_other_side(current_destination)
 
-	var/travel_time = R.travel_time * my_shuttle.flight_time_modifier * 2 // Autopilot is less efficent than having someone flying manually.
+	var/travel_time = R.travel_time * my_shuttle.flight_time_modifier * 2 // Autopilot is less efficient than having someone flying manually.
 	if(R.interim && R.travel_time > 0)
 		my_shuttle.long_jump(my_shuttle.current_area, future_destination.my_area, R.interim, travel_time / 10)
 	else

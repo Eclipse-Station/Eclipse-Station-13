@@ -59,7 +59,7 @@
 	<ul>\
 	<li><b>Deadly Weapons</b>, which is defined as objects which are designed to kill or otherwise severely injure a person.</li>\
 	<li><b>Lethal Guns</b>, meaning guns which possess the capability to kill someone.  Functional ballistic weaponry can be loaded \
-	with ammunition that is lethal, meaning it falls under this.  Energy weapons lacking a lethal mode, such as tasers, do not fall under this.  \
+	with ammunition that is lethal, meaning it falls under this.  Energy weapons lacking a lethal mode, such as Tasers, do not fall under this.  \
 	Weapons which emit electromagnetic pulses, sometimes called 'Ionic' weapons, are considered lethal, as they are lethal to synthetics.</li>\
 	<li><b>Narcotic Drugs</b>, such as Mindbreaker.</li>\
 	<li><b>Illicit Identification Cards</b>, which includes forgeries, as well as ID cards designed to tamper with electronics.</li>\

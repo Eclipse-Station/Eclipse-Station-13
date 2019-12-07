@@ -39,7 +39,7 @@
 	icon_state = "metal-rod"
 
 /obj/item/weapon/arrow/rod/removed(mob/user)
-	if(throwforce == 15) // The rod has been superheated - we don't want it to be useable when removed from the bow.
+	if(throwforce == 15) // The rod has been superheated - we don't want it to be usable when removed from the bow.
 		user  << "[src] shatters into a scattering of overstressed metal shards as it leaves the crossbow."
 		var/obj/item/weapon/material/shard/shrapnel/S = new()
 		S.loc = get_turf(src)

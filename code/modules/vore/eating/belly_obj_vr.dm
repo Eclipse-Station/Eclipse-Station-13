@@ -50,7 +50,7 @@
 	var/tmp/digest_mode = DM_HOLD				// Current mode the belly is set to from digest_modes (+transform_modes if human)
 //	var/tmp/tf_mode = DM_TRANSFORM_REPLICA		// Current transformation mode.
 	var/tmp/next_process = 0					// Waiting for this SSbellies times_fired to process again.
-	var/tmp/list/items_preserved = list()		// Stuff that wont digest so we shouldn't process it again.
+	var/tmp/list/items_preserved = list()		// Stuff that won't digest so we shouldn't process it again.
 	var/tmp/next_emote = 0						// When we're supposed to print our next emote, as a belly controller tick #
 	var/tmp/recent_sound = FALSE				// Prevent audio spam
 

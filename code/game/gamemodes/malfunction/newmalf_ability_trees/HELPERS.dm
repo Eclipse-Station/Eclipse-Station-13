@@ -49,7 +49,7 @@
 
 	var/confirmation = alert("[note] - Is this what you want?", "Hardware selection", "Yes", "No")
 	if(confirmation != "Yes")
-		user << "Selection cancelled. Use command again to select"
+		user << "Selection canceled. Use command again to select"
 		return
 
 	if(C)

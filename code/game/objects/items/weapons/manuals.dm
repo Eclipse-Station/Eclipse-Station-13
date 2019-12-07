@@ -180,7 +180,7 @@
 				</ol>
 				</p>
 				<p>Tesla Coils will attract the energy ball&apos;s bolts. They will take half the power of the bolt (if they are connected to a wire node), pump it into the powernet it is hooked to, and then will send the other half of the power to the next available conductor, which follows the criteria listed above. Preferably, this will be another coil to harness more of the power and pump it into the grid.</p>
-				<p>Grounding Rods are safety precautions to prevent the tesla bolts from hitting machinery or personnel. If the tesla is loose, being near one will usually keep you safe from direct shocks.</p>
+				<p>Grounding Rods are safety precautions to prevent the Tesla bolts from hitting machinery or personnel. If the Tesla is loose, being near one will usually keep you safe from direct shocks.</p>
 				<br>
 				<h2>STARTUP PROCEDURE</h2>
 				<ol>

@@ -4,8 +4,8 @@
  * This is powerful and flexible recipe system.
  * It exists not only for food.
  * supports both reagents and objects as prerequisites.
- * In order to use this system you have to define a deriative from /datum/recipe
- * * reagents are reagents. Acid, milc, booze, etc.
+ * In order to use this system you have to define a derivative from /datum/recipe
+ * * reagents are reagents. Acid, milk, booze, etc.
  * * items are objects. Fruits, tools, circuit boards.
  * * result is type to create as new object
  * * time is optional parameter, you shall use in in your machine,
@@ -20,7 +20,7 @@
  *
  *  /proc/select_recipe(list/datum/recipe/available_recipes, obj/obj as obj, exact = 1)
  *    Wonderful function that select suitable recipe for you.
- *    obj is a machine (or magik hat) with prerequisites,
+ *    obj is a machine (or magic hat) with prerequisites,
  *    exact = 0 forces algorithm to ignore superfluous stuff.
  *
  *
@@ -41,7 +41,7 @@
 	var/list/reagents // example: = list("berryjuice" = 5) // do not list same reagent twice
 	var/list/items    // example: = list(/obj/item/weapon/crowbar, /obj/item/weapon/welder) // place /foo/bar before /foo
 	var/list/fruit    // example: = list("fruit" = 3)
-	var/coating = null//Required coating on all items in the recipe. The default value of null explitly requires no coating
+	var/coating = null//Required coating on all items in the recipe. The default value of null explicitly requires no coating
 	//A value of -1 is permissive and cares not for any coatings
 	//Any typepath indicates a specific coating that should be present
 	//Coatings are used for batter, breadcrumbs, beer-batter, colonel's secret coating, etc

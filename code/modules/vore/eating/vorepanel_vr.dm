@@ -526,7 +526,7 @@
 			selected.tf_mode = new_tf_mode*/
 
 		selected.digest_mode = new_mode
-		selected.items_preserved.Cut() //Re-evaltuate all items in belly on belly-mode change
+		selected.items_preserved.Cut() //Re-evaluate all items in belly on belly-mode change
 
 	if(href_list["b_addons"])
 		var/list/menu_list = selected.mode_flag_list.Copy()
@@ -534,7 +534,7 @@
 		if(!toggle_addon)
 			return 0
 		selected.mode_flags ^= selected.mode_flag_list[toggle_addon]
-		selected.items_preserved.Cut() //Re-evaltuate all items in belly on addon toggle
+		selected.items_preserved.Cut() //Re-evaluate all items in belly on addon toggle
 
 	if(href_list["b_cont_flavor"])
 		var/list/menu_list = cont_flavors.Copy()
@@ -673,7 +673,7 @@
 			to_chat(usr,"<span class='warning'>Prey will not be able to have special interactions with your [lowertext(selected.name)].</span>")
 			show_interacts = 0 //Force the hiding of the panel
 		else
-			alert("Something went wrong. Your stomach will now not have special interactions. Press the button enable them again and tell a dev.","Error") //If they somehow have a varable that's not 0 or 1
+			alert("Something went wrong. Your stomach will now not have special interactions. Press the button enable them again and tell a dev.","Error") //If they somehow have a variable that's not 0 or 1
 			selected.escapable = 0
 			show_interacts = 0 //Force the hiding of the panel
 
@@ -695,7 +695,7 @@
 	if(href_list["b_transferlocation"])
 		var/obj/belly/choice = input("Where do you want your [lowertext(selected.name)] to lead if prey resists?","Select Belly") as null|anything in (user.vore_organs + "None - Remove" - selected)
 
-		if(!choice) //They cancelled, no changes
+		if(!choice) //They canceled, no changes
 			return 0
 		else if(choice == "None - Remove")
 			selected.transferlocation = null

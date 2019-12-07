@@ -118,7 +118,7 @@
 	to speak with your team, and learn what their plan is for today.</span>")
 
 	R.key = C.key
-//	R.Namepick() // Apparnetly making someone a merc lets them pick a name, so this isn't needed.
+//	R.Namepick() // Apparently making someone a merc lets them pick a name, so this isn't needed.
 
 	spawn(1)
 		mercs.add_antagonist(R.mind, FALSE, TRUE, FALSE, FALSE, FALSE)
