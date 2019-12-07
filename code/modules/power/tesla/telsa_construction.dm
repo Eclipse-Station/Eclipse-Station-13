@@ -4,7 +4,7 @@
 
 // Tesla coils are built as machines using a circuit researchable in RnD
 /obj/item/weapon/circuitboard/tesla_coil
-	name = T_BOARD("tesla coil")
+	name = T_BOARD("Tesla coil")
 	build_path = /obj/machinery/power/tesla_coil
 	board_type = new /datum/frame/frame_types/machine
 	origin_tech = list(TECH_MAGNET = 2, TECH_POWER = 4)
