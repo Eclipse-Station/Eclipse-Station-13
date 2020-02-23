@@ -63,7 +63,7 @@ def YTCV4(youtube_url,cache=1,debug=0):
         youtube_url = "http://" + youtube_url
     if youtube_url.count("/") + youtube_url.count("\\") < 3:
         if len(prev_dict.keys()) > 0:
-            if Do_not_open == True:   
+            if Do_not_open == True:
                 tiedosto = open(directory+"YTCache/"+first_two+".tcc","w") #This is a Just In Case
                 pickle.dump(prev_dict,tiedosto)
                 tiedosto.close()

@@ -27,7 +27,7 @@
 	if(message)
 		to_chat(world, "<font color='purple'><b>Tip of the round: </b>[html_encode(message)]</font>")
 		tip_sent = TRUE
-		
+
 /client/proc/cmd_admin_show_tip()
 	set category = "Special Verbs"
 	set name = "Show Tip"

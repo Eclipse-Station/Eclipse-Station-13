@@ -3,7 +3,7 @@
 {{if data.currentTab == 0}}
 
 	<!-- List powernets -->
-	
+
 	<div class="notice" style="height: 22px">
 		{{:helper.link('Scan For Sensors', 'refresh', {'cartridge_topic' : 1, 'powernet_refresh' : 1})}}   No active sensor. Printing sensor list.
 	</div>
@@ -26,7 +26,7 @@
 	<!-- Detailed info on one powernet -->
 
 	<div class="notice" style="height: 22px">
-		{{:helper.link('Show List', 'cancel', { 'switch_tab' : 0})}}   Sensor selected: {{:data.currentTab}} 
+		{{:helper.link('Show List', 'cancel', { 'switch_tab' : 0})}}   Sensor selected: {{:data.currentTab}}
 	</div>
 	{{if data.powernet_target.error}}
 		{{:data.powernet_target.error}}

@@ -44,7 +44,7 @@
 			var/mob/living/carbon/human/H = target
 			H.vomit()
 			H.Confuse(2)
-			
+
 		return 1
 
 //R&D Design

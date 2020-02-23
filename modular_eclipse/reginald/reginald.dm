@@ -6,7 +6,7 @@
  * to set it as today's date. It's bad, it sucks, but I have to do it because
  * I can't call text2num() because apparently it's not a global proc or a macro
  * define I can just pick up and use.
- * 
+ *
  * If you are here in the weeks, months, or years later debugging the piece of
  * code relevant to the date pull, I truly am sorry.
  *
@@ -24,7 +24,7 @@
 
 /mob/living/simple_animal/crab/reginald/New()
 	. = ..()
-	
+
 	if(config.force_reginald)
 		desc = "It's Reginald. He's putting in some overtime right now."
 	else
@@ -81,6 +81,6 @@
 		else
 			log_debug("Not first or third week. Reginald not spawning.")
 			log_to_dd("Not first or third week. Reginald not spawning.")
-		
+
 	delete_me = TRUE
 	return

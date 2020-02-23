@@ -1,7 +1,7 @@
 //upgrades the speed of all drills and pickaxes.
 
 /obj/item/weapon/pickaxe
-	digspeed = 36 
+	digspeed = 36
 
 /obj/item/weapon/pickaxe/silver
 	digspeed = 27
@@ -10,14 +10,14 @@
 	digspeed = 27
 
 /obj/item/weapon/pickaxe/jackhammer
-	digspeed = 18 
+	digspeed = 18
 
 /obj/item/weapon/pickaxe/gold
 	digspeed = 18
 
 /obj/item/weapon/pickaxe/plasmacutter
-	digspeed = 18 
-	
+	digspeed = 18
+
 /obj/item/weapon/pickaxe/diamond
 	digspeed = 9
 

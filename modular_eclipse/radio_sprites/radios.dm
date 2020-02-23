@@ -66,9 +66,9 @@
 	desc = "An emergency radio for quick, one-way contact with the medbay. This radio has been programmed with a frequency lock, which prevents it from changing channels."		//Short of admin intervention, anyway...
 	frequency = 1487		//this is not defined anywhere, but it's the frequency the radios currently are set to use. Probably be a good idea to define them somewhere.
 	freqlock = TRUE
-	
+
 /obj/item/device/radio/color/lightblue/emergency/update_icon()
-	icon_state = initial(icon_state)		//No 'off' sprite. 
+	icon_state = initial(icon_state)		//No 'off' sprite.
 
 /obj/item/device/radio/color/purple		//Research
 	icon_state = "xpr-sci"

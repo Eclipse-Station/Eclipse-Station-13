@@ -57,4 +57,4 @@ everything = {"8ball":"[8ball <arg>] Responds to the argument",
               "version":"[version] Shows the current version of %s." %(Name),
               "weather":"[weather <location>] Displays the current weather of the provided location.",
               "life":"I cannot help you with that, sorry."}
-              
+
