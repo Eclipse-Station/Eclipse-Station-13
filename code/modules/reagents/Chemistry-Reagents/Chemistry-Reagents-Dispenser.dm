@@ -96,7 +96,7 @@
 		strength_mod = 0
 	if(alien == IS_SLIME)
 		strength_mod *= 2 // VOREStation Edit - M.adjustToxLoss(removed)
-	
+
 	M.add_chemical_effect(CE_ALCOHOL, 1)
 	var/effective_dose = dose * strength_mod * (1 + volume/60) //drinking a LOT will make you go down faster
 

@@ -64,14 +64,14 @@
 
 #define MAX_HUGE_MESSAGE_LEN 8192
 #define POST_DELIMITER_STR "\<\>"
-/proc/sanitize_or_reflect(message,user)	
+/proc/sanitize_or_reflect(message,user)
 	//Way too long to send
 	if(length(message) > MAX_HUGE_MESSAGE_LEN)
 		fail_to_chat(user)
 		return
 
 	message = sanitize(message, max_length = MAX_HUGE_MESSAGE_LEN)
-	
+
 	//Came back still too long to send
 	if(length(message) > MAX_MESSAGE_LEN)
 		fail_to_chat(user,message)
@@ -83,7 +83,7 @@
 	if(!message)
 		to_chat(user,"<span class='danger'>Your message was NOT SENT, either because it was FAR too long, or sanitized to nothing at all.</span>")
 		return
-	
+
 	var/length = length(message)
 	var/posts = Ceiling(length/MAX_MESSAGE_LEN)
 	to_chat(user,message)
