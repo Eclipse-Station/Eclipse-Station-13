@@ -238,7 +238,7 @@
 	coretype = /obj/item/slime_extract/silver
 	shiny = TRUE
 
-	description_info = "Tasers, including the slime version, are ineffective against this slime.  The slimebation still works."
+	description_info = "Tasers, including the slime version, are ineffective against this slime.  The slime baton still works."
 
 	slime_mutation = list(
 			/mob/living/simple_animal/slime/metal,

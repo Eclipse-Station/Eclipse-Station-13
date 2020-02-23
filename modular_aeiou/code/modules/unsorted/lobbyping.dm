@@ -23,9 +23,3 @@
 		log_and_message_admins("has sent a message in discord lobby")
 		lobby_message(message = msg, color = "#79FE5F")
 
-
-/client/proc/discord_test()
-	set name = "Send test message"
-	set category = "Admin"
-	lobby_message(message = "T E S T", color = "#FE9500") //AEIOUstation add
-

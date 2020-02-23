@@ -15,6 +15,10 @@ contains the desired changes.
 
 ## Installation
 
+First things first, locate and install Python 3.6. Python 3.7 or newer will not
+work with the dependency installer. Ensure Python 3.6 is added to your system's
+path variable.
+
 To install Python dependencies, run `requirements-install.bat`, or run
 `python -m pip install -r requirements.txt` directly. See the [Git hooks]
 documentation to install the Git pre-commit hook which runs the map merger
@@ -47,6 +51,29 @@ Implementation modules:
 `precommit.py` is run by the [Git hooks] if installed, and merges the new
 version of any map saved in the index (`git add`ed) with the old version stored
 in Git when run.
+
+## How to Use, for the Layman
+
+It is recommended that you run `dmm2tgm.bat` before you make any changes.
+This will convert your map to the TGM format (see *'What Map Merging Is'*, above)
+if it isn't already. If it has already been converted, this won't do anything.
+
+Before you make any changes to the map whatsoever, you will need to take a
+backup of your map. This can be done quickly and easily by running 
+`Prepare Maps.bat`.
+
+After you make your changes, you should run `mapmerge.bat` to merge the new
+and original versions together, to minimize changed parts of the map. This
+makes it easier for us to look through your changes and also makes it more
+likely for Github's merge conflict resolution to successfully pass.
+
+After the map is merged and in TGM format, commit and pull-request as normal.
+You will be able to tell if the map is in TGM format if you open the map in a
+text editor and see the following on the first line:
+
+```
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+```
 
 [Map Merger]: https://tgstation13.org/wiki/Map_Merger
 [Git hooks]: ../hooks/README.md

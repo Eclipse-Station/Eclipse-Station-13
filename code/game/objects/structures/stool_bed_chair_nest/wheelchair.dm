@@ -64,7 +64,7 @@
 		return
 
 
- 	last_active_move = world.time
+	last_active_move = world.time
 
 
 	// Let's roll

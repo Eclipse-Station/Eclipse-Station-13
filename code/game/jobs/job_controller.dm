@@ -70,6 +70,12 @@ var/global/datum/controller/occupations/job_master
 				return 0
 			if(!is_job_whitelisted(player, rank)) //VOREStation Code
 				return 0
+			// // // BEGIN ECLIPSE EDIT // // //
+			//More checks for antag status
+			if(player.mind && player.mind.special_role)		//are we antagonist?
+				if(job in player.mind.antag_job_restrictions)			//Is our role in the antag restricted jobs?
+					return 0
+			// // // END ECLIPSE EDIT // // //
 
 			var/position_limit = job.total_positions
 			if(!latejoin)
@@ -151,6 +157,14 @@ var/global/datum/controller/occupations/job_master
 				Debug("GRJ player not whitelisted for this job, Player: [player], Job: [job.title]")
 				continue
 			//VOREStation Code End
+
+			// // // BEGIN ECLIPSE EDIT // // //
+			//More checks for antag status
+			if(player.mind && player.mind.special_role)		//are we antagonist?
+				if(job in player.mind.antag_job_restrictions)			//Is our role in the antag restricted jobs?
+					Debug("GRJ incompatible with antagonist role, Player: [player], Job: [job.title], Antag: [player.mind.special_role]")
+					continue
+			// // // END ECLIPSE EDIT // // //
 
 			if((job.current_positions < job.spawn_positions) || job.spawn_positions == -1)
 				Debug("GRJ Random job given, Player: [player], Job: [job]")
@@ -297,7 +311,7 @@ var/global/datum/controller/occupations/job_master
 						Debug("DO player not old enough, Player: [player], Job:[job.title]")
 						continue
 
-					// // // BEGIN ECLIPSE EDIT // // //
+					// // // BEGIN ECLIPSE EDITS // // //
 					/*
 					 * Theoretically fixes an issue where a player could join as a whitelisted job if it was selected before
 					 * the whitelist made them unable to select it. This only denies them the ability to spawn as the job, it
@@ -306,7 +320,13 @@ var/global/datum/controller/occupations/job_master
 					if(!is_job_whitelisted(player, job.title))
 						Debug("DO player not whitelisted for this job, Player: [player], Job: [job.title]")
 						continue
-					// // // END ECLIPSE EDIT // // //
+					
+					//More checks for antag status
+					if(player.mind && player.mind.special_role)		//are we antagonist?
+						if(job in player.mind.antag_job_restrictions)			//Is our role in the antag restricted jobs?
+							Debug("DO incompatible with antagonist role, Player: [player], Job: [job.title], Antag: [player.mind.special_role]")
+							continue
+					// // // END ECLIPSE EDITS // // //
 
 					// If the player wants that job on this level, then try give it to him.
 					if(player.client.prefs.GetJobDepartment(job, level) & job.flag)

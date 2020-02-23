@@ -408,6 +408,10 @@ var/last_message = 0
 	var/SA_para_min = 1
 	var/SA_sleep_min = 5
 	var/inhaled_gas_used = 0
+	
+	//Eclipse added vars
+	var/NCl3_warn_min = 1		//temporarily the same as N2O for testing.
+	var/NCl3_toxic_min = 5
 
 	var/breath_pressure = (breath.total_moles*R_IDEAL_GAS_EQUATION*breath.temperature)/BREATH_VOLUME
 
@@ -527,7 +531,42 @@ var/last_message = 0
 			if(prob(20))
 				spawn(0) emote(pick("giggle", "laugh"))
 		breath.adjust_gas("sleeping_agent", -breath.gas["sleeping_agent"]/6, update = 0) //update after
+		
+	// // // BEGIN ECLIPSE EDITS // // //
+	// Trichloramine addition. Lachrymator agent, surprisingly only mildly toxic.
+	if(breath.gas["trichloramine"])
+		var/america = breath.gas["trichloramine"]		//I can't think of a better variable name that isn't already in use. Sue me. ^Spitzer
+		var/ratio = (america/NCl3_toxic_min) * 10
+		var/NCl3_pp = (breath.gas["trichloramine"] / breath.total_moles) * breath_pressure
+		//let's get this party started.
+		
+		if(NCl3_pp >= 0.25)		//If less than or equal to the minimum we care about, forget it. 
+		//Define the notif variable, while we're here
+			var/notif = "Alan, write some dialogue here!"		//Okay, calm down, Gage. If the player sees this, it's not set for some reason.
+			
+			//Alright, let's rock and roll.
+			if(NCl3_pp >= NCl3_toxic_min)		// Start with lethality and go down from there.
+				notif = pick("Your eyes sting!","Your throat burns!","You feel very dizzy!","You feel like you're choking!","The smell of chlorine is overwhelming!")
+				if(prob(80))
+					src << "<span class='critical'>[notif]</span>"
+				if(reagents)
+					reagents.add_reagent("toxin", Clamp(ratio, MIN_TOXIN_DAMAGE, MAX_TOXIN_DAMAGE))
 
+			//Not lethal, but makes loud messages.
+			else if(NCl3_pp >= NCl3_warn_min)
+				notif = pick("Your eyes water.","Your throat itches.","You feel a little dizzy.","You feel short of breath.","There's a strong smell of chlorine.")
+				if(prob(40))
+					src << "<span class='danger'>[notif]</span>"
+
+			//Even more dangerously un-lethal!
+			else
+				notif = "You smell chlorine."
+				if(prob(20 ))
+					src << "<span class='warning'>[notif]</span>"
+
+		breath.adjust_gas("trichloramine", -america/6, update = 0) //update after
+	// // // END ECLIPSE EDITS // // //
+	
 	// Were we able to breathe?
 	if (failed_inhale || failed_exhale)
 		failed_last_breath = 1

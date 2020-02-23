@@ -34,8 +34,8 @@
 	access = access_mining
 
 /datum/supply_pack/misc/looksir
-	name = "free crab"
+	name = "a whole crab"
 	contains = list(
 			/mob/living/simple_animal/crab = 1
 			)
-	cost = 7
+	cost = 77

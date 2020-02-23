@@ -153,6 +153,11 @@
 /area/surface/outpost
 	ambience = AMBIENCE_GENERIC
 
+//Wilderness Shuttle Shelter
+
+/area/surface/outpost/shelter
+	name = "Wilderness Shelter"
+
 // Main mining outpost
 /area/surface/outpost/mining_main
 	name = "\improper North Mining Outpost"
@@ -313,11 +318,11 @@
 	sound_env = MEDIUM_SOFTFLOOR
 
 /area/surface/outpost/main/telecomms
-	name = "Main Outpost Telecommunications"
+	name = "\improper Main Outpost Telecommunications"
 	music = "signal"
 
 /area/surface/outpost/main/teleporter
-	name = "Main Outpost Teleporter"
+	name = "\improper Main Outpost Teleporter"
 	icon_state = "teleporter"
 
 /area/surface/outpost/main/first_aid
@@ -822,7 +827,7 @@
 /area/hallway/primary/seconddeck/dockhallway
 	name = "\improper Shuttle Dock Hallway"
 	icon_state = "docking_hallway"
-	requires_power = 0 //Eclipse addition
+	requires_power = 0 // Eclipse addition
 
 /area/hallway/secondary/seconddeck/research_medical
 	name = "Research Medical Hallway"

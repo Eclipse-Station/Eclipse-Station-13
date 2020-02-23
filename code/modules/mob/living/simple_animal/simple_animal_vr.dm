@@ -238,6 +238,6 @@
 //Grab = Nomf
 /mob/living/simple_animal/UnarmedAttack(var/atom/A, var/proximity)
 	. = ..()
-
-	if(a_intent == I_GRAB && isliving(A) && !has_hands)
-		animal_nom(A)
+	if(vore_active || !no_vore)
+		if(a_intent == I_GRAB && isliving(A) && !has_hands)
+			animal_nom(A)

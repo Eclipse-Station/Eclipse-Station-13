@@ -3,6 +3,7 @@
  * 		Banana Peels
  *		Soap
  *		Bike Horns
+ 		Banana as item
  */
 
 /*
@@ -19,7 +20,7 @@
 	..()
 	create_reagents(5)
 	wet()
- 
+
 /obj/item/weapon/soap/proc/wet()
 	reagents.add_reagent("cleaner", 5)
 
@@ -72,3 +73,8 @@
 		spawn(20)
 			spam_flag = 0
 	return
+
+
+//Actual banana - Eclipse addition
+/obj/item/weapon/reagent_containers/food/snacks/grown/banana
+	plantname = "banana"
