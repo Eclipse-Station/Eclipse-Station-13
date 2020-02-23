@@ -54,7 +54,9 @@ var/datum/controller/supply/supply_controller = new()
 
 	for(var/typepath in subtypesof(/datum/supply_pack))
 		var/datum/supply_pack/P = new typepath()
-		supply_pack[P.name] = P
+		if(!isnull(P) && !isnull(P.name))		//Eclipse edit: if reference is not null and name is not null, go ahead
+			if(P.cost)							//Eclipse edit: No freebies!
+				supply_pack[P.name] = P
 
 /datum/controller/process/supply/setup()
 	name = "supply controller"

@@ -22,8 +22,13 @@
 	var/gas_choices = list("carbon_dioxide", "sleeping_agent") // Annoying
 	if(severity >= EVENT_LEVEL_MODERATE)
 		gas_choices += "phoron" // Dangerous
-	// if(severity >= EVENT_LEVEL_MAJOR)
-	// 	gas_choices += "volatile_fuel" // Dangerous and no default atmos setup!
+// // // BEGIN ECLIPSE EDITS // // //
+		gas_choices += "trichloramine"
+	if(severity >= EVENT_LEVEL_MAJOR)
+		gas_choices -= "carbon_dioxide"		//remove the annoying ones, nothing but danger here
+		gas_choices -= "sleeping_agent"
+		gas_choices += "volatile_fuel" // Dangerous and no default atmos setup!
+// // // END ECLIPSE EDITS // // //
 	gas_type = pick(gas_choices)
 
 	var/list/area/grand_list_of_areas = get_station_areas(excluded)

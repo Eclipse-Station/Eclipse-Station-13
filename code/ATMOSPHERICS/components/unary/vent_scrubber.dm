@@ -109,8 +109,9 @@
 		"filter_phoron" = ("phoron" in scrubbing_gas),
 		"filter_n2o" = ("sleeping_agent" in scrubbing_gas),
 		"filter_fuel" = ("volatile_fuel" in scrubbing_gas),
+		"filter_ncl3" = ("trichloramine" in scrubbing_gas),
 		"sigtype" = "status"
-	)
+	)		//Eclipse edit: Add trichloramine.
 	if(!initial_loc.air_scrub_names[id_tag])
 		var/new_name = "[initial_loc.name] Air Scrubber #[initial_loc.air_scrub_names.len+1]"
 		initial_loc.air_scrub_names[id_tag] = new_name
@@ -239,6 +240,14 @@
 		toggle += "volatile_fuel"
 	else if(signal.data["toggle_fuel_scrub"])
 		toggle += "volatile_fuel"
+	
+	// // // BEGIN ECLIPSE EDITS // // //
+	// Adds trichloramine
+	if(!isnull(signal.data["ncl3_scrub"]) && text2num(signal.data["ncl3_scrub"]) != ("trichloramine" in scrubbing_gas))
+		toggle += "trichloramine"
+	else if(signal.data["toggle_ncl3_scrub"])
+		toggle += "trichloramine"
+	// // // END ECLIPSE EDITS // // //
 
 	scrubbing_gas ^= toggle
 

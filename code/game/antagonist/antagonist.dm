@@ -126,6 +126,13 @@
 			candidates -= player
 			log_debug("[key_name(player)] is not eligible to become a [role_text]: They are already an antagonist! They have been removed from the draft.")
 
+		// // // BEGIN ECLIPSE EDITS // // //
+		//Midround antag.
+		else if(player.assigned_role in restricted_jobs)
+			candidates -= player
+			log_debug("[key_name(player)] is not eligible to become a [role_text]: Their job is incompatible with this role! They have been removed from the draft.")
+		// // // END ECLIPSE EDITS // // //
+
 	return candidates
 
 /datum/antagonist/proc/attempt_random_spawn()
@@ -186,6 +193,12 @@
 	if(!(flags & ANTAG_OVERRIDE_JOB) && (!player.current || istype(player.current, /mob/new_player)))
 		log_debug("[player.key] was selected for [role_text] by lottery, but they have not joined the game.")
 		return 0
+	// // // BEGIN ECLIPSE EDIT // // //
+	//Adds checks against midround antagonists in the job restrictions.
+	if(player.assigned_role in restricted_jobs)
+		log_debug("[player.key] was selected for [role_text] by lottery, but their occupation datum is incompatible with the role.")
+		return 0
+	// // // END ECLIPSE EDIT // // //
 
 	pending_antagonists |= player
 	log_debug("[player.key] has been selected for [role_text] by lottery.")

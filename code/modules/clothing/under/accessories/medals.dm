@@ -54,8 +54,3 @@
 
 //donator items yay
 /obj/item/clothing/accessory/medal/custom
-
-/obj/item/clothing/accessory/medal/custom/usdf_dogtags
-	name = "USDF Dogtags"
-	desc = "United Sol Defense Force Standard Issue Dogtags, these ones in particular are rusted and worn from years or wear. They read: \"Nikolai Volkov, DOB 12/12/2537, Blood Type O+\". The serial number has faded away."
-	icon_state = "donator_usdf_dogtags"

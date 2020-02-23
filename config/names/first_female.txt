@@ -805,7 +805,6 @@ Haylie
 Patricia
 Anne
 Samara
-=======
 Aida
 Alexa
 Alexandria
@@ -2220,9 +2219,6 @@ Africa
 Proxima
 Ceti
 Sabik
->>>>>>> 16f14ee... Merge pull request #4525 from VOREStation/upstream-merge-5732
-
-=======
 Aida
 Alexa
 Alexandria

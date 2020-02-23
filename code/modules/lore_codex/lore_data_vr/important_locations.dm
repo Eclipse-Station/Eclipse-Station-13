@@ -1,3 +1,6 @@
+//This file should be disabled by the compiler.
+#warn This file uses lore for the Virgo-Erigone system.
+
 /datum/lore/codex/category/important_locations
 	name = "Important Locations"
 	data = "There are several locations of interest that you may come across when visiting the system Virgo-Erigone."

@@ -11,12 +11,10 @@ var/list/admin_verbs_default = list(
 //	/client/proc/cmd_mod_say,
 //	/client/proc/deadchat				//toggles deadchat on/off,
 //	/client/proc/toggle_ahelp_sound,
-	/client/proc/add_to_whitelist, //aeiou addition - whitelist
-	/client/proc/reload_whitelist,
-	)
+	/client/proc/add_to_whitelist,
+	/client/proc/reload_whitelist)
 
 var/list/admin_verbs_admin = list(
-	/client/proc/discord_test,
 	/client/proc/discord_msg,
 	/client/proc/player_panel_new, //shows an interface for all players, with links to various panels,
 	/datum/admins/proc/set_tcrystals,
@@ -39,8 +37,8 @@ var/list/admin_verbs_admin = list(
 	/client/proc/cmd_admin_pm_context,	//right-click adminPM interface,
 	/client/proc/cmd_admin_pm_panel,	//admin-pm list,
 	/client/proc/cmd_admin_subtle_message,	//send an message to somebody as a 'voice in their head',
-	/client/proc/cmd_admin_icsubtle_message, //send a message to someone as a voice from centcom
-	/client/proc/cmd_admin_delete,		//delete an instance/object/mob/etc,
+	/client/proc/cmd_admin_icsubtle_message, //send a message to someone as a voice from centcom,
+	/client/proc/cmd_admin_delete, //delete an instance/object/mob/etc,
 	/client/proc/cmd_admin_check_contents,	//displays the contents of an instance,
 	/datum/admins/proc/access_news_network,	//allows access of newscasters,
 	/client/proc/giveruntimelog,		//allows us to give access to runtime logs to somebody,
@@ -58,6 +56,8 @@ var/list/admin_verbs_admin = list(
 	/client/proc/admin_cancel_shuttle,	//allows us to cancel the emergency shuttle, sending it back to CentCom,
 	/client/proc/cmd_admin_direct_narrate,	//send text directly to a player with no padding. Useful for narratives and fluff-text,
 	/client/proc/cmd_admin_world_narrate,	//sends text to all players with no padding,
+	/client/proc/cmd_admin_direct_narrate_unsafe,	//send text directly to a player with no padding. Useful for narratives and fluff-text UNSAFE,
+	/client/proc/cmd_admin_world_narrate_unsafe,	//sends text to all players with no padding UNSAFE - Eclipse additions,
 	/client/proc/cmd_admin_create_centcom_report,
 	/client/proc/check_words,			//displays cult-words,
 	/client/proc/check_ai_laws,			//shows AI and borg laws,
@@ -177,7 +177,7 @@ var/list/admin_verbs_server = list(
 	/datum/admins/proc/immreboot,
 	/client/proc/everyone_random,
 	/datum/admins/proc/toggleAI,
-	/client/proc/cmd_admin_delete,		//delete an instance/object/mob/etc,
+	/client/proc/cmd_admin_delete,
 	/client/proc/cmd_debug_del_all,
 	/datum/admins/proc/adrev,
 	/datum/admins/proc/adspawn,

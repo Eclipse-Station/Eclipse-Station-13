@@ -337,6 +337,10 @@ Guard Family
 	icon_state = "spark"
 	icon_living = "spark"
 	icon_dead = "spark_dead"
+	var/max_charge = 100	//Eclipse edit: Total Taser charge.
+	var/charge = 0			//Eclipse edit: Initial Taser charge.
+	var/shot_charge = 12.5		//Eclipse edit: Charge per shot. 8 shots per charge.
+	var/recharge_rate = 2.5	//Eclipse edit: Recharge per life() cycle. 5 cycles per new shot.
 
 	maxHealth = 210
 	health = 210
@@ -355,6 +359,47 @@ Guard Family
 	poison_per_bite = 3
 	poison_type = "stimm"
 
+// // // BEGIN ECLIPSE EDITS // // //
+// Spiders will now have a finite charge on their Taser tails.
+/mob/living/simple_animal/hostile/giant_spider/electric/Life()
+	..()
+	
+	if(charge < max_charge)		//if we're not at full charge, recharge one unit per life cycle
+		if((charge + recharge_rate) > max_charge)	//if one charge cycle puts us over the charge limit, just set us to the limit.
+			charge = max_charge
+		else
+			charge += recharge_rate
+		
+	if(charge > shot_charge)		//If our charge is less than that needed to shoot, fall back to beating the shit out of the target.
+		ranged = TRUE
+	else
+		ranged = FALSE
+	
+/mob/living/simple_animal/hostile/giant_spider/electric/ShootTarget()
+	if(charge > shot_charge)		//add that check here too, because we bloody well can
+		ranged = TRUE
+	else
+		ranged = FALSE
+	
+	if(!ranged) 
+		return FALSE
+	else
+		charge -= shot_charge
+		return ..()
+	
+	
+	CRASH("Return statement failed to end proc, crashing")
+	
+
+/mob/living/simple_animal/hostile/giant_spider/electric/charged
+	charge = 100		//starts charged and ready to go.
+	//the reason we don't want the Taser spiders to start charged is if a 'ling
+	//grows up to be a Taser spider, we don't want players to immediately get
+	//screwed over by RNGesus. However, there may be a reason to spawn in one
+	//that's already charged (events, testing, etc), so we have a subtype here
+	//just for such an occasion. ^Spitzer
+
+// // // END ECLIPSE EDITS // // //
 /mob/living/simple_animal/hostile/giant_spider/phorogenic
 	desc = "Crystalline and purple, it makes you shudder to look at it. This one has haunting purple eyes."
 	tt_desc = "X Brachypelma phorus phorus"

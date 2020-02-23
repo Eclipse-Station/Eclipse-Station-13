@@ -456,7 +456,7 @@
 	ship_prefixes = list("VEFD" = "fire rescue", "VEPD" = "patrol", "VEGA" = "administrative", "SAR" = "medivac")
 	destination_names = list(
 						"the colony at Virgo-3B",
-						"the VORE-1 debris field",
+						"the Virgo-Erigone 1 debris field",
 						"a mining colony on Virgo-2",
 						"the Anur Spaceport",
 						"to a local distress beacon",

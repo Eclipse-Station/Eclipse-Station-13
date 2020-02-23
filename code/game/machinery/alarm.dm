@@ -71,7 +71,7 @@
 	var/datum/radio_frequency/radio_connection
 
 	var/list/TLV = list()
-	var/list/trace_gas = list("sleeping_agent", "volatile_fuel") //list of other gases that this air alarm is able to detect
+	var/list/trace_gas = list("sleeping_agent", "volatile_fuel","trichloramine") //list of other gases that this air alarm is able to detect		//eclipse edit: add trichlor
 
 	var/danger_level = 0
 	var/pressure_dangerlevel = 0
@@ -565,6 +565,7 @@
 				scrubbers[scrubbers.len]["filters"] += list(list("name" = "Toxin"	, 		"command" = "tox_scrub","val" = info["filter_phoron"]))
 				scrubbers[scrubbers.len]["filters"] += list(list("name" = "Nitrous Oxide",	"command" = "n2o_scrub","val" = info["filter_n2o"]))
 				scrubbers[scrubbers.len]["filters"] += list(list("name" = "Fuel",			"command" = "fuel_scrub","val" = info["filter_fuel"]))
+				scrubbers[scrubbers.len]["filters"] += list(list("name" = "Trichloramine",	"command" = "ncl3_scrub","val" = info["filter_ncl3"]))	//Eclipse addition
 			data["scrubbers"] = scrubbers
 		if(AALARM_SCREEN_MODE)
 			var/modes[0]
@@ -672,9 +673,10 @@
 					"tox_scrub",
 					"n2o_scrub",
 					"fuel_scrub",
+					"ncl3_scrub",
 					"panic_siphon",
 					"scrubbing",
-					"direction")
+					"direction")	//Eclipse addition: Added NCl3_scrub entry
 
 					send_signal(device_id, list(href_list["command"] = text2num(href_list["val"])))
 					return 1

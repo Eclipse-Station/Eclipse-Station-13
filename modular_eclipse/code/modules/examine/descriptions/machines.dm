@@ -1,0 +1,2 @@
+/obj/machinery/space_heater
+	description_info = "A screwdriver can be used to open the access panel. This allows you to replace the power cell. It also lets you adjust the temperature. Can also be used to cool rooms that are too hot, despite the name."

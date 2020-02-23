@@ -89,7 +89,7 @@
 	<br><br>\
 	With the help of Skrellean technology, the Akula had their genome modified to be capable of surviving in open air for long periods of time. \
 	However, Akula even today still require a high humidity environment to avoid drying out after a few days, which would make life on an arid world like \
-	[quick_link("Virgo-Prime")] nearly impossible if it were not for Skrellean technology to aid them."
+	Virgo-Prime or Moghes nearly impossible if it were not for Skrellean technology to aid them."
 
 /datum/lore/codex/page/nevrean/add_content()
 	name = "Nevrean"
@@ -127,10 +127,10 @@
 	authorities. They speak a guttural language known as 'Canilunzt' which has a heavy emphasis on utilizing tail \
 	positioning and ear twitches to communicate intent."
 
-/datum/lore/codex/page/zorren/add_content()
+/datum/lore/codex/page/zorren/add_content()		//Eclipse note: Do we even have Zorren in our lore? ^Spitzer
 	name = "Zorren"
 	keywords += list("Zorren")
-	data = "The fox-like Zorren are native to [quick_link("Virgo-Prime")], however there are two distinct varieties of \
+	data = "The fox-like Zorren are native to Virgo-Prime however there are two distinct varieties of \
 	Zorren one with large ears and shorter fur, and the other with longer fur that is a bit more vibrant. The \
 	long-eared, short-furred Zorren have come to be known as \"Flatland\" Zorren as that is where most of their \
 	settlements are located. The Flatland Zorren are somewhat tribal and shamanistic as they have only recently \

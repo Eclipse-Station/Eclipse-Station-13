@@ -440,6 +440,8 @@
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 		for(var/obj/item/organ/I in H.internal_organs)
+			if(I.damage >= 20)		//Eclipse edit: If your organs are that fucked you got problems that pills ain't gonna fix, buddy
+				continue
 			if(I.robotic >= ORGAN_ROBOT)
 				continue
 			if(I.damage > 0) //Peridaxon heals only non-robotic organs
@@ -466,6 +468,9 @@
 /datum/reagent/osteodaxon/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_DIONA)
 		return
+// // // BEGIN ECLIPSE EDITS // // //
+// Pills ain't gonna fix a sledgehammer to the back of the leg
+/*		//Eclipse Removal
 	M.heal_organ_damage(3 * removed, 0)	//Gives the bones a chance to set properly even without other meds
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
@@ -474,6 +479,12 @@
 				O.mend_fracture()		//Only works if the bone won't rebreak, as usual
 				H.custom_pain("You feel a terrible agony tear through your bones!",60)
 				H.AdjustWeakened(1)		//Bones being regrown will knock you over
+*/
+	if(ishuman(M))
+		var/mob/living/carbon/human/H = M
+		for(var/obj/item/organ/external/O in H.bad_external_organs)
+			O.heal_damage(3 * removed, 0)		//No fancy shit here. Just healing.
+// // // END ECLIPSE EDITS // // //
 
 /datum/reagent/myelamine
 	name = "Myelamine"
