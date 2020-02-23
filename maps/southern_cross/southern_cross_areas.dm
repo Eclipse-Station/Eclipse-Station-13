@@ -160,27 +160,27 @@
 
 // Main mining outpost
 /area/surface/outpost/mining_main
-	name = "North Mining Outpost"
+	name = "\improper North Mining Outpost"
 	icon_state = "outpost_mine_main"
 
 /area/surface/outpost/mining_main/exterior
-	name = "North Mining Outpost Exterior"
+	name = "\improper North Mining Outpost Exterior"
 	icon_state = "outpost_mine_main"
 
 /area/surface/outpost/mining_main/crew_area
-	name = "North Mining Crew Area"
+	name = "\improper North Mining Crew Area"
 
 /area/surface/outpost/mining_main/firstaid
-	name = "North Mining First-Aid Station"
+	name = "\improper North Mining First-Aid Station"
 
 /area/surface/outpost/mining_main/storage
-	name = "North Mining Gear Storage"
+	name = "\improper North Mining Gear Storage"
 
 /area/surface/outpost/mining_main/mech_bay
-	name = "North Mining Mech Bay"
+	name = "\improper North Mining Mech Bay"
 
 /area/surface/outpost/mining_main/gen_room
-	name = "North Mining Generator Room"
+	name = "\improper North Mining Generator Room"
 	icon_state = "substation"
 
 /area/surface/outpost/mining_main/emergencystorage
@@ -189,14 +189,14 @@
 	sound_env = SMALL_ENCLOSED
 
 /area/surface/outpost/mining_main/refinery
-	name = "North Mining Refinery"
+	name = "\improper North Mining Refinery"
 
 /area/surface/outpost/mining_main/restroom
-	name = "North Mining Restroom"
+	name = "\improper North Mining Restroom"
 	sound_env = SMALL_ENCLOSED
 
 /area/surface/outpost/mining_main/cave
-	name = "North Mining Outpost Cave"
+	name = "\improper North Mining Outpost Cave"
 	icon_state = "outpost_mine_main"
 
 //Research Surface Outpost

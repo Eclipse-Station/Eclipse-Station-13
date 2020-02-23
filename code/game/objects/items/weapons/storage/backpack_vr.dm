@@ -5,7 +5,7 @@
 	icon_override = 'icons/mob/back_vr.dmi'
 	item_state = "saddlebag"
 	icon_state = "saddlebag"
-	max_storage_space = INVENTORY_DUFFLEBAG_SPACE //Saddlebags can hold more, like dufflebags
+	max_storage_space = INVENTORY_DUFFLEBAG_SPACE //Saddlebags can hold more, like duffel bags
 	slowdown = 1 //And are slower, too...Unless you're a macro, that is.
 	var/taurtype = /datum/sprite_accessory/tail/taur/horse //Acceptable taur type to be wearing this
 	var/no_message = "You aren't the appropriate taur type to wear this!"
@@ -38,7 +38,7 @@
 	item_state = "saddlebag"
 	icon_state = "saddlebag"
 	var/icon_base = "saddlebag"
-	max_storage_space = INVENTORY_DUFFLEBAG_SPACE //Saddlebags can hold more, like dufflebags
+	max_storage_space = INVENTORY_DUFFLEBAG_SPACE //Saddlebags can hold more, like duffel bags
 	slowdown = 1 //And are slower, too...Unless you're a macro, that is.
 	var/no_message = "You aren't the appropriate taur type to wear this!"
 
@@ -125,7 +125,7 @@
 	max_storage_space = INVENTORY_STANDARD_SPACE
 	slowdown = 0
 
-/obj/item/weapon/storage/backpack/dufflebag/fluff //Black dufflebag without syndie buffs.
-	name = "plain black dufflebag"
-	desc = "A large dufflebag for holding extra tactical supplies."
+/obj/item/weapon/storage/backpack/dufflebag/fluff //Black duffel bag without syndie buffs.
+	name = "plain black duffel bag"
+	desc = "A large duffel bag for holding extra tactical supplies."
 	icon_state = "duffle_syndie"

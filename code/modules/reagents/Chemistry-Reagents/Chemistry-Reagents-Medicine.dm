@@ -666,7 +666,7 @@
 
 	var/mob/living/carbon/human/H = M
 
-	if(ishuman(M) && alien == IS_SLIME) //Everything about them is treated like a targetted organism. Widespread bodily function begins to fail.
+	if(ishuman(M) && alien == IS_SLIME) //Everything about them is treated like a targeted organism. Widespread bodily function begins to fail.
 		if(volume <= 0.1 && data != -1)
 			data = -1
 			to_chat(M, "<span class='notice'>Your body ceases its revolt.</span>")
@@ -709,7 +709,7 @@
 		M.make_dizzy(5)
 	if(prob(20))
 		M.hallucination = max(M.hallucination, 10)
-	
+
 	//One of the levofloxacin side effects is 'spontaneous tendon rupture', which I'll immitate here. 1:1000 chance, so, pretty darn rare.
 	if(ishuman(M) && rand(1,10000) == 1) //VOREStation Edit (more rare)
 		var/obj/item/organ/external/eo = pick(H.organs) //Misleading variable name, 'organs' is only external organs

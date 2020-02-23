@@ -102,7 +102,7 @@ Class Procs:
 	var/stat = 0
 	var/emagged = 0
 	var/use_power = 1
-		//0 = dont run the auto
+		//0 = don't run the auto
 		//1 = run auto, use idle
 		//2 = run auto, use active
 	var/idle_power_usage = 0
@@ -112,7 +112,7 @@ Class Procs:
 	var/uid
 	var/panel_open = 0
 	var/global/gl_uid = 1
-	var/clicksound			// sound played on succesful interface. Just put it in the list of vars at the start.
+	var/clicksound			// sound played on successful interface. Just put it in the list of vars at the start.
 	var/clickvol = 40		// volume
 	var/interact_offline = 0 // Can the machine be interacted with while de-powered.
 	var/obj/item/weapon/circuitboard/circuit = null
@@ -149,7 +149,7 @@ Class Procs:
 				qdel(A)
 	return ..()
 
-/obj/machinery/process()//If you dont use process or power why are you here
+/obj/machinery/process()//If you don't use process or power why are you here
 	if(!(use_power || idle_power_usage || active_power_usage))
 		return PROCESS_KILL
 

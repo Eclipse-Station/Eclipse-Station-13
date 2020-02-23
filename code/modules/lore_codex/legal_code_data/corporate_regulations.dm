@@ -36,7 +36,7 @@
 	name = "Controlled Objects"
 	data = "A 'controlled' object is contraband that NanoTrasen has deemed harmful, or otherwise undesired for the \
 	facility, but which is not illegal by Law or dangerous to possess.  Vessels docking with the facility which possess these \
-	objects are required to keep them onboard their vessel.  Visitors who board the facility with these objects are required to \
+	objects are required to keep them on board their vessel.  Visitors who board the facility with these objects are required to \
 	surrender them, or otherwise have them confiscated, however they may have them back upon leaving.\
 	<br><br>\
 	The following objects are 'controlled'.\
@@ -52,14 +52,14 @@
 	name = "Restricted Objects"
 	data = "A 'restricted' object is contraband which Nanotrasen deems dangerous to the welfare of the facility as a whole, \
 	such as a deadly weapon, <u>by someone not authorized to handle it.</u>  Vessels docking with the facility which possess these \
-	objects are required to keep them onboard their vessel.  Possessing restricted objects is a much more serious issue, and \
-	as such, possession can consititute a brig sentence, and the permanent confiscation of the objects in question.\
+	objects are required to keep them on board their vessel.  Possessing restricted objects is a much more serious issue, and \
+	as such, possession can constitute a brig sentence, and the permanent confiscation of the objects in question.\
 	<br><br>\
 	The following objects are 'restricted'.\
 	<ul>\
 	<li><b>Deadly Weapons</b>, which is defined as objects which are designed to kill or otherwise severely injure a person.</li>\
 	<li><b>Lethal Guns</b>, meaning guns which possess the capability to kill someone.  Functional ballistic weaponry can be loaded \
-	with ammunition that is lethal, meaning it falls under this.  Energy weapons lacking a lethal mode, such as tasers, do not fall under this.  \
+	with ammunition that is lethal, meaning it falls under this.  Energy weapons lacking a lethal mode, such as Tasers, do not fall under this.  \
 	Weapons which emit electromagnetic pulses, sometimes called 'Ionic' weapons, are considered lethal, as they are lethal to synthetics.</li>\
 	<li><b>Narcotic Drugs</b>, such as Mindbreaker.</li>\
 	<li><b>Illicit Identification Cards</b>, which includes forgeries, as well as ID cards designed to tamper with electronics.</li>\
@@ -142,7 +142,7 @@
 	definition = "Repetitively using the radio, PDA relays, or other public communication methods as a means to annoy, disturb, \
 	slander, or otherwise verbally abuse others, and ignoring requests to stop."
 	suggested_punishments = "Confiscation of radio <u>if they fail to stop when asked</u>. Demotion at discretion of Superior."
-	notes = "Using languages besides Galactic Common on the radio can consitute Misuse of Public Communications if the station is on Blue alert or higher."
+	notes = "Using languages besides Galactic Common on the radio can constitute Misuse of Public Communications if the station is on Blue alert or higher."
 	..()
 
 /datum/lore/codex/page/law/failure_to_execute_order
@@ -185,7 +185,7 @@
 /datum/lore/codex/page/law/resisting_arrest
 	name = "Resisting Arrest"
 	definition = "Noncompliance with an Arresting Officer, whom has cause, and is following SOP."
-	suggested_punishments = "Fine of up to 200 thaler, or brig time extention up to 20 minutes. Demotion at discretion of Superior."
+	suggested_punishments = "Fine of up to 200 thaler, or brig time extension up to 20 minutes. Demotion at discretion of Superior."
 	suggested_fine = 200
 	suggested_brig_time = 20 MINUTES
 	notes = "If this disputed, an Internal Affairs Agent (if available) is to be the impartial mediator."
@@ -194,7 +194,7 @@
 	name = "Possession of a Controlled Item (Contraband)"
 	definition = "Carrying an object which NanoTrasen has deemed harmful, or otherwise undesired for the \
 	station, but which is not illegal by Law or dangerous to possess."
-	suggested_punishments = "Confiscation of the controlled items if brought onboard. The owner may have the items back when they leave the station."
+	suggested_punishments = "Confiscation of the controlled items if brought on board. The owner may have the items back when they leave the station."
 	notes = "Visitors boarding the station with controlled items must leave the item outside the station (e.g. their vessel), or surrender \
 	it to the Security team for the duration of their stay.  A list of contraband is provided inside this book."
 
@@ -204,7 +204,7 @@
 	an employee of NanoTrasen."
 	suggested_punishments = "Fine of up to 100 thaler. Demotion at discretion of Superior."
 	suggested_fine = 100
-	notes = "Accidential cases resulting from, for example, ignorance of a species' culture, invalidates this charge."
+	notes = "Accidental cases resulting from, for example, ignorance of a species' culture, invalidates this charge."
 
 /datum/lore/codex/page/law/indecent_exposure
 	name = "Indecent Exposure"
@@ -287,7 +287,7 @@
 	name = "Neglect of Duty"
 	definition = "To fail to meet satisfactory work standards."
 	suggested_punishments = "Demotion at discretion of Superior.  Termination at discretion of Station Director."
-	notes = "This includes accidents, refusing or failing to work, or simply not providing a resonable amount of productivity, when the offender is capable of work.  This charge \
+	notes = "This includes accidents, refusing or failing to work, or simply not providing a reasonable amount of productivity, when the offender is capable of work.  This charge \
 	is meant to be applied only by Command staff to their subordinates, and not from individual Security Officers."
 
 /datum/lore/codex/page/law/deception
@@ -301,7 +301,7 @@
 	name = "Wrongful Dismissal"
 	definition = "To demote, dismiss, terminate, or otherwise reduce a crewmember's rank for no valid, or a knowingly false reason."
 	suggested_punishments = "Demotion.  Termination at discretion of Station Director.  Notify Central Command."
-	notes = "An Internal Affairs Agent is required to do an investigation in order to conclude if this has occured or not.  Security cannot \
+	notes = "An Internal Affairs Agent is required to do an investigation in order to conclude if this has occurred or not.  Security cannot \
 	give this charge out on their own."
 	mandated = TRUE
 

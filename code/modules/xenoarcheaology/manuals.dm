@@ -65,7 +65,7 @@
 				<a href="#Contents">Contents</a>
 
 				<h1><a name="Find">Finding the dig</a></h1>
-				Wouldn't be an archaeologist without their dig, but everyone has to start somewhere. Here's a basic procedure I go through when cataloguing a new planet:<br>
+				Wouldn't be an archaeologist without their dig, but everyone has to start somewhere. Here's a basic procedure I go through when cataloging a new planet:<br>
 				<ul>
 					<li><b>Get in touch with the locals</b> (in particular geologists, miners, and farmers) - Never know what's been turned up by accident, then left to
 						gather dust on a shelf.</li>

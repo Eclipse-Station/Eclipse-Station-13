@@ -249,7 +249,7 @@
 	//log_debug("designer.update_preview_mob([H]) active_br = \ref[active_br]")
 	//Get the DNA and generate a new mob
 	var/datum/dna2/record/R = active_br.mydna
-	H.set_species(R.dna.species) // This needs to happen before anything else becuase it sets some variables.
+	H.set_species(R.dna.species) // This needs to happen before anything else because it sets some variables.
 
 	// Update the external organs
 	for(var/part in active_br.limb_data)
@@ -269,7 +269,7 @@
 			else
 				O.remove_rejuv()
 
-	// Then the internal organs.  I think only O_EYES acutally counts, but lets do all just in case
+	// Then the internal organs.  I think only O_EYES actually counts, but lets do all just in case
 	for(var/part in active_br.organ_data)
 		var/status = active_br.organ_data[part]
 		if(status == null) continue //Species doesn't have organ? Child of missing part?
@@ -300,7 +300,7 @@
 
 // HORROR SHOW BELOW
 // In order to avoid duplicating the many lines of code in player_setup that handle customizing
-// body setup, we acutally are invoking those methods in order to let people customize the body here.
+// body setup, we actually are invoking those methods in order to let people customize the body here.
 // Problem is, those procs save their data to /datum/preferences, not a body_record.
 // Luckily the procs to convert from body_record to /datum/preferences and back already exist.
 // Its ugly, but I think its still better than duplicating and maintaining all that code.

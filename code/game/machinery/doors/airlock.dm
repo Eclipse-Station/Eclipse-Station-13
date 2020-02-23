@@ -743,7 +743,7 @@ About the new airlock wires panel:
 			to_chat(user,"Airlock AI control has been blocked. Beginning fault-detection.")
 			sleep(50)
 			if(src.canAIControl())
-				to_chat(user,"Alert cancelled. Airlock control has been restored without our assistance.")
+				to_chat(user,"Alert canceled. Airlock control has been restored without our assistance.")
 				src.aiHacking=0
 				return
 			else if(!src.canAIHack(user))
@@ -755,7 +755,7 @@ About the new airlock wires panel:
 			to_chat(user,"Attempting to hack into airlock. This may take some time.")
 			sleep(200)
 			if(src.canAIControl())
-				to_chat(user,"Alert cancelled. Airlock control has been restored without our assistance.")
+				to_chat(user,"Alert canceled. Airlock control has been restored without our assistance.")
 				src.aiHacking=0
 				return
 			else if(!src.canAIHack(user))
@@ -765,7 +765,7 @@ About the new airlock wires panel:
 			to_chat(user,"Upload access confirmed. Loading control program into airlock software.")
 			sleep(170)
 			if(src.canAIControl())
-				to_chat(user,"Alert cancelled. Airlock control has been restored without our assistance.")
+				to_chat(user,"Alert canceled. Airlock control has been restored without our assistance.")
 				src.aiHacking=0
 				return
 			else if(!src.canAIHack(user))

@@ -31,11 +31,11 @@
 	shuttle_docked_message = "Test Shuttle Docked"
 	shuttle_leaving_dock = "Test Shuttle Leaving"
 	shuttle_called_message = "Test Shuttle Coming"
-	shuttle_recall_message = "Test Shuttle Cancelled"
+	shuttle_recall_message = "Test Shuttle Canceled"
 	emergency_shuttle_docked_message = "Test E-Shuttle Docked"
 	emergency_shuttle_leaving_dock = "Test E-Shuttle Left"
 	emergency_shuttle_called_message = "Test E-Shuttle Coming"
-	emergency_shuttle_recall_message = "Test E-Shuttle Cancelled"
+	emergency_shuttle_recall_message = "Test E-Shuttle Canceled"
 
 	station_networks = list(
 							NETWORK_CARGO,

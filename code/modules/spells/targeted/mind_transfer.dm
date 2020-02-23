@@ -15,7 +15,7 @@
 	// TODO: Update to new antagonist system.
 	var/list/protected_roles = list("Wizard","Changeling","Cultist") //which roles are immune to the spell
 	var/msg_wait = 500 //how long in deciseconds it waits before telling that body doesn't feel right or mind swap robbed of a spell
-	amt_paralysis = 20 //how much the victim is paralysed for after the spell
+	amt_paralysis = 20 //how much the victim is paralyzed for after the spell
 
 	hud_state = "wiz_mindswap"
 
@@ -35,13 +35,13 @@
 			user << "Their mind is resisting your spell."
 			continue
 
-		var/mob/living/victim = target//The target of the spell whos body will be transferred to.
+		var/mob/living/victim = target//The target of the spell whose body will be transferred to.
 		var/mob/caster = user//The wizard/whomever doing the body transferring.
 
 		//MIND TRANSFER BEGIN
 		if(caster.mind.special_verbs.len)//If the caster had any special verbs, remove them from the mob verb list.
 			for(var/V in caster.mind.special_verbs)//Since the caster is using an object spell system, this is mostly moot.
-				caster.verbs -= V//But a safety nontheless.
+				caster.verbs -= V//But a safety nonetheless.
 
 		if(victim.mind.special_verbs.len)//Now remove all of the victim's verbs.
 			for(var/V in victim.mind.special_verbs)

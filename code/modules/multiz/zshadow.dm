@@ -42,7 +42,7 @@
 // Relay some stuff they hear
 /mob/zshadow/hear_say(var/message, var/verb = "says", var/datum/language/language = null, var/alt_name = "", var/italics = 0, var/mob/speaker = null, var/sound/speech_sound, var/sound_vol)
 	if(speaker && speaker.z != src.z)
-		return // Only relay speech on our acutal z, otherwise we might relay sounds that were themselves relayed up!
+		return // Only relay speech on our actual z, otherwise we might relay sounds that were themselves relayed up!
 	if(isliving(owner))
 		verb += " from above"
 	return owner.hear_say(message, verb, language, alt_name, italics, speaker, speech_sound, sound_vol)
@@ -70,7 +70,7 @@
 
 /mob/living/on_mob_jump()
 	// We're about to be admin-jumped.
-	// Unfortuantely loc isn't set until after this proc is called. So we must spawn() so check_shadow executes with the new loc.
+	// Unfortunately loc isn't set until after this proc is called. So we must spawn() so check_shadow executes with the new loc.
 	. = ..()
 	if(shadow)
 		spawn(0)

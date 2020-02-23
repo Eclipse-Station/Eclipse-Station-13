@@ -205,7 +205,7 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/bugball
 	name = "bugball"
-	desc = "A hard chitin, dont chip a tooth!"
+	desc = "A hard chitin, don't chip a tooth!"
 	icon = 'icons/obj/food_vr.dmi'
 	icon_state = "pillbugball"
 	slice_path = /obj/item/weapon/reagent_containers/food/snacks/pillbug

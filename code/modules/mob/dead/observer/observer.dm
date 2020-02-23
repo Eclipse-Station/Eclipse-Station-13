@@ -43,7 +43,7 @@
 		"King" = "ghostking",
 		"Shade" = "shade",
 		"Hecate" = "ghost-narsie",
-		"Glowing Statue" = "armour",
+		"Glowing Statue" = "armor",
 		"Artificer" = "artificer",
 		"Behemoth" = "behemoth",
 		"Harvester" = "harvester",

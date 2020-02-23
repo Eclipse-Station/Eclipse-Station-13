@@ -96,7 +96,7 @@
 
 /datum/map_template/surface/wilderness/normal/Shack1
 	name = "Shack1"
-	desc = "A small shack in the middle of nowhere, Your halloween murder happens here"
+	desc = "A small shack in the middle of nowhere, Your Halloween murder happens here"
 	mappath = 'maps/submaps/surface_submaps/wilderness/Shack1.dmm'
 	allow_duplicates = FALSE //Cit change; these spawn everywhere, cluttering the place with pretty much nothing, and wasting points
 	cost = 3

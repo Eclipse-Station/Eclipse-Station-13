@@ -27,9 +27,9 @@
 	response_disarm = "gently pushes aside"
 	response_harm   = "stamps on"
 
-	min_oxy = 16 //Require atleast 16kPA oxygen
-	minbodytemp = 223		//Below -50 Degrees Celcius
-	maxbodytemp = 323	//Above 50 Degrees Celcius
+	min_oxy = 16 //Require at least 16kPA oxygen
+	minbodytemp = 223		//Below -50 Degrees Celsius
+	maxbodytemp = 323	//Above 50 Degrees Celsius
 
 	has_langs = list("Mouse")
 	speak_chance = 1

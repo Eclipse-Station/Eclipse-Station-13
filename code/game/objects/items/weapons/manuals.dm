@@ -150,7 +150,7 @@
 // TESLA Engine
 
 /obj/item/weapon/book/manual/tesla_engine
-	name = "Tesla Operating Manual"
+	name = "\improper Tesla Operating Manual"
 	icon_state ="bookTesla"
 	author = "Engineering Encyclopedia"
 	title = "Tesla Engine User's Guide"
@@ -180,7 +180,7 @@
 				</ol>
 				</p>
 				<p>Tesla Coils will attract the energy ball&apos;s bolts. They will take half the power of the bolt (if they are connected to a wire node), pump it into the powernet it is hooked to, and then will send the other half of the power to the next available conductor, which follows the criteria listed above. Preferably, this will be another coil to harness more of the power and pump it into the grid.</p>
-				<p>Grounding Rods are safety precautions to prevent the tesla bolts from hitting machinery or personnel. If the tesla is loose, being near one will usually keep you safe from direct shocks.</p>
+				<p>Grounding Rods are safety precautions to prevent the Tesla bolts from hitting machinery or personnel. If the Tesla is loose, being near one will usually keep you safe from direct shocks.</p>
 				<br>
 				<h2>STARTUP PROCEDURE</h2>
 				<ol>
@@ -204,7 +204,7 @@
 				<br>
 				<h2>SHUTDOWN PROCEDURE</h2>
 				<ol>
-				<li>De-activate the Particle Accelerator.  The energy ball will begin to shrink and lose mini-balls.</li>
+				<li>De-activate the Particle Accelerator. The energy ball will begin to shrink and lose mini-balls.</li>
 				<li>When the energy ball has completely dissipated, the Emitters can be de-activated.</li>
 				</ol>
 				<br>

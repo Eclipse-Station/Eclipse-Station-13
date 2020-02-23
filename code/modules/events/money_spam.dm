@@ -54,7 +54,7 @@
 					"Once you are a player with MaxBet, you will also receive lucrative weekly and monthly promotions.",\
 					"You will be able to enjoy over 450 top-flight casino games at MaxBet.")
 				if(2)
-					sender = pick(300;"QuickDatingSystem",200;"Find your russian bride",50;"Tajaran beauties are waiting",50;"Find your secret skrell crush",50;"Beautiful unathi brides")
+					sender = pick(300;"QuickDatingSystem",200;"Find your Russian bride",50;"Tajaran beauties are waiting",50;"Find your secret Skrell crush",50;"Beautiful Unathi brides")
 					message = pick("Your profile caught my attention and I wanted to write and say hello (QuickDating).",\
 					"If you will write to me on my email [pick(first_names_female)]@[pick(last_names)].[pick("ru","ck","tj","ur","nt")] I shall necessarily send you a photo (QuickDating).",\
 					"I want that we write each other and I hope, that you will like my profile and you will answer me (QuickDating).",\
@@ -86,8 +86,8 @@
 				if(6)
 					sender = pick("[using_map.company_name] Morale Division","Feeling Lonely?","Bored?","www.wetskrell.nt")
 					message = pick("The [using_map.company_name] Morale Division wishes to provide you with quality entertainment sites.",\
-					"WetSkrell.nt is a xenophillic website endorsed by NT for the use of male crewmembers among it's many stations and outposts.",\
-					"Wetskrell.nt only provides the higest quality of male entertaiment to [using_map.company_name] Employees.",\
+					"WetSkrell.nt is a xenophillic website endorsed by NT for the use of male crew members among it's many stations and outposts.",\
+					"Wetskrell.nt only provides the highest quality of male entertainment to [using_map.company_name] Employees.",\
 					"Simply enter your [using_map.company_name] Bank account system number and pin. With three easy steps this service could be yours!")
 				if(7)
 					sender = pick("You have won free tickets!","Click here to claim your prize!","You are the 1000th visitor!","You are our lucky grand prize winner!")

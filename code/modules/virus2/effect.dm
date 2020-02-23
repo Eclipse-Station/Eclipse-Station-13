@@ -53,7 +53,7 @@
 
 	proc/activate(var/mob/living/carbon/mob,var/multiplier)
 	proc/deactivate(var/mob/living/carbon/mob)
-	proc/generate(copy_data) // copy_data will be non-null if this is a copy; it should be used to initialise the data for this effect if present
+	proc/generate(copy_data) // copy_data will be non-null if this is a copy; it should be used to initialize the data for this effect if present
 
 /datum/disease2/effect/invisible
 	name = "Waiting Syndrome"

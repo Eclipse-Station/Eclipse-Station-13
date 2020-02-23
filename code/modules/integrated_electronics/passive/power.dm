@@ -94,7 +94,7 @@
 
 // For fat machines that need fat power, like drones.
 /obj/item/integrated_circuit/passive/power/relay
-	name = "Tesla power relay"
+	name = "\improper Tesla power relay"
 	desc = "A seemingly enigmatic device which connects to nearby APCs wirelessly and draws power from them."
 	w_class = ITEMSIZE_NORMAL
 	extended_desc = "The siphon generates 250W of energy, so long as an APC is in the same room, with a cell that has energy.  It will always drain \

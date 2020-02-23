@@ -119,10 +119,10 @@
 		return
 
 /obj/item/device/closet_painter/attack_self(var/mob/user)
-	var/choice = input("Do you wish to change the regular closet colour or the secure closet colour?") as null|anything in list("Regular Closet Colour","Secure Closet Colour")
-	if(choice == "Regular Closet Colour")
+	var/choice = input("Do you wish to change the regular closet color or the secure closet color?") as null|anything in list("Regular Closet Color","Secure Closet Color")
+	if(choice == "Regular Closet Color")
 		choose_colour()
-	else if(choice == "Secure Closet Colour")
+	else if(choice == "Secure Closet Color")
 		choose_colour_secure()
 
 /obj/item/device/closet_painter/examine(mob/user)
@@ -138,21 +138,21 @@
 	if(usr.incapacitated())
 		return
 
-	var/new_colour = input("Select a colour.") as null|anything in colours
+	var/new_colour = input("Select a color.") as null|anything in colours
 	if(new_colour && !isnull(colours[new_colour]))
 		colour = new_colour
-		usr << "<span class='notice'>You set \the [src] regular closet colour to '[colour]'.</span>"
+		usr << "<span class='notice'>You set \the [src] regular closet color to '[colour]'.</span>"
 
 /obj/item/device/closet_painter/verb/choose_colour_secure()
-	set name = "Choose Secure Colour"
-	set desc = "Choose a secure closet painter colour."
+	set name = "Choose Secure Color"
+	set desc = "Choose a secure closet painter color."
 	set category = "Object"
 	set src in usr
 
 	if(usr.incapacitated())
 		return
 
-	var/new_colour_secure = input("Select a colour.") as null|anything in colours_secure
+	var/new_colour_secure = input("Select a color.") as null|anything in colours_secure
 	if(new_colour_secure && !isnull(colours_secure[new_colour_secure]))
 		colour_secure = new_colour_secure
-		usr << "<span class='notice'>You set \the [src] secure closet colour to '[colour_secure]'.</span>"
+		usr << "<span class='notice'>You set \the [src] secure closet color to '[colour_secure]'.</span>"

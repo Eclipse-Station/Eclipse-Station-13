@@ -350,7 +350,7 @@ SUBSYSTEM_DEF(garbage)
 	running_find_references = type
 	if(usr && usr.client)
 		if(usr.client.running_find_references)
-			testing("CANCELLED search for references to a [usr.client.running_find_references].")
+			testing("CANCELED search for references to a [usr.client.running_find_references].")
 			usr.client.running_find_references = null
 			running_find_references = null
 			//restart the garbage collector

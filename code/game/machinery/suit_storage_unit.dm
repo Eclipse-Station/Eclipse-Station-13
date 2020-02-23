@@ -71,7 +71,7 @@
 	switch(severity)
 		if(1.0)
 			if(prob(50))
-				dump_everything() //So suits dont survive all the time
+				dump_everything() //So suits don't survive all the time
 			qdel(src)
 			return
 		if(2.0)

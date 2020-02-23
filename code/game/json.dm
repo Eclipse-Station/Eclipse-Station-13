@@ -7,11 +7,11 @@ proc/makejson()
 	if(!makejson)
 		return
 	fdel("[jsonpath]/info.json")
-		//usr << "Error cant delete json"
+		//usr << "Error can't delete json"
 	//else
 		//usr << "Deleted json in public html"
 	fdel("info.json")
-		//usr << "error cant delete local json"
+		//usr << "error can't delete local json"
 	//else
 		//usr << "Deleted local json"
 	var/F = file("info.json")

@@ -28,5 +28,5 @@
 			C << 'sound/effects/adminhelp.ogg'
 			log_admin("Discord PM: [sender.friendly_name]->[key_name(C)]: [reconstructedmessage]")
 			return "Admin PM sent!"
-		return "Failed to send PM - Client doesnt exist"
-	return "Failed to send PM - Cant even find the target"
+		return "Failed to send PM - Client doesn't exist"
+	return "Failed to send PM - Can't even find the target"

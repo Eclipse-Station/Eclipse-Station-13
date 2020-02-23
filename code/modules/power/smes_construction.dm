@@ -84,7 +84,7 @@
 /obj/machinery/power/smes/buildable/main
 	cur_coils = 4
 	RCon_tag = "Power - Main"
-	
+
 /obj/machinery/power/smes/buildable/engine
 	RCon_tag = "Power - Engine"
 	input_attempt = 1
@@ -106,7 +106,7 @@
 		s.set_up(5, 1, src)
 		s.start()
 		charge -= (output_level_max * SMESRATE)
-		if(prob(1)) // Small chance of overload occuring since grounding is disabled.
+		if(prob(1)) // Small chance of overload occurring since grounding is disabled.
 			apcs_overload(0,10)
 
 	..()

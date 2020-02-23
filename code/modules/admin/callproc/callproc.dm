@@ -24,7 +24,7 @@
 				else
 					return
 			if(!target)
-				usr << "Proc call cancelled."
+				usr << "Proc call canceled."
 				return
 		if("Cancel")
 			return

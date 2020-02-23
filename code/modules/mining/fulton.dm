@@ -1,7 +1,7 @@
 var/global/list/total_extraction_beacons = list()
 
 /obj/item/extraction_pack
-	name = "fulton extraction pack"
+	name = "\improper Fulton extraction pack"
 	desc = "A balloon pack that can be used to extract equipment or personnel to a Fulton Recovery Beacon. Anything not bolted down can be moved. Link the pack to a beacon by using the pack in hand."
 	icon = 'icons/obj/fulton.dmi'
 	icon_state = "extraction_pack"
@@ -68,7 +68,7 @@ var/global/list/total_extraction_beacons = list()
 		to_chat(user, "<span class='notice'>You start attaching the pack to [A]...</span>")
 		if(do_after(user,50,target=A))
 			to_chat(user, "<span class='notice'>You attach the pack to [A] and activate it.</span>")
-			/* No components, sorry. No convienence for you!
+			/* No components, sorry. No convenience for you!
 			if(loc == user && istype(user.back, /obj/item/storage/backpack))
 				var/obj/item/storage/backpack/B = user.back
 				B.SendSignal(COMSIG_TRY_STORAGE_INSERT, src, user, FALSE, FALSE)
@@ -148,8 +148,8 @@ var/global/list/total_extraction_beacons = list()
 
 
 /obj/item/fulton_core
-	name = "extraction beacon signaller"
-	desc = "Emits a signal which fulton recovery devices can lock onto. Activate in hand to create a beacon."
+	name = "extraction beacon signaler"
+	desc = "Emits a signal which Fulton recovery devices can lock onto. Activate in hand to create a beacon."
 	icon = 'icons/obj/stock_parts.dmi'
 	icon_state = "subspace_amplifier"
 
@@ -159,8 +159,8 @@ var/global/list/total_extraction_beacons = list()
 		qdel(src)
 
 /obj/structure/extraction_point
-	name = "fulton recovery beacon"
-	desc = "A beacon for the fulton recovery system. Activate a pack in your hand to link it to a beacon."
+	name = "\improper Fulton recovery beacon"
+	desc = "A beacon for the Fulton recovery system. Activate a pack in your hand to link it to a beacon."
 	icon = 'icons/obj/fulton.dmi'
 	icon_state = "extraction_point"
 	anchored = TRUE
@@ -178,7 +178,7 @@ var/global/list/total_extraction_beacons = list()
 
 /obj/effect/extraction_holder
 	name = "extraction holder"
-	desc = "you shouldnt see this"
+	desc = "you shouldn't see this"
 	var/atom/movable/stored_obj
 
 /obj/item/extraction_pack/proc/check_for_living_mobs(atom/A)
@@ -201,7 +201,7 @@ var/global/list/total_extraction_beacons = list()
 	return
 
 /obj/item/extraction_pack/wormhole
-	name = "wormhole fulton extraction pack"
+	name = "wormhole Fulton extraction pack"
 	desc = "A balloon pack with integrated wormhole technology and less disruptive movement that can be used to extract equipment or personnel to a Fulton Recovery Beacon. Anything not bolted down can be moved. Link the pack to a beacon by using the pack in hand."
 	can_use_indoors = TRUE
 	stuntime = 5

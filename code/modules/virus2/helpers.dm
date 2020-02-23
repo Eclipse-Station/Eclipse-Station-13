@@ -67,7 +67,7 @@ proc/airborne_can_reach(turf/source, turf/target)
 	dummy = null
 	return rval
 
-//Attemptes to infect mob M with virus. Set forced to 1 to ignore protective clothnig
+//Attemptes to infect mob M with virus. Set forced to 1 to ignore protective clothing
 /proc/infect_virus2(var/mob/living/carbon/M,var/datum/disease2/disease/disease,var/forced = 0)
 	if(!istype(disease))
 //		log_debug("Bad virus")
@@ -123,7 +123,7 @@ proc/airborne_can_reach(turf/source, turf/target)
 	D.makerandom(1)
 	infect_mob(M, D)
 
-//Infects mob M with random greated disease, if he doesn't have one
+//Infects mob M with random created disease, if he doesn't have one
 /proc/infect_mob_random_greater(var/mob/living/carbon/M)
 	var/datum/disease2/disease/D = new /datum/disease2/disease
 

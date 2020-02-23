@@ -6,7 +6,7 @@
 
 /datum/technomancer/presets/basic
 	name = "Basic"
-	desc = "This preset is created to be simple to understand and use, yet sufficent to face a wide range of hazards that may lay \
+	desc = "This preset is created to be simple to understand and use, yet sufficient to face a wide range of hazards that may lay \
 	ahead.  It includes Force Missile, Beam, Passwall, Repel Missiles, Pulsar, and Discharge.  Force Missile and Beam will be your \
 	bread and butter, as both can be used frequently and cheaply.  Passwall allows you to teleport to an adjacent room.  Repel Missiles should \
 	be applied before going into a fight, and Pulsar is an excellent 'area denial' function, that forces the opposing force to decide \
@@ -17,9 +17,9 @@
 /datum/technomancer/presets/summoner
 	name = "Summoner"
 	desc = "This preset is dedicated to amassing a large army of entities to do your bidding.  It includes the Summoner Core, to allow \
-	for more efficency, as well as Summon Creature and Summon Automatron, for obvious reasons.  The functions Aspect Aura and \
+	for more efficiency, as well as Summon Creature and Summon Automatron, for obvious reasons.  The functions Aspect Aura and \
 	Mend Wounds are also included, to allow for an area of effect heal that is ideal for keeping your (nonrobotic) army alive.  \
-	Finally, this includes the Scepter of Enpowerment, to make your summoned entities friendly to you and your allies, without the \
+	Finally, this includes the Scepter of Empowerment, to make your summoned entities friendly to you and your allies, without the \
 	need for the Control function.  The Control function can be obtained if one wishes to micromanage their summon army, however."
 	cost = 600
 
@@ -49,6 +49,6 @@
 /datum/technomancer/presets/rainbow
 	name = "Rainbow Mage"
 	desc = "This preset includes many Aspect functions, such as Aspect Aura, Aspect Bolt, Aspect Cloud, Aspect Weapon, etc, as well as \
-	cheap functions beloning to each aspect, for the purposes of combining with an aspect function.  This allows you to be \
-	very flexable, however functions made from aspect functions tend to be weaker due to this.  Not recommended for beginners."
+	cheap functions belonging to each aspect, for the purposes of combining with an aspect function.  This allows you to be \
+	very flexible, however functions made from aspect functions tend to be weaker due to this.  Not recommended for beginners."
 	cost = 600

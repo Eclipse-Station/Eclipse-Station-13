@@ -2956,7 +2956,7 @@ End Citadel Change */
 	name = "Named Bullet"
 	id = "slimeshot"
 	description = "A thick and toxic slime jelly shot."
-	taste_description = "liquified organs"
+	taste_description = "liquefied organs"
 	color = "#6fa300" // rgb(111, 163, 0)
 	strength = 10
 

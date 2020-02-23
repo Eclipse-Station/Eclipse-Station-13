@@ -12,7 +12,7 @@
 
 
 ///////////////////////////////////////////////////////////////////////////////
-//Gets the round setup, cancelling if there's not enough players at the start//
+//Gets the round setup, canceling if there's not enough players at the start//
 ///////////////////////////////////////////////////////////////////////////////
 /datum/game_mode/epidemic/pre_setup()
 	doctors = 0
@@ -43,7 +43,7 @@
 	intercepttext += "<B>* ELIMINATE THREAT WITH EXTREME PREJUDICE. [virus_name] IS HIGHLY CONTAGIOUS. INFECTED CREW MEMBERS MUST BE QUARANTINED IMMEDIATELY.</B><BR>"
 	intercepttext += "<B>* [station_name()] is under QUARANTINE. Any vessels outbound from [station_name()] will be tracked down and destroyed.</B><BR>"
 	intercepttext += "<B>* The existence of [virus_name] is highly confidential. To prevent a panic, only high-ranking staff members are authorized to know of its existence. Crew members that illegally obtained knowledge of [virus_name] are to be neutralized.</B><BR>"
-	intercepttext += "<B>* A cure is to be researched immediately, but NanoTrasen intellectual property must be respected. To prevent knowledge of [virus_name] from falling into unauthorized hands, all medical staff that work with the pathogen must be enhanced with a NanoTrasen loyality implant.</B><BR>"
+	intercepttext += "<B>* A cure is to be researched immediately, but NanoTrasen intellectual property must be respected. To prevent knowledge of [virus_name] from falling into unauthorized hands, all medical staff that work with the pathogen must be enhanced with a NanoTrasen loyalty implant.</B><BR>"
 
 
 	for (var/obj/machinery/computer/communications/comm in world)
@@ -58,7 +58,7 @@
 	world << sound('sound/AI/commandreport.ogg')
 
 	// add an extra law to the AI to make sure it cooperates with the heads
-	var/extra_law = "Crew authorized to know of pathogen [virus_name]'s existence are: Heads of command. Do not allow unauthorized personnel to gain knowledge of [virus_name]. Aid authorized personnel in quarantining and neutrlizing the outbreak. This law overrides all other laws."
+	var/extra_law = "Crew authorized to know of pathogen [virus_name]'s existence are: Heads of command. Do not allow unauthorized personnel to gain knowledge of [virus_name]. Aid authorized personnel in quarantining and neutralizing the outbreak. This law overrides all other laws."
 	for(var/mob/living/silicon/ai/M in world)
 		M.add_ion_law(extra_law)
 		M << "<span class='danger'>[extra_law]</span>"
@@ -198,7 +198,7 @@
 
 
 //////////////////////////////////////////////////////////////////////
-//Announces the end of the game with all relavent information stated//
+//Announces the end of the game with all relevant information stated//
 //////////////////////////////////////////////////////////////////////
 /datum/game_mode/epidemic/declare_completion()
 	if(finished == 1)
