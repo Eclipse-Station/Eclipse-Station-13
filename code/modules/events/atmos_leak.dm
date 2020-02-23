@@ -1,6 +1,6 @@
 //
 // This event causes a gas leak of phoron, sleeping_agent, or carbon_dioxide in a random unoccupied area.
-// One wonders, where did the gas come from? Who knows!  Its SPACE!  But if you want something a touch
+// One wonders, where did the gas come from? Who knows! It's SPACE! But if you want something a touch
 // more "explainable" then check out the canister_leak event instead.
 //
 
@@ -9,7 +9,7 @@
 	var/area/target_area	// Chosen target area
 	var/area/target_turf	// Chosen target turf in target_area
 	var/gas_type			// Chosen gas to release
-	// Exclude these types and sub-types from targeting eligibilty
+	// Exclude these types and sub-types from targeting eligibility
 	var/list/area/excluded = list(
 		/area/shuttle,
 		/area/crew_quarters,

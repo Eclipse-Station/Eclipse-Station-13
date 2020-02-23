@@ -204,7 +204,7 @@
 				<br>
 				<h2>SHUTDOWN PROCEDURE</h2>
 				<ol>
-				<li>De-activate the Particle Accelerator.  The energy ball will begin to shrink and lose mini-balls.</li>
+				<li>De-activate the Particle Accelerator. The energy ball will begin to shrink and lose mini-balls.</li>
 				<li>When the energy ball has completely dissipated, the Emitters can be de-activated.</li>
 				</ol>
 				<br>

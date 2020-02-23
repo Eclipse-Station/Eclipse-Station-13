@@ -42,7 +42,7 @@ Any code submissions that do not meet our coding standards are likely to be reje
     * For multi-line additions: //Eclipse Edit - "Explanation" and then at the bottom of your changes, //Eclipse Edit End
     * For multi-line removals: Use a block comment (/\* xxx \*/) to comment out the existing code block (do not modify whitespace more than necessary) and at the start, it should contain /\* Eclipse Removal - "Reason"
 * Change whitespace as little as possible. Do not randomly add/remove whitespace.
-* Any new files should be in modular eclipse folder, placed in sub-folders, corresponding to their content. 
+* Any new files should be in modular eclipse folder, placed in sub-folders, corresponding to their content.
 * Map changes must be in tgm format. See the [Mapmerge2 Readme] for details.
 
 ### Pull Requests
