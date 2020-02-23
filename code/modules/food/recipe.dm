@@ -59,7 +59,7 @@
 
 	var/reagent_mix = RECIPE_REAGENT_MAX	//How to handle reagent differences between the ingredients and the results
 
-	var/appliance = MICROWAVE//Which apppliances this recipe can be made in.
+	var/appliance = MICROWAVE//Which appliances this recipe can be made in.
 	//List of defines is in _defines/misc.dm. But for reference they are:
 	/*
 		MICROWAVE
@@ -136,7 +136,7 @@
 			if (!found)
 				. = 0
 			if (!checklist.len && . != 1)
-				return //No need to iterate through everything if we know theres at least oen extraneous ingredient
+				return //No need to iterate through everything if we know theres at least one extraneous ingredient
 		if (checklist.len)
 			. = -1
 
@@ -148,7 +148,7 @@
 		return 1//Only snacks can be battered
 
 	if (coating == -1)
-		return 1 //-1 value doesnt care
+		return 1 //-1 value doesn't care
 
 	var/obj/item/weapon/reagent_containers/food/snacks/S = O
 	if (!S.coating)
@@ -211,7 +211,7 @@
 	//And lastly deduct necessary quantities of reagents
 	if (reagents && reagents.len)
 		for (var/r in reagents)
-			//Doesnt matter whether or not there's enough, we assume that check is done before
+			//Doesn't matter whether or not there's enough, we assume that check is done before
 			container.reagents.trans_id_to(temp, r, reagents[r])
 
 	/*

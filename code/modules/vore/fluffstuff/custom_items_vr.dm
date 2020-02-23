@@ -944,8 +944,8 @@
 		rimplant.reagents.remove_any(rimplant.transfer_amount)
 
 /obj/item/weapon/reagent_containers/food/snacks/egg/teshari
-	name = "teshari egg"
-	desc = "It's a large teshari egg."
+	name = "Teshari egg"
+	desc = "It's a large Teshari egg."
 	icon = 'icons/vore/custom_items_vr.dmi'
 	icon_state = "tesh_egg"
 	filling_color = "#FDFFD1"

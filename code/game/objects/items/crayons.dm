@@ -71,8 +71,8 @@
 	uses = 0
 
 /obj/item/weapon/pen/crayon/rainbow/attack_self(mob/living/user as mob)
-	colour = input(user, "Please select the main colour.", "Crayon colour") as color
-	shadeColour = input(user, "Please select the shade colour.", "Crayon colour") as color
+	colour = input(user, "Please select the main color.", "Crayon color") as color
+	shadeColour = input(user, "Please select the shade color.", "Crayon color") as color
 	return
 
 /obj/item/weapon/pen/crayon/afterattack(atom/target, mob/user as mob, proximity)
@@ -186,8 +186,8 @@
 	uses = 0
 
 /obj/item/weapon/pen/crayon/marker/rainbow/attack_self(mob/living/user as mob)
-	colour = input(user, "Please select the main colour.", "Marker colour") as color
-	shadeColour = input(user, "Please select the shade colour.", "Marker colour") as color
+	colour = input(user, "Please select the main color.", "Marker color") as color
+	shadeColour = input(user, "Please select the shade color.", "Marker color") as color
 	return
 
 /obj/item/weapon/pen/crayon/marker/attack(mob/M as mob, mob/user as mob)

@@ -227,7 +227,7 @@ obj/machinery/airlock_sensor/phoron/airlock_exterior
 					if(memory["chamber_sensor_phoron"] > memory["target_phoron"])
 						state = STATE_CLEAN
 						signalScrubber(tag_scrubber, 1) // Start cleaning
-						signalPump(tag_airpump, 1, 1, memory["target_pressure"]) // And pressurizng to offset losses
+						signalPump(tag_airpump, 1, 1, memory["target_pressure"]) // And pressurizing to offset losses
 					else // We can go directly to pressurize
 						state = STATE_PRESSURIZE
 						signalPump(tag_airpump, 1, 1, memory["target_pressure"]) // Send a signal to start pressurizing

@@ -177,7 +177,7 @@
 	icon_state = "electric_rcd"
 	var/obj/item/weapon/cell/cell = null
 	var/make_cell = TRUE // If false, initialize() won't spawn a cell for this.
-	var/electric_cost_coefficent = 83.33 // Higher numbers make it less efficent. 86.3... means it should matche the standard RCD capacity on a 10k cell.
+	var/electric_cost_coefficent = 83.33 // Higher numbers make it less efficient. 86.3... means it should match the standard RCD capacity on a 10k cell.
 
 /obj/item/weapon/rcd/electric/initialize()
 	if(make_cell)
@@ -240,7 +240,7 @@
 /obj/item/weapon/rcd/electric/mounted/borg
 	can_remove_rwalls = TRUE
 	desc = "A device used to rapidly build and deconstruct. It runs directly off of electricity, drawing directly from your cell."
-	electric_cost_coefficent = 41.66 // Twice as efficent, out of pity.
+	electric_cost_coefficent = 41.66 // Twice as efficient, out of pity.
 	toolspeed = 0.5 // Twice as fast, since borg versions typically have this.
 
 /obj/item/weapon/rcd/electric/mounted/borg/lesser

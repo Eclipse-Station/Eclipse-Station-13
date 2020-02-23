@@ -193,7 +193,7 @@
 		return TOPIC_REFRESH_UPDATE_PREVIEW
 
 	else if(href_list["ear_color"])
-		var/new_earc = input(user, "Choose your character's ear colour:", "Character Preference",
+		var/new_earc = input(user, "Choose your character's ear color:", "Character Preference",
 			rgb(pref.r_ears, pref.g_ears, pref.b_ears)) as color|null
 		if(new_earc)
 			pref.r_ears = hex2num(copytext(new_earc, 2, 4))
@@ -202,7 +202,7 @@
 			return TOPIC_REFRESH_UPDATE_PREVIEW
 
 	else if(href_list["ear_color2"])
-		var/new_earc2 = input(user, "Choose your character's ear colour:", "Character Preference",
+		var/new_earc2 = input(user, "Choose your character's ear color:", "Character Preference",
 			rgb(pref.r_ears2, pref.g_ears2, pref.b_ears2)) as color|null
 		if(new_earc2)
 			pref.r_ears2 = hex2num(copytext(new_earc2, 2, 4))
@@ -226,7 +226,7 @@
 		return TOPIC_REFRESH_UPDATE_PREVIEW
 
 	else if(href_list["tail_color"])
-		var/new_tailc = input(user, "Choose your character's tail/taur colour:", "Character Preference",
+		var/new_tailc = input(user, "Choose your character's tail/taur color:", "Character Preference",
 			rgb(pref.r_tail, pref.g_tail, pref.b_tail)) as color|null
 		if(new_tailc)
 			pref.r_tail = hex2num(copytext(new_tailc, 2, 4))
@@ -235,7 +235,7 @@
 			return TOPIC_REFRESH_UPDATE_PREVIEW
 
 	else if(href_list["tail_color2"])
-		var/new_tailc2 = input(user, "Choose your character's secondary tail/taur colour:", "Character Preference",
+		var/new_tailc2 = input(user, "Choose your character's secondary tail/taur color:", "Character Preference",
 			rgb(pref.r_tail2, pref.g_tail2, pref.b_tail2)) as color|null
 		if(new_tailc2)
 			pref.r_tail2 = hex2num(copytext(new_tailc2, 2, 4))
@@ -259,7 +259,7 @@
 		return TOPIC_REFRESH_UPDATE_PREVIEW
 
 	else if(href_list["wing_color"])
-		var/new_wingc = input(user, "Choose your character's wing colour:", "Character Preference",
+		var/new_wingc = input(user, "Choose your character's wing color:", "Character Preference",
 			rgb(pref.r_wing, pref.g_wing, pref.b_wing)) as color|null
 		if(new_wingc)
 			pref.r_wing = hex2num(copytext(new_wingc, 2, 4))

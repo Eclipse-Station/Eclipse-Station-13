@@ -27,7 +27,7 @@
 	var/cook_type					// A string value used to track what kind of food this machine makes.
 	var/can_cook_mobs				// Whether or not this machine accepts grabbed mobs.
 	var/mobdamagetype = BRUTE		// Burn damage for cooking appliances, brute for cereal/candy
-	var/food_color					// Colour of resulting food item.
+	var/food_color					// Color of resulting food item.
 	var/cooked_sound = 'sound/machines/ding.ogg'				// Sound played when cooking completes.
 	var/can_burn_food				// Can the object burn food that is left inside?
 	var/burn_chance = 10			// How likely is the food to burn?
@@ -40,7 +40,7 @@
 
 	var/container_type = null
 
-	var/combine_first = 0//If 1, this appliance will do combinaiton cooking before checking recipes
+	var/combine_first = 0//If 1, this appliance will do combination cooking before checking recipes
 
 /obj/machinery/appliance/New()
 	. = ..()
@@ -68,7 +68,7 @@
 /obj/machinery/appliance/Destroy()
 	for (var/a in cooking_objs)
 		var/datum/cooking_item/CI = a
-		qdel(CI.container)//Food is fragile, it probably doesnt survive the destruction of the machine
+		qdel(CI.container)//Food is fragile, it probably doesn't survive the destruction of the machine
 		cooking_objs -= CI
 		qdel(CI)
 	return ..()
@@ -278,7 +278,7 @@
 		I.forceMove(src)
 		cooking_objs.Add(CI)
 		user.visible_message("<span class='notice'>\The [user] puts \the [I] into \the [src].</span>")
-		if (CC.check_contents() == 0)//If we're just putting an empty container in, then dont start any processing.
+		if (CC.check_contents() == 0)//If we're just putting an empty container in, then don't start any processing.
 			return
 	else
 		if (CI && istype(CI))
@@ -608,7 +608,7 @@
 
 
 /obj/machinery/appliance/proc/change_product_appearance(var/obj/item/weapon/reagent_containers/food/snacks/product, var/datum/cooking_item/CI)
-	if (!product.coating) //Coatings change colour through a new sprite
+	if (!product.coating) //Coatings change color through a new sprite
 		product.color = food_color
 	product.filling_color = food_color
 

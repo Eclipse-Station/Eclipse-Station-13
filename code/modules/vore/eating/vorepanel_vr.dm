@@ -281,9 +281,9 @@
 
 	switch(user.digestable)
 		if(1)
-			dat += "<a href='?src=\ref[src];toggledg=1'>Toggle Digestable</a>"
+			dat += "<a href='?src=\ref[src];toggledg=1'>Toggle Digestible</a>"
 		if(0)
-			dat += "<a href='?src=\ref[src];toggledg=1'><span style='color:green;'>Toggle Digestable</span></a>"
+			dat += "<a href='?src=\ref[src];toggledg=1'><span style='color:green;'>Toggle Digestible</span></a>"
 
 	switch(user.allowmobvore)
 		if(1)
