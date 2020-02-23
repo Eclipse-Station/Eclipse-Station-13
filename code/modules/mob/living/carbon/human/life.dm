@@ -219,7 +219,7 @@ var/last_message = 0
 		if(10 <= rn && rn <= 12)
 			if(prob(50))
 				src << "<span class='danger'>You suddenly black out!</span>"
-				Paralyze(10)
+				Paralyse(10)
 			else if(!lying)
 				src << "<span class='danger'>Your legs won't respond properly, you fall down!</span>"
 				Weaken(10)
@@ -520,7 +520,7 @@ var/last_message = 0
 		if(SA_pp > SA_para_min)
 
 			// 3 gives them one second to wake up and run away a bit!
-			Paralyze(3)
+			Paralyse(3)
 
 			// Enough to make us sleep as well
 			if(SA_pp > SA_sleep_min)
