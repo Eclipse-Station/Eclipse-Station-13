@@ -287,7 +287,7 @@ var/global/list/default_medbay_channels = list(
 /obj/item/device/radio/talk_into(mob/living/M as mob, message, channel, var/verb = "says", var/datum/language/speaking = null)
 	if(!on) return 0 // the device has to be on
 	//  Fix for permacell radios, but kinda eh about actually fixing them.
-	
+
 	if(no_microphone) return 0		//Eclipse edit: If you can't transmit, don't.
 	if(!M || !message) return 0
 

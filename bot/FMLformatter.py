@@ -16,7 +16,7 @@ def formatter(data):
          "_qoptions={",
          "};","})();","Categories","Sign up - Password? ", " Net Avenir : gestion publicitaire",
          "FMyLife, the book","Available NOW on:","Barnes &amp; Noble"]
-         
+
   for checkable in data:
     if checkable in bad:
       pass

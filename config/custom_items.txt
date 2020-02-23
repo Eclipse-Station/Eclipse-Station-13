@@ -185,7 +185,7 @@ character_name: M'nashi Hajii
 item_path: /obj/item/clothing/head/fedora/fluff/jemli
 item_name: Paragon of Style
 item_desc: While the hat appears to be of the highest quality, the tag on the inside of the band reads "Bob's Party Supplies. 5 Thalers."
-}		 
+}
 
 {
 ckey: SpoopyLizz

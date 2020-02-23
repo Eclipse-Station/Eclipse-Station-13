@@ -11,7 +11,7 @@
 		engine.power_spike()
 		break // Just one engine, please.
 	// After that, the engine checks if a grid checker exists on the same powernet, and if so, it triggers a blackout.
-	// If not, lots of stuff breaks.  See code/modules/power/generator.dm for that piece of code.
+	// If not, lots of stuff breaks. See code/modules/power/generator.dm for that piece of code.
 //	power_failure(0)
 /*
 /datum/event/grid_check/announce()

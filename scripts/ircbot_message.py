@@ -7,7 +7,7 @@ import sys,cPickle,socket,HTMLParser
 
 def pack():
     ht = HTMLParser.HTMLParser()
-    
+
     passwd = sys.argv[1]
     ip = sys.argv[3]
     try:

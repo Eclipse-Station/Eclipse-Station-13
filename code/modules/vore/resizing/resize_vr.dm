@@ -1,4 +1,3 @@
-
 //these aren't defines so they can stay in this file
 var/const/RESIZE_HUGE = 1.5
 var/const/RESIZE_BIG = 1.25

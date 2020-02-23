@@ -65,7 +65,7 @@ def YTCV2(youtube_url,cache=1,debug=0):
                     tiedosto.close()
                 tiedosto.close()
                 return result
-        
+
     if cache == 1:
         epoch = time.time()
         aha = ["No title for video, could be removed / does not exist at all",epoch]

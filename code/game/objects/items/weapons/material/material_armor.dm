@@ -173,7 +173,7 @@ Protectiveness | Armor %
 
 /obj/item/clothing/suit/armor/material/makeshift
 	name = "sheet armor"
-	desc = "This appears to be two 'sheets' of a material held together by cable.  If the sheets are strong, this could be rather protective."
+	desc = "This appears to be two 'sheets' of a material held together by cable. If the sheets are strong, this could be rather protective."
 	icon_state = "material_armor_makeshift"
 
 /obj/item/clothing/suit/armor/material/makeshift/durasteel
@@ -200,7 +200,7 @@ Protectiveness | Armor %
 			to_chat(user, "<span class='warning'>This already has enough wires on it.</span>")
 			return
 		if(S.use(20))
-			to_chat(user, "<span class='notice'>You attach several wires to \the [src].  Now it needs another plate.</span>")
+			to_chat(user, "<span class='notice'>You attach several wires to \the [src]. Now it needs another plate.</span>")
 			wired = TRUE
 			icon_state = "[initial(icon_state)]_wired"
 			return
@@ -228,7 +228,7 @@ Protectiveness | Armor %
 // Used to craft the makeshift helmet
 /obj/item/clothing/head/helmet/bucket
 	name = "bucket"
-	desc = "It's a bucket with a large hole cut into it.  You could wear it on your head and look really stupid."
+	desc = "It's a bucket with a large hole cut into it. You could wear it on your head and look really stupid."
 	flags_inv = HIDEEARS|HIDEEYES|BLOCKHAIR
 	icon_state = "bucket"
 	armor = list(melee = 5, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
@@ -241,7 +241,7 @@ Protectiveness | Armor %
 	if(istype(O, /obj/item/stack/material))
 		var/obj/item/stack/material/S = O
 		if(S.use(2))
-			to_chat(user, "<span class='notice'>You apply some [S.material.use_name] to \the [src].  Hopefully it'll make the makeshift helmet stronger.</span>")
+			to_chat(user, "<span class='notice'>You apply some [S.material.use_name] to \the [src]. Hopefully it'll make the makeshift helmet stronger.</span>")
 			var/obj/item/clothing/head/helmet/material/makeshift/helmet = new(null, S.material.name)
 			user.put_in_hands(helmet)
 			user.drop_from_inventory(src)
@@ -259,7 +259,7 @@ Protectiveness | Armor %
 
 /obj/item/clothing/head/helmet/material/makeshift
 	name = "bucket"
-	desc = "A bucket with plating applied to the outside.  Very crude, but could potentially be rather protective, if \
+	desc = "A bucket with plating applied to the outside. Very crude, but could potentially be rather protective, if \
 	it was plated with something strong."
 	icon_state = "material_armor_makeshift"
 

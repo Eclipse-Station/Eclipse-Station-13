@@ -1,5 +1,5 @@
 @echo off
-set tab=	
+set tab=
 echo. >> ../../.git/config
 echo [merge "merge-dmm"] >> ../../.git/config
 echo %tab%name = mapmerge driver >> ../../.git/config

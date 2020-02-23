@@ -7,7 +7,7 @@
 	containertype = /obj/structure/largecrate
 	containername = "NT Humvee Crate"
 	cost = 500
-	
+
 /datum/supply_pack/recreation/restraints
 	name = "Recreational Restraints"
 	contains = list(

@@ -19,8 +19,8 @@ import urllib2
 
 import socket
 import irchat
-   
-   
+
+
 ################## END OF DEBUG STUFF ##############
 #
 # PSYCO
@@ -47,7 +47,7 @@ except ImportError:
       print "LINUX: http://psyco.sourceforge.net/download.html"
 else:
    psyco_exists = True
-   
+
 # </PSYCO>
 import C_rtd # rtd
 import C_srtd # srtd
@@ -260,7 +260,7 @@ if nudgeable:
       if CORE_DATA.DISABLE_ALL_NON_MANDATORY_SOCKET_CONNECTIONS:
          pass
       else:
-         
+
          def nudgereceiver():
             import pickle
             global conn,channel
@@ -376,7 +376,7 @@ def stop(sender,debug=1):
    else:
       conn.privmsg(channel,"You cannot command me")
       return False
-      
+
 def cocheck(command):
    global influx
    if influx.lower()[0:len(command)] == command:
@@ -484,7 +484,7 @@ except socket.error:
    print "Connection failed!"
 else:
    print Name+" is in!"
-thread.start_new_thread ( autoRecv, () )                   
+thread.start_new_thread ( autoRecv, () )
 sleep(1)
 while True:
    try:
@@ -535,7 +535,7 @@ while True:
             if "[\\0x01]" in influx.lower() or "[\0x01]" in influx.lower():
                influx = influx.replace("[\\0x01]","")
                influx = influx.replace("[\0x01]","")
-               
+
             targetchannel = data[1][1]
             if targetchannel == Name:
                targetchannel = data[0].split("!")[0]
@@ -600,7 +600,7 @@ while True:
             if enabled == False:
                #FIRST QUIT COMMAND
                if truesender in operators and targetchannel==channel:# or "skibiliano" in truesender.lower() and targetchannel==channel:
-                  
+
                   if cocheck(prefix+"enable"):
                      enabled = True
                      if debug:
@@ -802,7 +802,7 @@ while True:
                      if "||From: "+truesender in b:
                         count += 1
                         del(tell_list[i][tell_list[i].index(b)])
-               conn.privmsg(targetchannel, sender+" : All your "+str(count)+" messages have been purged")            
+               conn.privmsg(targetchannel, sender+" : All your "+str(count)+" messages have been purged")
             elif influx.split(" ")[0].lower().replace(",","").replace(":","") in SName+[Name.lower()] and "tell" in (influx.lower().split(" ")+[""])[1]:
                arg = influx.lower().split(" ")
                equalarg = influx.split(" ")
@@ -859,7 +859,7 @@ while True:
                   if "youtube.com/watch?v=" in block:
                      temporal_list.append(block)
                for temdata in temporal_list:
-                  
+
                   if temdata[0:3] == "you":
                      temdata = "http://www."+temdata
                   elif temdata[0:3] == "www":
@@ -1050,7 +1050,7 @@ while True:
                   if highlights:
                      conn.privmsg(targetchannel,sender+" : "+C_sarcasticball.sarcasticball(influx.lower(),debug,truesender,users,prefix))
                   else:
-                     conn.privmsg(targetchannel,sender+" : "+C_sarcasticball.sarcasticball(influx.lower(),debug,truesender,nonhighlight_names,prefix)) 
+                     conn.privmsg(targetchannel,sender+" : "+C_sarcasticball.sarcasticball(influx.lower(),debug,truesender,nonhighlight_names,prefix))
             elif influx.lower()[0:len(Name)] == lowname and not influx.lower()[len(Name):].isalpha() or \
                  influx.split(" ")[0].lower().replace(",","") in SName and not influx.lower()[len(influx.split(" ")[0].lower()):].isalpha():
                conn.privmsg(targetchannel, random.choice(["Yea?","I'm here","Ya?","Yah?","Hm?","What?","Mmhm, what?","?","What now?","How may I assist?"]))
@@ -1066,7 +1066,7 @@ while True:
                      conn.privmsg(targetchannel,sender+" : "+C_sarcasticball.sarcasticball(influx.lower(),debug,truesender,users,prefix))
                   else:
                      conn.privmsg(targetchannel,sender+" : "+C_sarcasticball.sarcasticball(influx.lower(),debug,truesender,nonhighlight_names,prefix))
-            
+
             elif influx.lower() == prefix+"tm":
                if truesender in operators and targetchannel==channel:
                   marakov = not marakov
@@ -1185,7 +1185,7 @@ while True:
                            if "watch?v=" in i:
                               arg2.append(i)
                         arg3 = random.choice(arg2)
-                        
+
                         conn.privmsg(channel,"Here's a video of '%s' which I found! %s (%s)"%(tag.replace("+"," "),"http://www.youtube.com"+arg3[arg3.find('/watch?v='):arg3.find('/watch?v=')+20],YTCV2("http://www.youtube.com"+arg3[arg3.find('/watch?v='):arg3.find('/watch?v=')+20])))
                      if truesender.lower() in tell_list.keys():
                         try:
@@ -1198,7 +1198,7 @@ while True:
                      if dice == 0:
                         conn.privmsg(targetchannel,"Greetings Master "+sender)
                      elif dice == 1:
-                        conn.privmsg(targetchannel,"My deepest greetings belong to you, Master "+sender)         
+                        conn.privmsg(targetchannel,"My deepest greetings belong to you, Master "+sender)
             ### IMPORTANT ###
             elif influx == "☺VERSION☺":
                conn.notice(truesender,"\001VERSION nanotrasen:2:Python 2.6\001")
@@ -1226,7 +1226,7 @@ while True:
                pass
             else:
                print "Took",time.time()-looptime,"Seconds to finish loop"
-         
+
          elif data [ 1 ] [ 0 ] == '353':
             if connected == False:
                connected = True
@@ -1238,7 +1238,7 @@ while True:
                   operators.append(potential_operator[1:])
                elif potential_operator[0] == "%":
                   halfoperators.append(potential_operator[1:])
-                  
+
          elif data[1][0] == "QUIT":
             sender = data[0].split("!")[0]
             print sender+" Has now left the server"
@@ -1312,7 +1312,7 @@ while True:
                peopleheknows[1].append(data[0].split("!")[1])
                with open("peopleheknows.cache","w") as peoplehecache:
                   pickle.dump(peopleheknows,peoplehecache)
-                  
+
          elif data[1][0] == "MODE" and data[1][2] == "+o":
             sender = data[1][3]
             targetchannel = data[1][1]
@@ -1390,7 +1390,7 @@ while True:
                pass
             else:
                halfoperators.append(newname)
-            
+
          elif data[1][0] == "001":
             # Skibot is welcomed to the Network
             pass
@@ -1466,7 +1466,7 @@ while True:
                else:
                   print targetlist[0][0].lower(), "isn't equal to?", data[1][6].lower()
                   print targetlist
-               
+
          elif data[1][0] == "366":
             # End of USERS
             pass

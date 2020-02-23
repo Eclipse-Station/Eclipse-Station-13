@@ -67,4 +67,4 @@ def maths(influx,prefix="!",sender="NaN",debug=True,method="n"):
       return "What are you trying to make me do again?"
   else:
     return "Those are likely to make me hang"
-  
+
