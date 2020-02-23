@@ -19,7 +19,7 @@
 	containername = "algae sheets crate"
 
 /datum/supply_pack/eng/engine/tesla_gen
-	name = "Tesla Generator crate"
+	name = "\improper Tesla Generator crate"
 	contains = list(/obj/machinery/the_singularitygen/tesla)
 	containertype = /obj/structure/closet/crate/secure/engineering
 	containername = "Tesla Generator crate"

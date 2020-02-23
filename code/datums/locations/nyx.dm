@@ -2,7 +2,7 @@
 
 /datum/locations/nyx
 	name = "Nyx"
-	desc = "Nyx is most certainly considered an outer system, being on the edge of colonized space.  It's a red dwarf flare star far out in the \
+	desc = "Nyx is most certainly considered an outer system, being on the edge of colonized space. It's a red dwarf flare star far out in the \
 	frontier. There are four planets orbiting it, not including its sub-stellar companion, Erebus."
 
 /datum/locations/nyx/New(var/creator)
@@ -71,7 +71,7 @@
 	frequency - occasionally bleeding over into encrypted frequencies, too. \
 	Despite the Star's remote location, traffic tends to be heavy. Despite the proximity to Brinkburn, the Star remains a relatively safe \
 	place - as safe as anywhere in Nyx would be, anyway. The Star employs a well-equipped fleet of defense craft, mercenaries and sophisticated \
-	drones, all ruthlessly enforcing the peace. As long as you have money you're willing to spend, the Void Star welcomes just about anyone.  \
+	drones, all ruthlessly enforcing the peace. As long as you have money you're willing to spend, the Void Star welcomes just about anyone. \
 	Some even call the Star home, as the sprawling asteroid-station offers hotel services; luxurious or spartan. Addicts, smugglers, pirates and \
 	privateers - you'll find them all at the Void Star, ostensibly at their best behavior."
 

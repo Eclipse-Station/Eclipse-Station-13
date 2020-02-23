@@ -150,7 +150,7 @@
 // TESLA Engine
 
 /obj/item/weapon/book/manual/tesla_engine
-	name = "Tesla Operating Manual"
+	name = "\improper Tesla Operating Manual"
 	icon_state ="bookTesla"
 	author = "Engineering Encyclopedia"
 	title = "Tesla Engine User's Guide"

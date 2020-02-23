@@ -5,12 +5,12 @@ var/global/repository/radiation/radiation_repository = new()
 	var/list/sources_assoc = list()		// Sources indexed by turf for de-duplication.
 	var/list/resistance_cache = list()	// Cache of turf's radiation resistance.
 
-// Describes a point source of radiation.  Created either in response to a pulse of radiation, or over an irradiated atom.
+// Describes a point source of radiation. Created either in response to a pulse of radiation, or over an irradiated atom.
 // Sources will decay over time, unless something is renewing their power!
 /datum/radiation_source
 	var/turf/source_turf		// Location of the radiation source.
 	var/rad_power				// Strength of the radiation being emitted.
-	var/decay = TRUE			// True for automatic decay.  False if owner promises to handle it (i.e. supermatter)
+	var/decay = TRUE			// True for automatic decay. False if owner promises to handle it (i.e. supermatter)
 	var/respect_maint = FALSE	// True for not affecting RAD_SHIELDED areas.
 	var/flat = FALSE			// True for power falloff with distance.
 	var/range					// Cached maximum range, used for quick checks against mobs.
@@ -30,7 +30,7 @@ var/global/repository/radiation/radiation_repository = new()
 	else
 		rad_power = new_power
 		if(!flat)
-			range = min(round(sqrt(rad_power / config.radiation_lower_limit)), 31)  // R = rad_power / dist**2 - Solve for dist
+			range = min(round(sqrt(rad_power / config.radiation_lower_limit)), 31) // R = rad_power / dist**2 - Solve for dist
 
 // Ray trace from all active radiation sources to T and return the strongest effect.
 /repository/radiation/proc/get_rads_at_turf(var/turf/T)
@@ -52,9 +52,9 @@ var/global/repository/radiation/radiation_repository = new()
 				continue // In shielded area
 		if(source.flat)
 			. = max(., source.rad_power)
-			continue // No need to ray trace for flat  field
+			continue // No need to ray trace for flat field
 
-		// Okay, now ray trace to find resistence!
+		// Okay, now ray trace to find resistance!
 		var/turf/origin = source.source_turf
 		var/working = source.rad_power
 		while(origin != T)
@@ -66,7 +66,7 @@ var/global/repository/radiation/radiation_repository = new()
 				break // Already affected by a stronger source (or its zero...)
 		. = max((working * (1 / (dist ** 2))), .) //Butchered version of the inverse square law. Works for this purpose
 
-// Add a radiation source instance to the repository.  It will override any existing source on the same turf.
+// Add a radiation source instance to the repository. It will override any existing source on the same turf.
 /repository/radiation/proc/add_source(var/datum/radiation_source/S)
 	if(!isturf(S.source_turf))
 		return
@@ -117,7 +117,7 @@ var/global/repository/radiation/radiation_repository = new()
 			var/material/M = O.get_material()
 			if(!M)	continue
 			cached_rad_resistance += M.weight + M.radiation_resistance
-	// Looks like storing the contents length is meant to be a basic check if the cache is stale due to items enter/exiting.  Better than nothing so I'm leaving it as is. ~Leshana
+	// Looks like storing the contents length is meant to be a basic check if the cache is stale due to items enter/exiting. Better than nothing so I'm leaving it as is. ~Leshana
 	radiation_repository.resistance_cache[src] = (length(contents) + 1)
 
 /turf/simulated/wall/calc_rad_resistance()
@@ -125,7 +125,7 @@ var/global/repository/radiation/radiation_repository = new()
 	cached_rad_resistance = (density ? material.weight + material.radiation_resistance : 0)
 
 /obj
-	var/rad_resistance = 0  // Allow overriding rad resistance
+	var/rad_resistance = 0 // Allow overriding rad resistance
 
 // If people expand the system, this may be useful. Here as a placeholder until then
 /atom/proc/rad_act(var/severity)

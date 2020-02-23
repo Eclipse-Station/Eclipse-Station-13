@@ -25,11 +25,11 @@
 
 // Small outposts
 /area/outpost/mining_north
-	name = "North Mining Outpost"
+	name = "\improper North Mining Outpost"
 	icon_state = "outpost_mine_north"
 
 /area/outpost/mining_west
-	name = "West Mining Outpost"
+	name = "\improper West Mining Outpost"
 	icon_state = "outpost_mine_west"
 
 /area/outpost/abandoned

@@ -1,5 +1,5 @@
 /datum/technomancer/equipment/tesla_armor
-	name = "Tesla Armor"
+	name = "\improper Tesla Armor"
 	desc = "This piece of armor offers a retaliation-based defense.  When the armor is 'ready', it will completely protect you from \
 	the next attack you suffer, and strike the attacker with a strong bolt of lightning, provided they are close enough.  This effect requires \
 	fifteen seconds to recharge.  If you are attacked while this is recharging, a weaker lightning bolt is sent out, however you won't be protected from \
@@ -8,7 +8,7 @@
 	obj_path = /obj/item/clothing/suit/armor/tesla
 
 /obj/item/clothing/suit/armor/tesla
-	name = "Tesla armor"
+	name = "\improper Tesla armor"
 	desc = "This rather dangerous looking armor will hopefully shock your enemies, and not you in the process."
 	icon_state = "tesla_armor_1" //wip
 	blood_overlay_type = "armor"
