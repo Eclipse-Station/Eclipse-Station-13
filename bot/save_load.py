@@ -9,7 +9,7 @@ def save(filename,data,dnrw=0):
       return False
   else:
     tiedosto = open(filename,"w")
-    
+
   if "http//" in data:
     data = data.replace("http//","http://")
   pickle.dump(data,tiedosto)

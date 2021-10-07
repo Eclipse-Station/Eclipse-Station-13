@@ -70,7 +70,7 @@ var/list/tape_roll_applications = list()
 
 /obj/item/tape/medical
 	name = "medical tape"
-	desc = "A length of medical tape.  Do not cross."
+	desc = "A length of medical tape. Do not cross."
 	req_access = list(access_medical)
 	color = COLOR_WHITE
 
@@ -82,7 +82,7 @@ var/list/tape_roll_applications = list()
 
 /obj/item/tape/police
 	name = "police tape"
-	desc = "A length of police tape.  Do not cross."
+	desc = "A length of police tape. Do not cross."
 	req_access = list(access_security)
 	color = COLOR_RED_LIGHT
 

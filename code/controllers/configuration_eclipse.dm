@@ -4,7 +4,7 @@
 
 /datum/configuration
 	var/eclipse_config_loaded = FALSE		//for things that require this, such as Reginald force spawning
-	
+
 	// Shift End Horn
 	var/shift_end_horn = FALSE				//Master Enable
 	var/shift_end_horn_delay = 48			//Delay, in 1/10 sec
@@ -16,7 +16,7 @@
 	var/wl_security = FALSE					//Whitelist Security department?
 	var/wl_silicons = FALSE					//Whitelist silicons?
 	var/wl_admins_too = FALSE				//Admins go through the whitelist too?
-	
+
 	//Mice and wires
 	var/mice_wires = FALSE					//Mice can eat wires
 	var/mice_wire_chance = 5				//Chance for a mouse to eat wires on the turf it's on.
@@ -87,6 +87,6 @@
 				config.mice_wire_cooldown_rs = TRUE
 			if("mice_require_engineers")
 				config.mice_wire_eng_req = TRUE
-	
+
 	config.eclipse_config_loaded = TRUE
 	return 1

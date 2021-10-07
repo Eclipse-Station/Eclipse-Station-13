@@ -580,7 +580,7 @@ div.notice {
     text-align: center;
 }
 
-table.fixed { 
+table.fixed {
 	table-layout:fixed;
 }
 
@@ -756,7 +756,7 @@ div.homeScreen {
 .dialPadButtons:hover {
 	background: rgba(80, 122, 172, 0.5);
 	font-size: 13px;
-	
+
 }
 
 .dialPadAddress {

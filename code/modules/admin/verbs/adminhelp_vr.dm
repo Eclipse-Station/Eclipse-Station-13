@@ -1,8 +1,8 @@
-/datum/admin_help/proc/send2adminchat()	
+/datum/admin_help/proc/send2adminchat()
 	if(!config.chat_webhook_url)
 		return
 
-	var/list/adm = get_admin_counts()	
+	var/list/adm = get_admin_counts()
 	var/list/afkmins = adm["afk"]
 	var/list/allmins = adm["total"]
 

@@ -37,4 +37,4 @@ def xkcd(link):
         return newdata
     except:
         return "NOTHING"
-    
+
